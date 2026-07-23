@@ -13,6 +13,8 @@ The public repository is maintained as `TKPND/akari-design`.
   image derivatives.
 - `akari-v1.2/` contains the Natural Form package, accepted Core images,
   lifecycle manifests, documentation, and release deliverables.
+- `akari-v1.4/` contains the in-progress style baseline, reproducibility tests,
+  and user-selected G–J authority chain.
 - `tools/pdf/` contains the Node/Playwright PDF rendering code.
 - `scripts/` contains Python build and audit scripts.
 - `dist/` contains prebuilt PDF deliverables and public contact sheets.
