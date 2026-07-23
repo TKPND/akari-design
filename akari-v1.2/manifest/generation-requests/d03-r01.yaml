@@ -1,0 +1,120 @@
+schema_version: 1
+request_id: akari-v1.2-d03-r01
+asset_id: D03
+revision: r01
+variation_axis: independent_scene_attempt
+references:
+  - role: accepted_d02_morning_continuity
+    path: akari-v1.2/accepted/daily/morning/akari-v1.2_d02_morning-rug-daze_r01.png
+  - role: accepted_c01_standing_body
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c01_front-natural-stance_r01.png
+  - role: accepted_c03_hairpin_three_quarter
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c03_hairpin-side-45_r02.png
+  - role: accepted_c06_morning_hair_sleepy_neutral
+    path: akari-v1.2/accepted/core/face-hair/akari-v1.2_c06-1_sleepy-neutral_r01.png
+  - role: accepted_c07_standing_sock_feet
+    path: akari-v1.2/accepted/core/indoor-feet/akari-v1.2_c07_indoor-socks-standing_r01.png
+shared_prompt: >-
+  Use the five visible accepted images only in their declared roles to create
+  one standalone continuation of the same naturally cute 25-year-old adult
+  Akari during the same quiet morning. Image 1 controls only D02 bedroom,
+  frame-left closed-curtain location, diffused morning light, loose opaque
+  white short-sleeve T-shirt, simple opaque gray shorts-style roomwear, and
+  same-morning continuity; do not copy its seated pose, crop, gaze, or exact
+  room arrangement. Image 2 controls healthy relaxed standing volume,
+  pelvis-to-leg support, full-body proportions, and floor contact; do not copy
+  its hoodie, skirt, shoes, alert gaze, or rigid turnaround presentation.
+  Image 3 controls hairpin-side three-quarter adult identity, complete
+  character-left pale-blue crossed pins and ribbon-like ornament, side
+  contour, and stable proportion; do not copy its standard outfit, shoes, or
+  turnaround stiffness. Image 4 controls adult identity, reversible morning
+  hair, cheek shape, short-bob length, palette, rendering, and the C06-1
+  sleepy-neutral state: heavy but open eyelids, relaxed brows and cheeks,
+  incomplete focus, and a quiet closed almost-neutral mouth; do not copy its
+  chest-up crop or hoodie. Image 5 controls warm-white mid-calf socks with exactly two
+  thin pale-blue stripes, ankle and foot volume, relaxed toes, heel placement,
+  and believable floor contact; do not copy its hoodie, skirt, or crop. Place
+  Akari standing near the frame-left fully closed curtain, viewed from inside
+  the bedroom with a room-side front-biased three-quarter camera at natural
+  standing height. Keep her mostly upright but relaxed, with slight forward
+  head drift, dropped shoulders, small hip asymmetry, most weight over the leg
+  farther from the curtain, and the curtain-side knee softly unlocked with its
+  foot slightly behind or outward. Let the curtain-side hand lightly touch or
+  pinch the curtain edge at lower-chest height without pulling it open; let the
+  other arm hang naturally. Direct her unfocused gaze toward the curtain edge
+  or the dim light behind it, never toward the viewer. Keep the complete head,
+  ornament, both hands, pelvis, both legs, ankles, heels, and socked toes
+  visible with clear floor contact. Add exactly two Humanization elements: one
+  light natural slouch on the softly unlocked leg's sock, and small
+  curtain-side shoulder and T-shirt hem asymmetry caused by the low relaxed arm
+  lift. Keep the curtain fully closed with only soft diffused morning light
+  passing through it, plus a restrained bed or rug fragment near a frame edge.
+  Add no mug, phone, clock, readable book, food, slippers, or explanatory prop.
+  The moment must read as slow ordinary waking inertia before opening the
+  curtain, never sadness, fear, illness, intoxication, sensuality,
+  dissociation, or a posed portrait. When references conflict, D02 controls
+  room continuity, C01 standing mechanics, C03 three-quarter identity and
+  proportion, C06-1 morning hair, expression, and rendering, and C07 standing
+  socks and feet. Do not create closed eyes, viewer focus, a broad
+  smile, open mouth, thin legs, broken joints, twisted ankles, pointed toes,
+  contradictory support or contact, wrong ornament, wrong hair length, wrong
+  outfit, incorrect sock stripes, an opened curtain or bright window gap, a
+  high reaching stretch, walking stride, crossed legs, tiptoe balance, body
+  weight hanging from the fabric, crop loss, text, logo, watermark, border,
+  collage, grid, multiple characters, or severe identity, adult-age, anatomy,
+  or rendering drift.
+scene_contract:
+  camera: room-side-front-biased-three-quarter-natural-standing-height
+  surface: bedroom-floor-before-frame-left-fully-closed-curtain
+  continuity: d02-same-morning-bedroom-outfit-hair-and-window-location
+  lighting: soft-diffused-morning-light-through-fully-closed-curtain
+  gaze: curtain-edge-directed-with-incomplete-sleepy-focus
+  pose: relaxed-standing-low-curtain-touch-weight-away-from-curtain
+  humanization:
+    - softly-unlocked-leg-sock-light-natural-slouch
+    - low-arm-lift-shoulder-and-t-shirt-hem-asymmetry
+  outfit:
+    top: loose-opaque-white-short-sleeve-t-shirt
+    bottom: simple-opaque-gray-shorts-style-roomwear
+    socks: warm-white-mid-calf-exactly-two-thin-pale-blue-stripes
+  required_visible_features:
+    - complete-head-and-ornament
+    - both-hands-including-low-curtain-side-touch
+    - pelvis-and-complete-bilateral-leg-support
+    - both-ankles-heels-socked-toes-and-floor-contact
+  forbidden_props: [mug, phone, clock, readable-book, food, slippers, explanatory-prop]
+production_requirements:
+  file_format: png
+  target_canvas: {width: 1024, height: 1536}
+  accepted_width: {minimum: 1020, maximum: 1028}
+  accepted_height: {minimum: 1532, maximum: 1540}
+  standalone_composition: true
+  generated_grid: forbidden
+  force_exact_resize: forbidden
+candidate_policy:
+  initial_variants: [a, b]
+  optional_variant: c
+  optional_c_only_for: d03-scene-staging-curtain-background-lighting-or-presentation
+  stop_for_shared_failure: [D02, C01, C03, C05, C06, C07]
+  cross_candidate_references: forbidden
+candidates:
+  - variant: a
+    title: independent-scene-a
+    target_path: source/candidates/d03/r01/akari-v1.2_d03_morning-curtain-pause_r01-a.png
+  - variant: b
+    title: independent-scene-b
+    target_path: source/candidates/d03/r01/akari-v1.2_d03_morning-curtain-pause_r01-b.png
+comparison_anchors: []
+acceptance_gates: [identity, body, state, continuity, rendering, production]
+hard_rejects:
+  - severe identity adult-age face body-volume or rendering drift
+  - fused missing duplicated disconnected or untraceable limbs or joints
+  - floating weight broken pelvis-to-leg support twisted ankles pointed toes or contradictory foot contact
+  - missing mirrored relocated duplicated or materially redesigned ornament
+  - non-reversible hair wrong hair length extreme bed head wet hair or wind
+  - closed eyes distress intoxication sensual posing viewer-directed focus broad smile or open mouth
+  - opened curtain bright window gap high reach stretched torso walking stride crossed legs tiptoe or fabric-hanging weight
+  - wrong outfit exposed underwear shoes slippers bare feet or incorrect sock height or stripes
+  - crop preventing complete hand pelvis leg ankle heel toe or floor-contact review
+  - mug phone clock readable book food slippers or explanatory prop
+  - readable text logo watermark border collage grid or multiple character

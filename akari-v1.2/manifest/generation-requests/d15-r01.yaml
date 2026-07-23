@@ -1,0 +1,173 @@
+schema_version: 1
+request_id: akari-v1.2-d15-r01
+asset_id: D15
+revision: r01
+variation_axis: independent_scene_attempt
+references:
+  - role: accepted_d14_recent_identity_outfit_action
+    path: akari-v1.2/accepted/daily/life/akari-v1.2_d14_life-bag-unpack_r02.png
+  - role: accepted_d13_compact_desk_room
+    path: akari-v1.2/accepted/daily/life/akari-v1.2_d13_life-charger-search_r02.png
+  - role: accepted_d11_supported_seated_body
+    path: akari-v1.2/accepted/daily/life/akari-v1.2_d11_life-laundry-fold_r02.png
+  - role: accepted_c03_hairpin_three_quarter
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c03_hairpin-side-45_r02.png
+  - role: accepted_c07_seated_sock_feet
+    path: akari-v1.2/accepted/core/indoor-feet/akari-v1.2_c07_indoor-socks-seated_r01.png
+shared_prompt: >-
+  Use the five visible accepted images only in their declared roles to create
+  one fresh standalone Daily Wave 3 scene of the same naturally cute
+  25-year-old adult Akari as she relaxes her posture in front of one desktop
+  computer after a focused household task. Image 1 controls recent adult
+  identity, healthy body volume, normal short bob, complete character-left
+  ornament, oversized opaque white hoodie, opaque gray pleated skirt, striped
+  socks, calm everyday presence, and restrained daylight rendering; do not copy
+  its sofa, bag, notebook, pouch, handkerchief, hand action, or room geometry.
+  Image 2 controls only compact-room scale and the plain light-wood desk family;
+  do not copy its standing pose, open drawer, charger, cable, organizer,
+  notebook, hand action, or exact camera. Image 3 controls stable seated pelvis
+  support, separate knees and shins, bilateral flat socked feet, and ordinary
+  seated body volume; do not copy its sofa, towel, basket, laundry, hand action,
+  window, or rug. Image 4 controls hairpin-side three-quarter identity, complete
+  character-left pale-blue crossed pins and ribbon-like ornament, cheek contour,
+  and short-bob side construction; do not copy shoes, smile, or white backdrop.
+  Image 5 controls seated warm-white mid-calf socks with exactly two thin
+  pale-blue stripes, healthy ankles and feet, flat heels, relaxed toes, and
+  believable knit shape; do not copy its floor pose, smile, or white backdrop.
+
+  Show Akari as she relaxes her posture in front of one desktop computer in a
+  compact plain room during soft diffused neutral late-afternoon light. Use a
+  vertical 1024 by 1536 portrait composition and a gently elevated front
+  three-quarter camera. Place one compact plain light-wood desk on the
+  screen-left side and one plain warm-gray armless desk chair immediately to its
+  screen-right, angled slightly toward the camera. Seat Akari fully on the chair
+  with her pelvis, lower back, and one side of her ribcage visibly supported by
+  the seat and low backrest. The clear near desk corner must remain beside her,
+  never crossing her torso, skirt, pelvis, either leg, or either foot.
+
+  Make one supported awake posture break, not an active computer task. The arm
+  closest to the desk rests its elbow on the clear near desk corner, with that
+  hand lightly supporting the same side of her cheek. Keep all five fingers
+  natural and outside the eye and mouth, the wrist neutral, and the head only
+  lightly inclined into the palm. The other visible hand rests open and relaxed
+  on the corresponding thigh with five natural fingers and no held object.
+  Neither hand touches the keyboard, mouse, monitor, switch, or another device.
+  Keep both hands distinct, fully visible, and connected to their arms.
+
+  Allow one mild sideways torso lean from the supported pelvis, one small
+  natural curve through the spine, and relaxed uneven shoulders. Keep the neck
+  awake and supported, the chest open enough to breathe normally, and the body
+  securely inside the chair. Never let her slide from the seat, dangle an arm,
+  fall face-down, put her torso or head onto the desk, hang her head without
+  support, or create limp or contradictory weight. Keep knees separate and
+  forward, each leg independently traceable from hip through knee, shin, ankle,
+  heel, and toe. Put both socked feet fully flat on the same visible floor in a
+  relaxed small stagger. Never cross or fuse the legs, hide a foot behind the
+  desk or chair, crop a heel or toe, use tiptoe contact, or point either sole at
+  the viewer. Show her complete ornament and crown through both socked heels
+  and toes.
+
+  Direct both open eyes toward one dark blank unreadable screen with relaxed
+  brows, healthy warm-neutral cheeks, and a small closed neutral mouth. The
+  monitor shows no interface, icon, cursor, window, reflection, image, glow,
+  text, logo, or content. Akari is calm, awake, healthy, aware of the room, and
+  taking a short ordinary posture break, never collapsed, ill, or asleep. This
+  is practical non-sensual character documentation, not posing, viewer
+  performance, a pin-up, an illness scene, or a computer advertisement.
+
+  Include exactly two Humanization details: make one small diagonal seated fold
+  in the front hoodie hem, and place one plain compact warm-gray keyboard
+  slightly askew on the desk. Allow only Akari, one desk, one armless chair, one
+  compact plain dark-framed desktop monitor and simple stand, the one blank
+  keyboard, one plain mouse beside it, a neutral floor and wall, and one small
+  plain desk mat. Keep all devices unbranded, supported, coherent, and free of
+  visible cables. Do not show a tower, laptop, tablet, phone, second monitor,
+  second keyboard, extra mouse, headset, speaker, webcam, game controller,
+  charger, cable, adapter, outlet, power strip, drawer, organizer, notebook,
+  paper, book, pen, clock, mirror, drink, food, medicine, blanket, pillow, bag,
+  laundry, towel, basket, sofa, bed, refrigerator, footwear, text, logo, or
+  explanatory prop. There is no second action.
+
+  When references conflict, D14 controls recent adult identity, outfit, healthy
+  body volume, calm everyday presence, and rendering; D13 controls only compact
+  room scale and desk family; D11 controls stable seated body support and
+  bilateral legs; C03 controls three-quarter identity and ornament; and C07
+  controls seated socks and feet. Do not create closed or half-closed eyes,
+  tears, pain, distress, sadness, illness, injury, fever, intoxication, sleep,
+  unconsciousness, collapse, dissociation, sensuality, fetish, glamour, viewer
+  focus, broad smile, open mouth, wrong ornament side, missing ornament parts,
+  wrong hair length, extreme bed hair, wrong outfit, exposed underwear, bare
+  feet, removed sock, wrong sock stripes, cropped head hand chair desk monitor
+  torso pelvis knee shin sock heel or toe, fused missing extra or malformed
+  fingers, broken wrists, disconnected arms, twisted neck spine shoulder
+  ribcage pelvis knee or ankle, fused hidden crossed or untraceable legs, one
+  hidden foot, floating body chair desk monitor keyboard mouse or limb,
+  impossible chair seat backrest desk edge elbow cheek hand monitor stand
+  keyboard mouse or floor geometry, duplicated devices or limbs, forbidden
+  props, readable text, logo, watermark, border, collage, grid, multiple
+  characters, or severe identity, adult-age, anatomy, state, continuity, or
+  rendering drift.
+scene_contract:
+  camera: gently-elevated-front-three-quarter-portrait-full-body
+  location: compact-plain-room-with-light-wood-desk-and-armless-chair
+  support: full-chair-seat-lower-back-and-side-rib-support-with-bilateral-flat-feet
+  action: desk-side-elbow-supported-awake-chair-posture-break
+  continuity: recent-standard-outfit-normal-hair-and-restrained-daylight-rendering
+  lighting: soft-diffused-neutral-late-afternoon-light
+  gaze: both-open-eyes-toward-dark-blank-unreadable-monitor
+  pose: mild-supported-sideways-torso-lean-with-relaxed-uneven-shoulders
+  humanization:
+    - one-small-diagonal-seated-fold-in-front-hoodie-hem
+    - one-plain-compact-keyboard-slightly-askew
+  outfit:
+    top: oversized-opaque-white-hoodie
+    bottom: opaque-gray-pleated-skirt
+    socks: warm-white-mid-calf-exactly-two-thin-pale-blue-stripes
+  required_visible_features:
+    - complete-head-character-left-ornament-and-both-open-eyes
+    - desk-side-five-finger-hand-lightly-supporting-cheek
+    - other-five-finger-hand-open-on-corresponding-thigh
+    - stable-chair-seat-lower-back-ribcage-and-pelvis-support
+    - separately-traceable-bilateral-thigh-knee-shin-lines
+    - both-flat-striped-socks-ankles-heels-and-relaxed-toes
+    - one-coherent-desk-chair-dark-monitor-keyboard-mouse-and-desk-mat
+  forbidden_props: [tower, laptop, tablet, phone, second-monitor, second-keyboard, extra-mouse, headset, speaker, webcam, game-controller, charger, cable, adapter, outlet, power-strip, drawer, organizer, notebook, paper, book, pen, clock, mirror, drink, food, medicine, blanket, pillow, bag, laundry, towel, basket, sofa, bed, refrigerator, footwear, explanatory-prop]
+production_requirements:
+  file_format: png
+  target_canvas: {width: 1024, height: 1536}
+  accepted_width: {minimum: 1020, maximum: 1028}
+  accepted_height: {minimum: 1532, maximum: 1540}
+  standalone_composition: true
+  generated_grid: forbidden
+  force_exact_resize: forbidden
+candidate_policy:
+  initial_variants: [a, b]
+  optional_variant: c
+  optional_c_only_for: d15-scene-or-distinct-independent-candidate-local-major-failures
+  stop_for_shared_failure: [D14, D13, D11, C03, C07]
+  cross_candidate_references: forbidden
+candidates:
+  - variant: a
+    title: independent-scene-a
+    target_path: source/candidates/d15/r01/akari-v1.2_d15_life-pc-posture-break_r01-a.png
+  - variant: b
+    title: independent-scene-b
+    target_path: source/candidates/d15/r01/akari-v1.2_d15_life-pc-posture-break_r01-b.png
+comparison_anchors: []
+acceptance_gates: [identity, body, state, continuity, rendering, production]
+hard_rejects:
+  - severe identity adult-age face body-volume state continuity or rendering drift
+  - fused missing duplicated disconnected hidden or untraceable limbs or joints
+  - floating weight broken chair pelvis ribcage leg foot hand elbow desk monitor keyboard or mouse support or contradictory contact
+  - missing mirrored relocated duplicated or materially redesigned ornament
+  - wrong hair length extreme bed head wet hair or wind
+  - closed or half-closed eyes tears distress sadness pain injury illness fever intoxication sleep unconsciousness collapse dissociation sensual fetish glamour viewer focus broad smile or open mouth
+  - wrong outfit exposed underwear removed sock bare feet incorrect sock height or stripes
+  - malformed extra or fused fingers broken wrist hidden hand disconnected arm eye or mouth covered or impossible cheek support
+  - fused crossed hidden or untraceable legs one hidden foot broken knee or ankle tiptoe pointed foot or missing heel or toe
+  - sliding dangling face-down head-on-desk torso-on-desk unsupported-head-drop limp-body or falling-from-chair read
+  - impossible duplicated floating body-obscuring or unsupported chair desk monitor stand keyboard mouse desk mat or floor geometry
+  - monitor interface icon cursor window reflection image glow readable content text or logo
+  - tower laptop tablet phone second monitor second keyboard extra mouse headset speaker webcam game controller charger cable adapter outlet power strip drawer organizer notebook paper book pen clock mirror drink food medicine blanket pillow bag laundry towel basket sofa bed refrigerator footwear or explanatory prop
+  - crop or scale preventing complete head ornament hand chair desk monitor torso pelvis knee shin sock heel toe or floor-contact review
+  - readable text logo watermark border collage grid or multiple character

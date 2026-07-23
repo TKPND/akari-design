@@ -1,0 +1,145 @@
+schema_version: 1
+request_id: akari-v1.2-d08-r03
+asset_id: D08
+revision: r03
+variation_axis: independent_scene_attempt
+references:
+  - role: accepted_d07_same_evening_continuity
+    path: akari-v1.2/accepted/daily/evening/akari-v1.2_d07_evening-shallow-sofa-sit_r01.png
+  - role: accepted_c04_grounded_seated_body
+    path: akari-v1.2/accepted/core/sitting/akari-v1.2_c04_floor-sitting_r01.png
+  - role: accepted_c03_hairpin_three_quarter
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c03_hairpin-side-45_r02.png
+  - role: accepted_c06_2_safe_relief_expression
+    path: akari-v1.2/accepted/core/face-hair/akari-v1.2_c06-2_sleepy-secure_r01.png
+  - role: accepted_c07_seated_sock_feet
+    path: akari-v1.2/accepted/core/indoor-feet/akari-v1.2_c07_indoor-socks-seated_r01.png
+shared_prompt: >-
+  Use the five visible accepted images only in their declared roles to create
+  one standalone same-evening Daily scene of the same naturally cute
+  25-year-old adult Akari. Image 1 controls D07 same-evening adult identity,
+  normal short bob, complete character-left ornament, oversized opaque white
+  hoodie, opaque gray pleated skirt, striped socks, warm palette, safe relieved
+  state, character-right cuff pushed up one thumb width, and the untouched
+  character-right sock staying slightly lower; do not copy its sofa, exact sit,
+  living-room staging, crop, or hand placement. Image 2 controls grounded seated
+  pelvis, healthy leg volume, standard outfit, coordinated spine, and believable
+  body support; do not copy its floor side-sit, rug, smile, plain backdrop, or
+  viewer focus. Image 3 controls hairpin-side three-quarter identity, complete
+  character-left pale-blue crossed pins and ribbon-like ornament, cheek contour,
+  and short-bob side construction; do not copy standing, smile, shoes, or white
+  backdrop. Image 4 controls only the C06-2 expression intensity: mildly heavy
+  but open eyelids, relaxed brows and cheeks, and a small closed almost-neutral
+  mouth that reads secure; do not copy morning hair, chest-up crop, or plain
+  backdrop. Image 5 controls warm-white mid-calf socks with exactly two thin
+  pale-blue stripes, seated ankle and foot volume, relaxed toes, heel shape, and
+  believable contact; do not copy its floor pose, smile, rug, or exact legs.
+  Show Akari in a compact bedroom sitting on the front edge of a low neutral bed
+  under warm diffused evening light, with only a plain duvet and one plain
+  pillow as restrained context. Use a bed-foot-side front-left three-quarter
+  camera at natural seated height. In this final composition, Akari's
+  character-left side is the IMAGE-RIGHT side of the final picture, directly
+  below the visible character-left hair ornament. Her character-right side is
+  the IMAGE-LEFT side of the final picture. Do not mirror this working-side
+  relationship. Her pelvis rests completely on the front band of the mattress
+  with subtle compression. Let her torso hinge moderately from the hips with a
+  mild coordinated spinal curve, supported neck, and low shoulders. Her
+  untouched character-right leg and sock must appear on IMAGE-LEFT; keep that
+  foot fully flat beneath its knee, and keep that sock slightly lower with both
+  stripes complete. Extend the IMAGE-RIGHT character-left leg only slightly
+  forward on a separate non-crossing lane, keeping heel and sole grounded and
+  toes relaxed. Both hands must lightly smooth ONLY the IMAGE-RIGHT leg and sock,
+  Akari's character-left sock directly below the ornament, into an ordinary
+  continuous knit cylinder without pulling it away from the calf and without
+  hiding either pale-blue stripe. Neither hand may touch the IMAGE-LEFT leg or
+  sock. Keep fingers separately readable, wrists neutral, and hands clearly
+  connected to their arms. Direct her gaze toward the working IMAGE-RIGHT sock,
+  never the viewer. Keep the complete head, ornament, both hands, pelvis,
+  thighs, knees, lower legs, both socks, heels, toes, mattress edge, and floor
+  contact visible. Angle the knees away from camera and keep the opaque skirt
+  covering the pelvis and upper thighs with no underwear view. Carry exactly two
+  Humanization elements from D07: the character-right hoodie cuff stays pushed
+  up by about one thumb width, and the untouched IMAGE-LEFT character-right sock
+  stays slightly lower than the IMAGE-RIGHT character-left sock while both
+  stripes remain complete. Do not add further costume disorder. Do not stretch
+  either sock mouth into a detached band, strap, loop, or ribbon. Use restrained
+  wall and floor context with no phone, clock, mirror, open drawer, laundry pile,
+  footwear, bag, food, drink, medicine, television content, or explanatory prop.
+  The moment is a safe ordinary clothing adjustment during quiet decompression,
+  never undressing, slipping, falling, collapsing, stretching display, sadness,
+  pain, fear, injury, illness, intoxication, sleep, dissociation, sensuality,
+  fetish framing, glamour, pin-up posing, viewer performance, or an anatomy
+  plate. When references conflict, D07 controls same-evening continuity and
+  state, C04 controls seated body and support, C03 controls three-quarter
+  identity and ornament, C06-2 controls only expression intensity, and C07
+  controls socks and feet. Do not create hands on the IMAGE-LEFT character-right
+  sock, an untouched IMAGE-LEFT sock higher than the working one, mirrored side
+  staging, closed eyes, tears, open mouth, broad smile, viewer focus, thin legs,
+  broken pelvis or mattress support, crossed fused hidden or untraceable legs,
+  malformed or extra fingers, floating heel, tiptoe contact, twisted ankles,
+  pointed toes, a detached sock band, wrong ornament side, wrong hair length,
+  wrong outfit, exposed underwear, bare feet, removed sock, incorrect sock
+  stripes, forbidden props, crop loss, text, logo, watermark, border, collage,
+  grid, multiple characters, or severe identity, adult-age, anatomy, continuity,
+  or rendering drift.
+scene_contract:
+  camera: bed-foot-side-front-left-three-quarter-character-left-on-image-right
+  location: compact-bedroom-bedside
+  seat: front-band-of-low-neutral-bed-mattress
+  action: two-hand-image-right-character-left-sock-top-smoothing
+  continuity: d07-same-evening-outfit-normal-hair-light-state-and-humanization
+  lighting: warm-diffused-evening-interior
+  gaze: working-image-right-character-left-sock-not-viewer
+  pose: supported-forward-hinge-with-separated-grounded-feet
+  humanization:
+    - character-right-hoodie-cuff-pushed-up-one-thumb-width
+    - image-left-character-right-sock-slightly-lower-with-both-stripes-complete
+  outfit:
+    top: oversized-opaque-white-hoodie
+    bottom: opaque-gray-pleated-skirt
+    socks: warm-white-mid-calf-exactly-two-thin-pale-blue-stripes
+  required_visible_features:
+    - complete-head-and-image-right-character-left-ornament
+    - open-heavy-lidded-three-quarter-face
+    - two-separate-hands-on-image-right-character-left-sock-top
+    - untouched-lower-image-left-character-right-sock-with-both-stripes
+    - fully-supported-pelvis-and-subtle-mattress-compression
+    - separately-traceable-bilateral-thigh-knee-shin-lines
+    - both-striped-socks-heels-toes-and-grounded-floor-contact
+  forbidden_props: [phone, clock, mirror, open-drawer, laundry-pile, footwear, bag, food, drink, medicine, television-content, explanatory-prop]
+production_requirements:
+  file_format: png
+  target_canvas: {width: 1024, height: 1536}
+  accepted_width: {minimum: 1020, maximum: 1028}
+  accepted_height: {minimum: 1532, maximum: 1540}
+  standalone_composition: true
+  generated_grid: forbidden
+  force_exact_resize: forbidden
+candidate_policy:
+  initial_variants: [a, b]
+  optional_variant: c
+  optional_c_only_for: d08-scene-or-distinct-independent-candidate-local-major-failures
+  stop_for_shared_failure: [D07, C03, C04, C06, C07]
+  cross_candidate_references: forbidden
+candidates:
+  - variant: a
+    title: independent-scene-a
+    target_path: source/candidates/d08/r03/akari-v1.2_d08_evening-bed-edge-sock-adjust_r03-a.png
+  - variant: b
+    title: independent-scene-b
+    target_path: source/candidates/d08/r03/akari-v1.2_d08_evening-bed-edge-sock-adjust_r03-b.png
+comparison_anchors: []
+acceptance_gates: [identity, body, state, continuity, rendering, production]
+hard_rejects:
+  - severe identity adult-age face body-volume continuity or rendering drift
+  - fused missing duplicated disconnected crossed hidden or untraceable limbs or joints
+  - floating weight broken bed mattress pelvis foot or hand support or contradictory contact
+  - missing mirrored relocated duplicated or materially redesigned ornament
+  - wrong hair length extreme bed head wet hair or wind
+  - closed eyes tears distress sadness pain injury illness intoxication sleep dissociation sensual fetish glamour viewer focus broad smile or open mouth
+  - wrong outfit exposed underwear removed sock bare feet incorrect sock height or stripes
+  - malformed extra or fused fingers unstable forward hinge crossed legs floating heel tiptoe contact twisted ankles or pointed toes
+  - hands on image-left character-right sock mirrored working-side relationship higher image-left character-right sock or detached sock band strap loop or ribbon
+  - phone clock mirror open drawer laundry pile footwear bag food drink medicine television content or explanatory prop
+  - crop or scale preventing complete head hand pelvis leg sock heel toe mattress edge or floor contact review
+  - readable text logo watermark border collage grid or multiple character

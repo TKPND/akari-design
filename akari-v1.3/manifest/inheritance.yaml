@@ -1,0 +1,58 @@
+schema_version: 1
+collection: akari-v1.3-base-definition
+references:
+  - reference_id: style-v04-a
+    source_path: source/references/style-study/akari-v04-a.png
+    copied_path: references/style/akari-v04-a.png
+    source_collection: public-style-reference
+    controlling_roles:
+      - face
+      - amber-eye-finish
+      - airy-bob-silhouette
+      - bright-smile
+      - rendering
+      - roomwear
+    reuse_rationale: >-
+      Highest approved visual authority for the refreshed v1.3 identity and
+      close-view finish.
+    inherited_traits:
+      - cute-young-adult-face
+      - jewel-like-amber-eyes
+      - warm-chestnut-airy-short-bob
+      - open-mouth-smile-energy
+      - pastel-cel-rendering
+      - white-t-shirt-and-pale-blue-shorts
+    excluded_traits:
+      - ornament-side
+      - exact-pose
+      - yellow-background
+    sha256: aafad35807788120542bd650039da6f88297de8f366534ab3d2c38920100c579
+  - reference_id: v1.2-c01-standing
+    source_path: >-
+      akari-v1.2/accepted/core/standing/akari-v1.2_c01_front-natural-stance_r01.png
+    copied_path: >-
+      references/v1.2/akari-v1.2_c01_front-natural-stance_r01.png
+    source_collection: akari-v1.2-natural-form
+    controlling_roles:
+      - healthy-leg-volume
+      - standing-body-connection
+      - natural-standing-weight
+      - outdoor-garment-facts
+    reuse_rationale: >-
+      Supplies body connection and fixed outdoor garment facts without
+      granting identity or rendering authority.
+    inherited_traits:
+      - healthy-leg-volume
+      - believable-pelvis-knee-ankle-foot-connection
+      - natural-standing-weight
+      - white-oversized-hoodie
+      - gray-pleated-skirt
+      - white-socks-with-two-pale-blue-stripes
+      - white-chunky-sneakers
+    excluded_traits:
+      - face
+      - age
+      - hair
+      - ornament
+      - rendering
+    sha256: a977f2798d15f3da9ef0d7720d6f9fc41bd2f84f54f4c8a69908a482596a75c5

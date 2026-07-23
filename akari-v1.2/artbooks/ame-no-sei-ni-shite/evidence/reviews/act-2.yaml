@@ -1,0 +1,13 @@
+schema_version: 1
+scope: act-2
+status: accepted
+checks:
+  scene_order: pass
+  identity_and_adult_age: pass
+  rain_and_wetness_progression: pass
+  outdoor_outfit_and_props: pass
+  shared_umbrella_pov: pass
+  genkan_floor_geography: pass
+findings: []
+contact_sheet_sha256: 516bd0fb4e08d8b9543378834fd57c31cc5bc13c32ae39b2c1f82c82303b7036
+reviewed_at: '2026-07-21T06:24:36Z'

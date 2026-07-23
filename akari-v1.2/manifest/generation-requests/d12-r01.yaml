@@ -1,0 +1,151 @@
+schema_version: 1
+request_id: akari-v1.2-d12-r01
+asset_id: D12
+revision: r01
+variation_axis: independent_scene_attempt
+references:
+  - role: accepted_d11_recent_identity_outfit
+    path: akari-v1.2/accepted/daily/life/akari-v1.2_d11_life-laundry-fold_r02.png
+  - role: accepted_d04_compact_kitchenette_route
+    path: akari-v1.2/accepted/daily/morning/akari-v1.2_d04_morning-drink-fetch_r02.png
+  - role: accepted_c03_hairpin_three_quarter
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c03_hairpin-side-45_r02.png
+  - role: accepted_c01_standing_body
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c01_front-natural-stance_r01.png
+  - role: accepted_c07_standing_sock_feet
+    path: akari-v1.2/accepted/core/indoor-feet/akari-v1.2_c07_indoor-socks-standing_r01.png
+shared_prompt: >-
+  Use the five visible accepted images only in their declared roles to create
+  one standalone Daily Wave 3 life-action scene of the same naturally cute
+  25-year-old adult Akari. Image 1 controls recent adult identity, healthy body
+  volume, normal short bob, complete character-left ornament, oversized opaque
+  white hoodie, opaque gray pleated skirt, striped socks, and restrained
+  daylight rendering; do not copy sitting, towel, basket, sofa, or laundry.
+  Image 2 controls only compact kitchenette scale, a modest appliance-route
+  context, and ordinary household movement; do not copy its T-shirt, shorts,
+  drink, hairstyle drift, exact gait, or expression. Image 3 controls
+  hairpin-side three-quarter identity, complete character-left pale-blue crossed
+  pins and ribbon-like ornament, cheek contour, and short-bob side construction;
+  do not copy standing shoes, smile, or white backdrop. Image 4 controls adult
+  standing ribcage, pelvis, bilateral leg proportions, and healthy body volume;
+  do not copy its front-facing pose, shoes, smile, or white backdrop. Image 5
+  controls warm-white mid-calf socks with exactly two thin pale-blue stripes,
+  healthy ankles and feet, flat heels, relaxed toes, and believable knit shape;
+  do not copy its exact stance, shoes, or white backdrop.
+
+  Show Akari as she opens the refrigerator door in a compact plain kitchenette
+  during soft diffused neutral daytime light. Use a vertical 1024 by 1536
+  portrait composition and a gently elevated front-left three-quarter camera.
+  Place one compact matte off-white refrigerator at image-left and Akari just
+  to its image-right, with enough breathing room around her complete body.
+  Hinge the refrigerator on its far image-left edge. Akari uses only her
+  character-right hand to hold the near vertical handle and opens the
+  refrigerator door about 30 to 40 degrees toward image-left. The door never
+  crosses in front of her body and must not hide her torso, skirt, either hand,
+  either leg, or either foot. Show her complete ornament and crown through both
+  socked heels and toes. Keep her torso upright with only a small natural turn
+  toward the open interior, pelvis stable, shoulders relaxed, and neck neutral.
+
+  Put both socked feet fully flat on the floor in a small natural stagger, each
+  leg independently traceable from hip through knee, shin, ankle, heel, and
+  toe. Never cross or fuse the legs, hide a foot behind the door, crop a heel or
+  toe, use tiptoe contact, or point either sole at the viewer. Her free
+  character-left hand rests open beside the hoodie seam with five natural
+  fingers and a neutral wrist; it performs no second action. Direct both open
+  eyes into the refrigerator at the middle shelf with relaxed brows, warm
+  neutral cheeks, and a small closed quietly curious mouth. Preserve the
+  complete character-left ornament and normal short bob. This is practical
+  non-sensual character documentation, not posing, viewer performance, a
+  pin-up, or an appliance advertisement.
+
+  Include exactly two Humanization details: push the character-right hoodie
+  cuff up by about one thumb width, and let the character-right sock sit about
+  one finger width lower than the other while keeping exactly two complete
+  pale-blue stripes. Inside the refrigerator show only two or three indistinct
+  blank neutral containers on the middle shelf, all safely behind the door
+  plane. Allow only the compact refrigerator, its simple shelves, those blank
+  containers, a short plain base cabinet edge, and neutral floor and wall. Do
+  not show loose food, recognizable produce, meat, alcohol, medicine, readable
+  packaging, magnets, notes, a held item, drink, towel, basket, laundry, phone,
+  charger, cable, bag, clock, mirror, bed, sofa, footwear, text, logo, or
+  explanatory prop. The scene is calm, awake, healthy, and task-focused, never
+  sleepy, collapsed, sad, distressed, ill, intoxicated, dissociated, sensual,
+  fetish, glamorous, or staged for the viewer.
+
+  When references conflict, D11 controls recent adult identity, outfit, and
+  rendering; D04 controls only compact kitchenette scale and appliance-route
+  context; C03 controls three-quarter identity and ornament; C01 controls adult
+  standing body proportions; and C07 controls socks and feet. Do not create
+  closed eyes, tears, open mouth, broad smile, viewer focus, wrong ornament
+  side, missing ornament parts, wrong hair length, wrong outfit, exposed
+  underwear, bare feet, removed sock, wrong sock stripes, cropped head hand
+  door handle torso pelvis knee shin sock heel or toe, fused missing extra or
+  malformed fingers, broken wrists, disconnected arms, twisted neck spine
+  shoulder ribcage pelvis knee or ankle, fused hidden crossed or untraceable
+  legs, one hidden foot, floating body door or containers, impossible hinge
+  handle shelf or hand geometry, duplicated refrigerator or door, forbidden
+  props, readable text, logo, watermark, border, collage, grid, multiple
+  characters, or severe identity, adult-age, anatomy, continuity, or rendering
+  drift.
+scene_contract:
+  camera: gently-elevated-front-left-three-quarter-portrait-full-body
+  location: compact-plain-kitchenette-with-off-white-refrigerator
+  support: upright-standing-with-bilateral-flat-floor-foot-contact
+  action: character-right-hand-open-fridge-door
+  continuity: recent-standard-outfit-normal-hair-and-restrained-daylight-rendering
+  lighting: soft-diffused-neutral-daytime-light
+  gaze: both-open-eyes-into-middle-refrigerator-shelf
+  pose: small-body-turn-with-independent-natural-staggered-legs
+  humanization:
+    - character-right-hoodie-cuff-pushed-up-one-thumb-width
+    - character-right-sock-one-finger-width-lower-with-two-stripes
+  outfit:
+    top: oversized-opaque-white-hoodie
+    bottom: opaque-gray-pleated-skirt
+    socks: warm-white-mid-calf-exactly-two-thin-pale-blue-stripes
+  required_visible_features:
+    - complete-head-character-left-ornament-and-both-open-eyes
+    - character-right-five-finger-hand-on-near-vertical-handle
+    - free-character-left-five-finger-hand-beside-hoodie-seam
+    - stable-ribcage-pelvis-and-upright-floor-support
+    - separately-traceable-bilateral-thigh-knee-shin-lines
+    - both-flat-striped-socks-ankles-heels-and-relaxed-toes
+    - one-coherent-refrigerator-door-hinge-handle-and-shelf-interior
+  forbidden_props: [loose-food, recognizable-produce, meat, alcohol, medicine, readable-packaging, magnets, notes, held-item, drink, towel, basket, laundry, phone, charger, cable, bag, clock, mirror, bed, sofa, footwear, explanatory-prop]
+production_requirements:
+  file_format: png
+  target_canvas: {width: 1024, height: 1536}
+  accepted_width: {minimum: 1020, maximum: 1028}
+  accepted_height: {minimum: 1532, maximum: 1540}
+  standalone_composition: true
+  generated_grid: forbidden
+  force_exact_resize: forbidden
+candidate_policy:
+  initial_variants: [a, b]
+  optional_variant: c
+  optional_c_only_for: d12-scene-or-distinct-independent-candidate-local-major-failures
+  stop_for_shared_failure: [D11, D04, C03, C01, C07]
+  cross_candidate_references: forbidden
+candidates:
+  - variant: a
+    title: independent-scene-a
+    target_path: source/candidates/d12/r01/akari-v1.2_d12_life-fridge-open_r01-a.png
+  - variant: b
+    title: independent-scene-b
+    target_path: source/candidates/d12/r01/akari-v1.2_d12_life-fridge-open_r01-b.png
+comparison_anchors: []
+acceptance_gates: [identity, body, state, continuity, rendering, production]
+hard_rejects:
+  - severe identity adult-age face body-volume continuity or rendering drift
+  - fused missing duplicated disconnected hidden or untraceable limbs or joints
+  - floating weight broken floor pelvis leg foot hand door refrigerator shelf or container support or contradictory contact
+  - missing mirrored relocated duplicated or materially redesigned ornament
+  - wrong hair length extreme bed head wet hair or wind
+  - closed eyes tears distress sadness pain injury illness intoxication sleep collapse dissociation sensual fetish glamour viewer focus broad smile or open mouth
+  - wrong outfit exposed underwear removed sock bare feet incorrect sock height or stripes
+  - malformed extra or fused fingers broken wrist hidden hand disconnected arm or impossible handle grip
+  - fused crossed hidden or untraceable legs one hidden foot broken knee or ankle tiptoe pointed foot or missing heel or toe
+  - impossible duplicated floating or body-obscuring refrigerator door hinge handle shelf or container
+  - loose food recognizable produce meat alcohol medicine readable packaging magnets notes held item drink towel basket laundry phone charger cable bag clock mirror bed sofa footwear or explanatory prop
+  - crop or scale preventing complete head ornament hand handle door torso pelvis knee shin sock heel toe or floor-contact review
+  - readable text logo watermark border collage grid or multiple character

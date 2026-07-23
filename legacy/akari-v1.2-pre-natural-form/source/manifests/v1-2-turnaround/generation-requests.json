@@ -1,0 +1,1097 @@
+{
+  "schema_version": 1,
+  "collection_id": "akari-v1.2-canonical-turnaround",
+  "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+  "active_batches": {
+    "front": "batch:v1-2-turnaround:20260713:front:r1",
+    "character-left-front-three-quarter": "batch:v1-2-turnaround:20260713:character-left-front-three-quarter:r2",
+    "character-right-front-three-quarter": "batch:v1-2-turnaround:20260713:character-right-front-three-quarter:r2",
+    "character-left-profile": "batch:v1-2-turnaround:20260713:character-left-profile:r1",
+    "character-right-profile": "batch:v1-2-turnaround:20260713:character-right-profile:r1",
+    "character-left-rear-three-quarter": "batch:v1-2-turnaround:20260713:character-left-rear-three-quarter:r1",
+    "character-right-rear-three-quarter": "batch:v1-2-turnaround:20260713:character-right-rear-three-quarter:r1",
+    "back": "batch:v1-2-turnaround:20260713:back:r1"
+  },
+  "requests": [
+    {
+      "id": "request:v1-2-turnaround:20260713:front:r1:c1",
+      "batch_id": "batch:v1-2-turnaround:20260713:front:r1",
+      "revision": 1,
+      "slot": "front",
+      "angle_order": 1,
+      "candidate_number": 1,
+      "japanese_title": "正面",
+      "side": "center",
+      "azimuth_degrees": 0,
+      "view_family": "front",
+      "required_upstream_slots": [],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/generated/akari-body-proportion-option-b.webp",
+        "source/generated/akari-hoodie-front-proportion-corrected.webp",
+        "source/originals/v1_1_standard_foot_set.webp",
+        "source/originals/v1_1_shoes.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_front_r1_c1.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for 正面.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: front at 0 degrees from the character's perspective; expected hair ornament visibility is visible.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as 正面 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:front:r1:c2",
+      "batch_id": "batch:v1-2-turnaround:20260713:front:r1",
+      "revision": 1,
+      "slot": "front",
+      "angle_order": 1,
+      "candidate_number": 2,
+      "japanese_title": "正面",
+      "side": "center",
+      "azimuth_degrees": 0,
+      "view_family": "front",
+      "required_upstream_slots": [],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/generated/akari-body-proportion-option-b.webp",
+        "source/generated/akari-hoodie-front-proportion-corrected.webp",
+        "source/originals/v1_1_standard_foot_set.webp",
+        "source/originals/v1_1_shoes.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_front_r1_c2.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for 正面.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: front at 0 degrees from the character's perspective; expected hair ornament visibility is visible.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as 正面 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:front:r1:c3",
+      "batch_id": "batch:v1-2-turnaround:20260713:front:r1",
+      "revision": 1,
+      "slot": "front",
+      "angle_order": 1,
+      "candidate_number": 3,
+      "japanese_title": "正面",
+      "side": "center",
+      "azimuth_degrees": 0,
+      "view_family": "front",
+      "required_upstream_slots": [],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/generated/akari-body-proportion-option-b.webp",
+        "source/generated/akari-hoodie-front-proportion-corrected.webp",
+        "source/originals/v1_1_standard_foot_set.webp",
+        "source/originals/v1_1_shoes.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_front_r1_c3.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for 正面.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: front at 0 degrees from the character's perspective; expected hair ornament visibility is visible.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as 正面 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:character-left-front-three-quarter:r1:c1",
+      "batch_id": "batch:v1-2-turnaround:20260713:character-left-front-three-quarter:r1",
+      "revision": 1,
+      "slot": "character-left-front-three-quarter",
+      "angle_order": 2,
+      "candidate_number": 1,
+      "japanese_title": "キャラクター左・前45度",
+      "side": "character_left",
+      "azimuth_degrees": 45,
+      "view_family": "front_three_quarter",
+      "required_upstream_slots": [
+        "front"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/generated/akari-body-proportion-option-b.webp",
+        "source/generated/akari-hoodie-front-proportion-corrected.webp",
+        "source/originals/v1_1_standard_foot_set.webp",
+        "source/originals/v1_1_shoes.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/originals/v1_1_髪飾り側_45deg.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_character-left-front-three-quarter_r1_c1.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for キャラクター左・前45度.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: front_three_quarter at 45 degrees from the character's perspective; expected hair ornament visibility is prominent.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as キャラクター左・前45度 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:character-left-front-three-quarter:r1:c2",
+      "batch_id": "batch:v1-2-turnaround:20260713:character-left-front-three-quarter:r1",
+      "revision": 1,
+      "slot": "character-left-front-three-quarter",
+      "angle_order": 2,
+      "candidate_number": 2,
+      "japanese_title": "キャラクター左・前45度",
+      "side": "character_left",
+      "azimuth_degrees": 45,
+      "view_family": "front_three_quarter",
+      "required_upstream_slots": [
+        "front"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/generated/akari-body-proportion-option-b.webp",
+        "source/generated/akari-hoodie-front-proportion-corrected.webp",
+        "source/originals/v1_1_standard_foot_set.webp",
+        "source/originals/v1_1_shoes.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/originals/v1_1_髪飾り側_45deg.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_character-left-front-three-quarter_r1_c2.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for キャラクター左・前45度.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: front_three_quarter at 45 degrees from the character's perspective; expected hair ornament visibility is prominent.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as キャラクター左・前45度 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:character-left-front-three-quarter:r1:c3",
+      "batch_id": "batch:v1-2-turnaround:20260713:character-left-front-three-quarter:r1",
+      "revision": 1,
+      "slot": "character-left-front-three-quarter",
+      "angle_order": 2,
+      "candidate_number": 3,
+      "japanese_title": "キャラクター左・前45度",
+      "side": "character_left",
+      "azimuth_degrees": 45,
+      "view_family": "front_three_quarter",
+      "required_upstream_slots": [
+        "front"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/generated/akari-body-proportion-option-b.webp",
+        "source/generated/akari-hoodie-front-proportion-corrected.webp",
+        "source/originals/v1_1_standard_foot_set.webp",
+        "source/originals/v1_1_shoes.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/originals/v1_1_髪飾り側_45deg.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_character-left-front-three-quarter_r1_c3.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for キャラクター左・前45度.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: front_three_quarter at 45 degrees from the character's perspective; expected hair ornament visibility is prominent.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as キャラクター左・前45度 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:character-left-front-three-quarter:r2:c1",
+      "batch_id": "batch:v1-2-turnaround:20260713:character-left-front-three-quarter:r2",
+      "revision": 2,
+      "slot": "character-left-front-three-quarter",
+      "angle_order": 2,
+      "candidate_number": 1,
+      "japanese_title": "キャラクター左・前45度",
+      "side": "character_left",
+      "azimuth_degrees": 45,
+      "view_family": "front_three_quarter",
+      "required_upstream_slots": [
+        "front"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/originals/v1_1_髪飾り側_45deg.webp",
+        "source/originals/v1_1_standard_foot_set.webp",
+        "source/originals/v1_1_shoes.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_character-left-front-three-quarter_r2_c1.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for キャラクター左・前45度.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: front_three_quarter at 45 degrees from the character's perspective; expected hair ornament visibility is prominent.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as キャラクター左・前45度 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:character-left-front-three-quarter:r2:c2",
+      "batch_id": "batch:v1-2-turnaround:20260713:character-left-front-three-quarter:r2",
+      "revision": 2,
+      "slot": "character-left-front-three-quarter",
+      "angle_order": 2,
+      "candidate_number": 2,
+      "japanese_title": "キャラクター左・前45度",
+      "side": "character_left",
+      "azimuth_degrees": 45,
+      "view_family": "front_three_quarter",
+      "required_upstream_slots": [
+        "front"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/originals/v1_1_髪飾り側_45deg.webp",
+        "source/originals/v1_1_standard_foot_set.webp",
+        "source/originals/v1_1_shoes.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_character-left-front-three-quarter_r2_c2.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for キャラクター左・前45度.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: front_three_quarter at 45 degrees from the character's perspective; expected hair ornament visibility is prominent.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as キャラクター左・前45度 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:character-left-front-three-quarter:r2:c3",
+      "batch_id": "batch:v1-2-turnaround:20260713:character-left-front-three-quarter:r2",
+      "revision": 2,
+      "slot": "character-left-front-three-quarter",
+      "angle_order": 2,
+      "candidate_number": 3,
+      "japanese_title": "キャラクター左・前45度",
+      "side": "character_left",
+      "azimuth_degrees": 45,
+      "view_family": "front_three_quarter",
+      "required_upstream_slots": [
+        "front"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/originals/v1_1_髪飾り側_45deg.webp",
+        "source/originals/v1_1_standard_foot_set.webp",
+        "source/originals/v1_1_shoes.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_character-left-front-three-quarter_r2_c3.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for キャラクター左・前45度.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: front_three_quarter at 45 degrees from the character's perspective; expected hair ornament visibility is prominent.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as キャラクター左・前45度 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:character-left-profile:r1:c1",
+      "batch_id": "batch:v1-2-turnaround:20260713:character-left-profile:r1",
+      "revision": 1,
+      "slot": "character-left-profile",
+      "angle_order": 3,
+      "candidate_number": 1,
+      "japanese_title": "キャラクター左・真横",
+      "side": "character_left",
+      "azimuth_degrees": 90,
+      "view_family": "profile",
+      "required_upstream_slots": [
+        "front",
+        "character-left-front-three-quarter"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-left-front-three-quarter.webp",
+        "source/originals/v1_1_真横.webp",
+        "source/originals/v1_1_standard_foot_set.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_character-left-profile_r1_c1.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for キャラクター左・真横.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: profile at 90 degrees from the character's perspective; expected hair ornament visibility is prominent.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as キャラクター左・真横 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:character-left-profile:r1:c2",
+      "batch_id": "batch:v1-2-turnaround:20260713:character-left-profile:r1",
+      "revision": 1,
+      "slot": "character-left-profile",
+      "angle_order": 3,
+      "candidate_number": 2,
+      "japanese_title": "キャラクター左・真横",
+      "side": "character_left",
+      "azimuth_degrees": 90,
+      "view_family": "profile",
+      "required_upstream_slots": [
+        "front",
+        "character-left-front-three-quarter"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-left-front-three-quarter.webp",
+        "source/originals/v1_1_真横.webp",
+        "source/originals/v1_1_standard_foot_set.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_character-left-profile_r1_c2.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for キャラクター左・真横.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: profile at 90 degrees from the character's perspective; expected hair ornament visibility is prominent.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as キャラクター左・真横 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:character-left-profile:r1:c3",
+      "batch_id": "batch:v1-2-turnaround:20260713:character-left-profile:r1",
+      "revision": 1,
+      "slot": "character-left-profile",
+      "angle_order": 3,
+      "candidate_number": 3,
+      "japanese_title": "キャラクター左・真横",
+      "side": "character_left",
+      "azimuth_degrees": 90,
+      "view_family": "profile",
+      "required_upstream_slots": [
+        "front",
+        "character-left-front-three-quarter"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-left-front-three-quarter.webp",
+        "source/originals/v1_1_真横.webp",
+        "source/originals/v1_1_standard_foot_set.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_character-left-profile_r1_c3.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for キャラクター左・真横.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: profile at 90 degrees from the character's perspective; expected hair ornament visibility is prominent.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as キャラクター左・真横 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:character-left-rear-three-quarter:r1:c1",
+      "batch_id": "batch:v1-2-turnaround:20260713:character-left-rear-three-quarter:r1",
+      "revision": 1,
+      "slot": "character-left-rear-three-quarter",
+      "angle_order": 4,
+      "candidate_number": 1,
+      "japanese_title": "キャラクター左・後45度",
+      "side": "character_left",
+      "azimuth_degrees": 135,
+      "view_family": "rear_three_quarter",
+      "required_upstream_slots": [
+        "front",
+        "character-left-front-three-quarter",
+        "character-left-profile"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-left-front-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-left-profile.webp",
+        "source/originals/v1_1_back.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_character-left-rear-three-quarter_r1_c1.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for キャラクター左・後45度.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: rear_three_quarter at 135 degrees from the character's perspective; expected hair ornament visibility is partial.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as キャラクター左・後45度 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:character-left-rear-three-quarter:r1:c2",
+      "batch_id": "batch:v1-2-turnaround:20260713:character-left-rear-three-quarter:r1",
+      "revision": 1,
+      "slot": "character-left-rear-three-quarter",
+      "angle_order": 4,
+      "candidate_number": 2,
+      "japanese_title": "キャラクター左・後45度",
+      "side": "character_left",
+      "azimuth_degrees": 135,
+      "view_family": "rear_three_quarter",
+      "required_upstream_slots": [
+        "front",
+        "character-left-front-three-quarter",
+        "character-left-profile"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-left-front-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-left-profile.webp",
+        "source/originals/v1_1_back.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_character-left-rear-three-quarter_r1_c2.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for キャラクター左・後45度.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: rear_three_quarter at 135 degrees from the character's perspective; expected hair ornament visibility is partial.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as キャラクター左・後45度 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:character-left-rear-three-quarter:r1:c3",
+      "batch_id": "batch:v1-2-turnaround:20260713:character-left-rear-three-quarter:r1",
+      "revision": 1,
+      "slot": "character-left-rear-three-quarter",
+      "angle_order": 4,
+      "candidate_number": 3,
+      "japanese_title": "キャラクター左・後45度",
+      "side": "character_left",
+      "azimuth_degrees": 135,
+      "view_family": "rear_three_quarter",
+      "required_upstream_slots": [
+        "front",
+        "character-left-front-three-quarter",
+        "character-left-profile"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-left-front-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-left-profile.webp",
+        "source/originals/v1_1_back.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_character-left-rear-three-quarter_r1_c3.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for キャラクター左・後45度.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: rear_three_quarter at 135 degrees from the character's perspective; expected hair ornament visibility is partial.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as キャラクター左・後45度 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:back:r1:c1",
+      "batch_id": "batch:v1-2-turnaround:20260713:back:r1",
+      "revision": 1,
+      "slot": "back",
+      "angle_order": 5,
+      "candidate_number": 1,
+      "japanese_title": "背面",
+      "side": "center",
+      "azimuth_degrees": 180,
+      "view_family": "back",
+      "required_upstream_slots": [
+        "front",
+        "character-left-rear-three-quarter",
+        "character-right-rear-three-quarter"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-left-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-right-rear-three-quarter.webp",
+        "source/originals/v1_1_back.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_back_r1_c1.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for 背面.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: back at 180 degrees from the character's perspective; expected hair ornament visibility is partial.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as 背面 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:back:r1:c2",
+      "batch_id": "batch:v1-2-turnaround:20260713:back:r1",
+      "revision": 1,
+      "slot": "back",
+      "angle_order": 5,
+      "candidate_number": 2,
+      "japanese_title": "背面",
+      "side": "center",
+      "azimuth_degrees": 180,
+      "view_family": "back",
+      "required_upstream_slots": [
+        "front",
+        "character-left-rear-three-quarter",
+        "character-right-rear-three-quarter"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-left-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-right-rear-three-quarter.webp",
+        "source/originals/v1_1_back.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_back_r1_c2.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for 背面.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: back at 180 degrees from the character's perspective; expected hair ornament visibility is partial.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as 背面 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:back:r1:c3",
+      "batch_id": "batch:v1-2-turnaround:20260713:back:r1",
+      "revision": 1,
+      "slot": "back",
+      "angle_order": 5,
+      "candidate_number": 3,
+      "japanese_title": "背面",
+      "side": "center",
+      "azimuth_degrees": 180,
+      "view_family": "back",
+      "required_upstream_slots": [
+        "front",
+        "character-left-rear-three-quarter",
+        "character-right-rear-three-quarter"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-left-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-right-rear-three-quarter.webp",
+        "source/originals/v1_1_back.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_back_r1_c3.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for 背面.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: back at 180 degrees from the character's perspective; expected hair ornament visibility is partial.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as 背面 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:character-right-rear-three-quarter:r1:c1",
+      "batch_id": "batch:v1-2-turnaround:20260713:character-right-rear-three-quarter:r1",
+      "revision": 1,
+      "slot": "character-right-rear-three-quarter",
+      "angle_order": 6,
+      "candidate_number": 1,
+      "japanese_title": "キャラクター右・後45度",
+      "side": "character_right",
+      "azimuth_degrees": 225,
+      "view_family": "rear_three_quarter",
+      "required_upstream_slots": [
+        "front",
+        "character-right-front-three-quarter",
+        "character-right-profile"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-right-front-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-right-profile.webp",
+        "source/originals/v1_1_back.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_character-right-rear-three-quarter_r1_c1.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for キャラクター右・後45度.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: rear_three_quarter at 225 degrees from the character's perspective; expected hair ornament visibility is occluded.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as キャラクター右・後45度 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:character-right-rear-three-quarter:r1:c2",
+      "batch_id": "batch:v1-2-turnaround:20260713:character-right-rear-three-quarter:r1",
+      "revision": 1,
+      "slot": "character-right-rear-three-quarter",
+      "angle_order": 6,
+      "candidate_number": 2,
+      "japanese_title": "キャラクター右・後45度",
+      "side": "character_right",
+      "azimuth_degrees": 225,
+      "view_family": "rear_three_quarter",
+      "required_upstream_slots": [
+        "front",
+        "character-right-front-three-quarter",
+        "character-right-profile"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-right-front-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-right-profile.webp",
+        "source/originals/v1_1_back.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_character-right-rear-three-quarter_r1_c2.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for キャラクター右・後45度.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: rear_three_quarter at 225 degrees from the character's perspective; expected hair ornament visibility is occluded.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as キャラクター右・後45度 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:character-right-rear-three-quarter:r1:c3",
+      "batch_id": "batch:v1-2-turnaround:20260713:character-right-rear-three-quarter:r1",
+      "revision": 1,
+      "slot": "character-right-rear-three-quarter",
+      "angle_order": 6,
+      "candidate_number": 3,
+      "japanese_title": "キャラクター右・後45度",
+      "side": "character_right",
+      "azimuth_degrees": 225,
+      "view_family": "rear_three_quarter",
+      "required_upstream_slots": [
+        "front",
+        "character-right-front-three-quarter",
+        "character-right-profile"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-right-front-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-right-profile.webp",
+        "source/originals/v1_1_back.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_character-right-rear-three-quarter_r1_c3.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for キャラクター右・後45度.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: rear_three_quarter at 225 degrees from the character's perspective; expected hair ornament visibility is occluded.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as キャラクター右・後45度 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:character-right-profile:r1:c1",
+      "batch_id": "batch:v1-2-turnaround:20260713:character-right-profile:r1",
+      "revision": 1,
+      "slot": "character-right-profile",
+      "angle_order": 7,
+      "candidate_number": 1,
+      "japanese_title": "キャラクター右・真横",
+      "side": "character_right",
+      "azimuth_degrees": 270,
+      "view_family": "profile",
+      "required_upstream_slots": [
+        "front",
+        "character-right-front-three-quarter"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-right-front-three-quarter.webp",
+        "source/originals/v1_1_真横.webp",
+        "source/originals/v1_1_standard_foot_set.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_character-right-profile_r1_c1.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for キャラクター右・真横.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: profile at 270 degrees from the character's perspective; expected hair ornament visibility is occluded.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as キャラクター右・真横 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:character-right-profile:r1:c2",
+      "batch_id": "batch:v1-2-turnaround:20260713:character-right-profile:r1",
+      "revision": 1,
+      "slot": "character-right-profile",
+      "angle_order": 7,
+      "candidate_number": 2,
+      "japanese_title": "キャラクター右・真横",
+      "side": "character_right",
+      "azimuth_degrees": 270,
+      "view_family": "profile",
+      "required_upstream_slots": [
+        "front",
+        "character-right-front-three-quarter"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-right-front-three-quarter.webp",
+        "source/originals/v1_1_真横.webp",
+        "source/originals/v1_1_standard_foot_set.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_character-right-profile_r1_c2.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for キャラクター右・真横.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: profile at 270 degrees from the character's perspective; expected hair ornament visibility is occluded.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as キャラクター右・真横 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:character-right-profile:r1:c3",
+      "batch_id": "batch:v1-2-turnaround:20260713:character-right-profile:r1",
+      "revision": 1,
+      "slot": "character-right-profile",
+      "angle_order": 7,
+      "candidate_number": 3,
+      "japanese_title": "キャラクター右・真横",
+      "side": "character_right",
+      "azimuth_degrees": 270,
+      "view_family": "profile",
+      "required_upstream_slots": [
+        "front",
+        "character-right-front-three-quarter"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-right-front-three-quarter.webp",
+        "source/originals/v1_1_真横.webp",
+        "source/originals/v1_1_standard_foot_set.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_character-right-profile_r1_c3.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for キャラクター右・真横.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: profile at 270 degrees from the character's perspective; expected hair ornament visibility is occluded.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as キャラクター右・真横 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:character-right-front-three-quarter:r1:c1",
+      "batch_id": "batch:v1-2-turnaround:20260713:character-right-front-three-quarter:r1",
+      "revision": 1,
+      "slot": "character-right-front-three-quarter",
+      "angle_order": 8,
+      "candidate_number": 1,
+      "japanese_title": "キャラクター右・前45度",
+      "side": "character_right",
+      "azimuth_degrees": 315,
+      "view_family": "front_three_quarter",
+      "required_upstream_slots": [
+        "front"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/generated/akari-body-proportion-option-b.webp",
+        "source/generated/akari-hoodie-front-proportion-corrected.webp",
+        "source/originals/v1_1_standard_foot_set.webp",
+        "source/originals/v1_1_shoes.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/originals/v1_1_非髪飾り側45deg.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_character-right-front-three-quarter_r1_c1.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for キャラクター右・前45度.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: front_three_quarter at 315 degrees from the character's perspective; expected hair ornament visibility is occluded.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as キャラクター右・前45度 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:character-right-front-three-quarter:r1:c2",
+      "batch_id": "batch:v1-2-turnaround:20260713:character-right-front-three-quarter:r1",
+      "revision": 1,
+      "slot": "character-right-front-three-quarter",
+      "angle_order": 8,
+      "candidate_number": 2,
+      "japanese_title": "キャラクター右・前45度",
+      "side": "character_right",
+      "azimuth_degrees": 315,
+      "view_family": "front_three_quarter",
+      "required_upstream_slots": [
+        "front"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/generated/akari-body-proportion-option-b.webp",
+        "source/generated/akari-hoodie-front-proportion-corrected.webp",
+        "source/originals/v1_1_standard_foot_set.webp",
+        "source/originals/v1_1_shoes.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/originals/v1_1_非髪飾り側45deg.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_character-right-front-three-quarter_r1_c2.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for キャラクター右・前45度.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: front_three_quarter at 315 degrees from the character's perspective; expected hair ornament visibility is occluded.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as キャラクター右・前45度 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:character-right-front-three-quarter:r1:c3",
+      "batch_id": "batch:v1-2-turnaround:20260713:character-right-front-three-quarter:r1",
+      "revision": 1,
+      "slot": "character-right-front-three-quarter",
+      "angle_order": 8,
+      "candidate_number": 3,
+      "japanese_title": "キャラクター右・前45度",
+      "side": "character_right",
+      "azimuth_degrees": 315,
+      "view_family": "front_three_quarter",
+      "required_upstream_slots": [
+        "front"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/generated/akari-body-proportion-option-b.webp",
+        "source/generated/akari-hoodie-front-proportion-corrected.webp",
+        "source/originals/v1_1_standard_foot_set.webp",
+        "source/originals/v1_1_shoes.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/originals/v1_1_非髪飾り側45deg.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_character-right-front-three-quarter_r1_c3.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for キャラクター右・前45度.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: front_three_quarter at 315 degrees from the character's perspective; expected hair ornament visibility is occluded.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as キャラクター右・前45度 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:character-right-front-three-quarter:r2:c1",
+      "batch_id": "batch:v1-2-turnaround:20260713:character-right-front-three-quarter:r2",
+      "revision": 2,
+      "slot": "character-right-front-three-quarter",
+      "angle_order": 8,
+      "candidate_number": 1,
+      "japanese_title": "キャラクター右・前45度",
+      "side": "character_right",
+      "azimuth_degrees": 315,
+      "view_family": "front_three_quarter",
+      "required_upstream_slots": [
+        "front"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/originals/v1_1_非髪飾り側45deg.webp",
+        "source/originals/v1_1_standard_foot_set.webp",
+        "source/originals/v1_1_shoes.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_character-right-front-three-quarter_r2_c1.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for キャラクター右・前45度.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: front_three_quarter at 315 degrees from the character's perspective; expected hair ornament visibility is occluded.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as キャラクター右・前45度 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:character-right-front-three-quarter:r2:c2",
+      "batch_id": "batch:v1-2-turnaround:20260713:character-right-front-three-quarter:r2",
+      "revision": 2,
+      "slot": "character-right-front-three-quarter",
+      "angle_order": 8,
+      "candidate_number": 2,
+      "japanese_title": "キャラクター右・前45度",
+      "side": "character_right",
+      "azimuth_degrees": 315,
+      "view_family": "front_three_quarter",
+      "required_upstream_slots": [
+        "front"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/originals/v1_1_非髪飾り側45deg.webp",
+        "source/originals/v1_1_standard_foot_set.webp",
+        "source/originals/v1_1_shoes.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_character-right-front-three-quarter_r2_c2.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for キャラクター右・前45度.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: front_three_quarter at 315 degrees from the character's perspective; expected hair ornament visibility is occluded.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as キャラクター右・前45度 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-turnaround:20260713:character-right-front-three-quarter:r2:c3",
+      "batch_id": "batch:v1-2-turnaround:20260713:character-right-front-three-quarter:r2",
+      "revision": 2,
+      "slot": "character-right-front-three-quarter",
+      "angle_order": 8,
+      "candidate_number": 3,
+      "japanese_title": "キャラクター右・前45度",
+      "side": "character_right",
+      "azimuth_degrees": 315,
+      "view_family": "front_three_quarter",
+      "required_upstream_slots": [
+        "front"
+      ],
+      "reference_pack_inputs": [
+        "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/originals/v1_1_非髪飾り側45deg.webp",
+        "source/originals/v1_1_standard_foot_set.webp",
+        "source/originals/v1_1_shoes.webp"
+      ],
+      "target_path": "source/generated/v1-2-turnaround/20260713_character-right-front-three-quarter_r2_c3.png",
+      "prompt_template_version": "akari_v1_2_turnaround_adjacent_angle_v1",
+      "prompt": "Create one clean full-body Akari v1.2 canonical turnaround candidate for キャラクター右・前45度.\nUse every attached reference image as a mandatory identity, body, outfit, angle, and construction source. Do not generate from prompt text alone.\nIdentity lock: use the accepted Akari v1.2 standard face and hair; warm-brown eyes; short warm-brown bob; adult early-20s Japanese young woman character design; on character-left preserve the two-part pale-blue ornament: small crossed X-shaped hairpins above, compact ribbon-like loop immediately below, and exactly two thin trailing strands.\nView lock: front_three_quarter at 315 degrees from the character's perspective; expected hair ornament visibility is occluded.\nOutfit lock: white oversized hoodie; gray pleated skirt; white crew socks with two pale-blue stripes; chunky white sneakers with pale-blue accents; no shoulder bag.\nCanvas and pose lock: 1024x1536 RGB portrait, neutral standing pose, matched camera height, shared sole baseline, full body visible, plain neutral background.\nConsistency lock: preserve head-to-body ratio, healthy thigh and calf volume, shoulder width, hoodie hem, skirt hem, knee height, ankle shape, and sneaker mass.\nNo readable text, no logos, no watermarks, no border, no frame, no panel layout, no mirrored shortcut, no photorealistic live-action person.",
+      "acceptance": "Identity Gate: must match the accepted Akari v1.2 face, hair, adult age impression, and character-left ornament. Geometry Gate: must preserve matched crown, chin, shoulder, hoodie hem, skirt hem, knee, ankle, and sole relationships. Outfit Gate: must preserve the standard hoodie, pleated skirt, striped socks, and sneaker construction. Orientation Gate: must read as キャラクター右・前45度 without mirroring or side-label ambiguity. Quality Gate: clean anatomy and clothing continuity; no text, logo, watermark, frame, border, or panel layout.",
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one stage contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    }
+  ]
+}

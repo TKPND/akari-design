@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "collection_id": "akari-v1.2-overhead-room-portraits",
+  "accepted_works": [
+    {
+      "pose": "supine-direct-gaze",
+      "pose_order": 1,
+      "finished_path": "source/finished/v1-2-overhead-room/supine-direct-gaze.webp",
+      "source_candidate_path": "source/generated/v1-2-overhead-room/20260713_supine-direct-gaze_r1_c1.png",
+      "request_id": "request:v1-2-overhead-room:20260713:supine-direct-gaze:r1:c1",
+      "batch_id": "batch:v1-2-overhead-room:20260713:supine-direct-gaze:r1",
+      "revision": 1,
+      "candidate_number": 1,
+      "review_id": "review:v1-2-overhead-room:20260713:supine-direct-gaze:r1",
+      "review_path": "evidence/v1-2-overhead-room/reviews/supine-direct-gaze-r1-review.json",
+      "source_pack_sha256": "3eddd3d0454a4bc481eb940d468a047f72d1e37184ea3decc3bd33a356369417",
+      "source_sha256": "2c3e0f3cb6f86ea525cd87ad95d9251bb62ca96b2a733c0fb10b1616a741085a",
+      "finished_sha256": "be6565e8baad98a0244c5d2874c76dc0aaf6ae127e15ef2172fb0c36bb287c98"
+    }
+  ]
+}

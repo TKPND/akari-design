@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "collection_id": "akari-v1.2-overhead-room-portraits",
+  "source_manifests": [
+    {
+      "role": "identity_face",
+      "path": "source/manifests/v1-2-face-hair/accepted-selection.json",
+      "sha256": "f5d552b01b5251c16c93f380e25d4f62f1dc595fa951d586861335c2d98490c0"
+    },
+    {
+      "role": "turnaround",
+      "path": "source/manifests/v1-2-turnaround/accepted-angles.json",
+      "sha256": "81bcfb2cc058efdbc38a605ef2195680b4ed869e266556a2c3292ba8ca9fe109"
+    },
+    {
+      "role": "motion",
+      "path": "source/manifests/v1-2-motion/accepted-selection.json",
+      "sha256": "6844b9e0414b54cf3a799c2335fe7392d9aa57932ea5a297c823b37757bac2cc"
+    }
+  ],
+  "reference_inputs": [
+    {
+      "role": "identity_face",
+      "identity_source": true,
+      "assets": [
+        {
+          "path": "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+          "sha256": "e130b7e00d98d02fc05f139ddc3b01f206e7eabf61987e4ad385ed7870fadb66"
+        }
+      ]
+    },
+    {
+      "role": "turnaround",
+      "identity_source": true,
+      "assets": [
+        {
+          "path": "source/finished/v1-2-turnaround/front.webp",
+          "sha256": "7b17fb7169c67376a41a8bdfff4ab7d50d90ec8bf113ab1c50aba85511c92423",
+          "slot": "front",
+          "order": 1
+        },
+        {
+          "path": "source/finished/v1-2-turnaround/character-left-front-three-quarter.webp",
+          "sha256": "425a865eeef4fded914be9ca8dab089457448711b4701a339e5cda903980a412",
+          "slot": "character-left-front-three-quarter",
+          "order": 2
+        },
+        {
+          "path": "source/finished/v1-2-turnaround/character-left-profile.webp",
+          "sha256": "bad5c474b581ebb4ee4490618cf9a35f917ea585ece742e3bb8698aff0888b1f",
+          "slot": "character-left-profile",
+          "order": 3
+        },
+        {
+          "path": "source/finished/v1-2-turnaround/character-left-rear-three-quarter.webp",
+          "sha256": "45e54dd3d104b734462baf269447ba7c5a2cd159f3ac6db490dd19b75baab80a",
+          "slot": "character-left-rear-three-quarter",
+          "order": 4
+        },
+        {
+          "path": "source/finished/v1-2-turnaround/back.webp",
+          "sha256": "e6e9249d704fc60fdbb1ea298dcfc05b43645ffe3b5ec3a1e52e8379e246bb5d",
+          "slot": "back",
+          "order": 5
+        },
+        {
+          "path": "source/finished/v1-2-turnaround/character-right-rear-three-quarter.webp",
+          "sha256": "e85eb54066cc2b8a485b6cbecb096ad18b21b9bfffefad1bfee7d1f5af80e97d",
+          "slot": "character-right-rear-three-quarter",
+          "order": 6
+        },
+        {
+          "path": "source/finished/v1-2-turnaround/character-right-profile.webp",
+          "sha256": "b8e1350ce26673decc36c1782df001f6117180aca22b492155bd50e7931116b3",
+          "slot": "character-right-profile",
+          "order": 7
+        },
+        {
+          "path": "source/finished/v1-2-turnaround/character-right-front-three-quarter.webp",
+          "sha256": "f2bc997c592c58457c08561215d529ffbcf248cc774ee1bf79abbb89a6224ea2",
+          "slot": "character-right-front-three-quarter",
+          "order": 8
+        }
+      ]
+    },
+    {
+      "role": "motion",
+      "identity_source": true,
+      "assets": [
+        {
+          "path": "source/finished/v1-2-motion/walking.webp",
+          "sha256": "409b7503935790f9485395dd4eef9ddeb739cfa376f842901ea47409175e6a8e",
+          "motion": "walking",
+          "order": 1
+        },
+        {
+          "path": "source/finished/v1-2-motion/seated.webp",
+          "sha256": "ecad0f6a76bcd81a4bfb7607c5bf4dd8d791d4e14aea048eeedb974ec0342b66",
+          "motion": "seated",
+          "order": 2
+        },
+        {
+          "path": "source/finished/v1-2-motion/turning.webp",
+          "sha256": "1238bf890f2e12424afba3b98cc778118f06a777900689edd071e97c82bf9d0b",
+          "motion": "turning",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "role": "composition_mood_only",
+      "identity_source": false,
+      "allowed_use": [
+        "camera angle",
+        "distance",
+        "negative space",
+        "soft light",
+        "pale palette"
+      ],
+      "assets": [
+        {
+          "path": "source/references/v1-2-overhead-room/overhead-composition-sample.webp",
+          "sha256": "6173fcc0ef7c36904e70418c30f2eee5533f4219335aacc6dd4023469b8da724"
+        }
+      ]
+    }
+  ],
+  "pack_sha256": "3eddd3d0454a4bc481eb940d468a047f72d1e37184ea3decc3bd33a356369417"
+}

@@ -1,0 +1,85 @@
+schema_version: 1
+request_id: akari-v1.2-c05-r01
+asset_id: C05
+revision: r01
+variation_axis: independent_generation_attempt
+references:
+  - role: accepted_c01_front_identity
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c01_front-natural-stance_r01.png
+  - role: accepted_c03_hairpin_three_quarter
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c03_hairpin-side-45_r02.png
+  - role: supporting_sleepy_expression
+    path: akari-v1.2/references/supporting/sleepy-reply-v3.webp
+  - role: supporting_morning_hair
+    path: akari-v1.2/references/supporting/morning-glance-h05.png
+shared_prompt: >-
+  Use the four visible images only in their declared roles. Create one
+  standalone chest-up illustration of the same naturally cute 25-year-old
+  Akari on a 1024 x 1536 nearly plain warm off-white or pale neutral backdrop.
+  Use soft diffuse near-neutral light without a visible source, hard shadow,
+  dramatic rim light, or room context. Use a near-eye-level front-biased light
+  three-quarter view with both eyes and the complete face outline visible. C01
+  controls the 25-year-old adult identity, face proportions, warm amber eyes,
+  healthy impression, fixed white oversized hoodie, palette, and Natural Form
+  rendering. C03 r02 controls the character-left pale-blue crossed pins and
+  ribbon-like ornament, cheek silhouette, and short warm-brown bob side volume;
+  do not copy its full-body pose or exact camera angle. The sleepy supporting
+  image controls only coordinated upper-eyelid weight, lower gaze energy, and
+  incomplete visual focus; do not copy its cheek-rest hand, open mouth, blush,
+  background, crop, or more rendered finish. The morning-hair supporting image
+  controls only small crown flyaways, one cheek-side strand, and slight
+  lower-bob end irregularity; do not copy its doorway, room, strong window
+  light, hand, pose, or alert expression. C01 and C03 control whenever a
+  supporting image conflicts with them. Apply exactly four reversible morning
+  hair changes: one or two small crown lifts or flyaways; a light asymmetric
+  separation in the bangs; a partial outward nape flick with small lower-bob end
+  irregularity; and one soft strand falling toward a cheek. Preserve the normal
+  short-bob length, overall outer contour, warm-brown color, part direction,
+  face visibility, and complete ornament. Build sleepiness with slightly heavy
+  upper eyelids without substantially shrinking the eyes, subtly lower or
+  softer brows without sadness, a viewer-directed gaze that is not fully
+  focused, closed neutral lips with no smile, and relaxed facial tension without
+  intoxication, illness, distress, or sensual posing. Keep the complete crown,
+  hair silhouette, ornament, chin, shoulders, hoodie neckline, and upper chest
+  visible, with about 70 px above the hair and about 60 px beside it as advisory
+  targets. No hands, props, furniture, bed, window, room scene, profile,
+  top-down angle, strong tilt, closed eyes, wink, yawn, strong blush, parted-lip
+  emphasis, haircut, longer hair, wind effect, wet hair, or extreme bed head.
+  Do not add the C06 smile progression or D01 room-scene content. No readable
+  text, logo, watermark, border, grid, collage, or multiple character.
+framing_guidance:
+  canvas: {width: 1024, height: 1536}
+  enforcement: advisory
+  crop: chest-up-below-hoodie-neckline-and-upper-chest
+  intended_top_breathing_room_pixels: 70
+  intended_lateral_hair_margin_pixels: 60
+  face_placement: vertical-upper-middle
+  required_visible_features:
+    - complete-crown-and-outer-hair-silhouette
+    - complete-character-left-ornament
+    - both-eyes-face-outline-cheek-strand-and-lower-bob-ends
+    - shoulders-hoodie-neckline-and-upper-chest
+  reject_on_numeric_miss_alone: false
+  major_only_when: crop-or-scale-prevents-complete-face-hair-state-review
+candidates:
+  - variant: a
+    title: independent-attempt-a
+    target_path: source/candidates/c05/r01/akari-v1.2_c05_morning-bedhair_r01-a.png
+  - variant: b
+    title: independent-attempt-b
+    target_path: source/candidates/c05/r01/akari-v1.2_c05_morning-bedhair_r01-b.png
+  - variant: c
+    title: independent-attempt-c
+    target_path: source/candidates/c05/r01/akari-v1.2_c05_morning-bedhair_r01-c.png
+comparison_anchors: []
+acceptance_gates: [identity, state, rendering]
+hard_rejects:
+  - severe identity age face-shape or eye-construction drift
+  - missing mirrored relocated duplicated or materially redesigned ornament
+  - corrupted face eyes hair or hoodie construction
+  - different longer windblown wet or extreme-bed-head hairstyle
+  - sleepiness shown only by closed or substantially shrunken eyes
+  - sultry intoxicated ill distressed childlike or strong-blush drift
+  - smile yawn open-mouth emphasis cheek-rest hand prop or room-scene leak
+  - crop or scale that prevents complete face hair ornament or hoodie review
+  - readable text logo watermark border grid collage or multiple character

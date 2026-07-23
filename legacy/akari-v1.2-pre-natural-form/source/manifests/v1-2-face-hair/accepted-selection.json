@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "identity_version": "akari-v1.2-standard-face-v1",
+  "decision": "accepted",
+  "accepted_on": "2026-07-10",
+  "accepted_slot": "balanced-symbol-bangs",
+  "source_selection_manifest": "source/manifests/v1-2-face-hair/hair-symbol-bangs-y1-requests.json",
+  "source_selection_decision": "hold_as_hair_symbol_bangs_y1_direction",
+  "source_candidate": "source/generated/v1-2-face-hair/hair-symbol-bangs-y1/20260708_balanced-symbol-bangs_v2.png",
+  "source_candidate_sha256": "ad2044cfa407df4ba884c9fa503e0cad7be2a38de77e3865480ccbf2674b2805",
+  "accepted_asset": "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+  "accepted_asset_sha256": "e130b7e00d98d02fc05f139ddc3b01f206e7eabf61987e4ad385ed7870fadb66",
+  "accepted_reason": "The user selected blind candidate A, revealed as balanced-symbol-bangs, for the Akari v1.2 standard face. It preserves the Y1 face direction while restoring the complete two-part v1.1 hair ornament and balancing bangs with cheek-side bob softness.",
+  "reviewer": "user selected blind A; Codex verified identity, ornament, anatomy, composition, crop, and artifact gates before promotion",
+  "user_review": {
+    "blind_label": "A",
+    "decision_text": "Aにしよう",
+    "revealed_slot": "balanced-symbol-bangs",
+    "contact_sheet": "evidence/v1-2-face-hair/contact-sheets/akari-v1-2-hair-symbol-bangs-y1-v2.webp",
+    "blind_sheet": "evidence/v1-2-face-hair/contact-sheets/blind/akari-v1-2-hair-symbol-bangs-y1-v2-abcd-blind.webp",
+    "mapping": "evidence/v1-2-face-hair/contact-sheets/blind/akari-v1-2-hair-symbol-bangs-y1-v2-abcd-mapping.json",
+    "review_record": "evidence/v1-2-face-hair/reviews/20260710_balanced-symbol-bangs_v2_review.json"
+  },
+  "identity_rules": {
+    "age_impression": "early-20s university-age young adult; not underage and not older-sister-like",
+    "face": [
+      "Y1 face direction",
+      "warm amber eyes",
+      "small restrained mouth",
+      "rounded cheeks and compact rounded chin"
+    ],
+    "hair": [
+      "warm brown short bob",
+      "v1.1-like bang grouping",
+      "subtle cheek-side face framing",
+      "airy natural short-bob tips"
+    ],
+    "hair_ornament": {
+      "side": "character-left",
+      "upper": "small pale-blue crossed X-shaped hairpins",
+      "lower": "compact pale-blue ribbon-like loop immediately below",
+      "trailing_strand_count": 2,
+      "hard_rejects": [
+        "missing upper or lower component",
+        "wrong-side placement",
+        "flower",
+        "jewel",
+        "oversized fashion bow",
+        "large dangling ribbon"
+      ]
+    },
+    "outfit_context": "white oversized hoodie",
+    "layout": [
+      "same crop as the accepted source",
+      "same pose as the accepted source",
+      "same background layout as the accepted source",
+      "1024x1536 portrait aspect ratio"
+    ]
+  },
+  "asset_metadata": {
+    "format": "WEBP",
+    "width": 1024,
+    "height": 1536,
+    "mode": "RGB"
+  },
+  "conversion": {
+    "tool": "cwebp",
+    "version": "1.6.0",
+    "quality": 95,
+    "method": 6,
+    "sharp_yuv": true,
+    "metadata": "none"
+  }
+}

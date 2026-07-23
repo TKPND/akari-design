@@ -1,0 +1,152 @@
+schema_version: 1
+request_id: akari-v1.2-d11-r02
+asset_id: D11
+revision: r02
+variation_axis: independent_scene_attempt
+references:
+  - role: accepted_d10_recent_identity_outfit
+    path: akari-v1.2/accepted/daily/evening/akari-v1.2_d10_evening-rug-side-rest_r01.png
+  - role: accepted_d07_shallow_sofa_support
+    path: akari-v1.2/accepted/daily/evening/akari-v1.2_d07_evening-shallow-sofa-sit_r01.png
+  - role: accepted_d02_plain_rug_contact
+    path: akari-v1.2/accepted/daily/morning/akari-v1.2_d02_morning-rug-daze_r01.png
+  - role: accepted_c03_hairpin_three_quarter
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c03_hairpin-side-45_r02.png
+  - role: accepted_c07_seated_sock_feet
+    path: akari-v1.2/accepted/core/indoor-feet/akari-v1.2_c07_indoor-socks-seated_r01.png
+shared_prompt: >-
+  Use the five visible accepted images only in their declared roles to create
+  one standalone Daily Wave 3 life-action scene of the same naturally cute
+  25-year-old adult Akari. Image 1 controls recent adult identity, healthy body
+  volume, normal short bob, complete character-left ornament, oversized opaque
+  white hoodie, opaque gray pleated skirt, striped socks, and restrained room
+  rendering; do not copy its sleepy state, side-lying pose, cushion, or close
+  rug crop. Image 2 controls only stable shallow sofa-edge sitting, both knees
+  pointing modestly forward, bilateral shin readability, and two flat socked
+  feet on the floor; do not copy its tired expression, hand positions, warm
+  evening light, or empty lap. Image 3 controls only the plain near-neutral rug
+  material, soft contact shadows, and quiet compact-room floor context; do not
+  copy its morning bed hair, T-shirt, extended-leg pose, plant, or bed. Image 4
+  controls hairpin-side three-quarter identity, complete character-left
+  pale-blue crossed pins and ribbon-like ornament, cheek contour, and short-bob
+  side construction; do not copy standing, shoes, smile, or white backdrop.
+  Image 5 controls warm-white mid-calf socks with exactly two thin pale-blue
+  stripes, healthy ankle and foot volume, relaxed heels and toes, and believable
+  knit shape; do not copy its floor-sitting pose, smile, or white backdrop.
+
+  Show Akari folding laundry during soft diffused late-afternoon daylight in
+  the same compact room. Use a vertical 1024 by 1536 portrait composition and a
+  gently elevated front-left three-quarter camera. Seat her at the very front
+  edge of one low plain neutral sofa with both sitting bones supported, torso
+  leaning only slightly forward from the hips, spine natural, shoulders level,
+  and full body visible from ornament and crown through both socked heels and
+  toes. Both knees point modestly forward and remain separated by a natural
+  hand-width. Both lower legs descend independently with no crossover. Place
+  both socked feet fully flat on the rug, separated and side by side, with both
+  complete two-stripe cuffs, ankles, heels, and toes unobscured. Never hide one
+  leg or foot behind the other, crop either foot, point the soles toward the
+  viewer, or create tiptoe contact. Keep the opaque skirt securely covering the
+  pelvis and upper thighs with natural seated folds and no underwear view.
+
+  Place one small pale-blue rectangular towel horizontally across her lap,
+  below the hoodie hem and above both knees, halfway through one simple
+  lengthwise fold. Each hand holds a different near corner of that same towel.
+  Show both hands separately with five natural fingers, neutral wrists, and
+  clear fabric contact. Keep the towel as one coherent rectangle with readable
+  edges and folds; it must not hide either hand, the sofa support, either knee,
+  shin, sock, heel, or toe. Direct both open eyes down at the towel with relaxed
+  brows, warm neutral cheeks, and a small closed task-focused mouth. Preserve
+  the complete character-left ornament and normal short bob. The image is
+  practical non-sensual character documentation, not posing, viewer
+  performance, a pin-up, or an anatomy plate.
+
+  Include exactly two Humanization details: push the character-right hoodie
+  cuff up by about one thumb width, and place one already-folded warm-white
+  towel slightly askew on the sofa beside her character-left hip. Put one low
+  plain open laundry basket on the rug at character-left, safely clear of her
+  foot. The basket may contain only two indistinct folded neutral towels below
+  its rim. Allow only the sofa, rug, basket, the working pale-blue towel, and one
+  visible folded warm-white towel. Do not add underwear, laundry socks, shirts,
+  pants, loose clothing, washing machine, detergent, clothesline, phone,
+  charger, cable, bag, drink, food, bed, mirror, clock, footwear, blanket,
+  second basket, extra towel outside the basket, text, logo, or explanatory
+  prop. The scene is calm, awake, healthy, and task-focused, never sleepy,
+  collapsed, sad, distressed, ill, intoxicated, dissociated, sensual, fetish,
+  glamorous, or staged for the viewer.
+
+  When references conflict, D10 controls recent adult identity, outfit, and
+  rendering; D07 controls only sofa-edge support and bilateral foot placement;
+  D02 controls only rug context; C03 controls three-quarter identity and
+  ornament; and C07 controls socks and feet. Do not create closed eyes, tears,
+  open mouth, broad smile, viewer focus, wrong ornament side, missing ornament
+  parts, wrong hair length, wrong outfit, exposed underwear, bare feet, removed
+  sock, wrong sock stripes, cropped head hand towel basket pelvis knee shin sock
+  heel or toe, fused missing extra or malformed fingers, broken wrists,
+  disconnected arms, twisted neck spine shoulder ribcage pelvis knee or ankle,
+  fused hidden crossed or untraceable legs, one hidden foot, floating body or
+  props, impossible towel geometry, duplicated towel or basket, forbidden
+  props, readable text, logo, watermark, border, collage, grid, multiple
+  characters, or severe identity, adult-age, anatomy, continuity, or rendering
+  drift.
+scene_contract:
+  camera: gently-elevated-front-left-three-quarter-portrait-full-body
+  location: compact-room-low-neutral-sofa-and-plain-rug
+  support: front-sofa-edge-seat-with-bilateral-flat-rug-foot-contact
+  action: two-hand-single-towel-fold-across-lap
+  continuity: recent-standard-outfit-normal-hair-and-restrained-room-rendering
+  lighting: soft-diffused-late-afternoon-daylight
+  gaze: both-open-eyes-down-at-working-towel
+  pose: modest-forward-knees-separated-shins-and-flat-feet
+  humanization:
+    - character-right-hoodie-cuff-pushed-up-one-thumb-width
+    - one-folded-warm-white-towel-slightly-askew-on-sofa
+  outfit:
+    top: oversized-opaque-white-hoodie
+    bottom: opaque-gray-pleated-skirt
+    socks: warm-white-mid-calf-exactly-two-thin-pale-blue-stripes
+  required_visible_features:
+    - complete-head-character-left-ornament-and-both-open-eyes
+    - separate-five-finger-hands-on-different-near-towel-corners
+    - one-coherent-pale-blue-rectangular-working-towel-across-lap
+    - stable-ribcage-pelvis-and-sofa-support
+    - separately-traceable-bilateral-thigh-knee-shin-lines
+    - both-flat-striped-socks-ankles-heels-and-relaxed-toes
+    - one-low-basket-and-one-visible-askew-folded-towel
+  forbidden_props: [underwear, laundry-socks, shirts, pants, loose-clothing, washing-machine, detergent, clothesline, phone, charger, cable, bag, drink, food, bed, mirror, clock, footwear, blanket, second-basket, extra-towel, explanatory-prop]
+production_requirements:
+  file_format: png
+  target_canvas: {width: 1024, height: 1536}
+  accepted_width: {minimum: 1020, maximum: 1028}
+  accepted_height: {minimum: 1532, maximum: 1540}
+  standalone_composition: true
+  generated_grid: forbidden
+  force_exact_resize: forbidden
+candidate_policy:
+  initial_variants: [a, b]
+  optional_variant: c
+  optional_c_only_for: d11-r02-scene-or-distinct-independent-candidate-local-major-failures
+  stop_for_shared_failure: [D10, D07, D02, C03, C07]
+  cross_candidate_references: forbidden
+candidates:
+  - variant: a
+    title: independent-scene-a
+    target_path: source/candidates/d11/r02/akari-v1.2_d11_life-laundry-fold_r02-a.png
+  - variant: b
+    title: independent-scene-b
+    target_path: source/candidates/d11/r02/akari-v1.2_d11_life-laundry-fold_r02-b.png
+comparison_anchors: []
+acceptance_gates: [identity, body, state, continuity, rendering, production]
+hard_rejects:
+  - severe identity adult-age face body-volume continuity or rendering drift
+  - fused missing duplicated disconnected hidden or untraceable limbs or joints
+  - floating weight broken sofa rug pelvis leg foot hand towel or basket support or contradictory contact
+  - missing mirrored relocated duplicated or materially redesigned ornament
+  - wrong hair length extreme bed head wet hair or wind
+  - closed eyes tears distress sadness pain injury illness intoxication sleep collapse dissociation sensual fetish glamour viewer focus broad smile or open mouth
+  - wrong outfit exposed underwear removed sock bare feet incorrect sock height or stripes
+  - malformed extra or fused fingers broken wrist hidden hand or disconnected arm
+  - fused crossed hidden or untraceable legs one hidden foot broken knee or ankle tiptoe pointed foot or missing heel or toe
+  - impossible duplicated torn floating or hand-obscuring towel or duplicated malformed floating basket
+  - underwear laundry socks shirts pants loose clothing washing machine detergent clothesline phone charger cable bag drink food bed mirror clock footwear blanket second basket extra towel or explanatory prop
+  - crop or scale preventing complete head ornament hand towel basket torso pelvis knee shin sock heel toe sofa or rug-contact review
+  - readable text logo watermark border collage grid or multiple character

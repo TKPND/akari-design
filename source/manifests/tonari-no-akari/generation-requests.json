@@ -1,0 +1,1148 @@
+{
+  "schema_version": 1,
+  "document_id": "akari-v1.1-tonari-no-akari",
+  "reference_pack_version": "tonari-no-akari-identity-v1",
+  "candidate_stage_checks": [
+    "identity",
+    "anatomy",
+    "tone",
+    "image-internal text",
+    "logos",
+    "watermarks",
+    "A4 portrait fit"
+  ],
+  "audit_policy": {
+    "candidate_stage": "lightweight human review plus file existence and dimensions",
+    "heavy_pdf_or_ocr_audit": "final_pdf_only"
+  },
+  "requests": [
+    {
+      "id": "request:tonari-morning-glance",
+      "page_id": "morning-glance",
+      "range": "いつもの距離",
+      "target_path": "source/generated/tonari-no-akari/20260701_morning-glance_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create an A4 portrait artwork for Tonari No Akari: morning close everyday glance, soft natural light, gentle eye contact, familiar distance. Identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth; pale-blue crossed hairpins/ribbon clips on character-left side when visible; petite/slender healthy adult proportions; no readable text/no image-internal readable text, no logos, no watermarks. Hands policy: Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible. Footwear policy: Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock. Background policy: Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks.",
+      "acceptance": {
+        "identity": "preserves the Tonari identity lock: face, hair, adult proportions, hair accessories when visible, and overall Akari impression",
+        "anatomy": "natural hands, feet, shoulders, limbs, and proportions for the described pose; avoids merged or overlapping hands on hand-risk pages",
+        "tone": "matches the page range without drifting into cover, chapter, glamorous model, pin-up, or childlike language",
+        "layout": "A4 portrait fit with no image-internal readable text, no logos, and no watermarks"
+      },
+      "prompt_template_version": "tonari_identity_lock_v2",
+      "identity_lock_version": "tonari-no-akari-identity-v1",
+      "risk_profile": {
+        "identity_risk": "high",
+        "hand_risk": "low",
+        "footwear_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "required_invariants": [
+        "adult 25-year-old Japanese woman",
+        "naturally cute adult, not glamorous, not model-like, not pin-up, not childlike",
+        "short fluffy light-brown bob with airy uneven ends and soft side bangs",
+        "warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth",
+        "pale-blue crossed hairpins/ribbon clips on character-left side when visible",
+        "petite/slender healthy adult proportions",
+        "no image-internal readable text, no logos, no watermarks"
+      ],
+      "conditional_invariants": {
+        "hair_accessories_when_visible": "Show pale-blue crossed hairpins/ribbon clips on the character-left side when that side is visible.",
+        "official_footwear_when_feet_visible": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; indoor seated variants may show official socks without sneakers only when clearly indoors.",
+        "hand_risk_pages": "For hand-risk pages, avoid interlocked, overlapping, or merged hands; keep fingers readable, separated, or naturally hidden by a sleeve/crop.",
+        "image_internal_text": "Do not add readable text, logos, watermark marks, signs, labels, captions, or typography inside the image."
+      },
+      "outfit_variant": "basic_outfit",
+      "camera_distance": "close_portrait",
+      "hands_policy": "Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible.",
+      "footwear_policy": "Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock.",
+      "background_policy": "Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks."
+    },
+    {
+      "id": "request:tonari-window-breath",
+      "page_id": "window-breath",
+      "range": "静かな余韻",
+      "target_path": "source/generated/tonari-no-akari/20260701_window-breath_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create an A4 portrait artwork for Tonari No Akari: quiet window-side half-body portrait, soft side light, thoughtful expression, no posters or written decor. Identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth; pale-blue crossed hairpins/ribbon clips on character-left side when visible; petite/slender healthy adult proportions; no readable text/no image-internal readable text, no logos, no watermarks. Hands policy: Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible. Footwear policy: Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock. Background policy: Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks.",
+      "acceptance": {
+        "identity": "preserves the Tonari identity lock: face, hair, adult proportions, hair accessories when visible, and overall Akari impression",
+        "anatomy": "natural hands, feet, shoulders, limbs, and proportions for the described pose; avoids merged or overlapping hands on hand-risk pages",
+        "tone": "matches the page range without drifting into cover, chapter, glamorous model, pin-up, or childlike language",
+        "layout": "A4 portrait fit with no image-internal readable text, no logos, and no watermarks"
+      },
+      "prompt_template_version": "tonari_identity_lock_v2",
+      "identity_lock_version": "tonari-no-akari-identity-v1",
+      "risk_profile": {
+        "identity_risk": "high",
+        "hand_risk": "low",
+        "footwear_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "required_invariants": [
+        "adult 25-year-old Japanese woman",
+        "naturally cute adult, not glamorous, not model-like, not pin-up, not childlike",
+        "short fluffy light-brown bob with airy uneven ends and soft side bangs",
+        "warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth",
+        "pale-blue crossed hairpins/ribbon clips on character-left side when visible",
+        "petite/slender healthy adult proportions",
+        "no image-internal readable text, no logos, no watermarks"
+      ],
+      "conditional_invariants": {
+        "hair_accessories_when_visible": "Show pale-blue crossed hairpins/ribbon clips on the character-left side when that side is visible.",
+        "official_footwear_when_feet_visible": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; indoor seated variants may show official socks without sneakers only when clearly indoors.",
+        "hand_risk_pages": "For hand-risk pages, avoid interlocked, overlapping, or merged hands; keep fingers readable, separated, or naturally hidden by a sleeve/crop.",
+        "image_internal_text": "Do not add readable text, logos, watermark marks, signs, labels, captions, or typography inside the image."
+      },
+      "outfit_variant": "basic_outfit",
+      "camera_distance": "half_body",
+      "hands_policy": "Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible.",
+      "footwear_policy": "Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock.",
+      "background_policy": "Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks."
+    },
+    {
+      "id": "request:tonari-turn-back-smile",
+      "page_id": "turn-back-smile",
+      "range": "いつもの距離",
+      "target_path": "source/generated/tonari-no-akari/20260701_turn-back-smile_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create an A4 portrait artwork for Tonari No Akari: looking back over shoulder while walking, everyday smile, clear hair shape, no street signs or text. Identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth; pale-blue crossed hairpins/ribbon clips on character-left side when visible; petite/slender healthy adult proportions; no readable text/no image-internal readable text, no logos, no watermarks. Hands policy: Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible. Footwear policy: Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock. Background policy: Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks.",
+      "acceptance": {
+        "identity": "preserves the Tonari identity lock: face, hair, adult proportions, hair accessories when visible, and overall Akari impression",
+        "anatomy": "natural hands, feet, shoulders, limbs, and proportions for the described pose; avoids merged or overlapping hands on hand-risk pages",
+        "tone": "matches the page range without drifting into cover, chapter, glamorous model, pin-up, or childlike language",
+        "layout": "A4 portrait fit with no image-internal readable text, no logos, and no watermarks"
+      },
+      "prompt_template_version": "tonari_identity_lock_v2",
+      "identity_lock_version": "tonari-no-akari-identity-v1",
+      "risk_profile": {
+        "identity_risk": "high",
+        "hand_risk": "low",
+        "footwear_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "required_invariants": [
+        "adult 25-year-old Japanese woman",
+        "naturally cute adult, not glamorous, not model-like, not pin-up, not childlike",
+        "short fluffy light-brown bob with airy uneven ends and soft side bangs",
+        "warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth",
+        "pale-blue crossed hairpins/ribbon clips on character-left side when visible",
+        "petite/slender healthy adult proportions",
+        "no image-internal readable text, no logos, no watermarks"
+      ],
+      "conditional_invariants": {
+        "hair_accessories_when_visible": "Show pale-blue crossed hairpins/ribbon clips on the character-left side when that side is visible.",
+        "official_footwear_when_feet_visible": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; indoor seated variants may show official socks without sneakers only when clearly indoors.",
+        "hand_risk_pages": "For hand-risk pages, avoid interlocked, overlapping, or merged hands; keep fingers readable, separated, or naturally hidden by a sleeve/crop.",
+        "image_internal_text": "Do not add readable text, logos, watermark marks, signs, labels, captions, or typography inside the image."
+      },
+      "outfit_variant": "basic_outfit",
+      "camera_distance": "three_quarter",
+      "hands_policy": "Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible.",
+      "footwear_policy": "Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock.",
+      "background_policy": "Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks."
+    },
+    {
+      "id": "request:tonari-near-eye-contact",
+      "page_id": "near-eye-contact",
+      "range": "少し甘め",
+      "target_path": "source/generated/tonari-no-akari/20260701_near-eye-contact_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create an A4 portrait artwork for Tonari No Akari: close shy eye contact, gentle sweetness, relaxed shoulders, no text or symbols. Identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth; pale-blue crossed hairpins/ribbon clips on character-left side when visible; petite/slender healthy adult proportions; no readable text/no image-internal readable text, no logos, no watermarks. Hands policy: Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible. Footwear policy: Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock. Background policy: Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks.",
+      "acceptance": {
+        "identity": "preserves the Tonari identity lock: face, hair, adult proportions, hair accessories when visible, and overall Akari impression",
+        "anatomy": "natural hands, feet, shoulders, limbs, and proportions for the described pose; avoids merged or overlapping hands on hand-risk pages",
+        "tone": "matches the page range without drifting into cover, chapter, glamorous model, pin-up, or childlike language",
+        "layout": "A4 portrait fit with no image-internal readable text, no logos, and no watermarks"
+      },
+      "prompt_template_version": "tonari_identity_lock_v2",
+      "identity_lock_version": "tonari-no-akari-identity-v1",
+      "risk_profile": {
+        "identity_risk": "high",
+        "hand_risk": "low",
+        "footwear_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "required_invariants": [
+        "adult 25-year-old Japanese woman",
+        "naturally cute adult, not glamorous, not model-like, not pin-up, not childlike",
+        "short fluffy light-brown bob with airy uneven ends and soft side bangs",
+        "warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth",
+        "pale-blue crossed hairpins/ribbon clips on character-left side when visible",
+        "petite/slender healthy adult proportions",
+        "no image-internal readable text, no logos, no watermarks"
+      ],
+      "conditional_invariants": {
+        "hair_accessories_when_visible": "Show pale-blue crossed hairpins/ribbon clips on the character-left side when that side is visible.",
+        "official_footwear_when_feet_visible": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; indoor seated variants may show official socks without sneakers only when clearly indoors.",
+        "hand_risk_pages": "For hand-risk pages, avoid interlocked, overlapping, or merged hands; keep fingers readable, separated, or naturally hidden by a sleeve/crop.",
+        "image_internal_text": "Do not add readable text, logos, watermark marks, signs, labels, captions, or typography inside the image."
+      },
+      "outfit_variant": "basic_outfit",
+      "camera_distance": "close_portrait",
+      "hands_policy": "Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible.",
+      "footwear_policy": "Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock.",
+      "background_policy": "Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks."
+    },
+    {
+      "id": "request:tonari-light-cardigan",
+      "page_id": "light-cardigan",
+      "range": "服で魅せる",
+      "target_path": "source/generated/tonari-no-akari/20260701_light-cardigan_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create an A4 portrait artwork for Tonari No Akari: light cardigan variation over everyday outfit, half-body portrait, calm breeze, no labels or logos. Identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth; pale-blue crossed hairpins/ribbon clips on character-left side when visible; petite/slender healthy adult proportions; no readable text/no image-internal readable text, no logos, no watermarks. Hands policy: Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible. Footwear policy: Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock. Background policy: Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks.",
+      "acceptance": {
+        "identity": "preserves the Tonari identity lock: face, hair, adult proportions, hair accessories when visible, and overall Akari impression",
+        "anatomy": "natural hands, feet, shoulders, limbs, and proportions for the described pose; avoids merged or overlapping hands on hand-risk pages",
+        "tone": "matches the page range without drifting into cover, chapter, glamorous model, pin-up, or childlike language",
+        "layout": "A4 portrait fit with no image-internal readable text, no logos, and no watermarks"
+      },
+      "prompt_template_version": "tonari_identity_lock_v2",
+      "identity_lock_version": "tonari-no-akari-identity-v1",
+      "risk_profile": {
+        "identity_risk": "high",
+        "hand_risk": "low",
+        "footwear_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "required_invariants": [
+        "adult 25-year-old Japanese woman",
+        "naturally cute adult, not glamorous, not model-like, not pin-up, not childlike",
+        "short fluffy light-brown bob with airy uneven ends and soft side bangs",
+        "warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth",
+        "pale-blue crossed hairpins/ribbon clips on character-left side when visible",
+        "petite/slender healthy adult proportions",
+        "no image-internal readable text, no logos, no watermarks"
+      ],
+      "conditional_invariants": {
+        "hair_accessories_when_visible": "Show pale-blue crossed hairpins/ribbon clips on the character-left side when that side is visible.",
+        "official_footwear_when_feet_visible": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; indoor seated variants may show official socks without sneakers only when clearly indoors.",
+        "hand_risk_pages": "For hand-risk pages, avoid interlocked, overlapping, or merged hands; keep fingers readable, separated, or naturally hidden by a sleeve/crop.",
+        "image_internal_text": "Do not add readable text, logos, watermark marks, signs, labels, captions, or typography inside the image."
+      },
+      "outfit_variant": "cardigan_variation",
+      "camera_distance": "half_body",
+      "hands_policy": "Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible.",
+      "footwear_policy": "Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock.",
+      "background_policy": "Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks."
+    },
+    {
+      "id": "request:tonari-afternoon-stretch",
+      "page_id": "afternoon-stretch",
+      "range": "元気な一瞬",
+      "target_path": "source/generated/tonari-no-akari/20260701_afternoon-stretch_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create an A4 portrait artwork for Tonari No Akari: lively one-arm stretch in bright afternoon light; the other hand may be sleeve-hidden, cropped out, or a simple relaxed hand. Identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth; pale-blue crossed hairpins/ribbon clips on character-left side when visible; petite/slender healthy adult proportions; no readable text/no image-internal readable text, no logos, no watermarks. Hands policy: Use a one-arm stretch; the other hand can be sleeve-hidden, cropped out, or a simple relaxed hand. Avoid interlocked, overlapping, or merged hands. Footwear policy: Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock. Background policy: Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks.",
+      "acceptance": {
+        "identity": "preserves the Tonari identity lock: face, hair, adult proportions, hair accessories when visible, and overall Akari impression",
+        "anatomy": "natural hands, feet, shoulders, limbs, and proportions for the described pose; avoids merged or overlapping hands on hand-risk pages",
+        "tone": "matches the page range without drifting into cover, chapter, glamorous model, pin-up, or childlike language",
+        "layout": "A4 portrait fit with no image-internal readable text, no logos, and no watermarks"
+      },
+      "prompt_template_version": "tonari_identity_lock_v2",
+      "identity_lock_version": "tonari-no-akari-identity-v1",
+      "risk_profile": {
+        "identity_risk": "high",
+        "hand_risk": "high",
+        "footwear_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "required_invariants": [
+        "adult 25-year-old Japanese woman",
+        "naturally cute adult, not glamorous, not model-like, not pin-up, not childlike",
+        "short fluffy light-brown bob with airy uneven ends and soft side bangs",
+        "warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth",
+        "pale-blue crossed hairpins/ribbon clips on character-left side when visible",
+        "petite/slender healthy adult proportions",
+        "no image-internal readable text, no logos, no watermarks"
+      ],
+      "conditional_invariants": {
+        "hair_accessories_when_visible": "Show pale-blue crossed hairpins/ribbon clips on the character-left side when that side is visible.",
+        "official_footwear_when_feet_visible": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; indoor seated variants may show official socks without sneakers only when clearly indoors.",
+        "hand_risk_pages": "For hand-risk pages, avoid interlocked, overlapping, or merged hands; keep fingers readable, separated, or naturally hidden by a sleeve/crop.",
+        "image_internal_text": "Do not add readable text, logos, watermark marks, signs, labels, captions, or typography inside the image."
+      },
+      "outfit_variant": "basic_outfit",
+      "camera_distance": "three_quarter",
+      "hands_policy": "Use a one-arm stretch; the other hand can be sleeve-hidden, cropped out, or a simple relaxed hand. Avoid interlocked, overlapping, or merged hands.",
+      "footwear_policy": "Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock.",
+      "background_policy": "Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks."
+    },
+    {
+      "id": "request:tonari-seated-distance",
+      "page_id": "seated-distance",
+      "range": "全身ポーズ",
+      "target_path": "source/generated/tonari-no-akari/20260701_seated-distance_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create an A4 portrait artwork for Tonari No Akari: seated full-body or three-quarter pose with visible grounded feet, empty space beside her, no text. Identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth; pale-blue crossed hairpins/ribbon clips on character-left side when visible; petite/slender healthy adult proportions; no readable text/no image-internal readable text, no logos, no watermarks. Hands policy: Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible. Footwear policy: When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; keep feet grounded and uncropped. Background policy: Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks.",
+      "acceptance": {
+        "identity": "preserves the Tonari identity lock: face, hair, adult proportions, hair accessories when visible, and overall Akari impression",
+        "anatomy": "natural hands, feet, shoulders, limbs, and proportions for the described pose; avoids merged or overlapping hands on hand-risk pages",
+        "tone": "matches the page range without drifting into cover, chapter, glamorous model, pin-up, or childlike language",
+        "layout": "A4 portrait fit with no image-internal readable text, no logos, and no watermarks"
+      },
+      "prompt_template_version": "tonari_identity_lock_v2",
+      "identity_lock_version": "tonari-no-akari-identity-v1",
+      "risk_profile": {
+        "identity_risk": "high",
+        "hand_risk": "low",
+        "footwear_risk": "high",
+        "text_logo_watermark_risk": "medium"
+      },
+      "required_invariants": [
+        "adult 25-year-old Japanese woman",
+        "naturally cute adult, not glamorous, not model-like, not pin-up, not childlike",
+        "short fluffy light-brown bob with airy uneven ends and soft side bangs",
+        "warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth",
+        "pale-blue crossed hairpins/ribbon clips on character-left side when visible",
+        "petite/slender healthy adult proportions",
+        "no image-internal readable text, no logos, no watermarks"
+      ],
+      "conditional_invariants": {
+        "hair_accessories_when_visible": "Show pale-blue crossed hairpins/ribbon clips on the character-left side when that side is visible.",
+        "official_footwear_when_feet_visible": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; indoor seated variants may show official socks without sneakers only when clearly indoors.",
+        "hand_risk_pages": "For hand-risk pages, avoid interlocked, overlapping, or merged hands; keep fingers readable, separated, or naturally hidden by a sleeve/crop.",
+        "image_internal_text": "Do not add readable text, logos, watermark marks, signs, labels, captions, or typography inside the image."
+      },
+      "outfit_variant": "basic_outfit",
+      "camera_distance": "full_body",
+      "hands_policy": "Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible.",
+      "footwear_policy": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; keep feet grounded and uncropped.",
+      "background_policy": "Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks."
+    },
+    {
+      "id": "request:tonari-shy-half-smile",
+      "page_id": "shy-half-smile",
+      "range": "少し甘め",
+      "target_path": "source/generated/tonari-no-akari/20260701_shy-half-smile_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create an A4 portrait artwork for Tonari No Akari: half-smile with slight blush or shy warmth, upper-body portrait, no typographic decoration. Identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth; pale-blue crossed hairpins/ribbon clips on character-left side when visible; petite/slender healthy adult proportions; no readable text/no image-internal readable text, no logos, no watermarks. Hands policy: Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible. Footwear policy: Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock. Background policy: Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks.",
+      "acceptance": {
+        "identity": "preserves the Tonari identity lock: face, hair, adult proportions, hair accessories when visible, and overall Akari impression",
+        "anatomy": "natural hands, feet, shoulders, limbs, and proportions for the described pose; avoids merged or overlapping hands on hand-risk pages",
+        "tone": "matches the page range without drifting into cover, chapter, glamorous model, pin-up, or childlike language",
+        "layout": "A4 portrait fit with no image-internal readable text, no logos, and no watermarks"
+      },
+      "prompt_template_version": "tonari_identity_lock_v2",
+      "identity_lock_version": "tonari-no-akari-identity-v1",
+      "risk_profile": {
+        "identity_risk": "high",
+        "hand_risk": "low",
+        "footwear_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "required_invariants": [
+        "adult 25-year-old Japanese woman",
+        "naturally cute adult, not glamorous, not model-like, not pin-up, not childlike",
+        "short fluffy light-brown bob with airy uneven ends and soft side bangs",
+        "warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth",
+        "pale-blue crossed hairpins/ribbon clips on character-left side when visible",
+        "petite/slender healthy adult proportions",
+        "no image-internal readable text, no logos, no watermarks"
+      ],
+      "conditional_invariants": {
+        "hair_accessories_when_visible": "Show pale-blue crossed hairpins/ribbon clips on the character-left side when that side is visible.",
+        "official_footwear_when_feet_visible": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; indoor seated variants may show official socks without sneakers only when clearly indoors.",
+        "hand_risk_pages": "For hand-risk pages, avoid interlocked, overlapping, or merged hands; keep fingers readable, separated, or naturally hidden by a sleeve/crop.",
+        "image_internal_text": "Do not add readable text, logos, watermark marks, signs, labels, captions, or typography inside the image."
+      },
+      "outfit_variant": "basic_outfit",
+      "camera_distance": "upper_body",
+      "hands_policy": "Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible.",
+      "footwear_policy": "Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock.",
+      "background_policy": "Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks."
+    },
+    {
+      "id": "request:tonari-roomwear-morning",
+      "page_id": "roomwear-morning",
+      "range": "服で魅せる",
+      "target_path": "source/generated/tonari-no-akari/20260701_roomwear-morning_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create an A4 portrait artwork for Tonari No Akari: tasteful roomwear morning portrait, relaxed but healthy, simple room without posters or text. Identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth; pale-blue crossed hairpins/ribbon clips on character-left side when visible; petite/slender healthy adult proportions; no readable text/no image-internal readable text, no logos, no watermarks. Hands policy: Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible. Footwear policy: Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock. Background policy: Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks.",
+      "acceptance": {
+        "identity": "preserves the Tonari identity lock: face, hair, adult proportions, hair accessories when visible, and overall Akari impression",
+        "anatomy": "natural hands, feet, shoulders, limbs, and proportions for the described pose; avoids merged or overlapping hands on hand-risk pages",
+        "tone": "matches the page range without drifting into cover, chapter, glamorous model, pin-up, or childlike language",
+        "layout": "A4 portrait fit with no image-internal readable text, no logos, and no watermarks"
+      },
+      "prompt_template_version": "tonari_identity_lock_v2",
+      "identity_lock_version": "tonari-no-akari-identity-v1",
+      "risk_profile": {
+        "identity_risk": "high",
+        "hand_risk": "low",
+        "footwear_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "required_invariants": [
+        "adult 25-year-old Japanese woman",
+        "naturally cute adult, not glamorous, not model-like, not pin-up, not childlike",
+        "short fluffy light-brown bob with airy uneven ends and soft side bangs",
+        "warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth",
+        "pale-blue crossed hairpins/ribbon clips on character-left side when visible",
+        "petite/slender healthy adult proportions",
+        "no image-internal readable text, no logos, no watermarks"
+      ],
+      "conditional_invariants": {
+        "hair_accessories_when_visible": "Show pale-blue crossed hairpins/ribbon clips on the character-left side when that side is visible.",
+        "official_footwear_when_feet_visible": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; indoor seated variants may show official socks without sneakers only when clearly indoors.",
+        "hand_risk_pages": "For hand-risk pages, avoid interlocked, overlapping, or merged hands; keep fingers readable, separated, or naturally hidden by a sleeve/crop.",
+        "image_internal_text": "Do not add readable text, logos, watermark marks, signs, labels, captions, or typography inside the image."
+      },
+      "outfit_variant": "roomwear",
+      "camera_distance": "half_body",
+      "hands_policy": "Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible.",
+      "footwear_policy": "Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock.",
+      "background_policy": "Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks."
+    },
+    {
+      "id": "request:tonari-walking-beside",
+      "page_id": "walking-beside",
+      "range": "いつもの距離",
+      "target_path": "source/generated/tonari-no-akari/20260701_walking-beside_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create an A4 portrait artwork for Tonari No Akari: full-body walking-beside-viewer feeling, natural stride, complete official footwear and simple hands, no signs. Identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth; pale-blue crossed hairpins/ribbon clips on character-left side when visible; petite/slender healthy adult proportions; no readable text/no image-internal readable text, no logos, no watermarks. Hands policy: Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible. Footwear policy: When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; keep feet grounded and uncropped. Background policy: Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks.",
+      "acceptance": {
+        "identity": "preserves the Tonari identity lock: face, hair, adult proportions, hair accessories when visible, and overall Akari impression",
+        "anatomy": "natural hands, feet, shoulders, limbs, and proportions for the described pose; avoids merged or overlapping hands on hand-risk pages",
+        "tone": "matches the page range without drifting into cover, chapter, glamorous model, pin-up, or childlike language",
+        "layout": "A4 portrait fit with no image-internal readable text, no logos, and no watermarks"
+      },
+      "prompt_template_version": "tonari_identity_lock_v2",
+      "identity_lock_version": "tonari-no-akari-identity-v1",
+      "risk_profile": {
+        "identity_risk": "high",
+        "hand_risk": "low",
+        "footwear_risk": "high",
+        "text_logo_watermark_risk": "medium"
+      },
+      "required_invariants": [
+        "adult 25-year-old Japanese woman",
+        "naturally cute adult, not glamorous, not model-like, not pin-up, not childlike",
+        "short fluffy light-brown bob with airy uneven ends and soft side bangs",
+        "warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth",
+        "pale-blue crossed hairpins/ribbon clips on character-left side when visible",
+        "petite/slender healthy adult proportions",
+        "no image-internal readable text, no logos, no watermarks"
+      ],
+      "conditional_invariants": {
+        "hair_accessories_when_visible": "Show pale-blue crossed hairpins/ribbon clips on the character-left side when that side is visible.",
+        "official_footwear_when_feet_visible": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; indoor seated variants may show official socks without sneakers only when clearly indoors.",
+        "hand_risk_pages": "For hand-risk pages, avoid interlocked, overlapping, or merged hands; keep fingers readable, separated, or naturally hidden by a sleeve/crop.",
+        "image_internal_text": "Do not add readable text, logos, watermark marks, signs, labels, captions, or typography inside the image."
+      },
+      "outfit_variant": "basic_outfit",
+      "camera_distance": "full_body",
+      "hands_policy": "Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible.",
+      "footwear_policy": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; keep feet grounded and uncropped.",
+      "background_policy": "Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks."
+    },
+    {
+      "id": "request:tonari-profile-light",
+      "page_id": "profile-light",
+      "range": "静かな余韻",
+      "target_path": "source/generated/tonari-no-akari/20260701_profile-light_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create an A4 portrait artwork for Tonari No Akari: side-profile portrait in soft light, quiet mood, clean silhouette, no written objects. Identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth; pale-blue crossed hairpins/ribbon clips on character-left side when visible; petite/slender healthy adult proportions; no readable text/no image-internal readable text, no logos, no watermarks. Hands policy: Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible. Footwear policy: Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock. Background policy: Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks.",
+      "acceptance": {
+        "identity": "preserves the Tonari identity lock: face, hair, adult proportions, hair accessories when visible, and overall Akari impression",
+        "anatomy": "natural hands, feet, shoulders, limbs, and proportions for the described pose; avoids merged or overlapping hands on hand-risk pages",
+        "tone": "matches the page range without drifting into cover, chapter, glamorous model, pin-up, or childlike language",
+        "layout": "A4 portrait fit with no image-internal readable text, no logos, and no watermarks"
+      },
+      "prompt_template_version": "tonari_identity_lock_v2",
+      "identity_lock_version": "tonari-no-akari-identity-v1",
+      "risk_profile": {
+        "identity_risk": "high",
+        "hand_risk": "low",
+        "footwear_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "required_invariants": [
+        "adult 25-year-old Japanese woman",
+        "naturally cute adult, not glamorous, not model-like, not pin-up, not childlike",
+        "short fluffy light-brown bob with airy uneven ends and soft side bangs",
+        "warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth",
+        "pale-blue crossed hairpins/ribbon clips on character-left side when visible",
+        "petite/slender healthy adult proportions",
+        "no image-internal readable text, no logos, no watermarks"
+      ],
+      "conditional_invariants": {
+        "hair_accessories_when_visible": "Show pale-blue crossed hairpins/ribbon clips on the character-left side when that side is visible.",
+        "official_footwear_when_feet_visible": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; indoor seated variants may show official socks without sneakers only when clearly indoors.",
+        "hand_risk_pages": "For hand-risk pages, avoid interlocked, overlapping, or merged hands; keep fingers readable, separated, or naturally hidden by a sleeve/crop.",
+        "image_internal_text": "Do not add readable text, logos, watermark marks, signs, labels, captions, or typography inside the image."
+      },
+      "outfit_variant": "basic_outfit",
+      "camera_distance": "profile_portrait",
+      "hands_policy": "Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible.",
+      "footwear_policy": "Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock.",
+      "background_policy": "Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks."
+    },
+    {
+      "id": "request:tonari-small-peace",
+      "page_id": "small-peace",
+      "range": "元気な一瞬",
+      "target_path": "source/generated/tonari-no-akari/20260701_small-peace_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create an A4 portrait artwork for Tonari No Akari: small peace sign, lively but not exaggerated, fingers correct and separated, no text or logos. Identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth; pale-blue crossed hairpins/ribbon clips on character-left side when visible; petite/slender healthy adult proportions; no readable text/no image-internal readable text, no logos, no watermarks. Hands policy: Use one small readable peace sign with separated fingers; keep the other hand relaxed or out of frame. Avoid interlocked, overlapping, or merged hands. Footwear policy: Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock. Background policy: Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks.",
+      "acceptance": {
+        "identity": "preserves the Tonari identity lock: face, hair, adult proportions, hair accessories when visible, and overall Akari impression",
+        "anatomy": "natural hands, feet, shoulders, limbs, and proportions for the described pose; avoids merged or overlapping hands on hand-risk pages",
+        "tone": "matches the page range without drifting into cover, chapter, glamorous model, pin-up, or childlike language",
+        "layout": "A4 portrait fit with no image-internal readable text, no logos, and no watermarks"
+      },
+      "prompt_template_version": "tonari_identity_lock_v2",
+      "identity_lock_version": "tonari-no-akari-identity-v1",
+      "risk_profile": {
+        "identity_risk": "high",
+        "hand_risk": "high",
+        "footwear_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "required_invariants": [
+        "adult 25-year-old Japanese woman",
+        "naturally cute adult, not glamorous, not model-like, not pin-up, not childlike",
+        "short fluffy light-brown bob with airy uneven ends and soft side bangs",
+        "warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth",
+        "pale-blue crossed hairpins/ribbon clips on character-left side when visible",
+        "petite/slender healthy adult proportions",
+        "no image-internal readable text, no logos, no watermarks"
+      ],
+      "conditional_invariants": {
+        "hair_accessories_when_visible": "Show pale-blue crossed hairpins/ribbon clips on the character-left side when that side is visible.",
+        "official_footwear_when_feet_visible": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; indoor seated variants may show official socks without sneakers only when clearly indoors.",
+        "hand_risk_pages": "For hand-risk pages, avoid interlocked, overlapping, or merged hands; keep fingers readable, separated, or naturally hidden by a sleeve/crop.",
+        "image_internal_text": "Do not add readable text, logos, watermark marks, signs, labels, captions, or typography inside the image."
+      },
+      "outfit_variant": "basic_outfit",
+      "camera_distance": "upper_body",
+      "hands_policy": "Use one small readable peace sign with separated fingers; keep the other hand relaxed or out of frame. Avoid interlocked, overlapping, or merged hands.",
+      "footwear_policy": "Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock.",
+      "background_policy": "Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks."
+    },
+    {
+      "id": "request:tonari-looking-up",
+      "page_id": "looking-up",
+      "range": "少し甘め",
+      "target_path": "source/generated/tonari-no-akari/20260701_looking-up_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create an A4 portrait artwork for Tonari No Akari: looking slightly upward from close everyday distance, sweet but tasteful, no labels. Identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth; pale-blue crossed hairpins/ribbon clips on character-left side when visible; petite/slender healthy adult proportions; no readable text/no image-internal readable text, no logos, no watermarks. Hands policy: Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible. Footwear policy: Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock. Background policy: Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks.",
+      "acceptance": {
+        "identity": "preserves the Tonari identity lock: face, hair, adult proportions, hair accessories when visible, and overall Akari impression",
+        "anatomy": "natural hands, feet, shoulders, limbs, and proportions for the described pose; avoids merged or overlapping hands on hand-risk pages",
+        "tone": "matches the page range without drifting into cover, chapter, glamorous model, pin-up, or childlike language",
+        "layout": "A4 portrait fit with no image-internal readable text, no logos, and no watermarks"
+      },
+      "prompt_template_version": "tonari_identity_lock_v2",
+      "identity_lock_version": "tonari-no-akari-identity-v1",
+      "risk_profile": {
+        "identity_risk": "high",
+        "hand_risk": "low",
+        "footwear_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "required_invariants": [
+        "adult 25-year-old Japanese woman",
+        "naturally cute adult, not glamorous, not model-like, not pin-up, not childlike",
+        "short fluffy light-brown bob with airy uneven ends and soft side bangs",
+        "warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth",
+        "pale-blue crossed hairpins/ribbon clips on character-left side when visible",
+        "petite/slender healthy adult proportions",
+        "no image-internal readable text, no logos, no watermarks"
+      ],
+      "conditional_invariants": {
+        "hair_accessories_when_visible": "Show pale-blue crossed hairpins/ribbon clips on the character-left side when that side is visible.",
+        "official_footwear_when_feet_visible": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; indoor seated variants may show official socks without sneakers only when clearly indoors.",
+        "hand_risk_pages": "For hand-risk pages, avoid interlocked, overlapping, or merged hands; keep fingers readable, separated, or naturally hidden by a sleeve/crop.",
+        "image_internal_text": "Do not add readable text, logos, watermark marks, signs, labels, captions, or typography inside the image."
+      },
+      "outfit_variant": "basic_outfit",
+      "camera_distance": "close_portrait",
+      "hands_policy": "Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible.",
+      "footwear_policy": "Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock.",
+      "background_policy": "Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks."
+    },
+    {
+      "id": "request:tonari-chair-pause",
+      "page_id": "chair-pause",
+      "range": "全身ポーズ",
+      "target_path": "source/generated/tonari-no-akari/20260701_chair-pause_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create an A4 portrait artwork for Tonari No Akari: seated on simple chair, full-body pose, natural feet and knees, no visible writing. Identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth; pale-blue crossed hairpins/ribbon clips on character-left side when visible; petite/slender healthy adult proportions; no readable text/no image-internal readable text, no logos, no watermarks. Hands policy: Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible. Footwear policy: When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; keep feet grounded and uncropped. Background policy: Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks.",
+      "acceptance": {
+        "identity": "preserves the Tonari identity lock: face, hair, adult proportions, hair accessories when visible, and overall Akari impression",
+        "anatomy": "natural hands, feet, shoulders, limbs, and proportions for the described pose; avoids merged or overlapping hands on hand-risk pages",
+        "tone": "matches the page range without drifting into cover, chapter, glamorous model, pin-up, or childlike language",
+        "layout": "A4 portrait fit with no image-internal readable text, no logos, and no watermarks"
+      },
+      "prompt_template_version": "tonari_identity_lock_v2",
+      "identity_lock_version": "tonari-no-akari-identity-v1",
+      "risk_profile": {
+        "identity_risk": "high",
+        "hand_risk": "low",
+        "footwear_risk": "high",
+        "text_logo_watermark_risk": "medium"
+      },
+      "required_invariants": [
+        "adult 25-year-old Japanese woman",
+        "naturally cute adult, not glamorous, not model-like, not pin-up, not childlike",
+        "short fluffy light-brown bob with airy uneven ends and soft side bangs",
+        "warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth",
+        "pale-blue crossed hairpins/ribbon clips on character-left side when visible",
+        "petite/slender healthy adult proportions",
+        "no image-internal readable text, no logos, no watermarks"
+      ],
+      "conditional_invariants": {
+        "hair_accessories_when_visible": "Show pale-blue crossed hairpins/ribbon clips on the character-left side when that side is visible.",
+        "official_footwear_when_feet_visible": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; indoor seated variants may show official socks without sneakers only when clearly indoors.",
+        "hand_risk_pages": "For hand-risk pages, avoid interlocked, overlapping, or merged hands; keep fingers readable, separated, or naturally hidden by a sleeve/crop.",
+        "image_internal_text": "Do not add readable text, logos, watermark marks, signs, labels, captions, or typography inside the image."
+      },
+      "outfit_variant": "basic_outfit",
+      "camera_distance": "full_body",
+      "hands_policy": "Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible.",
+      "footwear_policy": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; keep feet grounded and uncropped.",
+      "background_policy": "Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks."
+    },
+    {
+      "id": "request:tonari-special-outing",
+      "page_id": "special-outing",
+      "range": "服で魅せる",
+      "target_path": "source/generated/tonari-no-akari/20260701_special-outing_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create an A4 portrait artwork for Tonari No Akari: slightly special outing clothes, portrait fit, not formal or flashy, no brand marks. Identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth; pale-blue crossed hairpins/ribbon clips on character-left side when visible; petite/slender healthy adult proportions; no readable text/no image-internal readable text, no logos, no watermarks. Hands policy: Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible. Footwear policy: Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock. Background policy: Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks.",
+      "acceptance": {
+        "identity": "preserves the Tonari identity lock: face, hair, adult proportions, hair accessories when visible, and overall Akari impression",
+        "anatomy": "natural hands, feet, shoulders, limbs, and proportions for the described pose; avoids merged or overlapping hands on hand-risk pages",
+        "tone": "matches the page range without drifting into cover, chapter, glamorous model, pin-up, or childlike language",
+        "layout": "A4 portrait fit with no image-internal readable text, no logos, and no watermarks"
+      },
+      "prompt_template_version": "tonari_identity_lock_v2",
+      "identity_lock_version": "tonari-no-akari-identity-v1",
+      "risk_profile": {
+        "identity_risk": "high",
+        "hand_risk": "low",
+        "footwear_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "required_invariants": [
+        "adult 25-year-old Japanese woman",
+        "naturally cute adult, not glamorous, not model-like, not pin-up, not childlike",
+        "short fluffy light-brown bob with airy uneven ends and soft side bangs",
+        "warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth",
+        "pale-blue crossed hairpins/ribbon clips on character-left side when visible",
+        "petite/slender healthy adult proportions",
+        "no image-internal readable text, no logos, no watermarks"
+      ],
+      "conditional_invariants": {
+        "hair_accessories_when_visible": "Show pale-blue crossed hairpins/ribbon clips on the character-left side when that side is visible.",
+        "official_footwear_when_feet_visible": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; indoor seated variants may show official socks without sneakers only when clearly indoors.",
+        "hand_risk_pages": "For hand-risk pages, avoid interlocked, overlapping, or merged hands; keep fingers readable, separated, or naturally hidden by a sleeve/crop.",
+        "image_internal_text": "Do not add readable text, logos, watermark marks, signs, labels, captions, or typography inside the image."
+      },
+      "outfit_variant": "special_outing",
+      "camera_distance": "three_quarter",
+      "hands_policy": "Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible.",
+      "footwear_policy": "Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock.",
+      "background_policy": "Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks."
+    },
+    {
+      "id": "request:tonari-small-run",
+      "page_id": "small-run",
+      "range": "元気な一瞬",
+      "target_path": "source/generated/tonari-no-akari/20260701_small-run_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create an A4 portrait artwork for Tonari No Akari: small run or quick step, playful motion, stable anatomy and complete official footwear, no signs. Identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth; pale-blue crossed hairpins/ribbon clips on character-left side when visible; petite/slender healthy adult proportions; no readable text/no image-internal readable text, no logos, no watermarks. Hands policy: Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible. Footwear policy: When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; keep feet grounded and uncropped. Background policy: Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks.",
+      "acceptance": {
+        "identity": "preserves the Tonari identity lock: face, hair, adult proportions, hair accessories when visible, and overall Akari impression",
+        "anatomy": "natural hands, feet, shoulders, limbs, and proportions for the described pose; avoids merged or overlapping hands on hand-risk pages",
+        "tone": "matches the page range without drifting into cover, chapter, glamorous model, pin-up, or childlike language",
+        "layout": "A4 portrait fit with no image-internal readable text, no logos, and no watermarks"
+      },
+      "prompt_template_version": "tonari_identity_lock_v2",
+      "identity_lock_version": "tonari-no-akari-identity-v1",
+      "risk_profile": {
+        "identity_risk": "high",
+        "hand_risk": "low",
+        "footwear_risk": "high",
+        "text_logo_watermark_risk": "medium"
+      },
+      "required_invariants": [
+        "adult 25-year-old Japanese woman",
+        "naturally cute adult, not glamorous, not model-like, not pin-up, not childlike",
+        "short fluffy light-brown bob with airy uneven ends and soft side bangs",
+        "warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth",
+        "pale-blue crossed hairpins/ribbon clips on character-left side when visible",
+        "petite/slender healthy adult proportions",
+        "no image-internal readable text, no logos, no watermarks"
+      ],
+      "conditional_invariants": {
+        "hair_accessories_when_visible": "Show pale-blue crossed hairpins/ribbon clips on the character-left side when that side is visible.",
+        "official_footwear_when_feet_visible": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; indoor seated variants may show official socks without sneakers only when clearly indoors.",
+        "hand_risk_pages": "For hand-risk pages, avoid interlocked, overlapping, or merged hands; keep fingers readable, separated, or naturally hidden by a sleeve/crop.",
+        "image_internal_text": "Do not add readable text, logos, watermark marks, signs, labels, captions, or typography inside the image."
+      },
+      "outfit_variant": "basic_outfit",
+      "camera_distance": "full_body",
+      "hands_policy": "Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible.",
+      "footwear_policy": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; keep feet grounded and uncropped.",
+      "background_policy": "Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks."
+    },
+    {
+      "id": "request:tonari-sleepy-afternoon",
+      "page_id": "sleepy-afternoon",
+      "range": "静かな余韻",
+      "target_path": "source/generated/tonari-no-akari/20260701_sleepy-afternoon_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create an A4 portrait artwork for Tonari No Akari: sleepy relaxed afternoon expression, gentle quiet pose, no written background. Identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth; pale-blue crossed hairpins/ribbon clips on character-left side when visible; petite/slender healthy adult proportions; no readable text/no image-internal readable text, no logos, no watermarks. Hands policy: Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible. Footwear policy: Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock. Background policy: Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks.",
+      "acceptance": {
+        "identity": "preserves the Tonari identity lock: face, hair, adult proportions, hair accessories when visible, and overall Akari impression",
+        "anatomy": "natural hands, feet, shoulders, limbs, and proportions for the described pose; avoids merged or overlapping hands on hand-risk pages",
+        "tone": "matches the page range without drifting into cover, chapter, glamorous model, pin-up, or childlike language",
+        "layout": "A4 portrait fit with no image-internal readable text, no logos, and no watermarks"
+      },
+      "prompt_template_version": "tonari_identity_lock_v2",
+      "identity_lock_version": "tonari-no-akari-identity-v1",
+      "risk_profile": {
+        "identity_risk": "high",
+        "hand_risk": "low",
+        "footwear_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "required_invariants": [
+        "adult 25-year-old Japanese woman",
+        "naturally cute adult, not glamorous, not model-like, not pin-up, not childlike",
+        "short fluffy light-brown bob with airy uneven ends and soft side bangs",
+        "warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth",
+        "pale-blue crossed hairpins/ribbon clips on character-left side when visible",
+        "petite/slender healthy adult proportions",
+        "no image-internal readable text, no logos, no watermarks"
+      ],
+      "conditional_invariants": {
+        "hair_accessories_when_visible": "Show pale-blue crossed hairpins/ribbon clips on the character-left side when that side is visible.",
+        "official_footwear_when_feet_visible": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; indoor seated variants may show official socks without sneakers only when clearly indoors.",
+        "hand_risk_pages": "For hand-risk pages, avoid interlocked, overlapping, or merged hands; keep fingers readable, separated, or naturally hidden by a sleeve/crop.",
+        "image_internal_text": "Do not add readable text, logos, watermark marks, signs, labels, captions, or typography inside the image."
+      },
+      "outfit_variant": "basic_outfit",
+      "camera_distance": "half_body",
+      "hands_policy": "Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible.",
+      "footwear_policy": "Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock.",
+      "background_policy": "Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks."
+    },
+    {
+      "id": "request:tonari-almost-touching",
+      "page_id": "almost-touching",
+      "range": "少し甘め",
+      "target_path": "source/generated/tonari-no-akari/20260701_almost-touching_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create an A4 portrait artwork for Tonari No Akari: hands near the frame or viewer-side space, touching is implied but not explicit, hands separated, no text. Identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth; pale-blue crossed hairpins/ribbon clips on character-left side when visible; petite/slender healthy adult proportions; no readable text/no image-internal readable text, no logos, no watermarks. Hands policy: Keep hands near the frame or viewer-side space but separated; imply closeness without contact. Avoid interlocked, overlapping, or merged hands. Footwear policy: Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock. Background policy: Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks.",
+      "acceptance": {
+        "identity": "preserves the Tonari identity lock: face, hair, adult proportions, hair accessories when visible, and overall Akari impression",
+        "anatomy": "natural hands, feet, shoulders, limbs, and proportions for the described pose; avoids merged or overlapping hands on hand-risk pages",
+        "tone": "matches the page range without drifting into cover, chapter, glamorous model, pin-up, or childlike language",
+        "layout": "A4 portrait fit with no image-internal readable text, no logos, and no watermarks"
+      },
+      "prompt_template_version": "tonari_identity_lock_v2",
+      "identity_lock_version": "tonari-no-akari-identity-v1",
+      "risk_profile": {
+        "identity_risk": "high",
+        "hand_risk": "high",
+        "footwear_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "required_invariants": [
+        "adult 25-year-old Japanese woman",
+        "naturally cute adult, not glamorous, not model-like, not pin-up, not childlike",
+        "short fluffy light-brown bob with airy uneven ends and soft side bangs",
+        "warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth",
+        "pale-blue crossed hairpins/ribbon clips on character-left side when visible",
+        "petite/slender healthy adult proportions",
+        "no image-internal readable text, no logos, no watermarks"
+      ],
+      "conditional_invariants": {
+        "hair_accessories_when_visible": "Show pale-blue crossed hairpins/ribbon clips on the character-left side when that side is visible.",
+        "official_footwear_when_feet_visible": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; indoor seated variants may show official socks without sneakers only when clearly indoors.",
+        "hand_risk_pages": "For hand-risk pages, avoid interlocked, overlapping, or merged hands; keep fingers readable, separated, or naturally hidden by a sleeve/crop.",
+        "image_internal_text": "Do not add readable text, logos, watermark marks, signs, labels, captions, or typography inside the image."
+      },
+      "outfit_variant": "basic_outfit",
+      "camera_distance": "upper_body",
+      "hands_policy": "Keep hands near the frame or viewer-side space but separated; imply closeness without contact. Avoid interlocked, overlapping, or merged hands.",
+      "footwear_policy": "Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock.",
+      "background_policy": "Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks."
+    },
+    {
+      "id": "request:tonari-straight-stance",
+      "page_id": "straight-stance",
+      "range": "全身ポーズ",
+      "target_path": "source/generated/tonari-no-akari/20260701_straight-stance_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create an A4 portrait artwork for Tonari No Akari: full-body standing pose, balanced body proportion, official footwear visible, simple background without writing. Identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth; pale-blue crossed hairpins/ribbon clips on character-left side when visible; petite/slender healthy adult proportions; no readable text/no image-internal readable text, no logos, no watermarks. Hands policy: Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible. Footwear policy: When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; keep feet grounded and uncropped. Background policy: Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks.",
+      "acceptance": {
+        "identity": "preserves the Tonari identity lock: face, hair, adult proportions, hair accessories when visible, and overall Akari impression",
+        "anatomy": "natural hands, feet, shoulders, limbs, and proportions for the described pose; avoids merged or overlapping hands on hand-risk pages",
+        "tone": "matches the page range without drifting into cover, chapter, glamorous model, pin-up, or childlike language",
+        "layout": "A4 portrait fit with no image-internal readable text, no logos, and no watermarks"
+      },
+      "prompt_template_version": "tonari_identity_lock_v2",
+      "identity_lock_version": "tonari-no-akari-identity-v1",
+      "risk_profile": {
+        "identity_risk": "high",
+        "hand_risk": "low",
+        "footwear_risk": "high",
+        "text_logo_watermark_risk": "medium"
+      },
+      "required_invariants": [
+        "adult 25-year-old Japanese woman",
+        "naturally cute adult, not glamorous, not model-like, not pin-up, not childlike",
+        "short fluffy light-brown bob with airy uneven ends and soft side bangs",
+        "warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth",
+        "pale-blue crossed hairpins/ribbon clips on character-left side when visible",
+        "petite/slender healthy adult proportions",
+        "no image-internal readable text, no logos, no watermarks"
+      ],
+      "conditional_invariants": {
+        "hair_accessories_when_visible": "Show pale-blue crossed hairpins/ribbon clips on the character-left side when that side is visible.",
+        "official_footwear_when_feet_visible": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; indoor seated variants may show official socks without sneakers only when clearly indoors.",
+        "hand_risk_pages": "For hand-risk pages, avoid interlocked, overlapping, or merged hands; keep fingers readable, separated, or naturally hidden by a sleeve/crop.",
+        "image_internal_text": "Do not add readable text, logos, watermark marks, signs, labels, captions, or typography inside the image."
+      },
+      "outfit_variant": "basic_outfit",
+      "camera_distance": "full_body",
+      "hands_policy": "Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible.",
+      "footwear_policy": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; keep feet grounded and uncropped.",
+      "background_policy": "Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks."
+    },
+    {
+      "id": "request:tonari-crouching-gesture",
+      "page_id": "crouching-gesture",
+      "range": "全身ポーズ",
+      "target_path": "source/generated/tonari-no-akari/20260701_crouching-gesture_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create an A4 portrait artwork for Tonari No Akari: crouching or low pose, stable separated hands and visible official footwear, no text or logo details. Identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth; pale-blue crossed hairpins/ribbon clips on character-left side when visible; petite/slender healthy adult proportions; no readable text/no image-internal readable text, no logos, no watermarks. Hands policy: Keep hands separated and grounded naturally for the low pose. Avoid interlocked, overlapping, or merged hands. Footwear policy: When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; keep feet grounded and uncropped. Background policy: Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks.",
+      "acceptance": {
+        "identity": "preserves the Tonari identity lock: face, hair, adult proportions, hair accessories when visible, and overall Akari impression",
+        "anatomy": "natural hands, feet, shoulders, limbs, and proportions for the described pose; avoids merged or overlapping hands on hand-risk pages",
+        "tone": "matches the page range without drifting into cover, chapter, glamorous model, pin-up, or childlike language",
+        "layout": "A4 portrait fit with no image-internal readable text, no logos, and no watermarks"
+      },
+      "prompt_template_version": "tonari_identity_lock_v2",
+      "identity_lock_version": "tonari-no-akari-identity-v1",
+      "risk_profile": {
+        "identity_risk": "high",
+        "hand_risk": "high",
+        "footwear_risk": "high",
+        "text_logo_watermark_risk": "medium"
+      },
+      "required_invariants": [
+        "adult 25-year-old Japanese woman",
+        "naturally cute adult, not glamorous, not model-like, not pin-up, not childlike",
+        "short fluffy light-brown bob with airy uneven ends and soft side bangs",
+        "warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth",
+        "pale-blue crossed hairpins/ribbon clips on character-left side when visible",
+        "petite/slender healthy adult proportions",
+        "no image-internal readable text, no logos, no watermarks"
+      ],
+      "conditional_invariants": {
+        "hair_accessories_when_visible": "Show pale-blue crossed hairpins/ribbon clips on the character-left side when that side is visible.",
+        "official_footwear_when_feet_visible": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; indoor seated variants may show official socks without sneakers only when clearly indoors.",
+        "hand_risk_pages": "For hand-risk pages, avoid interlocked, overlapping, or merged hands; keep fingers readable, separated, or naturally hidden by a sleeve/crop.",
+        "image_internal_text": "Do not add readable text, logos, watermark marks, signs, labels, captions, or typography inside the image."
+      },
+      "outfit_variant": "basic_outfit",
+      "camera_distance": "full_body",
+      "hands_policy": "Keep hands separated and grounded naturally for the low pose. Avoid interlocked, overlapping, or merged hands.",
+      "footwear_policy": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; keep feet grounded and uncropped.",
+      "background_policy": "Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks."
+    },
+    {
+      "id": "request:tonari-evening-cardigan",
+      "page_id": "evening-cardigan",
+      "range": "静かな余韻",
+      "target_path": "source/generated/tonari-no-akari/20260701_evening-cardigan_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create an A4 portrait artwork for Tonari No Akari: evening cardigan variation, warm low light, quiet expression, no signage. Identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth; pale-blue crossed hairpins/ribbon clips on character-left side when visible; petite/slender healthy adult proportions; no readable text/no image-internal readable text, no logos, no watermarks. Hands policy: Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible. Footwear policy: Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock. Background policy: Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks.",
+      "acceptance": {
+        "identity": "preserves the Tonari identity lock: face, hair, adult proportions, hair accessories when visible, and overall Akari impression",
+        "anatomy": "natural hands, feet, shoulders, limbs, and proportions for the described pose; avoids merged or overlapping hands on hand-risk pages",
+        "tone": "matches the page range without drifting into cover, chapter, glamorous model, pin-up, or childlike language",
+        "layout": "A4 portrait fit with no image-internal readable text, no logos, and no watermarks"
+      },
+      "prompt_template_version": "tonari_identity_lock_v2",
+      "identity_lock_version": "tonari-no-akari-identity-v1",
+      "risk_profile": {
+        "identity_risk": "high",
+        "hand_risk": "low",
+        "footwear_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "required_invariants": [
+        "adult 25-year-old Japanese woman",
+        "naturally cute adult, not glamorous, not model-like, not pin-up, not childlike",
+        "short fluffy light-brown bob with airy uneven ends and soft side bangs",
+        "warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth",
+        "pale-blue crossed hairpins/ribbon clips on character-left side when visible",
+        "petite/slender healthy adult proportions",
+        "no image-internal readable text, no logos, no watermarks"
+      ],
+      "conditional_invariants": {
+        "hair_accessories_when_visible": "Show pale-blue crossed hairpins/ribbon clips on the character-left side when that side is visible.",
+        "official_footwear_when_feet_visible": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; indoor seated variants may show official socks without sneakers only when clearly indoors.",
+        "hand_risk_pages": "For hand-risk pages, avoid interlocked, overlapping, or merged hands; keep fingers readable, separated, or naturally hidden by a sleeve/crop.",
+        "image_internal_text": "Do not add readable text, logos, watermark marks, signs, labels, captions, or typography inside the image."
+      },
+      "outfit_variant": "cardigan_variation",
+      "camera_distance": "half_body",
+      "hands_policy": "Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible.",
+      "footwear_policy": "Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock.",
+      "background_policy": "Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks."
+    },
+    {
+      "id": "request:tonari-over-shoulder-voice",
+      "page_id": "over-shoulder-voice",
+      "range": "いつもの距離",
+      "target_path": "source/generated/tonari-no-akari/20260701_over-shoulder-voice_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create an A4 portrait artwork for Tonari No Akari: shoulder-over glance as if calling back, everyday closeness, no text. Identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth; pale-blue crossed hairpins/ribbon clips on character-left side when visible; petite/slender healthy adult proportions; no readable text/no image-internal readable text, no logos, no watermarks. Hands policy: Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible. Footwear policy: Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock. Background policy: Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks.",
+      "acceptance": {
+        "identity": "preserves the Tonari identity lock: face, hair, adult proportions, hair accessories when visible, and overall Akari impression",
+        "anatomy": "natural hands, feet, shoulders, limbs, and proportions for the described pose; avoids merged or overlapping hands on hand-risk pages",
+        "tone": "matches the page range without drifting into cover, chapter, glamorous model, pin-up, or childlike language",
+        "layout": "A4 portrait fit with no image-internal readable text, no logos, and no watermarks"
+      },
+      "prompt_template_version": "tonari_identity_lock_v2",
+      "identity_lock_version": "tonari-no-akari-identity-v1",
+      "risk_profile": {
+        "identity_risk": "high",
+        "hand_risk": "low",
+        "footwear_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "required_invariants": [
+        "adult 25-year-old Japanese woman",
+        "naturally cute adult, not glamorous, not model-like, not pin-up, not childlike",
+        "short fluffy light-brown bob with airy uneven ends and soft side bangs",
+        "warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth",
+        "pale-blue crossed hairpins/ribbon clips on character-left side when visible",
+        "petite/slender healthy adult proportions",
+        "no image-internal readable text, no logos, no watermarks"
+      ],
+      "conditional_invariants": {
+        "hair_accessories_when_visible": "Show pale-blue crossed hairpins/ribbon clips on the character-left side when that side is visible.",
+        "official_footwear_when_feet_visible": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; indoor seated variants may show official socks without sneakers only when clearly indoors.",
+        "hand_risk_pages": "For hand-risk pages, avoid interlocked, overlapping, or merged hands; keep fingers readable, separated, or naturally hidden by a sleeve/crop.",
+        "image_internal_text": "Do not add readable text, logos, watermark marks, signs, labels, captions, or typography inside the image."
+      },
+      "outfit_variant": "basic_outfit",
+      "camera_distance": "three_quarter",
+      "hands_policy": "Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible.",
+      "footwear_policy": "Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock.",
+      "background_policy": "Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks."
+    },
+    {
+      "id": "request:tonari-skirt-in-breeze",
+      "page_id": "skirt-in-breeze",
+      "range": "元気な一瞬",
+      "target_path": "source/generated/tonari-no-akari/20260701_skirt-in-breeze_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create an A4 portrait artwork for Tonari No Akari: tasteful skirt or hem movement in breeze, lively posture, no exposure drift, no logos. Identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth; pale-blue crossed hairpins/ribbon clips on character-left side when visible; petite/slender healthy adult proportions; no readable text/no image-internal readable text, no logos, no watermarks. Hands policy: Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible. Footwear policy: Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock. Background policy: Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks.",
+      "acceptance": {
+        "identity": "preserves the Tonari identity lock: face, hair, adult proportions, hair accessories when visible, and overall Akari impression",
+        "anatomy": "natural hands, feet, shoulders, limbs, and proportions for the described pose; avoids merged or overlapping hands on hand-risk pages",
+        "tone": "matches the page range without drifting into cover, chapter, glamorous model, pin-up, or childlike language",
+        "layout": "A4 portrait fit with no image-internal readable text, no logos, and no watermarks"
+      },
+      "prompt_template_version": "tonari_identity_lock_v2",
+      "identity_lock_version": "tonari-no-akari-identity-v1",
+      "risk_profile": {
+        "identity_risk": "high",
+        "hand_risk": "low",
+        "footwear_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "required_invariants": [
+        "adult 25-year-old Japanese woman",
+        "naturally cute adult, not glamorous, not model-like, not pin-up, not childlike",
+        "short fluffy light-brown bob with airy uneven ends and soft side bangs",
+        "warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth",
+        "pale-blue crossed hairpins/ribbon clips on character-left side when visible",
+        "petite/slender healthy adult proportions",
+        "no image-internal readable text, no logos, no watermarks"
+      ],
+      "conditional_invariants": {
+        "hair_accessories_when_visible": "Show pale-blue crossed hairpins/ribbon clips on the character-left side when that side is visible.",
+        "official_footwear_when_feet_visible": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; indoor seated variants may show official socks without sneakers only when clearly indoors.",
+        "hand_risk_pages": "For hand-risk pages, avoid interlocked, overlapping, or merged hands; keep fingers readable, separated, or naturally hidden by a sleeve/crop.",
+        "image_internal_text": "Do not add readable text, logos, watermark marks, signs, labels, captions, or typography inside the image."
+      },
+      "outfit_variant": "basic_outfit",
+      "camera_distance": "three_quarter",
+      "hands_policy": "Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible.",
+      "footwear_policy": "Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock.",
+      "background_policy": "Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks."
+    },
+    {
+      "id": "request:tonari-homeward-smile",
+      "page_id": "homeward-smile",
+      "range": "いつもの距離",
+      "target_path": "source/generated/tonari-no-akari/20260701_homeward-smile_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create an A4 portrait artwork for Tonari No Akari: warm homeward closing smile, everyday path or soft background, no signs or text. Identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth; pale-blue crossed hairpins/ribbon clips on character-left side when visible; petite/slender healthy adult proportions; no readable text/no image-internal readable text, no logos, no watermarks. Hands policy: Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible. Footwear policy: Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock. Background policy: Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks.",
+      "acceptance": {
+        "identity": "preserves the Tonari identity lock: face, hair, adult proportions, hair accessories when visible, and overall Akari impression",
+        "anatomy": "natural hands, feet, shoulders, limbs, and proportions for the described pose; avoids merged or overlapping hands on hand-risk pages",
+        "tone": "matches the page range without drifting into cover, chapter, glamorous model, pin-up, or childlike language",
+        "layout": "A4 portrait fit with no image-internal readable text, no logos, and no watermarks"
+      },
+      "prompt_template_version": "tonari_identity_lock_v2",
+      "identity_lock_version": "tonari-no-akari-identity-v1",
+      "risk_profile": {
+        "identity_risk": "high",
+        "hand_risk": "low",
+        "footwear_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "required_invariants": [
+        "adult 25-year-old Japanese woman",
+        "naturally cute adult, not glamorous, not model-like, not pin-up, not childlike",
+        "short fluffy light-brown bob with airy uneven ends and soft side bangs",
+        "warm amber eyes, round cheeks, compact rounded chin, small subtle nose/mouth",
+        "pale-blue crossed hairpins/ribbon clips on character-left side when visible",
+        "petite/slender healthy adult proportions",
+        "no image-internal readable text, no logos, no watermarks"
+      ],
+      "conditional_invariants": {
+        "hair_accessories_when_visible": "Show pale-blue crossed hairpins/ribbon clips on the character-left side when that side is visible.",
+        "official_footwear_when_feet_visible": "When feet are visible in the basic outfit, use official white crew socks with two pale blue stripes and chunky white sneakers with pale-blue accents; indoor seated variants may show official socks without sneakers only when clearly indoors.",
+        "hand_risk_pages": "For hand-risk pages, avoid interlocked, overlapping, or merged hands; keep fingers readable, separated, or naturally hidden by a sleeve/crop.",
+        "image_internal_text": "Do not add readable text, logos, watermark marks, signs, labels, captions, or typography inside the image."
+      },
+      "outfit_variant": "basic_outfit",
+      "camera_distance": "half_body",
+      "hands_policy": "Keep hands relaxed, separated, and anatomically simple; avoid interlocked, overlapping, or merged hands if both hands are visible.",
+      "footwear_policy": "Feet are not emphasized; if visible in the basic outfit, follow the official footwear lock.",
+      "background_policy": "Use a simple unbranded background with no image-internal readable text, signs, logos, labels, captions, or watermarks."
+    }
+  ]
+}

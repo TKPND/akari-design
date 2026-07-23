@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "collection_id": "akari-v1.2-overhead-room-portraits",
+  "poses": [
+    {"slug":"supine-direct-gaze","pose_order":1,"title":"Direct Gaze","framing":"full","angle_degrees":[80,90],"candidate_count":2,"deliverable_count":1,"outfit":"oversized-hoodie-shorts","feet":"striped-socks","background":"ivory-rug","prop_count":1},
+    {"slug":"supine-bent-knees","pose_order":2,"title":"Bent Knees","framing":"full","angle_degrees":[80,90],"candidate_count":2,"deliverable_count":1,"outfit":"loose-tshirt-shorts","feet":"barefoot","background":"pale-bedding","prop_count":0},
+    {"slug":"supine-overhead-stretch","pose_order":3,"title":"Slow Stretch","framing":"full","angle_degrees":[80,90],"candidate_count":2,"deliverable_count":1,"outfit":"oversized-hoodie-shorts","feet":"striped-socks","background":"ivory-rug","prop_count":0},
+    {"slug":"side-curled-gaze","pose_order":4,"title":"Curled Close","framing":"full","angle_degrees":[80,90],"candidate_count":2,"deliverable_count":1,"outfit":"loose-tshirt-shorts","feet":"barefoot","background":"gray-blanket","prop_count":1},
+    {"slug":"side-reaching-hand","pose_order":5,"title":"Reach","framing":"full","angle_degrees":[80,90],"candidate_count":2,"deliverable_count":1,"outfit":"oversized-hoodie-shorts","feet":"striped-socks","background":"pale-bedding","prop_count":0},
+    {"slug":"prone-chin-on-arms","pose_order":6,"title":"Quiet Look","framing":"full","angle_degrees":[80,90],"candidate_count":2,"deliverable_count":1,"outfit":"loose-tshirt-shorts","feet":"barefoot","background":"gray-blanket","prop_count":1},
+    {"slug":"floor-seated-look-up","pose_order":7,"title":"Look Up","framing":"full","angle_degrees":[80,90],"candidate_count":2,"deliverable_count":1,"outfit":"oversized-hoodie-shorts","feet":"striped-socks","background":"ivory-rug","prop_count":0},
+    {"slug":"close-face-hair-spread","pose_order":8,"title":"Hair and Eyes","framing":"close","angle_degrees":[65,80],"candidate_count":2,"deliverable_count":1,"outfit":"loose-tshirt-shorts","feet":"not-visible","background":"pale-bedding","prop_count":0},
+    {"slug":"close-upper-body-hands","pose_order":9,"title":"At Hand","framing":"close","angle_degrees":[65,80],"candidate_count":2,"deliverable_count":1,"outfit":"loose-tshirt-shorts","feet":"not-visible","background":"ivory-rug","prop_count":1},
+    {"slug":"close-sleeved-reaching-hand","pose_order":10,"title":"Sleeved Reach","framing":"close","angle_degrees":[65,80],"candidate_count":2,"deliverable_count":1,"outfit":"oversized-hoodie-shorts","feet":"not-visible","background":"gray-blanket","prop_count":0}
+  ]
+}

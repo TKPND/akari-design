@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "review_id": "akari-v1.2-turnaround-back-20260713-r1",
+  "review_path": "evidence/v1-2-turnaround/reviews/back-review.json",
+  "stage": "back",
+  "slots": [
+    "back"
+  ],
+  "request_batches": {
+    "back": "batch:v1-2-turnaround:20260713:back:r1"
+  },
+  "user_decision": "approved",
+  "user_selection": {
+    "decision_text": "C1 (Recommended)",
+    "back": 1
+  },
+  "candidates": [
+    {
+      "request_id": "request:v1-2-turnaround:20260713:back:r1:c1",
+      "slot": "back",
+      "candidate_path": "source/generated/v1-2-turnaround/20260713_back_r1_c1.png",
+      "state": "accept",
+      "gates": {
+        "identity": "pass",
+        "geometry": "pass",
+        "outfit": "pass",
+        "quality": "pass"
+      },
+      "landmark_y_px": {
+        "crown": 54,
+        "chin": 265,
+        "shoulder": 350,
+        "hoodie_hem": 765,
+        "skirt_hem": 843,
+        "knee": 1000,
+        "ankle": 1325,
+        "sole": 1469
+      },
+      "normalized_landmarks": {
+        "crown": 0.0,
+        "chin": 0.149117,
+        "shoulder": 0.209187,
+        "hoodie_hem": 0.502473,
+        "skirt_hem": 0.557597,
+        "knee": 0.668551,
+        "ankle": 0.898233,
+        "sole": 1.0
+      },
+      "review_findings": {
+        "identity_preservation": 5,
+        "face_hairpin_consistency": 5,
+        "anatomy_and_composition": 5,
+        "artifact_regression": 5,
+        "red_flags": []
+      },
+      "notes": "User-selected C1 is the strongest canonical 180-degree view. Head, shoulders, torso, hips, knees, ankles, and feet face directly away on one centered axis; the hood, hem, pleats, socks, and heel construction remain symmetric and continuous. The ornament stays only on character-left and preserves the upper crossed pins, distinct lower ribbon-like loop, and exactly two trailing strands.",
+      "rejection_reason": ""
+    },
+    {
+      "request_id": "request:v1-2-turnaround:20260713:back:r1:c2",
+      "slot": "back",
+      "candidate_path": "source/generated/v1-2-turnaround/20260713_back_r1_c2.png",
+      "state": "hold",
+      "gates": {
+        "identity": "pass",
+        "geometry": "hold",
+        "outfit": "pass",
+        "quality": "pass"
+      },
+      "notes": "Very strong straight-back symmetry and a valid ornament, but the torso, thighs, and sneakers are slightly narrower than the accepted seven-angle progression.",
+      "rejection_reason": ""
+    },
+    {
+      "request_id": "request:v1-2-turnaround:20260713:back:r1:c3",
+      "slot": "back",
+      "candidate_path": "source/generated/v1-2-turnaround/20260713_back_r1_c3.png",
+      "state": "hold",
+      "gates": {
+        "identity": "pass",
+        "geometry": "hold",
+        "outfit": "pass",
+        "quality": "pass"
+      },
+      "notes": "Clean centered construction, but the overall figure reads taller and lighter, with less body and sneaker mass than the accepted front and rear-three-quarter views.",
+      "rejection_reason": ""
+    }
+  ]
+}

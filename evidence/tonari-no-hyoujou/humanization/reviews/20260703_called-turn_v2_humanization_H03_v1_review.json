@@ -1,0 +1,29 @@
+{
+  "image": "source/generated/tonari-no-hyoujou/20260703_called-turn_v2.webp",
+  "candidate": "source/finished/tonari-no-hyoujou/20260703_called-turn_v2_humanization_H03_v1.png",
+  "generated_source": "/path/to/.codex/generated_images/019f27eb-2c66-7291-8728-9c4be4c72b39/ig_0b6997ba27e75819016a47d2a8d4f88191b94716826f7e21a4.png",
+  "stage": "humanization",
+  "strength": "H03",
+  "decision": "accept_finish",
+  "scores": {
+    "identity_preservation": 5,
+    "face_hairpin_consistency": 5,
+    "anatomy_and_composition": 5,
+    "technical_naturalness": 4,
+    "semantic_naturalness": 4,
+    "edit_minimality": 5,
+    "artifact_regression": 5,
+    "overall_preference": 3
+  },
+  "thumbnail_robustness": "not_checked",
+  "red_flags": [],
+  "failed_gates": [],
+  "reason_codes": [
+    "blind_no_clear_preference",
+    "no_instant_red_flags",
+    "candidate_gate_clear",
+    "conservative_h03_due_close_face_hairpin_neckline"
+  ],
+  "human_notes": "Blind first impression was no clear preference. No instant red flags were reported. Mapping revealed A=candidate and B=original; candidate A cleared identity, face/hairpin, anatomy/composition, and crop gates. Accepted as an extremely subtle H03 humanization pass for a close face-focused called-turn image.",
+  "mapping_file": "evidence/tonari-no-hyoujou/humanization/contact-sheets/blind/20260703_called-turn_v2_ab_mapping.json"
+}

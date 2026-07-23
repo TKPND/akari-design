@@ -1,0 +1,16 @@
+schema_version: 1
+scope: full-continuity
+status: accepted
+checks:
+  identity_and_adult_age: pass
+  character_left_ornament: pass
+  pov_and_viewer_visibility: pass
+  outdoor_outfit: pass
+  indoor_outfit: pass
+  wetness_progression: pass
+  light_progression: pass
+  prop_continuity: pass
+  emotion_arc_without_dialogue: pass
+findings: []
+contact_sheet_sha256: f4c60e1704e6f45fe8432dd63480973567c97462d036e675e2cb6a6daabb2a54
+reviewed_at: '2026-07-21T06:24:36Z'

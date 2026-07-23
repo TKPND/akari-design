@@ -1,0 +1,417 @@
+{
+  "schema_version": 1,
+  "collection_id": "akari-v1.1-tonari-no-hyoujou",
+  "title": "となりの表情 draft map review",
+  "generated_at": "2026-07-03",
+  "generation_mode": "built-in image_gen",
+  "reference_policy": "Used Akari v1.1 visible references for identity and style only; no collage or local pixel compositing.",
+  "contact_sheets": {
+    "partial_01_07": "evidence/tonari-no-hyoujou/contact-sheets/20260703_expression-map_partial_01-07.webp",
+    "partial_01_10": "evidence/tonari-no-hyoujou/contact-sheets/20260703_expression-map_partial_01-10.webp",
+    "full_18": "evidence/tonari-no-hyoujou/contact-sheets/20260703_expression-map_full_18.webp",
+    "slot_17_18_v2_compare": "evidence/tonari-no-hyoujou/contact-sheets/20260704_17_18_almost-says_v2_compare.webp",
+    "slot_16_v3_compare": "evidence/tonari-no-hyoujou/contact-sheets/20260705_16_near-shy-cover_v3_compare.webp",
+    "slot_12_v3_compare": "evidence/tonari-no-hyoujou/contact-sheets/20260705_12_sleepy-reply_v3_compare.webp",
+    "slot_06_v2_13_compare": "evidence/tonari-no-hyoujou/contact-sheets/20260705_06_side-glance-sulk_v2_13_compare.webp",
+    "slot_13_v3_06_compare": "evidence/tonari-no-hyoujou/contact-sheets/20260705_13_lonely-quiet_v3_06_compare.webp",
+    "slot_11_v2_15_compare": "evidence/tonari-no-hyoujou/contact-sheets/20260705_11_relief-release_v2_15_compare.webp",
+    "slot_07_v2_11_15_compare": "evidence/tonari-no-hyoujou/contact-sheets/20260705_07_failed-straight-face_v2_11_15_compare.webp",
+    "slot_17_v4_18_compare": "evidence/tonari-no-hyoujou/contact-sheets/20260705_17_leaving-turn_v4_18_compare.webp",
+    "selected_after_quality_pass": "evidence/tonari-no-hyoujou/contact-sheets/20260705_expression-map_selected_after_quality_pass.webp",
+    "extra_expression_bust_up_v1": "evidence/tonari-no-hyoujou/contact-sheets/20260705_extra-expression_bust-up_v1.webp",
+    "extra_expression_bust_up_v2": "evidence/tonari-no-hyoujou/contact-sheets/20260706_extra-expression_bust-up_v2.webp",
+    "extra_e02_e04_quality_review": "evidence/tonari-no-hyoujou/contact-sheets/20260706_extra-e02-e04_quality-review.webp",
+    "extra_expression_bust_up_v3": "evidence/tonari-no-hyoujou/contact-sheets/20260706_extra-expression_bust-up_v3.webp",
+    "extra_e05_e08_quality_review": "evidence/tonari-no-hyoujou/contact-sheets/20260706_extra-e05-e08_quality-review.webp"
+  },
+  "reference_inputs": [
+    "source/references/tonari-no-akari/identity-face-hair.webp",
+    "source/references/tonari-no-akari/identity-body-base.webp",
+    "source/references/tonari-no-akari/identity-basic-outfit.webp",
+    "source/references/tonari-no-akari/identity-side-view.webp",
+    "dist/akari-v1.1-tonari-no-akari-contact-sheet.webp"
+  ],
+  "global_prompt_adjustments": [
+    "Prefer quality and emotional specificity over over-conservative pose filtering.",
+    "Keep Akari clearly adult while avoiding glamorous, model-like, pin-up, or seductive framing.",
+    "Prefer rounded cheeks, compact soft chin, small mouth, warm amber eyes, and visible pale-blue hairpins.",
+    "For later candidates, reduce mature impression by using loose hoodie volume, higher neckline, and less collarbone emphasis."
+  ],
+  "candidates": [
+    {
+      "order": 1,
+      "slot": "called-turn",
+      "japanese_title": "呼ばれて振り向く",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260703_called-turn_v2.webp",
+      "alternate_candidates": [
+        {
+          "path": "source/generated/tonari-no-hyoujou/20260703_called-turn_v1.webp",
+          "reason": "Initial draft felt too mature/glamorous for Akari's round everyday impression."
+        }
+      ],
+      "draft_status": "candidate_needs_review",
+      "review_priority": "medium",
+      "notes": "v2 keeps the rounded face closer to the expression sheet, though neckline and lighting still read slightly mature."
+    },
+    {
+      "order": 2,
+      "slot": "eye-contact-pause",
+      "japanese_title": "目が合って止まる",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260703_eye-contact-pause_v1.webp",
+      "draft_status": "candidate_needs_review",
+      "review_priority": "medium",
+      "notes": "Expression reads well. Watch neckline, open mouth, and mature near-window mood during strict review."
+    },
+    {
+      "order": 3,
+      "slot": "compliment-blush",
+      "japanese_title": "褒められて照れる",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260703_compliment-blush_v1.webp",
+      "draft_status": "likely_accept_for_map",
+      "review_priority": "low",
+      "notes": "Good blush, restrained smile, and sleeve gesture. One of the stronger close-expression drafts."
+    },
+    {
+      "order": 4,
+      "slot": "teased-pout",
+      "japanese_title": "からかわれてむっとする",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260703_teased-pout_v1.webp",
+      "draft_status": "likely_accept_for_map",
+      "review_priority": "low",
+      "notes": "Readable small resistance without turning angry. Hairpin and cheek shape stay consistent."
+    },
+    {
+      "order": 5,
+      "slot": "answer-hesitation",
+      "japanese_title": "言い返す前",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260703_answer-hesitation_v1.webp",
+      "draft_status": "candidate_needs_review",
+      "review_priority": "medium",
+      "notes": "Second attempt restored the half-body distance. Check sleeve-covered hands and age impression."
+    },
+    {
+      "order": 6,
+      "slot": "side-glance-sulk",
+      "japanese_title": "拗ねた目線",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260705_side-glance-sulk_v2.webp",
+      "draft_status": "candidate_needs_review",
+      "review_priority": "medium",
+      "notes": "v2 strengthens the side-glance sulk role with a more averted head/torso, small pout, and clearer separation from 13 lonely-quiet. Review mature neckline/shoulder emphasis, hairpin clarity, and whether the stronger pose still preserves Akari identity.",
+      "alternate_candidates": [
+        {
+          "path": "source/generated/tonari-no-hyoujou/20260703_side-glance-sulk_v1.webp",
+          "reason": "Readable side glance and strong face quality, but the close window-lit bust composition and quiet downcast mood overlapped too much with 13 lonely-quiet."
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "slot": "failed-straight-face",
+      "japanese_title": "でも笑ってしまう",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260705_failed-straight-face_v2.webp",
+      "draft_status": "candidate_needs_review",
+      "review_priority": "medium",
+      "notes": "v2 keeps the close bust portrait and Akari identity while tightening the mouth into a restrained almost-straight line, so the expression reads as trying not to smile rather than another gentle happy face. Review neckline maturity, hairpin clarity, and whether the expression stays embarrassed/held-back instead of sad.",
+      "alternate_candidates": [
+        {
+          "path": "source/generated/tonari-no-hyoujou/20260703_failed-straight-face_v1.webp",
+          "reason": "Strong face quality, but the soft smile overlapped with warm-smile slots such as 11 relief-release and 15 honest-happy, weakening the failed-straight-face role."
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "slot": "small-pride",
+      "japanese_title": "小さく得意げ",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260703_small-pride_v1.webp",
+      "draft_status": "likely_accept_for_map",
+      "review_priority": "low",
+      "notes": "Good small-pride read, safer neckline, and compact gesture."
+    },
+    {
+      "order": 9,
+      "slot": "sudden-surprise",
+      "japanese_title": "不意に驚く",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260703_sudden-surprise_v1.webp",
+      "draft_status": "likely_accept_for_map",
+      "review_priority": "low",
+      "notes": "Surprise is visible without chibi distortion. Good map contrast."
+    },
+    {
+      "order": 10,
+      "slot": "worried-peek",
+      "japanese_title": "心配そうに覗く",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260703_worried-peek_v1.webp",
+      "draft_status": "candidate_needs_review",
+      "review_priority": "medium",
+      "notes": "Concern is readable and composition differs from the grid. Check hand/sleeve and body-line emphasis."
+    },
+    {
+      "order": 11,
+      "slot": "relief-release",
+      "japanese_title": "安心して力が抜ける",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260705_relief-release_v2.webp",
+      "draft_status": "candidate_needs_review",
+      "review_priority": "medium",
+      "notes": "v2 adds a sleeve-covered hand at the chest and relaxed shoulders so the image reads as relief after tension rather than a general happy smile. Preview was normalized from 1054x1493 to 1055x1491 for series consistency. Review hand/finger clarity, chest/neckline emphasis, hairpin clarity, and whether the expression stays relieved rather than honest-happy.",
+      "alternate_candidates": [
+        {
+          "path": "source/generated/tonari-no-hyoujou/20260703_relief-release_v1.webp",
+          "reason": "Strong soft smile and face quality, but the expression overlapped with 15 honest-happy as another warm smiling bust portrait and lacked visible relief-release body language."
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "slot": "sleepy-reply",
+      "japanese_title": "眠たげに返事する",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260705_sleepy-reply_v3.webp",
+      "draft_status": "candidate_needs_review",
+      "review_priority": "high",
+      "notes": "v3 keeps the close sleepy-reply role while reducing excessive blush and seductive half-lidded risk. Review hand/finger clarity, hairpin scale, mouth openness, and whether the close sleeve/cheek pose overlaps too much with other close-expression slots.",
+      "alternate_candidates": [
+        {
+          "path": "source/generated/tonari-no-hyoujou/20260703_sleepy-reply_v1.webp",
+          "reason": "Strong close-up face quality and clear sleepy read, but the heavier blush, small parted mouth, and slightly unclear cheek-side fingers increased seductive-gaze and hand-integrity review risk."
+        },
+        {
+          "path": "tmp/20260705_sleepy-reply_v2_preview.png",
+          "reason": "Discarded preview: cleaner rendering, but the narrowed eyelids pushed the expression toward a more sultry half-lidded look."
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "slot": "lonely-quiet",
+      "japanese_title": "少し寂しそう",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260705_lonely-quiet_v3.webp",
+      "draft_status": "candidate_needs_review",
+      "review_priority": "medium",
+      "notes": "v3 keeps the lonely-quiet mood while adding a little more breathing room and separating from 06 side-glance-sulk. Preview was normalized from 1054x1492 to 1055x1491 for series consistency. Review neckline/chest emphasis, lowered gaze, hairpin clarity, and whether the expression stays lonely rather than sleepy or seductive.",
+      "alternate_candidates": [
+        {
+          "path": "source/generated/tonari-no-hyoujou/20260703_lonely-quiet_v1.webp",
+          "reason": "Strong face and lonely mood, but the tighter close bust crop overlapped with the quiet close-expression cluster and had a 1054x1492 dimension mismatch."
+        },
+        {
+          "path": "tmp/20260705_lonely-quiet_v2_preview.png",
+          "reason": "Discarded preview: improved pullback and separation, but face/hair density dropped too much versus v1."
+        }
+      ]
+    },
+    {
+      "order": 14,
+      "slot": "brave-okay-face",
+      "japanese_title": "平気な顔をする",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260703_brave-okay-face_v1.webp",
+      "draft_status": "likely_accept_for_map",
+      "review_priority": "low",
+      "notes": "Good full-body balance and ordinary stance. Check shoes/feet in strict review."
+    },
+    {
+      "order": 15,
+      "slot": "honest-happy",
+      "japanese_title": "素直に嬉しい顔",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260703_honest-happy_v1.webp",
+      "draft_status": "likely_accept_for_map",
+      "review_priority": "low",
+      "notes": "Strong happy-expression candidate with good face continuity."
+    },
+    {
+      "order": 16,
+      "slot": "near-shy-cover",
+      "japanese_title": "近距離の照れ隠し",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260705_near-shy-cover_v3.webp",
+      "alternate_candidates": [
+        {
+          "path": "source/generated/tonari-no-hyoujou/20260703_near-shy-cover_v1.webp",
+          "reason": "Strong face and shy-cover read, but the extreme close crop and large sleeve coverage overlap with other close-expression slots."
+        }
+      ],
+      "draft_status": "candidate_needs_review",
+      "review_priority": "high",
+      "notes": "v3 keeps the near shy-cover role while easing the most crowded face crop. A wider v2 preview was discarded as too pulled back. Review sleeve/hand anatomy, hairpin clarity, mouth coverage, and overlap with other close-expression slots."
+    },
+    {
+      "order": 17,
+      "slot": "leaving-turn",
+      "japanese_title": "帰り際に振り向く",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260705_leaving-turn_v4.webp",
+      "draft_status": "candidate_needs_review",
+      "review_priority": "medium",
+      "notes": "v4 changes 17 into a safer shoulder-turn doorway composition: face, hoodie hood, turned shoulders, and backward glance carry the leaving-turn read while shoes/lower legs are removed as focal points. Review hand silhouette, hairpin clarity, and whether enough leaving/doorway motion remains after reducing full-body cues.",
+      "alternate_candidates": [
+        {
+          "path": "source/generated/tonari-no-hyoujou/20260703_leaving-turn_v1.webp",
+          "reason": "User-liked face and leaving-turn read, but the 1024x1536 dimensions did not match the series and the full-body framing put too much attention on legs/shoes."
+        },
+        {
+          "path": "tmp/20260705_leaving-turn_v2_preview.png",
+          "reason": "Discarded preview: fixed the series dimensions and kept the liked face, but still retained nearly the same full-body leg-focused composition."
+        },
+        {
+          "path": "tmp/20260705_leaving-turn_v3_preview.png",
+          "reason": "Discarded preview: moved closer, but cropped in a way that shifted attention to the skirt/thigh area rather than the shoulder-turn emotion."
+        }
+      ]
+    },
+    {
+      "order": 18,
+      "slot": "almost-says",
+      "japanese_title": "何か言いかけて笑う",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260704_almost-says_v2.webp",
+      "alternate_candidates": [
+        {
+          "path": "source/generated/tonari-no-hyoujou/20260703_almost-says_v1.webp",
+          "reason": "Quality was strong, but the back-turned doorway composition overlapped too much with slot 17 and read more like another leaving-turn than almost-speaking."
+        }
+      ],
+      "draft_status": "candidate_needs_review",
+      "review_priority": "medium",
+      "notes": "v2 keeps continuity with slot 17 through the white hoodie and gray pleated skirt, but changes the read to a front-facing conversational almost-speaking moment. Review hand shape, mouth openness, and whether the closer crop overlaps too much with other close-expression slots."
+    },
+    {
+      "order": 19,
+      "slot": "extra-closed-eye-smile",
+      "japanese_title": "にっこり目を閉じて笑う（安心・日常）",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260705_extra-01_closed-eye-smile_v1.webp",
+      "alternate_candidates": [],
+      "draft_status": "candidate_needs_review",
+      "review_priority": "medium",
+      "notes": "Additional bust-up expression requested on 2026-07-05. v1 gives a relaxed closed-eye everyday smile; review whether it overlaps too much with 15 honest-happy or remains useful as the calmer eyes-closed smile."
+    },
+    {
+      "order": 20,
+      "slot": "extra-prank-smug",
+      "japanese_title": "いたずら成功のドヤ顔",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260706_extra-02_prank-smug_v5.webp",
+      "alternate_candidates": [
+        {
+          "path": "tmp/tonari-extra-expressions/20260705_extra-02_prank-smug_v1_preview.png",
+          "reason": "Discarded preview: readable smug face, but the half-lidded gaze risked drifting too mature or subtly seductive for Akari."
+        },
+        {
+          "path": "source/generated/tonari-no-hyoujou/20260705_extra-02_prank-smug_v2.webp",
+          "reason": "Discarded after 2026-07-06 quality review: good prank-success read, but the sleeve-near-mouth pose and narrow gaze kept too much hand/age/glamour risk."
+        },
+        {
+          "path": "tmp/tonari-extra-expressions/20260706_extra-02_prank-smug_v3_preview.png",
+          "reason": "Discarded preview: hand shape improved slightly, but it still relied on a mouth-covering pose and did not reduce the half-lidded impression enough."
+        },
+        {
+          "path": "tmp/tonari-extra-expressions/20260706_extra-02_prank-smug_v4_preview.png",
+          "reason": "Discarded preview: removed the hand risk, but the lower neckline and mature side-eye pushed the expression too glamorous."
+        }
+      ],
+      "draft_status": "candidate_needs_review",
+      "review_priority": "medium",
+      "notes": "v5 selected on 2026-07-06. It removes the hand-near-mouth risk and reduces the half-lidded glamour impression while keeping a compact teasing grin. Review whether the slight side-eye still reads playful rather than seductive."
+    },
+    {
+      "order": 21,
+      "slot": "extra-pleading-upward",
+      "japanese_title": "お願い・上目遣い",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260706_extra-03_pleading-upward_v2.webp",
+      "alternate_candidates": [
+        {
+          "path": "source/generated/tonari-no-hyoujou/20260705_extra-03_pleading-upward_v1.webp",
+          "reason": "Discarded after 2026-07-06 quality review: very readable pleading expression, but the two small clenched sleeve-covered fists risked a more childlike read."
+        }
+      ],
+      "draft_status": "candidate_needs_review",
+      "review_priority": "medium",
+      "notes": "v2 selected on 2026-07-06. It keeps the upward pleading read but reduces the puppy-like double-fist pose and keeps the hand lower and more adult. Review whether the expression remains distinct from worried or lonely slots."
+    },
+    {
+      "order": 22,
+      "slot": "extra-thinking-chin",
+      "japanese_title": "考え込み（顎に手）",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260705_extra-04_thinking-chin_v1.webp",
+      "alternate_candidates": [],
+      "draft_status": "candidate_needs_review",
+      "review_priority": "medium",
+      "notes": "Reviewed on 2026-07-06 and retained. v1 adds a useful chin-hand thinking silhouette absent from the original 18; the visible finger/chin contact is clean enough for map use. Review whether the expression reads thoughtful rather than worried during strict single-image review."
+    },
+    {
+      "order": 23,
+      "slot": "extra-motivated-on",
+      "japanese_title": "やる気スイッチON",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260705_extra-05_motivated-on_v2.webp",
+      "alternate_candidates": [
+        {
+          "path": "tmp/tonari-extra-expressions/20260705_extra-05_motivated-on_v1_preview.png",
+          "reason": "Discarded preview: technically clean, but the expression read closer to a normal friendly smile than a clear motivated switch-on."
+        },
+        {
+          "path": "tmp/tonari-extra-expressions/20260706_extra-05_motivated-on_v3_preview.png",
+          "reason": "Rejected 2026-07-06 retry: clean image, but hand moved closer to the mouth and the face read younger/softer than v2."
+        }
+      ],
+      "draft_status": "candidate_needs_review",
+      "review_priority": "medium",
+      "notes": "Reviewed 2026-07-06 and retained v2. It keeps the compact fist and focused switch-on read while avoiding the hand-near-mouth and younger impression seen in v3; strict review should still check fist anatomy and modest energy."
+    },
+    {
+      "order": 24,
+      "slot": "extra-sheepish-smile",
+      "japanese_title": "やっちゃった…苦笑い",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260705_extra-06_sheepish-smile_v2.webp",
+      "alternate_candidates": [
+        {
+          "path": "tmp/tonari-extra-expressions/20260705_extra-06_sheepish-smile_v1_preview.png",
+          "reason": "Discarded preview: warm expression, but the arm-behind-head pose made shoulder/arm continuity less clear."
+        }
+      ],
+      "draft_status": "candidate_needs_review",
+      "review_priority": "medium",
+      "notes": "Reviewed 2026-07-06 and retained v2. The cheek/hoodie touch keeps the sheepish \"I messed up\" smile readable, with cleaner hand/shoulder continuity than v1; strict review should compare against 03 compliment-blush for overlap."
+    },
+    {
+      "order": 25,
+      "slot": "extra-holding-back-tears",
+      "japanese_title": "泣きそうだけど我慢",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260706_extra-07_holding-back-tears_v2.webp",
+      "alternate_candidates": [
+        {
+          "path": "source/generated/tonari-no-hyoujou/20260705_extra-07_holding-back-tears_v1.webp",
+          "reason": "Replaced 2026-07-06: safe and adult, but the tear/holding-back read was weaker and closer to quiet sadness."
+        },
+        {
+          "path": "tmp/tonari-extra-expressions/20260706_extra-07_holding-back-tears_v3_preview.png",
+          "reason": "Rejected 2026-07-06 retry: stronger adult restrained face and lower hand, but neckline/body impression became too mature for this expression map."
+        },
+        {
+          "path": "tmp/tonari-extra-expressions/20260706_extra-07_holding-back-tears_v4_preview.png",
+          "reason": "Rejected 2026-07-06 retry: clear emotion, but the open neckline/body emphasis stayed riskier than v2."
+        }
+      ],
+      "draft_status": "candidate_needs_review",
+      "review_priority": "medium",
+      "notes": "v2 selected on 2026-07-06. It improves the watery-eye and pressed-lip read over v1 while avoiding the more mature neckline/body impression in v3/v4; slight clasped-hand/pleading overlap remains worth strict review."
+    },
+    {
+      "order": 26,
+      "slot": "extra-sleep-crash",
+      "japanese_title": "完全寝落ち寸前",
+      "selected_candidate": "source/generated/tonari-no-hyoujou/20260706_extra-08_sleep-crash_v3.webp",
+      "alternate_candidates": [
+        {
+          "path": "tmp/tonari-extra-expressions/20260705_extra-08_sleep-crash_v1_preview.png",
+          "reason": "Discarded preview: sleepy read was good, but the prompt was retried to reduce any sultry/low-neckline risk and emphasize wholesome drowsiness."
+        },
+        {
+          "path": "source/generated/tonari-no-hyoujou/20260705_extra-08_sleep-crash_v2.webp",
+          "reason": "Replaced 2026-07-06: good sleepy read, but v3 gives a clearer complete sleep-crash silhouette and stronger separation from 12 sleepy-reply."
+        }
+      ],
+      "draft_status": "candidate_needs_review",
+      "review_priority": "medium",
+      "notes": "v3 selected on 2026-07-06. It keeps a wholesome sleeve-supported cheek pose while strengthening the complete sleep-crash read and separation from 12 sleepy-reply; strict review should still check neckline coverage and hand/finger simplicity."
+    }
+  ],
+  "next_review_recommendation": [
+    "Original 18-expression map is still ready for strict single-image review; high-risk originals remain 12 sleepy-reply v3, 16 near-shy-cover v3, 11 relief-release v2, 07 failed-straight-face v2, and 17 leaving-turn v4.",
+    "Extra bust-up quality review on 2026-07-06 retained E05 motivated-on v2 and E06 sheepish-smile v2, selected E07 holding-back-tears v2, and selected E08 sleep-crash v3.",
+    "All eight extra bust-up expressions now have a current grid at evidence/tonari-no-hyoujou/contact-sheets/20260706_extra-expression_bust-up_v3.webp; next step is strict user-facing review/acceptance pass rather than broad regeneration unless a gate fails."
+  ]
+}

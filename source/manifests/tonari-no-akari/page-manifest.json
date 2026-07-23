@@ -1,0 +1,440 @@
+{
+  "schema_version": 1,
+  "document_id": "akari-v1.1-tonari-no-akari",
+  "title": "となりのあかり",
+  "page_count": 24,
+  "pages": [
+    {
+      "page": 1,
+      "id": "morning-glance",
+      "role": "artwork",
+      "layout": "tonari-portrait",
+      "internal_range": "いつもの距離",
+      "title": "朝の合図",
+      "display_line": "目が合うだけで、今日が少し近くなる。",
+      "source_inputs": [
+        "tonari-morning-glance"
+      ],
+      "target_path": "source/generated/tonari-no-akari/20260701_morning-glance_v1.webp",
+      "blocks": [
+        {
+          "type": "portrait-plate"
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "id": "window-breath",
+      "role": "artwork",
+      "layout": "tonari-portrait",
+      "internal_range": "静かな余韻",
+      "title": "窓辺の息",
+      "display_line": "光の中で、言葉がゆっくりほどけていく。",
+      "source_inputs": [
+        "tonari-window-breath"
+      ],
+      "target_path": "source/generated/tonari-no-akari/20260701_window-breath_v1.webp",
+      "blocks": [
+        {
+          "type": "portrait-plate"
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "id": "turn-back-smile",
+      "role": "artwork",
+      "layout": "tonari-portrait",
+      "internal_range": "いつもの距離",
+      "title": "ふりむき笑顔",
+      "display_line": "呼ばれた気がして、少しだけ足を止めた。",
+      "source_inputs": [
+        "tonari-turn-back-smile"
+      ],
+      "target_path": "source/generated/tonari-no-akari/20260701_turn-back-smile_v1.webp",
+      "blocks": [
+        {
+          "type": "portrait-plate"
+        }
+      ]
+    },
+    {
+      "page": 4,
+      "id": "near-eye-contact",
+      "role": "artwork",
+      "layout": "tonari-portrait",
+      "internal_range": "少し甘め",
+      "title": "近くのまなざし",
+      "display_line": "照れた声より先に、まなざしが届く。",
+      "source_inputs": [
+        "tonari-near-eye-contact"
+      ],
+      "target_path": "source/generated/tonari-no-akari/20260701_near-eye-contact_v1.webp",
+      "blocks": [
+        {
+          "type": "portrait-plate"
+        }
+      ]
+    },
+    {
+      "page": 5,
+      "id": "light-cardigan",
+      "role": "artwork",
+      "layout": "tonari-portrait",
+      "internal_range": "服で魅せる",
+      "title": "薄手の羽織り",
+      "display_line": "いつもの服に、やわらかな風を重ねて。",
+      "source_inputs": [
+        "tonari-light-cardigan"
+      ],
+      "target_path": "source/generated/tonari-no-akari/20260701_light-cardigan_v1.webp",
+      "blocks": [
+        {
+          "type": "portrait-plate"
+        }
+      ]
+    },
+    {
+      "page": 6,
+      "id": "afternoon-stretch",
+      "role": "artwork",
+      "layout": "tonari-portrait",
+      "internal_range": "元気な一瞬",
+      "title": "背伸びの午後",
+      "display_line": "伸ばした指先まで、夏の光が跳ねる。",
+      "source_inputs": [
+        "tonari-afternoon-stretch"
+      ],
+      "target_path": "source/generated/tonari-no-akari/20260701_afternoon-stretch_v1.webp",
+      "blocks": [
+        {
+          "type": "portrait-plate"
+        }
+      ]
+    },
+    {
+      "page": 7,
+      "id": "seated-distance",
+      "role": "artwork",
+      "layout": "tonari-portrait",
+      "internal_range": "全身ポーズ",
+      "title": "腰かける距離",
+      "display_line": "隣に座る余白まで、ちゃんと残して。",
+      "source_inputs": [
+        "tonari-seated-distance"
+      ],
+      "target_path": "source/generated/tonari-no-akari/20260701_seated-distance_v1.webp",
+      "blocks": [
+        {
+          "type": "portrait-plate"
+        }
+      ]
+    },
+    {
+      "page": 8,
+      "id": "shy-half-smile",
+      "role": "artwork",
+      "layout": "tonari-portrait",
+      "internal_range": "少し甘め",
+      "title": "照れ笑い",
+      "display_line": "言いかけた言葉を、笑顔がそっと隠す。",
+      "source_inputs": [
+        "tonari-shy-half-smile"
+      ],
+      "target_path": "source/generated/tonari-no-akari/20260701_shy-half-smile_v1.webp",
+      "blocks": [
+        {
+          "type": "portrait-plate"
+        }
+      ]
+    },
+    {
+      "page": 9,
+      "id": "roomwear-morning",
+      "role": "artwork",
+      "layout": "tonari-portrait",
+      "internal_range": "服で魅せる",
+      "title": "部屋着の朝",
+      "display_line": "気を抜いた時間にも、あかりらしさがある。",
+      "source_inputs": [
+        "tonari-roomwear-morning"
+      ],
+      "target_path": "source/generated/tonari-no-akari/20260701_roomwear-morning_v1.webp",
+      "blocks": [
+        {
+          "type": "portrait-plate"
+        }
+      ]
+    },
+    {
+      "page": 10,
+      "id": "walking-beside",
+      "role": "artwork",
+      "layout": "tonari-portrait",
+      "internal_range": "いつもの距離",
+      "title": "となりを歩く",
+      "display_line": "歩幅がそろうと、景色までやさしくなる。",
+      "source_inputs": [
+        "tonari-walking-beside"
+      ],
+      "target_path": "source/generated/tonari-no-akari/20260701_walking-beside_v1.webp",
+      "blocks": [
+        {
+          "type": "portrait-plate"
+        }
+      ]
+    },
+    {
+      "page": 11,
+      "id": "profile-light",
+      "role": "artwork",
+      "layout": "tonari-portrait",
+      "internal_range": "静かな余韻",
+      "title": "横顔の光",
+      "display_line": "静けさの中で、輪郭だけが少し大人びる。",
+      "source_inputs": [
+        "tonari-profile-light"
+      ],
+      "target_path": "source/generated/tonari-no-akari/20260701_profile-light_v1.webp",
+      "blocks": [
+        {
+          "type": "portrait-plate"
+        }
+      ]
+    },
+    {
+      "page": 12,
+      "id": "small-peace",
+      "role": "artwork",
+      "layout": "tonari-portrait",
+      "internal_range": "元気な一瞬",
+      "title": "小さなピース",
+      "display_line": "はしゃぎすぎない合図が、いちばん似合う。",
+      "source_inputs": [
+        "tonari-small-peace"
+      ],
+      "target_path": "source/generated/tonari-no-akari/20260701_small-peace_v1.webp",
+      "blocks": [
+        {
+          "type": "portrait-plate"
+        }
+      ]
+    },
+    {
+      "page": 13,
+      "id": "looking-up",
+      "role": "artwork",
+      "layout": "tonari-portrait",
+      "internal_range": "少し甘め",
+      "title": "見上げる距離",
+      "display_line": "近すぎないのに、声だけはすぐそばにある。",
+      "source_inputs": [
+        "tonari-looking-up"
+      ],
+      "target_path": "source/generated/tonari-no-akari/20260701_looking-up_v1.webp",
+      "blocks": [
+        {
+          "type": "portrait-plate"
+        }
+      ]
+    },
+    {
+      "page": 14,
+      "id": "chair-pause",
+      "role": "artwork",
+      "layout": "tonari-portrait",
+      "internal_range": "全身ポーズ",
+      "title": "椅子の上で",
+      "display_line": "足元まで自然に、ひと休みの形。",
+      "source_inputs": [
+        "tonari-chair-pause"
+      ],
+      "target_path": "source/generated/tonari-no-akari/20260701_chair-pause_v1.webp",
+      "blocks": [
+        {
+          "type": "portrait-plate"
+        }
+      ]
+    },
+    {
+      "page": 15,
+      "id": "special-outing",
+      "role": "artwork",
+      "layout": "tonari-portrait",
+      "internal_range": "服で魅せる",
+      "title": "少しだけ特別",
+      "display_line": "特別すぎない服で、いつもの道が変わる。",
+      "source_inputs": [
+        "tonari-special-outing"
+      ],
+      "target_path": "source/generated/tonari-no-akari/20260701_special-outing_v1.webp",
+      "blocks": [
+        {
+          "type": "portrait-plate"
+        }
+      ]
+    },
+    {
+      "page": 16,
+      "id": "small-run",
+      "role": "artwork",
+      "layout": "tonari-portrait",
+      "internal_range": "元気な一瞬",
+      "title": "小走りの影",
+      "display_line": "振り返る前から、楽しそうな気配がする。",
+      "source_inputs": [
+        "tonari-small-run"
+      ],
+      "target_path": "source/generated/tonari-no-akari/20260701_small-run_v1.webp",
+      "blocks": [
+        {
+          "type": "portrait-plate"
+        }
+      ]
+    },
+    {
+      "page": 17,
+      "id": "sleepy-afternoon",
+      "role": "artwork",
+      "layout": "tonari-portrait",
+      "internal_range": "静かな余韻",
+      "title": "眠たげな午後",
+      "display_line": "まぶたの重さも、今日はやさしい表情になる。",
+      "source_inputs": [
+        "tonari-sleepy-afternoon"
+      ],
+      "target_path": "source/generated/tonari-no-akari/20260701_sleepy-afternoon_v1.webp",
+      "blocks": [
+        {
+          "type": "portrait-plate"
+        }
+      ]
+    },
+    {
+      "page": 18,
+      "id": "almost-touching",
+      "role": "artwork",
+      "layout": "tonari-portrait",
+      "internal_range": "少し甘め",
+      "title": "指先の間",
+      "display_line": "触れそうで触れないくらいが、ちょうどいい。",
+      "source_inputs": [
+        "tonari-almost-touching"
+      ],
+      "target_path": "source/generated/tonari-no-akari/20260701_almost-touching_v1.webp",
+      "blocks": [
+        {
+          "type": "portrait-plate"
+        }
+      ]
+    },
+    {
+      "page": 19,
+      "id": "straight-stance",
+      "role": "artwork",
+      "layout": "tonari-portrait",
+      "internal_range": "全身ポーズ",
+      "title": "まっすぐ立つ",
+      "display_line": "全身のバランスに、あかりの芯が見える。",
+      "source_inputs": [
+        "tonari-straight-stance"
+      ],
+      "target_path": "source/generated/tonari-no-akari/20260701_straight-stance_v1.webp",
+      "blocks": [
+        {
+          "type": "portrait-plate"
+        }
+      ]
+    },
+    {
+      "page": 20,
+      "id": "crouching-gesture",
+      "role": "artwork",
+      "layout": "tonari-portrait",
+      "internal_range": "全身ポーズ",
+      "title": "しゃがむ仕草",
+      "display_line": "何気ない姿勢ほど、らしさが出る。",
+      "source_inputs": [
+        "tonari-crouching-gesture"
+      ],
+      "target_path": "source/generated/tonari-no-akari/20260701_crouching-gesture_v1.webp",
+      "blocks": [
+        {
+          "type": "portrait-plate"
+        }
+      ]
+    },
+    {
+      "page": 21,
+      "id": "evening-cardigan",
+      "role": "artwork",
+      "layout": "tonari-portrait",
+      "internal_range": "静かな余韻",
+      "title": "夕方の羽織り",
+      "display_line": "一日の終わりに、少しだけ声がやわらぐ。",
+      "source_inputs": [
+        "tonari-evening-cardigan"
+      ],
+      "target_path": "source/generated/tonari-no-akari/20260701_evening-cardigan_v1.webp",
+      "blocks": [
+        {
+          "type": "portrait-plate"
+        }
+      ]
+    },
+    {
+      "page": 22,
+      "id": "over-shoulder-voice",
+      "role": "artwork",
+      "layout": "tonari-portrait",
+      "internal_range": "いつもの距離",
+      "title": "肩越しの声",
+      "display_line": "先に行きすぎないように、振り返ってくれる。",
+      "source_inputs": [
+        "tonari-over-shoulder-voice"
+      ],
+      "target_path": "source/generated/tonari-no-akari/20260701_over-shoulder-voice_v1.webp",
+      "blocks": [
+        {
+          "type": "portrait-plate"
+        }
+      ]
+    },
+    {
+      "page": 23,
+      "id": "skirt-in-breeze",
+      "role": "artwork",
+      "layout": "tonari-portrait",
+      "internal_range": "元気な一瞬",
+      "title": "スカートの風",
+      "display_line": "軽く揺れる裾に、元気な気配だけ残る。",
+      "source_inputs": [
+        "tonari-skirt-in-breeze"
+      ],
+      "target_path": "source/generated/tonari-no-akari/20260701_skirt-in-breeze_v1.webp",
+      "blocks": [
+        {
+          "type": "portrait-plate"
+        }
+      ]
+    },
+    {
+      "page": 24,
+      "id": "homeward-smile",
+      "role": "artwork",
+      "layout": "tonari-portrait",
+      "internal_range": "いつもの距離",
+      "title": "帰り道の笑顔",
+      "display_line": "また明日、と言う前の表情を残しておく。",
+      "source_inputs": [
+        "tonari-homeward-smile"
+      ],
+      "target_path": "source/generated/tonari-no-akari/20260701_homeward-smile_v1.webp",
+      "blocks": [
+        {
+          "type": "portrait-plate"
+        }
+      ]
+    }
+  ]
+}

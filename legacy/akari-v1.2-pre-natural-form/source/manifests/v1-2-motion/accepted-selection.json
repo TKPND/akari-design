@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "collection_id": "akari-v1.2-representative-motion-poses",
+  "accepted_motions": [
+    {
+      "motion": "walking",
+      "motion_order": 1,
+      "finished_path": "source/finished/v1-2-motion/walking.webp",
+      "source_candidate_path": "source/generated/v1-2-motion/20260713_walking_r1_c1.png",
+      "request_id": "request:v1-2-motion:20260713:walking:r1:c1",
+      "batch_id": "batch:v1-2-motion:20260713:walking:r1",
+      "revision": 1,
+      "candidate_number": 1,
+      "review_id": "review:v1-2-motion:20260713:walking:r1",
+      "review_path": "evidence/v1-2-motion/reviews/walking-r1-review.json",
+      "source_pack_sha256": "81bcfb2cc058efdbc38a605ef2195680b4ed869e266556a2c3292ba8ca9fe109",
+      "source_sha256": "ec6879755e17d6ba05ed7cc4e26db29be68d312bc5dc844f73f91ced042cd1b9",
+      "finished_sha256": "409b7503935790f9485395dd4eef9ddeb739cfa376f842901ea47409175e6a8e"
+    },
+    {
+      "motion": "seated",
+      "motion_order": 2,
+      "finished_path": "source/finished/v1-2-motion/seated.webp",
+      "source_candidate_path": "source/generated/v1-2-motion/20260713_seated_r1_c1.png",
+      "request_id": "request:v1-2-motion:20260713:seated:r1:c1",
+      "batch_id": "batch:v1-2-motion:20260713:seated:r1",
+      "revision": 1,
+      "candidate_number": 1,
+      "review_id": "review:v1-2-motion:20260713:seated:r1",
+      "review_path": "evidence/v1-2-motion/reviews/seated-r1-review.json",
+      "source_pack_sha256": "81bcfb2cc058efdbc38a605ef2195680b4ed869e266556a2c3292ba8ca9fe109",
+      "source_sha256": "3511a54b5337e7aad9cc899f2e28c40ca0e39e66cde164b3ea3ff71455594cd5",
+      "finished_sha256": "ecad0f6a76bcd81a4bfb7607c5bf4dd8d791d4e14aea048eeedb974ec0342b66"
+    },
+    {
+      "motion": "turning",
+      "motion_order": 3,
+      "finished_path": "source/finished/v1-2-motion/turning.webp",
+      "source_candidate_path": "source/generated/v1-2-motion/20260713_turning_r2_c3.png",
+      "request_id": "request:v1-2-motion:20260713:turning:r2:c3",
+      "batch_id": "batch:v1-2-motion:20260713:turning:r2",
+      "revision": 2,
+      "candidate_number": 3,
+      "review_id": "review:v1-2-motion:20260713:turning:r2",
+      "review_path": "evidence/v1-2-motion/reviews/turning-r2-review.json",
+      "source_pack_sha256": "81bcfb2cc058efdbc38a605ef2195680b4ed869e266556a2c3292ba8ca9fe109",
+      "source_sha256": "56149f73216a49e55a2a28d191e7f1533071bd99777f0b6a20958b611e81f3bd",
+      "finished_sha256": "1238bf890f2e12424afba3b98cc778118f06a777900689edd071e97c82bf9d0b"
+    }
+  ]
+}

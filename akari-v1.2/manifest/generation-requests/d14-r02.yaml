@@ -1,0 +1,165 @@
+schema_version: 1
+request_id: akari-v1.2-d14-r02
+asset_id: D14
+revision: r02
+variation_axis: independent_scene_attempt
+references:
+  - role: accepted_d13_recent_identity_outfit_action
+    path: akari-v1.2/accepted/daily/life/akari-v1.2_d13_life-charger-search_r02.png
+  - role: accepted_d11_sofa_edge_support
+    path: akari-v1.2/accepted/daily/life/akari-v1.2_d11_life-laundry-fold_r02.png
+  - role: accepted_d06_soft_bag_family
+    path: akari-v1.2/accepted/daily/evening/akari-v1.2_d06_evening-entryway-floor-sit_r01.png
+  - role: accepted_c03_hairpin_three_quarter
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c03_hairpin-side-45_r02.png
+  - role: accepted_c07_seated_sock_feet
+    path: akari-v1.2/accepted/core/indoor-feet/akari-v1.2_c07_indoor-socks-seated_r01.png
+shared_prompt: >-
+  Use the five visible accepted images only in their declared roles to create
+  one standalone Daily Wave 3 life-action scene of the same naturally cute
+  25-year-old adult Akari. Image 1 controls recent adult identity, healthy body
+  volume, normal short bob, complete character-left ornament, oversized opaque
+  white hoodie, opaque gray pleated skirt, striped socks, focused household
+  action, and restrained daylight rendering; do not copy its desk, drawer,
+  charger, cable, notebook placement, standing pose, or room geometry. Image 2
+  controls shallow sofa-edge pelvis support, separate knees and shins, bilateral
+  flat socked feet, and ordinary seated action; do not copy its towel, laundry
+  basket, folded stack, exact hand pose, window, or rug. Image 3 controls only
+  the accepted pale soft tote or shoulder-bag family, warm neutral material,
+  practical scale, and simple strap; do not copy its entryway, wall-floor sit,
+  removed shoes, tired expression, lighting, or floor placement. Image 4
+  controls hairpin-side three-quarter identity, complete character-left
+  pale-blue crossed pins and ribbon-like ornament, cheek contour, and short-bob
+  side construction; do not copy shoes, smile, or white backdrop. Image 5
+  controls seated warm-white mid-calf socks with exactly two thin pale-blue
+  stripes, healthy ankles and feet, flat heels, relaxed toes, and believable
+  knit shape; do not copy its floor pose, smile, or white backdrop.
+
+  Show Akari as she unpacks one pale soft shoulder tote in a compact plain
+  living room during soft diffused neutral daytime light. Use a vertical 1024
+  by 1536 portrait composition and a gently elevated front three-quarter
+  camera. Seat Akari shallowly on the screen-right half of one compact plain
+  warm-gray sofa. Place exactly one upright open pale warm-neutral soft tote or
+  shoulder bag on the adjacent screen-left sofa cushion. The bag base, side
+  panels, open mouth, and one simple strap must be fully visible and physically
+  supported by that cushion. The bag never rests on her lap and never crosses
+  in front of her torso, skirt, either leg, or either foot.
+
+  One visible hand holds the near bag rim open with five natural fingers and a
+  neutral wrist. The other visible hand lifts exactly one closed blank gray
+  notebook vertically halfway out of the bag, with the lower half still inside
+  the bag mouth. Keep both hands distinct, separate, fully visible, and
+  connected to their arms. Neither hand holds a second object, the notebook is
+  not open, and nothing floats. Do not assign either action to an arbitrary
+  screen side or anatomical character side.
+
+  Keep her pelvis stably supported near the sofa edge, torso upright with one
+  small natural forward lean from the hips, shoulders relaxed, and neck
+  neutral. Keep knees separate and forward, each leg independently traceable
+  from hip through knee, shin, ankle, heel, and toe. Put both socked feet fully
+  flat on one small plain rug in a natural seated stance. Never cross or fuse
+  the legs, hide a foot behind the bag or sofa, crop a heel or toe, use tiptoe
+  contact, or point either sole at the viewer. Show her complete ornament and
+  crown through both socked heels and toes. Direct both open eyes toward the
+  notebook and bag with relaxed brows, warm neutral cheeks, and a small closed
+  quietly focused mouth. Preserve the complete character-left ornament and
+  normal short bob. This is practical non-sensual character documentation, not
+  posing, viewer performance, a pin-up, or a product advertisement.
+
+  Show exactly three bag contents in total. Content one is the closed blank
+  gray notebook halfway out in the notebook-lifting hand. Content two is one
+  small plain pale-blue zip pouch already resting slightly askew on the sofa
+  cushion between the bag and Akari. Content three is one neatly folded
+  warm-white handkerchief already resting beside the pouch. The pouch stays
+  closed and its zipper has no readable pull text. The handkerchief stays
+  folded. Include exactly two Humanization details: let the bag strap rest in
+  one loose curve on its cushion, and keep the pale-blue pouch slightly askew.
+  Allow only Akari, one sofa, one open bag and strap, its three declared
+  contents, one small rug, a neutral floor and wall, and one partial plain sofa
+  arm. Do not show phone, wallet, keys, coins, card, charger, cable, adapter,
+  electronics, cosmetics, medicine, food, drink, receipt, ticket, readable
+  packaging, loose paper, extra notebook, extra pouch, extra cloth, second bag,
+  basket, laundry, towel, drawer, desk, refrigerator, footwear, text, logo, or
+  explanatory prop. The scene is calm, awake, healthy, and task-focused, never
+  frantic, sleepy, collapsed, sad, distressed, ill, intoxicated, dissociated,
+  sensual, fetish, glamorous, or staged for the viewer. There is no second
+  action.
+
+  When references conflict, D13 controls recent adult identity, outfit,
+  focused action, and rendering; D11 controls shallow sofa-edge support and
+  bilateral seated legs; D06 controls only bag family, material, scale, and
+  strap; C03 controls three-quarter identity and ornament; and C07 controls
+  seated socks and feet. Do not create closed eyes, tears, open mouth, broad
+  smile, viewer focus, wrong ornament side, missing ornament parts, wrong hair
+  length, wrong outfit, exposed underwear, bare feet, removed sock, wrong sock
+  stripes, cropped head hand bag notebook sofa torso pelvis knee shin sock heel
+  or toe, fused missing extra or malformed fingers, broken wrists, disconnected
+  arms, twisted neck spine shoulder ribcage pelvis knee or ankle, fused hidden
+  crossed or untraceable legs, one hidden foot, floating body bag strap notebook
+  pouch handkerchief or sofa, impossible bag mouth rim panel strap zipper hand
+  notebook or cushion geometry, duplicated bag notebook pouch or handkerchief,
+  forbidden props, readable text, logo, watermark, border, collage, grid,
+  multiple characters, or severe identity, adult-age, anatomy, continuity, or
+  rendering drift.
+scene_contract:
+  camera: gently-elevated-front-three-quarter-portrait-full-body
+  location: compact-plain-living-room-with-one-sofa
+  support: shallow-sofa-edge-sit-with-bilateral-flat-rug-foot-contact
+  action: one-visible-hand-hold-bag-open-other-visible-hand-lift-notebook
+  continuity: recent-standard-outfit-normal-hair-and-restrained-daylight-rendering
+  lighting: soft-diffused-neutral-daytime-light
+  gaze: both-open-eyes-toward-notebook-and-bag
+  pose: small-forward-hip-lean-with-separate-knees-and-shins
+  humanization:
+    - bag-strap-resting-in-one-loose-curve-on-cushion
+    - one-small-pale-blue-zip-pouch-slightly-askew
+  outfit:
+    top: oversized-opaque-white-hoodie
+    bottom: opaque-gray-pleated-skirt
+    socks: warm-white-mid-calf-exactly-two-thin-pale-blue-stripes
+  required_visible_features:
+    - complete-head-character-left-ornament-and-both-open-eyes
+    - one-visible-five-finger-hand-holding-near-bag-rim-open
+    - other-visible-five-finger-hand-lifting-one-notebook-halfway-out
+    - stable-sofa-edge-ribcage-pelvis-and-bilateral-seat-support
+    - separately-traceable-bilateral-thigh-knee-shin-lines
+    - both-flat-striped-socks-ankles-heels-and-relaxed-toes
+    - one-coherent-open-bag-strap-notebook-pouch-and-handkerchief
+  forbidden_props: [phone, wallet, keys, coins, card, charger, cable, adapter, electronics, cosmetics, medicine, food, drink, receipt, ticket, readable-packaging, loose-paper, extra-notebook, extra-pouch, extra-cloth, second-bag, basket, laundry, towel, drawer, desk, refrigerator, footwear, explanatory-prop]
+production_requirements:
+  file_format: png
+  target_canvas: {width: 1024, height: 1536}
+  accepted_width: {minimum: 1020, maximum: 1028}
+  accepted_height: {minimum: 1532, maximum: 1540}
+  standalone_composition: true
+  generated_grid: forbidden
+  force_exact_resize: forbidden
+candidate_policy:
+  initial_variants: [a, b]
+  optional_variant: c
+  optional_c_only_for: d14-r02-scene-or-distinct-independent-candidate-local-major-failures
+  stop_for_shared_failure: [D13, D11, D06, C03, C07]
+  cross_candidate_references: forbidden
+candidates:
+  - variant: a
+    title: independent-scene-a
+    target_path: source/candidates/d14/r02/akari-v1.2_d14_life-bag-unpack_r02-a.png
+  - variant: b
+    title: independent-scene-b
+    target_path: source/candidates/d14/r02/akari-v1.2_d14_life-bag-unpack_r02-b.png
+comparison_anchors: []
+acceptance_gates: [identity, body, state, continuity, rendering, production]
+hard_rejects:
+  - severe identity adult-age face body-volume continuity or rendering drift
+  - fused missing duplicated disconnected hidden or untraceable limbs or joints
+  - floating weight broken sofa pelvis leg foot hand bag strap notebook pouch or handkerchief support or contradictory contact
+  - missing mirrored relocated duplicated or materially redesigned ornament
+  - wrong hair length extreme bed head wet hair or wind
+  - closed eyes tears distress sadness pain injury illness intoxication sleep collapse dissociation sensual fetish glamour viewer focus broad smile or open mouth
+  - wrong outfit exposed underwear removed sock bare feet incorrect sock height or stripes
+  - malformed extra or fused fingers broken wrist hidden hand disconnected arm or impossible bag-rim or notebook grip
+  - fused crossed hidden or untraceable legs one hidden foot broken knee or ankle tiptoe pointed foot or missing heel or toe
+  - impossible duplicated floating body-obscuring or unsupported bag mouth rim panel strap zipper notebook pouch handkerchief sofa or cushion
+  - phone wallet keys coins card charger cable adapter electronics cosmetics medicine food drink receipt ticket readable packaging loose paper extra notebook extra pouch extra cloth second bag basket laundry towel drawer desk refrigerator footwear or explanatory prop
+  - crop or scale preventing complete head ornament hand bag notebook sofa torso pelvis knee shin sock heel toe or floor-contact review
+  - readable text logo watermark border collage grid or multiple character

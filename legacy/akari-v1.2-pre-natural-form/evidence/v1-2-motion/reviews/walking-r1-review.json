@@ -1,0 +1,99 @@
+{
+  "review_id": "review:v1-2-motion:20260713:walking:r1",
+  "review_path": "evidence/v1-2-motion/reviews/walking-r1-review.json",
+  "motion": "walking",
+  "batch_id": "batch:v1-2-motion:20260713:walking:r1",
+  "user_decision": "approved",
+  "candidates": [
+    {
+      "request_id": "request:v1-2-motion:20260713:walking:r1:c1",
+      "candidate_path": "source/generated/v1-2-motion/20260713_walking_r1_c1.png",
+      "decision": "accept",
+      "gates": {
+        "identity": "pass",
+        "age": "pass",
+        "anatomy_pose": "pass",
+        "body_proportion": "pass",
+        "outfit": "pass",
+        "footwear": "pass",
+        "ornament_side": "pass",
+        "framing": "pass",
+        "artifacts_quality": "pass",
+        "motion_naturalness": "pass"
+      },
+      "observations": {
+        "identity": "Face, warm-brown bob, eyes, and overall character read match the accepted v1.2 turnaround.",
+        "age": "Adult age impression remains consistent with the accepted front and front-three-quarter references.",
+        "anatomy_pose": "Heel-strike, trailing leg, arms, hands, and both feet form a coherent readable walking pose.",
+        "body_proportion": "Head-to-body ratio, torso length, and leg proportions remain consistent with the turnaround.",
+        "outfit": "White oversized hoodie, kangaroo pocket, drawstrings, gray pleated skirt, and striped socks retain their construction.",
+        "footwear": "Both chunky white-and-pale-blue sneakers are complete, distinct, and constructionally consistent.",
+        "ornament_side": "The pale-blue ornament remains on character-left and is not mirrored.",
+        "framing": "Hair, hands, legs, socks, and both shoes are fully inside the 1024x1536 frame.",
+        "artifacts_quality": "No extra limbs, merged anatomy, malformed hands or feet, text, watermark, or visible generation artifacts are present.",
+        "motion_naturalness": "Modest stride, heel contact, trailing foot, and restrained garment response read as a natural reusable walking reference."
+      },
+      "rejection_reason": ""
+    },
+    {
+      "request_id": "request:v1-2-motion:20260713:walking:r1:c2",
+      "candidate_path": "source/generated/v1-2-motion/20260713_walking_r1_c2.png",
+      "decision": "reject",
+      "gates": {
+        "identity": "pass",
+        "age": "pass",
+        "anatomy_pose": "fail",
+        "body_proportion": "pass",
+        "outfit": "pass",
+        "footwear": "pass",
+        "ornament_side": "pass",
+        "framing": "pass",
+        "artifacts_quality": "pass",
+        "motion_naturalness": "fail"
+      },
+      "observations": {
+        "identity": "Face, hair, and overall character finish remain close to the accepted v1.2 identity.",
+        "age": "Adult age impression is retained.",
+        "anatomy_pose": "The legs cross and overlap through the centerline, weakening knee and foot traceability for a reference pose.",
+        "body_proportion": "Overall proportions remain within the accepted turnaround range.",
+        "outfit": "Hoodie, skirt, socks, and their palette remain consistent.",
+        "footwear": "Both sneakers are present and individually well constructed.",
+        "ornament_side": "The pale-blue ornament remains on character-left.",
+        "framing": "The full figure is contained without clipping.",
+        "artifacts_quality": "No obvious rendering artifact is present outside the pose-readability issue.",
+        "motion_naturalness": "The crossed-leg silhouette makes the mid-stance balance and walking direction less immediately readable."
+      },
+      "rejection_reason": "Crossed and overlapping legs reduce anatomy, balance, and footwear readability below reusable-reference quality."
+    },
+    {
+      "request_id": "request:v1-2-motion:20260713:walking:r1:c3",
+      "candidate_path": "source/generated/v1-2-motion/20260713_walking_r1_c3.png",
+      "decision": "hold",
+      "gates": {
+        "identity": "pass",
+        "age": "pass",
+        "anatomy_pose": "pass",
+        "body_proportion": "pass",
+        "outfit": "pass",
+        "footwear": "pass",
+        "ornament_side": "pass",
+        "framing": "pass",
+        "artifacts_quality": "pass",
+        "motion_naturalness": "pass"
+      },
+      "observations": {
+        "identity": "Face, hair, and overall finish remain consistent with the accepted v1.2 identity.",
+        "age": "Adult age impression is retained.",
+        "anatomy_pose": "Separated legs, hands, and shoes are coherent and readable.",
+        "body_proportion": "Body proportions remain consistent with the accepted turnaround.",
+        "outfit": "Hoodie, skirt, striped socks, and palette retain the standard construction.",
+        "footwear": "Both sneakers are complete and consistent with the accepted footwear design.",
+        "ornament_side": "The pale-blue ornament remains correctly on character-left.",
+        "framing": "The entire figure is contained with comfortable padding.",
+        "artifacts_quality": "No extra anatomy, clipping, text, watermark, or major generation artifact is visible.",
+        "motion_naturalness": "Toe-off reads naturally, though rear-foot grounding is slightly less unequivocal than candidate 1."
+      },
+      "rejection_reason": ""
+    }
+  ]
+}

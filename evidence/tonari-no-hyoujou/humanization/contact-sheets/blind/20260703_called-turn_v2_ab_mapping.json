@@ -1,0 +1,34 @@
+{
+  "original": "source/generated/tonari-no-hyoujou/20260703_called-turn_v2.webp",
+  "candidate": "source/finished/tonari-no-hyoujou/20260703_called-turn_v2_humanization_H03_v1.png",
+  "input_details": {
+    "original": {
+      "path": "source/generated/tonari-no-hyoujou/20260703_called-turn_v2.webp",
+      "sha256": "bde5c880d37bfb70b28d1befbc5b1331f2f26a7eb714db6370f3d9cb53d70725",
+      "width": 1055,
+      "height": 1491,
+      "format": "WEBP"
+    },
+    "candidate": {
+      "path": "source/finished/tonari-no-hyoujou/20260703_called-turn_v2_humanization_H03_v1.png",
+      "sha256": "727f8959102aa52a4b1965f10051ae6f0353a79594b07e9b91edca4e042bc41e",
+      "width": 1055,
+      "height": 1491,
+      "format": "PNG"
+    }
+  },
+  "A": "candidate",
+  "B": "original",
+  "random_seed": 101,
+  "blind": true,
+  "sheet": "evidence/tonari-no-hyoujou/humanization/contact-sheets/blind/20260703_called-turn_v2_ab_blind.png",
+  "contact_sheet": {
+    "background": "#f3f0ea",
+    "label_height": 56,
+    "gap": 16,
+    "target_height": 1491,
+    "resize_method": "Image.Resampling.LANCZOS",
+    "allow_dimension_mismatch": false,
+    "output_format": "png"
+  }
+}

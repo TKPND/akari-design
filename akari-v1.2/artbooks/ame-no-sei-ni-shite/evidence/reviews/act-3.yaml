@@ -1,0 +1,13 @@
+schema_version: 1
+scope: act-3
+status: accepted
+checks:
+  scene_order: pass
+  identity_and_adult_age: pass
+  indoor_roomwear_and_socks: pass
+  drying_hair_progression: pass
+  cool_window_warm_room_light: pass
+  quiet_closeness_progression: pass
+findings: []
+contact_sheet_sha256: dc7165455d14de8d68b00151ee7fb2f0c69c01ae773b004abf209a48a3e1d281
+reviewed_at: '2026-07-21T06:24:36Z'

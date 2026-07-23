@@ -1,0 +1,99 @@
+{
+  "review_id": "review:v1-2-motion:20260713:turning:r2",
+  "review_path": "evidence/v1-2-motion/reviews/turning-r2-review.json",
+  "motion": "turning",
+  "batch_id": "batch:v1-2-motion:20260713:turning:r2",
+  "user_decision": "approved",
+  "candidates": [
+    {
+      "request_id": "request:v1-2-motion:20260713:turning:r2:c1",
+      "candidate_path": "source/generated/v1-2-motion/20260713_turning_r2_c1.png",
+      "decision": "hold",
+      "gates": {
+        "identity": "pass",
+        "age": "pass",
+        "anatomy_pose": "pass",
+        "body_proportion": "pass",
+        "outfit": "pass",
+        "footwear": "pass",
+        "ornament_side": "pass",
+        "framing": "pass",
+        "artifacts_quality": "pass",
+        "motion_naturalness": "pass"
+      },
+      "observations": {
+        "identity": "Face, warm-brown bob, amber eyes, and overall character finish remain consistent with the accepted v1.2 references.",
+        "age": "The accepted adult age impression is retained.",
+        "anatomy_pose": "Head, shoulders, pelvis, hands, legs, and feet are coherent and readable from the rear three-quarter view.",
+        "body_proportion": "Head-to-body ratio, torso length, pelvis, and legs remain within the accepted turnaround range.",
+        "outfit": "Rear hoodie and hood construction, gray pleated skirt, and striped socks retain the locked design.",
+        "footwear": "Both chunky white-and-blue sneakers are complete, separate, and constructionally consistent.",
+        "ornament_side": "With the back toward the viewer and face toward image-left, the character-left ornament correctly appears on image-left.",
+        "framing": "All hair, hands, legs, socks, and shoes are fully inside the 1024x1536 frame.",
+        "artifacts_quality": "No extra anatomy, malformed hands or feet, text, watermark, or visible generation artifact is present.",
+        "motion_naturalness": "The head leads the shoulders naturally, but the wide stable stance makes the turn read slightly more posed than candidate 3."
+      },
+      "rejection_reason": ""
+    },
+    {
+      "request_id": "request:v1-2-motion:20260713:turning:r2:c2",
+      "candidate_path": "source/generated/v1-2-motion/20260713_turning_r2_c2.png",
+      "decision": "reject",
+      "gates": {
+        "identity": "pass",
+        "age": "pass",
+        "anatomy_pose": "pass",
+        "body_proportion": "pass",
+        "outfit": "pass",
+        "footwear": "pass",
+        "ornament_side": "fail",
+        "framing": "pass",
+        "artifacts_quality": "pass",
+        "motion_naturalness": "pass"
+      },
+      "observations": {
+        "identity": "Face, hair, eyes, and overall character finish remain recognizable as accepted v1.2 Akari.",
+        "age": "The accepted adult age impression is retained.",
+        "anatomy_pose": "The over-shoulder head turn, shoulders, hips, hands, legs, and feet form a coherent pose.",
+        "body_proportion": "Overall proportions remain consistent with the accepted construction.",
+        "outfit": "Hoodie, hood, skirt, socks, and their palette remain consistent.",
+        "footwear": "Both sneakers are complete and clearly readable.",
+        "ornament_side": "The rear-facing pose points the face toward image-left, but the character-left ornament is incorrectly drawn on image-right and is mirrored.",
+        "framing": "The complete figure is contained with comfortable padding.",
+        "artifacts_quality": "No extra limbs, malformed hands or feet, text, watermark, or major rendering artifact is visible.",
+        "motion_naturalness": "The lifted heel and head-shoulder-hip stagger communicate a believable standing pivot distinct from walking."
+      },
+      "rejection_reason": "The character-left ornament is mirrored onto image-right in a rear-facing view, failing the locked physical-side gate."
+    },
+    {
+      "request_id": "request:v1-2-motion:20260713:turning:r2:c3",
+      "candidate_path": "source/generated/v1-2-motion/20260713_turning_r2_c3.png",
+      "decision": "accept",
+      "gates": {
+        "identity": "pass",
+        "age": "pass",
+        "anatomy_pose": "pass",
+        "body_proportion": "pass",
+        "outfit": "pass",
+        "footwear": "pass",
+        "ornament_side": "pass",
+        "framing": "pass",
+        "artifacts_quality": "pass",
+        "motion_naturalness": "pass"
+      },
+      "observations": {
+        "identity": "Face, warm-brown bob, amber eyes, and character appeal match the accepted v1.2 references and prior Phase 2 motions.",
+        "age": "The accepted adult age impression remains consistent.",
+        "anatomy_pose": "The over-shoulder head turn, shoulders, hips, hands, legs, and feet are anatomically coherent and readable.",
+        "body_proportion": "Head-to-body ratio, torso length, pelvis, and legs remain consistent with the accepted turnaround.",
+        "outfit": "Rear hoodie and hood construction, hem, sleeves, gray pleated skirt, and striped socks retain the locked design.",
+        "footwear": "Both rear-three-quarter sneakers are complete, separate, and consistent with the accepted footwear construction.",
+        "ornament_side": "With the back toward the viewer and face toward image-left, the pale-blue character-left ornament correctly appears on image-left and is not mirrored.",
+        "framing": "All hair, hands, legs, socks, and shoes are fully inside the 1024x1536 frame.",
+        "artifacts_quality": "No extra anatomy, malformed hands or feet, text, watermark, or visible generation artifact is present.",
+        "motion_naturalness": "Face, shoulders, ribcage, hips, and grounded feet form a restrained, natural turning sequence that remains distinct from the walking pose."
+      },
+      "rejection_reason": ""
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "document_id": "akari-v1.1-settings",
+  "page_count": 14,
+  "pages": [
+    {
+      "page": 1,
+      "id": "cover-key-visual",
+      "title": "Akari v1.1",
+      "role": "cover",
+      "layout": "cover",
+      "source_inputs": ["cover-key-visual-16x9"],
+      "blocks": [{"type": "image"}, {"type": "note-list"}]
+    },
+    {
+      "page": 2,
+      "id": "d65-color-palette",
+      "title": "D65 Color Palette",
+      "role": "palette",
+      "layout": "palette",
+      "source_inputs": ["hoodie-front", "expression-sheet", "bag-board", "shoe-board"],
+      "blocks": [{"type": "palette-grid"}, {"type": "note-list"}]
+    },
+    {
+      "page": 3,
+      "id": "character-summary-proportion",
+      "title": "Character Summary + Proportion",
+      "role": "identity",
+      "layout": "proportion",
+      "source_inputs": ["hoodie-front-proportion-corrected", "body-proportion-lock"],
+      "blocks": [{"type": "image"}, {"type": "guide-lines"}, {"type": "note-list"}]
+    },
+    {
+      "page": 4,
+      "id": "front-back",
+      "title": "Front / Back",
+      "role": "turnaround",
+      "layout": "front-back",
+      "source_inputs": ["hoodie-front", "hoodie-back"],
+      "blocks": [{"type": "image"}, {"type": "guide-lines"}, {"type": "note-list"}]
+    },
+    {
+      "page": 5,
+      "id": "angle-turnaround",
+      "title": "Angle Turnaround",
+      "role": "turnaround",
+      "layout": "turnaround",
+      "source_inputs": ["side-view", "hairpin-side-45", "non-hairpin-side-45"],
+      "blocks": [{"type": "image"}, {"type": "note-list"}]
+    },
+    {
+      "page": 6,
+      "id": "expressions",
+      "title": "Expressions",
+      "role": "identity",
+      "layout": "expression-grid",
+      "source_inputs": ["expression-sheet"],
+      "blocks": [{"type": "image"}, {"type": "expression-labels"}, {"type": "note-list"}]
+    },
+    {
+      "page": 7,
+      "id": "hair-face-details",
+      "title": "Hair / Face Details",
+      "role": "detail",
+      "layout": "detail-board",
+      "source_inputs": ["hair-face-detail-board"],
+      "blocks": [{"type": "image"}, {"type": "note-list"}]
+    },
+    {
+      "page": 8,
+      "id": "outfit-rules",
+      "title": "Outfit Rules",
+      "role": "detail",
+      "layout": "outfit-rules",
+      "source_inputs": ["hoodie-front", "base-front", "hoodie-back"],
+      "blocks": [{"type": "image"}, {"type": "note-list"}]
+    },
+    {
+      "page": 9,
+      "id": "footwear-sock-board",
+      "title": "Footwear Sock Board",
+      "role": "detail",
+      "layout": "detail-board-large",
+      "source_inputs": ["footwear-board"],
+      "blocks": [{"type": "image"}, {"type": "note-list"}]
+    },
+    {
+      "page": 10,
+      "id": "sneaker-construction",
+      "title": "Sneaker Construction",
+      "role": "detail",
+      "layout": "detail-board-large",
+      "source_inputs": ["shoe-board"],
+      "blocks": [{"type": "image"}, {"type": "note-list"}]
+    },
+    {
+      "page": 11,
+      "id": "bag-detail-board",
+      "title": "Bag Detail Board",
+      "role": "detail",
+      "layout": "detail-board-large",
+      "source_inputs": ["bag-board"],
+      "blocks": [{"type": "image"}, {"type": "note-list"}]
+    },
+    {
+      "page": 12,
+      "id": "bag-on-body-scale",
+      "title": "Bag-on-body scale",
+      "role": "detail",
+      "layout": "detail-board-large",
+      "source_inputs": ["bag-on-body-scale"],
+      "blocks": [{"type": "image"}, {"type": "note-list"}]
+    },
+    {
+      "page": 13,
+      "id": "do-dont",
+      "title": "Do / Don't",
+      "role": "rules",
+      "layout": "do-dont",
+      "source_inputs": ["hoodie-front", "expression-sheet", "shoe-board", "bag-board"],
+      "blocks": [{"type": "note-list"}, {"type": "note-list"}, {"type": "image"}]
+    },
+    {
+      "page": 14,
+      "id": "production-notes-source-manifest",
+      "title": "Production Notes / Source Manifest",
+      "role": "manifest",
+      "layout": "manifest",
+      "source_inputs": ["hoodie-front", "expression-sheet", "bag-board", "shoe-board"],
+      "blocks": [{"type": "manifest-summary"}, {"type": "note-list"}]
+    }
+  ]
+}

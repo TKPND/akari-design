@@ -1,0 +1,248 @@
+schema_version: 1
+allowed_statuses: [accepted, rejected, superseded]
+allowed_verdicts: [pass, minor, major, not-applicable]
+reviews:
+  - candidate_id: V13-01-r01-a
+    asset_id: V13-01
+    revision: r01
+    status: accepted
+    user_selected: true
+    source_paths:
+      - >-
+        source/candidates/v13-01/r01/akari-v1.3_v13-01_corrected-key-visual_r01-a.png
+    promoted_paths:
+      - >-
+        accepted/base/key-visual/akari-v1.3_v13-01_corrected-key-visual_r01.png
+    source_sha256:
+      - 780f6b7b2f104f6d5196f0dd57d65cac921cb5af8e958a4edc46a10d842652cb
+    promoted_sha256:
+      - 780f6b7b2f104f6d5196f0dd57d65cac921cb5af8e958a4edc46a10d842652cb
+    overall_verdict: pass
+    gate_verdicts:
+      identity: pass
+      ornament: pass
+      expression: pass
+      rendering: pass
+      preservation: pass
+    findings:
+      - Same identity, young-adult read, amber eyes, smile, and airy bob.
+      - One complete ornament appears on character-left and image-right.
+      - Crossed pins and ribbon read clearly, with no trace on image-left.
+      - The ribbon is smaller than the source and has shorter tails.
+      - Head, hand, torso, raised leg, light, clothing, and finish are preserved.
+    decision: User explicitly selected candidate A.
+  - candidate_id: V13-01-r01-b
+    asset_id: V13-01
+    revision: r01
+    status: superseded
+    user_selected: false
+    source_paths:
+      - >-
+        source/candidates/v13-01/r01/akari-v1.3_v13-01_corrected-key-visual_r01-b.png
+    promoted_paths: []
+    source_sha256:
+      - 2df30653d5099db17740c752186ff81c1e83c70e97c8a0e15a354bc909024448
+    promoted_sha256: []
+    overall_verdict: pass
+    gate_verdicts:
+      identity: pass
+      ornament: pass
+      expression: pass
+      rendering: pass
+      preservation: pass
+    findings:
+      - Same identity, young-adult read, amber eyes, smile, and airy bob.
+      - One compact ornament appears on character-left and image-right.
+      - Head, hand, torso, raised leg, light, clothing, and finish are preserved.
+    decision: Eligible but superseded after the user selected candidate A.
+  - candidate_id: V13-02-r01-a
+    asset_id: V13-02
+    revision: r01
+    status: superseded
+    user_selected: false
+    source_paths:
+      - >-
+        source/candidates/v13-02/r01/akari-v1.3_v13-02_natural-full-body_r01-a.png
+    promoted_paths: []
+    source_sha256:
+      - 5ea5b4611ad155e26507d7f9f041a728d3f15622311d5e7634129e64c3dd1382
+    promoted_sha256: []
+    overall_verdict: pass
+    gate_verdicts:
+      identity: pass
+      ornament: pass
+      body: pass
+      rendering: pass
+    findings:
+      - Clear young-adult read and recognizable V13-01 identity at full-body distance.
+      - Correct single ornament on character-left and image-right.
+      - Light upper body, complete hands and feet, and credible joint connections.
+      - Healthy leg volume is present, though slightly lighter than candidate B.
+      - Face is a little narrower and more mature than B relative to V13-01.
+    decision: Eligible but superseded after the user selected candidate B.
+  - candidate_id: V13-02-r01-b
+    asset_id: V13-02
+    revision: r01
+    status: accepted
+    user_selected: true
+    source_paths:
+      - >-
+        source/candidates/v13-02/r01/akari-v1.3_v13-02_natural-full-body_r01-b.png
+    promoted_paths:
+      - >-
+        accepted/base/full-body/akari-v1.3_v13-02_natural-full-body_r01.png
+    source_sha256:
+      - 0f8ca9df4c617dfcb30ba6f23d4b01647d00c4a9216ef57f335109daac7a3ee3
+    promoted_sha256:
+      - 0f8ca9df4c617dfcb30ba6f23d4b01647d00c4a9216ef57f335109daac7a3ee3
+    overall_verdict: pass
+    gate_verdicts:
+      identity: pass
+      ornament: pass
+      body: pass
+      rendering: pass
+    findings:
+      - Face roundness and amber-eye balance are closest to V13-01 at this distance.
+      - Correct single ornament on character-left and image-right.
+      - Healthy thighs and calves, readable weight shift, and complete grounded feet.
+      - Complete hands and coherent distance-scaled pastel rendering.
+      - Upper body is slightly broader than A but remains light and natural.
+    decision: User explicitly selected candidate B.
+  - candidate_id: V13-03-r01-a
+    asset_id: V13-03
+    revision: r01
+    status: accepted
+    user_selected: true
+    source_paths:
+      - >-
+        source/candidates/v13-03/r01/akari-v1.3_v13-03a_everyday_r01-a.png
+      - >-
+        source/candidates/v13-03/r01/akari-v1.3_v13-03b_bright-smile_r01-a.png
+    promoted_paths:
+      - >-
+        accepted/base/expressions/akari-v1.3_v13-03a_everyday_r01.png
+      - >-
+        accepted/base/expressions/akari-v1.3_v13-03b_bright-smile_r01.png
+    source_sha256:
+      - b07c2ce0c663f3f958e2e134ebeaac7efa3c5786a421b6f81af8f0e472a7043c
+      - 71ac2030300ea40c56c95750aa06309add06861b672a44e38664ffb580a564b5
+    promoted_sha256:
+      - b07c2ce0c663f3f958e2e134ebeaac7efa3c5786a421b6f81af8f0e472a7043c
+      - 71ac2030300ea40c56c95750aa06309add06861b672a44e38664ffb580a564b5
+    overall_verdict: pass
+    gate_verdicts:
+      identity: pass
+      ornament: pass
+      expression: pass
+      rendering: pass
+      pair-consistency: pass
+    findings:
+      - Relaxed member has a closed mouth with the clearest gentle warmth.
+      - Large amber eyes remain attentive without becoming sleepy or childlike.
+      - Face, airy bob, and complete image-right ornament retain v1.3 identity.
+      - Framing, pose, clothing, light, and background remain visually consistent.
+      - Relaxed output was normalized from 1254 square to the required 1024 canvas.
+    decision: User explicitly selected candidate family A.
+  - candidate_id: V13-03-r01-b
+    asset_id: V13-03
+    revision: r01
+    status: superseded
+    user_selected: false
+    source_paths:
+      - >-
+        source/candidates/v13-03/r01/akari-v1.3_v13-03a_everyday_r01-b.png
+      - >-
+        source/candidates/v13-03/r01/akari-v1.3_v13-03b_bright-smile_r01-b.png
+    promoted_paths: []
+    source_sha256:
+      - c91658a17cac4d16182ce95803ec086a0914d0b690e5c17f1cfc8c224e5480bd
+      - 71ac2030300ea40c56c95750aa06309add06861b672a44e38664ffb580a564b5
+    promoted_sha256: []
+    overall_verdict: pass
+    gate_verdicts:
+      identity: pass
+      ornament: pass
+      expression: pass
+      rendering: pass
+      pair-consistency: pass
+    findings:
+      - Relaxed member is quieter and closer to a neutral everyday expression.
+      - Large amber eyes remain attentive without sadness or sultry drift.
+      - Face, airy bob, and complete image-right ornament retain v1.3 identity.
+      - Framing, pose, clothing, light, and background remain visually consistent.
+      - Relaxed output was normalized from 1254 square to the required 1024 canvas.
+    decision: Eligible but superseded after the user selected candidate family A.
+  - candidate_id: V13-04-r01-a
+    asset_id: V13-04
+    revision: r01
+    status: accepted
+    user_selected: true
+    source_paths:
+      - >-
+        source/candidates/v13-04/r01/akari-v1.3_v13-04a_outdoor_r01-a.png
+      - >-
+        source/candidates/v13-04/r01/akari-v1.3_v13-04b_roomwear_r01-a.png
+    promoted_paths:
+      - >-
+        accepted/base/wardrobe/akari-v1.3_v13-04a_outdoor_r01.png
+      - >-
+        accepted/base/wardrobe/akari-v1.3_v13-04b_roomwear_r01.png
+    source_sha256:
+      - ab9a9e8517f11b3942b69c4a0ae30b920422b4172355afd8fc5f27c01e99e92e
+      - 0f8ca9df4c617dfcb30ba6f23d4b01647d00c4a9216ef57f335109daac7a3ee3
+    promoted_sha256:
+      - ab9a9e8517f11b3942b69c4a0ae30b920422b4172355afd8fc5f27c01e99e92e
+      - 0f8ca9df4c617dfcb30ba6f23d4b01647d00c4a9216ef57f335109daac7a3ee3
+    overall_verdict: pass
+    gate_verdicts:
+      identity: pass
+      ornament: pass
+      body: pass
+      wardrobe: pass
+      rendering: pass
+      pair-consistency: pass
+    findings:
+      - Face roundness, amber eyes, and open smile are closest to V13-02.
+      - Airy bob and one complete image-right ornament retain v1.3 identity.
+      - Healthy legs, complete hands, and grounded matching shoes are readable.
+      - All four outdoor garment facts are clear and correctly rendered.
+      - Outdoor garment balance and coherent pastel rendering are strongest.
+      - Roomwear member is an exact byte-copy of accepted V13-02.
+    decision: User explicitly selected candidate family A.
+  - candidate_id: V13-04-r01-b
+    asset_id: V13-04
+    revision: r01
+    status: superseded
+    user_selected: false
+    source_paths:
+      - >-
+        source/candidates/v13-04/r01/akari-v1.3_v13-04a_outdoor_r01-b.png
+      - >-
+        source/candidates/v13-04/r01/akari-v1.3_v13-04b_roomwear_r01-b.png
+    promoted_paths: []
+    source_sha256:
+      - 6d5786965907b6a98f2b33a84479a9fc9407196de6e10af042e522c5aef9996b
+      - 0f8ca9df4c617dfcb30ba6f23d4b01647d00c4a9216ef57f335109daac7a3ee3
+    promoted_sha256: []
+    overall_verdict: pass
+    gate_verdicts:
+      identity: pass
+      ornament: pass
+      body: pass
+      wardrobe: pass
+      rendering: pass
+      pair-consistency: pass
+    findings:
+      - Young-adult face, amber eyes, smile, and v1.3 identity remain clear.
+      - Airy bob and one complete image-right ornament pass.
+      - Healthy legs, complete hands, and grounded matching shoes are readable.
+      - All four wardrobe facts pass with a broader and longer hoodie silhouette.
+      - The longer hoodie makes the gray skirt slightly less prominent than A.
+      - Roomwear member is an exact byte-copy of accepted V13-02.
+    decision: Eligible but superseded after the user selected candidate family A.
+base_identity_lock:
+  status: accepted
+  v13_01_revision: r01
+  v13_02_revision: r01
+  same_person_verdict: pass
+  user_confirmed: true

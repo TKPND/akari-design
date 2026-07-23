@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "palette_version": "akari-v1.1-d65-srgb-1",
+  "review_target": "D65/6500K sRGB document consistency",
+  "review_status": "initial_palette_ready_for_page_preview_review",
+  "review_notes": [
+    "Palette values are canonical document targets, not claims of embedded ICC data in the original PNGs.",
+    "Flat swatches must render exactly in the PDF preview.",
+    "Illustrated shaded regions are judged by hue family, lightness range, and visual review."
+  ]
+}

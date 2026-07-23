@@ -1,0 +1,65 @@
+schema_version: 1
+request_id: akari-v1.2-c02-r01
+asset_id: C02
+revision: r01
+variation_axis: generation_attempt
+references:
+  - role: accepted_c01_stance
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c01_front-natural-stance_r01.png
+  - role: primary_back_identity
+    path: akari-v1.2/references/v1.1/back.webp
+  - role: hairpin_side_identity
+    path: akari-v1.2/references/v1.1/hairpin-side-45.webp
+  - role: non_hairpin_side_identity
+    path: akari-v1.2/references/v1.1/non-hairpin-side-45.webp
+  - role: shoe_construction
+    path: akari-v1.2/references/v1.1/shoes.webp
+shared_prompt: >-
+  Use the five visible images in their declared roles as strict references for
+  the accepted C01 stance and framing, v1.1 rear hair and outfit construction,
+  character-left hair accessories, opposite bob silhouette, and rear sneaker
+  construction. Treat accepted C01 as the primary rendering anchor and preserve
+  its rendering treatment as well as its stance and framing. Create one
+  standalone exact rear-facing full-body reference image of the same 25-year-old
+  Akari and the same physical stance as accepted C01 on a 1024 x 1536 plain
+  low-contrast portrait canvas. Match C01's compact
+  proportions, body width, and landmark heights. Keep the head-top and sole
+  landmarks within 2% of the canvas height, and keep the shoulder, visual-waist,
+  and knee landmarks within 3% of the canvas height. Preserve sturdy healthy
+  legs, nearly even loading, unlocked knees, relaxed shoulders, soft elbows,
+  nearly level pelvis, and neutral lumbar curve. Preserve the rounded
+  warm-brown rear bob and show the parallel pins and small pale-blue ribbon on
+  character-left, image-left in the rear view, visible but understated.
+  Preserve the white hoodie without excess back inflation, gray pleated skirt
+  at C01 length, two-line socks, and
+  white chunky sneakers with believable non-mirrored left and right rear
+  construction. Keep complete hair and shoes in frame with breathing room.
+  No head turn, three-quarter rotation, props, logos, readable text, watermark,
+  collage, grid, split screen, multi-panel, or contact sheet. Avoid thin legs,
+  elongated proportions, locked knees, twisted ankles, strong hip shift,
+  fashion-model pose, mirrored shoes, wrong-side or missing accessories, age
+  drift, dramatic lighting, and photorealistic skin. Do not amplify C01's
+  recorded mild character-left knee-to-foot inward direction.
+candidates:
+  - variant: a
+    title: independent-attempt-a
+    target_path: source/candidates/c02/r01/akari-v1.2_c02_back-natural-stance_r01-a.png
+  - variant: b
+    title: independent-attempt-b
+    target_path: source/candidates/c02/r01/akari-v1.2_c02_back-natural-stance_r01-b.png
+  - variant: c
+    title: independent-attempt-c
+    target_path: source/candidates/c02/r01/akari-v1.2_c02_back-natural-stance_r01-c.png
+comparison_anchors:
+  - accepted/core/standing/akari-v1.2_c01_front-natural-stance_r01.png
+acceptance_gates: [identity, body, rendering]
+hard_rejects:
+  - wrong rear view or head turn
+  - identity or age drift
+  - elongated proportions or thin legs
+  - locked knees or twisted anatomy
+  - wrong-side or missing hair accessories
+  - overinflated hoodie back
+  - mirrored shoes
+  - incomplete full-body crop
+  - readable text, logo, or watermark

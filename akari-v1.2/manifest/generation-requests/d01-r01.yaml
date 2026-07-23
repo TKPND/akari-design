@@ -1,0 +1,92 @@
+schema_version: 1
+request_id: akari-v1.2-d01-r01
+asset_id: D01
+revision: r01
+variation_axis: independent_scene_attempt
+references:
+  - role: accepted_c04_floor_sitting_body
+    path: akari-v1.2/accepted/core/sitting/akari-v1.2_c04_floor-sitting_r01.png
+  - role: accepted_c05_morning_hair
+    path: akari-v1.2/accepted/core/face-hair/akari-v1.2_c05_morning-bedhair_r01.png
+  - role: accepted_c06_sleepy_secure_expression
+    path: akari-v1.2/accepted/core/face-hair/akari-v1.2_c06-2_sleepy-secure_r01.png
+  - role: accepted_c07_seated_sock_feet
+    path: akari-v1.2/accepted/core/indoor-feet/akari-v1.2_c07_indoor-socks-seated_r01.png
+shared_prompt: >-
+  Use the four visible accepted images only in their declared roles to create
+  one standalone morning-bedside illustration of the same naturally cute
+  25-year-old Akari. Image 1 controls the C04 floor-sitting mechanical family:
+  visible pelvis support, slight posterior tilt, coordinated back rounding,
+  dropped shoulders, one believable supporting hand, healthy leg volume, and
+  traceable front and rear legs. Image 2 controls adult identity, reversible
+  C05 morning hair, complete character-left pale-blue crossed pins and
+  ribbon-like ornament, cheek shape, short-bob length, palette, and rendering;
+  do not copy its chest-up crop or hoodie. Image 3 controls only the C06-2
+  sleepy-secure expression: heavy but open eyelids, incomplete viewer-directed
+  focus, relaxed brows and cheeks, and a quiet closed almost-neutral mouth.
+  Image 4 controls C07 seated warm-white mid-calf socks with exactly two thin
+  pale-blue stripes, ankle and foot volume, relaxed toes, heel placement, and
+  floor contact; do not copy its hoodie, skirt, or upper-body crop. Seat Akari
+  on a low-contrast rug beside a restrained bed edge with slightly rumpled
+  bedding. Use a front-biased light three-quarter camera at natural seated
+  viewing height and soft morning natural light filtered through an implied or
+  lightly shown curtain. Dress her in a loose opaque white short-sleeve T-shirt
+  and simple opaque gray shorts-style roomwear. Keep the complete head,
+  ornament, both hands, both legs, heels, and socked toes visible. Keep the room
+  lived-in at medium density but add no clock, phone, mug, readable book, or
+  explanatory prop. The moment must feel just after waking rather than a posed
+  portrait. When references conflict, C04 controls body mechanics and support,
+  C05 controls morning hair and ornament, C06-2 controls facial state, and C07
+  seated controls socks, ankles, feet, and contact. Do not copy any reference
+  background, crop, disallowed outfit, or non-controlling expression.
+scene_contract:
+  camera: front-biased-light-three-quarter-at-natural-seated-viewing-height
+  surface: low-contrast-rug-beside-restrained-bed-edge
+  lighting: soft-curtain-filtered-morning-natural-light
+  room_density: medium-lived-in-not-cluttered
+  gaze: viewer-directed-with-incomplete-sleepy-focus
+  outfit:
+    top: loose-opaque-white-short-sleeve-t-shirt
+    bottom: simple-opaque-gray-shorts-style-roomwear
+    socks: warm-white-mid-calf-exactly-two-thin-pale-blue-stripes
+  required_visible_features:
+    - complete-head-and-ornament
+    - both-hands-including-one-believable-supporting-hand
+    - pelvis-support-and-both-thigh-roots
+    - both-knees-shins-ankles-heels-and-socked-toes
+  forbidden_props: [clock, phone, mug, readable-book, explanatory-prop]
+production_requirements:
+  file_format: png
+  target_canvas: {width: 1024, height: 1536}
+  accepted_width: {minimum: 1020, maximum: 1028}
+  accepted_height: {minimum: 1532, maximum: 1540}
+  standalone_composition: true
+  generated_grid: forbidden
+  force_exact_resize: forbidden
+candidate_policy:
+  initial_variants: [a, b]
+  optional_variant: c
+  optional_c_only_for: d01-scene-staging-background-lighting-or-presentation
+  stop_for_shared_core_failure: [C04, C05, C06, C07]
+  cross_candidate_references: forbidden
+candidates:
+  - variant: a
+    title: independent-scene-a
+    target_path: source/candidates/d01/r01/akari-v1.2_d01_morning-bedside_r01-a.png
+  - variant: b
+    title: independent-scene-b
+    target_path: source/candidates/d01/r01/akari-v1.2_d01_morning-bedside_r01-b.png
+comparison_anchors: []
+acceptance_gates: [identity, body, state, rendering, production]
+hard_rejects:
+  - severe identity age face body-volume or rendering drift
+  - fused missing duplicated disconnected or untraceable limbs or joints
+  - floating pelvis or hand support that contradicts body weight
+  - thin legs twisted ankles pointed ballet toes or contradictory foot contact
+  - missing mirrored relocated duplicated or materially redesigned ornament
+  - non-reversible hair wrong hair length extreme bed head wet hair or wind
+  - closed eyes distress intoxication sensual posing broad smile or open mouth
+  - wrong outfit sheer clothing exposed underwear shoes slippers or bare feet
+  - incorrect sock height stripe count ankle volume toe relaxation or contact
+  - crop or scale that prevents complete body support or feet review
+  - readable text logo watermark border collage grid or multiple character

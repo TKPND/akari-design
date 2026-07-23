@@ -1,0 +1,132 @@
+schema_version: 1
+request_id: akari-v1.2-d13-r02
+asset_id: D13
+revision: r02
+variation_axis: independent_scene_attempt
+references:
+  - role: accepted_d12_recent_identity_outfit_action
+    path: akari-v1.2/accepted/daily/life/akari-v1.2_d12_life-fridge-open_r01.png
+  - role: accepted_d04_compact_room_route
+    path: akari-v1.2/accepted/daily/morning/akari-v1.2_d04_morning-drink-fetch_r02.png
+  - role: accepted_c03_hairpin_three_quarter
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c03_hairpin-side-45_r02.png
+  - role: accepted_c01_standing_body
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c01_front-natural-stance_r01.png
+  - role: accepted_c07_standing_sock_feet
+    path: akari-v1.2/accepted/core/indoor-feet/akari-v1.2_c07_indoor-socks-standing_r01.png
+shared_prompt: >-
+  Use the five visible accepted images only in their declared roles to create a
+  fresh standalone Daily Wave 3 scene of the same naturally cute 25-year-old
+  adult Akari searching a shallow desk drawer for her charger. Image 1 controls
+  recent adult identity, healthy body volume, normal short bob, complete
+  character-left ornament, oversized opaque white hoodie, opaque gray pleated
+  skirt, striped socks, upright household action, and restrained daylight
+  rendering; do not copy its refrigerator. Image 2 controls only compact-room
+  scale; do not copy its alternate outfit, drink, plant, bed, or kitchen.
+  Image 3 controls three-quarter identity and the complete character-left
+  pale-blue crossed pins and ribbon-like ornament. Image 4 controls adult
+  standing ribcage, pelvis, and bilateral leg proportions. Image 5 controls
+  warm-white mid-calf socks with exactly two thin pale-blue stripes, healthy
+  ankles and feet, flat heels, relaxed toes, and believable knit shape. Do not
+  copy shoes, smiles, white backdrops, or any forbidden prop from a reference.
+
+  Use a vertical 1024 by 1536 portrait composition and a gently elevated
+  front-right three-quarter camera. Place one compact plain light-wood desk at
+  image-left and Akari at image-right. Show exactly one waist-height shallow
+  drawer open about one forearm length toward the camera. Screen coordinates
+  are literal and override anatomical handedness: the screen-right hand grips
+  the drawer front beside its centered handle, while the screen-left hand
+  hovers open directly above the visible drawer contents. Do not reinterpret
+  screen-right or screen-left from Akari's point of view. Both hands show five
+  natural fingers and neutral wrists. Neither hand holds, touches, or lifts a
+  charger, cable, notebook, or found item. The drawer never crosses her torso
+  or hides her skirt, either leg, or either foot.
+
+  Keep her torso upright with only a small natural hip lean toward the drawer,
+  pelvis stable, shoulders relaxed, and neck neutral. Show her complete
+  ornament and crown through both socked heels and toes. Put both socked feet
+  fully flat in a small natural stagger, with each leg independently traceable
+  through hip, knee, shin, ankle, heel, and toe. Direct both open eyes into the
+  drawer with relaxed brows and a small closed mildly puzzled but calm mouth.
+  This is practical non-sensual character documentation, not posing, viewer
+  performance, a pin-up, or a product advertisement.
+
+  Include exactly two Humanization details: push the screen-left hovering-arm
+  hoodie cuff up by about one thumb width, and place one small plain drawer
+  organizer slightly askew. Inside the organizer show exactly one small blank
+  warm-white charger adapter, one short loosely coiled pale-blue charging cable
+  with two ordinary ends, and one closed blank gray notebook, all below the rim
+  and fully supported. Allow only the desk, one open drawer, one organizer, its
+  three contents, neutral floor and wall, and one partial plain chair back
+  tucked under the far side. Do not show phone, laptop, tablet, screen, outlet,
+  plugged cable, extra cable, power strip, loose electronics, readable labels,
+  held item, drink, food, towel, basket, laundry, bag, clock, mirror, bed, sofa,
+  refrigerator, footwear, text, logo, or explanatory prop. There is no second
+  action. Never create closed eyes, open mouth, viewer focus, missing or wrong
+  ornament, wrong hair or outfit, underwear, bare feet, wrong stripes, cropped
+  anatomy, malformed hands, broken joints, hidden or fused legs, one hidden
+  foot, floating or duplicated props, impossible drawer or cable geometry,
+  watermark, border, collage, grid, multiple characters, or severe identity,
+  adult-age, anatomy, continuity, or rendering drift.
+scene_contract:
+  camera: gently-elevated-front-right-three-quarter-portrait-full-body
+  location: compact-plain-room-with-light-wood-desk
+  support: upright-standing-with-bilateral-flat-floor-foot-contact
+  action: screen-right-hand-open-drawer-screen-left-hand-hover-search
+  continuity: recent-standard-outfit-normal-hair-and-restrained-daylight-rendering
+  lighting: soft-diffused-neutral-daytime-light
+  gaze: both-open-eyes-down-into-shallow-drawer
+  pose: small-forward-hip-lean-with-independent-natural-staggered-legs
+  humanization:
+    - screen-left-hovering-arm-hoodie-cuff-pushed-up-one-thumb-width
+    - small-plain-drawer-organizer-slightly-askew
+  outfit:
+    top: oversized-opaque-white-hoodie
+    bottom: opaque-gray-pleated-skirt
+    socks: warm-white-mid-calf-exactly-two-thin-pale-blue-stripes
+  required_visible_features:
+    - complete-head-character-left-ornament-and-both-open-eyes
+    - screen-right-five-finger-hand-gripping-drawer-front
+    - screen-left-five-finger-hand-hovering-over-contents
+    - stable-ribcage-pelvis-and-upright-floor-support
+    - separately-traceable-bilateral-thigh-knee-shin-lines
+    - both-flat-striped-socks-ankles-heels-and-relaxed-toes
+    - one-coherent-desk-drawer-organizer-adapter-cable-and-notebook
+  forbidden_props: [phone, laptop, tablet, screen, outlet, plugged-cable, extra-cable, power-strip, loose-electronics, readable-labels, held-item, drink, food, towel, basket, laundry, bag, clock, mirror, bed, sofa, refrigerator, footwear, explanatory-prop]
+production_requirements:
+  file_format: png
+  target_canvas: {width: 1024, height: 1536}
+  accepted_width: {minimum: 1020, maximum: 1028}
+  accepted_height: {minimum: 1532, maximum: 1540}
+  standalone_composition: true
+  generated_grid: forbidden
+  force_exact_resize: forbidden
+candidate_policy:
+  initial_variants: [a, b]
+  optional_variant: c
+  optional_c_only_for: d13-r02-scene-or-distinct-independent-candidate-local-major-failures
+  stop_for_shared_failure: [D12, D04, C03, C01, C07]
+  cross_candidate_references: forbidden
+candidates:
+  - variant: a
+    title: independent-scene-a
+    target_path: source/candidates/d13/r02/akari-v1.2_d13_life-charger-search_r02-a.png
+  - variant: b
+    title: independent-scene-b
+    target_path: source/candidates/d13/r02/akari-v1.2_d13_life-charger-search_r02-b.png
+comparison_anchors: []
+acceptance_gates: [identity, body, state, continuity, rendering, production]
+hard_rejects:
+  - severe identity adult-age face body-volume continuity or rendering drift
+  - fused missing duplicated disconnected hidden or untraceable limbs or joints
+  - floating weight broken floor pelvis leg foot hand drawer desk organizer adapter cable or notebook support or contradictory contact
+  - missing mirrored relocated duplicated or materially redesigned ornament
+  - wrong hair length extreme bed head wet hair or wind
+  - closed eyes tears distress sadness pain injury illness intoxication sleep collapse dissociation sensual fetish glamour viewer focus broad smile or open mouth
+  - wrong outfit exposed underwear removed sock bare feet incorrect sock height or stripes
+  - malformed extra or fused fingers broken wrist hidden hand disconnected arm or impossible handle grip
+  - fused crossed hidden or untraceable legs one hidden foot broken knee or ankle tiptoe pointed foot or missing heel or toe
+  - impossible duplicated floating body-obscuring or unsupported drawer desk organizer adapter cable notebook handle or rail
+  - phone laptop tablet screen outlet plugged cable extra cable power strip loose electronics readable labels held item drink food towel basket laundry bag clock mirror bed sofa refrigerator footwear or explanatory prop
+  - crop or scale preventing complete head ornament hand drawer desk torso pelvis knee shin sock heel toe or floor-contact review
+  - readable text logo watermark border collage grid or multiple character

@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "review_id": "akari-v1.2-turnaround-front-20260713-r1",
+  "review_path": "evidence/v1-2-turnaround/reviews/front-review.json",
+  "stage": "front",
+  "slots": [
+    "front"
+  ],
+  "request_batches": {
+    "front": "batch:v1-2-turnaround:20260713:front:r1"
+  },
+  "user_decision": "approved",
+  "user_selection": {
+    "decision_text": "C1 (Recommended)",
+    "selected_candidate": 1
+  },
+  "candidates": [
+    {
+      "request_id": "request:v1-2-turnaround:20260713:front:r1:c1",
+      "slot": "front",
+      "candidate_path": "source/generated/v1-2-turnaround/20260713_front_r1_c1.png",
+      "state": "accept",
+      "gates": {
+        "identity": "pass",
+        "geometry": "pass",
+        "outfit": "pass",
+        "quality": "pass"
+      },
+      "landmark_y_px": {
+        "crown": 39,
+        "chin": 263,
+        "shoulder": 350,
+        "hoodie_hem": 760,
+        "skirt_hem": 842,
+        "knee": 1010,
+        "ankle": 1328,
+        "sole": 1482
+      },
+      "normalized_landmarks": {
+        "crown": 0.0,
+        "chin": 0.155232,
+        "shoulder": 0.215523,
+        "hoodie_hem": 0.499653,
+        "skirt_hem": 0.55648,
+        "knee": 0.672904,
+        "ankle": 0.893278,
+        "sole": 1.0
+      },
+      "review_findings": {
+        "identity_preservation": 5,
+        "face_hairpin_consistency": 5,
+        "anatomy_and_composition": 5,
+        "artifact_regression": 5,
+        "red_flags": []
+      },
+      "notes": "User-selected C1 most closely preserves the accepted warm-amber face and bob, the upper crossed pins plus lower ribbon-like loop and two trailing strands, healthy thigh-to-calf volume, centered neutral stance, full hoodie and skirt construction, two sock stripes, and the intended chunky sneaker mass. Hands, legs, clothing edges, crop, and plain background are clean.",
+      "rejection_reason": ""
+    },
+    {
+      "request_id": "request:v1-2-turnaround:20260713:front:r1:c2",
+      "slot": "front",
+      "candidate_path": "source/generated/v1-2-turnaround/20260713_front_r1_c2.png",
+      "state": "hold",
+      "gates": {
+        "identity": "pass",
+        "geometry": "hold",
+        "outfit": "pass",
+        "quality": "pass"
+      },
+      "notes": "Keep only as a fallback: the identity and outfit are coherent, but the figure sits smaller in the frame, the legs read more slender, and the sneakers have less of the locked chunky sole mass. A retry would enlarge the full-body framing and restore C1-like leg and footwear volume.",
+      "rejection_reason": ""
+    },
+    {
+      "request_id": "request:v1-2-turnaround:20260713:front:r1:c3",
+      "slot": "front",
+      "candidate_path": "source/generated/v1-2-turnaround/20260713_front_r1_c3.png",
+      "state": "hold",
+      "gates": {
+        "identity": "pass",
+        "geometry": "hold",
+        "outfit": "pass",
+        "quality": "pass"
+      },
+      "notes": "Keep only as a secondary fallback: the centered construction is clean and the two-part ornament is readable, but the lower legs and shoes are narrower and less substantial than C1. A retry would preserve its clean hoodie while matching C1's ankle and sneaker mass.",
+      "rejection_reason": ""
+    }
+  ]
+}

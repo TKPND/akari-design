@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "collection_id": "akari-v1.2-overhead-room-portraits",
+  "prompt_template_version": "akari_v1_2_overhead_room_v1",
+  "active_batches": {
+    "supine-direct-gaze": "batch:v1-2-overhead-room:20260713:supine-direct-gaze:r1"
+  },
+  "requests": [
+    {
+      "id": "request:v1-2-overhead-room:20260713:supine-direct-gaze:r1:c1",
+      "batch_id": "batch:v1-2-overhead-room:20260713:supine-direct-gaze:r1",
+      "pose": "supine-direct-gaze",
+      "pose_order": 1,
+      "framing": "full",
+      "angle_degrees": [
+        80,
+        90
+      ],
+      "outfit": "oversized-hoodie-shorts",
+      "feet": "striped-socks",
+      "background": "ivory-rug",
+      "prop_count": 1,
+      "revision": 1,
+      "candidate_number": 1,
+      "variation": "body nearly vertical with one hand over chest",
+      "reference_roles": [
+        {
+          "role": "identity_face",
+          "path": "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+          "sha256": "e130b7e00d98d02fc05f139ddc3b01f206e7eabf61987e4ad385ed7870fadb66"
+        },
+        {
+          "role": "body_front",
+          "path": "source/finished/v1-2-turnaround/front.webp",
+          "sha256": "7b17fb7169c67376a41a8bdfff4ab7d50d90ec8bf113ab1c50aba85511c92423"
+        },
+        {
+          "role": "ornament_three_quarter",
+          "path": "source/finished/v1-2-turnaround/character-left-front-three-quarter.webp",
+          "sha256": "425a865eeef4fded914be9ca8dab089457448711b4701a339e5cda903980a412"
+        },
+        {
+          "role": "pose_structure",
+          "path": "source/finished/v1-2-motion/seated.webp",
+          "sha256": "ecad0f6a76bcd81a4bfb7607c5bf4dd8d791d4e14aea048eeedb974ec0342b66"
+        },
+        {
+          "role": "composition_mood_only",
+          "path": "source/references/v1-2-overhead-room/overhead-composition-sample.webp",
+          "sha256": "6173fcc0ef7c36904e70418c30f2eee5533f4219335aacc6dd4023469b8da724"
+        }
+      ],
+      "source_pack_sha256": "3eddd3d0454a4bc481eb940d468a047f72d1e37184ea3decc3bd33a356369417",
+      "target_path": "source/generated/v1-2-overhead-room/20260713_supine-direct-gaze_r1_c1.png",
+      "prompt_template_version": "akari_v1_2_overhead_room_v1",
+      "prompt": "Create one finished Akari v1.2 supine-direct-gaze portrait.\nIdentity lock: depict the accepted adult 25-year-old Akari v1.2 identity with warm amber eyes, a warm-brown short bob, and the complete two-part pale-blue hair ornament on character-left.\nReference rule: formal face, turnaround, and motion images control identity, age, anatomy, hair, and construction. The composition sample is not an identity or wardrobe source.\nCanvas and camera lock: 1024x1536 RGB portrait, directly overhead at 80 to 90 degrees, full framing.\nWardrobe lock: oversized-hoodie-shorts, feet treatment striped-socks. The shorts must remain visibly constructed and must not read as underwear.\nRoom lock: ivory-rug, exactly 1 or fewer simple secondary props, person occupying roughly 60 to 80 percent of the composition.\nPalette and intimacy lock: white, ivory, pale blue, soft gray, and warm brown; intimacy comes from gaze, expression, and hand distance, not sexualized exposure or body emphasis.\nNo readable text, numbers, clock display, logos, branding, packaging copy, watermark, border, panel layout, extra limbs, or other characters.\nCandidate variation: body nearly vertical with one hand over chest.\nLie naturally on the back and return a calm direct gaze. Keep the complete figure readable from hair to socks, with hands close to the torso and no suggestive emphasis.",
+      "acceptance_gates": [
+        "Identity matches the accepted Akari v1.2 face and hair references.",
+        "The adult 25-year-old age impression remains consistent.",
+        "The requested overhead angle reads clearly.",
+        "Face, hands, feet, and body connections are anatomically coherent.",
+        "The two-part pale-blue ornament remains on character-left.",
+        "The requested roomwear, shorts, and feet treatment are constructed clearly.",
+        "Intimacy comes from gaze, expression, and hand distance while staying healthy.",
+        "The person remains dominant and the background stays restrained.",
+        "No readable text, logos, watermarks, extra digits, or generated artifacts appear.",
+        "The image has a distinct and useful role in the ten-work collection."
+      ],
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare both candidates on one pose contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-overhead-room:20260713:supine-direct-gaze:r1:c2",
+      "batch_id": "batch:v1-2-overhead-room:20260713:supine-direct-gaze:r1",
+      "pose": "supine-direct-gaze",
+      "pose_order": 1,
+      "framing": "full",
+      "angle_degrees": [
+        80,
+        90
+      ],
+      "outfit": "oversized-hoodie-shorts",
+      "feet": "striped-socks",
+      "background": "ivory-rug",
+      "prop_count": 1,
+      "revision": 1,
+      "candidate_number": 2,
+      "variation": "body on a slight diagonal with both hands relaxed near torso",
+      "reference_roles": [
+        {
+          "role": "identity_face",
+          "path": "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+          "sha256": "e130b7e00d98d02fc05f139ddc3b01f206e7eabf61987e4ad385ed7870fadb66"
+        },
+        {
+          "role": "body_front",
+          "path": "source/finished/v1-2-turnaround/front.webp",
+          "sha256": "7b17fb7169c67376a41a8bdfff4ab7d50d90ec8bf113ab1c50aba85511c92423"
+        },
+        {
+          "role": "ornament_three_quarter",
+          "path": "source/finished/v1-2-turnaround/character-left-front-three-quarter.webp",
+          "sha256": "425a865eeef4fded914be9ca8dab089457448711b4701a339e5cda903980a412"
+        },
+        {
+          "role": "pose_structure",
+          "path": "source/finished/v1-2-motion/seated.webp",
+          "sha256": "ecad0f6a76bcd81a4bfb7607c5bf4dd8d791d4e14aea048eeedb974ec0342b66"
+        },
+        {
+          "role": "composition_mood_only",
+          "path": "source/references/v1-2-overhead-room/overhead-composition-sample.webp",
+          "sha256": "6173fcc0ef7c36904e70418c30f2eee5533f4219335aacc6dd4023469b8da724"
+        }
+      ],
+      "source_pack_sha256": "3eddd3d0454a4bc481eb940d468a047f72d1e37184ea3decc3bd33a356369417",
+      "target_path": "source/generated/v1-2-overhead-room/20260713_supine-direct-gaze_r1_c2.png",
+      "prompt_template_version": "akari_v1_2_overhead_room_v1",
+      "prompt": "Create one finished Akari v1.2 supine-direct-gaze portrait.\nIdentity lock: depict the accepted adult 25-year-old Akari v1.2 identity with warm amber eyes, a warm-brown short bob, and the complete two-part pale-blue hair ornament on character-left.\nReference rule: formal face, turnaround, and motion images control identity, age, anatomy, hair, and construction. The composition sample is not an identity or wardrobe source.\nCanvas and camera lock: 1024x1536 RGB portrait, directly overhead at 80 to 90 degrees, full framing.\nWardrobe lock: oversized-hoodie-shorts, feet treatment striped-socks. The shorts must remain visibly constructed and must not read as underwear.\nRoom lock: ivory-rug, exactly 1 or fewer simple secondary props, person occupying roughly 60 to 80 percent of the composition.\nPalette and intimacy lock: white, ivory, pale blue, soft gray, and warm brown; intimacy comes from gaze, expression, and hand distance, not sexualized exposure or body emphasis.\nNo readable text, numbers, clock display, logos, branding, packaging copy, watermark, border, panel layout, extra limbs, or other characters.\nCandidate variation: body on a slight diagonal with both hands relaxed near torso.\nLie naturally on the back and return a calm direct gaze. Keep the complete figure readable from hair to socks, with hands close to the torso and no suggestive emphasis.",
+      "acceptance_gates": [
+        "Identity matches the accepted Akari v1.2 face and hair references.",
+        "The adult 25-year-old age impression remains consistent.",
+        "The requested overhead angle reads clearly.",
+        "Face, hands, feet, and body connections are anatomically coherent.",
+        "The two-part pale-blue ornament remains on character-left.",
+        "The requested roomwear, shorts, and feet treatment are constructed clearly.",
+        "Intimacy comes from gaze, expression, and hand distance while staying healthy.",
+        "The person remains dominant and the background stays restrained.",
+        "No readable text, logos, watermarks, extra digits, or generated artifacts appear.",
+        "The image has a distinct and useful role in the ten-work collection."
+      ],
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare both candidates on one pose contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    }
+  ]
+}

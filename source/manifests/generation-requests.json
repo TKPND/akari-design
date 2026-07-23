@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "requests": [
+    {
+      "id": "cover-key-visual-16x9",
+      "status": "accepted",
+      "target_page": 1,
+      "aspect_ratio": "16:9",
+      "prompt": "Akari v1.1 character reference key visual, full body, white oversized hoodie with drawstrings and kangaroo pocket, gray pleated skirt, white crew socks with two pale blue stripes, chunky white sneakers with pale blue accents, short brown bob hair, warm brown eyes, small gentle mouth, subtle cheek blush, thin pale blue hair pins on character-left side, clean sRGB D65 neutral lighting, transparent or non-white plain background, no text, no logos, no extra accessories, polished anime reference art.",
+      "acceptance": "Must pass identity checklist, hair ornament side check, and D65 palette visual check before asset-manifest status can become accepted."
+    },
+    {
+      "id": "hair-face-detail-board",
+      "status": "accepted",
+      "target_page": 7,
+      "aspect_ratio": "16:9",
+      "prompt": "Akari v1.1 hair and face detail reference board, close-up views of bangs, side hair volume, back hair volume, warm brown eyes, subtle blush, small mouth shapes, short brown bob around jaw and neck, thin pale blue pins on character-left side, clean D65 sRGB neutral lighting, no text, no labels, no logos, transparent or non-white plain background.",
+      "acceptance": "Must preserve expression-sheet face identity and hair ornament orientation."
+    },
+    {
+      "id": "body-proportion-lock",
+      "status": "accepted",
+      "target_page": 3,
+      "aspect_ratio": "2:3",
+      "prompt": "Akari v1.1 front-view body proportion draft, selected option B from four generated candidates, short warm-brown bob hair, warm brown eyes, thin pale blue crossed hair pins on character-left side, loose plain white T-shirt, gray athletic shorts, white crew socks with two pale aqua stripes, white and pale-blue sneakers, sturdy healthy youthful legs with fuller thighs and softly defined calves, compact torso, neutral standing reference pose, white studio background, no text, no logos.",
+      "acceptance": "Must preserve Akari face/hair identity while locking the user-selected sturdy healthy body proportion with stable thigh and calf thickness."
+    },
+    {
+      "id": "hoodie-front-proportion-corrected",
+      "status": "accepted",
+      "target_page": 3,
+      "aspect_ratio": "2:3",
+      "prompt": "Akari v1.1 corrected hoodie and skirt front reference, preserve the official oversized white hoodie, gray pleated skirt, short warm-brown bob hair, warm brown eyes, thin pale-blue crossed hair pins on character-left side, white crew socks with two pale aqua stripes, chunky white and pale-blue sneakers, clean white studio background, front-view neutral pose, correct only the lower-body proportions visible below the skirt to match the selected sturdy healthy option B, fuller thighs and soft calves, stable left/right leg thickness, no text, no logos.",
+      "acceptance": "Must preserve the official hoodie/skirt identity while correcting the visible thighs and calves to match the selected sturdy healthy body proportion."
+    },
+    {
+      "id": "bag-on-body-scale",
+      "status": "accepted",
+      "target_page": 10,
+      "aspect_ratio": "4:5",
+      "prompt": "Akari v1.1 wearing the official mini shoulder bag for scale, same white hoodie, gray pleated skirt, white socks with two pale blue stripes, chunky white sneakers with pale blue accents, short brown bob, warm brown eyes, pale neutral mini shoulder bag with strap and small metal accents, clean D65 sRGB neutral lighting, no text, no logos, transparent or non-white plain background.",
+      "acceptance": "Bag must match bag-board scale, strap thickness, pale neutral palette, and hardware details."
+    }
+  ]
+}

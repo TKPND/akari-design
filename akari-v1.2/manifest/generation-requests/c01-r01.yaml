@@ -1,0 +1,62 @@
+schema_version: 1
+request_id: akari-v1.2-c01-r01
+asset_id: C01
+revision: r01
+variation_axis: posture_relaxation
+references:
+  - role: primary_front_identity
+    path: akari-v1.2/references/v1.1/front.webp
+  - role: hairpin_side_identity
+    path: akari-v1.2/references/v1.1/hairpin-side-45.webp
+  - role: non_hairpin_side_identity
+    path: akari-v1.2/references/v1.1/non-hairpin-side-45.webp
+  - role: shoe_construction
+    path: akari-v1.2/references/v1.1/shoes.webp
+shared_prompt: >-
+  Use the visible v1.1 images as strict identity, face, short-bob,
+  character-left pale-blue hair-accessory, body-proportion, standard-outfit,
+  and white-sneaker references for Akari. Create one standalone front-facing
+  full-body character reference image of the same 25-year-old Akari on a plain
+  low-contrast background. Preserve her warm-brown eyes, compact anime
+  proportions, sturdy healthy legs with fuller thighs and soft calves, white
+  hoodie, gray pleated skirt, two-line socks, and white chunky sneakers. Keep
+  her normal neutral expression and soft anime rendering with pale shading and
+  restrained outlines. Show believable natural joints and standing weight
+  balance. Keep complete hair and shoes in frame with breathing room. No props,
+  logos, readable text, watermark, collage, grid, split screen, multi-panel, or
+  contact sheet. Avoid thin legs, elongated proportions, fashion-model pose,
+  locked knees, twisted ankles, mirrored hair accessories, age drift, dramatic
+  lighting, and photorealistic skin.
+candidates:
+  - variant: a
+    title: conservative-relaxation
+    posture_delta: >-
+      Stay closest to the v1.1 frontal stance: nearly even loading, pelvis
+      nearly level, feet almost parallel with a slight outward angle, and only
+      small softness in knees, shoulders, and elbows.
+    target_path: source/candidates/c01/r01/akari-v1.2_c01_front-natural-stance_r01-a.png
+  - variant: b
+    title: standard-natural-form
+    posture_delta: >-
+      Use approximately even loading with visibly unlocked knees, relaxed
+      shoulders, soft elbows, neutral lumbar curve, and no staged pose.
+    target_path: source/candidates/c01/r01/akari-v1.2_c01_front-natural-stance_r01-b.png
+  - variant: c
+    title: softer-asymmetry
+    posture_delta: >-
+      Use subtle loading asymmetry no greater than 55:45 with small matching
+      shoulder and arm-height differences, while keeping the pelvis nearly
+      horizontal and avoiding a model pose.
+    target_path: source/candidates/c01/r01/akari-v1.2_c01_front-natural-stance_r01-c.png
+comparison_anchors: []
+acceptance_gates: [identity, body, rendering]
+hard_rejects:
+  - identity drift
+  - age drift
+  - elongated proportions
+  - overly thin legs
+  - locked knees
+  - twisted or disconnected ankles
+  - mirrored or missing hair accessories
+  - incomplete full-body crop
+  - readable text, logo, or watermark

@@ -1,0 +1,492 @@
+PALETTE-ANCHORED MASTER REFERENCE
+
+Akari v1.1
+
+01 / 14
+
+Reference Lock
+
+D65 / sRGB target
+14-page production reference
+Accepted generated cover candidate
+
+Accepted cover key visual
+cover-key-visual-16x9
+
+SOURCE OF TRUTH
+
+D65 Color Palette
+akari-v1.1-d65-srgb-1
+hair
+
+02 / 14
+D65 / sRGB
+
+skin
+
+eyes
+
+hoodie_white
+
+hoodie_shadow
+
+skirt_gray
+
+sock_white
+
+sock_stripe_blue
+
+sneaker_white
+
+sneaker_accent_blue
+
+bag_body
+
+bag_strap
+
+#6B4A37
+Brown bob hair base tone.
+#D9DBD8
+Hoodie folds, cuffs, pocket shadow,
+and hem shadow.
+#F4F5EF
+Chunky sneaker base.
+
+#F4CBBE
+Face, hands, and legs.
+#74777D
+Pleated skirt fabric.
+#A4DDE8
+Sneaker accent panels and detail lines.
+
+metal
+
+#B7B8B3
+Zippers, rings, and small metal
+accents.
+
+hoodie-front expression-sheet bag-board shoe-board
+
+#7B5742
+Warm brown iris color.
+#F7F8F4
+Crew sock base.
+#F1EEE4
+Mini shoulder bag body.
+
+#F5F4EE
+Hoodie base fabric.
+#9BD8E5
+Two sock stripes near the top.
+#B5A997
+Bag strap and binding.
+
+Palette Rules
+
+Named roles are the PDF source of truth
+Base / shadow / highlight ramps remain
+D65 balanced
+Audit tolerances define acceptable drift
+
+IDENTITY LOCK
+
+Character Summary + Proportion
+
+03 / 14
+
+Head / torso / leg landmarks
+Head
+
+Large anime head, short bob
+volume, eyes held warm
+brown.
+
+Torso
+
+Compact body under an
+oversized hoodie silhouette.
+
+Hands
+
+Small hands sit inside long, soft
+hoodie sleeves.
+
+Skirt
+
+Gray pleated skirt starts high
+and stays visible below the
+hem.
+
+Legs
+
+Sturdy youthful legs with fuller
+thighs, soft calves, crew socks,
+and chunky white sneakers.
+
+Proportion Notes
+
+Corrected hoodie silhouette
+hoodie-front-proportion-corrected body-proportion-lock
+
+Accepted body proportion lock
+
+Youthful anime proportion
+Sturdy healthy leg volume
+Fuller thighs with soft calves
+Short bob silhouette
+Oversized hoodie volume
+
+PRODUCTION TURNAROUND
+
+Front / Back
+
+04 / 14
+
+Shared turnaround guide lines
+Crown
+
+Match head height across
+front, back, and angled views.
+
+Shoulder Keep hoodie shoulder drop and
+sleeve width consistent.
+Hem
+
+Hoodie hem and skirt reveal
+align across the set.
+
+Sole
+
+Sneaker sole baseline stays
+level and unmirrored.
+
+Turnaround Rules
+Front view
+hoodie-front hoodie-back
+
+Back view
+
+Matched scale
+Shared guide lines
+No mirrored shortcuts
+
+SIDE AND 45 DEGREE VIEWS
+
+Angle Turnaround
+
+05 / 14
+
+Angle Notes
+
+Hairpin-side label
+Non-hairpin-side label
+Hair and hoodie volume
+
+Side view
+side-view hairpin-side-45 non-hairpin-side-45
+
+Hairpin-side 45 degree view
+
+Non-hairpin-side 45 degree view
+
+FACE / HAIR IDENTITY MASTER
+
+Expressions
+
+06 / 14
+1
+
+Neutral
+
+Laughing
+7 Pout
+
+4
+
+Open
+Smile
+5 Surprised 6 Anxious
+8 Sleepy
+9 Wink
+2
+
+Soft Smile
+
+Expression Rules
+
+Nine-expression source sheet
+expression-sheet
+
+3
+
+Keep eye shape and warm brown iris color
+consistent
+Keep short bob volume consistent across
+expressions
+Use the labels as English PDF text, not
+image-only text
+
+NO-DRIFT RULES
+
+Hair / Face Details
+
+07 / 14
+
+Accepted hair and face detail board
+
+Detail Cards
+Warm brown eyes
+
+hair-face-detail-board
+
+Short bob volume
+
+Character-left hair pins
+
+Soft cheek and mouth shapes stay
+readable
+
+LAYER AND SILHOUETTE GUIDE
+
+Outfit Rules
+
+08 / 14
+
+Outfit Rules
+
+Oversized hoodie
+Gray pleated skirt
+Base outfit construction
+Sleeves remain long and soft, with neutral
+hoodie shadows
+
+Oversized hoodie front
+hoodie-front base-front hoodie-back
+
+Base outfit construction
+
+Back hoodie volume
+
+LARGE SOCK AND FOOTWEAR SOURCE
+
+Footwear Sock Board
+
+09 / 14
+
+Footwear Rules
+Sock Height Guide
+
+Stable mid-calf height
+Stripe Placement
+Two thin pale blue stripes
+Design Notes
+Blue Gray Outsole
+Tongue Visibility
+Tongue sits slightly above sock
+line
+Toe Shape
+Rounded toe
+No logo-like marks
+Official
+footwear and sock board
+footwear-board
+
+Blue accents stay in the sock
+stripe hue family
+
+LARGE SNEAKER SOURCE
+
+Sneaker Construction
+
+10 / 14
+
+Sculpted Sole Rules
+Front View
+
+Outer Side View
+Inner Side View
+Back View
+Top View
+Sole
+White Laces
+Sculpted Sole
+Rounded toe
+Pale blue and blue-gray
+accents
+Soft chunky silhouette
+Official sneaker construction board
+shoe-board
+
+No logo-like marks
+
+LARGE ACCESSORY SOURCE
+
+Bag Detail Board
+
+11 / 14
+
+Bag Specs W 16cm H
+20cm D 5cm
+Bag Detail Board
+Portable Battery
+Color & Material
+Canvas-like ivory body
+Canvas Like Fabric
+Pale blue-gray webbing strap
+Subtle silver hardware
+Can Fit
+Small Notebook
+W 16cm x H 20cm x D 5cm
+Smartphone / A6 notebook /
+earbuds
+
+Official
+bag-boardmini shoulder bag board
+
+Adjustable Strap
+
+SCALE AND WEAR REFERENCE
+
+Bag-on-body scale
+
+12 / 14
+
+Scale Rules
+
+Bag-on-body scale
+Mini Shoulder Bag
+Compact against hoodie
+Strap Drop
+Cross Body Fit
+Bag rests at upper hip
+Scale stays compact against
+oversized hoodie
+Pale neutral body stays smaller
+than the hoodie pocket
+
+Accepted bag-on-body scale reference
+bag-on-body-scale
+
+PRODUCTION RULES
+
+Do / Don't
+Do
+
+Preserve identity
+
+Keep the
+character-left hair
+pins on the
+correct side
+
+13 / 14
+
+Don't
+Avoid side flips
+
+Avoid color drift
+
+Avoid logo-like
+marks
+
+Use D65 palette
+roles for fabric,
+hair, skin, eyes,
+shoes, and bag
+
+hoodie-front expression-sheet shoe-board bag-board
+
+Identity reference
+
+Expression reference
+
+Footwear reference
+
+Accessory reference
+
+TRACEABILITY
+
+Production Notes / Source Manifest
+
+14 / 14
+
+Document
+
+Schema Version
+
+Palette
+
+White Point
+
+Accepted Assets
+
+akari-v1.1-settings
+
+1
+
+akari-v1.1-d65-srgb-1
+
+D65
+
+15
+
+Asset ID
+hoodie-front
+base-front
+body-proportion-lock
+hoodie-front-proportion-corrected
+expression-sheet
+hoodie-back
+side-view
+hairpin-side-45
+non-hairpin-side-45
+footwear-board
+shoe-board
+bag-board
+cover-key-visual-16x9
+hair-face-detail-board
+bag-on-body-scale
+
+Review Notes
+Version
+Palette
+Accepted assets
+Review notes
+
+hoodie-front expression-sheet bag-board shoe-board
+
+Filename
+v1_1_front_1.webp
+v1_1_front_2.webp
+source/generated/akari-body-proportion-option-b.webp
+source/generated/akari-hoodie-front-proportion-corrected.webp
+v1_1_front_3.webp
+v1_1_back.webp
+v1_1_真横.webp
+v1_1_髪飾り側_45deg.webp
+v1_1_非髪飾り側45deg.webp
+v1_1_standard_foot_set.webp
+v1_1_shoes.webp
+v1_1_bag.webp
+source/generated/cover-key-visual-16x9.webp
+source/generated/hair-face-detail-board.webp
+source/generated/bag-on-body-scale.webp
+
+Role
+secondary_full_body_outfit_anchor
+base_body_outfit_anchor
+generated_accepted_asset
+generated_accepted_asset
+primary_face_hair_identity_anchor
+back_turnaround_anchor
+side_turnaround_anchor
+hairpin_side_turnaround_anchor
+non_hairpin_side_turnaround_anchor
+footwear_sock_reference_board
+sneaker_reference_board
+bag_accessory_reference_board
+generated_accepted_asset
+generated_accepted_asset
+generated_accepted_asset
+
+

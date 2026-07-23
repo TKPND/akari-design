@@ -1,0 +1,29 @@
+{
+  "image": "source/generated/tonari-no-hyoujou/20260703_brave-okay-face_v1.webp",
+  "candidate": "source/finished/tonari-no-hyoujou/20260703_brave-okay-face_v1_humanization_H03_v1.png",
+  "generated_source": "/path/to/.codex/generated_images/019f27eb-2c66-7291-8728-9c4be4c72b39/ig_00423ce7df98f3f6016a47d17474248191810ebba69ddd0f86.png",
+  "stage": "humanization",
+  "strength": "H03",
+  "decision": "accept_finish",
+  "scores": {
+    "identity_preservation": 5,
+    "face_hairpin_consistency": 5,
+    "anatomy_and_composition": 5,
+    "technical_naturalness": 4,
+    "semantic_naturalness": 4,
+    "edit_minimality": 5,
+    "artifact_regression": 5,
+    "overall_preference": 3
+  },
+  "thumbnail_robustness": "not_checked",
+  "red_flags": [],
+  "failed_gates": [],
+  "reason_codes": [
+    "blind_no_clear_preference",
+    "no_instant_red_flags",
+    "candidate_gate_clear",
+    "conservative_h03_due_full_body_footwear"
+  ],
+  "human_notes": "Blind first impression was no clear preference. No instant red flags were reported. Mapping revealed A=original and B=candidate; candidate B cleared identity, face/hairpin, anatomy/composition, and crop gates. Accepted as an extremely subtle H03 humanization pass with preserved socks and shoes.",
+  "mapping_file": "evidence/tonari-no-hyoujou/humanization/contact-sheets/blind/20260703_brave-okay-face_v1_ab_mapping.json"
+}

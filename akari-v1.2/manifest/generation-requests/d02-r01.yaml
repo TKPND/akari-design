@@ -1,0 +1,111 @@
+schema_version: 1
+request_id: akari-v1.2-d02-r01
+asset_id: D02
+revision: r01
+variation_axis: independent_scene_attempt
+references:
+  - role: accepted_d01_morning_continuity
+    path: akari-v1.2/accepted/daily-validation/akari-v1.2_d01_morning-bedside_r01.png
+  - role: accepted_c04_floor_sitting_body
+    path: akari-v1.2/accepted/core/sitting/akari-v1.2_c04_floor-sitting_r01.png
+  - role: accepted_c05_morning_hair
+    path: akari-v1.2/accepted/core/face-hair/akari-v1.2_c05_morning-bedhair_r01.png
+  - role: accepted_c06_sleepy_neutral_expression
+    path: akari-v1.2/accepted/core/face-hair/akari-v1.2_c06-1_sleepy-neutral_r01.png
+  - role: accepted_c07_seated_sock_feet
+    path: akari-v1.2/accepted/core/indoor-feet/akari-v1.2_c07_indoor-socks-seated_r01.png
+shared_prompt: >-
+  Use the five visible accepted images only in their declared roles to create
+  one standalone morning continuation of the same naturally cute 25-year-old
+  Akari. Image 1 controls only D01 bedroom, soft morning light, loose opaque
+  white short-sleeve T-shirt, simple opaque gray shorts-style roomwear, and
+  just-awake continuity; do not copy its viewer gaze, side-folded legs, crop,
+  or exact background arrangement. Image 2 controls C04 seated weight, visible
+  pelvis support, slight posterior tilt, coordinated back rounding, dropped
+  shoulders, one believable supporting hand, healthy leg volume, and traceable
+  joints; do not copy its hoodie, skirt, side-folded legs, smile, or blank
+  background. Image 3 controls adult identity, reversible C05 morning hair,
+  complete character-left pale-blue crossed pins and ribbon-like ornament,
+  cheek shape, short-bob length, palette, and rendering; do not copy its
+  chest-up crop, hoodie, or exact expression. Image 4 controls only the C06-1
+  sleepy-neutral state: heavy but open eyelids, relaxed brows and cheeks,
+  incomplete frame-left focus, and a quiet closed almost-neutral mouth; do not
+  copy its crop or hoodie. Image 5 controls C07 warm-white mid-calf socks with
+  exactly two thin pale-blue stripes, ankle and foot volume, relaxed toes, heel
+  placement, and rug contact; do not copy its hoodie, skirt, or crop. Seat
+  Akari on the frame-left window-side area of a low-contrast bedroom rug, with
+  the restrained bed edge at frame-right. Extend both legs loosely forward,
+  keep one knee slightly bent, place one hand behind or beside the pelvis as
+  support, and rest the other hand loosely on a thigh. Turn her head only
+  lightly and direct an unfocused gaze toward the frame-left window. Use soft
+  curtain-filtered morning light and a front-biased three-quarter camera at
+  natural seated viewing height, slightly wider than D01. Keep the complete
+  head, ornament, both hands, pelvis, both thigh roots, both knees, shins,
+  ankles, heels, and socked toes visible. Add exactly two Humanization
+  elements: one light natural sock slouch on the straighter extended leg and a
+  slightly uneven T-shirt hem with believable seated wrinkles. Add no phone,
+  mug, clock, readable book, food, or explanatory prop. The moment must read as
+  still not ready to move, never sadness, illness, intoxication, sensuality,
+  dissociation, or a posed portrait. When references conflict, D01 controls
+  continuity, C04 body mechanics, C05 identity and hair, C06-1 facial state,
+  and C07 socks and feet. Do not create closed eyes, viewer-directed focus, a
+  broad smile, an open mouth, thin legs, broken joints, twisted ankles, pointed
+  toes, contradictory support or contact, wrong ornament, wrong hair length,
+  wrong outfit, incorrect sock stripes, crop loss, text, logo, watermark,
+  border, collage, grid, multiple characters, or any severe identity,
+  adult-age, anatomy, or rendering drift.
+scene_contract:
+  camera: front-biased-three-quarter-natural-seated-height-wider-than-d01
+  surface: frame-left-window-side-low-contrast-bedroom-rug
+  continuity: d01-same-morning-bedroom-outfit-and-hair
+  lighting: soft-frame-left-curtain-filtered-morning-light
+  gaze: frame-left-window-directed-with-incomplete-focus
+  pose: both-legs-forward-one-knee-slightly-bent-one-supporting-hand
+  humanization:
+    - straighter-leg-sock-light-natural-slouch
+    - slightly-uneven-t-shirt-hem-with-seated-wrinkles
+  outfit:
+    top: loose-opaque-white-short-sleeve-t-shirt
+    bottom: simple-opaque-gray-shorts-style-roomwear
+    socks: warm-white-mid-calf-exactly-two-thin-pale-blue-stripes
+  required_visible_features:
+    - complete-head-and-ornament
+    - both-hands-including-one-believable-supporting-hand
+    - pelvis-support-and-both-thigh-roots
+    - both-knees-shins-ankles-heels-and-socked-toes
+  forbidden_props: [phone, mug, clock, readable-book, food, explanatory-prop]
+production_requirements:
+  file_format: png
+  target_canvas: {width: 1024, height: 1536}
+  accepted_width: {minimum: 1020, maximum: 1028}
+  accepted_height: {minimum: 1532, maximum: 1540}
+  standalone_composition: true
+  generated_grid: forbidden
+  force_exact_resize: forbidden
+candidate_policy:
+  initial_variants: [a, b]
+  optional_variant: c
+  optional_c_only_for: d02-scene-staging-background-lighting-or-presentation
+  stop_for_shared_failure: [D01, C04, C05, C06, C07]
+  cross_candidate_references: forbidden
+candidates:
+  - variant: a
+    title: independent-scene-a
+    target_path: source/candidates/d02/r01/akari-v1.2_d02_morning-rug-daze_r01-a.png
+  - variant: b
+    title: independent-scene-b
+    target_path: source/candidates/d02/r01/akari-v1.2_d02_morning-rug-daze_r01-b.png
+comparison_anchors: []
+acceptance_gates: [identity, body, state, continuity, rendering, production]
+hard_rejects:
+  - severe identity adult-age face body-volume or rendering drift
+  - fused missing duplicated disconnected or untraceable limbs or joints
+  - floating pelvis contradictory hand support or implausible whole-body weight
+  - thin legs broken knees twisted ankles pointed toes or contradictory foot contact
+  - missing mirrored relocated duplicated or materially redesigned ornament
+  - non-reversible hair wrong hair length extreme bed head wet hair or wind
+  - closed eyes distress intoxication sensual posing viewer-directed focus broad smile or open mouth
+  - repeated d01 side-folded leg pose instead of approved d02 forward-leg pose
+  - wrong outfit exposed underwear shoes slippers bare feet or incorrect sock height or stripes
+  - crop or scale preventing complete support hand leg or foot review
+  - readable text logo watermark border collage grid or multiple character

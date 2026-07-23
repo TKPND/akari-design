@@ -1,0 +1,130 @@
+schema_version: 1
+request_id: akari-v1.2-d07-r01
+asset_id: D07
+revision: r01
+variation_axis: independent_scene_attempt
+references:
+  - role: accepted_d06_same_evening_continuity
+    path: akari-v1.2/accepted/daily/evening/akari-v1.2_d06_evening-entryway-floor-sit_r01.png
+  - role: accepted_c04_grounded_seated_body
+    path: akari-v1.2/accepted/core/sitting/akari-v1.2_c04_floor-sitting_r01.png
+  - role: accepted_c03_hairpin_three_quarter
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c03_hairpin-side-45_r02.png
+  - role: accepted_c06_2_safe_relief_expression
+    path: akari-v1.2/accepted/core/face-hair/akari-v1.2_c06-2_sleepy-secure_r01.png
+  - role: accepted_c07_seated_sock_feet
+    path: akari-v1.2/accepted/core/indoor-feet/akari-v1.2_c07_indoor-socks-seated_r01.png
+shared_prompt: >-
+  Use the five visible accepted images only in their declared roles to create
+  one standalone same-evening Daily scene of the same naturally cute
+  25-year-old adult Akari. Image 1 controls D06 same-evening adult identity,
+  normal short bob, complete character-left ornament, oversized opaque white
+  hoodie, opaque gray pleated skirt, striped socks, warm palette, safe relieved
+  state, character-right cuff pushed up one thumb width, and character-right
+  sock slightly lower; do not copy its entryway, wall-floor sit, bag, removed
+  shoes, exact pose, crop, or staging. Image 2 controls grounded seated pelvis,
+  healthy leg volume, standard outfit, coordinated spine, and believable body
+  support; do not copy its floor side-sit, rug, smile, plain backdrop, or viewer
+  focus. Image 3 controls hairpin-side three-quarter identity, complete
+  character-left pale-blue crossed pins and ribbon-like ornament, cheek contour,
+  and short-bob side construction; do not copy its standing pose, smile, shoes,
+  or white reference backdrop. Image 4 controls only the C06-2 expression
+  intensity: mildly heavy but open eyelids, relaxed brows and cheeks, and a
+  small closed almost-neutral mouth that reads secure; do not copy morning hair,
+  chest-up crop, or plain backdrop. Image 5 controls warm-white mid-calf socks
+  with exactly two thin pale-blue stripes, seated ankle and foot volume, relaxed
+  toes, heel shape, and believable contact; do not copy its floor pose, smile,
+  rug, or plain backdrop. Show Akari in a compact living-room corner sitting on
+  the front edge of a simple low-backed neutral fabric sofa under warm diffused
+  evening light. Use a room-side front-left three-quarter camera at natural
+  seated height. Create a shallow but fully supported sofa-edge sit: her pelvis
+  rests completely on the front third of the cushion with subtle cushion
+  compression, her upper back remains clear of the sofa back, and her torso
+  inclines only slightly forward with a mild coordinated spinal curve. Keep
+  shoulders low and level. Set both knees about hip width and angle them modestly
+  away from camera. Let both lower legs descend separately without crossing or
+  silhouette fusion, and keep both socked soles fully flat on the floor with
+  neither foot on tiptoe. Place one palm lightly beside the hip on the cushion
+  and the other hand loose on the same-side thigh. Direct her gaze toward a
+  blank low point in the room, never the viewer. Keep the complete head,
+  ornament, both hands, pelvis, thighs, knees, lower legs, socks, heels, toes,
+  cushion edge, and all floor contact visible. Angle the knees away from camera
+  and keep the opaque skirt covering the pelvis and upper thighs with no
+  underwear view. Carry exactly two Humanization elements from D06: the
+  character-right hoodie cuff stays pushed up by about one thumb width, and the
+  character-right sock stays slightly lower than the character-left sock while
+  both pale-blue stripes remain complete. Do not add further costume disorder.
+  Use restrained wall and floor context with no television content, phone,
+  remote, blanket, mug, food, bag, shoes, entry door, clock, or explanatory
+  prop. The moment is safe quiet decompression, never slipping, falling,
+  collapsing, sadness, fear, injury, illness, intoxication, sleep,
+  dissociation, sensuality, glamour, man-spreading, pin-up posing, viewer
+  performance, or an anatomy plate. When references conflict, D06 controls
+  same-evening continuity and state, C04 controls seated body and support, C03
+  controls three-quarter identity and ornament, C06-2 controls only expression
+  intensity, and C07 controls socks and feet. Do not create closed eyes, tears,
+  open mouth, broad smile, viewer focus, thin legs, broken pelvis or cushion
+  support, crossed fused hidden or untraceable legs, tiptoe contact, twisted
+  ankles, pointed toes, floating feet, wrong ornament side, wrong hair length,
+  wrong outfit, exposed underwear, shoes on the body, bare feet, incorrect sock
+  stripes, forbidden props, crop loss, text, logo, watermark, border, collage,
+  grid, multiple characters, or severe identity, adult-age, anatomy,
+  continuity, or rendering drift.
+scene_contract:
+  camera: room-side-front-left-three-quarter-natural-seated-height
+  location: compact-living-room-corner
+  seat: front-third-of-compact-low-backed-neutral-fabric-sofa
+  continuity: d06-same-evening-outfit-normal-hair-light-state-and-humanization
+  lighting: warm-diffused-evening-interior
+  gaze: blank-low-room-point-not-viewer
+  pose: shallow-fully-supported-sofa-edge-sit-with-bilateral-flat-feet
+  humanization:
+    - character-right-hoodie-cuff-pushed-up-one-thumb-width
+    - character-right-sock-slightly-lower-with-both-stripes-complete
+  outfit:
+    top: oversized-opaque-white-hoodie
+    bottom: opaque-gray-pleated-skirt
+    socks: warm-white-mid-calf-exactly-two-thin-pale-blue-stripes
+  required_visible_features:
+    - complete-head-and-character-left-ornament
+    - open-heavy-lidded-three-quarter-face
+    - cushion-side-support-hand-and-thigh-resting-hand
+    - fully-supported-pelvis-and-subtle-cushion-compression
+    - separately-traceable-bilateral-thigh-knee-shin-lines
+    - both-striped-socks-heels-toes-and-flat-floor-contact
+  forbidden_props: [television-content, phone, remote, blanket, mug, food, bag, shoes, entry-door, clock, explanatory-prop]
+production_requirements:
+  file_format: png
+  target_canvas: {width: 1024, height: 1536}
+  accepted_width: {minimum: 1020, maximum: 1028}
+  accepted_height: {minimum: 1532, maximum: 1540}
+  standalone_composition: true
+  generated_grid: forbidden
+  force_exact_resize: forbidden
+candidate_policy:
+  initial_variants: [a, b]
+  optional_variant: c
+  optional_c_only_for: d07-scene-or-distinct-independent-candidate-local-major-failures
+  stop_for_shared_failure: [D06, C03, C04, C06, C07]
+  cross_candidate_references: forbidden
+candidates:
+  - variant: a
+    title: independent-scene-a
+    target_path: source/candidates/d07/r01/akari-v1.2_d07_evening-shallow-sofa-sit_r01-a.png
+  - variant: b
+    title: independent-scene-b
+    target_path: source/candidates/d07/r01/akari-v1.2_d07_evening-shallow-sofa-sit_r01-b.png
+comparison_anchors: []
+acceptance_gates: [identity, body, state, continuity, rendering, production]
+hard_rejects:
+  - severe identity adult-age face body-volume continuity or rendering drift
+  - fused missing duplicated disconnected crossed hidden or untraceable limbs or joints
+  - floating weight broken sofa cushion pelvis foot or hand support or contradictory contact
+  - missing mirrored relocated duplicated or materially redesigned ornament
+  - wrong hair length extreme bed head wet hair or wind
+  - closed eyes tears distress sadness injury illness intoxication sleep dissociation sensual glamour viewer focus broad smile or open mouth
+  - wrong outfit exposed underwear shoes on body bare feet incorrect sock height or stripes
+  - unstable shallow sit fused legs tiptoe contact twisted ankles pointed toes or floating feet
+  - television content phone remote blanket mug food bag shoes entry door clock or explanatory prop
+  - crop or scale preventing complete head hand pelvis leg sock heel toe cushion edge or floor contact review
+  - readable text logo watermark border collage grid or multiple character

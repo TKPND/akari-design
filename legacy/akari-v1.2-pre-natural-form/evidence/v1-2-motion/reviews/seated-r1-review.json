@@ -1,0 +1,99 @@
+{
+  "review_id": "review:v1-2-motion:20260713:seated:r1",
+  "review_path": "evidence/v1-2-motion/reviews/seated-r1-review.json",
+  "motion": "seated",
+  "batch_id": "batch:v1-2-motion:20260713:seated:r1",
+  "user_decision": "approved",
+  "candidates": [
+    {
+      "request_id": "request:v1-2-motion:20260713:seated:r1:c1",
+      "candidate_path": "source/generated/v1-2-motion/20260713_seated_r1_c1.png",
+      "decision": "accept",
+      "gates": {
+        "identity": "pass",
+        "age": "pass",
+        "anatomy_pose": "pass",
+        "body_proportion": "pass",
+        "outfit": "pass",
+        "footwear": "pass",
+        "ornament_side": "pass",
+        "framing": "pass",
+        "artifacts_quality": "pass",
+        "motion_naturalness": "pass"
+      },
+      "observations": {
+        "identity": "Face, warm-brown bob, eyes, and overall character read match the accepted v1.2 references and walking selection.",
+        "age": "Adult age impression remains consistent with the accepted turnaround.",
+        "anatomy_pose": "Pelvis, supported thighs, knees, lower legs, hands, and feet form a coherent seated pose on an implied support plane.",
+        "body_proportion": "Torso, limb lengths, head-to-body ratio, and seated leg proportions remain consistent with the turnaround.",
+        "outfit": "The hoodie folds naturally at the seated pelvis and the gray pleated skirt remains modest and structurally coherent.",
+        "footwear": "Both striped socks and chunky white-and-pale-blue sneakers are complete and clearly readable.",
+        "ornament_side": "The pale-blue ornament remains correctly on character-left.",
+        "framing": "All hair, hands, knees, lower legs, socks, and both shoes are fully contained in the 1024x1536 frame.",
+        "artifacts_quality": "No extra anatomy, malformed hands or feet, furniture, text, watermark, or visible generation artifact is present.",
+        "motion_naturalness": "The invisible support, upright balance, relaxed hands, supported thighs, and grounded feet read as a natural reusable seated reference."
+      },
+      "rejection_reason": ""
+    },
+    {
+      "request_id": "request:v1-2-motion:20260713:seated:r1:c2",
+      "candidate_path": "source/generated/v1-2-motion/20260713_seated_r1_c2.png",
+      "decision": "reject",
+      "gates": {
+        "identity": "pass",
+        "age": "fail",
+        "anatomy_pose": "pass",
+        "body_proportion": "pass",
+        "outfit": "fail",
+        "footwear": "pass",
+        "ornament_side": "pass",
+        "framing": "pass",
+        "artifacts_quality": "pass",
+        "motion_naturalness": "pass"
+      },
+      "observations": {
+        "identity": "Hair, eyes, clothing palette, and ornament still identify Akari, though the face drifts from the strongest accepted read.",
+        "age": "Larger facial features and softer proportions make the candidate read younger than the accepted adult reference.",
+        "anatomy_pose": "The pelvis, forward lean, hands beside the body, legs, and grounded feet are anatomically coherent.",
+        "body_proportion": "Overall seated proportions remain plausible.",
+        "outfit": "The skirt spreads into a wider rigid fan than the accepted pleated-skirt construction under seated compression.",
+        "footwear": "Both socks and shoes are complete, consistent, and readable.",
+        "ornament_side": "The pale-blue ornament remains on character-left.",
+        "framing": "The entire seated figure is contained without clipping.",
+        "artifacts_quality": "No extra limbs, fused anatomy, text, watermark, or major rendering artifact is visible.",
+        "motion_naturalness": "Invisible support, hand placement, and foot grounding read naturally despite identity and skirt concerns."
+      },
+      "rejection_reason": "Younger facial read and exaggerated skirt flare reduce identity and reusable outfit-reference quality."
+    },
+    {
+      "request_id": "request:v1-2-motion:20260713:seated:r1:c3",
+      "candidate_path": "source/generated/v1-2-motion/20260713_seated_r1_c3.png",
+      "decision": "hold",
+      "gates": {
+        "identity": "pass",
+        "age": "pass",
+        "anatomy_pose": "pass",
+        "body_proportion": "pass",
+        "outfit": "pass",
+        "footwear": "pass",
+        "ornament_side": "pass",
+        "framing": "pass",
+        "artifacts_quality": "pass",
+        "motion_naturalness": "pass"
+      },
+      "observations": {
+        "identity": "Face, hair, eyes, and overall finish remain recognizably consistent with accepted v1.2 Akari.",
+        "age": "Adult age impression is retained.",
+        "anatomy_pose": "One hand near the knee, one beside the body, supported pelvis, and separated grounded feet form a coherent pose.",
+        "body_proportion": "Seated body proportions are plausible, though candidate 1 matches the accepted body read more closely.",
+        "outfit": "Hoodie and skirt retain their construction with controlled seated folds.",
+        "footwear": "Both striped socks and complete sneakers remain clearly readable.",
+        "ornament_side": "The pale-blue ornament stays correctly on character-left.",
+        "framing": "All body parts and footwear are comfortably within frame.",
+        "artifacts_quality": "No extra anatomy, malformed hands or feet, furniture, text, or watermark is visible.",
+        "motion_naturalness": "The implied seat, asymmetric hand placement, and stable feet read naturally, but candidate 1 is the stronger all-purpose reference."
+      },
+      "rejection_reason": ""
+    }
+  ]
+}

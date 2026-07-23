@@ -1,0 +1,260 @@
+schema_version: 1
+scenes:
+- id: scene-01
+  act: 1
+  time: '10:02'
+  slug: invitation-at-door
+  action: open door; Akari waits beyond it and invites the viewer out
+  composition: physically possible standing POV; knee-up Akari beyond the open door
+  emotion: expectation she cannot fully hide
+  wetness: dry
+  lighting: bright-warm-overcast
+  dialogue:
+  - 遅い。ほら、行こ
+  revision: r01
+  status: accepted
+  candidates:
+  - variant: a
+    path: source/candidates/scene-01/r01/scene-01-r01-a.png
+  - variant: b
+    path: source/candidates/scene-01/r01/scene-01-r01-b.png
+  accepted_path: accepted/scene-01.webp
+  accepted_sha256: 296b81853fc22bceb97308e17f60e65adc5b68c4c3f84487450b3649a392ac60
+  review_path: evidence/reviews/scene-01.yaml
+- id: scene-02
+  act: 1
+  time: '10:24'
+  slug: half-step-ahead
+  action: Akari walks half a step ahead and looks back
+  composition: walking eye-level POV; near-full-body middle distance
+  emotion: easy anticipation
+  wetness: dry
+  lighting: bright-warm-overcast
+  dialogue: []
+  revision: r01
+  status: accepted
+  candidates:
+  - variant: a
+    path: source/candidates/scene-02/r01/scene-02-r01-a.png
+  - variant: b
+    path: source/candidates/scene-02/r01/scene-02-r01-b.png
+  accepted_path: accepted/scene-02.webp
+  accepted_sha256: 7a4d39f517d6f7e22850f72052d54a7af881767d7a2d732c3282916213db8d79
+  review_path: evidence/reviews/scene-02.yaml
+- id: scene-03
+  act: 1
+  time: '10:41'
+  slug: first-raindrops
+  action: Akari turns one palm upward, checks the sky, then looks back
+  composition: eye-level POV; raised palm readable without hiding her face
+  emotion: small shared surprise
+  wetness: first-drops
+  lighting: overcast-shifting-blue-gray
+  dialogue:
+  - うそ。降るって言ってた？
+  revision: r01
+  status: accepted
+  candidates:
+  - variant: a
+    path: source/candidates/scene-03/r01/scene-03-r01-a.png
+  - variant: b
+    path: source/candidates/scene-03/r01/scene-03-r01-b.png
+  accepted_path: accepted/scene-03.webp
+  accepted_sha256: 6030d51b0e20516227811484dd902d3cd18aec3f2dcc48906c2e123501bfa6e2
+  review_path: evidence/reviews/scene-03.yaml
+- id: scene-04
+  act: 2
+  time: '10:46'
+  slug: reach-and-run
+  action: Akari reaches toward the camera and starts running for shelter
+  composition: reaching hand in foreground; moving body in middle distance; hand does
+    not touch lens
+  emotion: urgent but playful first contact
+  wetness: light-rain
+  lighting: blue-gray-rain
+  dialogue:
+  - たかひろ、こっち！
+  revision: r01
+  status: accepted
+  candidates:
+  - variant: a
+    path: source/candidates/scene-04/r01/scene-04-r01-a.png
+  - variant: b
+    path: source/candidates/scene-04/r01/scene-04-r01-b.png
+  accepted_path: accepted/scene-04.webp
+  accepted_sha256: 22911b9ba772ab251e70b3dd3ac9e548bb6135f3f92c1456375a8a7bb77a3c31
+  review_path: evidence/reviews/scene-04.yaml
+- id: scene-05
+  act: 2
+  time: '10:52'
+  slug: one-umbrella
+  action: under the eaves Akari wipes damp hair and finds one folding umbrella in
+    her bag
+  composition: eye-level close middle shot; umbrella, bag, wet hair and face all readable
+  emotion: laughing together at the changed plan
+  wetness: clearly-wet
+  lighting: sheltered-blue-gray-rain
+  dialogue:
+  - 一本しかないけど、まあいっか
+  revision: r01
+  status: accepted
+  candidates:
+  - variant: a
+    path: source/candidates/scene-05/r01/scene-05-r01-a.png
+  - variant: b
+    path: source/candidates/scene-05/r01/scene-05-r01-b.png
+  accepted_path: accepted/scene-05.webp
+  accepted_sha256: f9e07f36165fc626bfffd2cf8dd2eaa94a924caeb6fdf8e016614036ba0428af
+  review_path: evidence/reviews/scene-05.yaml
+- id: scene-06
+  act: 2
+  time: '11:06'
+  slug: shared-umbrella
+  action: Akari walks beside the viewer under one small umbrella and looks slightly
+    up
+  composition: very close physically possible shared-umbrella POV; shoulders almost
+    touching
+  emotion: comfortable closeness created by rain
+  wetness: damp-stable
+  lighting: soft-blue-gray-under-umbrella
+  dialogue: []
+  revision: r01
+  status: accepted
+  candidates:
+  - variant: a
+    path: source/candidates/scene-06/r01/scene-06-r01-a.png
+  - variant: b
+    path: source/candidates/scene-06/r01/scene-06-r01-b.png
+  accepted_path: accepted/scene-06.webp
+  accepted_sha256: d331a475f6b166b4d221fc5a6711ad088c075c5feb3a39cec4c6a9a6b98052f1
+  review_path: evidence/reviews/scene-06.yaml
+- id: scene-07
+  act: 2
+  time: '11:28'
+  slug: returned-entryway
+  action: inside the viewer's entryway Akari turns back beside wet shoes and the closed
+    umbrella
+  composition: slightly lowered entryway POV; full footwear and umbrella remain readable
+  emotion: amused acceptance that they came back
+  wetness: damp-entryway
+  lighting: cool-entry-warm-interior
+  dialogue:
+  - ……帰ってきちゃったね
+  revision: r01
+  status: accepted
+  candidates:
+  - variant: a
+    path: source/candidates/scene-07/r01/scene-07-r01-a.png
+  - variant: b
+    path: source/candidates/scene-07/r01/scene-07-r01-b.png
+  accepted_path: accepted/scene-07.webp
+  accepted_sha256: e09568c6534a7c401e38d7046af02d730480bd1b7fbb5d0bd9a03dc996876733
+  review_path: evidence/reviews/scene-07.yaml
+- id: scene-08
+  act: 3
+  time: '12:03'
+  slug: roomwear-and-two-mugs
+  action: after changing next door Akari returns through the door holding two mugs
+  composition: standing eye-level POV; knee-up Akari, both mugs and dry roomwear readable
+  emotion: quiet decision to spend the day together
+  wetness: towel-dried-ends
+  lighting: cool-window-warm-room
+  dialogue:
+  - 今日はもう、ここでいいでしょ
+  revision: r01
+  status: accepted
+  candidates:
+  - variant: a
+    path: source/candidates/scene-08/r01/scene-08-r01-a.png
+  - variant: b
+    path: source/candidates/scene-08/r01/scene-08-r01-b.png
+  accepted_path: accepted/scene-08.webp
+  accepted_sha256: 59d8d2052c9b9c5ba8d377078c2e8d42bb48e4d125d7ab9dd22687ef18c6b099
+  review_path: evidence/reviews/scene-08.yaml
+- id: scene-09
+  act: 3
+  time: '13:17'
+  slug: rain-window
+  action: Akari rests beside two drinks and watches rain at the window
+  composition: seated or standing eye-level POV; broad negative space around profile
+    and rain window
+  emotion: silence already feels safe
+  wetness: drying-soft-bob
+  lighting: cool-window-warm-room
+  dialogue: []
+  revision: r01
+  status: accepted
+  candidates:
+  - variant: a
+    path: source/candidates/scene-09/r01/scene-09-r01-a.png
+  - variant: b
+    path: source/candidates/scene-09/r01/scene-09-r01-b.png
+  accepted_path: accepted/scene-09.webp
+  accepted_sha256: 95717014228785d3979f256bf6887df4a4c2fcc12295851c812d524d17558a54
+  review_path: evidence/reviews/scene-09.yaml
+- id: scene-10
+  act: 3
+  time: '15:42'
+  slug: sleepy-movie
+  action: during a movie Akari hides her sleepiness and looks toward the viewer
+  composition: closest physical POV of the book from adjacent sofa or floor seating;
+    no screen content
+  emotion: sleepy trust with a small defensive glance
+  wetness: dry
+  lighting: dim-cool-window-warm-room
+  dialogue:
+  - ……見てるってば
+  revision: r01
+  status: accepted
+  candidates:
+  - variant: a
+    path: source/candidates/scene-10/r01/scene-10-r01-a.png
+  - variant: b
+    path: source/candidates/scene-10/r01/scene-10-r01-b.png
+  accepted_path: accepted/scene-10.webp
+  accepted_sha256: cdb73bc1c585bdbe0d2ec3a916327e7b05ee8831ef2a0ed1c4c569382195e4ff
+  review_path: evidence/reviews/scene-10.yaml
+- id: scene-11
+  act: 4
+  time: '18:31'
+  slug: rain-cleared
+  action: Akari looks at the cleared sky, then turns toward the viewer
+  composition: eye-level POV with window and rain-cleared dusk both readable
+  emotion: she notices the day is ending
+  wetness: dry
+  lighting: rain-cleared-soft-sunset
+  dialogue:
+  - 雨、やんだね
+  revision: r01
+  status: accepted
+  candidates:
+  - variant: a
+    path: source/candidates/scene-11/r01/scene-11-r01-a.png
+  - variant: b
+    path: source/candidates/scene-11/r01/scene-11-r01-b.png
+  accepted_path: accepted/scene-11.webp
+  accepted_sha256: ca8c88df88c935beba061159900a7292f51b3092f74b9606d3644138b219f20e
+  review_path: evidence/reviews/scene-11.yaml
+- id: scene-12
+  act: 4
+  time: '21:08'
+  slug: sleeve-at-door
+  action: at the night doorway Akari catches only the edge of the viewer's sleeve and
+    looks up
+  composition: physically possible standing POV; doorway, corridor, her hand, expression,
+    and tiny sleeve edge readable
+  emotion: emotional closest point; honest reluctance to part
+  wetness: dry
+  lighting: warm-night-corridor
+  dialogue:
+  - ……もう少しだけ、ここにいていい？
+  revision: r01
+  status: accepted
+  candidates:
+  - variant: a
+    path: source/candidates/scene-12/r01/scene-12-r01-a.png
+  - variant: b
+    path: source/candidates/scene-12/r01/scene-12-r01-b.png
+  accepted_path: accepted/scene-12.webp
+  accepted_sha256: 6d58463224eebb5db0a612885c911a940ba79c0387d4315bc85e6ae37845c3d9
+  review_path: evidence/reviews/scene-12.yaml

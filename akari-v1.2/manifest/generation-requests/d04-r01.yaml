@@ -1,0 +1,125 @@
+schema_version: 1
+request_id: akari-v1.2-d04-r01
+asset_id: D04
+revision: r01
+variation_axis: independent_scene_attempt
+references:
+  - role: accepted_d03_morning_continuity
+    path: akari-v1.2/accepted/daily/morning/akari-v1.2_d03_morning-curtain-pause_r01.png
+  - role: accepted_c01_standing_body
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c01_front-natural-stance_r01.png
+  - role: accepted_c03_hairpin_three_quarter
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c03_hairpin-side-45_r02.png
+  - role: accepted_c06_morning_hair_sleepy_neutral
+    path: akari-v1.2/accepted/core/face-hair/akari-v1.2_c06-1_sleepy-neutral_r01.png
+  - role: accepted_c07_standing_sock_feet
+    path: akari-v1.2/accepted/core/indoor-feet/akari-v1.2_c07_indoor-socks-standing_r01.png
+shared_prompt: >-
+  Use the five visible accepted images only in their declared roles to create
+  one standalone continuation of the same naturally cute 25-year-old adult
+  Akari during the same quiet morning. Image 1 controls the D03 same-morning
+  room palette, soft diffused light, loose opaque white short-sleeve T-shirt,
+  simple opaque gray shorts-style roomwear, reversible morning hair, and
+  narrative continuity; do not copy its stationary curtain touch, exact room
+  arrangement, pose, crop, or gaze. Image 2 controls healthy standing volume,
+  pelvis-to-leg support, full-body proportions, and grounded weight; do not
+  copy its hoodie, skirt, shoes, alert gaze, or rigid turnaround presentation.
+  Image 3 controls hairpin-side three-quarter adult identity, complete
+  character-left pale-blue crossed pins and ribbon-like ornament, side
+  contour, and stable proportion; do not copy its standard outfit, shoes, or
+  turnaround stiffness. Image 4 controls adult identity, reversible morning
+  hair, cheek shape, short-bob length, palette, rendering, and the C06-1
+  sleepy-neutral state: heavy but open eyelids, relaxed brows and cheeks,
+  incomplete focus, and a quiet closed almost-neutral mouth; do not copy its
+  chest-up crop or hoodie. Image 5 controls warm-white mid-calf socks with
+  exactly two thin pale-blue stripes, ankle and foot volume, relaxed toes,
+  heel shape, and believable contact; do not copy its hoodie, skirt, crop, or
+  static stance. Place Akari taking one slow short step from a bedroom doorway
+  or short domestic passage toward a restrained compact kitchenette, viewed
+  with a room-side front-biased three-quarter camera at natural standing
+  height. Keep the complete figure and enough threshold context visible. Put
+  readable weight over one fully flat leading foot while the close trailing
+  foot remains near the floor with only a natural small heel release, never a
+  pointed toe or tiptoe balance. Preserve supported pelvis-to-leg continuity,
+  softly bent knees without crossing, small shoulder and arm counter-swing,
+  and slight forward head drift. Direct her unfocused gaze toward the muted
+  kitchenette counter or cabinet area, never the viewer. Keep the complete
+  head, ornament, both hands, pelvis, both legs, ankles, heels, socked toes,
+  and all relevant floor contact visible. Add exactly two Humanization
+  elements: one light natural slouch that leaves the trailing-leg sock slightly
+  lower, and a small T-shirt hem and shoulder-line shift caused by the walking
+  counter-swing. Let the kitchenette read only through restrained cabinet,
+  counter, or muted appliance geometry. Add no held mug, glass, bottle,
+  kettle, food, phone, clock, open refrigerator, sink routine, bathroom mirror,
+  slippers, or explanatory prop. The moment must read as slow ordinary waking
+  inertia while going to get a drink, never illness, sadness, fear,
+  intoxication, sensuality, dissociation, a posed walk-cycle plate, or a
+  fashion portrait. When references conflict, D03 controls same-morning
+  continuity, C01 standing and transfer mechanics, C03 three-quarter identity
+  and proportion, C06-1 morning hair, expression, and rendering, and C07 socks
+  and feet. Do not create closed eyes, viewer focus, a broad smile, open mouth,
+  thin legs, broken joints, crossed-leg topology, twisted ankles, pointed toes,
+  floating feet, contradictory support or contact, wrong ornament, wrong hair
+  length, wrong outfit, incorrect sock stripes, stationary curtain touching,
+  washroom or mirror staging, an open refrigerator, a held drink, a long
+  runway stride, running, a high reach, crop loss, text, logo, watermark,
+  border, collage, grid, multiple characters, or severe identity, adult-age,
+  anatomy, or rendering drift.
+scene_contract:
+  camera: room-side-front-biased-three-quarter-natural-standing-height
+  surface: bedroom-threshold-or-short-passage-toward-compact-kitchenette
+  continuity: d03-same-morning-outfit-hair-light-and-domestic-palette
+  lighting: soft-diffused-morning-light-with-muted-kitchenette-depth
+  gaze: kitchenette-directed-with-incomplete-sleepy-focus
+  pose: short-slow-step-leading-foot-flat-trailing-heel-lightly-released
+  humanization:
+    - trailing-leg-sock-slightly-lower-with-light-natural-slouch
+    - walking-counter-swing-t-shirt-hem-and-shoulder-line-shift
+  outfit:
+    top: loose-opaque-white-short-sleeve-t-shirt
+    bottom: simple-opaque-gray-shorts-style-roomwear
+    socks: warm-white-mid-calf-exactly-two-thin-pale-blue-stripes
+  required_visible_features:
+    - complete-head-and-ornament
+    - both-hands-with-small-natural-counter-swing
+    - pelvis-and-complete-bilateral-leg-support
+    - both-ankles-heels-socked-toes-and-relevant-floor-contact
+  forbidden_props: [held-drink, mug, glass, bottle, kettle, food, phone, clock, slippers, explanatory-prop]
+production_requirements:
+  file_format: png
+  target_canvas: {width: 1024, height: 1536}
+  accepted_width: {minimum: 1020, maximum: 1028}
+  accepted_height: {minimum: 1532, maximum: 1540}
+  standalone_composition: true
+  generated_grid: forbidden
+  force_exact_resize: forbidden
+candidate_policy:
+  initial_variants: [a, b]
+  optional_variant: c
+  optional_c_only_for: d04-scene-or-distinct-independent-candidate-local-major-failures
+  stop_for_shared_failure: [D03, C01, C03, C05, C06, C07]
+  cross_candidate_references: forbidden
+candidates:
+  - variant: a
+    title: independent-scene-a
+    target_path: source/candidates/d04/r01/akari-v1.2_d04_morning-drink-fetch_r01-a.png
+  - variant: b
+    title: independent-scene-b
+    target_path: source/candidates/d04/r01/akari-v1.2_d04_morning-drink-fetch_r01-b.png
+  - variant: c
+    title: independent-scene-c
+    target_path: source/candidates/d04/r01/akari-v1.2_d04_morning-drink-fetch_r01-c.png
+comparison_anchors: []
+acceptance_gates: [identity, body, state, continuity, rendering, production]
+hard_rejects:
+  - severe identity adult-age face body-volume or rendering drift
+  - fused missing duplicated disconnected or untraceable limbs or joints
+  - floating weight broken pelvis-to-leg support crossed-leg topology twisted ankles pointed toes or contradictory contact
+  - missing mirrored relocated duplicated or materially redesigned ornament
+  - non-reversible hair wrong hair length extreme bed head wet hair or wind
+  - closed eyes distress intoxication sensual posing viewer-directed focus broad smile or open mouth
+  - wrong outfit exposed underwear shoes slippers bare feet or incorrect sock height or stripes
+  - stationary curtain touching washroom mirror staging open refrigerator held drink long runway stride high reach or running
+  - crop or scale preventing complete head hand pelvis leg ankle heel toe or contact review
+  - readable text logo watermark border collage grid or multiple character
+  - severe mismatch to D03 morning continuity or compact kitchenette threshold intent

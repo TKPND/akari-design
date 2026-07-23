@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "document_id": "akari-v1.1-tonari-no-akari",
+  "reference_pack_version": "tonari-no-akari-identity-v1",
+  "assets": [
+    {
+      "id": "tonari-reference-face-hair",
+      "source_id": "expression-sheet",
+      "source_path": "source/references/tonari-no-akari/identity-face-hair.webp",
+      "original_source_path": "source/originals/v1_1_front_3.webp",
+      "original_sha256": "2b70c639b320275cde6787263bd6fe0f88ad59068154e4c2439ae69502e6f919",
+      "width": 1254,
+      "height": 1254,
+      "colorspace": "sRGB",
+      "role": "primary_face_hair_identity_anchor",
+      "orientation": "expression_grid_unmirrored",
+      "reference_pack_version": "tonari-no-akari-identity-v1"
+    },
+    {
+      "id": "tonari-reference-body-base",
+      "source_id": "base-front",
+      "source_path": "source/references/tonari-no-akari/identity-body-base.webp",
+      "original_source_path": "source/originals/v1_1_front_2.webp",
+      "original_sha256": "a4ef529fe1f99cccfe3f50a25f819712de328dbd9b4a0fa2b9895ad5edbfa425",
+      "width": 1024,
+      "height": 1536,
+      "colorspace": "sRGB",
+      "role": "base_body_outfit_anchor",
+      "orientation": "front_view_character_left_is_viewer_right",
+      "reference_pack_version": "tonari-no-akari-identity-v1"
+    },
+    {
+      "id": "tonari-reference-basic-outfit",
+      "source_id": "hoodie-front",
+      "source_path": "source/references/tonari-no-akari/identity-basic-outfit.webp",
+      "original_source_path": "source/originals/v1_1_front_1.webp",
+      "original_sha256": "6b2896e98657ca4079ea94652c16bb05285c1626f255cd08ea1e56f298151f9a",
+      "width": 1024,
+      "height": 1536,
+      "colorspace": "sRGB",
+      "role": "secondary_full_body_outfit_anchor",
+      "orientation": "front_view_character_left_is_viewer_right",
+      "reference_pack_version": "tonari-no-akari-identity-v1"
+    },
+    {
+      "id": "tonari-reference-side-view",
+      "source_id": "side-view",
+      "source_path": "source/references/tonari-no-akari/identity-side-view.webp",
+      "original_source_path": "source/originals/v1_1_真横.webp",
+      "original_sha256": "a2d715006d3f2622153f65b52e68373ed5e5d2522f92d15995b4bdffaf93e4c1",
+      "width": 1055,
+      "height": 1491,
+      "colorspace": "sRGB",
+      "role": "side_turnaround_anchor",
+      "orientation": "side_view_unmirrored",
+      "reference_pack_version": "tonari-no-akari-identity-v1"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+schema_version: 1
+scene_id: scene-01
+revision: r01
+status: accepted
+selected_variant: a
+findings: []
+selection_reason: 'Variant A gives the clearest first-person invitation read: the
+  open doorway, direct eye contact, restrained expectation, and extended hand form
+  one coherent action. Variant B is appealing but its far-frame hand placement and
+  door-chain detail compete with the emotional entrance.'
+reference_roles_confirmed:
+- C01 adult proportions and healthy natural build
+- C03 character-left hairpins and pale-blue ribbon
+- C06-4 round adult face and restrained warm smile
+reviewed_at: '2026-07-21T03:17:57.354802Z'

@@ -1,0 +1,18 @@
+{
+  "name": "akari-v1-2-pre-natural-form-legacy",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:python": "uv run python -m unittest discover -s tests",
+    "build:v1-2-face-hair:contact-sheet": "uv run python scripts/build_v1_2_face_hair_contact_sheet.py",
+    "build:v1-2-turnaround:requests": "uv run python -m scripts.build_v1_2_turnaround_generation_requests",
+    "build:v1-2-turnaround:contact-sheet": "uv run python -m scripts.build_v1_2_turnaround_contact_sheet",
+    "promote:v1-2-turnaround": "uv run python -m scripts.promote_v1_2_turnaround_candidate",
+    "build:v1-2-motion:requests": "uv run python -m scripts.build_v1_2_motion_generation_requests",
+    "build:v1-2-overhead-room:requests": "uv run python -m scripts.build_v1_2_overhead_room_generation_requests",
+    "promote:v1-2-overhead-room": "uv run python -m scripts.promote_v1_2_overhead_room_candidate",
+    "build:v1-2-overhead-room:contact-sheet": "uv run python -m scripts.build_v1_2_overhead_room_contact_sheet",
+    "build:v1-2-motion:contact-sheet": "uv run python -m scripts.build_v1_2_motion_contact_sheet",
+    "promote:v1-2-motion": "uv run python -m scripts.promote_v1_2_motion_candidate"
+  }
+}

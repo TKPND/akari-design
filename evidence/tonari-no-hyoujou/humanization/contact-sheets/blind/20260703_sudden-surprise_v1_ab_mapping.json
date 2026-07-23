@@ -1,0 +1,34 @@
+{
+  "original": "source/generated/tonari-no-hyoujou/20260703_sudden-surprise_v1.webp",
+  "candidate": "source/finished/tonari-no-hyoujou/20260703_sudden-surprise_v1_humanization_H05_v1.png",
+  "input_details": {
+    "original": {
+      "path": "source/generated/tonari-no-hyoujou/20260703_sudden-surprise_v1.webp",
+      "sha256": "9c18d5c4f5f90bc9cb6c338f661e6285445df0dc8253f97c3052ae661e3e227c",
+      "width": 1055,
+      "height": 1491,
+      "format": "WEBP"
+    },
+    "candidate": {
+      "path": "source/finished/tonari-no-hyoujou/20260703_sudden-surprise_v1_humanization_H05_v1.png",
+      "sha256": "60d79a4fad34e27d390763c14de0b64917b23256c7360b5e2197b94a12a3fbf3",
+      "width": 1055,
+      "height": 1491,
+      "format": "PNG"
+    }
+  },
+  "A": "original",
+  "B": "candidate",
+  "random_seed": 2026070309,
+  "blind": true,
+  "sheet": "evidence/tonari-no-hyoujou/humanization/contact-sheets/blind/20260703_sudden-surprise_v1_ab_blind.png",
+  "contact_sheet": {
+    "background": "#f3f0ea",
+    "label_height": 56,
+    "gap": 16,
+    "target_height": 1491,
+    "resize_method": "Image.Resampling.LANCZOS",
+    "allow_dimension_mismatch": false,
+    "output_format": "png"
+  }
+}

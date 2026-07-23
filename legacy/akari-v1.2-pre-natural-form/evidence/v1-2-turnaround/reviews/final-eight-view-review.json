@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "review_id": "akari-v1.2-turnaround-final-eight-view-20260713",
+  "source_manifest": "source/manifests/v1-2-turnaround/accepted-angles.json",
+  "source_manifest_sha256": "81bcfb2cc058efdbc38a605ef2195680b4ed869e266556a2c3292ba8ca9fe109",
+  "contact_sheet": "dist/akari-v1.2-turnaround-contact-sheet.webp",
+  "decision": "accepted",
+  "user_decision": "approved",
+  "accepted_slots": [
+    "front",
+    "character-left-front-three-quarter",
+    "character-left-profile",
+    "character-left-rear-three-quarter",
+    "back",
+    "character-right-rear-three-quarter",
+    "character-right-profile",
+    "character-right-front-three-quarter"
+  ],
+  "gate_summary": {
+    "identity": "pass",
+    "geometry": "pass",
+    "outfit": "pass",
+    "quality": "pass",
+    "counterpart_tolerance": "pass",
+    "back_convergence": "pass"
+  },
+  "motion_phase_handoff": {
+    "status": "ready_for_contract_build",
+    "target": "source/manifests/v1-2-motion/phase-2-handoff.json"
+  }
+}

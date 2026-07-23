@@ -1,0 +1,97 @@
+schema_version: 1
+request_id: akari-v1.2-c07-r01
+asset_id: C07
+revision: r01
+variation_axis: paired_generation_attempt
+references:
+  - role: accepted_c01_standing_body
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c01_front-natural-stance_r01.png
+  - role: accepted_c04_seated_body
+    path: akari-v1.2/accepted/core/sitting/akari-v1.2_c04_floor-sitting_r01.png
+  - role: v1_1_indoor_sock_construction
+    path: akari-v1.2/references/v1.1/standard-foot-set.webp
+shared_prompt: >-
+  Use the visible images only in their declared roles. Create one standalone
+  technical lower-body footwear reference of the same healthy 25-year-old
+  Akari on a 1024 x 1536 nearly plain warm-white or low-contrast rug canvas.
+  Keep the fixed white oversized hoodie edge and gray pleated skirt, with no
+  footwear. Keep all clothing fully opaque and securely arranged. Show warm
+  white mid-calf socks with exactly two thin pale-blue stripes at equal
+  initial height, consistent ribbing, sturdy natural ankles, rounded relaxed
+  toes, and believable pose-specific contact. C01 controls standing upper-leg
+  and lower-leg volume, unlocked knees, natural loading, palette, outfit edge,
+  and rendering; do not copy its sneakers. Accepted C04 controls seated pelvis
+  mechanics, front/rear leg trace, relaxed ankles, rug contact, garment
+  compression, and rendering. The v1.1 foot board controls sock material,
+  stripe count and placement, sock height, ankle volume, and readable foot
+  construction only; do not reproduce its shoes, labels, panels, borders, or
+  layout. Use a front-biased light three-quarter view. Preserve structural
+  anatomy and pose readability over exact pixel placement. No bare feet,
+  shoes, slippers, pointed ballet toes, locked knees, thin legs, twisted or
+  fused ankles, mismatched sock height, extra stripes, heavy sock slouching,
+  dramatic lighting, photorealistic skin, readable text, logo, watermark,
+  border, collage, grid, or multiple composition.
+view_prompts:
+  standing: >-
+    Show both legs from at least mid-thigh through the complete socked toes.
+    Use a natural hip-width stance with both knees unlocked. Keep the primary
+    load foot grounded through heel, outer edge, forefoot, and toes, while the
+    secondary foot reads only slightly lighter through pressure or angle.
+    Keep both complete feet visible with broadly 46 to 150 px bottom breathing
+    room and at least 48 px lateral breathing room.
+  seated: >-
+    Show the pelvis, skirt hem, both upper-leg roots, knees, shins, ankles,
+    heels, and complete socked toes in the accepted C04 floor-sitting
+    mechanical family. Keep a traceable front leg and rear leg. Coordinate
+    pelvis contact, knee direction, ankle angle, rug compression, and relaxed
+    lift. Match the same candidate's standing member for sock height, stripe
+    design, ankle volume, foot proportions, palette, and rendering without
+    copying its standing pose. Keep broadly 46 to 150 px bottom breathing room
+    and at least 48 px lateral breathing room.
+pair_generation_policy:
+  first_view: standing
+  second_view: seated
+  second_view_additional_reference:
+    role: paired_standing_sock_anchor
+    source_view: standing
+    priority: supporting
+framing_guidance:
+  canvas: {width: 1024, height: 1536}
+  enforcement: advisory
+  views:
+    standing:
+      upper_crop: both-legs-visible-from-at-least-mid-thigh
+      intended_bottom_margin_pixels: [46, 150]
+      intended_lateral_margin_pixels: 48
+    seated:
+      upper_crop: pelvis-skirt-hem-and-both-thigh-roots-visible
+      intended_bottom_margin_pixels: [46, 150]
+      intended_lateral_margin_pixels: 48
+  reject_on_numeric_miss_alone: false
+  major_only_when: crop-or-scale-prevents-structural-foot-review
+candidates:
+  - variant: a
+    title: paired-attempt-a
+    outputs:
+      - view: standing
+        target_path: source/candidates/c07/r01/akari-v1.2_c07_indoor-socks-standing_r01-a.png
+      - view: seated
+        target_path: source/candidates/c07/r01/akari-v1.2_c07_indoor-socks-seated_r01-a.png
+  - variant: b
+    title: paired-attempt-b
+    outputs:
+      - view: standing
+        target_path: source/candidates/c07/r01/akari-v1.2_c07_indoor-socks-standing_r01-b.png
+      - view: seated
+        target_path: source/candidates/c07/r01/akari-v1.2_c07_indoor-socks-seated_r01-b.png
+comparison_anchors: []
+acceptance_gates: [body, rendering]
+hard_rejects:
+  - bare feet shoes slippers or any footwear
+  - wrong stripe count color order spacing or materially inconsistent placement
+  - mismatched sock height or severe pair construction drift
+  - fused missing duplicated disconnected or untraceable legs ankles or feet
+  - twisted ankles ballet-like pointed toes or contradictory loading
+  - seated contact that contradicts pelvis knee or ankle mechanics
+  - unreadable foot construction caused by crop or extreme scale
+  - readable text logo watermark border collage grid or multiple composition

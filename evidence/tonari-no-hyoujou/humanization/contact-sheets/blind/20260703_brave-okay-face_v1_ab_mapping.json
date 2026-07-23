@@ -1,0 +1,34 @@
+{
+  "original": "source/generated/tonari-no-hyoujou/20260703_brave-okay-face_v1.webp",
+  "candidate": "source/finished/tonari-no-hyoujou/20260703_brave-okay-face_v1_humanization_H03_v1.png",
+  "input_details": {
+    "original": {
+      "path": "source/generated/tonari-no-hyoujou/20260703_brave-okay-face_v1.webp",
+      "sha256": "b2cd1ee8d9dd7c52f66cbc47f5d0135c2df0550ddabceaa285cad368188b25a5",
+      "width": 1055,
+      "height": 1491,
+      "format": "WEBP"
+    },
+    "candidate": {
+      "path": "source/finished/tonari-no-hyoujou/20260703_brave-okay-face_v1_humanization_H03_v1.png",
+      "sha256": "ea2f686eac542e2a6a8a9b773a92e6a674528e8646b236d22200224fdab61057",
+      "width": 1055,
+      "height": 1491,
+      "format": "PNG"
+    }
+  },
+  "A": "original",
+  "B": "candidate",
+  "random_seed": 1401,
+  "blind": true,
+  "sheet": "evidence/tonari-no-hyoujou/humanization/contact-sheets/blind/20260703_brave-okay-face_v1_ab_blind.png",
+  "contact_sheet": {
+    "background": "#f3f0ea",
+    "label_height": 56,
+    "gap": 16,
+    "target_height": 1491,
+    "resize_method": "Image.Resampling.LANCZOS",
+    "allow_dimension_mismatch": false,
+    "output_format": "png"
+  }
+}

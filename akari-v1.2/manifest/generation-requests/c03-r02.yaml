@@ -1,0 +1,121 @@
+schema_version: 1
+request_id: akari-v1.2-c03-r02
+asset_id: C03
+revision: r02
+variation_axis: paired_generation_attempt
+references:
+  - role: accepted_c01_front_stance
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c01_front-natural-stance_r01.png
+  - role: accepted_c02_back_stance
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c02_back-natural-stance_r01.png
+  - role: hairpin_side_identity
+    path: akari-v1.2/references/v1.1/hairpin-side-45.webp
+  - role: non_hairpin_side_identity
+    path: akari-v1.2/references/v1.1/non-hairpin-side-45.webp
+  - role: shoe_construction
+    path: akari-v1.2/references/v1.1/shoes.webp
+shared_prompt: >-
+  Use the visible images in their declared roles as strict references. Create
+  one standalone full-body 45-degree natural-standing reference image of the
+  same 25-year-old Akari and the same physical stance as accepted C01 and C02
+  on a 1024 x 1536 plain #f1f2f1 portrait canvas. Preserve compact anime
+  proportions, stable face and age impression, sturdy healthy legs, nearly
+  even loading, unlocked knees, relaxed shoulders, soft elbows, nearly level
+  pelvis, neutral lumbar curve, white oversized hoodie, gray pleated skirt,
+  two-line white socks, and distinct white chunky left and right sneakers.
+  Keep complete hair and shoes in frame. Place the head top at y=65 and the
+  soles at y=1456, leaving a 79 px bottom margin. Every head-top and sole
+  landmark must remain within 30 px of both accepted anchors; shoulders,
+  visual waist, and knees must remain within 3% of canvas height. Treat the
+  C01/C02 framing board only as geometry evidence: output one character and
+  never reproduce the board, split layout, gutter, ticks, captions, borders,
+  collage, grid, split screen, multi-panel, or contact sheet. Use one coherent
+  45-degree perspective for face, ribcage, pelvis, legs, skirt, hoodie, socks,
+  and shoes. No head-only turn, strong hip shift, fashion pose, locked knees,
+  twisted anatomy, thin legs, elongated proportions, mirrored shoes,
+  wrong-side or invented accessories, age drift, dramatic lighting,
+  photorealistic skin, props, readable text, logo, or watermark. Do not
+  amplify the recorded C01 knee-to-foot or C02 sock-height Minor findings.
+view_prompts:
+  hairpin-side-45: >-
+    Show the character-left hairpin side at an exact natural 45-degree view.
+    Follow the v1.1 hairpin-side reference for face width, cheek roundness, bob
+    silhouette, and correct perspective placement of the parallel pins and
+    small pale-blue ribbon. Do not move the accessories to the opposite side.
+  non-hairpin-side-45: >-
+    Show the opposite non-hairpin side at the matching exact natural
+    45-degree view. Preserve the v1.1 opposite cheek and bob silhouette. Keep
+    the character-left accessories on their true side; do not mirror,
+    duplicate, relocate, or invent them. Match the same pair's hairpin member
+    only when it agrees with the controlling C01, C02, and v1.1 references.
+pair_generation_policy:
+  first_view: hairpin-side-45
+  second_view: non-hairpin-side-45
+  second_view_additional_reference:
+    role: paired_candidate_anchor
+    source_view: hairpin-side-45
+    priority: supporting
+framing_contract:
+  canvas:
+    width: 1024
+    height: 1536
+  measurement:
+    tool: imagemagick
+    fuzz_percent: 6
+    geometry_format: "%@"
+    head_top_formula: y
+    sole_formula: y_plus_height_minus_1
+  anchors:
+    - asset_id: C01
+      revision: r01
+      head_top_y: 65
+      sole_y: 1450
+    - asset_id: C02
+      revision: r01
+      head_top_y: 65
+      sole_y: 1463
+  maximum_displacement:
+    percent_of_canvas_height: 2
+    integer_pixels: 30
+  required_intersection:
+    head_top_y: [35, 95]
+    sole_y: [1433, 1480]
+  prompt_target:
+    head_top_y: 65
+    sole_y: 1456
+    bottom_margin_pixels: 79
+candidates:
+  - variant: a
+    title: paired-attempt-a
+    outputs:
+      - view: hairpin-side-45
+        target_path: source/candidates/c03/r02/akari-v1.2_c03_hairpin-side-45_r02-a.png
+      - view: non-hairpin-side-45
+        target_path: source/candidates/c03/r02/akari-v1.2_c03_non-hairpin-side-45_r02-a.png
+  - variant: b
+    title: paired-attempt-b
+    outputs:
+      - view: hairpin-side-45
+        target_path: source/candidates/c03/r02/akari-v1.2_c03_hairpin-side-45_r02-b.png
+      - view: non-hairpin-side-45
+        target_path: source/candidates/c03/r02/akari-v1.2_c03_non-hairpin-side-45_r02-b.png
+  - variant: c
+    title: paired-attempt-c
+    outputs:
+      - view: hairpin-side-45
+        target_path: source/candidates/c03/r02/akari-v1.2_c03_hairpin-side-45_r02-c.png
+      - view: non-hairpin-side-45
+        target_path: source/candidates/c03/r02/akari-v1.2_c03_non-hairpin-side-45_r02-c.png
+comparison_anchors:
+  - accepted/core/standing/akari-v1.2_c01_front-natural-stance_r01.png
+  - accepted/core/standing/akari-v1.2_c02_back-natural-stance_r01.png
+acceptance_gates: [identity, body, rendering]
+hard_rejects:
+  - wrong 45-degree view or head-only turn
+  - mirrored substitute or mixed candidate pair
+  - identity or age drift
+  - elongated proportions or thin legs
+  - locked knees, twisted anatomy, or mismatched pair construction
+  - wrong-side, missing, duplicated, or invented hair accessories
+  - mirrored shoes or incomplete full-body crop
+  - readable text, logo, or watermark

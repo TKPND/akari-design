@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "review_id": "review:v1-2-overhead-room:20260713:supine-direct-gaze:r1",
+  "review_path": "evidence/v1-2-overhead-room/reviews/supine-direct-gaze-r1-review.json",
+  "pose": "supine-direct-gaze",
+  "batch_id": "batch:v1-2-overhead-room:20260713:supine-direct-gaze:r1",
+  "review_status": "approved",
+  "user_decision": "approved_candidate_1",
+  "contact_sheet_path": "evidence/v1-2-overhead-room/contact-sheets/batches/supine-direct-gaze-r1.webp",
+  "generator": "built-in-imagegen",
+  "candidates": [
+    {
+      "request_id": "request:v1-2-overhead-room:20260713:supine-direct-gaze:r1:c1",
+      "generation_id": "exec-dea67a40-0060-4429-ae40-bd739af89b2c",
+      "candidate_path": "source/generated/v1-2-overhead-room/20260713_supine-direct-gaze_r1_c1.png",
+      "decision": "accept",
+      "gates": {
+        "identity": "pass",
+        "age": "pass",
+        "overhead_read": "pass",
+        "anatomy": "pass",
+        "ornament_side": "pass",
+        "outfit": "pass",
+        "intimacy": "pass",
+        "composition": "pass",
+        "artifacts": "pass",
+        "collection_role": "pass"
+      },
+      "observations": {
+        "identity": "The amber eyes, warm-brown bob, facial proportions, bangs, and gentle expression closely match the accepted Akari v1.2 face reference.",
+        "age": "The face remains softly youthful while the body proportions and calm presentation retain the intended adult 25-year-old impression.",
+        "overhead_read": "The rug geometry, hair spread, foreshortening, and aligned body produce an immediate true overhead read near the requested 90-degree camera.",
+        "anatomy": "Head, shoulders, arms, hands, torso, pelvis, legs, and socked feet form a complete connected figure without extra or fused anatomy.",
+        "ornament_side": "The complete pale-blue crossed-pin and ribbon ornament remains on character-left, appearing on image-right in this face-up orientation.",
+        "outfit": "The oversized white hoodie, visible modest pale-gray shorts, and two-stripe socks are cleanly constructed and readable.",
+        "intimacy": "The direct gaze and one hand resting over the chest communicate quiet emotional closeness without sexualized framing or body emphasis.",
+        "composition": "The nearly vertical figure is fully contained, occupies the intended share of the frame, and is balanced by ivory-rug negative space and one pale-blue cushion.",
+        "artifacts": "No readable text, branding, watermark, panel border, malformed fingers, clipped feet, or visible generation defect is present.",
+        "collection_role": "The stable pose, strongest identity match, restrained palette, direct gaze, and clear top-down read make this the stronger reusable collection anchor."
+      },
+      "decision_reason": "Recommended as the anchor because it has the clearest true-overhead read, closest face identity, strongest direct intimacy, and most stable full-body composition."
+    },
+    {
+      "request_id": "request:v1-2-overhead-room:20260713:supine-direct-gaze:r1:c2",
+      "generation_id": "exec-43864e60-a40b-4a08-9225-e36a0c4a3739",
+      "candidate_path": "source/generated/v1-2-overhead-room/20260713_supine-direct-gaze_r1_c2.png",
+      "decision": "hold",
+      "gates": {
+        "identity": "pass",
+        "age": "pass",
+        "overhead_read": "pass",
+        "anatomy": "pass",
+        "ornament_side": "pass",
+        "outfit": "pass",
+        "intimacy": "pass",
+        "composition": "pass",
+        "artifacts": "pass",
+        "collection_role": "pass"
+      },
+      "observations": {
+        "identity": "The amber eyes, warm-brown bob, bangs, and overall facial construction remain consistent with accepted Akari v1.2.",
+        "age": "Adult body proportions and a composed expression preserve the intended 25-year-old impression.",
+        "overhead_read": "Rug perspective, hair spread, and body foreshortening retain a convincing overhead view, though the diagonal reads slightly less iconically than candidate 1.",
+        "anatomy": "Both hands, arms, torso, legs, and socked feet are complete, connected, and naturally articulated.",
+        "ornament_side": "The crossed-pin and ribbon ornament is complete and correctly placed on character-left.",
+        "outfit": "The oversized hoodie, modest shorts, and striped socks remain visually distinct and constructionally coherent.",
+        "intimacy": "The gaze is warm and direct, with relaxed hands conveying healthy closeness without suggestive emphasis.",
+        "composition": "The gentle diagonal gives useful variation, keeps the full figure inside frame, and uses only one pale-blue cushion as a secondary prop.",
+        "artifacts": "No extra anatomy, malformed hands or feet, readable text, logo, watermark, or major rendering artifact is visible.",
+        "collection_role": "This is a strong alternate, but the wider diagonal and more environmental framing make it a less definitive baseline than candidate 1."
+      },
+      "decision_reason": "Held as a strong alternate; candidate 1 is preferred for its more direct overhead geometry, closer identity read, and stronger anchor-like stillness."
+    }
+  ]
+}

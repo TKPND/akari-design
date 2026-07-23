@@ -1,0 +1,9 @@
+{
+  "original": "source/generated/tonari-no-akari/20260701_morning-glance_v1.webp",
+  "candidate": "source/finished/tonari-no-akari/20260701_morning-glance_v1_finish_h05_v1.png",
+  "A": "original",
+  "B": "candidate",
+  "random_seed": 798825812,
+  "blind": false,
+  "sheet": "evidence/finish-pass/contact-sheets/20260701_morning-glance_v1_before_after.png"
+}

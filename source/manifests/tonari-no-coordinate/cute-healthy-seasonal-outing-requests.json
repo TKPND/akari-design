@@ -1,0 +1,522 @@
+{
+  "schema_version": 1,
+  "collection_id": "akari-v1.1-tonari-no-coordinate-cute-healthy-seasonal-outing",
+  "title": "となりのコーデ cute healthy seasonal outing",
+  "reference_pack_version": "tonari-no-akari-identity-plus-v1-1-leg-reference-v1",
+  "prompt_template_version": "tonari_coordinate_cute_healthy_seasonal_reference_v1",
+  "batch_policy": {
+    "candidate_count": 8,
+    "seasonal_balance": {
+      "spring": 2,
+      "summer": 2,
+      "autumn": 2,
+      "winter": 2
+    },
+    "composition": "knee_up_default",
+    "outfit_distribution": {
+      "skirt_dress_jumper_skirt": 6,
+      "shorts_culotte": 2
+    },
+    "background_policy": "quiet_seasonal_support_only",
+    "reference_policy": "image_references_required_no_prompt_only_generation",
+    "pdf_policy": "not_in_this_phase"
+  },
+  "requests": [
+    {
+      "id": "request:tonari-coordinate-cute-healthy-seasonal-spring-light-cardigan-flare-dress",
+      "coordinate_order": 1,
+      "slot": "spring-light-cardigan-flare-dress",
+      "japanese_title": "春の薄カーデワンピ",
+      "season": "spring",
+      "scene": "spring_street",
+      "outfit_family": "skirt_dress_jumper_skirt",
+      "outfit_notes": "Cream light cardigan over a pale mint flare dress with a softly moving knee-up hem.",
+      "charm_notes": "Soft spring outing baseline, adult-cute and relaxed, with a little warm private-clothes charm.",
+      "leg_quality_notes": "Show soft thigh volume, natural knee shape, calf transition, and a healthy leg line inspired by the v1_1_front_1 reference.",
+      "composition": "knee_up",
+      "tone": "fresh",
+      "risk_note": "Avoid making the dress too plain or hiding the leg line.",
+      "target_path": "source/generated/tonari-no-coordinate/20260708_cute-healthy-seasonal_spring-light-cardigan-flare-dress_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp",
+        "source/originals/v1_1_front_1.webp"
+      ],
+      "reference_usage": {
+        "face_hair_identity": {
+          "path": "source/references/tonari-no-akari/identity-face-hair.webp",
+          "instruction": "Mandatory face, hair, eye, and hair ornament identity reference."
+        },
+        "body_balance": {
+          "path": "source/references/tonari-no-akari/identity-body-base.webp",
+          "instruction": "Mandatory body balance and adult petite proportion reference."
+        },
+        "default_outfit_context": {
+          "path": "source/references/tonari-no-akari/identity-basic-outfit.webp",
+          "instruction": "Mandatory baseline clothing-volume context; do not copy the outfit directly."
+        },
+        "side_view_identity": {
+          "path": "source/references/tonari-no-akari/identity-side-view.webp",
+          "instruction": "Mandatory side silhouette and hair-volume reference."
+        },
+        "leg_quality_reference": {
+          "path": "source/originals/v1_1_front_1.webp",
+          "instruction": "Mandatory leg-quality reference for soft thigh volume, natural knees, calf transition, and healthy leg line."
+        }
+      },
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: 春の薄カーデワンピ. Use the attached reference images as mandatory visual anchors; do not generate from prompt text alone. Reference roles: identity-face-hair, identity-body-base, identity-basic-outfit, identity-side-view, and v1_1_front_1 leg-quality reference. Akari identity lock: adult 25-year-old Japanese woman, Akari identity, short warm-brown bob, warm amber eyes, pale blue hair ornament on character-left side, cute adult private outing clothes. Outfit: Cream light cardigan over a pale mint flare dress with a softly moving knee-up hem. Charm: Soft spring outing baseline, adult-cute and relaxed, with a little warm private-clothes charm. Leg quality: Show soft thigh volume, natural knee shape, calf transition, and a healthy leg line inspired by the v1_1_front_1 reference. Composition: knee-up portrait; the person, outfit, and legs stay primary. Background: quiet seasonal background with light spring air only, no detailed storefront focus. Natural outfit-appropriate skin visibility is allowed. No readable image text, no logos, no watermarks, no frame, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, adult age impression, face/hair/hairpin consistency, and reference-image continuity. Leg Quality Gate: soft thigh volume, natural knee shape, believable calf transition, and healthy leg line must remain attractive and coherent. Outfit Gate: cream cardigan and pale mint flare dress must read clearly as cute spring outing clothes. Background must stay quiet seasonal support only so the person, outfit, and legs stay primary. Reject for missing reference influence, prompt-only drift, broken anatomy, readable text, logos, watermarks, frame, or panel layout.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "reference_drift_risk": "high",
+        "leg_quality_risk": "medium",
+        "outfit_drift_risk": "medium",
+        "background_distraction_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "generation_gate": "Generate only with the listed reference images attached; do not use prompt-only generation.",
+        "first_pass": "Place in the eight-image cute healthy seasonal outing contact sheet before finishing.",
+        "leg_quality_gate": "Run the Leg Quality Gate against v1_1_front_1 softness and continuity.",
+        "outcomes": "accept, hold, or reject"
+      }
+    },
+    {
+      "id": "request:tonari-coordinate-cute-healthy-seasonal-spring-denim-short-jacket-skirt",
+      "coordinate_order": 2,
+      "slot": "spring-denim-short-jacket-skirt",
+      "japanese_title": "春のデニム短ジャケット",
+      "season": "spring",
+      "scene": "spring_walk",
+      "outfit_family": "skirt_dress_jumper_skirt",
+      "outfit_notes": "Short soft denim jacket over an ivory top and a light A-line skirt.",
+      "charm_notes": "Casual spring outing with a little structure, more cute private clothes than streetwear.",
+      "leg_quality_notes": "Keep thighs softly dimensional under the skirt hem, with natural knees and a coherent calf line.",
+      "composition": "knee_up",
+      "tone": "everyday_cute",
+      "risk_note": "Avoid drifting into youth-casual streetwear.",
+      "target_path": "source/generated/tonari-no-coordinate/20260708_cute-healthy-seasonal_spring-denim-short-jacket-skirt_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp",
+        "source/originals/v1_1_front_1.webp"
+      ],
+      "reference_usage": {
+        "face_hair_identity": {
+          "path": "source/references/tonari-no-akari/identity-face-hair.webp",
+          "instruction": "Mandatory face, hair, eye, and hair ornament identity reference."
+        },
+        "body_balance": {
+          "path": "source/references/tonari-no-akari/identity-body-base.webp",
+          "instruction": "Mandatory body balance and adult petite proportion reference."
+        },
+        "default_outfit_context": {
+          "path": "source/references/tonari-no-akari/identity-basic-outfit.webp",
+          "instruction": "Mandatory baseline clothing-volume context; do not copy the outfit directly."
+        },
+        "side_view_identity": {
+          "path": "source/references/tonari-no-akari/identity-side-view.webp",
+          "instruction": "Mandatory side silhouette and hair-volume reference."
+        },
+        "leg_quality_reference": {
+          "path": "source/originals/v1_1_front_1.webp",
+          "instruction": "Mandatory leg-quality reference for soft thigh volume, natural knees, calf transition, and healthy leg line."
+        }
+      },
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: 春のデニム短ジャケット. Use the attached reference images as mandatory visual anchors; do not generate from prompt text alone. Reference roles: identity-face-hair, identity-body-base, identity-basic-outfit, identity-side-view, and v1_1_front_1 leg-quality reference. Akari identity lock: adult 25-year-old Japanese woman, Akari identity, short warm-brown bob, warm amber eyes, pale blue hair ornament on character-left side, cute adult private outing clothes. Outfit: Short soft denim jacket over an ivory top and a light A-line skirt. Charm: Casual spring outing with a little structure, more cute private clothes than streetwear. Leg quality: Keep thighs softly dimensional under the skirt hem, with natural knees and a coherent calf line. Composition: knee-up portrait; the person, outfit, and legs stay primary. Background: quiet seasonal background with spring walk atmosphere only. Natural outfit-appropriate skin visibility is allowed. No readable image text, no logos, no watermarks, no frame, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, adult age impression, face/hair/hairpin consistency, and reference-image continuity. Leg Quality Gate: soft thigh volume, natural knee shape, believable calf transition, and healthy leg line must remain attractive and coherent. Outfit Gate: denim jacket, ivory top, and A-line skirt must read as cute spring outing clothes rather than streetwear. Background must stay quiet seasonal support only so the person, outfit, and legs stay primary. Reject for missing reference influence, prompt-only drift, broken anatomy, readable text, logos, watermarks, frame, or panel layout.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "reference_drift_risk": "high",
+        "leg_quality_risk": "medium",
+        "outfit_drift_risk": "medium",
+        "background_distraction_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "generation_gate": "Generate only with the listed reference images attached; do not use prompt-only generation.",
+        "first_pass": "Place in the eight-image cute healthy seasonal outing contact sheet before finishing.",
+        "leg_quality_gate": "Run the Leg Quality Gate against v1_1_front_1 softness and continuity.",
+        "outcomes": "accept, hold, or reject"
+      }
+    },
+    {
+      "id": "request:tonari-coordinate-cute-healthy-seasonal-summer-puff-sleeve-blouse-skirt",
+      "coordinate_order": 3,
+      "slot": "summer-puff-sleeve-blouse-skirt",
+      "japanese_title": "夏のパフ袖ブラウス",
+      "season": "summer",
+      "scene": "summer_daylight",
+      "outfit_family": "skirt_dress_jumper_skirt",
+      "outfit_notes": "Light puff-sleeve blouse with a pale mint trapeze skirt.",
+      "charm_notes": "Clear summer clothing signal, airy and cute without leaning on scenery.",
+      "leg_quality_notes": "Keep the visible legs softly sunlit, with thigh-knee-calf continuity and no mannequin stiffness.",
+      "composition": "knee_up",
+      "tone": "fresh",
+      "risk_note": "Keep fabric light but not awkwardly transparent.",
+      "target_path": "source/generated/tonari-no-coordinate/20260708_cute-healthy-seasonal_summer-puff-sleeve-blouse-skirt_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp",
+        "source/originals/v1_1_front_1.webp"
+      ],
+      "reference_usage": {
+        "face_hair_identity": {
+          "path": "source/references/tonari-no-akari/identity-face-hair.webp",
+          "instruction": "Mandatory face, hair, eye, and hair ornament identity reference."
+        },
+        "body_balance": {
+          "path": "source/references/tonari-no-akari/identity-body-base.webp",
+          "instruction": "Mandatory body balance and adult petite proportion reference."
+        },
+        "default_outfit_context": {
+          "path": "source/references/tonari-no-akari/identity-basic-outfit.webp",
+          "instruction": "Mandatory baseline clothing-volume context; do not copy the outfit directly."
+        },
+        "side_view_identity": {
+          "path": "source/references/tonari-no-akari/identity-side-view.webp",
+          "instruction": "Mandatory side silhouette and hair-volume reference."
+        },
+        "leg_quality_reference": {
+          "path": "source/originals/v1_1_front_1.webp",
+          "instruction": "Mandatory leg-quality reference for soft thigh volume, natural knees, calf transition, and healthy leg line."
+        }
+      },
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: 夏のパフ袖ブラウス. Use the attached reference images as mandatory visual anchors; do not generate from prompt text alone. Reference roles: identity-face-hair, identity-body-base, identity-basic-outfit, identity-side-view, and v1_1_front_1 leg-quality reference. Akari identity lock: adult 25-year-old Japanese woman, Akari identity, short warm-brown bob, warm amber eyes, pale blue hair ornament on character-left side, cute adult private outing clothes. Outfit: Light puff-sleeve blouse with a pale mint trapeze skirt. Charm: Clear summer clothing signal, airy and cute without leaning on scenery. Leg quality: Keep the visible legs softly sunlit, with thigh-knee-calf continuity and no mannequin stiffness. Composition: knee-up portrait; the person, outfit, and legs stay primary. Background: quiet seasonal background with summer daylight only. Natural outfit-appropriate skin visibility is allowed. No readable image text, no logos, no watermarks, no frame, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, adult age impression, face/hair/hairpin consistency, and reference-image continuity. Leg Quality Gate: soft thigh volume, natural knee shape, believable calf transition, and healthy leg line must remain attractive and coherent. Outfit Gate: puff-sleeve blouse and pale mint trapeze skirt must read as summer private outing clothes. Background must stay quiet seasonal support only so the person, outfit, and legs stay primary. Reject for missing reference influence, prompt-only drift, awkward transparency, broken anatomy, readable text, logos, watermarks, frame, or panel layout.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "reference_drift_risk": "high",
+        "leg_quality_risk": "medium",
+        "outfit_drift_risk": "medium",
+        "background_distraction_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "generation_gate": "Generate only with the listed reference images attached; do not use prompt-only generation.",
+        "first_pass": "Place in the eight-image cute healthy seasonal outing contact sheet before finishing.",
+        "leg_quality_gate": "Run the Leg Quality Gate against v1_1_front_1 softness and continuity.",
+        "outcomes": "accept, hold, or reject"
+      }
+    },
+    {
+      "id": "request:tonari-coordinate-cute-healthy-seasonal-summer-collar-blouse-culotte",
+      "coordinate_order": 4,
+      "slot": "summer-collar-blouse-culotte",
+      "japanese_title": "夏襟ブラウスとキュロット",
+      "season": "summer",
+      "scene": "summer_outing",
+      "outfit_family": "shorts_culotte",
+      "outfit_notes": "Rounded-collar summer blouse with soft culottes.",
+      "charm_notes": "One of the two culotte checks, fresh and playful while staying adult.",
+      "leg_quality_notes": "Culotte hem should reveal soft thigh volume and natural knees without flattening the legs.",
+      "composition": "knee_up",
+      "tone": "fresh",
+      "risk_note": "Avoid school-uniform cues.",
+      "target_path": "source/generated/tonari-no-coordinate/20260708_cute-healthy-seasonal_summer-collar-blouse-culotte_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp",
+        "source/originals/v1_1_front_1.webp"
+      ],
+      "reference_usage": {
+        "face_hair_identity": {
+          "path": "source/references/tonari-no-akari/identity-face-hair.webp",
+          "instruction": "Mandatory face, hair, eye, and hair ornament identity reference."
+        },
+        "body_balance": {
+          "path": "source/references/tonari-no-akari/identity-body-base.webp",
+          "instruction": "Mandatory body balance and adult petite proportion reference."
+        },
+        "default_outfit_context": {
+          "path": "source/references/tonari-no-akari/identity-basic-outfit.webp",
+          "instruction": "Mandatory baseline clothing-volume context; do not copy the outfit directly."
+        },
+        "side_view_identity": {
+          "path": "source/references/tonari-no-akari/identity-side-view.webp",
+          "instruction": "Mandatory side silhouette and hair-volume reference."
+        },
+        "leg_quality_reference": {
+          "path": "source/originals/v1_1_front_1.webp",
+          "instruction": "Mandatory leg-quality reference for soft thigh volume, natural knees, calf transition, and healthy leg line."
+        }
+      },
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: 夏襟ブラウスとキュロット. Use the attached reference images as mandatory visual anchors; do not generate from prompt text alone. Reference roles: identity-face-hair, identity-body-base, identity-basic-outfit, identity-side-view, and v1_1_front_1 leg-quality reference. Akari identity lock: adult 25-year-old Japanese woman, Akari identity, short warm-brown bob, warm amber eyes, pale blue hair ornament on character-left side, cute adult private outing clothes. Outfit: Rounded-collar summer blouse with soft culottes. Charm: One of the two culotte checks, fresh and playful while staying adult. Leg quality: Culotte hem should reveal soft thigh volume and natural knees without flattening the legs. Composition: knee-up portrait; the person, outfit, and legs stay primary. Background: quiet seasonal background with summer outing air only. Natural outfit-appropriate skin visibility is allowed. No readable image text, no logos, no watermarks, no frame, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, adult age impression, face/hair/hairpin consistency, and reference-image continuity. Leg Quality Gate: soft thigh volume, natural knee shape, believable calf transition, and healthy leg line must remain attractive and coherent. Outfit Gate: rounded-collar blouse and culottes must read as adult summer outing clothes and not as a uniform. Background must stay quiet seasonal support only so the person, outfit, and legs stay primary. Reject for missing reference influence, prompt-only drift, broken anatomy, readable text, logos, watermarks, frame, or panel layout.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "reference_drift_risk": "high",
+        "leg_quality_risk": "high",
+        "outfit_drift_risk": "high",
+        "background_distraction_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "generation_gate": "Generate only with the listed reference images attached; do not use prompt-only generation.",
+        "first_pass": "Place in the eight-image cute healthy seasonal outing contact sheet before finishing.",
+        "leg_quality_gate": "Run the Leg Quality Gate against v1_1_front_1 softness and continuity.",
+        "outcomes": "accept, hold, or reject"
+      }
+    },
+    {
+      "id": "request:tonari-coordinate-cute-healthy-seasonal-autumn-short-knit-check-skirt",
+      "coordinate_order": 5,
+      "slot": "autumn-short-knit-check-skirt",
+      "japanese_title": "秋の短めニット",
+      "season": "autumn",
+      "scene": "autumn_walk",
+      "outfit_family": "skirt_dress_jumper_skirt",
+      "outfit_notes": "Short soft knit with a muted check A-line skirt.",
+      "charm_notes": "Autumn color and texture while keeping the silhouette cute and easygoing.",
+      "leg_quality_notes": "Skirt length should keep thigh softness and knee placement visible enough to judge.",
+      "composition": "knee_up",
+      "tone": "warm",
+      "risk_note": "Avoid making the knit tight glamour styling.",
+      "target_path": "source/generated/tonari-no-coordinate/20260708_cute-healthy-seasonal_autumn-short-knit-check-skirt_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp",
+        "source/originals/v1_1_front_1.webp"
+      ],
+      "reference_usage": {
+        "face_hair_identity": {
+          "path": "source/references/tonari-no-akari/identity-face-hair.webp",
+          "instruction": "Mandatory face, hair, eye, and hair ornament identity reference."
+        },
+        "body_balance": {
+          "path": "source/references/tonari-no-akari/identity-body-base.webp",
+          "instruction": "Mandatory body balance and adult petite proportion reference."
+        },
+        "default_outfit_context": {
+          "path": "source/references/tonari-no-akari/identity-basic-outfit.webp",
+          "instruction": "Mandatory baseline clothing-volume context; do not copy the outfit directly."
+        },
+        "side_view_identity": {
+          "path": "source/references/tonari-no-akari/identity-side-view.webp",
+          "instruction": "Mandatory side silhouette and hair-volume reference."
+        },
+        "leg_quality_reference": {
+          "path": "source/originals/v1_1_front_1.webp",
+          "instruction": "Mandatory leg-quality reference for soft thigh volume, natural knees, calf transition, and healthy leg line."
+        }
+      },
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: 秋の短めニット. Use the attached reference images as mandatory visual anchors; do not generate from prompt text alone. Reference roles: identity-face-hair, identity-body-base, identity-basic-outfit, identity-side-view, and v1_1_front_1 leg-quality reference. Akari identity lock: adult 25-year-old Japanese woman, Akari identity, short warm-brown bob, warm amber eyes, pale blue hair ornament on character-left side, cute adult private outing clothes. Outfit: Short soft knit with a muted check A-line skirt. Charm: Autumn color and texture while keeping the silhouette cute and easygoing. Leg quality: Skirt length should keep thigh softness and knee placement visible enough to judge. Composition: knee-up portrait; the person, outfit, and legs stay primary. Background: quiet seasonal background with autumn walk atmosphere only. Natural outfit-appropriate skin visibility is allowed. No readable image text, no logos, no watermarks, no frame, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, adult age impression, face/hair/hairpin consistency, and reference-image continuity. Leg Quality Gate: soft thigh volume, natural knee shape, believable calf transition, and healthy leg line must remain attractive and coherent. Outfit Gate: short knit and muted check skirt must read as autumn private outing clothes, not tight glamour styling. Background must stay quiet seasonal support only so the person, outfit, and legs stay primary. Reject for missing reference influence, prompt-only drift, broken anatomy, readable text, logos, watermarks, frame, or panel layout.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "reference_drift_risk": "high",
+        "leg_quality_risk": "medium",
+        "outfit_drift_risk": "medium",
+        "background_distraction_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "generation_gate": "Generate only with the listed reference images attached; do not use prompt-only generation.",
+        "first_pass": "Place in the eight-image cute healthy seasonal outing contact sheet before finishing.",
+        "leg_quality_gate": "Run the Leg Quality Gate against v1_1_front_1 softness and continuity.",
+        "outcomes": "accept, hold, or reject"
+      }
+    },
+    {
+      "id": "request:tonari-coordinate-cute-healthy-seasonal-autumn-jumper-skirt-thin-turtleneck",
+      "coordinate_order": 6,
+      "slot": "autumn-jumper-skirt-thin-turtleneck",
+      "japanese_title": "秋のジャンスカ",
+      "season": "autumn",
+      "scene": "autumn_cafe_walk",
+      "outfit_family": "skirt_dress_jumper_skirt",
+      "outfit_notes": "Brown jumper skirt over a thin soft turtleneck.",
+      "charm_notes": "Adult cute autumn jumper-skirt look with a calm day-off feeling.",
+      "leg_quality_notes": "Keep the jumper-skirt hem from hiding the soft thigh volume and natural knee rhythm.",
+      "composition": "knee_up",
+      "tone": "warm",
+      "risk_note": "Avoid childlike proportions or school styling.",
+      "target_path": "source/generated/tonari-no-coordinate/20260708_cute-healthy-seasonal_autumn-jumper-skirt-thin-turtleneck_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp",
+        "source/originals/v1_1_front_1.webp"
+      ],
+      "reference_usage": {
+        "face_hair_identity": {
+          "path": "source/references/tonari-no-akari/identity-face-hair.webp",
+          "instruction": "Mandatory face, hair, eye, and hair ornament identity reference."
+        },
+        "body_balance": {
+          "path": "source/references/tonari-no-akari/identity-body-base.webp",
+          "instruction": "Mandatory body balance and adult petite proportion reference."
+        },
+        "default_outfit_context": {
+          "path": "source/references/tonari-no-akari/identity-basic-outfit.webp",
+          "instruction": "Mandatory baseline clothing-volume context; do not copy the outfit directly."
+        },
+        "side_view_identity": {
+          "path": "source/references/tonari-no-akari/identity-side-view.webp",
+          "instruction": "Mandatory side silhouette and hair-volume reference."
+        },
+        "leg_quality_reference": {
+          "path": "source/originals/v1_1_front_1.webp",
+          "instruction": "Mandatory leg-quality reference for soft thigh volume, natural knees, calf transition, and healthy leg line."
+        }
+      },
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: 秋のジャンスカ. Use the attached reference images as mandatory visual anchors; do not generate from prompt text alone. Reference roles: identity-face-hair, identity-body-base, identity-basic-outfit, identity-side-view, and v1_1_front_1 leg-quality reference. Akari identity lock: adult 25-year-old Japanese woman, Akari identity, short warm-brown bob, warm amber eyes, pale blue hair ornament on character-left side, cute adult private outing clothes. Outfit: Brown jumper skirt over a thin soft turtleneck. Charm: Adult cute autumn jumper-skirt look with a calm day-off feeling. Leg quality: Keep the jumper-skirt hem from hiding the soft thigh volume and natural knee rhythm. Composition: knee-up portrait; the person, outfit, and legs stay primary. Background: quiet seasonal background with autumn cafe-walk atmosphere only. Natural outfit-appropriate skin visibility is allowed. No readable image text, no logos, no watermarks, no frame, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, adult age impression, face/hair/hairpin consistency, and reference-image continuity. Leg Quality Gate: soft thigh volume, natural knee shape, believable calf transition, and healthy leg line must remain attractive and coherent. Outfit Gate: jumper skirt and thin turtleneck must read as adult cute autumn clothes without school-coded styling. Background must stay quiet seasonal support only so the person, outfit, and legs stay primary. Reject for missing reference influence, prompt-only drift, broken anatomy, readable text, logos, watermarks, frame, or panel layout.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "reference_drift_risk": "high",
+        "leg_quality_risk": "medium",
+        "outfit_drift_risk": "high",
+        "background_distraction_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "generation_gate": "Generate only with the listed reference images attached; do not use prompt-only generation.",
+        "first_pass": "Place in the eight-image cute healthy seasonal outing contact sheet before finishing.",
+        "leg_quality_gate": "Run the Leg Quality Gate against v1_1_front_1 softness and continuity.",
+        "outcomes": "accept, hold, or reject"
+      }
+    },
+    {
+      "id": "request:tonari-coordinate-cute-healthy-seasonal-winter-knit-onepiece-short-coat",
+      "coordinate_order": 7,
+      "slot": "winter-knit-onepiece-short-coat",
+      "japanese_title": "冬のニットワンピ",
+      "season": "winter",
+      "scene": "winter_street",
+      "outfit_family": "skirt_dress_jumper_skirt",
+      "outfit_notes": "Soft knit one-piece with a short winter coat.",
+      "charm_notes": "Winter warmth without hiding the legs completely, adult cute and softly dressed.",
+      "leg_quality_notes": "Visible legs should keep soft volume and natural knee-to-calf continuity despite winter styling.",
+      "composition": "knee_up",
+      "tone": "warm",
+      "risk_note": "Avoid bodycon styling and avoid long-coat leg concealment.",
+      "target_path": "source/generated/tonari-no-coordinate/20260708_cute-healthy-seasonal_winter-knit-onepiece-short-coat_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp",
+        "source/originals/v1_1_front_1.webp"
+      ],
+      "reference_usage": {
+        "face_hair_identity": {
+          "path": "source/references/tonari-no-akari/identity-face-hair.webp",
+          "instruction": "Mandatory face, hair, eye, and hair ornament identity reference."
+        },
+        "body_balance": {
+          "path": "source/references/tonari-no-akari/identity-body-base.webp",
+          "instruction": "Mandatory body balance and adult petite proportion reference."
+        },
+        "default_outfit_context": {
+          "path": "source/references/tonari-no-akari/identity-basic-outfit.webp",
+          "instruction": "Mandatory baseline clothing-volume context; do not copy the outfit directly."
+        },
+        "side_view_identity": {
+          "path": "source/references/tonari-no-akari/identity-side-view.webp",
+          "instruction": "Mandatory side silhouette and hair-volume reference."
+        },
+        "leg_quality_reference": {
+          "path": "source/originals/v1_1_front_1.webp",
+          "instruction": "Mandatory leg-quality reference for soft thigh volume, natural knees, calf transition, and healthy leg line."
+        }
+      },
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: 冬のニットワンピ. Use the attached reference images as mandatory visual anchors; do not generate from prompt text alone. Reference roles: identity-face-hair, identity-body-base, identity-basic-outfit, identity-side-view, and v1_1_front_1 leg-quality reference. Akari identity lock: adult 25-year-old Japanese woman, Akari identity, short warm-brown bob, warm amber eyes, pale blue hair ornament on character-left side, cute adult private outing clothes. Outfit: Soft knit one-piece with a short winter coat. Charm: Winter warmth without hiding the legs completely, adult cute and softly dressed. Leg quality: Visible legs should keep soft volume and natural knee-to-calf continuity despite winter styling. Composition: knee-up portrait; the person, outfit, and legs stay primary. Background: quiet seasonal background with winter street air only. Natural outfit-appropriate skin visibility is allowed. No readable image text, no logos, no watermarks, no frame, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, adult age impression, face/hair/hairpin consistency, and reference-image continuity. Leg Quality Gate: soft thigh volume, natural knee shape, believable calf transition, and healthy leg line must remain attractive and coherent. Outfit Gate: knit one-piece and short winter coat must read as winter outing clothes without bodycon styling or long-coat concealment. Background must stay quiet seasonal support only so the person, outfit, and legs stay primary. Reject for missing reference influence, prompt-only drift, broken anatomy, readable text, logos, watermarks, frame, or panel layout.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "reference_drift_risk": "high",
+        "leg_quality_risk": "high",
+        "outfit_drift_risk": "medium",
+        "background_distraction_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "generation_gate": "Generate only with the listed reference images attached; do not use prompt-only generation.",
+        "first_pass": "Place in the eight-image cute healthy seasonal outing contact sheet before finishing.",
+        "leg_quality_gate": "Run the Leg Quality Gate against v1_1_front_1 softness and continuity.",
+        "outcomes": "accept, hold, or reject"
+      }
+    },
+    {
+      "id": "request:tonari-coordinate-cute-healthy-seasonal-winter-short-duffle-culotte",
+      "coordinate_order": 8,
+      "slot": "winter-short-duffle-culotte",
+      "japanese_title": "冬の短めダッフル",
+      "season": "winter",
+      "scene": "winter_walk",
+      "outfit_family": "shorts_culotte",
+      "outfit_notes": "Adult-cute short duffle or cape-like coat with warm culottes.",
+      "charm_notes": "Second culotte check, winter version, cute but not school-coat coded.",
+      "leg_quality_notes": "Winter culotte styling should still reveal coherent thighs, knees, calves, and healthy leg line.",
+      "composition": "knee_up",
+      "tone": "warm",
+      "risk_note": "Avoid school-coat impression.",
+      "target_path": "source/generated/tonari-no-coordinate/20260708_cute-healthy-seasonal_winter-short-duffle-culotte_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp",
+        "source/originals/v1_1_front_1.webp"
+      ],
+      "reference_usage": {
+        "face_hair_identity": {
+          "path": "source/references/tonari-no-akari/identity-face-hair.webp",
+          "instruction": "Mandatory face, hair, eye, and hair ornament identity reference."
+        },
+        "body_balance": {
+          "path": "source/references/tonari-no-akari/identity-body-base.webp",
+          "instruction": "Mandatory body balance and adult petite proportion reference."
+        },
+        "default_outfit_context": {
+          "path": "source/references/tonari-no-akari/identity-basic-outfit.webp",
+          "instruction": "Mandatory baseline clothing-volume context; do not copy the outfit directly."
+        },
+        "side_view_identity": {
+          "path": "source/references/tonari-no-akari/identity-side-view.webp",
+          "instruction": "Mandatory side silhouette and hair-volume reference."
+        },
+        "leg_quality_reference": {
+          "path": "source/originals/v1_1_front_1.webp",
+          "instruction": "Mandatory leg-quality reference for soft thigh volume, natural knees, calf transition, and healthy leg line."
+        }
+      },
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: 冬の短めダッフル. Use the attached reference images as mandatory visual anchors; do not generate from prompt text alone. Reference roles: identity-face-hair, identity-body-base, identity-basic-outfit, identity-side-view, and v1_1_front_1 leg-quality reference. Akari identity lock: adult 25-year-old Japanese woman, Akari identity, short warm-brown bob, warm amber eyes, pale blue hair ornament on character-left side, cute adult private outing clothes. Outfit: Adult-cute short duffle or cape-like coat with warm culottes. Charm: Second culotte check, winter version, cute but not school-coat coded. Leg quality: Winter culotte styling should still reveal coherent thighs, knees, calves, and healthy leg line. Composition: knee-up portrait; the person, outfit, and legs stay primary. Background: quiet seasonal background with winter walk air only. Natural outfit-appropriate skin visibility is allowed. No readable image text, no logos, no watermarks, no frame, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, adult age impression, face/hair/hairpin consistency, and reference-image continuity. Leg Quality Gate: soft thigh volume, natural knee shape, believable calf transition, and healthy leg line must remain attractive and coherent. Outfit Gate: short duffle or cape-like coat and culottes must read as adult cute winter outing clothes, not school-coat styling. Background must stay quiet seasonal support only so the person, outfit, and legs stay primary. Reject for missing reference influence, prompt-only drift, broken anatomy, readable text, logos, watermarks, frame, or panel layout.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "reference_drift_risk": "high",
+        "leg_quality_risk": "high",
+        "outfit_drift_risk": "high",
+        "background_distraction_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "generation_gate": "Generate only with the listed reference images attached; do not use prompt-only generation.",
+        "first_pass": "Place in the eight-image cute healthy seasonal outing contact sheet before finishing.",
+        "leg_quality_gate": "Run the Leg Quality Gate against v1_1_front_1 softness and continuity.",
+        "outcomes": "accept, hold, or reject"
+      }
+    }
+  ]
+}

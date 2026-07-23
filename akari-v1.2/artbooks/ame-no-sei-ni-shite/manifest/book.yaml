@@ -1,0 +1,28 @@
+schema_version: 1
+book_id: akari-v1.2-ame-no-sei-ni-shite
+title: 雨のせいにして
+version: 1.0.0
+page_size: {name: A4-landscape, width_in: 11.69, height_in: 8.27}
+preview_size: {width: 3508, height: 2480}
+minimum_image: {width: 1536, height: 1024}
+page_count: 18
+release_pdf: release/akari-v1.2-ame-no-sei-ni-shite.pdf
+pages:
+  - {page: 1, id: cover, layout: artbook-cover, source: scene-06, crop: cover}
+  - {page: 2, id: first-rain-detail, layout: artbook-detail, source: scene-03, crop: rain-detail}
+  - {page: 3, id: title, layout: artbook-title, source: null, crop: null}
+  - {page: 4, id: scene-01, layout: artbook-scene, source: scene-01, crop: full}
+  - {page: 5, id: scene-02, layout: artbook-scene, source: scene-02, crop: full}
+  - {page: 6, id: scene-03, layout: artbook-scene, source: scene-03, crop: full}
+  - {page: 7, id: scene-04, layout: artbook-scene, source: scene-04, crop: full}
+  - {page: 8, id: scene-05, layout: artbook-scene, source: scene-05, crop: full}
+  - {page: 9, id: scene-06, layout: artbook-scene, source: scene-06, crop: full}
+  - {page: 10, id: scene-07, layout: artbook-scene, source: scene-07, crop: full}
+  - {page: 11, id: scene-08, layout: artbook-scene, source: scene-08, crop: full}
+  - {page: 12, id: scene-09, layout: artbook-scene, source: scene-09, crop: full}
+  - {page: 13, id: scene-10, layout: artbook-scene, source: scene-10, crop: full}
+  - {page: 14, id: scene-11, layout: artbook-scene, source: scene-11, crop: full}
+  - {page: 15, id: scene-12, layout: artbook-scene, source: scene-12, crop: full}
+  - {page: 16, id: afterimage, layout: artbook-afterimage, source: scene-12, crop: afterimage}
+  - {page: 17, id: colophon, layout: artbook-colophon, source: null, crop: null}
+  - {page: 18, id: back-cover, layout: artbook-back, source: null, crop: null}

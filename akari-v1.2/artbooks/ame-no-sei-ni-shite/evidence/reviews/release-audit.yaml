@@ -1,0 +1,38 @@
+schema_version: 1
+scope: release
+status: accepted
+audited_at: '2026-07-21T06:30:44Z'
+release:
+  pdf: release/akari-v1.2-ame-no-sei-ni-shite.pdf
+  sha256: 837376aab10da86b2594acd802ed6c032b4d4f7e807856c61f7df53d48df9146
+  bytes: 32667501
+  checksum: release/checksums.txt
+  page_count: 18
+  page_size: A4-landscape
+  page_size_points: [841.92, 594.96]
+images:
+  accepted_count: 12
+  format: WEBP
+  encoding: quality-95
+  dimensions: [1536, 1024]
+  selected_b_variants: [scene-05, scene-06, scene-07, scene-12]
+reviews:
+  acts_accepted: 4
+  full_continuity: accepted
+  full_contact_sheet: evidence/contact-sheets/full-continuity.webp
+visual_audit:
+  raster_pages: 18
+  raster_dpi: 288
+  raster_dimensions: [3368, 2380]
+  blank_page_check: pass
+  preview_crop_alignment: pass
+  manual_contact_sheet_review: pass
+verification:
+  command: npm run gate:release:ame-no-sei-ni-shite
+  exit_code: 0
+  artbook_python_tests: 18
+  repository_python_tests: 550
+  node_tests: 57
+  markdown_errors: 0
+  natural_form_structure_audit: pass
+  v1_2_release_pins: pass

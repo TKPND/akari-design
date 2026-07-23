@@ -1,0 +1,38 @@
+schema_version: 1
+scope: first-pass
+status: review
+contact_sheet: evidence/contact-sheets/first-pass-continuity.webp
+contact_sheet_sha256: bd00126801e2f00f80f0807158a4af1fa398b2da0676e483c2cf6a31ed1aec32
+checks:
+  scene_count: pass
+  identity_and_age: pass
+  hair_ornament_side: pass
+  time_and_weather_progression: pass
+  indoor_outdoor_transition: pass
+  emotional_progression: pass
+findings:
+  - scene_id: scene-05
+    severity: major
+    category: continuity
+    note: The shoulder bag is duplicated and the plain white top gains lace trim.
+    action: Generate an independent B candidate with exactly one open shoulder bag and the established plain white top.
+  - scene_id: scene-06
+    severity: major
+    category: continuity
+    note: The established plain white top changes into a hoodie beneath the cardigan.
+    action: Generate an independent B candidate with the exact outdoor layers and shared-umbrella proximity.
+  - scene_id: scene-07
+    severity: minor
+    category: continuity
+    note: Akari stands in striped socks on the wet lower genkan after her shoes are already removed.
+    action: Generate a B candidate with Akari standing on the raised dry floor while shoes and umbrella remain below.
+  - scene_id: scene-12
+    severity: major
+    category: pov
+    note: the viewer's sleeve becomes a large foreground fabric plane instead of a tiny edge.
+    action: Generate an independent B candidate where only a narrow cuff edge appears at one frame boundary.
+b_targets:
+  - scene-05
+  - scene-06
+  - scene-07
+  - scene-12

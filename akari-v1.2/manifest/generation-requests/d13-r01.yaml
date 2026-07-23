@@ -1,0 +1,154 @@
+schema_version: 1
+request_id: akari-v1.2-d13-r01
+asset_id: D13
+revision: r01
+variation_axis: independent_scene_attempt
+references:
+  - role: accepted_d12_recent_identity_outfit_action
+    path: akari-v1.2/accepted/daily/life/akari-v1.2_d12_life-fridge-open_r01.png
+  - role: accepted_d04_compact_room_route
+    path: akari-v1.2/accepted/daily/morning/akari-v1.2_d04_morning-drink-fetch_r02.png
+  - role: accepted_c03_hairpin_three_quarter
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c03_hairpin-side-45_r02.png
+  - role: accepted_c01_standing_body
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c01_front-natural-stance_r01.png
+  - role: accepted_c07_standing_sock_feet
+    path: akari-v1.2/accepted/core/indoor-feet/akari-v1.2_c07_indoor-socks-standing_r01.png
+shared_prompt: >-
+  Use the five visible accepted images only in their declared roles to create
+  one standalone Daily Wave 3 life-action scene of the same naturally cute
+  25-year-old adult Akari. Image 1 controls recent adult identity, healthy body
+  volume, normal short bob, complete character-left ornament, oversized opaque
+  white hoodie, opaque gray pleated skirt, striped socks, ordinary upright
+  household action, and restrained daylight rendering; do not copy its
+  refrigerator, open door, handle grip, or kitchen fixtures. Image 2 controls
+  only compact-room route scale and ordinary standing movement; do not copy its
+  T-shirt, shorts, drink, plant, bed, kitchen fixtures, exact gait, or
+  expression. Image 3 controls hairpin-side three-quarter identity, complete
+  character-left pale-blue crossed pins and ribbon-like ornament, cheek
+  contour, and short-bob side construction; do not copy shoes, smile, or white
+  backdrop. Image 4 controls adult standing ribcage, pelvis, bilateral leg
+  proportions, and healthy body volume; do not copy its front-facing pose,
+  shoes, smile, or white backdrop. Image 5 controls warm-white mid-calf socks
+  with exactly two thin pale-blue stripes, healthy ankles and feet, flat heels,
+  relaxed toes, and believable knit shape; do not copy its exact stance, shoes,
+  or white backdrop.
+
+  Show Akari as she searches one shallow desk drawer for her charger in a
+  compact plain room during soft diffused neutral daytime light. Use a vertical
+  1024 by 1536 portrait composition and a gently elevated front-right
+  three-quarter camera. Place one compact plain light-wood desk at image-left
+  and Akari just to its image-right. The desk has exactly one waist-height
+  shallow drawer open about one forearm length toward the camera. Akari uses
+  only her character-right hand to pull the drawer by one simple centered
+  handle. Her free character-left hand hovers open just above the drawer
+  contents with five natural fingers and a neutral wrist, ready to search but
+  not touching or lifting anything. Neither hand holds a charger, cable,
+  notebook, or any found item. The drawer never crosses in front of her torso
+  and must not hide her skirt, either leg, or either foot. Show her complete
+  ornament and crown through both socked heels and toes.
+
+  Keep her torso upright with one small natural lean from the hips toward the
+  drawer, pelvis stable, shoulders relaxed, and neck neutral. Put both socked
+  feet fully flat on the floor in a small natural stagger, each leg independently
+  traceable from hip through knee, shin, ankle, heel, and toe. Never cross or
+  fuse the legs, hide a foot behind the desk, crop a heel or toe, use tiptoe
+  contact, or point either sole at the viewer. Direct both open eyes down into
+  the drawer with relaxed brows, warm neutral cheeks, and a small closed mildly
+  puzzled but calm mouth. Preserve the complete character-left ornament and
+  normal short bob. This is practical non-sensual character documentation, not
+  posing, viewer performance, a pin-up, or a product advertisement.
+
+  Include exactly two Humanization details: push the character-right hoodie
+  cuff up by about one thumb width, and place one small plain drawer organizer
+  slightly askew inside the drawer. Inside that organizer show exactly one
+  small blank warm-white charger adapter, one short loosely coiled pale-blue
+  charging cable with two ordinary ends, and one closed blank gray notebook.
+  Keep all three items below the drawer rim and fully supported. Allow only the
+  desk, one open drawer, one askew organizer, its three declared contents, a
+  neutral floor and wall, and one partial plain chair back tucked under the far
+  side of the desk. Do not show phone, laptop, tablet, screen, outlet, plugged
+  cable, extra cable, power strip, loose electronics, readable labels, held
+  item, drink, food, towel, basket, laundry, bag, clock, mirror, bed, sofa,
+  refrigerator, footwear, text, logo, or explanatory prop. The scene is calm,
+  awake, healthy, and task-focused, never frantic, sleepy, collapsed, sad,
+  distressed, ill, intoxicated, dissociated, sensual, fetish, glamorous, or
+  staged for the viewer. There is no second action.
+
+  When references conflict, D12 controls recent adult identity, outfit,
+  upright action, and rendering; D04 controls only compact-room route scale;
+  C03 controls three-quarter identity and ornament; C01 controls adult standing
+  body proportions; and C07 controls socks and feet. Do not create closed eyes,
+  tears, open mouth, broad smile, viewer focus, wrong ornament side, missing
+  ornament parts, wrong hair length, wrong outfit, exposed underwear, bare
+  feet, removed sock, wrong sock stripes, cropped head hand drawer desk torso
+  pelvis knee shin sock heel or toe, fused missing extra or malformed fingers,
+  broken wrists, disconnected arms, twisted neck spine shoulder ribcage pelvis
+  knee or ankle, fused hidden crossed or untraceable legs, one hidden foot,
+  floating body drawer organizer adapter cable notebook or desk, impossible
+  drawer rail handle hand cable connector or organizer geometry, duplicated
+  drawer desk charger cable or notebook, forbidden props, readable text, logo,
+  watermark, border, collage, grid, multiple characters, or severe identity,
+  adult-age, anatomy, continuity, or rendering drift.
+scene_contract:
+  camera: gently-elevated-front-right-three-quarter-portrait-full-body
+  location: compact-plain-room-with-light-wood-desk
+  support: upright-standing-with-bilateral-flat-floor-foot-contact
+  action: right-hand-open-drawer-left-hand-hover-search
+  continuity: recent-standard-outfit-normal-hair-and-restrained-daylight-rendering
+  lighting: soft-diffused-neutral-daytime-light
+  gaze: both-open-eyes-down-into-shallow-drawer
+  pose: small-forward-hip-lean-with-independent-natural-staggered-legs
+  humanization:
+    - character-right-hoodie-cuff-pushed-up-one-thumb-width
+    - small-plain-drawer-organizer-slightly-askew
+  outfit:
+    top: oversized-opaque-white-hoodie
+    bottom: opaque-gray-pleated-skirt
+    socks: warm-white-mid-calf-exactly-two-thin-pale-blue-stripes
+  required_visible_features:
+    - complete-head-character-left-ornament-and-both-open-eyes
+    - character-right-five-finger-hand-on-centered-drawer-handle
+    - free-character-left-five-finger-hand-hovering-over-contents
+    - stable-ribcage-pelvis-and-upright-floor-support
+    - separately-traceable-bilateral-thigh-knee-shin-lines
+    - both-flat-striped-socks-ankles-heels-and-relaxed-toes
+    - one-coherent-desk-drawer-organizer-adapter-cable-and-notebook
+  forbidden_props: [phone, laptop, tablet, screen, outlet, plugged-cable, extra-cable, power-strip, loose-electronics, readable-labels, held-item, drink, food, towel, basket, laundry, bag, clock, mirror, bed, sofa, refrigerator, footwear, explanatory-prop]
+production_requirements:
+  file_format: png
+  target_canvas: {width: 1024, height: 1536}
+  accepted_width: {minimum: 1020, maximum: 1028}
+  accepted_height: {minimum: 1532, maximum: 1540}
+  standalone_composition: true
+  generated_grid: forbidden
+  force_exact_resize: forbidden
+candidate_policy:
+  initial_variants: [a, b]
+  optional_variant: c
+  optional_c_only_for: d13-scene-or-distinct-independent-candidate-local-major-failures
+  stop_for_shared_failure: [D12, D04, C03, C01, C07]
+  cross_candidate_references: forbidden
+candidates:
+  - variant: a
+    title: independent-scene-a
+    target_path: source/candidates/d13/r01/akari-v1.2_d13_life-charger-search_r01-a.png
+  - variant: b
+    title: independent-scene-b
+    target_path: source/candidates/d13/r01/akari-v1.2_d13_life-charger-search_r01-b.png
+comparison_anchors: []
+acceptance_gates: [identity, body, state, continuity, rendering, production]
+hard_rejects:
+  - severe identity adult-age face body-volume continuity or rendering drift
+  - fused missing duplicated disconnected hidden or untraceable limbs or joints
+  - floating weight broken floor pelvis leg foot hand drawer desk organizer adapter cable or notebook support or contradictory contact
+  - missing mirrored relocated duplicated or materially redesigned ornament
+  - wrong hair length extreme bed head wet hair or wind
+  - closed eyes tears distress sadness pain injury illness intoxication sleep collapse dissociation sensual fetish glamour viewer focus broad smile or open mouth
+  - wrong outfit exposed underwear removed sock bare feet incorrect sock height or stripes
+  - malformed extra or fused fingers broken wrist hidden hand disconnected arm or impossible handle grip
+  - fused crossed hidden or untraceable legs one hidden foot broken knee or ankle tiptoe pointed foot or missing heel or toe
+  - impossible duplicated floating body-obscuring or unsupported drawer desk organizer adapter cable notebook handle or rail
+  - phone laptop tablet screen outlet plugged cable extra cable power strip loose electronics readable labels held item drink food towel basket laundry bag clock mirror bed sofa refrigerator footwear or explanatory prop
+  - crop or scale preventing complete head ornament hand drawer desk torso pelvis knee shin sock heel toe or floor-contact review
+  - readable text logo watermark border collage grid or multiple character

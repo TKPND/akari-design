@@ -1,0 +1,137 @@
+schema_version: 1
+request_id: akari-v1.2-d06-r01
+asset_id: D06
+revision: r01
+variation_axis: independent_scene_attempt
+references:
+  - role: accepted_c04_grounded_floor_sitting
+    path: akari-v1.2/accepted/core/sitting/akari-v1.2_c04_floor-sitting_r01.png
+  - role: accepted_c01_normal_hair_identity
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c01_front-natural-stance_r01.png
+  - role: accepted_c03_hairpin_three_quarter
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c03_hairpin-side-45_r02.png
+  - role: accepted_c06_2_safe_relief_expression
+    path: akari-v1.2/accepted/core/face-hair/akari-v1.2_c06-2_sleepy-secure_r01.png
+  - role: accepted_c07_seated_sock_feet
+    path: akari-v1.2/accepted/core/indoor-feet/akari-v1.2_c07_indoor-socks-seated_r01.png
+shared_prompt: >-
+  Use the five visible accepted images only in their declared roles to create
+  one standalone evening Daily scene of the same naturally cute 25-year-old
+  adult Akari just after she has returned home. Image 1 controls grounded
+  floor-sitting anatomy, pelvis-to-leg support, healthy leg volume, the
+  oversized opaque white hoodie, opaque gray pleated skirt, striped socks, and
+  seated rendering; do not copy its exact side-sit pose, smile, rug, plain
+  backdrop, or viewer focus. Image 2 controls adult identity, normal short bob,
+  front face, standard outfit, palette, and healthy body volume; do not copy
+  its sneakers, rigid standing pose, smile, or white reference backdrop. Image
+  3 controls the hairpin-side three-quarter identity, complete character-left
+  pale-blue crossed pins and ribbon-like ornament, cheek contour, and short-bob
+  side construction; do not copy its standing pose, smile, shoes, or white
+  reference backdrop. Image 4 controls only the C06-2 expression intensity:
+  mildly heavy but open eyelids, relaxed brows and cheeks, and a small closed
+  almost-neutral mouth that reads secure and relieved; do not copy its morning
+  hair disturbance, chest-up crop, or plain backdrop. Image 5 controls
+  warm-white mid-calf socks with exactly two thin pale-blue stripes, seated
+  ankle and foot volume, relaxed toes, heel shape, and believable contact; do
+  not copy its exact pose, smile, rug, or plain backdrop. Show Akari in a
+  compact closed apartment entryway under warm soft evening interior light
+  with a cooler neutral seam around the closed front door and a shallow lower
+  threshold. She has removed her shoes and taken a controlled low floor sit
+  against the room-side wall before doing anything else. Use a room-side
+  front-left three-quarter camera at natural seated height. Her pelvis is fully
+  supported on the floor and her upper back touches the wall lightly without
+  sliding or collapsing. Raise one knee modestly with that socked sole fully
+  flat. Fold the other leg low and outward with a relaxed ankle and visible
+  toe. Keep both legs separately traceable from pelvis through thigh, knee,
+  shin, ankle, heel, and toe with no fused, hidden, crossed, or contradictory
+  topology. Place one hand loosely over the raised knee or nearby thigh and
+  the other palm in light side support on the floor. Drop the shoulders and
+  round the spine only mildly while keeping the neck supported. Angle the
+  knees away from camera and keep the opaque pleated skirt covering the pelvis
+  and upper thighs with no underwear view. Direct her unfocused gaze toward
+  the nearby floor or removed shoes, never the viewer. Keep the complete head,
+  ornament, both hands, pelvis, both legs, socks, heels, toes, wall support,
+  and all floor contact visible. Add exactly two Humanization elements: push
+  the character-right hoodie cuff up by about one thumb width, and set the
+  character-right sock slightly lower than the character-left sock while both
+  pale-blue stripes remain complete. Do not add further costume disorder.
+  Place one simple soft tote or shoulder bag on the floor within arm's reach
+  and one neat pair of removed white-and-pale-blue sneakers near the threshold
+  as restrained return-home cues. Do not make them a product display. The
+  moment is safe private relief after arriving home, never a fall, collapse,
+  injury, illness, despair, fear, intoxication, sleep, dissociation,
+  sensuality, glamour posing, or viewer performance. D05 is sequence history
+  only and must not contribute morning roomwear, bed hair, washroom staging,
+  or morning light. When references conflict, C04 controls grounded sitting
+  body and standard indoor outfit, C01 controls adult identity and normal hair,
+  C03 controls three-quarter identity and ornament, C06-2 controls only
+  expression intensity, and C07 controls seated socks and feet. Do not create
+  closed eyes, tears, an open mouth, a broad smile, viewer focus, thin legs,
+  broken pelvis support, fused or untraceable limbs, floating feet, wrong
+  ornament side, wrong hair length, wrong outfit, exposed underwear, bare feet,
+  shoes on the body, incorrect sock stripes, an open exterior door, rain
+  entering the room, readable mail, delivery boxes, keys in hand, phone, food,
+  alcohol, medicine, luggage, multiple bags or shoe pairs, crop loss, text,
+  logo, watermark, border, collage, grid, multiple characters, or severe
+  identity, adult-age, anatomy, continuity, or rendering drift.
+scene_contract:
+  camera: room-side-front-left-three-quarter-natural-seated-height
+  location: compact-closed-apartment-entryway
+  surface: warm-wood-room-floor-with-shallow-cool-neutral-threshold
+  continuity: wave-two-evening-reset-core-standard-outfit-normal-hair
+  lighting: warm-soft-evening-interior-with-cool-neutral-door-seam
+  gaze: nearby-floor-or-removed-shoes-not-viewer
+  pose: controlled-supported-low-floor-sit-after-removing-shoes
+  humanization:
+    - character-right-hoodie-cuff-pushed-up-one-thumb-width
+    - character-right-sock-slightly-lower-with-both-stripes-complete
+  outfit:
+    top: oversized-opaque-white-hoodie
+    bottom: opaque-gray-pleated-skirt
+    socks: warm-white-mid-calf-exactly-two-thin-pale-blue-stripes
+  return_home_cues:
+    - one-simple-soft-tote-or-shoulder-bag-within-arm-reach
+    - one-neat-pair-removed-white-and-pale-blue-sneakers-at-threshold
+  required_visible_features:
+    - complete-head-and-character-left-ornament
+    - open-heavy-lidded-three-quarter-face
+    - both-hands-and-light-floor-support
+    - fully-supported-pelvis-and-light-wall-contact
+    - separately-traceable-raised-and-folded-legs
+    - both-striped-socks-heels-toes-and-floor-contact
+  forbidden_props: [open-exterior-door, entering-rain, readable-mail, delivery-boxes, held-keys, phone, food, alcohol, medicine, luggage, multiple-bags, multiple-shoe-pairs]
+production_requirements:
+  file_format: png
+  target_canvas: {width: 1024, height: 1536}
+  accepted_width: {minimum: 1020, maximum: 1028}
+  accepted_height: {minimum: 1532, maximum: 1540}
+  standalone_composition: true
+  generated_grid: forbidden
+  force_exact_resize: forbidden
+candidate_policy:
+  initial_variants: [a, b]
+  optional_variant: c
+  optional_c_only_for: d06-scene-or-distinct-independent-candidate-local-major-failures
+  stop_for_shared_failure: [C01, C03, C04, C06, C07]
+  cross_candidate_references: forbidden
+candidates:
+  - variant: a
+    title: independent-scene-a
+    target_path: source/candidates/d06/r01/akari-v1.2_d06_evening-entryway-floor-sit_r01-a.png
+  - variant: b
+    title: independent-scene-b
+    target_path: source/candidates/d06/r01/akari-v1.2_d06_evening-entryway-floor-sit_r01-b.png
+comparison_anchors: []
+acceptance_gates: [identity, body, state, continuity, rendering, production]
+hard_rejects:
+  - severe identity adult-age face body-volume continuity or rendering drift
+  - fused missing duplicated disconnected crossed or untraceable limbs or joints
+  - floating weight broken sitting or wall support contradictory pelvis leg foot or hand contact
+  - missing mirrored relocated duplicated or materially redesigned ornament
+  - wrong hair length extreme bed head wet hair or wind
+  - closed eyes tears distress despair injury illness intoxication sleep dissociation sensual glamour posing viewer focus broad smile or open mouth
+  - wrong outfit exposed underwear shoes on body bare feet incorrect sock height or stripes
+  - unstable raised knee hidden thigh root fused legs twisted ankles pointed toes or floating feet
+  - open exterior door entering rain readable mail delivery boxes held keys phone food alcohol medicine luggage multiple bags or multiple shoe pairs
+  - crop or scale preventing complete head hand pelvis leg sock heel toe wall support or floor contact review
+  - readable text logo watermark border collage grid or multiple character

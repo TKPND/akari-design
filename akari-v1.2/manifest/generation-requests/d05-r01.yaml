@@ -1,0 +1,132 @@
+schema_version: 1
+request_id: akari-v1.2-d05-r01
+asset_id: D05
+revision: r01
+variation_axis: independent_scene_attempt
+references:
+  - role: accepted_d04_morning_continuity
+    path: akari-v1.2/accepted/daily/morning/akari-v1.2_d04_morning-drink-fetch_r02.png
+  - role: accepted_c02_rear_body
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c02_back-natural-stance_r01.png
+  - role: accepted_c03_hairpin_three_quarter
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c03_hairpin-side-45_r02.png
+  - role: accepted_c06_morning_hair_sleepy_neutral
+    path: akari-v1.2/accepted/core/face-hair/akari-v1.2_c06-1_sleepy-neutral_r01.png
+  - role: accepted_c07_standing_sock_feet
+    path: akari-v1.2/accepted/core/indoor-feet/akari-v1.2_c07_indoor-socks-standing_r01.png
+shared_prompt: >-
+  Use the five visible accepted images only in their declared roles to create
+  one standalone continuation of the same naturally cute 25-year-old adult
+  Akari during the same quiet morning. Image 1 controls D04 r02 same-morning
+  palette, bedroom-to-hall continuity, loose opaque white short-sleeve
+  T-shirt, simple opaque gray shorts-style roomwear, striped socks, soft
+  diffused light, and the current low-energy movement state; do not copy its
+  kitchenette, exact pose, crop, gaze, or any rejected D04 candidate. Image 2
+  controls healthy rear body volume, back silhouette, pelvis-to-leg support,
+  and adult full-body proportions; do not copy its hoodie, skirt, shoes,
+  alert presentation, or rigid turnaround pose. Image 3 controls the adult
+  hairpin-side three-quarter identity, complete character-left pale-blue
+  crossed pins and ribbon-like ornament, visible side contour, and stable
+  proportion; do not copy its standard outfit, shoes, smile, or turnaround
+  stiffness. Image 4 controls adult face, cheek shape, reversible just-awake
+  short bob, palette, rendering, and the C06-1 sleepy-neutral state: heavy but
+  open eyelids, relaxed brows and cheeks, incomplete focus, and a quiet closed
+  almost-neutral mouth; do not copy its chest-up crop or hoodie. Image 5
+  controls warm-white mid-calf socks with exactly two thin pale-blue stripes,
+  ankle and foot volume, relaxed toes, heel shape, and believable contact; do
+  not copy its hoodie, skirt, crop, or static stance. Show Akari in a short
+  domestic hall moving away from the bedroom and deeper frame right toward a
+  closed or barely ajar frosted washroom door. Use a hall-side rear-left
+  three-quarter camera at natural standing height. Keep the character-left
+  ornament and a soft side-three-quarter view of her sleepy face readable
+  while the supported rear body and both complete legs remain clear. Capture
+  a momentary slowdown rather than a walking stride: the leading foot is fully
+  flat toward the washroom, the trailing foot stays flat or releases its heel
+  only minimally, and the step is shorter than one foot length. Put both feet
+  on two visibly separate parallel floor lanes with at least one sock-width of
+  clear image-plane separation between projected knees, ankles, and feet.
+  Never overlap or cross the leg silhouettes. Preserve a level supported
+  pelvis, quiet spine and shoulder alignment, soft knees, relaxed toes, and
+  only a small natural arm counterbalance. Direct her unfocused gaze toward
+  the frosted washroom door, never the viewer. Keep the complete head,
+  ornament, both hands, pelvis, both legs, ankles, heels, socked toes, and all
+  relevant floor contact visible. Add exactly two Humanization elements: the
+  character-right short-sleeve edge has one small accidental half-fold, and
+  the back T-shirt hem sits slightly higher on one side with one shallow
+  diagonal walking fold. Do not add sock slouch or extra costume disorder.
+  Identify the destination only with restrained frosted glass and a cooler
+  neutral threshold surface; keep the washroom interior unreadable. No mirror,
+  sink, toilet, toothbrush, cosmetics, towel routine, readable sign, running
+  water, kitchenette counter, refrigerator, held drink, curtain contact,
+  phone, clock, slippers, or explanatory prop. The moment must read as an
+  automatic sleepy route between rooms, never grooming, illness, sadness,
+  fear, intoxication, sensuality, dissociation, a posed walk-cycle plate, or a
+  fashion portrait. When references conflict, D04 controls same-morning
+  continuity and outfit, C02 rear body and support, C03 three-quarter identity
+  and ornament, C06-1 face, morning hair, state, and rendering, and C07 socks
+  and feet. Do not create closed eyes, viewer focus, a broad smile, open mouth,
+  thin legs, broken joints, crossed or overlapping leg topology, twisted
+  ankles, pointed toes, floating feet, contradictory contact, wrong ornament,
+  wrong hair length, wrong outfit, incorrect sock stripes, exposed underwear,
+  a visible washroom routine, kitchenette staging, a long stride, running,
+  crop loss, text, logo, watermark, border, collage, grid, multiple characters,
+  or severe identity, adult-age, anatomy, continuity, or rendering drift.
+scene_contract:
+  camera: hall-side-rear-left-three-quarter-natural-standing-height
+  destination: closed-or-barely-ajar-frosted-washroom-door
+  surface: short-domestic-hall-with-cool-neutral-threshold
+  continuity: d04-same-morning-outfit-hair-light-and-room-palette
+  lighting: soft-diffused-morning-light-with-subtle-cool-threshold-depth
+  gaze: frosted-door-directed-with-incomplete-sleepy-focus
+  pose: momentary-slowdown-on-two-visible-parallel-foot-lanes
+  humanization:
+    - character-right-short-sleeve-edge-small-accidental-half-fold
+    - back-t-shirt-hem-one-side-higher-with-shallow-diagonal-fold
+  outfit:
+    top: loose-opaque-white-short-sleeve-t-shirt
+    bottom: simple-opaque-gray-shorts-style-roomwear
+    socks: warm-white-mid-calf-exactly-two-thin-pale-blue-stripes
+  required_visible_features:
+    - complete-head-and-character-left-ornament
+    - readable-sleepy-side-three-quarter-face
+    - both-hands-with-small-natural-counterbalance
+    - pelvis-and-complete-bilateral-leg-support
+    - separate-projected-knee-ankle-and-foot-lanes
+    - both-ankles-heels-socked-toes-and-relevant-floor-contact
+  forbidden_props: [mirror, sink, toilet, toothbrush, cosmetics, towel-routine, readable-sign, running-water, kitchenette, refrigerator, held-drink, phone, clock, slippers, explanatory-prop]
+production_requirements:
+  file_format: png
+  target_canvas: {width: 1024, height: 1536}
+  accepted_width: {minimum: 1020, maximum: 1028}
+  accepted_height: {minimum: 1532, maximum: 1540}
+  standalone_composition: true
+  generated_grid: forbidden
+  force_exact_resize: forbidden
+candidate_policy:
+  initial_variants: [a, b]
+  optional_variant: c
+  optional_c_only_for: d05-scene-or-distinct-independent-candidate-local-major-failures
+  stop_for_shared_failure: [D04, C02, C03, C05, C06, C07]
+  cross_candidate_references: forbidden
+candidates:
+  - variant: a
+    title: independent-scene-a
+    target_path: source/candidates/d05/r01/akari-v1.2_d05_morning-washroom-route_r01-a.png
+  - variant: b
+    title: independent-scene-b
+    target_path: source/candidates/d05/r01/akari-v1.2_d05_morning-washroom-route_r01-b.png
+comparison_anchors: []
+acceptance_gates: [identity, body, state, continuity, rendering, production]
+hard_rejects:
+  - severe identity adult-age face body-volume continuity or rendering drift
+  - fused missing duplicated disconnected or untraceable limbs or joints
+  - floating weight broken pelvis-to-leg support crossed or overlapping leg topology twisted ankles pointed toes or contradictory contact
+  - insufficient image-plane separation between projected knees ankles or feet
+  - missing mirrored relocated duplicated or materially redesigned ornament
+  - non-reversible hair wrong hair length extreme bed head wet hair or wind
+  - closed eyes distress intoxication sensual posing viewer-directed focus broad smile or open mouth
+  - wrong outfit exposed underwear shoes slippers bare feet incorrect sock height stripes or added sock slouch
+  - mirror sink toilet toothbrush cosmetics towel routine running water readable sign or visible washroom routine
+  - kitchenette refrigerator held drink curtain contact long stride high reach or running
+  - crop or scale preventing complete head hand pelvis leg ankle heel toe or contact review
+  - readable text logo watermark border collage grid or multiple character

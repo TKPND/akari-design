@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "collection_id": "akari-v1.2-hair-symbol-bangs-y1",
+  "title": "Akari v1.2 Hair Symbol And Bangs Y1",
+  "source_lock": {
+    "source_axis": "source/generated/v1-2-face-hair/free-reference-batch-younger-base05/20260708_base05-younger-01.png",
+    "age_impression": "early-20s university-age young adult; still not underage",
+    "locked_traits": [
+      "Y1 face direction",
+      "gentle eye read",
+      "small restrained mouth",
+      "white hoodie context"
+    ]
+  },
+  "batch_policy": {
+    "candidate_count": 4,
+    "composition": "matched_bust_up",
+    "primary_variation_axis": "hair_symbol_and_bangs",
+    "face_policy": "lock_y1_face_direction",
+    "pdf_policy": "not_in_this_step"
+  },
+  "requests": [
+    {
+      "id": "request:v1-2-hair-symbol-bangs-y1-ornament-lock",
+      "candidate_order": 1,
+      "slot": "ornament-lock",
+      "japanese_title": "髪飾り固定",
+      "eye_variation": "locked Y1 face; no eye redesign",
+      "hair_variation": "restore the small pale blue v1.1 hair ornament shape",
+      "target_path": "source/generated/v1-2-face-hair/hair-symbol-bangs-y1/20260708_ornament-lock_v2.png",
+      "reference_inputs": [
+        "source/generated/v1-2-face-hair/free-reference-batch-younger-base05/20260708_base05-younger-01.png",
+        "source/originals/v1_1_髪飾り側_45deg.webp",
+        "source/originals/v1_1_front_3.webp",
+        "source/generated/tonari-no-hyoujou/20260703_called-turn_v2.webp"
+      ],
+      "prompt": "Use the Y1 image as the locked face source. Use the v1.1 hair-ornament-side image as the strict symbol reference. Create one matched bust-up composition of Akari v1.2 that preserves the selected Y1 face direction, gentle eyes, small restrained mouth, early-20s university-age young adult impression, white hoodie context, warm brown short bob, and soft approachable mood. Preserve the exact same crop, pose, background layout, and aspect ratio as the Y1 primary source. For this candidate, restore the small pale blue v1.1 hair ornament shape. Preserve both parts of the pale blue character-left hair ornament: upper small pale-blue crossed X-shaped hairpins; lower compact pale-blue ribbon-like loop immediately below, with two thin trailing strands; both stay on Akari's character-left side as one compact v1.1 identity ornament. Reject any result with a missing upper or lower component, wrong-side placement, flower, petal, or flower-center drift, jewel or gemstone drift, an oversized fashion bow, or a large dangling ribbon. Keep v1.1-like bang grouping, natural short-bob tips, and subtle cheek-side softness. do not change her eyes, do not change her mouth, do not change her age impression, do not redesign the face, do not redesign the outfit, do not make her underage, do not make her older-sister-like, no readable text, no logos, no watermarks, no frame, no border, no panel layout.",
+      "acceptance": "Must still read as the selected Y1 face direction. Must show a pale blue character-left hair ornament that is v1.1-compatible: upper crossed X-shaped hairpins plus a lower ribbon-like loop immediately below with two thin trailing strands, together as one compact v1.1 identity ornament. Must keep v1.1-compatible bangs, warm brown short bob, early-20s university-age impression, white hoodie context, no readable text, no logos, no watermarks, no frame, and no panel layout.",
+      "selection_gates": {
+        "appeal": "small Akari identity symbol returns without making the portrait fussy",
+        "identity": "still reads as the selected Y1 standard-face direction",
+        "hard_rejects": [
+          "missing upper crossed X-shaped hairpins",
+          "missing lower ribbon-like loop or either trailing strand",
+          "wrong-side hair ornament",
+          "flower, petal, or flower-center ornament drift",
+          "jewel or gemstone ornament drift",
+          "oversized fashion bow",
+          "large dangling ribbon",
+          "face redesign",
+          "eye redesign",
+          "large mouth drift",
+          "underage drift",
+          "older-sister drift",
+          "new outfit design"
+        ]
+      },
+      "risk_profile": {
+        "face_drift_risk": "high",
+        "ornament_drift_risk": "high",
+        "bang_drift_risk": "medium",
+        "age_impression_risk": "medium",
+        "text_logo_watermark_risk": "medium"
+      }
+    },
+    {
+      "id": "request:v1-2-hair-symbol-bangs-y1-bang-texture",
+      "candidate_order": 2,
+      "slot": "bang-texture",
+      "japanese_title": "前髪の束感",
+      "eye_variation": "locked Y1 face; no eye redesign",
+      "hair_variation": "add v1.1-like soft uneven bang grouping",
+      "target_path": "source/generated/v1-2-face-hair/hair-symbol-bangs-y1/20260708_bang-texture_v2.png",
+      "reference_inputs": [
+        "source/generated/v1-2-face-hair/free-reference-batch-younger-base05/20260708_base05-younger-01.png",
+        "source/originals/v1_1_髪飾り側_45deg.webp",
+        "source/originals/v1_1_front_3.webp",
+        "source/generated/tonari-no-hyoujou/20260703_called-turn_v2.webp"
+      ],
+      "prompt": "Use the Y1 image as the locked face source. Use the v1.1 hair-ornament-side image as the strict symbol reference. Create one matched bust-up composition of Akari v1.2 that preserves the selected Y1 face direction, gentle eyes, small restrained mouth, early-20s university-age young adult impression, white hoodie context, warm brown short bob, and soft approachable mood. Preserve the exact same crop, pose, background layout, and aspect ratio as the Y1 primary source. For this candidate, add v1.1-like soft uneven bang grouping. Keep v1.1-like bang grouping readable and natural, slightly less salon-polished than Y1, with soft front pieces that do not hide the eyes. Preserve both parts of the pale blue character-left hair ornament: upper small pale-blue crossed X-shaped hairpins; lower compact pale-blue ribbon-like loop immediately below, with two thin trailing strands; both stay on Akari's character-left side as one compact v1.1 identity ornament. Reject any result with a missing upper or lower component, wrong-side placement, flower, petal, or flower-center drift, jewel or gemstone drift, an oversized fashion bow, or a large dangling ribbon. Keep natural short-bob tips and subtle cheek-side softness. do not change her eyes, do not change her mouth, do not change her age impression, do not redesign the face, do not redesign the outfit, do not make her underage, do not make her older-sister-like, no readable text, no logos, no watermarks, no frame, no border, no panel layout.",
+      "acceptance": "Must still read as the selected Y1 face direction. Must show a pale blue character-left hair ornament that is v1.1-compatible: upper crossed X-shaped hairpins plus a lower ribbon-like loop immediately below with two thin trailing strands, together as one compact v1.1 identity ornament. Must keep v1.1-compatible bangs, warm brown short bob, early-20s university-age impression, white hoodie context, no readable text, no logos, no watermarks, no frame, and no panel layout.",
+      "selection_gates": {
+        "appeal": "bangs feel more Akari-like and less polished while staying clean",
+        "identity": "still reads as the selected Y1 standard-face direction",
+        "hard_rejects": [
+          "missing upper crossed X-shaped hairpins",
+          "missing lower ribbon-like loop or either trailing strand",
+          "wrong-side hair ornament",
+          "flower, petal, or flower-center ornament drift",
+          "jewel or gemstone ornament drift",
+          "oversized fashion bow",
+          "large dangling ribbon",
+          "face redesign",
+          "eye redesign",
+          "large mouth drift",
+          "underage drift",
+          "older-sister drift",
+          "new outfit design"
+        ]
+      },
+      "risk_profile": {
+        "face_drift_risk": "high",
+        "ornament_drift_risk": "medium",
+        "bang_drift_risk": "high",
+        "age_impression_risk": "medium",
+        "text_logo_watermark_risk": "medium"
+      }
+    },
+    {
+      "id": "request:v1-2-hair-symbol-bangs-y1-side-frame-softness",
+      "candidate_order": 3,
+      "slot": "side-frame-softness",
+      "japanese_title": "サイド髪の柔らかさ",
+      "eye_variation": "locked Y1 face; no eye redesign",
+      "hair_variation": "soften cheek-side short bob framing",
+      "target_path": "source/generated/v1-2-face-hair/hair-symbol-bangs-y1/20260708_side-frame-softness_v2.png",
+      "reference_inputs": [
+        "source/generated/v1-2-face-hair/free-reference-batch-younger-base05/20260708_base05-younger-01.png",
+        "source/originals/v1_1_髪飾り側_45deg.webp",
+        "source/originals/v1_1_front_3.webp",
+        "source/generated/tonari-no-hyoujou/20260703_called-turn_v2.webp"
+      ],
+      "prompt": "Use the Y1 image as the locked face source. Use the v1.1 hair-ornament-side image as the strict symbol reference. Create one matched bust-up composition of Akari v1.2 that preserves the selected Y1 face direction, gentle eyes, small restrained mouth, early-20s university-age young adult impression, white hoodie context, warm brown short bob, and soft approachable mood. Preserve the exact same crop, pose, background layout, and aspect ratio as the Y1 primary source. For this candidate, soften cheek-side short bob framing. Add a little v1.1-like face-framing softness around the cheeks and jaw while keeping the bob short and warm brown. Keep v1.1-like bang grouping. Preserve both parts of the pale blue character-left hair ornament: upper small pale-blue crossed X-shaped hairpins; lower compact pale-blue ribbon-like loop immediately below, with two thin trailing strands; both stay on Akari's character-left side as one compact v1.1 identity ornament. Reject any result with a missing upper or lower component, wrong-side placement, flower, petal, or flower-center drift, jewel or gemstone drift, an oversized fashion bow, or a large dangling ribbon. do not change her eyes, do not change her mouth, do not change her age impression, do not redesign the face, do not redesign the outfit, do not make her underage, do not make her older-sister-like, no readable text, no logos, no watermarks, no frame, no border, no panel layout.",
+      "acceptance": "Must still read as the selected Y1 face direction. Must show a pale blue character-left hair ornament that is v1.1-compatible: upper crossed X-shaped hairpins plus a lower ribbon-like loop immediately below with two thin trailing strands, together as one compact v1.1 identity ornament. Must keep v1.1-compatible bangs, warm brown short bob, early-20s university-age impression, white hoodie context, no readable text, no logos, no watermarks, no frame, and no panel layout.",
+      "selection_gates": {
+        "appeal": "side hair adds approachable softness without length drift",
+        "identity": "still reads as the selected Y1 standard-face direction",
+        "hard_rejects": [
+          "missing upper crossed X-shaped hairpins",
+          "missing lower ribbon-like loop or either trailing strand",
+          "wrong-side hair ornament",
+          "flower, petal, or flower-center ornament drift",
+          "jewel or gemstone ornament drift",
+          "oversized fashion bow",
+          "large dangling ribbon",
+          "face redesign",
+          "eye redesign",
+          "large mouth drift",
+          "underage drift",
+          "older-sister drift",
+          "new outfit design"
+        ]
+      },
+      "risk_profile": {
+        "face_drift_risk": "high",
+        "ornament_drift_risk": "medium",
+        "bang_drift_risk": "medium",
+        "age_impression_risk": "medium",
+        "text_logo_watermark_risk": "medium"
+      }
+    },
+    {
+      "id": "request:v1-2-hair-symbol-bangs-y1-balanced-symbol-bangs",
+      "candidate_order": 4,
+      "slot": "balanced-symbol-bangs",
+      "japanese_title": "髪記号と前髪のバランス",
+      "eye_variation": "locked Y1 face; no eye redesign",
+      "hair_variation": "balance ornament lock, bang texture, and side framing",
+      "target_path": "source/generated/v1-2-face-hair/hair-symbol-bangs-y1/20260708_balanced-symbol-bangs_v2.png",
+      "reference_inputs": [
+        "source/generated/v1-2-face-hair/free-reference-batch-younger-base05/20260708_base05-younger-01.png",
+        "source/originals/v1_1_髪飾り側_45deg.webp",
+        "source/originals/v1_1_front_3.webp",
+        "source/generated/tonari-no-hyoujou/20260703_called-turn_v2.webp"
+      ],
+      "prompt": "Use the Y1 image as the locked face source. Use the v1.1 hair-ornament-side image as the strict symbol reference. Create one matched bust-up composition of Akari v1.2 that preserves the selected Y1 face direction, gentle eyes, small restrained mouth, early-20s university-age young adult impression, white hoodie context, warm brown short bob, and soft approachable mood. Preserve the exact same crop, pose, background layout, and aspect ratio as the Y1 primary source. For this candidate, balance ornament lock, bang texture, and side framing. Add v1.1-like bang grouping and keep subtle cheek-side short-bob softness. The result should look like Y1 with stronger Akari v1.1 hair identity, not a new portrait. Preserve both parts of the pale blue character-left hair ornament: upper small pale-blue crossed X-shaped hairpins; lower compact pale-blue ribbon-like loop immediately below, with two thin trailing strands; both stay on Akari's character-left side as one compact v1.1 identity ornament. Reject any result with a missing upper or lower component, wrong-side placement, flower, petal, or flower-center drift, jewel or gemstone drift, an oversized fashion bow, or a large dangling ribbon. do not change her eyes, do not change her mouth, do not change her age impression, do not redesign the face, do not redesign the outfit, do not make her underage, do not make her older-sister-like, no readable text, no logos, no watermarks, no frame, no border, no panel layout.",
+      "acceptance": "Must still read as the selected Y1 face direction. Must show a pale blue character-left hair ornament that is v1.1-compatible: upper crossed X-shaped hairpins plus a lower ribbon-like loop immediately below with two thin trailing strands, together as one compact v1.1 identity ornament. Must keep v1.1-compatible bangs, warm brown short bob, early-20s university-age impression, white hoodie context, no readable text, no logos, no watermarks, no frame, and no panel layout.",
+      "selection_gates": {
+        "appeal": "best combined Y1 refinement without a new face family",
+        "identity": "still reads as the selected Y1 standard-face direction",
+        "hard_rejects": [
+          "missing upper crossed X-shaped hairpins",
+          "missing lower ribbon-like loop or either trailing strand",
+          "wrong-side hair ornament",
+          "flower, petal, or flower-center ornament drift",
+          "jewel or gemstone ornament drift",
+          "oversized fashion bow",
+          "large dangling ribbon",
+          "face redesign",
+          "eye redesign",
+          "large mouth drift",
+          "underage drift",
+          "older-sister drift",
+          "new outfit design"
+        ]
+      },
+      "risk_profile": {
+        "face_drift_risk": "high",
+        "ornament_drift_risk": "high",
+        "bang_drift_risk": "high",
+        "age_impression_risk": "medium",
+        "text_logo_watermark_risk": "medium"
+      }
+    }
+  ],
+  "selection_notes": [
+    {
+      "decision": "hold_as_hair_symbol_bangs_y1_direction",
+      "selected_slot": "balanced-symbol-bangs",
+      "selected_candidate_path": "source/generated/v1-2-face-hair/hair-symbol-bangs-y1/20260708_balanced-symbol-bangs_v2.png",
+      "selected_contact_sheet_path": "evidence/v1-2-face-hair/contact-sheets/akari-v1-2-hair-symbol-bangs-y1-v2.webp",
+      "rationale": "Y1 face direction remains locked; best combined Y1 refinement was selected as the follow-up hair-symbol and bangs direction."
+    }
+  ]
+}

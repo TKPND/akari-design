@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "palette_version": "akari-v1.1-d65-srgb-1",
+  "white_point": "D65",
+  "color_space": "sRGB",
+  "roles": [
+    {
+      "name": "hair",
+      "hex": "#6B4A37",
+      "rgb": [107, 74, 55],
+      "usage": "Brown bob hair base tone.",
+      "ramp": {
+        "base": "#6B4A37",
+        "shadow": "#4A3126",
+        "highlight": "#A47A5D"
+      },
+      "sample_area": "expression-sheet hair midtone and hoodie-front hair midtone",
+      "tolerance": {"median_rgb_delta": 12},
+      "exception_policy": "Allow darker strand shadows when hue remains brown."
+    },
+    {
+      "name": "skin",
+      "hex": "#F4CBBE",
+      "rgb": [244, 203, 190],
+      "usage": "Face, hands, and legs.",
+      "ramp": {
+        "base": "#F4CBBE",
+        "shadow": "#E7AFA6",
+        "highlight": "#FFE3D8"
+      },
+      "sample_area": "face cheek-neutral skin zones",
+      "tolerance": {"median_rgb_delta": 12},
+      "exception_policy": "Blush may exceed tolerance on cheek-only samples."
+    },
+    {
+      "name": "eyes",
+      "hex": "#7B5742",
+      "rgb": [123, 87, 66],
+      "usage": "Warm brown iris color.",
+      "ramp": {
+        "base": "#7B5742",
+        "shadow": "#3E2A24",
+        "highlight": "#C38E68"
+      },
+      "sample_area": "expression-sheet iris midtone",
+      "tolerance": {"median_rgb_delta": 14},
+      "exception_policy": "Eye highlights use near-white sparkle tones."
+    },
+    {
+      "name": "hoodie_white",
+      "hex": "#F5F4EE",
+      "rgb": [245, 244, 238],
+      "usage": "Hoodie base fabric.",
+      "ramp": {
+        "base": "#F5F4EE",
+        "shadow": "#D9DBD8",
+        "highlight": "#FFFFFF"
+      },
+      "sample_area": "hoodie-front flat chest and sleeve areas",
+      "tolerance": {"median_rgb_delta": 10},
+      "exception_policy": "Fold shadows may be cooler but must not become blue-gray."
+    },
+    {
+      "name": "hoodie_shadow",
+      "hex": "#D9DBD8",
+      "rgb": [217, 219, 216],
+      "usage": "Hoodie folds, cuffs, pocket shadow, and hem shadow.",
+      "ramp": {
+        "base": "#D9DBD8",
+        "shadow": "#BFC4C3",
+        "highlight": "#F5F4EE"
+      },
+      "sample_area": "hoodie folds and pocket shadow",
+      "tolerance": {"median_rgb_delta": 12},
+      "exception_policy": "Contact shadows may be darker if neutral."
+    },
+    {
+      "name": "skirt_gray",
+      "hex": "#74777D",
+      "rgb": [116, 119, 125],
+      "usage": "Pleated skirt fabric.",
+      "ramp": {
+        "base": "#74777D",
+        "shadow": "#555960",
+        "highlight": "#A2A6AC"
+      },
+      "sample_area": "skirt front midtone pleats",
+      "tolerance": {"median_rgb_delta": 12},
+      "exception_policy": "Pleat lines may be darker when still neutral gray."
+    },
+    {
+      "name": "sock_white",
+      "hex": "#F7F8F4",
+      "rgb": [247, 248, 244],
+      "usage": "Crew sock base.",
+      "ramp": {
+        "base": "#F7F8F4",
+        "shadow": "#DDE4E3",
+        "highlight": "#FFFFFF"
+      },
+      "sample_area": "sock calf flat areas",
+      "tolerance": {"median_rgb_delta": 10},
+      "exception_policy": "Shoe contact shadows may be darker."
+    },
+    {
+      "name": "sock_stripe_blue",
+      "hex": "#9BD8E5",
+      "rgb": [155, 216, 229],
+      "usage": "Two sock stripes near the top.",
+      "ramp": {
+        "base": "#9BD8E5",
+        "shadow": "#6EB8CA",
+        "highlight": "#C9F1F6"
+      },
+      "sample_area": "sock stripe bands",
+      "tolerance": {"median_rgb_delta": 12},
+      "exception_policy": "Keep stripe count and position more important than tiny shade drift."
+    },
+    {
+      "name": "sneaker_white",
+      "hex": "#F4F5EF",
+      "rgb": [244, 245, 239],
+      "usage": "Chunky sneaker base.",
+      "ramp": {
+        "base": "#F4F5EF",
+        "shadow": "#D7DFE0",
+        "highlight": "#FFFFFF"
+      },
+      "sample_area": "shoe upper and sole broad white zones",
+      "tolerance": {"median_rgb_delta": 10},
+      "exception_policy": "Outsole contact shadows can be darker but not muddy."
+    },
+    {
+      "name": "sneaker_accent_blue",
+      "hex": "#A4DDE8",
+      "rgb": [164, 221, 232],
+      "usage": "Sneaker accent panels and detail lines.",
+      "ramp": {
+        "base": "#A4DDE8",
+        "shadow": "#75BFD0",
+        "highlight": "#D4F5F8"
+      },
+      "sample_area": "shoe blue accent panels",
+      "tolerance": {"median_rgb_delta": 12},
+      "exception_policy": "Use same hue family as sock stripe blue."
+    },
+    {
+      "name": "bag_body",
+      "hex": "#F1EEE4",
+      "rgb": [241, 238, 228],
+      "usage": "Mini shoulder bag body.",
+      "ramp": {
+        "base": "#F1EEE4",
+        "shadow": "#D5CEC0",
+        "highlight": "#FFFFFF"
+      },
+      "sample_area": "bag broad body panels",
+      "tolerance": {"median_rgb_delta": 12},
+      "exception_policy": "Fabric grain can vary within neutral warm range."
+    },
+    {
+      "name": "bag_strap",
+      "hex": "#B5A997",
+      "rgb": [181, 169, 151],
+      "usage": "Bag strap and binding.",
+      "ramp": {
+        "base": "#B5A997",
+        "shadow": "#8E8170",
+        "highlight": "#D5CABA"
+      },
+      "sample_area": "bag strap flat sections",
+      "tolerance": {"median_rgb_delta": 12},
+      "exception_policy": "Contact shadows may be darker near hardware."
+    },
+    {
+      "name": "metal",
+      "hex": "#B7B8B3",
+      "rgb": [183, 184, 179],
+      "usage": "Zippers, rings, and small metal accents.",
+      "ramp": {
+        "base": "#B7B8B3",
+        "shadow": "#8D918F",
+        "highlight": "#E7E8E1"
+      },
+      "sample_area": "bag hardware and zipper pulls",
+      "tolerance": {"median_rgb_delta": 14},
+      "exception_policy": "Specular highlights may be near-white."
+    }
+  ]
+}

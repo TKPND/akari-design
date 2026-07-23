@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "requests": [
+    {
+      "id": "situation-daybook-footbridge-breeze",
+      "status": "accepted",
+      "target_page": 2,
+      "aspect_ratio": "16:9",
+      "prompt": "Akari standing on a small pedestrian footbridge in a quiet green lakeside park, same white T-shirt outfit anchor, diagonal bridge railings, leafy shade, glimpses of water beyond, subtle breeze in hair and shirt, complete hands, legs, socks, and shoes, no bench composition, no readable text, no logos, no watermark.",
+      "acceptance": "Must pass Akari identity, complete limb continuity, 16:9 composition, and text-in-image review."
+    },
+    {
+      "id": "situation-daybook-convenience-walk",
+      "status": "accepted",
+      "target_page": 3,
+      "aspect_ratio": "16:9",
+      "prompt": "Akari on a bright summer convenience walk with simple unbranded outfit, stable walking pose, visible feet, clean pavement light, packages and storefront shapes without writing, no readable text, no logos, no watermark.",
+      "acceptance": "Must pass Akari identity, complete limb continuity, 16:9 composition, and text-in-image review."
+    },
+    {
+      "id": "situation-daybook-dock-edge",
+      "status": "accepted",
+      "target_page": 4,
+      "aspect_ratio": "16:9",
+      "prompt": "Akari pausing at a quiet wooden dock or low stone quay beside calm lake water, same white T-shirt outfit anchor, open sky reflected on the water, simple posts or mooring rails, relaxed natural stance, full body visible, no long straight path composition, no readable text, no logos, no watermark.",
+      "acceptance": "Must pass Akari identity, complete limb continuity, 16:9 composition, and text-in-image review."
+    },
+    {
+      "id": "situation-daybook-park-steps",
+      "status": "accepted",
+      "target_page": 5,
+      "aspect_ratio": "16:9",
+      "prompt": "Akari seated on park steps in summer shade, relaxed knees, grounded feet with clear shadows, white T-shirt and gray bottom readable, complete seated anatomy, no readable text, no logos, no watermark.",
+      "acceptance": "Must pass Akari identity, complete limb continuity, 16:9 composition, and text-in-image review."
+    },
+    {
+      "id": "situation-daybook-window-seat",
+      "status": "accepted",
+      "target_page": 6,
+      "aspect_ratio": "16:9",
+      "prompt": "Akari in a quiet indoor window seat scene, soft side light, simple room props, white T-shirt as outfit anchor, calm summer pause, uncluttered background, no readable text, no logos, no watermark.",
+      "acceptance": "Must pass Akari identity, complete limb continuity, 16:9 composition, and text-in-image review."
+    },
+    {
+      "id": "situation-daybook-rain-cooled-street",
+      "status": "accepted",
+      "target_page": 7,
+      "aspect_ratio": "16:9",
+      "prompt": "Akari on a damp rain-cooled summer street with subtle reflections, gentle cooler palette, white T-shirt still leading under an optional thin cardigan, no umbrellas or posters, no readable text, no logos, no watermark.",
+      "acceptance": "Must pass Akari identity, complete limb continuity, 16:9 composition, and text-in-image review."
+    },
+    {
+      "id": "situation-daybook-station-after-sun",
+      "status": "accepted",
+      "target_page": 8,
+      "aspect_ratio": "16:9",
+      "prompt": "Akari waiting after sun near a quiet station context, warm late-afternoon rim light, relaxed pose, thin outer layer as a light variation, transit shapes without station-name detail, no readable text, no logos, no watermark.",
+      "acceptance": "Must pass Akari identity, complete limb continuity, 16:9 composition, and text-in-image review."
+    },
+    {
+      "id": "situation-daybook-vending-machine-night",
+      "status": "accepted",
+      "target_page": 9,
+      "aspect_ratio": "16:9",
+      "prompt": "Akari in a quiet vending machine night scene, practical cool light balanced with warm skin tones, machine graphics abstract and secondary, calm everyday distance, no readable text, no logos, no watermark.",
+      "acceptance": "Must pass Akari identity, complete limb continuity, 16:9 composition, and text-in-image review."
+    },
+    {
+      "id": "situation-daybook-golden-hour-return",
+      "status": "accepted",
+      "target_page": 10,
+      "aspect_ratio": "16:9",
+      "prompt": "Akari on a golden-hour return path with warm backlight, long shadows, readable outfit silhouette, visible shoes, calm closing mood that matches the lakeside cover distance, no readable text, no logos, no watermark.",
+      "acceptance": "Must pass Akari identity, complete limb continuity, 16:9 composition, and text-in-image review."
+    }
+  ]
+}

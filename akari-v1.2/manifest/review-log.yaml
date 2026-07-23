@@ -1,0 +1,1495 @@
+schema_version: 1
+allowed_statuses: [candidate, review, accepted, accepted-with-notes, rejected, superseded]
+allowed_severities: [blocker, major, minor]
+reviews:
+  - asset_id: C01
+    revision: r01
+    candidate_id: c01-r01-a
+    status: rejected
+    source_paths:
+      - source/candidates/c01/r01/akari-v1.2_c01_front-natural-stance_r01-a.png
+    source_sha256s:
+      - 92d669f2c6a965bb091923ca2e68154bb81b23d6741b9317c05962adfc078398
+    findings:
+      - severity: major
+        category: body
+        note: >-
+          Both knees read close to locked, so the requested relaxed natural
+          stance is not achieved.
+        resolved: false
+    decision: >-
+      Rejected after the user selected variant B; the unresolved near-locked
+      knee Major remains.
+  - asset_id: C01
+    revision: r01
+    candidate_id: c01-r01-b
+    status: accepted
+    source_paths:
+      - source/candidates/c01/r01/akari-v1.2_c01_front-natural-stance_r01-b.png
+    source_sha256s:
+      - a977f2798d15f3da9ef0d7720d6f9fc41bd2f84f54f4c8a69908a482596a75c5
+    findings:
+      - severity: minor
+        category: body
+        note: >-
+          The character-left knee-to-foot direction reads mildly inward and
+          the toe angles are unequal; the ankle remains connected without a
+          severe twist.
+        resolved: false
+    decision: >-
+      Accepted as r01 after the user selected variant B; no Correction Pass
+      was required because it has no unresolved Blocker or Major.
+  - asset_id: C01
+    revision: r01
+    candidate_id: c01-r01-c
+    status: rejected
+    source_paths:
+      - source/candidates/c01/r01/akari-v1.2_c01_front-natural-stance_r01-c.png
+    source_sha256s:
+      - a99ad5f6f1cfe8c8510b3f137ade78705761407c60a10a400461d3bc375aaaef
+    findings:
+      - severity: major
+        category: body
+        note: >-
+          The requested subtle loading asymmetry barely reads because the
+          shoulder and arm-height differences are minimal.
+        resolved: false
+      - severity: major
+        category: body
+        note: >-
+          Both knees remain too straight, leaving a near-locked-knee read that
+          undercuts the Natural Form target.
+        resolved: false
+    decision: >-
+      Rejected after the user selected variant B; the asymmetry and knee-state
+      Major findings remain unresolved.
+  - asset_id: C02
+    revision: r01
+    candidate_id: c02-r01-a
+    status: accepted
+    source_paths:
+      - source/candidates/c02/r01/akari-v1.2_c02_back-natural-stance_r01-a.png
+    source_sha256s:
+      - f17b3be3550c2089d90d84501052026d8bb905ee5a94280933c749115d1de208
+    findings:
+      - severity: minor
+        category: body
+        note: >-
+          The sock-top landmark is modestly lower than C01, producing a little
+          more lower-leg length, but total height, knee, and sole remain within
+          the controlling gates and the proportions retain a compact read.
+        resolved: false
+    decision: >-
+      Accepted as r01 after the user selected variant A. It is the closest C01
+      pairing in height and width, with sturdy leg continuity, unlocked joints,
+      and the strongest distinct left/right rear-shoe construction; no
+      Correction Pass was required because it has no unresolved Blocker or
+      Major.
+  - asset_id: C02
+    revision: r01
+    candidate_id: c02-r01-b
+    status: rejected
+    source_paths:
+      - source/candidates/c02/r01/akari-v1.2_c02_back-natural-stance_r01-b.png
+    source_sha256s:
+      - 53b029befd925f0cc185c150817e2067d588dafea9a5e4b388c876f95b31d098
+    findings:
+      - severity: major
+        category: body
+        note: >-
+          The sole landmark differs from C01 by 35 px, or 2.28% of the 1536 px
+          canvas height, exceeding the permitted 2% tolerance by about 4.3 px;
+          the full figure consequently reads visibly smaller.
+        resolved: false
+      - severity: minor
+        category: identity
+        note: >-
+          The character-left pale-blue ribbon is weakly readable at comparison
+          scale.
+        resolved: false
+      - severity: minor
+        category: body
+        note: >-
+          The rear-shoe construction and stance are more bilaterally repetitive
+          than candidate A, although no definite same-side duplication is
+          visible.
+        resolved: false
+    decision: >-
+      Rejected after the user selected variant A; the unresolved sole-height
+      Major requires a Correction Pass before candidate B can be accepted.
+  - asset_id: C02
+    revision: r01
+    candidate_id: c02-r01-c
+    status: rejected
+    source_paths:
+      - source/candidates/c02/r01/akari-v1.2_c02_back-natural-stance_r01-c.png
+    source_sha256s:
+      - db509093d8d58d97e43e42c13572d2c7f7681c7db502feadce200d0b9876d88c
+    findings:
+      - severity: minor
+        category: body
+        note: >-
+          The stance, pleats, and sneaker pair are more bilaterally repetitive
+          than candidate A, weakening the Natural Form read.
+        resolved: false
+      - severity: minor
+        category: body
+        note: >-
+          Upper-leg volume is modestly slimmer than the accepted C01 anchor.
+        resolved: false
+    decision: >-
+      Rejected after the user selected variant A. Candidate C passed all five
+      controlled landmark tolerances and remained eligible, but its construction
+      reads stiffer and more repeated than the selected candidate.
+  - asset_id: C03
+    revision: r01
+    candidate_id: c03-r01-a
+    status: rejected
+    source_paths:
+      - source/candidates/c03/r01/akari-v1.2_c03_hairpin-side-45_r01-a.png
+      - source/candidates/c03/r01/akari-v1.2_c03_non-hairpin-side-45_r01-a.png
+    source_sha256s:
+      - 3fdf1dc9e5d15f438f512fc2750e05b9830f4f2fb5cad32a2afbcf20fe24d8e8
+      - c681bff18d3dccc17f3edabbb45e4cd6356a66e3ac186581354b7d8586b2a61f
+    findings:
+      - severity: major
+        category: body
+        note: >-
+          The hairpin-side sole is y=1422, differing from accepted C01 by
+          28 px (1.82%) and accepted C02 by 41 px (2.67%); the C02 delta
+          exceeds the 30 px hard limit.
+        resolved: false
+    decision: >-
+      Rejected as a complete pair because the hairpin-side member has an
+      unresolved sole-height Major. The non-hairpin member passes the measured
+      head-top and sole gate but cannot be retained independently.
+  - asset_id: C03
+    revision: r01
+    candidate_id: c03-r01-b
+    status: rejected
+    source_paths:
+      - source/candidates/c03/r01/akari-v1.2_c03_hairpin-side-45_r01-b.png
+      - source/candidates/c03/r01/akari-v1.2_c03_non-hairpin-side-45_r01-b.png
+    source_sha256s:
+      - 5aa985aaeccac830aaa9c53819905aea02596a0e0cf2ff768ac348e5d7969374
+      - 98f1a3578f5056294610010f2116f2ae798da7cfaaa49ccabbda0703a6d0d4f8
+    findings:
+      - severity: major
+        category: body
+        note: >-
+          The hairpin-side sole is y=1410, differing from accepted C01 by
+          40 px (2.60%) and accepted C02 by 53 px (3.45%); both deltas exceed
+          the 30 px hard limit.
+        resolved: false
+      - severity: major
+        category: body
+        note: >-
+          The non-hairpin-side sole is y=1411, differing from accepted C01 by
+          39 px (2.54%) and accepted C02 by 52 px (3.39%); both deltas exceed
+          the 30 px hard limit.
+        resolved: false
+    decision: >-
+      Rejected as a complete pair. The strict landmark re-audit invalidated
+      the provisional preference for B before promotion; both members retain
+      unresolved sole-height Majors.
+  - asset_id: C03
+    revision: r01
+    candidate_id: c03-r01-c
+    status: rejected
+    source_paths:
+      - source/candidates/c03/r01/akari-v1.2_c03_hairpin-side-45_r01-c.png
+      - source/candidates/c03/r01/akari-v1.2_c03_non-hairpin-side-45_r01-c.png
+    source_sha256s:
+      - 33d89602f14ed2f73dc6eac5c95ac7798c5d740fa909e7251546d0c50299fa47
+      - 7fc375236ca9ffe1c69d95e537af19745233bd153d60bfbab27277f4487e1d9a
+    findings:
+      - severity: major
+        category: body
+        note: >-
+          The hairpin-side sole is y=1424, differing from accepted C01 by
+          26 px (1.69%) and accepted C02 by 39 px (2.54%); the C02 delta
+          exceeds the 30 px hard limit.
+        resolved: false
+      - severity: major
+        category: body
+        note: >-
+          The non-hairpin-side sole is y=1427, differing from accepted C01 by
+          23 px (1.50%) and accepted C02 by 36 px (2.34%); the C02 delta
+          exceeds the 30 px hard limit.
+        resolved: false
+    decision: >-
+      Rejected as a complete pair because both members have unresolved
+      sole-height Majors against accepted C02.
+  - asset_id: C03
+    revision: r02
+    candidate_id: c03-r02-a
+    status: accepted
+    source_paths:
+      - source/candidates/c03/r02/akari-v1.2_c03_hairpin-side-45_r02-a.png
+      - source/candidates/c03/r02/akari-v1.2_c03_non-hairpin-side-45_r02-a.png
+    source_sha256s:
+      - 19c8c96113bcbc47f7d1e4cc1d58af466d3a573f0dae40cfcdf9bf456b1a0a9b
+      - 9e60812e14ba0cb2223187a4764334986125e0781a8eaae2124da1d19bd92209
+    findings: []
+    decision: >-
+      Accepted after the user selected variant A. Both members pass the hard
+      landmark gate at head 60 / sole 1436 and head 61 / sole 1440. A has the
+      strongest within-pair face, bob, body-scale, leg-volume, and vertical
+      alignment consistency, with no unresolved Blocker or Major.
+  - asset_id: C03
+    revision: r02
+    candidate_id: c03-r02-b
+    status: rejected
+    source_paths:
+      - source/candidates/c03/r02/akari-v1.2_c03_hairpin-side-45_r02-b.png
+      - source/candidates/c03/r02/akari-v1.2_c03_non-hairpin-side-45_r02-b.png
+    source_sha256s:
+      - 382614923199f3717853b97554c74abddf3bbcc9e51db528ef5b02f26f56a589
+      - 36df113a6753640853f3e5238f8c0184558aec46e77083f9b19e46ffec04d47e
+    findings:
+      - severity: minor
+        category: identity
+        note: >-
+          The two members differ more than A in head position, face width, and
+          bob volume, although both remain recognizable as Akari.
+        resolved: false
+      - severity: minor
+        category: body
+        note: >-
+          The hairpin member measures head 62 / sole 1467 while the non-hairpin
+          member measures head 73 / sole 1450, producing a more visible
+          within-pair vertical difference than A.
+        resolved: false
+    decision: >-
+      Rejected after the user selected variant A. Variant B passes the hard
+      landmark gate and remains eligible, but its within-pair identity and
+      vertical alignment are weaker than the selected pair.
+  - asset_id: C03
+    revision: r02
+    candidate_id: c03-r02-c
+    status: rejected
+    source_paths:
+      - source/candidates/c03/r02/akari-v1.2_c03_hairpin-side-45_r02-c.png
+      - source/candidates/c03/r02/akari-v1.2_c03_non-hairpin-side-45_r02-c.png
+    source_sha256s:
+      - 66c2b3cbd93c00c9d75ebe111dae379ca4db72ec17fc51e8c2b3da97715ede24
+      - a8925306b211adb96958fd4ee82451cd58cf888b171531ca3fcd9fd961be9ab3
+    findings:
+      - severity: major
+        category: body
+        note: >-
+          The non-hairpin member sole is y=1356, differing from accepted C01
+          by 94 px and accepted C02 by 107 px. It is outside the required
+          [1433, 1480] intersection and exceeds the 30 px hard limit.
+        resolved: false
+    decision: >-
+      Rejected as a complete pair after reaching the user-agreed generation
+      cap. The hairpin member passes at head 62 / sole 1441, but the opposite
+      member retains an unresolved sole-height Major and cannot be promoted.
+  - asset_id: C04
+    revision: r01
+    candidate_id: c04-r01-a
+    status: rejected
+    source_paths:
+      - source/candidates/c04/r01/akari-v1.2_c04_floor-sitting_r01-a.png
+    source_sha256s:
+      - f0316e639baa0249925c899b78d6a3815058d477db4893607368f494fe1b0c5a
+    findings:
+      - severity: minor
+        category: body
+        note: >-
+          The front leg reads more extended and deliberately posed than the
+          selected candidate's relaxed floor-sitting balance.
+        resolved: false
+    decision: >-
+      Rejected after the user selected variant C. Candidate A retains clear
+      leg topology and acceptable anatomy, but its forward leg is less relaxed
+      than the selected natural seated balance.
+  - asset_id: C04
+    revision: r01
+    candidate_id: c04-r01-b
+    status: rejected
+    source_paths:
+      - source/candidates/c04/r01/akari-v1.2_c04_floor-sitting_r01-b.png
+    source_sha256s:
+      - ea152fa7bd5a92e34600c97ac14afdb73b2829934284c65676f2f737424484f7
+    findings:
+      - severity: minor
+        category: body
+        note: >-
+          The crossed-knee overlap is denser than in the selected candidate,
+          making the front-to-rear leg trace slightly less immediate.
+        resolved: false
+    decision: >-
+      Rejected after the user selected variant C. Candidate B remains eligible
+      with balanced construction, but its knee overlap weakens the leg-flow
+      read relative to the selected candidate.
+  - asset_id: C04
+    revision: r01
+    candidate_id: c04-r01-c
+    status: accepted
+    source_paths:
+      - source/candidates/c04/r01/akari-v1.2_c04_floor-sitting_r01-c.png
+    source_sha256s:
+      - 7289ca0d9cbc74b4f1becb949dcf174fdd691af08d19f185de47d7657c1d7c64
+    findings: []
+    decision: >-
+      Accepted as r01 after the user selected variant C. It has the strongest
+      natural seated balance, grounded pelvis contact, offset knees, believable
+      support-hand mechanics, and stable Akari identity. The head-top position
+      is only an advisory numeric observation and does not prevent structural
+      review; no unresolved Blocker or Major remains.
+  - asset_id: C07
+    revision: r01
+    candidate_id: c07-r01-a
+    status: accepted
+    source_paths:
+      - source/candidates/c07/r01/akari-v1.2_c07_indoor-socks-standing_r01-a.png
+      - source/candidates/c07/r01/akari-v1.2_c07_indoor-socks-seated_r01-a.png
+    source_sha256s:
+      - 57b6d32d00ef10222abcca3664addeb72d514ec1cb772eb9fcae6c657ce7cca4
+      - 46c812d0f10e2c9df0a7904687ec38939645b4636037dfd537437d1232967d27
+    findings: []
+    decision: >-
+      Accepted as r01 after the user selected variant A. Both members retain
+      exactly two pale-blue sock stripes, stable opaque sock construction,
+      healthy leg volume, traceable joints, and believable standing or seated
+      contact. The standing member is framed more broadly than the intended
+      foot-focused crop, but that numeric and scale observation is advisory and
+      does not prevent structural review; no unresolved Blocker or Major remains.
+  - asset_id: C07
+    revision: r01
+    candidate_id: c07-r01-b
+    status: rejected
+    source_paths:
+      - source/candidates/c07/r01/akari-v1.2_c07_indoor-socks-standing_r01-b.png
+      - source/candidates/c07/r01/akari-v1.2_c07_indoor-socks-seated_r01-b.png
+    source_sha256s:
+      - 490c36ce20c3ea8db2db1f3522e4d425a844689d17c9d7342a09a36a4d6a070a
+      - 3d140c5ea6ec95a862d73495a39e7a02d6e54bb25563cc279d801be1113bac82
+    findings:
+      - severity: major
+        category: rendering
+        note: >-
+          The standing member separates individual toe lobes through the
+          opaque sock, conflicting with conventional sock material and with
+          the smoother seated member's toe construction.
+        resolved: false
+    decision: >-
+      Rejected as a complete pair after the user selected variant A. The crop,
+      stripe count, leg trace, and contact remain readable, but the standing
+      sock retains an unresolved material and pair-consistency Major.
+  - asset_id: C05
+    revision: r01
+    candidate_id: c05-r01-a
+    status: rejected
+    source_paths:
+      - source/candidates/c05/r01/akari-v1.2_c05_morning-bedhair_r01-a.png
+    source_sha256s:
+      - 5a65b2427e78907ae8e1c8461a834b9f59c344a86806215a040890dcd85526dc
+    findings:
+      - severity: minor
+        category: identity
+        note: >-
+          The face reads slightly narrower and the chin slightly sharper than
+          the accepted C01 and C03 identity anchors.
+        resolved: false
+      - severity: minor
+        category: state
+        note: >-
+          The gaze remains comparatively engaged, making this the weakest
+          sleepy read, and the crown arcs are slightly larger than the requested
+          small reversible lifts.
+        resolved: false
+      - severity: major
+        category: production
+        note: >-
+          The frozen PNG is 1023 x 1537 rather than the required 1024 x 1536
+          canvas, so it is not production-eligible.
+        resolved: false
+    decision: >-
+      Rejected after the user selected variant B. Candidate A preserves the
+      required morning-hair and neutral-expression features, but its unresolved
+      canvas-dimension Major also makes it ineligible for promotion.
+  - asset_id: C05
+    revision: r01
+    candidate_id: c05-r01-b
+    status: accepted
+    source_paths:
+      - source/candidates/c05/r01/akari-v1.2_c05_morning-bedhair_r01-b.png
+    source_sha256s:
+      - 4aae292203b389b7ab1f1a44171ec5cf45498843705d7dbefbc47f4452ac8ffa
+    findings:
+      - severity: minor
+        category: identity
+        note: >-
+          The face and chin are slightly narrower than the accepted standing
+          anchors, without breaking the adult Akari identity.
+        resolved: false
+    decision: >-
+      Accepted as r01 after the user selected variant B. It has the clearest
+      coordinated just-awake state, preserves all four reversible morning-hair
+      changes, and is the only candidate on the required 1024 x 1536 canvas;
+      no unresolved Blocker or Major remains.
+  - asset_id: C05
+    revision: r01
+    candidate_id: c05-r01-c
+    status: rejected
+    source_paths:
+      - source/candidates/c05/r01/akari-v1.2_c05_morning-bedhair_r01-c.png
+    source_sha256s:
+      - 9e7eaa4a4b8ac335903fce22a835c30a725ca844f202be3f410081d01d934b5a
+    findings:
+      - severity: minor
+        category: identity
+        note: >-
+          The bob outer contour is fuller and the face and chin slightly longer
+          and sharper than the accepted C01 and C03 identity anchors.
+        resolved: false
+      - severity: minor
+        category: state
+        note: >-
+          The crown flyaways and overall side volume are stronger than the
+          requested small reversible morning-hair disturbance.
+        resolved: false
+      - severity: major
+        category: production
+        note: >-
+          The frozen PNG is 1023 x 1537 rather than the required 1024 x 1536
+          canvas, so it is not production-eligible.
+        resolved: false
+    decision: >-
+      Rejected after the user selected variant B. Candidate C keeps the required
+      sleepy neutral state, but its stronger hair-volume drift and unresolved
+      canvas-dimension Major prevent promotion.
+  - asset_id: C06
+    revision: r01
+    candidate_id: c06-r01-a
+    status: accepted
+    source_paths:
+      - source/candidates/c06/r01/akari-v1.2_c06-1_sleepy-neutral_r01-a.png
+      - source/candidates/c06/r01/akari-v1.2_c06-2_sleepy-secure_r01-a.png
+      - source/candidates/c06/r01/akari-v1.2_c06-3_loosened-mouth_r01-a.png
+      - source/candidates/c06/r01/akari-v1.2_c06-4_soft-smile_r01-a.png
+    source_sha256s:
+      - 44608f8da382c44bce81c3031373e7045e3d6f5db5488c3d2d3474a99a542abd
+      - 2ca9bb82bac9d3a2b7a2b887d5bb56affe9e31d7b4fe2fd7e4297e69ae5d18ba
+      - 4a1647426b73b1bd22380b88783a7bf51336be03d6638ea28e1b164113b98dfa
+      - 7db1ea102a95d45d16e66a7390642d1ceb958ef631af072c40af87b2ee0b71d6
+    findings: []
+    decision: >-
+      Accepted as r01 after the user selected literal review set c06-r01-a.
+      The four stages progress monotonically from sleepy-neutral to
+      sleepy-secure to beginning warmth to a small soft smile; the C06-3 to
+      C06-4 change is subtle but distinguishable, and no unresolved Blocker or
+      Major remains.
+  - asset_id: C06
+    revision: r01
+    candidate_id: c06-r01-b
+    status: rejected
+    source_paths:
+      - source/candidates/c06/r01/akari-v1.2_c06-1_sleepy-neutral_r01-b.png
+      - source/candidates/c06/r01/akari-v1.2_c06-2_sleepy-secure_r01-b.png
+      - source/candidates/c06/r01/akari-v1.2_c06-3_loosened-mouth_r01-b.png
+      - source/candidates/c06/r01/akari-v1.2_c06-4_soft-smile_r01-b.png
+    source_sha256s:
+      - 17063a45eb57b37b598c185a8c4b5d24712da4f384ae16aa97034250b187e7c1
+      - a3ffe6ec524c7e20d61cc5e3fdf41bc8571e6ede78ee0707be1c2b8a296c8965
+      - 460a118ded04613c6c111d6e9aa52ed99dbefa86ecf41531813c349bb46a05bf
+      - 8c5e5db7b0fcf2471b33364510cdcc63e41c53114f7e2c88ad1667fa78821451
+    findings:
+      - severity: major
+        category: state
+        note: >-
+          C06-1 and C06-2 are effectively indistinguishable, and C06-2 does
+          not clearly read as secure.
+        resolved: false
+      - severity: major
+        category: state
+        note: >-
+          The C06-3 to C06-4 transition is abrupt because the eyes open, gaze
+          sharpens, and smile increases together, losing the required
+          just-awake softness.
+        resolved: false
+    decision: >-
+      Rejected after the user selected c06-r01-a. This set retains two
+      unresolved state Majors: its first two stages are effectively
+      indistinguishable without a clear secure read, and its final transition
+      changes eyes, gaze, and smile together, making it abrupt and losing
+      just-awake softness.
+  - asset_id: D01
+    revision: r01
+    candidate_id: d01-r01-a
+    status: accepted
+    source_paths:
+      - source/candidates/d01/r01/akari-v1.2_d01_morning-bedside_r01-a.png
+    source_sha256s:
+      - c2683505610f997c3123e81ff01b0c7a19e7aed18c3be31ceee53e427398b23e
+    findings: []
+    decision: >-
+      Accepted as r01 after the user selected literal candidate d01-r01-a.
+      Original-resolution Identity, Body, State, Rendering, and Production
+      review passed: the pelvis and supporting hand carry believable weight,
+      both legs remain traceable through relaxed socked feet, the C06-2
+      sleepy-secure state and C05 morning hair remain readable, and no
+      unresolved finding is present.
+  - asset_id: D01
+    revision: r01
+    candidate_id: d01-r01-b
+    status: rejected
+    source_paths:
+      - source/candidates/d01/r01/akari-v1.2_d01_morning-bedside_r01-b.png
+    source_sha256s:
+      - 39c27379714358db175531664ad790bc2689cbdb84d974cd1330e5b7e50dad82
+    findings:
+      - severity: major
+        category: body
+        note: >-
+          The rug-side folded leg loses its knee-to-shin-to-ankle trace behind
+          the crossing thigh, while its socked foot emerges without a readable
+          lower-leg connection. One complete leg therefore cannot be followed
+          through shin, heel, and relaxed toes at original resolution.
+        resolved: false
+        controlling_source_asset: C04
+        recommended_next_action: >-
+          Reject candidate B. Keep accepted C04 unchanged because candidate A
+          demonstrates the same floor-sitting rule without this generated
+          topology failure, and do not generate C while A remains eligible.
+    decision: >-
+      Rejected after original-resolution Identity, Body, State, Rendering,
+      and Production review. Identity, sleepy-secure state, hair ornament,
+      outfit, supporting hand, and file production pass, but the unresolved
+      Body Major prevents complete rear-leg traceability and promotion.
+  - asset_id: D02
+    revision: r01
+    candidate_id: d02-r01-a
+    status: rejected
+    source_paths:
+      - source/candidates/d02/r01/akari-v1.2_d02_morning-rug-daze_r01-a.png
+    source_sha256s:
+      - d081f8ee023dfff11f670de59a21c6196a84a004d8b5def0c542e251988b5b8f
+    findings:
+      - severity: minor
+        category: continuity
+        note: >-
+          Both socks show visible ankle slouch instead of limiting the light
+          natural slouch to the straighter extended leg as required by the D02
+          scene contract.
+        resolved: false
+        controlling_source_asset: D02-scene
+        recommended_next_action: >-
+          Reject A in favor of selected B; do not generate C because B is
+          eligible.
+    decision: >-
+      Rejected after the user explicitly selected literal candidate B.
+      Original-resolution Identity, Body, State, Rendering, and Production
+      review passed, but B better satisfies the exact D02 scene humanization
+      and window-directed gaze.
+  - asset_id: D02
+    revision: r01
+    candidate_id: d02-r01-b
+    status: accepted
+    source_paths:
+      - source/candidates/d02/r01/akari-v1.2_d02_morning-rug-daze_r01-b.png
+    source_sha256s:
+      - 0d0341a592adb9cf4e0a3b90ccf78989eb3a7da99c3a757106fce0d98a72cd2e
+    findings: []
+    decision: >-
+      Accepted as r01 after the user explicitly selected literal candidate B.
+      Original-resolution Identity, Body, State, Continuity, Rendering, and
+      Production review passed: adult identity and hair ornament,
+      sleepy-neutral frame-left window gaze, pelvis and supporting hand with
+      traceable healthy legs, D01 room, outfit, and light continuity,
+      two-stripe socks with straighter-leg slouch, complete crop, and no
+      artifact or blocking finding.
+  - asset_id: D03
+    revision: r01
+    candidate_id: d03-r01-a
+    status: rejected
+    source_paths:
+      - source/candidates/d03/r01/akari-v1.2_d03_morning-curtain-pause_r01-a.png
+    source_sha256s:
+      - a9a9571a1fa933fbf2b342be7cba536feb425557fcff96dd96e83395854adca4
+    findings:
+      - severity: minor
+        category: continuity
+        note: >-
+          The curtain-side palm reads as a slightly broad, firm contact rather
+          than the requested light touch or pinch at the curtain edge.
+        resolved: false
+        controlling_source_asset: D03-scene
+        recommended_next_action: >-
+          Reject A in favor of selected B; do not generate C because B is
+          eligible and expresses the low-effort curtain contact more clearly.
+    decision: >-
+      Rejected after Akari selected candidate B under the user's delegated
+      autonomous-execution authority. A remains production-eligible with
+      stable identity, anatomy, sleepy state, room continuity, and two-stripe
+      socks, but B gives the stronger exact D03 action and humanization read.
+  - asset_id: D03
+    revision: r01
+    candidate_id: d03-r01-b
+    status: accepted
+    source_paths:
+      - source/candidates/d03/r01/akari-v1.2_d03_morning-curtain-pause_r01-b.png
+    source_sha256s:
+      - 58bcce16338042ec63489c388c5bd1173477e18cfbecdfd1949f3d5ac84c7bc4
+    findings: []
+    decision: >-
+      Accepted as r01 after Akari selected candidate B under the user's
+      delegated autonomous-execution authority. Original-resolution Identity,
+      Body, State, Continuity, Rendering, and Production review passed: the
+      low curtain-edge pinch, sleepy curtain-directed gaze, healthy supported
+      stance, complete ornament, exactly two sock stripes, single-sock slouch,
+      complete crop, floor contact, and quiet same-morning room continuity are
+      all readable with no unresolved finding. Candidate C is not required.
+  - asset_id: D04
+    revision: r01
+    candidate_id: d04-r01-a
+    status: rejected
+    source_paths:
+      - source/candidates/d04/r01/akari-v1.2_d04_morning-drink-fetch_r01-a.png
+    source_sha256s:
+      - e9117141ca08b24f0f8d9aee0909a1f29bbed1de535b68682bea93bffcea8aa0
+    findings:
+      - severity: major
+        category: identity
+        note: >-
+          The complete crossed-pin and ribbon ornament is mirrored onto the
+          wrong character side, violating the accepted C03 identity anchor.
+        resolved: false
+        controlling_source_asset: C03
+        recommended_next_action: >-
+          Reject A, keep accepted C03 unchanged because B preserves the
+          correct side, and allow independent C because A and B do not share
+          this non-scene controller.
+    decision: >-
+      Rejected after original-resolution Identity, Body, State, Continuity,
+      Rendering, and Production review. The kitchen threshold, sleepy state,
+      outfit, socks, and file production pass, but the unresolved ornament-side
+      Identity Major prevents promotion.
+  - asset_id: D04
+    revision: r01
+    candidate_id: d04-r01-b
+    status: rejected
+    source_paths:
+      - source/candidates/d04/r01/akari-v1.2_d04_morning-drink-fetch_r01-b.png
+    source_sha256s:
+      - 94e4c7cedece30609add1b2de300c24409900911425663e089f274d9358bd982
+    findings:
+      - severity: major
+        category: body
+        note: >-
+          The leading leg crosses deeply in front of the trailing support leg,
+          creating a long fashion-walk line instead of the required short,
+          stable, non-crossing morning transfer.
+        resolved: false
+        controlling_source_asset: D04-scene
+        recommended_next_action: >-
+          Reject B and generate independent C from the frozen references and
+          prompt; do not use A or B as a reference.
+    decision: >-
+      Rejected after original-resolution Identity, Body, State, Continuity,
+      Rendering, and Production review. Identity, ornament side, kitchenette,
+      sleepy state, outfit, socks, and production pass, but the unresolved
+      candidate-local gait topology Major prevents promotion.
+  - asset_id: D04
+    revision: r01
+    candidate_id: d04-r01-c
+    status: rejected
+    source_paths:
+      - source/candidates/d04/r01/akari-v1.2_d04_morning-drink-fetch_r01-c.png
+    source_sha256s:
+      - 8b711e46eb51f7818e2b61bf37de5f184098f9504ce298da30a1807c42b658bf
+    findings:
+      - severity: major
+        category: body
+        note: >-
+          The leading foot again crosses the image-plane centerline in front
+          of the trailing support, repeating the fashion-walk topology instead
+          of the required short transfer on visibly separate foot lanes.
+        resolved: false
+        controlling_source_asset: D04-scene
+        recommended_next_action: >-
+          Reject C, close r01 without promotion, and open r02 with a
+          side-biased camera plus explicit separate parallel foot lanes; do not
+          reopen any accepted Core source.
+    decision: >-
+      Rejected after original-resolution Identity, Body, State, Continuity,
+      Rendering, and Production review. Identity, ornament side, kitchenette,
+      sleepy state, outfit, socks, and production pass, but the repeated gait
+      topology Major confirms a D04 r01 scene-design failure and blocks
+      promotion.
+  - asset_id: D04
+    revision: r02
+    candidate_id: d04-r02-a
+    status: rejected
+    source_paths:
+      - source/candidates/d04/r02/akari-v1.2_d04_morning-drink-fetch_r02-a.png
+    source_sha256s:
+      - 1439c63c1930680a1f5b02a385d11537b20596aa02b9d8185ee2fb94b776cb9e
+    findings: []
+    decision: >-
+      Rejected after Akari selected candidate B under the user's delegated
+      autonomous-execution authority. A passes original-resolution Identity,
+      Body, State, Continuity, Rendering, and Production review with separate
+      foot lanes, grounded support, complete ornament, correct outfit, and
+      valid two-stripe socks, but its trailing-sock and shirt-shift
+      humanization read is weaker than B.
+  - asset_id: D04
+    revision: r02
+    candidate_id: d04-r02-b
+    status: accepted
+    source_paths:
+      - source/candidates/d04/r02/akari-v1.2_d04_morning-drink-fetch_r02-b.png
+    source_sha256s:
+      - 4def96ec68c8b7146f055fefb1f8049c7560b53b07943f03972422c9556e893c
+    findings: []
+    decision: >-
+      Accepted as r02 after Akari selected candidate B under the user's
+      delegated autonomous-execution authority. Original-resolution Identity,
+      Body, State, Continuity, Rendering, and Production review passed: the
+      correct-side complete ornament, sleepy kitchenette-directed gaze,
+      supported non-crossing short transfer on separate projected foot lanes,
+      relaxed natural contact, exactly two sock stripes, lower trailing sock,
+      shifted T-shirt hem, bedroom-to-kitchen continuity, complete crop, and
+      production properties are all readable with no unresolved finding.
+      Candidate C is not required.
+  - asset_id: D05
+    revision: r01
+    candidate_id: d05-r01-a
+    status: rejected
+    source_paths:
+      - source/candidates/d05/r01/akari-v1.2_d05_morning-washroom-route_r01-a.png
+    source_sha256s:
+      - 7177b2f8f037c100afd25dcaa332882abca7a8e3c2880a4fad7544f83bf6bddc
+    findings: []
+    decision: >-
+      Rejected after Akari selected candidate B under the user's delegated
+      autonomous-execution authority. A passes original-resolution Identity,
+      Body, State, Continuity, Rendering, and Production review with complete
+      correct-side ornament, grounded non-crossing legs, exact two-stripe
+      socks, sleepy door-directed gaze, and valid frosted-door staging, but
+      its near-parallel stance reads more like a full stop than an automatic
+      route between rooms.
+  - asset_id: D05
+    revision: r01
+    candidate_id: d05-r01-b
+    status: accepted
+    source_paths:
+      - source/candidates/d05/r01/akari-v1.2_d05_morning-washroom-route_r01-b.png
+    source_sha256s:
+      - 7077af4a288696faa3f79c43726d2b946c05a0386264c7deb56097a2cda82dde
+    findings: []
+    decision: >-
+      Accepted as r01 after Akari selected candidate B under the user's
+      delegated autonomous-execution authority. Original-resolution Identity,
+      Body, State, Continuity, Rendering, and Production review passed: the
+      complete correct-side ornament, sleepy frosted-door-directed gaze,
+      supported short transfer on separate non-crossing projected leg lanes,
+      level pelvis, relaxed grounded feet, exact two-stripe socks, small sleeve
+      and back-hem irregularities, same-morning bedroom continuity, unreadable
+      washroom interior, complete crop, and production properties are all
+      clear with no unresolved finding. Candidate C is not required.
+  - asset_id: D06
+    revision: r01
+    candidate_id: d06-r01-a
+    status: accepted
+    source_paths:
+      - source/candidates/d06/r01/akari-v1.2_d06_evening-entryway-floor-sit_r01-a.png
+    source_sha256s:
+      - 1b88dff62d7a3588f498b431d0931f98c7eb766cf3fb67d1624c0f05279c5c0d
+    findings: []
+    decision: >-
+      Accepted as r01 after Akari selected candidate A under the user's
+      delegated autonomous-execution authority. Original-resolution Identity,
+      Body, State, Continuity, Rendering, and Production review passed: the
+      adult face and normal short bob, complete correct-side ornament, secure
+      heavy-open gaze, lightly wall-supported pelvis, separately traceable
+      raised and folded legs, relaxed grounded feet, exact two-stripe socks,
+      cuff and sock-height humanization, standard hoodie and skirt, closed
+      evening entryway, restrained shoes and bag, complete crop, and production
+      properties are all clear with no unresolved finding.
+  - asset_id: D06
+    revision: r01
+    candidate_id: d06-r01-b
+    status: rejected
+    source_paths:
+      - source/candidates/d06/r01/akari-v1.2_d06_evening-entryway-floor-sit_r01-b.png
+    source_sha256s:
+      - c64538913a0892c30a71402bc77baa6b62f0892c7da09f5b46a478a77f39e079
+    findings: []
+    decision: >-
+      Rejected after Akari selected candidate A under the user's delegated
+      autonomous-execution authority. B passes every hard gate with valid
+      identity, anatomy, support, outfit, ornament, socks, return-home cues,
+      crop, and production properties, but its larger foreground foot and more
+      withdrawn expression read are weaker than A's balanced adult identity,
+      safe relief, and restrained perspective. Candidate C is not required.
+  - asset_id: D07
+    revision: r01
+    candidate_id: d07-r01-a
+    status: rejected
+    source_paths:
+      - source/candidates/d07/r01/akari-v1.2_d07_evening-shallow-sofa-sit_r01-a.png
+    source_sha256s:
+      - c21d35530160e4b8c754b261f5b1ddc303eca8c4aec6bf22b5831feab7375959
+    findings: []
+    decision: >-
+      Rejected after Akari selected candidate B under the user's delegated
+      autonomous-execution authority. A passes original-resolution Identity,
+      Body, State, Continuity, Rendering, and Production review with a complete
+      correct-side ornament, secure heavy-open gaze, supported sofa-edge sit,
+      traceable legs, grounded feet, valid outfit, and full crop, but its
+      nearer frontal staging and less distinct sock-stripe read are weaker than
+      B's clearer body-support and foot review.
+  - asset_id: D07
+    revision: r01
+    candidate_id: d07-r01-b
+    status: accepted
+    source_paths:
+      - source/candidates/d07/r01/akari-v1.2_d07_evening-shallow-sofa-sit_r01-b.png
+    source_sha256s:
+      - cad79b2480b4d3392ebdca2cefebcf2dcb5f5c0e0108f64ce8b127aee83c8ef5
+    findings: []
+    decision: >-
+      Accepted as r01 after Akari selected candidate B under the user's
+      delegated autonomous-execution authority. Original-resolution Identity,
+      Body, State, Continuity, Rendering, and Production review passed: the
+      adult face and normal short bob, complete correct-side ornament, secure
+      heavy-open low gaze, fully supported front-third sofa sit, clear cushion
+      contact, separately traceable legs, bilateral flat socked feet, exact
+      two-stripe socks, restrained cuff and sock asymmetry, standard hoodie and
+      skirt, uncluttered evening room, complete crop, and production properties
+      are all readable with no unresolved finding. Candidate C is not required.
+  - asset_id: D08
+    revision: r01
+    candidate_id: d08-r01-a
+    status: rejected
+    source_paths:
+      - source/candidates/d08/r01/akari-v1.2_d08_evening-bed-edge-sock-adjust_r01-a.png
+    source_sha256s:
+      - 3e8fc9e86fcb4836e7f635d2a115e5f1878f062915c2464edcd4a3d59f0d1aba
+    findings:
+      - severity: major
+        category: rendering
+        note: >-
+          The character-right sock mouth separates into a narrow horizontal
+          strap between the cuff and hand instead of reading as one continuous
+          elastic knit cylinder under a light two-hand adjustment.
+        resolved: false
+        controlling_source_asset: D08-scene
+        recommended_next_action: >-
+          Reject A and generate independent C from the frozen references and
+          prompt without using A or B as a reference.
+    decision: >-
+      Rejected after original-resolution Identity, Body, State, Continuity,
+      Rendering, and Production review. Identity, ornament, supported bed-edge
+      pose, target side, outfit, feet, crop, and production pass, but the
+      unresolved candidate-local sock-continuity Major prevents promotion.
+  - asset_id: D08
+    revision: r01
+    candidate_id: d08-r01-b
+    status: rejected
+    source_paths:
+      - source/candidates/d08/r01/akari-v1.2_d08_evening-bed-edge-sock-adjust_r01-b.png
+    source_sha256s:
+      - 4df34e10a023c1b458c4befee64211692f0f3efa6d4c5cb2df93206fe95f6324
+    findings:
+      - severity: major
+        category: continuity
+        note: >-
+          Both hands adjust the character-left sock while the contract requires
+          the slightly lower character-right sock to remain the visible working
+          side in this same-evening sequence.
+        resolved: false
+        controlling_source_asset: D08-scene
+        recommended_next_action: >-
+          Reject B and generate independent C from the frozen references and
+          prompt without using A or B as a reference.
+    decision: >-
+      Rejected after original-resolution Identity, Body, State, Continuity,
+      Rendering, and Production review. Identity, ornament, anatomy, mattress
+      support, natural hands, socks, feet, crop, and production pass, but the
+      unresolved candidate-local working-side Major prevents promotion.
+  - asset_id: D08
+    revision: r01
+    candidate_id: d08-r01-c
+    status: rejected
+    source_paths:
+      - source/candidates/d08/r01/akari-v1.2_d08_evening-bed-edge-sock-adjust_r01-c.png
+    source_sha256s:
+      - f16539e9263ac2b01fc26549e5e11de10595bd46c1636dedf1bde7e4fdf223aa
+    findings:
+      - severity: major
+        category: continuity
+        note: >-
+          The correct character-right working sock is pulled substantially
+          higher than the character-left sock, contradicting r01's requirement
+          that the D07 lower-right-sock asymmetry remain visible mid-adjustment.
+        resolved: false
+        controlling_source_asset: D08-scene
+        recommended_next_action: >-
+          Reject C, close r01 without promotion, and open r02 so the hands
+          adjust the character-left sock while the character-right sock remains
+          visibly lower; do not reopen any accepted controller.
+    decision: >-
+      Rejected after original-resolution Identity, Body, State, Continuity,
+      Rendering, and Production review. Identity, ornament, hands, support,
+      target side, grounded feet, outfit, crop, and production pass, but the
+      repeated sock-height inversion proves a D08 r01 scene-contract conflict
+      and prevents promotion.
+  - asset_id: D08
+    revision: r02
+    candidate_id: d08-r02-a
+    status: rejected
+    source_paths:
+      - source/candidates/d08/r02/akari-v1.2_d08_evening-bed-edge-sock-adjust_r02-a.png
+    source_sha256s:
+      - 5eef840ddcc373d743c30d9e015416ccafa5ca65f7e408d3e3ada9b6dbe66a94
+    findings:
+      - severity: major
+        category: continuity
+        note: >-
+          Both hands work on the image-left leg, which is Akari's
+          character-right sock in this front-left three-quarter view, while
+          r02 requires the character-left sock on image-right to be smoothed.
+        resolved: false
+        controlling_source_asset: D08-scene
+        recommended_next_action: >-
+          Reject A and generate independent C from the frozen references and
+          unchanged r02 prompt without using A or B as a reference.
+    decision: >-
+      Rejected after original-resolution Identity, Body, State, Continuity,
+      Rendering, and Production review. Identity, ornament, expression,
+      supported bed-edge pose, hands, outfit, grounded feet, crop, and
+      production pass, but the unresolved wrong-working-side Major prevents
+      promotion.
+  - asset_id: D08
+    revision: r02
+    candidate_id: d08-r02-b
+    status: rejected
+    source_paths:
+      - source/candidates/d08/r02/akari-v1.2_d08_evening-bed-edge-sock-adjust_r02-b.png
+    source_sha256s:
+      - e7eaf315ee0de89c637bde8137715e4220e481bb295e7824a29c562540e80b4f
+    findings:
+      - severity: major
+        category: continuity
+        note: >-
+          Both hands again work on the image-left leg, Akari's
+          character-right sock, instead of the required image-right
+          character-left sock.
+        resolved: false
+        controlling_source_asset: D08-scene
+        recommended_next_action: >-
+          Reject B and generate independent C from the frozen references and
+          unchanged r02 prompt without using A or B as a reference.
+    decision: >-
+      Rejected after original-resolution Identity, Body, State, Continuity,
+      Rendering, and Production review. Identity, ornament, expression,
+      anatomy, mattress support, sock rendering, crop, and production pass,
+      but the unresolved repeated wrong-working-side Major prevents promotion.
+  - asset_id: D08
+    revision: r02
+    candidate_id: d08-r02-c
+    status: rejected
+    source_paths:
+      - source/candidates/d08/r02/akari-v1.2_d08_evening-bed-edge-sock-adjust_r02-c.png
+    source_sha256s:
+      - 9245f1a2881d4751984942695741e1ed03d9e04a16631badc9611837afb628af
+    findings:
+      - severity: major
+        category: continuity
+        note: >-
+          The third independent scene again places both hands on image-left,
+          Akari's character-right sock, proving that character-relative wording
+          alone does not reliably communicate the required screen-side action.
+        resolved: false
+        controlling_source_asset: D08-scene
+        recommended_next_action: >-
+          Reject C, close r02 without promotion, and open r03 with explicit
+          image-right working-leg and image-left untouched-leg coordinates.
+    decision: >-
+      Rejected after original-resolution Identity, Body, State, Continuity,
+      Rendering, and Production review. Identity, ornament, expression,
+      support, anatomy, knit continuity, crop, and production pass, but the
+      repeated wrong-working-side Major prevents promotion and requires a
+      screen-coordinate r03 contract.
+  - asset_id: D08
+    revision: r03
+    candidate_id: d08-r03-a
+    status: accepted
+    source_paths:
+      - source/candidates/d08/r03/akari-v1.2_d08_evening-bed-edge-sock-adjust_r03-a.png
+    source_sha256s:
+      - 9e238261e18ca68753bc697bc7be9811eac7e397da143a143555ea7c10671fd7
+    findings: []
+    decision: >-
+      Accepted as r03 after Akari selected candidate A under the user's
+      delegated autonomous-execution authority. Original-resolution Identity,
+      Body, State, Continuity, Rendering, and Production review passed: the
+      adult identity, normal short bob, complete image-right character-left
+      ornament, secure heavy-open working gaze, fully supported bed-edge hinge,
+      two readable hands on only the image-right character-left sock, continuous
+      knit mouths, lower untouched image-left character-right sock, two complete
+      stripes per sock, separately traceable legs, bilateral grounded feet,
+      standard outfit, restrained bedroom, complete crop, and production
+      properties are all readable with no unresolved finding. Candidate C is
+      not required.
+  - asset_id: D08
+    revision: r03
+    candidate_id: d08-r03-b
+    status: rejected
+    source_paths:
+      - source/candidates/d08/r03/akari-v1.2_d08_evening-bed-edge-sock-adjust_r03-b.png
+    source_sha256s:
+      - 08ee9c5fdfd248f0dc698ca6ffa0b151d08ad942f3c39df16820ffb35cb4e41e
+    findings:
+      - severity: major
+        category: continuity
+        note: >-
+          Both hands work on image-left, Akari's character-right sock, despite
+          the explicit r03 image-right working-side contract.
+        resolved: false
+        controlling_source_asset: D08-scene
+        recommended_next_action: >-
+          Reject B and promote passing candidate A; no optional C is required.
+    decision: >-
+      Rejected after original-resolution Identity, Body, State, Continuity,
+      Rendering, and Production review. Identity, ornament, support, anatomy,
+      expression, knit rendering, crop, and production pass, but the unresolved
+      wrong-working-side Major prevents promotion.
+  - asset_id: D09
+    revision: r01
+    candidate_id: d09-r01-a
+    status: accepted
+    source_paths:
+      - source/candidates/d09/r01/akari-v1.2_d09_evening-phone-sleepy-bed-sit_r01-a.png
+    source_sha256s:
+      - 489f1a7117b8a7e27edbe1fb1cd1405c029b551676c00c57caf13f19d2344657
+    findings: []
+    decision: >-
+      Accepted as r01 after Akari selected candidate A under the user's
+      delegated autonomous-execution authority. Original-resolution Identity,
+      Body, State, Continuity, Rendering, and Production review passed: adult
+      identity, normal short bob, complete character-left ornament, visibly
+      open heavy-lidded eyes directed to one unreadable phone, two readable
+      hands with neutral wrists, fully supported mattress and light back
+      contact, separately traceable legs, bilateral flat socked feet, complete
+      two-stripe socks with the character-right sock slightly lower, standard
+      hoodie and skirt, restrained warm bedroom, complete crop, and production
+      properties are all readable with no unresolved finding. Candidate C is
+      not required.
+  - asset_id: D09
+    revision: r01
+    candidate_id: d09-r01-b
+    status: rejected
+    source_paths:
+      - source/candidates/d09/r01/akari-v1.2_d09_evening-phone-sleepy-bed-sit_r01-b.png
+    source_sha256s:
+      - cd4113573443af60214d94e8999c621495af25270bd61804dcf228562b6a041d
+    findings: []
+    decision: >-
+      Rejected after Akari selected candidate A under the user's delegated
+      autonomous-execution authority. B also passes original-resolution
+      Identity, Body, State, Continuity, Rendering, and Production review, but
+      its higher and more deliberate phone hold makes the first-onset sleepy
+      state slightly less natural than A's lower relaxed hands, neck, gaze, and
+      shoulders.
+  - asset_id: D10
+    revision: r01
+    candidate_id: d10-r01-a
+    status: accepted
+    source_paths:
+      - source/candidates/d10/r01/akari-v1.2_d10_evening-rug-side-rest_r01-a.png
+    source_sha256s:
+      - 6197d29399f21e98f43e237d53fbb999eabfd64dcc71c0ecdbefe2c6402c4769
+    findings: []
+    decision: >-
+      Accepted as r01 after Akari selected candidate A under the user's
+      delegated autonomous-execution authority. Original-resolution Identity,
+      Body, State, Continuity, Rendering, and Production review passed: adult
+      identity, normal short bob, complete character-left ornament, visibly
+      open heavy-lidded eyes, one low temple cushion, readable lower and upper
+      hands, continuous shoulder-ribcage-waist-pelvis rug support, coherent
+      side-rest leg chains, complete two-stripe socks, relaxed heels and toes,
+      standard hoodie and skirt, warm restrained room, vertical full-body crop,
+      and production properties are all readable with no unresolved finding.
+      Candidate C is not required.
+  - asset_id: D10
+    revision: r01
+    candidate_id: d10-r01-b
+    status: rejected
+    source_paths:
+      - source/candidates/d10/r01/akari-v1.2_d10_evening-rug-side-rest_r01-b.png
+    source_sha256s:
+      - b9a7b757d9b2bfbb626922d9df3e52220532549669bdaf3929e64d445c92c30e
+    findings: []
+    decision: >-
+      Rejected after Akari selected candidate A under the user's delegated
+      autonomous-execution authority. B also passes original-resolution
+      Identity, Body, State, Continuity, Rendering, and Production review, but
+      its lower hand reads more tucked beneath the head and its feet are less
+      distinctly separated than A's clearer support and anatomy presentation.
+  - asset_id: D11
+    revision: r01
+    candidate_id: d11-r01-a
+    status: rejected
+    source_paths:
+      - source/candidates/d11/r01/akari-v1.2_d11_life-laundry-fold_r01-a.png
+    source_sha256s:
+      - 9d9af05a6e6020152051cbb707481e454efc3156419f06c925aa074e3dd9cdb2
+    findings:
+      - severity: major
+        category: body
+        note: >-
+          The shared side-folded floor-sit hides the complete second socked
+          foot, so bilateral shin, ankle, heel, and toe structure cannot be
+          reviewed against the frozen r01 contract.
+        resolved: false
+        controlling_source_asset: D11-scene
+        recommended_next_action: >-
+          Reject r01 A and move D11 to the r02 sofa-edge support contract; do
+          not generate optional C for this shared scene geometry failure.
+    decision: >-
+      Rejected after original-resolution review. Identity, ornament, adult age,
+      standard outfit, focused expression, both working hands, coherent towel,
+      rug support, laundry context, rendering, and production dimensions pass,
+      but the unresolved shared hidden-foot Body Major blocks selection.
+  - asset_id: D11
+    revision: r01
+    candidate_id: d11-r01-b
+    status: rejected
+    source_paths:
+      - source/candidates/d11/r01/akari-v1.2_d11_life-laundry-fold_r01-b.png
+    source_sha256s:
+      - e367ce09506f2d9c2c092436928459194fc0e1871b4433628cf4072152c857d6
+    findings:
+      - severity: major
+        category: body
+        note: >-
+          The shared side-folded floor-sit again hides the complete second
+          socked foot, so bilateral shin, ankle, heel, and toe structure cannot
+          be reviewed against the frozen r01 contract.
+        resolved: false
+        controlling_source_asset: D11-scene
+        recommended_next_action: >-
+          Reject r01 B and move D11 to the r02 sofa-edge support contract; do
+          not generate optional C for this shared scene geometry failure.
+    decision: >-
+      Rejected after original-resolution review. Identity, ornament, adult age,
+      standard outfit, focused expression, both working hands, coherent towel,
+      rug support, laundry context, rendering, and production dimensions pass,
+      but the same unresolved shared hidden-foot Body Major blocks selection.
+  - asset_id: D11
+    revision: r02
+    candidate_id: d11-r02-a
+    status: rejected
+    source_paths:
+      - source/candidates/d11/r02/akari-v1.2_d11_life-laundry-fold_r02-a.png
+    source_sha256s:
+      - 7c3d9fc660bb788f58c1cb520549e99996d161dc6afb56a97896b3d81f5c116d
+    findings:
+      - severity: major
+        category: production
+        note: >-
+          The character-left laundry basket is cropped through its lower edge,
+          preventing review of the complete declared contextual prop.
+        resolved: false
+        controlling_source_asset: D11-scene
+        recommended_next_action: >-
+          Reject A and promote passing r02 B, whose basket, hands, towel, sofa
+          support, legs, and both socked feet are fully readable.
+    decision: >-
+      Rejected after original-resolution Identity, Body, State, Continuity,
+      Rendering, and Production review. The character and full laundry action
+      otherwise pass, but the unresolved basket crop Production Major prevents
+      promotion.
+  - asset_id: D11
+    revision: r02
+    candidate_id: d11-r02-b
+    status: accepted
+    source_paths:
+      - source/candidates/d11/r02/akari-v1.2_d11_life-laundry-fold_r02-b.png
+    source_sha256s:
+      - ab9f4a7ac3e61f8550f0d6426b2891b0363f6da11049a8daade74df157703832
+    findings: []
+    decision: >-
+      Accepted as r02 after Akari selected candidate B under the user's
+      delegated autonomous-execution authority. Original-resolution Identity,
+      Body, State, Continuity, Rendering, and Production review passed: adult
+      identity, normal short bob, complete character-left ornament, open eyes
+      focused on one coherent towel, two readable working hands with neutral
+      wrists, stable sofa-edge pelvis support, separate knees and shins, both
+      complete two-stripe socks with flat heels and relaxed toes, standard
+      hoodie and skirt, complete basket and askew folded towel, restrained room,
+      full vertical crop, and production properties are all readable with no
+      unresolved finding. Candidate C is not required.
+  - asset_id: D12
+    revision: r01
+    candidate_id: d12-r01-a
+    status: accepted
+    source_paths:
+      - source/candidates/d12/r01/akari-v1.2_d12_life-fridge-open_r01-a.png
+    source_sha256s:
+      - 1ebb3da5e17d31bc6b9c38c8b2a8495c142d8afcbee87f4a01e36f1d4d082f85
+    findings: []
+    decision: >-
+      Accepted as r01 after Akari selected candidate A under the user's
+      delegated autonomous-execution authority. Original-resolution Identity,
+      Body, State, Continuity, Rendering, and Production review passed: adult
+      identity, normal short bob, complete character-left ornament, both open
+      eyes directed into the refrigerator, right-hand five-finger handle grip,
+      separate free hand, coherent modest door angle and interior shelves,
+      stable upright pelvis and independently traceable legs, two complete
+      two-stripe socks with the requested right-side height variation, flat
+      heels and relaxed toes, standard hoodie and skirt, restrained kitchenette,
+      full vertical crop, and production properties are all readable with no
+      unresolved finding. Candidate C is not required.
+  - asset_id: D12
+    revision: r01
+    candidate_id: d12-r01-b
+    status: rejected
+    source_paths:
+      - source/candidates/d12/r01/akari-v1.2_d12_life-fridge-open_r01-b.png
+    source_sha256s:
+      - d1f082184ea887b57fe28c67925dd9707cc69ea48fa686c522d37d6302faf487
+    findings: []
+    decision: >-
+      Rejected after Akari selected candidate A under the user's delegated
+      autonomous-execution authority. B also passes original-resolution
+      Identity, Body, State, Continuity, Rendering, and Production review, but
+      its much wider door angle dominates the frame and its declared sock-side
+      height variation is less exact than A's clearer single-action contract.
+  - asset_id: D13
+    revision: r01
+    candidate_id: d13-r01-a
+    status: rejected
+    source_paths:
+      - source/candidates/d13/r01/akari-v1.2_d13_life-charger-search_r01-a.png
+    source_sha256s:
+      - 1a2ffdfe3a138e6a4562904bde93630c821148b2393bb872bc5627566355db24
+    findings:
+      - severity: major
+        category: continuity
+        note: >-
+          The screen-right character-left hand grips the drawer while the
+          screen-left character-right hand hovers, reversing the r01 declared
+          anatomical hand roles.
+        resolved: false
+        controlling_source_asset: D13-scene
+        recommended_next_action: >-
+          Reject r01 A and move to screen-coordinate r02; do not generate C for
+          this shared scene-language failure.
+    decision: >-
+      Rejected after original-resolution review. Identity, body, expression,
+      drawer contents, feet, rendering, and production pass, but the unresolved
+      shared hand-role Continuity Major blocks r01 promotion.
+  - asset_id: D13
+    revision: r01
+    candidate_id: d13-r01-b
+    status: rejected
+    source_paths:
+      - source/candidates/d13/r01/akari-v1.2_d13_life-charger-search_r01-b.png
+    source_sha256s:
+      - 8a71331c1ef8b668cb721a3683e22465605c795aa0e0a61dd08fdad9bd2999da
+    findings:
+      - severity: major
+        category: continuity
+        note: >-
+          The second independent scene repeats the r01 anatomical hand-role
+          reversal even though all other search-action structure is readable.
+        resolved: false
+        controlling_source_asset: D13-scene
+        recommended_next_action: >-
+          Reject r01 B and move to screen-coordinate r02; do not generate C for
+          this shared scene-language failure.
+    decision: >-
+      Rejected after original-resolution review. Identity, body, expression,
+      drawer contents, feet, rendering, and production pass, but the same
+      unresolved shared hand-role Continuity Major blocks r01 promotion.
+  - asset_id: D13
+    revision: r02
+    candidate_id: d13-r02-a
+    status: rejected
+    source_paths:
+      - source/candidates/d13/r02/akari-v1.2_d13_life-charger-search_r02-a.png
+    source_sha256s:
+      - b3335d7e5ba9883b24b073c2d49eb72efc2decd2689aa6c588f1237d7f344e67
+    findings: []
+    decision: >-
+      Rejected after Akari selected candidate B under the user's delegated
+      autonomous-execution authority. A passes original-resolution Identity,
+      Body, State, Continuity, Rendering, and Production review, including the
+      corrected screen-side hand roles, complete search contents, full
+      ornament, independent legs, and both socked feet, but its wider drawer
+      and more static hand spacing read slightly less clearly as active search
+      than B.
+  - asset_id: D13
+    revision: r02
+    candidate_id: d13-r02-b
+    status: accepted
+    source_paths:
+      - source/candidates/d13/r02/akari-v1.2_d13_life-charger-search_r02-b.png
+    source_sha256s:
+      - 76e0328057e1b118e53999ae98ba3e46248e182ca26e69ad42720a0c585d8c8c
+    findings: []
+    decision: >-
+      Accepted as r02 after Akari selected candidate B under the user's
+      delegated autonomous-execution authority. Original-resolution Identity,
+      Body, State, Continuity, Rendering, and Production review passed: adult
+      identity, normal short bob, complete character-left ornament, open eyes
+      focused into the drawer, corrected screen-right drawer hand and
+      screen-left hovering search hand, natural fingers and wrists, coherent
+      shallow drawer support, one organizer with one adapter, one cable and one
+      notebook, stable upright pelvis, independently traceable legs, both
+      complete two-stripe socks with flat heels and relaxed toes, standard
+      hoodie and skirt, restrained room, full vertical crop, and production
+      properties are readable with no unresolved finding. Candidate C is not
+      required.
+  - asset_id: D14
+    revision: r01
+    candidate_id: d14-r01-a
+    status: rejected
+    source_paths:
+      - source/candidates/d14/r01/akari-v1.2_d14_life-bag-unpack_r01-a.png
+    source_sha256s:
+      - 4ab4717435428c2a9e5cd95304cda462812a6507afd0bc1538064f5ebe25231e
+    findings:
+      - severity: major
+        category: continuity
+        note: >-
+          The screen-left hand lifts the notebook while the screen-right hand
+          holds the near bag rim, reversing the r01 declared screen-side hand
+          roles despite an otherwise coherent unpacking scene.
+        resolved: false
+        controlling_source_asset: D14-scene
+        recommended_next_action: >-
+          Reject r01 A and move to side-neutral r02; do not generate C for this
+          shared scene-language failure.
+    decision: >-
+      Rejected after original-resolution review. Identity, body, expression,
+      sofa support, bag, exactly three contents, feet, rendering, and
+      production pass, but the unresolved shared hand-role Continuity Major
+      blocks r01 promotion.
+  - asset_id: D14
+    revision: r01
+    candidate_id: d14-r01-b
+    status: rejected
+    source_paths:
+      - source/candidates/d14/r01/akari-v1.2_d14_life-bag-unpack_r01-b.png
+    source_sha256s:
+      - 865905ae5d4251a1a5dbcd843685a69d6ae3484d9a3f3ee1acb5e567cfdc2413
+    findings:
+      - severity: major
+        category: continuity
+        note: >-
+          The second independent scene repeats the same r01 screen-side
+          hand-role reversal even though the bag, notebook, pouch,
+          handkerchief, sofa support, and complete feet remain readable.
+        resolved: false
+        controlling_source_asset: D14-scene
+        recommended_next_action: >-
+          Reject r01 B and move to side-neutral r02; do not generate C for this
+          shared scene-language failure.
+    decision: >-
+      Rejected after original-resolution review. Identity, body, expression,
+      sofa support, bag, exactly three contents, feet, rendering, and
+      production pass, but the repeated unresolved shared hand-role Continuity
+      Major blocks r01 promotion.
+  - asset_id: D14
+    revision: r02
+    candidate_id: d14-r02-a
+    status: rejected
+    source_paths:
+      - source/candidates/d14/r02/akari-v1.2_d14_life-bag-unpack_r02-a.png
+    source_sha256s:
+      - 6999f7a88f669b5cfb7a074250f5db747f90fb2fb6db7105582d20b4247241fd
+    findings: []
+    decision: >-
+      Rejected after Akari selected candidate B under the user's delegated
+      autonomous-execution authority. A passes original-resolution Identity,
+      Body, State, Continuity, Rendering, and Production review, including the
+      side-neutral distinct hand roles, one coherent bag, exactly three
+      contents, stable sofa support, independent legs, and both complete
+      socked feet, but its layered handkerchief silhouette and added bag-front
+      tab are slightly less exact than B's cleaner object read.
+  - asset_id: D14
+    revision: r02
+    candidate_id: d14-r02-b
+    status: accepted
+    source_paths:
+      - source/candidates/d14/r02/akari-v1.2_d14_life-bag-unpack_r02-b.png
+    source_sha256s:
+      - 7bfd02acf39f3c80390e22d1b5867775f0911b019ba380bf0d31e6b9d6e0a880
+    findings: []
+    decision: >-
+      Accepted as r02 after Akari selected candidate B under the user's
+      delegated autonomous-execution authority. Original-resolution Identity,
+      Body, State, Continuity, Rendering, and Production review passed: adult
+      identity, normal short bob, complete character-left ornament, open eyes
+      focused toward the unpacking action, one visible hand lifting one closed
+      gray notebook halfway from the bag and the other visible hand holding
+      the near rim open, distinct connected arms, natural fingers and wrists,
+      one upright supported pale soft bag with one loose strap curve, exactly
+      one askew pale-blue pouch and one folded warm-white handkerchief, stable
+      shallow sofa-edge support, independently traceable legs, both complete
+      two-stripe socks with flat heels and relaxed toes, standard hoodie and
+      skirt, restrained room, full vertical crop, and production properties
+      are readable with no unresolved finding. Candidate C is not required.
+  - asset_id: D15
+    revision: r01
+    candidate_id: d15-r01-a
+    status: accepted
+    source_paths:
+      - source/candidates/d15/r01/akari-v1.2_d15_life-pc-posture-break_r01-a.png
+    source_sha256s:
+      - 138a2a0afdb237efc5ed6796b0ff2243ecf48402ab237f202130d8f7fccf797e
+    findings: []
+    decision: >-
+      Accepted as r01 after Akari selected candidate A under the user's
+      delegated autonomous-execution authority. Original-resolution Identity,
+      Body, State, Continuity, Rendering, and Production review passed: adult
+      identity, healthy body volume, normal short bob, complete character-left
+      ornament, both open eyes directed toward one dark blank monitor, one
+      five-finger hand lightly supporting the cheek from a desk-supported elbow,
+      the other open five-finger hand resting on the thigh, stable chair seat and
+      back support, relaxed uneven shoulders without collapse or illness read,
+      independently traceable legs, both complete two-stripe socks with flat
+      heels and relaxed toes, standard hoodie and skirt, one coherent complete
+      monitor, slightly askew keyboard, mouse and desk mat, restrained room, full
+      vertical crop, and production properties are readable with no unresolved
+      finding. Candidate C is not required.
+  - asset_id: D15
+    revision: r01
+    candidate_id: d15-r01-b
+    status: rejected
+    source_paths:
+      - source/candidates/d15/r01/akari-v1.2_d15_life-pc-posture-break_r01-b.png
+    source_sha256s:
+      - 203b728705477aa8e05ada1a70f43770ae908fc6fdb50bcb6877f87ccb63d091
+    findings:
+      - severity: major
+        category: production
+        note: >-
+          The monitor is cropped through its screen-left frame edge and carries
+          a small bezel marking, preventing review of one complete unbranded
+          dark blank monitor under the declared production contract.
+        resolved: false
+        controlling_source_asset: D15-scene
+        recommended_next_action: >-
+          Reject B and promote passing A, whose monitor, chair support, hands,
+          legs, and both flat socked feet are complete and unobstructed.
+    decision: >-
+      Rejected after original-resolution review. Adult identity, open eyes,
+      supported posture, hands, chair, independent legs, both feet, dark screen,
+      rendering, and state pass, but the unresolved monitor crop and bezel-mark
+      Production Major prevents promotion.
+gate_4:
+  asset_id: D01
+  revision: r01
+  outcome: release
+  selected_candidate_id: d01-r01-a
+  controlling_source_asset: D01-scene
+  decision: D01 passed all five review gates with no unresolved finding; Natural Form Gate 4 is released.

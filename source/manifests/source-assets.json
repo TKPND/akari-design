@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "asset_count": 10,
+  "assets": [
+    {
+      "id": "hoodie-front",
+      "original_filename": "v1_1_front_1.webp",
+      "source_path": "source/originals/v1_1_front_1.webp",
+      "sha256": "6b2896e98657ca4079ea94652c16bb05285c1626f255cd08ea1e56f298151f9a",
+      "width": 1024,
+      "height": 1536,
+      "colorspace": "sRGB",
+      "role": "secondary_full_body_outfit_anchor",
+      "orientation_state": "front_view_character_left_is_viewer_right"
+    },
+    {
+      "id": "base-front",
+      "original_filename": "v1_1_front_2.webp",
+      "source_path": "source/originals/v1_1_front_2.webp",
+      "sha256": "a4ef529fe1f99cccfe3f50a25f819712de328dbd9b4a0fa2b9895ad5edbfa425",
+      "width": 1024,
+      "height": 1536,
+      "colorspace": "sRGB",
+      "role": "base_body_outfit_anchor",
+      "orientation_state": "front_view_character_left_is_viewer_right"
+    },
+    {
+      "id": "expression-sheet",
+      "original_filename": "v1_1_front_3.webp",
+      "source_path": "source/originals/v1_1_front_3.webp",
+      "sha256": "2b70c639b320275cde6787263bd6fe0f88ad59068154e4c2439ae69502e6f919",
+      "width": 1254,
+      "height": 1254,
+      "colorspace": "sRGB",
+      "role": "primary_face_hair_identity_anchor",
+      "orientation_state": "expression_grid_unmirrored"
+    },
+    {
+      "id": "hoodie-back",
+      "original_filename": "v1_1_back.webp",
+      "source_path": "source/originals/v1_1_back.webp",
+      "sha256": "77449961e7ae3eebe54be20ee428795fed8b897a08d9dc7c15319315773154f3",
+      "width": 1055,
+      "height": 1491,
+      "colorspace": "sRGB",
+      "role": "back_turnaround_anchor",
+      "orientation_state": "back_view_unmirrored"
+    },
+    {
+      "id": "side-view",
+      "original_filename": "v1_1_真横.webp",
+      "source_path": "source/originals/v1_1_真横.webp",
+      "sha256": "a2d715006d3f2622153f65b52e68373ed5e5d2522f92d15995b4bdffaf93e4c1",
+      "width": 1055,
+      "height": 1491,
+      "colorspace": "sRGB",
+      "role": "side_turnaround_anchor",
+      "orientation_state": "side_view_unmirrored"
+    },
+    {
+      "id": "hairpin-side-45",
+      "original_filename": "v1_1_髪飾り側_45deg.webp",
+      "source_path": "source/originals/v1_1_髪飾り側_45deg.webp",
+      "sha256": "dd144b66f5228934ca95060467ec96f9ef33f38315a3e7a7c70074111cf85a50",
+      "width": 1055,
+      "height": 1491,
+      "colorspace": "sRGB",
+      "role": "hairpin_side_turnaround_anchor",
+      "orientation_state": "hairpin_side_45_unmirrored"
+    },
+    {
+      "id": "non-hairpin-side-45",
+      "original_filename": "v1_1_非髪飾り側45deg.webp",
+      "source_path": "source/originals/v1_1_非髪飾り側45deg.webp",
+      "sha256": "76b95abbffedb77f392bda065b60f5c9194310996af418b59913868025ac3853",
+      "width": 1055,
+      "height": 1491,
+      "colorspace": "sRGB",
+      "role": "non_hairpin_side_turnaround_anchor",
+      "orientation_state": "non_hairpin_side_45_unmirrored"
+    },
+    {
+      "id": "footwear-board",
+      "original_filename": "v1_1_standard_foot_set.webp",
+      "source_path": "source/originals/v1_1_standard_foot_set.webp",
+      "sha256": "5b4175d87a813f4887cbf3e3361f4007acffa5a25cccfb19ecec431447b4978b",
+      "width": 1448,
+      "height": 1086,
+      "colorspace": "sRGB",
+      "role": "footwear_sock_reference_board",
+      "orientation_state": "board_unmirrored"
+    },
+    {
+      "id": "shoe-board",
+      "original_filename": "v1_1_shoes.webp",
+      "source_path": "source/originals/v1_1_shoes.webp",
+      "sha256": "acc31bf31a55b770388b796b34f2b57dbeb48dc2fb974fe8e6896d0cda70f344",
+      "width": 1491,
+      "height": 1055,
+      "colorspace": "sRGB",
+      "role": "sneaker_reference_board",
+      "orientation_state": "board_unmirrored"
+    },
+    {
+      "id": "bag-board",
+      "original_filename": "v1_1_bag.webp",
+      "source_path": "source/originals/v1_1_bag.webp",
+      "sha256": "3416c0e173858d7f27e165be1049ca0777207a2646e81703e6698446f2c9e59c",
+      "width": 1448,
+      "height": 1086,
+      "colorspace": "sRGB",
+      "role": "bag_accessory_reference_board",
+      "orientation_state": "board_unmirrored"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+schema_version: 1
+scene_id: scene-07
+revision: r01
+status: accepted
+selected_variant: b
+findings: []
+selection_reason: 'Variant B corrects the genkan geography: both socked feet are fully
+  on the raised dry wooden floor, while the single pair of shoes and closed umbrella
+  remain together on the wet lower tile.'
+reference_roles_confirmed:
+- D06 raised-floor and lower-tile entryway structure
+- C07 natural white socked feet
+- Scene01 exact outdoor layers
+reviewed_at: '2026-07-21T04:50:43.659052Z'

@@ -1,0 +1,139 @@
+schema_version: 1
+request_id: akari-v1.2-d09-r01
+asset_id: D09
+revision: r01
+variation_axis: independent_scene_attempt
+references:
+  - role: accepted_d08_same_evening_bedroom_continuity
+    path: akari-v1.2/accepted/daily/evening/akari-v1.2_d08_evening-bed-edge-sock-adjust_r03.png
+  - role: accepted_c04_grounded_seated_body
+    path: akari-v1.2/accepted/core/sitting/akari-v1.2_c04_floor-sitting_r01.png
+  - role: accepted_c03_hairpin_three_quarter
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c03_hairpin-side-45_r02.png
+  - role: accepted_c06_1_sleepy_awake_expression
+    path: akari-v1.2/accepted/core/face-hair/akari-v1.2_c06-1_sleepy-neutral_r01.png
+  - role: accepted_c07_seated_sock_feet
+    path: akari-v1.2/accepted/core/indoor-feet/akari-v1.2_c07_indoor-socks-seated_r01.png
+shared_prompt: >-
+  Use the five visible accepted images only in their declared roles to create
+  one standalone same-evening Daily scene of the same naturally cute
+  25-year-old adult Akari. Image 1 controls D08 same-evening adult identity,
+  normal short bob, complete character-left ornament, oversized opaque white
+  hoodie, opaque gray pleated skirt, striped socks, compact bedroom, warm
+  palette, safe relieved state, character-right cuff pushed up one thumb width,
+  and slightly lower character-right sock; do not copy its forward sock-adjust
+  action, exact hand placement, camera crop, or mattress-edge hinge. Image 2
+  controls grounded seated pelvis, healthy leg volume, standard outfit,
+  coordinated spine, and believable support; do not copy its floor side-sit,
+  rug, smile, plain backdrop, or viewer focus. Image 3 controls hairpin-side
+  three-quarter identity, complete character-left pale-blue crossed pins and
+  ribbon-like ornament, cheek contour, and short-bob side construction; do not
+  copy standing, smile, shoes, or white backdrop. Image 4 controls only the
+  sleepy-but-awake expression intensity: both eyes visibly open under mildly
+  heavy lids, relaxed brows and cheeks, and a small closed neutral mouth; do not
+  copy morning hair, chest-up crop, or plain backdrop. Image 5 controls
+  warm-white mid-calf socks with exactly two thin pale-blue stripes, seated ankle
+  and foot volume, relaxed toes, heel shape, and believable contact; do not copy
+  its floor pose, smile, rug, or exact legs. Show Akari sitting a little deeper
+  on the same low neutral bed under warm diffused evening light, with her pelvis
+  fully supported by the mattress and her upper back lightly supported by a
+  plain wall or low neutral headboard. Use a bed-foot-side front-left
+  three-quarter camera at natural seated height. Keep her torso relaxed but not
+  collapsed, shoulders low, neck supported, and chin only slightly lowered.
+  Keep both thighs, knees, shins, and feet on separate non-crossing lanes, with
+  both socked soles fully flat on the floor and toes relaxed. Place one ordinary
+  smartphone in both hands above her lap. Both hands must visibly belong to her
+  arms, hold opposite sides of the single phone with neutral wrists and
+  separately readable fingers, and remain clear of her face. Turn the phone
+  screen toward Akari and away from the viewer so screen content completely
+  unreadable, with no visible text, icons, notifications, logo, camera flash, or
+  glow on her face. Direct her gaze down toward the phone, never the viewer,
+  while keeping both eyes visibly open. The state is the first ordinary onset
+  of sleepiness during safe private phone use, not sleep or collapse, and not
+  sadness, fear, pain, illness, intoxication, dissociation, or compulsive doom
+  scrolling. Carry exactly two Humanization elements from D08: the
+  character-right hoodie cuff stays pushed up by about one thumb width and the
+  character-right sock stays slightly lower while both stripes remain complete.
+  Do not add further costume disorder. Keep the complete head, ornament, both
+  hands, full phone silhouette, pelvis, thighs, knees, lower legs, both socks,
+  heels, toes, mattress support, and floor contact visible. Keep the opaque
+  skirt covering the pelvis and upper thighs with no underwear view. Use only a
+  plain duvet and one plain pillow as restrained context. Do not add a charger,
+  cable, second device, clock, mirror, open drawer, laundry pile, footwear, bag,
+  food, drink, medicine, television content, or explanatory prop. The moment is
+  never sleeping, falling, collapsing, slumping without support, distress,
+  injury, sickness, intoxication, sensuality, fetish framing, glamour, pin-up
+  posing, viewer performance, or an anatomy plate. When references conflict,
+  D08 controls same-evening continuity and room, C04 controls seated body and
+  support, C03 controls three-quarter identity and ornament, C06-1 controls only
+  awake-sleepy expression intensity, and C07 controls socks and feet. Do not
+  create closed eyes, tears, open mouth, broad smile, viewer focus, hidden face,
+  phone covering the mouth, two phones, malformed phone, readable screen,
+  malformed extra or fused fingers, broken wrists, thin legs, broken pelvis or
+  mattress support, crossed fused hidden or untraceable legs, floating heel,
+  tiptoe contact, twisted ankles, pointed toes, wrong ornament side, wrong hair
+  length, wrong outfit, exposed underwear, bare feet, removed sock, incorrect
+  sock stripes, forbidden props, crop loss, text, logo, watermark, border,
+  collage, grid, multiple characters, or severe identity, adult-age, anatomy,
+  continuity, or rendering drift.
+scene_contract:
+  camera: bed-foot-side-front-left-three-quarter-natural-seated-height
+  location: compact-bedroom-deeper-bed-sit
+  seat: fully-supported-deeper-low-bed-mattress
+  action: two-hand-single-phone-viewing-above-lap
+  continuity: d08-same-evening-outfit-normal-hair-room-light-and-humanization
+  lighting: warm-diffused-evening-interior
+  gaze: open-heavy-lidded-eyes-on-phone-not-viewer
+  pose: lightly-back-supported-relaxed-sit-with-bilateral-flat-feet
+  humanization:
+    - character-right-hoodie-cuff-pushed-up-one-thumb-width
+    - character-right-sock-slightly-lower-with-both-stripes-complete
+  outfit:
+    top: oversized-opaque-white-hoodie
+    bottom: opaque-gray-pleated-skirt
+    socks: warm-white-mid-calf-exactly-two-thin-pale-blue-stripes
+  required_visible_features:
+    - complete-head-and-character-left-ornament
+    - both-eyes-open-heavy-lidded-three-quarter-face
+    - two-separate-hands-holding-one-phone-above-lap
+    - phone-screen-turned-away-and-unreadable
+    - fully-supported-pelvis-and-light-upper-back-support
+    - separately-traceable-bilateral-thigh-knee-shin-lines
+    - both-striped-socks-heels-toes-and-flat-floor-contact
+  forbidden_props: [charger, cable, second-device, clock, mirror, open-drawer, laundry-pile, footwear, bag, food, drink, medicine, television-content, explanatory-prop]
+production_requirements:
+  file_format: png
+  target_canvas: {width: 1024, height: 1536}
+  accepted_width: {minimum: 1020, maximum: 1028}
+  accepted_height: {minimum: 1532, maximum: 1540}
+  standalone_composition: true
+  generated_grid: forbidden
+  force_exact_resize: forbidden
+candidate_policy:
+  initial_variants: [a, b]
+  optional_variant: c
+  optional_c_only_for: d09-scene-or-distinct-independent-candidate-local-major-failures
+  stop_for_shared_failure: [D08, C03, C04, C06, C07]
+  cross_candidate_references: forbidden
+candidates:
+  - variant: a
+    title: independent-scene-a
+    target_path: source/candidates/d09/r01/akari-v1.2_d09_evening-phone-sleepy-bed-sit_r01-a.png
+  - variant: b
+    title: independent-scene-b
+    target_path: source/candidates/d09/r01/akari-v1.2_d09_evening-phone-sleepy-bed-sit_r01-b.png
+comparison_anchors: []
+acceptance_gates: [identity, body, state, continuity, rendering, production]
+hard_rejects:
+  - severe identity adult-age face body-volume continuity or rendering drift
+  - fused missing duplicated disconnected crossed hidden or untraceable limbs or joints
+  - floating weight broken bed mattress back pelvis foot hand or phone support or contradictory contact
+  - missing mirrored relocated duplicated or materially redesigned ornament
+  - wrong hair length extreme bed head wet hair or wind
+  - closed eyes tears distress sadness pain injury illness intoxication sleep collapse dissociation sensual fetish glamour viewer focus broad smile or open mouth
+  - wrong outfit exposed underwear removed sock bare feet incorrect sock height or stripes
+  - malformed extra or fused fingers broken wrist malformed phone second phone readable screen logo or face-obscuring phone
+  - unstable unsupported slump crossed legs floating heel tiptoe contact twisted ankles or pointed toes
+  - charger cable clock mirror open drawer laundry pile footwear bag food drink medicine television content or explanatory prop
+  - crop or scale preventing complete head hand phone pelvis leg sock heel toe mattress support or floor contact review
+  - readable text logo watermark border collage grid or multiple character

@@ -1,0 +1,523 @@
+{
+  "schema_version": 1,
+  "collection_id": "akari-v1.1-tonari-no-coordinate-hoodie-everyday",
+  "title": "となりのコーデ hoodie everyday",
+  "reference_pack_version": "tonari-no-akari-identity-plus-v1-1-hoodie-leg-reference-v1",
+  "prompt_template_version": "tonari_coordinate_hoodie_everyday_reference_v1",
+  "batch_policy": {
+    "candidate_count": 8,
+    "seasonal_balance": {
+      "spring": 2,
+      "summer": 2,
+      "autumn": 2,
+      "winter": 2
+    },
+    "composition": "standing_full_body_or_near_full_body",
+    "outfit_distribution": {
+      "hoodie_sweatshirt": 4,
+      "long_tee_outerwear": 2,
+      "casual_outerwear": 2
+    },
+    "background_policy": "plain_or_lightly_seasonal_person_first",
+    "reference_policy": "image_references_required_no_prompt_only_generation",
+    "pdf_policy": "not_in_this_phase"
+  },
+  "requests": [
+    {
+      "id": "request:tonari-coordinate-hoodie-everyday-spring-zip-hoodie-pleated-mini",
+      "coordinate_order": 1,
+      "slot": "spring-zip-hoodie-pleated-mini",
+      "japanese_title": "春のジップパーカー",
+      "season": "spring",
+      "scene": "spring_walk",
+      "outfit_family": "hoodie_sweatshirt",
+      "outfit_notes": "Light zip hoodie over a simple inner top, short pleated skirt, pale socks, and sneakers.",
+      "casual_identity_notes": "Closest spring extension of the original hoodie; Akari's own clothes, relaxed and repeat-wearable.",
+      "leg_quality_notes": "Keep soft thigh volume visible below the skirt, with natural knee placement, calf transition, ankle shape, and a healthy leg line into socks and sneakers.",
+      "composition": "standing_full_body",
+      "tone": "everyday_cute",
+      "risk_note": "Avoid school-uniform cues and avoid simply duplicating the original hoodie image.",
+      "target_path": "source/generated/tonari-no-coordinate/20260708_hoodie-everyday_spring-zip-hoodie-pleated-mini_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp",
+        "source/originals/v1_1_front_1.webp"
+      ],
+      "reference_usage": {
+        "face_hair_identity": {
+          "path": "source/references/tonari-no-akari/identity-face-hair.webp",
+          "instruction": "Mandatory face, hair, eye, and hair ornament identity reference."
+        },
+        "body_balance": {
+          "path": "source/references/tonari-no-akari/identity-body-base.webp",
+          "instruction": "Mandatory body balance and adult petite proportion reference."
+        },
+        "default_hoodie_outfit_context": {
+          "path": "source/references/tonari-no-akari/identity-basic-outfit.webp",
+          "instruction": "Mandatory hoodie clothing-volume context; do not copy the outfit directly."
+        },
+        "side_view_identity": {
+          "path": "source/references/tonari-no-akari/identity-side-view.webp",
+          "instruction": "Mandatory side silhouette and hair-volume reference."
+        },
+        "leg_quality_reference": {
+          "path": "source/originals/v1_1_front_1.webp",
+          "instruction": "Mandatory leg-quality reference for soft thigh volume, natural knee placement, calf transition, ankle shape, and healthy leg line."
+        }
+      },
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: 春のジップパーカー. Use the attached reference images as mandatory visual anchors; do not generate from prompt text alone. Reference roles: identity-face-hair, identity-body-base, identity-basic-outfit, identity-side-view, and v1_1_front_1 leg-quality reference. Akari identity lock: adult 25-year-old Japanese woman, Akari identity, short warm-brown bob, warm amber eyes, pale blue hair ornament on character-left side. Outfit: Light zip hoodie over a simple inner top, short pleated skirt, pale socks, and sneakers. Casual identity: Closest spring extension of the original hoodie; Akari's own clothes, relaxed and repeat-wearable. Leg quality: Keep soft thigh volume visible below the skirt, with natural knee placement, calf transition, ankle shape, and a healthy leg line into socks and sneakers. Composition: standing full-body or near full-body coordinate-sheet framing; person and outfit stay dominant. Silhouette: slightly oversized casual top, short skirt/culotte/shorts as support, socks and sneakers, Akari's own clothes, lived-in everyday outing mood. Background: plain or lightly seasonal background only. Not a fashion catalog model, not a generic background character; clothes must not overpower Akari. No readable image text, no logos, no watermarks, no frame, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, adult age impression, face/hair/hairpin consistency, and reference-image continuity. Casual Fit Gate: outfit must feel like Akari's own clothes, with a slightly oversized casual top, socks and sneakers, lived-in everyday outing mood, and no fashion catalog model read. Leg Quality Gate: soft thigh volume, natural knee placement, calf transition, ankle shape, and healthy leg line must remain attractive and coherent. Outfit Gate: Light zip hoodie over a simple inner top, short pleated skirt, pale socks, and sneakers. must read clearly without the clothes overpowering Akari. Background must stay plain or lightly seasonal background support only so person and outfit stay dominant. Reject for missing reference influence, prompt-only drift, generic background character read, broken anatomy, readable text, logos, watermarks, frame, or panel layout.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "reference_drift_risk": "high",
+        "leg_quality_risk": "high",
+        "catalog_drift_risk": "high",
+        "clothes_overpowering_akari_risk": "high",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "generation_gate": "Generate only with the listed reference images attached or visible in-thread; do not use prompt-only generation.",
+        "first_pass": "Place in the eight-image hoodie everyday contact sheet before finishing.",
+        "leg_quality_gate": "Run the Leg Quality Gate against v1_1_front_1 softness and continuity.",
+        "outcomes": "accept, hold, or reject"
+      }
+    },
+    {
+      "id": "request:tonari-coordinate-hoodie-everyday-spring-long-tee-denim-layer-shorts",
+      "coordinate_order": 2,
+      "slot": "spring-long-tee-denim-layer-shorts",
+      "japanese_title": "春のロンTデニム羽織り",
+      "season": "spring",
+      "scene": "spring_errand",
+      "outfit_family": "long_tee_outerwear",
+      "outfit_notes": "Oversized long-sleeve T-shirt with a light denim shirt or jacket layer, soft shorts, pale socks, and sneakers.",
+      "casual_identity_notes": "Casual spring errand clothes with an easy lived-in mood, not a styled denim catalog look.",
+      "leg_quality_notes": "Shorts should show soft thigh volume and natural knee placement without flattening the calf transition or ankle shape.",
+      "composition": "standing_full_body",
+      "tone": "casual_fresh",
+      "risk_note": "Avoid the denim layer overpowering Akari's face, body balance, or original hoodie warmth.",
+      "target_path": "source/generated/tonari-no-coordinate/20260708_hoodie-everyday_spring-long-tee-denim-layer-shorts_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp",
+        "source/originals/v1_1_front_1.webp"
+      ],
+      "reference_usage": {
+        "face_hair_identity": {
+          "path": "source/references/tonari-no-akari/identity-face-hair.webp",
+          "instruction": "Mandatory face, hair, eye, and hair ornament identity reference."
+        },
+        "body_balance": {
+          "path": "source/references/tonari-no-akari/identity-body-base.webp",
+          "instruction": "Mandatory body balance and adult petite proportion reference."
+        },
+        "default_hoodie_outfit_context": {
+          "path": "source/references/tonari-no-akari/identity-basic-outfit.webp",
+          "instruction": "Mandatory hoodie clothing-volume context; do not copy the outfit directly."
+        },
+        "side_view_identity": {
+          "path": "source/references/tonari-no-akari/identity-side-view.webp",
+          "instruction": "Mandatory side silhouette and hair-volume reference."
+        },
+        "leg_quality_reference": {
+          "path": "source/originals/v1_1_front_1.webp",
+          "instruction": "Mandatory leg-quality reference for soft thigh volume, natural knee placement, calf transition, ankle shape, and healthy leg line."
+        }
+      },
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: 春のロンTデニム羽織り. Use the attached reference images as mandatory visual anchors; do not generate from prompt text alone. Reference roles: identity-face-hair, identity-body-base, identity-basic-outfit, identity-side-view, and v1_1_front_1 leg-quality reference. Akari identity lock: adult 25-year-old Japanese woman, Akari identity, short warm-brown bob, warm amber eyes, pale blue hair ornament on character-left side. Outfit: Oversized long-sleeve T-shirt with a light denim shirt or jacket layer, soft shorts, pale socks, and sneakers. Casual identity: Casual spring errand clothes with an easy lived-in mood, not a styled denim catalog look. Leg quality: Shorts should show soft thigh volume and natural knee placement without flattening the calf transition or ankle shape. Composition: standing full-body or near full-body coordinate-sheet framing; person and outfit stay dominant. Silhouette: slightly oversized casual top, short skirt/culotte/shorts as support, socks and sneakers, Akari's own clothes, lived-in everyday outing mood. Background: plain or lightly seasonal background only. Not a fashion catalog model, not a generic background character; clothes must not overpower Akari. No readable image text, no logos, no watermarks, no frame, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, adult age impression, face/hair/hairpin consistency, and reference-image continuity. Casual Fit Gate: outfit must feel like Akari's own clothes, with a slightly oversized casual top, socks and sneakers, lived-in everyday outing mood, and no fashion catalog model read. Leg Quality Gate: soft thigh volume, natural knee placement, calf transition, ankle shape, and healthy leg line must remain attractive and coherent. Outfit Gate: Oversized long-sleeve T-shirt with a light denim shirt or jacket layer, soft shorts, pale socks, and sneakers. must read clearly without the clothes overpowering Akari. Background must stay plain or lightly seasonal background support only so person and outfit stay dominant. Reject for missing reference influence, prompt-only drift, generic background character read, broken anatomy, readable text, logos, watermarks, frame, or panel layout.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "reference_drift_risk": "high",
+        "leg_quality_risk": "high",
+        "catalog_drift_risk": "high",
+        "clothes_overpowering_akari_risk": "high",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "generation_gate": "Generate only with the listed reference images attached or visible in-thread; do not use prompt-only generation.",
+        "first_pass": "Place in the eight-image hoodie everyday contact sheet before finishing.",
+        "leg_quality_gate": "Run the Leg Quality Gate against v1_1_front_1 softness and continuity.",
+        "outcomes": "accept, hold, or reject"
+      }
+    },
+    {
+      "id": "request:tonari-coordinate-hoodie-everyday-summer-oversized-tee-culotte",
+      "coordinate_order": 3,
+      "slot": "summer-oversized-tee-culotte",
+      "japanese_title": "夏の大きめTシャツ",
+      "season": "summer",
+      "scene": "summer_day_off",
+      "outfit_family": "long_tee_outerwear",
+      "outfit_notes": "Oversized summer T-shirt, light culotte, short socks, and sneakers with a small pale blue or mint accent.",
+      "casual_identity_notes": "Breathable summer everyday clothes; slightly oversized casual top first, cute outfit second.",
+      "leg_quality_notes": "Culotte hem should reveal enough thigh and knee read for soft volume, calf transition, ankle shape, and healthy leg line.",
+      "composition": "standing_full_body",
+      "tone": "fresh",
+      "risk_note": "Avoid logo or text graphics and avoid turning the top into a shapeless blank sack.",
+      "target_path": "source/generated/tonari-no-coordinate/20260708_hoodie-everyday_summer-oversized-tee-culotte_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp",
+        "source/originals/v1_1_front_1.webp"
+      ],
+      "reference_usage": {
+        "face_hair_identity": {
+          "path": "source/references/tonari-no-akari/identity-face-hair.webp",
+          "instruction": "Mandatory face, hair, eye, and hair ornament identity reference."
+        },
+        "body_balance": {
+          "path": "source/references/tonari-no-akari/identity-body-base.webp",
+          "instruction": "Mandatory body balance and adult petite proportion reference."
+        },
+        "default_hoodie_outfit_context": {
+          "path": "source/references/tonari-no-akari/identity-basic-outfit.webp",
+          "instruction": "Mandatory hoodie clothing-volume context; do not copy the outfit directly."
+        },
+        "side_view_identity": {
+          "path": "source/references/tonari-no-akari/identity-side-view.webp",
+          "instruction": "Mandatory side silhouette and hair-volume reference."
+        },
+        "leg_quality_reference": {
+          "path": "source/originals/v1_1_front_1.webp",
+          "instruction": "Mandatory leg-quality reference for soft thigh volume, natural knee placement, calf transition, ankle shape, and healthy leg line."
+        }
+      },
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: 夏の大きめTシャツ. Use the attached reference images as mandatory visual anchors; do not generate from prompt text alone. Reference roles: identity-face-hair, identity-body-base, identity-basic-outfit, identity-side-view, and v1_1_front_1 leg-quality reference. Akari identity lock: adult 25-year-old Japanese woman, Akari identity, short warm-brown bob, warm amber eyes, pale blue hair ornament on character-left side. Outfit: Oversized summer T-shirt, light culotte, short socks, and sneakers with a small pale blue or mint accent. Casual identity: Breathable summer everyday clothes; slightly oversized casual top first, cute outfit second. Leg quality: Culotte hem should reveal enough thigh and knee read for soft volume, calf transition, ankle shape, and healthy leg line. Composition: standing full-body or near full-body coordinate-sheet framing; person and outfit stay dominant. Silhouette: slightly oversized casual top, short skirt/culotte/shorts as support, socks and sneakers, Akari's own clothes, lived-in everyday outing mood. Background: plain or lightly seasonal background only. Not a fashion catalog model, not a generic background character; clothes must not overpower Akari. No readable image text, no logos, no watermarks, no frame, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, adult age impression, face/hair/hairpin consistency, and reference-image continuity. Casual Fit Gate: outfit must feel like Akari's own clothes, with a slightly oversized casual top, socks and sneakers, lived-in everyday outing mood, and no fashion catalog model read. Leg Quality Gate: soft thigh volume, natural knee placement, calf transition, ankle shape, and healthy leg line must remain attractive and coherent. Outfit Gate: Oversized summer T-shirt, light culotte, short socks, and sneakers with a small pale blue or mint accent. must read clearly without the clothes overpowering Akari. Background must stay plain or lightly seasonal background support only so person and outfit stay dominant. Reject for missing reference influence, prompt-only drift, generic background character read, broken anatomy, readable text, logos, watermarks, frame, or panel layout.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "reference_drift_risk": "high",
+        "leg_quality_risk": "high",
+        "catalog_drift_risk": "high",
+        "clothes_overpowering_akari_risk": "high",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "generation_gate": "Generate only with the listed reference images attached or visible in-thread; do not use prompt-only generation.",
+        "first_pass": "Place in the eight-image hoodie everyday contact sheet before finishing.",
+        "leg_quality_gate": "Run the Leg Quality Gate against v1_1_front_1 softness and continuity.",
+        "outcomes": "accept, hold, or reject"
+      }
+    },
+    {
+      "id": "request:tonari-coordinate-hoodie-everyday-summer-thin-hoodie-shorts",
+      "coordinate_order": 4,
+      "slot": "summer-thin-hoodie-shorts",
+      "japanese_title": "夏の薄手フーディ",
+      "season": "summer",
+      "scene": "summer_walk",
+      "outfit_family": "hoodie_sweatshirt",
+      "outfit_notes": "Thin light hoodie or rash-guard-like hoodie over a simple top, soft shorts, ankle socks, and sneakers.",
+      "casual_identity_notes": "Summer hoodie adaptation that still feels like Akari's own clothes and not beach styling.",
+      "leg_quality_notes": "Shorts should keep the thighs softly dimensional, knees natural, calves coherent, ankles clean, and stance relaxed.",
+      "composition": "standing_full_body",
+      "tone": "light_casual",
+      "risk_note": "Avoid swimwear framing, sporty beach cues, and glamour pose drift.",
+      "target_path": "source/generated/tonari-no-coordinate/20260708_hoodie-everyday_summer-thin-hoodie-shorts_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp",
+        "source/originals/v1_1_front_1.webp"
+      ],
+      "reference_usage": {
+        "face_hair_identity": {
+          "path": "source/references/tonari-no-akari/identity-face-hair.webp",
+          "instruction": "Mandatory face, hair, eye, and hair ornament identity reference."
+        },
+        "body_balance": {
+          "path": "source/references/tonari-no-akari/identity-body-base.webp",
+          "instruction": "Mandatory body balance and adult petite proportion reference."
+        },
+        "default_hoodie_outfit_context": {
+          "path": "source/references/tonari-no-akari/identity-basic-outfit.webp",
+          "instruction": "Mandatory hoodie clothing-volume context; do not copy the outfit directly."
+        },
+        "side_view_identity": {
+          "path": "source/references/tonari-no-akari/identity-side-view.webp",
+          "instruction": "Mandatory side silhouette and hair-volume reference."
+        },
+        "leg_quality_reference": {
+          "path": "source/originals/v1_1_front_1.webp",
+          "instruction": "Mandatory leg-quality reference for soft thigh volume, natural knee placement, calf transition, ankle shape, and healthy leg line."
+        }
+      },
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: 夏の薄手フーディ. Use the attached reference images as mandatory visual anchors; do not generate from prompt text alone. Reference roles: identity-face-hair, identity-body-base, identity-basic-outfit, identity-side-view, and v1_1_front_1 leg-quality reference. Akari identity lock: adult 25-year-old Japanese woman, Akari identity, short warm-brown bob, warm amber eyes, pale blue hair ornament on character-left side. Outfit: Thin light hoodie or rash-guard-like hoodie over a simple top, soft shorts, ankle socks, and sneakers. Casual identity: Summer hoodie adaptation that still feels like Akari's own clothes and not beach styling. Leg quality: Shorts should keep the thighs softly dimensional, knees natural, calves coherent, ankles clean, and stance relaxed. Composition: standing full-body or near full-body coordinate-sheet framing; person and outfit stay dominant. Silhouette: slightly oversized casual top, short skirt/culotte/shorts as support, socks and sneakers, Akari's own clothes, lived-in everyday outing mood. Background: plain or lightly seasonal background only. Not a fashion catalog model, not a generic background character; clothes must not overpower Akari. No readable image text, no logos, no watermarks, no frame, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, adult age impression, face/hair/hairpin consistency, and reference-image continuity. Casual Fit Gate: outfit must feel like Akari's own clothes, with a slightly oversized casual top, socks and sneakers, lived-in everyday outing mood, and no fashion catalog model read. Leg Quality Gate: soft thigh volume, natural knee placement, calf transition, ankle shape, and healthy leg line must remain attractive and coherent. Outfit Gate: Thin light hoodie or rash-guard-like hoodie over a simple top, soft shorts, ankle socks, and sneakers. must read clearly without the clothes overpowering Akari. Background must stay plain or lightly seasonal background support only so person and outfit stay dominant. Reject for missing reference influence, prompt-only drift, generic background character read, broken anatomy, readable text, logos, watermarks, frame, or panel layout.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "reference_drift_risk": "high",
+        "leg_quality_risk": "high",
+        "catalog_drift_risk": "high",
+        "clothes_overpowering_akari_risk": "high",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "generation_gate": "Generate only with the listed reference images attached or visible in-thread; do not use prompt-only generation.",
+        "first_pass": "Place in the eight-image hoodie everyday contact sheet before finishing.",
+        "leg_quality_gate": "Run the Leg Quality Gate against v1_1_front_1 softness and continuity.",
+        "outcomes": "accept, hold, or reject"
+      }
+    },
+    {
+      "id": "request:tonari-coordinate-hoodie-everyday-autumn-sweatshirt-check-skirt",
+      "coordinate_order": 5,
+      "slot": "autumn-sweatshirt-check-skirt",
+      "japanese_title": "秋のスウェット",
+      "season": "autumn",
+      "scene": "autumn_walk",
+      "outfit_family": "hoodie_sweatshirt",
+      "outfit_notes": "Soft sweatshirt with a muted check short skirt, ribbed socks, and sneakers.",
+      "casual_identity_notes": "Autumn comfort closest to hoodie warmth; lived-in everyday outing mood with soft sleeve volume.",
+      "leg_quality_notes": "Check skirt should not hide the thigh-to-knee read; preserve natural knee placement, calf transition, ankle shape, and healthy leg line.",
+      "composition": "standing_full_body",
+      "tone": "warm_everyday",
+      "risk_note": "Avoid school-uniform cues from the checked skirt and avoid fashion catalog pose.",
+      "target_path": "source/generated/tonari-no-coordinate/20260708_hoodie-everyday_autumn-sweatshirt-check-skirt_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp",
+        "source/originals/v1_1_front_1.webp"
+      ],
+      "reference_usage": {
+        "face_hair_identity": {
+          "path": "source/references/tonari-no-akari/identity-face-hair.webp",
+          "instruction": "Mandatory face, hair, eye, and hair ornament identity reference."
+        },
+        "body_balance": {
+          "path": "source/references/tonari-no-akari/identity-body-base.webp",
+          "instruction": "Mandatory body balance and adult petite proportion reference."
+        },
+        "default_hoodie_outfit_context": {
+          "path": "source/references/tonari-no-akari/identity-basic-outfit.webp",
+          "instruction": "Mandatory hoodie clothing-volume context; do not copy the outfit directly."
+        },
+        "side_view_identity": {
+          "path": "source/references/tonari-no-akari/identity-side-view.webp",
+          "instruction": "Mandatory side silhouette and hair-volume reference."
+        },
+        "leg_quality_reference": {
+          "path": "source/originals/v1_1_front_1.webp",
+          "instruction": "Mandatory leg-quality reference for soft thigh volume, natural knee placement, calf transition, ankle shape, and healthy leg line."
+        }
+      },
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: 秋のスウェット. Use the attached reference images as mandatory visual anchors; do not generate from prompt text alone. Reference roles: identity-face-hair, identity-body-base, identity-basic-outfit, identity-side-view, and v1_1_front_1 leg-quality reference. Akari identity lock: adult 25-year-old Japanese woman, Akari identity, short warm-brown bob, warm amber eyes, pale blue hair ornament on character-left side. Outfit: Soft sweatshirt with a muted check short skirt, ribbed socks, and sneakers. Casual identity: Autumn comfort closest to hoodie warmth; lived-in everyday outing mood with soft sleeve volume. Leg quality: Check skirt should not hide the thigh-to-knee read; preserve natural knee placement, calf transition, ankle shape, and healthy leg line. Composition: standing full-body or near full-body coordinate-sheet framing; person and outfit stay dominant. Silhouette: slightly oversized casual top, short skirt/culotte/shorts as support, socks and sneakers, Akari's own clothes, lived-in everyday outing mood. Background: plain or lightly seasonal background only. Not a fashion catalog model, not a generic background character; clothes must not overpower Akari. No readable image text, no logos, no watermarks, no frame, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, adult age impression, face/hair/hairpin consistency, and reference-image continuity. Casual Fit Gate: outfit must feel like Akari's own clothes, with a slightly oversized casual top, socks and sneakers, lived-in everyday outing mood, and no fashion catalog model read. Leg Quality Gate: soft thigh volume, natural knee placement, calf transition, ankle shape, and healthy leg line must remain attractive and coherent. Outfit Gate: Soft sweatshirt with a muted check short skirt, ribbed socks, and sneakers. must read clearly without the clothes overpowering Akari. Background must stay plain or lightly seasonal background support only so person and outfit stay dominant. Reject for missing reference influence, prompt-only drift, generic background character read, broken anatomy, readable text, logos, watermarks, frame, or panel layout.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "reference_drift_risk": "high",
+        "leg_quality_risk": "high",
+        "catalog_drift_risk": "high",
+        "clothes_overpowering_akari_risk": "high",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "generation_gate": "Generate only with the listed reference images attached or visible in-thread; do not use prompt-only generation.",
+        "first_pass": "Place in the eight-image hoodie everyday contact sheet before finishing.",
+        "leg_quality_gate": "Run the Leg Quality Gate against v1_1_front_1 softness and continuity.",
+        "outcomes": "accept, hold, or reject"
+      }
+    },
+    {
+      "id": "request:tonari-coordinate-hoodie-everyday-autumn-coach-jacket-hoodie-mini",
+      "coordinate_order": 6,
+      "slot": "autumn-coach-jacket-hoodie-mini",
+      "japanese_title": "秋のコーチジャケット",
+      "season": "autumn",
+      "scene": "autumn_station_meetup",
+      "outfit_family": "casual_outerwear",
+      "outfit_notes": "Casual coach jacket over a hoodie, short skirt, pale socks, and sneakers.",
+      "casual_identity_notes": "Light outerwear variation while preserving hoodie identity and Akari's own clothes feeling.",
+      "leg_quality_notes": "Short skirt and socks should leave legs readable from soft thighs through natural knees, calves, ankles, and sneakers.",
+      "composition": "standing_full_body",
+      "tone": "casual_warm",
+      "risk_note": "Avoid streetwear model styling, brand-like logos, and outfit overpowering Akari.",
+      "target_path": "source/generated/tonari-no-coordinate/20260708_hoodie-everyday_autumn-coach-jacket-hoodie-mini_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp",
+        "source/originals/v1_1_front_1.webp"
+      ],
+      "reference_usage": {
+        "face_hair_identity": {
+          "path": "source/references/tonari-no-akari/identity-face-hair.webp",
+          "instruction": "Mandatory face, hair, eye, and hair ornament identity reference."
+        },
+        "body_balance": {
+          "path": "source/references/tonari-no-akari/identity-body-base.webp",
+          "instruction": "Mandatory body balance and adult petite proportion reference."
+        },
+        "default_hoodie_outfit_context": {
+          "path": "source/references/tonari-no-akari/identity-basic-outfit.webp",
+          "instruction": "Mandatory hoodie clothing-volume context; do not copy the outfit directly."
+        },
+        "side_view_identity": {
+          "path": "source/references/tonari-no-akari/identity-side-view.webp",
+          "instruction": "Mandatory side silhouette and hair-volume reference."
+        },
+        "leg_quality_reference": {
+          "path": "source/originals/v1_1_front_1.webp",
+          "instruction": "Mandatory leg-quality reference for soft thigh volume, natural knee placement, calf transition, ankle shape, and healthy leg line."
+        }
+      },
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: 秋のコーチジャケット. Use the attached reference images as mandatory visual anchors; do not generate from prompt text alone. Reference roles: identity-face-hair, identity-body-base, identity-basic-outfit, identity-side-view, and v1_1_front_1 leg-quality reference. Akari identity lock: adult 25-year-old Japanese woman, Akari identity, short warm-brown bob, warm amber eyes, pale blue hair ornament on character-left side. Outfit: Casual coach jacket over a hoodie, short skirt, pale socks, and sneakers. Casual identity: Light outerwear variation while preserving hoodie identity and Akari's own clothes feeling. Leg quality: Short skirt and socks should leave legs readable from soft thighs through natural knees, calves, ankles, and sneakers. Composition: standing full-body or near full-body coordinate-sheet framing; person and outfit stay dominant. Silhouette: slightly oversized casual top, short skirt/culotte/shorts as support, socks and sneakers, Akari's own clothes, lived-in everyday outing mood. Background: plain or lightly seasonal background only. Not a fashion catalog model, not a generic background character; clothes must not overpower Akari. No readable image text, no logos, no watermarks, no frame, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, adult age impression, face/hair/hairpin consistency, and reference-image continuity. Casual Fit Gate: outfit must feel like Akari's own clothes, with a slightly oversized casual top, socks and sneakers, lived-in everyday outing mood, and no fashion catalog model read. Leg Quality Gate: soft thigh volume, natural knee placement, calf transition, ankle shape, and healthy leg line must remain attractive and coherent. Outfit Gate: Casual coach jacket over a hoodie, short skirt, pale socks, and sneakers. must read clearly without the clothes overpowering Akari. Background must stay plain or lightly seasonal background support only so person and outfit stay dominant. Reject for missing reference influence, prompt-only drift, generic background character read, broken anatomy, readable text, logos, watermarks, frame, or panel layout.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "reference_drift_risk": "high",
+        "leg_quality_risk": "high",
+        "catalog_drift_risk": "high",
+        "clothes_overpowering_akari_risk": "high",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "generation_gate": "Generate only with the listed reference images attached or visible in-thread; do not use prompt-only generation.",
+        "first_pass": "Place in the eight-image hoodie everyday contact sheet before finishing.",
+        "leg_quality_gate": "Run the Leg Quality Gate against v1_1_front_1 softness and continuity.",
+        "outcomes": "accept, hold, or reject"
+      }
+    },
+    {
+      "id": "request:tonari-coordinate-hoodie-everyday-winter-boa-hoodie-pleated-skirt",
+      "coordinate_order": 7,
+      "slot": "winter-boa-hoodie-pleated-skirt",
+      "japanese_title": "冬のボアパーカー",
+      "season": "winter",
+      "scene": "winter_day_off",
+      "outfit_family": "hoodie_sweatshirt",
+      "outfit_notes": "Warm boa or fleece hoodie, short pleated skirt or soft skirt, thicker socks, and sneakers.",
+      "casual_identity_notes": "Winter warmth without long-coat concealment; soft, approachable, and still visibly Akari first.",
+      "leg_quality_notes": "Thicker socks should connect cleanly to calves and ankles while preserving soft thigh volume, natural knees, and healthy leg line.",
+      "composition": "standing_full_body",
+      "tone": "soft_winter",
+      "risk_note": "Avoid bulky upper body swallowing Akari's proportions.",
+      "target_path": "source/generated/tonari-no-coordinate/20260708_hoodie-everyday_winter-boa-hoodie-pleated-skirt_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp",
+        "source/originals/v1_1_front_1.webp"
+      ],
+      "reference_usage": {
+        "face_hair_identity": {
+          "path": "source/references/tonari-no-akari/identity-face-hair.webp",
+          "instruction": "Mandatory face, hair, eye, and hair ornament identity reference."
+        },
+        "body_balance": {
+          "path": "source/references/tonari-no-akari/identity-body-base.webp",
+          "instruction": "Mandatory body balance and adult petite proportion reference."
+        },
+        "default_hoodie_outfit_context": {
+          "path": "source/references/tonari-no-akari/identity-basic-outfit.webp",
+          "instruction": "Mandatory hoodie clothing-volume context; do not copy the outfit directly."
+        },
+        "side_view_identity": {
+          "path": "source/references/tonari-no-akari/identity-side-view.webp",
+          "instruction": "Mandatory side silhouette and hair-volume reference."
+        },
+        "leg_quality_reference": {
+          "path": "source/originals/v1_1_front_1.webp",
+          "instruction": "Mandatory leg-quality reference for soft thigh volume, natural knee placement, calf transition, ankle shape, and healthy leg line."
+        }
+      },
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: 冬のボアパーカー. Use the attached reference images as mandatory visual anchors; do not generate from prompt text alone. Reference roles: identity-face-hair, identity-body-base, identity-basic-outfit, identity-side-view, and v1_1_front_1 leg-quality reference. Akari identity lock: adult 25-year-old Japanese woman, Akari identity, short warm-brown bob, warm amber eyes, pale blue hair ornament on character-left side. Outfit: Warm boa or fleece hoodie, short pleated skirt or soft skirt, thicker socks, and sneakers. Casual identity: Winter warmth without long-coat concealment; soft, approachable, and still visibly Akari first. Leg quality: Thicker socks should connect cleanly to calves and ankles while preserving soft thigh volume, natural knees, and healthy leg line. Composition: standing full-body or near full-body coordinate-sheet framing; person and outfit stay dominant. Silhouette: slightly oversized casual top, short skirt/culotte/shorts as support, socks and sneakers, Akari's own clothes, lived-in everyday outing mood. Background: plain or lightly seasonal background only. Not a fashion catalog model, not a generic background character; clothes must not overpower Akari. No readable image text, no logos, no watermarks, no frame, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, adult age impression, face/hair/hairpin consistency, and reference-image continuity. Casual Fit Gate: outfit must feel like Akari's own clothes, with a slightly oversized casual top, socks and sneakers, lived-in everyday outing mood, and no fashion catalog model read. Leg Quality Gate: soft thigh volume, natural knee placement, calf transition, ankle shape, and healthy leg line must remain attractive and coherent. Outfit Gate: Warm boa or fleece hoodie, short pleated skirt or soft skirt, thicker socks, and sneakers. must read clearly without the clothes overpowering Akari. Background must stay plain or lightly seasonal background support only so person and outfit stay dominant. Reject for missing reference influence, prompt-only drift, generic background character read, broken anatomy, readable text, logos, watermarks, frame, or panel layout.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "reference_drift_risk": "high",
+        "leg_quality_risk": "high",
+        "catalog_drift_risk": "high",
+        "clothes_overpowering_akari_risk": "high",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "generation_gate": "Generate only with the listed reference images attached or visible in-thread; do not use prompt-only generation.",
+        "first_pass": "Place in the eight-image hoodie everyday contact sheet before finishing.",
+        "leg_quality_gate": "Run the Leg Quality Gate against v1_1_front_1 softness and continuity.",
+        "outcomes": "accept, hold, or reject"
+      }
+    },
+    {
+      "id": "request:tonari-coordinate-hoodie-everyday-winter-short-puffer-sweat-culotte",
+      "coordinate_order": 8,
+      "slot": "winter-short-puffer-sweat-culotte",
+      "japanese_title": "冬の短め中綿ジャケット",
+      "season": "winter",
+      "scene": "winter_errand",
+      "outfit_family": "casual_outerwear",
+      "outfit_notes": "Short puffer or padded jacket over a sweatshirt, culotte or shorts, warm socks, and sneakers.",
+      "casual_identity_notes": "Practical winter casual outerwear that feels worn by Akari rather than styled on a model.",
+      "leg_quality_notes": "Keep legs readable below the culotte or shorts, with coherent thigh volume, knee placement, calf transition, ankle shape, and warm socks.",
+      "composition": "standing_full_body",
+      "tone": "practical_cute",
+      "risk_note": "Avoid formal coat, long coat, fashion-editorial styling, and clothes overpowering Akari.",
+      "target_path": "source/generated/tonari-no-coordinate/20260708_hoodie-everyday_winter-short-puffer-sweat-culotte_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp",
+        "source/originals/v1_1_front_1.webp"
+      ],
+      "reference_usage": {
+        "face_hair_identity": {
+          "path": "source/references/tonari-no-akari/identity-face-hair.webp",
+          "instruction": "Mandatory face, hair, eye, and hair ornament identity reference."
+        },
+        "body_balance": {
+          "path": "source/references/tonari-no-akari/identity-body-base.webp",
+          "instruction": "Mandatory body balance and adult petite proportion reference."
+        },
+        "default_hoodie_outfit_context": {
+          "path": "source/references/tonari-no-akari/identity-basic-outfit.webp",
+          "instruction": "Mandatory hoodie clothing-volume context; do not copy the outfit directly."
+        },
+        "side_view_identity": {
+          "path": "source/references/tonari-no-akari/identity-side-view.webp",
+          "instruction": "Mandatory side silhouette and hair-volume reference."
+        },
+        "leg_quality_reference": {
+          "path": "source/originals/v1_1_front_1.webp",
+          "instruction": "Mandatory leg-quality reference for soft thigh volume, natural knee placement, calf transition, ankle shape, and healthy leg line."
+        }
+      },
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: 冬の短め中綿ジャケット. Use the attached reference images as mandatory visual anchors; do not generate from prompt text alone. Reference roles: identity-face-hair, identity-body-base, identity-basic-outfit, identity-side-view, and v1_1_front_1 leg-quality reference. Akari identity lock: adult 25-year-old Japanese woman, Akari identity, short warm-brown bob, warm amber eyes, pale blue hair ornament on character-left side. Outfit: Short puffer or padded jacket over a sweatshirt, culotte or shorts, warm socks, and sneakers. Casual identity: Practical winter casual outerwear that feels worn by Akari rather than styled on a model. Leg quality: Keep legs readable below the culotte or shorts, with coherent thigh volume, knee placement, calf transition, ankle shape, and warm socks. Composition: standing full-body or near full-body coordinate-sheet framing; person and outfit stay dominant. Silhouette: slightly oversized casual top, short skirt/culotte/shorts as support, socks and sneakers, Akari's own clothes, lived-in everyday outing mood. Background: plain or lightly seasonal background only. Not a fashion catalog model, not a generic background character; clothes must not overpower Akari. No readable image text, no logos, no watermarks, no frame, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, adult age impression, face/hair/hairpin consistency, and reference-image continuity. Casual Fit Gate: outfit must feel like Akari's own clothes, with a slightly oversized casual top, socks and sneakers, lived-in everyday outing mood, and no fashion catalog model read. Leg Quality Gate: soft thigh volume, natural knee placement, calf transition, ankle shape, and healthy leg line must remain attractive and coherent. Outfit Gate: Short puffer or padded jacket over a sweatshirt, culotte or shorts, warm socks, and sneakers. must read clearly without the clothes overpowering Akari. Background must stay plain or lightly seasonal background support only so person and outfit stay dominant. Reject for missing reference influence, prompt-only drift, generic background character read, broken anatomy, readable text, logos, watermarks, frame, or panel layout.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "reference_drift_risk": "high",
+        "leg_quality_risk": "high",
+        "catalog_drift_risk": "high",
+        "clothes_overpowering_akari_risk": "high",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "generation_gate": "Generate only with the listed reference images attached or visible in-thread; do not use prompt-only generation.",
+        "first_pass": "Place in the eight-image hoodie everyday contact sheet before finishing.",
+        "leg_quality_gate": "Run the Leg Quality Gate against v1_1_front_1 softness and continuity.",
+        "outcomes": "accept, hold, or reject"
+      }
+    }
+  ]
+}

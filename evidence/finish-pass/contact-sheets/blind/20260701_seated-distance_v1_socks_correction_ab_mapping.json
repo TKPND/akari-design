@@ -1,0 +1,9 @@
+{
+  "image": "20260701_seated-distance_v1.webp",
+  "correction_candidate": "20260701_seated-distance_v1_correction_socks_v1.webp",
+  "A": "correction",
+  "B": "original",
+  "random_seed": 2026070119,
+  "normal_contact_sheet": "evidence/finish-pass/contact-sheets/20260701_seated-distance_v1_socks_correction_before_after.webp",
+  "blind_contact_sheet": "evidence/finish-pass/contact-sheets/blind/20260701_seated-distance_v1_socks_correction_ab_blind.webp"
+}

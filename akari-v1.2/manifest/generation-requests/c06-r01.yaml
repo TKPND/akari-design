@@ -1,0 +1,166 @@
+schema_version: 1
+request_id: akari-v1.2-c06-r01
+asset_id: C06
+revision: r01
+variation_axis: expression_gradient_family_attempt
+references:
+  - role: accepted_c05_edit_source
+    path: akari-v1.2/accepted/core/face-hair/akari-v1.2_c05_morning-bedhair_r01.png
+  - role: accepted_c01_identity_crosscheck
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c01_front-natural-stance_r01.png
+  - role: accepted_c03_hairpin_three_quarter
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c03_hairpin-side-45_r02.png
+  - role: v1_1_expression_range
+    path: akari-v1.2/references/v1.1/expression-grid.webp
+edit_policy:
+  source_role: accepted_c05_edit_source
+  mode: direct-from-source-per-stage
+  chained_c06_outputs: forbidden
+shared_prompt: >-
+  Use the four visible images only in their declared roles. Edit Image 1
+  directly to create one standalone chest-up 1024 x 1536 portrait of the same
+  naturally cute 25-year-old Akari. Image 1 is the controlling accepted C05
+  edit source for composition, crop, near-eye-level front-biased light
+  three-quarter camera, head angle, reversible morning hair, complete
+  character-left ornament, white oversized hoodie, warm off-white backdrop,
+  soft diffuse near-neutral lighting, rendering, and sleepy-neutral baseline.
+  Image 2 is a controlling rejection cross-check for adult identity, healthy
+  face width, rounded cheeks, compact chin, base eye construction, warm amber
+  eyes, palette, and hoodie only; do not copy its full-body pose or intentionally
+  reshape the C05 face. Image 3 is a controlling rejection cross-check for the
+  ornament, cheek silhouette, and short-bob side construction only; do not copy
+  its full-body pose or replace C05 morning-hair irregularity. Image 4 is a
+  non-controlling expression-range reference for neutral lips, relaxed mouth,
+  and a small closed-mouth soft smile only; do not copy its grid, panel-specific
+  face geometry, open-mouth expressions, extreme emotions, crop, or rendering.
+  Preserve the exact C05 crown lifts, lightly separated bangs, partial nape
+  flick, lower-bob irregularity, cheek-side strand, short-bob length, part,
+  color, side volume, ornament placement, shoulders, neckline, upper chest,
+  crop, backdrop, lighting, and rendering. Preserve C05 face width, cheek
+  volume, chin, nose, ear placement, iris size, base eye shape, and adult age;
+  C01 and C03 reject further narrowing or sharpening but do not authorize a
+  face redesign. Change only upper-eyelid opening, lower-eyelid roundness, pupil
+  focus, brow height and angle, mouth corners, and cheek relaxation according
+  to the one supplied stage delta. No hands, props, furniture, bed, window,
+  room scene, head tilt, outfit change, stronger blush, text, logo, watermark,
+  border, grid, collage, multiple composition, or multiple character.
+stages:
+  - stage: c06-1
+    descriptor: sleepy-neutral
+    prompt_delta: >-
+      Stay closest to accepted C05. Keep slightly heavy upper eyelids without
+      materially shrinking the eyes, a softly unfocused viewer-directed gaze,
+      relaxed brows, and closed lips in a neutral line. Show no smile, sadness,
+      distress, pout, yawn, or sensual emphasis. Change no non-expression
+      property.
+  - stage: c06-2
+    descriptor: sleepy-secure
+    prompt_delta: >-
+      Preserve nearly the same eyelid weight and low-energy gaze as C06-1.
+      Soften only the brow angle, lower eyelids, and cheek tension enough to read
+      as safe and comfortable rather than blank. Keep the mouth closed and
+      almost neutral; do not use a visible smile as the primary difference or
+      jump to alertness. Change no non-expression property.
+  - stage: c06-3
+    descriptor: loosened-mouth
+    prompt_delta: >-
+      Preserve the secure sleepy eyes and relaxed brows of C06-2. Let the closed
+      mouth relax and lift only minimally at both corners, with slight cheek
+      relaxation that does not narrow the face or become a full smile. Read as
+      the beginning of warmth, not the final smile. Change no non-expression
+      property.
+  - stage: c06-4
+    descriptor: soft-smile
+    prompt_delta: >-
+      Make a clearly readable but small closed-mouth everyday smile, coordinating
+      both mouth corners, lower eyelids, brows, and cheeks while retaining
+      just-awake softness. No teeth, open mouth, closed eyes, laughter, strong
+      blush, grin, head tilt, extra pose, or full-alert performance. Change no
+      non-expression property.
+framing_guidance:
+  canvas: {width: 1024, height: 1536}
+  enforcement: advisory
+  crop: chest-up-below-hoodie-neckline-and-upper-chest
+  intended_top_breathing_room_pixels: 70
+  intended_lateral_hair_margin_pixels: 60
+  face_placement: vertical-upper-middle
+  required_visible_features:
+    - complete-crown-and-outer-hair-silhouette
+    - complete-character-left-ornament
+    - both-eyes-face-outline-cheek-strand-and-lower-bob-ends
+    - shoulders-hoodie-neckline-and-upper-chest
+  reject_on_numeric_miss_alone: false
+  major_only_when: crop-or-scale-prevents-complete-face-hair-sequence-review
+production_requirements:
+  file_format: png
+  canvas: {width: 1024, height: 1536}
+  standalone_composition: true
+  generated_grid: forbidden
+candidates:
+  - variant: a
+    title: complete-family-a
+    outputs:
+      - stage: c06-1
+        descriptor: sleepy-neutral
+        edit_source_role: accepted_c05_edit_source
+        target_path: source/candidates/c06/r01/akari-v1.2_c06-1_sleepy-neutral_r01-a.png
+      - stage: c06-2
+        descriptor: sleepy-secure
+        edit_source_role: accepted_c05_edit_source
+        target_path: source/candidates/c06/r01/akari-v1.2_c06-2_sleepy-secure_r01-a.png
+      - stage: c06-3
+        descriptor: loosened-mouth
+        edit_source_role: accepted_c05_edit_source
+        target_path: source/candidates/c06/r01/akari-v1.2_c06-3_loosened-mouth_r01-a.png
+      - stage: c06-4
+        descriptor: soft-smile
+        edit_source_role: accepted_c05_edit_source
+        target_path: source/candidates/c06/r01/akari-v1.2_c06-4_soft-smile_r01-a.png
+  - variant: b
+    title: complete-family-b
+    outputs:
+      - stage: c06-1
+        descriptor: sleepy-neutral
+        edit_source_role: accepted_c05_edit_source
+        target_path: source/candidates/c06/r01/akari-v1.2_c06-1_sleepy-neutral_r01-b.png
+      - stage: c06-2
+        descriptor: sleepy-secure
+        edit_source_role: accepted_c05_edit_source
+        target_path: source/candidates/c06/r01/akari-v1.2_c06-2_sleepy-secure_r01-b.png
+      - stage: c06-3
+        descriptor: loosened-mouth
+        edit_source_role: accepted_c05_edit_source
+        target_path: source/candidates/c06/r01/akari-v1.2_c06-3_loosened-mouth_r01-b.png
+      - stage: c06-4
+        descriptor: soft-smile
+        edit_source_role: accepted_c05_edit_source
+        target_path: source/candidates/c06/r01/akari-v1.2_c06-4_soft-smile_r01-b.png
+repair_lane:
+  mode: inactive
+review_sets:
+  - candidate_id: c06-r01-a
+    source_paths:
+      - source/candidates/c06/r01/akari-v1.2_c06-1_sleepy-neutral_r01-a.png
+      - source/candidates/c06/r01/akari-v1.2_c06-2_sleepy-secure_r01-a.png
+      - source/candidates/c06/r01/akari-v1.2_c06-3_loosened-mouth_r01-a.png
+      - source/candidates/c06/r01/akari-v1.2_c06-4_soft-smile_r01-a.png
+  - candidate_id: c06-r01-b
+    source_paths:
+      - source/candidates/c06/r01/akari-v1.2_c06-1_sleepy-neutral_r01-b.png
+      - source/candidates/c06/r01/akari-v1.2_c06-2_sleepy-secure_r01-b.png
+      - source/candidates/c06/r01/akari-v1.2_c06-3_loosened-mouth_r01-b.png
+      - source/candidates/c06/r01/akari-v1.2_c06-4_soft-smile_r01-b.png
+comparison_anchors: []
+acceptance_gates: [identity, state, rendering]
+hard_rejects:
+  - severe identity age face-shape chin or base-eye drift
+  - progressively narrower face sharper chin younger age or larger doll-like eyes
+  - corrupted asymmetric duplicated or disconnected facial features
+  - missing mirrored relocated duplicated or redesigned ornament
+  - material crop head-angle hairstyle outfit backdrop lighting palette or rendering drift
+  - indistinguishable reversed or abrupt expression-stage progression
+  - sleepiness shown mainly through closed or substantially shrunken eyes
+  - sadness distress pout intoxication illness sensuality or strong-blush drift
+  - yawn teeth open mouth laughter performative grin or extra pose
+  - wrong dimensions corrupt file or unreadable complete face-and-hair crop
+  - readable text logo watermark border grid collage or multiple character

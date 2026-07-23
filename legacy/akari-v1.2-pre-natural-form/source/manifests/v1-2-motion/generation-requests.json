@@ -1,0 +1,540 @@
+{
+  "schema_version": 1,
+  "collection_id": "akari-v1.2-representative-motion-poses",
+  "prompt_template_version": "akari_v1_2_representative_motion_v1",
+  "active_batches": {
+    "walking": "batch:v1-2-motion:20260713:walking:r1",
+    "seated": "batch:v1-2-motion:20260713:seated:r1",
+    "turning": "batch:v1-2-motion:20260713:turning:r2"
+  },
+  "requests": [
+    {
+      "id": "request:v1-2-motion:20260713:walking:r1:c1",
+      "batch_id": "batch:v1-2-motion:20260713:walking:r1",
+      "motion_order": 1,
+      "motion": "walking",
+      "revision": 1,
+      "candidate_number": 1,
+      "variation": "heel-strike with modest stride and opposite arm swing",
+      "reference_pack_inputs": [
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-left-front-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-left-profile.webp",
+        "source/finished/v1-2-turnaround/character-left-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/back.webp",
+        "source/finished/v1-2-turnaround/character-right-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-right-profile.webp",
+        "source/finished/v1-2-turnaround/character-right-front-three-quarter.webp"
+      ],
+      "source_pack_sha256": "81bcfb2cc058efdbc38a605ef2195680b4ed869e266556a2c3292ba8ca9fe109",
+      "target_path": "source/generated/v1-2-motion/20260713_walking_r1_c1.png",
+      "prompt_template_version": "akari_v1_2_representative_motion_v1",
+      "prompt": "Create one clean full-body Akari v1.2 walking motion candidate.\nUse all eight attached reference images as mandatory identity, age, body, outfit, footwear, hair, and construction sources; do not omit or replace any reference and do not generate from prompt text alone.\nIdentity and age lock: preserve the accepted adult Akari v1.2 identity and age impression, face, warm-brown bob and eyes, body proportions, and the pale-blue hair ornament on character-left.\nOutfit and footwear lock: standard white oversized hoodie, gray pleated skirt, striped crew socks, and chunky white-and-blue sneakers.\nCanvas and framing lock: full body including all hair, both hands, and both shoes inside a 1024x1536 RGB portrait; plain light background; restrained perspective; no dramatic foreshortening or camera tilt.\nExclusions: no props, other characters, scenery, text, logos, watermarks, labels, borders, frames, or panel layouts.\nCandidate variation: heel-strike with modest stride and opposite arm swing.\nWalking specification: show a readable mid-step with one leg forward and the other behind. Keep both feet and their relationship to the ground understandable, with modest arm swing and restrained hoodie, skirt, and hair follow-through. Keep thighs, knees, calves, socks, and sneakers traceable and unobscured by skirt or crop.",
+      "acceptance_gates": [
+        "Identity matches the accepted v1.2 face and hair lock.",
+        "Age impression remains consistent with the accepted character reference.",
+        "Anatomy and pose are coherent and immediately readable.",
+        "Body proportion remains consistent with the accepted turnaround.",
+        "Hoodie, skirt, socks, and sneakers retain their construction and palette.",
+        "The pale-blue ornament remains on the character-left side.",
+        "The entire figure is framed cleanly without clipped hair, hands, or shoes.",
+        "No extra limbs, merged anatomy, malformed hands or feet, text, or image artifacts are present.",
+        "Weight, balance, garment response, and hair response make the named motion feel natural.",
+        "The candidate is strong enough to serve as a reusable character reference, not merely the safest surviving image."
+      ],
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one motion contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-motion:20260713:walking:r1:c2",
+      "batch_id": "batch:v1-2-motion:20260713:walking:r1",
+      "motion_order": 1,
+      "motion": "walking",
+      "revision": 1,
+      "candidate_number": 2,
+      "variation": "mid-stance with compact stride and relaxed arms",
+      "reference_pack_inputs": [
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-left-front-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-left-profile.webp",
+        "source/finished/v1-2-turnaround/character-left-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/back.webp",
+        "source/finished/v1-2-turnaround/character-right-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-right-profile.webp",
+        "source/finished/v1-2-turnaround/character-right-front-three-quarter.webp"
+      ],
+      "source_pack_sha256": "81bcfb2cc058efdbc38a605ef2195680b4ed869e266556a2c3292ba8ca9fe109",
+      "target_path": "source/generated/v1-2-motion/20260713_walking_r1_c2.png",
+      "prompt_template_version": "akari_v1_2_representative_motion_v1",
+      "prompt": "Create one clean full-body Akari v1.2 walking motion candidate.\nUse all eight attached reference images as mandatory identity, age, body, outfit, footwear, hair, and construction sources; do not omit or replace any reference and do not generate from prompt text alone.\nIdentity and age lock: preserve the accepted adult Akari v1.2 identity and age impression, face, warm-brown bob and eyes, body proportions, and the pale-blue hair ornament on character-left.\nOutfit and footwear lock: standard white oversized hoodie, gray pleated skirt, striped crew socks, and chunky white-and-blue sneakers.\nCanvas and framing lock: full body including all hair, both hands, and both shoes inside a 1024x1536 RGB portrait; plain light background; restrained perspective; no dramatic foreshortening or camera tilt.\nExclusions: no props, other characters, scenery, text, logos, watermarks, labels, borders, frames, or panel layouts.\nCandidate variation: mid-stance with compact stride and relaxed arms.\nWalking specification: show a readable mid-step with one leg forward and the other behind. Keep both feet and their relationship to the ground understandable, with modest arm swing and restrained hoodie, skirt, and hair follow-through. Keep thighs, knees, calves, socks, and sneakers traceable and unobscured by skirt or crop.",
+      "acceptance_gates": [
+        "Identity matches the accepted v1.2 face and hair lock.",
+        "Age impression remains consistent with the accepted character reference.",
+        "Anatomy and pose are coherent and immediately readable.",
+        "Body proportion remains consistent with the accepted turnaround.",
+        "Hoodie, skirt, socks, and sneakers retain their construction and palette.",
+        "The pale-blue ornament remains on the character-left side.",
+        "The entire figure is framed cleanly without clipped hair, hands, or shoes.",
+        "No extra limbs, merged anatomy, malformed hands or feet, text, or image artifacts are present.",
+        "Weight, balance, garment response, and hair response make the named motion feel natural.",
+        "The candidate is strong enough to serve as a reusable character reference, not merely the safest surviving image."
+      ],
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one motion contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-motion:20260713:walking:r1:c3",
+      "batch_id": "batch:v1-2-motion:20260713:walking:r1",
+      "motion_order": 1,
+      "motion": "walking",
+      "revision": 1,
+      "candidate_number": 3,
+      "variation": "toe-off with restrained garment and hair follow-through",
+      "reference_pack_inputs": [
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-left-front-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-left-profile.webp",
+        "source/finished/v1-2-turnaround/character-left-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/back.webp",
+        "source/finished/v1-2-turnaround/character-right-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-right-profile.webp",
+        "source/finished/v1-2-turnaround/character-right-front-three-quarter.webp"
+      ],
+      "source_pack_sha256": "81bcfb2cc058efdbc38a605ef2195680b4ed869e266556a2c3292ba8ca9fe109",
+      "target_path": "source/generated/v1-2-motion/20260713_walking_r1_c3.png",
+      "prompt_template_version": "akari_v1_2_representative_motion_v1",
+      "prompt": "Create one clean full-body Akari v1.2 walking motion candidate.\nUse all eight attached reference images as mandatory identity, age, body, outfit, footwear, hair, and construction sources; do not omit or replace any reference and do not generate from prompt text alone.\nIdentity and age lock: preserve the accepted adult Akari v1.2 identity and age impression, face, warm-brown bob and eyes, body proportions, and the pale-blue hair ornament on character-left.\nOutfit and footwear lock: standard white oversized hoodie, gray pleated skirt, striped crew socks, and chunky white-and-blue sneakers.\nCanvas and framing lock: full body including all hair, both hands, and both shoes inside a 1024x1536 RGB portrait; plain light background; restrained perspective; no dramatic foreshortening or camera tilt.\nExclusions: no props, other characters, scenery, text, logos, watermarks, labels, borders, frames, or panel layouts.\nCandidate variation: toe-off with restrained garment and hair follow-through.\nWalking specification: show a readable mid-step with one leg forward and the other behind. Keep both feet and their relationship to the ground understandable, with modest arm swing and restrained hoodie, skirt, and hair follow-through. Keep thighs, knees, calves, socks, and sneakers traceable and unobscured by skirt or crop.",
+      "acceptance_gates": [
+        "Identity matches the accepted v1.2 face and hair lock.",
+        "Age impression remains consistent with the accepted character reference.",
+        "Anatomy and pose are coherent and immediately readable.",
+        "Body proportion remains consistent with the accepted turnaround.",
+        "Hoodie, skirt, socks, and sneakers retain their construction and palette.",
+        "The pale-blue ornament remains on the character-left side.",
+        "The entire figure is framed cleanly without clipped hair, hands, or shoes.",
+        "No extra limbs, merged anatomy, malformed hands or feet, text, or image artifacts are present.",
+        "Weight, balance, garment response, and hair response make the named motion feel natural.",
+        "The candidate is strong enough to serve as a reusable character reference, not merely the safest surviving image."
+      ],
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one motion contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-motion:20260713:seated:r1:c1",
+      "batch_id": "batch:v1-2-motion:20260713:seated:r1",
+      "motion_order": 2,
+      "motion": "seated",
+      "revision": 1,
+      "candidate_number": 1,
+      "variation": "knees offset left, hands near knees, upright torso",
+      "reference_pack_inputs": [
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-left-front-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-left-profile.webp",
+        "source/finished/v1-2-turnaround/character-left-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/back.webp",
+        "source/finished/v1-2-turnaround/character-right-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-right-profile.webp",
+        "source/finished/v1-2-turnaround/character-right-front-three-quarter.webp"
+      ],
+      "source_pack_sha256": "81bcfb2cc058efdbc38a605ef2195680b4ed869e266556a2c3292ba8ca9fe109",
+      "target_path": "source/generated/v1-2-motion/20260713_seated_r1_c1.png",
+      "prompt_template_version": "akari_v1_2_representative_motion_v1",
+      "prompt": "Create one clean full-body Akari v1.2 seated motion candidate.\nUse all eight attached reference images as mandatory identity, age, body, outfit, footwear, hair, and construction sources; do not omit or replace any reference and do not generate from prompt text alone.\nIdentity and age lock: preserve the accepted adult Akari v1.2 identity and age impression, face, warm-brown bob and eyes, body proportions, and the pale-blue hair ornament on character-left.\nOutfit and footwear lock: standard white oversized hoodie, gray pleated skirt, striped crew socks, and chunky white-and-blue sneakers.\nCanvas and framing lock: full body including all hair, both hands, and both shoes inside a 1024x1536 RGB portrait; plain light background; restrained perspective; no dramatic foreshortening or camera tilt.\nExclusions: no props, other characters, scenery, text, logos, watermarks, labels, borders, frames, or panel layouts.\nCandidate variation: knees offset left, hands near knees, upright torso.\nSeated specification: show a natural seated reference pose on an implied, invisible support plane without rendering a chair, backrest, or prop. Balance pelvis, torso, and feet as though a stable seat is present; offset knees and feet for leg readability; place hands naturally near the knees or beside the body; preserve believable folds, skirt placement, hand anatomy, socks, and complete footwear.",
+      "acceptance_gates": [
+        "Identity matches the accepted v1.2 face and hair lock.",
+        "Age impression remains consistent with the accepted character reference.",
+        "Anatomy and pose are coherent and immediately readable.",
+        "Body proportion remains consistent with the accepted turnaround.",
+        "Hoodie, skirt, socks, and sneakers retain their construction and palette.",
+        "The pale-blue ornament remains on the character-left side.",
+        "The entire figure is framed cleanly without clipped hair, hands, or shoes.",
+        "No extra limbs, merged anatomy, malformed hands or feet, text, or image artifacts are present.",
+        "Weight, balance, garment response, and hair response make the named motion feel natural.",
+        "The candidate is strong enough to serve as a reusable character reference, not merely the safest surviving image."
+      ],
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one motion contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-motion:20260713:seated:r1:c2",
+      "batch_id": "batch:v1-2-motion:20260713:seated:r1",
+      "motion_order": 2,
+      "motion": "seated",
+      "revision": 1,
+      "candidate_number": 2,
+      "variation": "feet offset right, hands beside body, slight forward inclination",
+      "reference_pack_inputs": [
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-left-front-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-left-profile.webp",
+        "source/finished/v1-2-turnaround/character-left-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/back.webp",
+        "source/finished/v1-2-turnaround/character-right-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-right-profile.webp",
+        "source/finished/v1-2-turnaround/character-right-front-three-quarter.webp"
+      ],
+      "source_pack_sha256": "81bcfb2cc058efdbc38a605ef2195680b4ed869e266556a2c3292ba8ca9fe109",
+      "target_path": "source/generated/v1-2-motion/20260713_seated_r1_c2.png",
+      "prompt_template_version": "akari_v1_2_representative_motion_v1",
+      "prompt": "Create one clean full-body Akari v1.2 seated motion candidate.\nUse all eight attached reference images as mandatory identity, age, body, outfit, footwear, hair, and construction sources; do not omit or replace any reference and do not generate from prompt text alone.\nIdentity and age lock: preserve the accepted adult Akari v1.2 identity and age impression, face, warm-brown bob and eyes, body proportions, and the pale-blue hair ornament on character-left.\nOutfit and footwear lock: standard white oversized hoodie, gray pleated skirt, striped crew socks, and chunky white-and-blue sneakers.\nCanvas and framing lock: full body including all hair, both hands, and both shoes inside a 1024x1536 RGB portrait; plain light background; restrained perspective; no dramatic foreshortening or camera tilt.\nExclusions: no props, other characters, scenery, text, logos, watermarks, labels, borders, frames, or panel layouts.\nCandidate variation: feet offset right, hands beside body, slight forward inclination.\nSeated specification: show a natural seated reference pose on an implied, invisible support plane without rendering a chair, backrest, or prop. Balance pelvis, torso, and feet as though a stable seat is present; offset knees and feet for leg readability; place hands naturally near the knees or beside the body; preserve believable folds, skirt placement, hand anatomy, socks, and complete footwear.",
+      "acceptance_gates": [
+        "Identity matches the accepted v1.2 face and hair lock.",
+        "Age impression remains consistent with the accepted character reference.",
+        "Anatomy and pose are coherent and immediately readable.",
+        "Body proportion remains consistent with the accepted turnaround.",
+        "Hoodie, skirt, socks, and sneakers retain their construction and palette.",
+        "The pale-blue ornament remains on the character-left side.",
+        "The entire figure is framed cleanly without clipped hair, hands, or shoes.",
+        "No extra limbs, merged anatomy, malformed hands or feet, text, or image artifacts are present.",
+        "Weight, balance, garment response, and hair response make the named motion feel natural.",
+        "The candidate is strong enough to serve as a reusable character reference, not merely the safest surviving image."
+      ],
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one motion contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-motion:20260713:seated:r1:c3",
+      "batch_id": "batch:v1-2-motion:20260713:seated:r1",
+      "motion_order": 2,
+      "motion": "seated",
+      "revision": 1,
+      "candidate_number": 3,
+      "variation": "asymmetric feet, one hand near knee and one beside body",
+      "reference_pack_inputs": [
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-left-front-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-left-profile.webp",
+        "source/finished/v1-2-turnaround/character-left-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/back.webp",
+        "source/finished/v1-2-turnaround/character-right-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-right-profile.webp",
+        "source/finished/v1-2-turnaround/character-right-front-three-quarter.webp"
+      ],
+      "source_pack_sha256": "81bcfb2cc058efdbc38a605ef2195680b4ed869e266556a2c3292ba8ca9fe109",
+      "target_path": "source/generated/v1-2-motion/20260713_seated_r1_c3.png",
+      "prompt_template_version": "akari_v1_2_representative_motion_v1",
+      "prompt": "Create one clean full-body Akari v1.2 seated motion candidate.\nUse all eight attached reference images as mandatory identity, age, body, outfit, footwear, hair, and construction sources; do not omit or replace any reference and do not generate from prompt text alone.\nIdentity and age lock: preserve the accepted adult Akari v1.2 identity and age impression, face, warm-brown bob and eyes, body proportions, and the pale-blue hair ornament on character-left.\nOutfit and footwear lock: standard white oversized hoodie, gray pleated skirt, striped crew socks, and chunky white-and-blue sneakers.\nCanvas and framing lock: full body including all hair, both hands, and both shoes inside a 1024x1536 RGB portrait; plain light background; restrained perspective; no dramatic foreshortening or camera tilt.\nExclusions: no props, other characters, scenery, text, logos, watermarks, labels, borders, frames, or panel layouts.\nCandidate variation: asymmetric feet, one hand near knee and one beside body.\nSeated specification: show a natural seated reference pose on an implied, invisible support plane without rendering a chair, backrest, or prop. Balance pelvis, torso, and feet as though a stable seat is present; offset knees and feet for leg readability; place hands naturally near the knees or beside the body; preserve believable folds, skirt placement, hand anatomy, socks, and complete footwear.",
+      "acceptance_gates": [
+        "Identity matches the accepted v1.2 face and hair lock.",
+        "Age impression remains consistent with the accepted character reference.",
+        "Anatomy and pose are coherent and immediately readable.",
+        "Body proportion remains consistent with the accepted turnaround.",
+        "Hoodie, skirt, socks, and sneakers retain their construction and palette.",
+        "The pale-blue ornament remains on the character-left side.",
+        "The entire figure is framed cleanly without clipped hair, hands, or shoes.",
+        "No extra limbs, merged anatomy, malformed hands or feet, text, or image artifacts are present.",
+        "Weight, balance, garment response, and hair response make the named motion feel natural.",
+        "The candidate is strong enough to serve as a reusable character reference, not merely the safest surviving image."
+      ],
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one motion contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-motion:20260713:turning:r1:c1",
+      "batch_id": "batch:v1-2-motion:20260713:turning:r1",
+      "motion_order": 3,
+      "motion": "turning",
+      "revision": 1,
+      "candidate_number": 1,
+      "variation": "early mid-turn with gaze leading shoulders",
+      "reference_pack_inputs": [
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-left-front-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-left-profile.webp",
+        "source/finished/v1-2-turnaround/character-left-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/back.webp",
+        "source/finished/v1-2-turnaround/character-right-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-right-profile.webp",
+        "source/finished/v1-2-turnaround/character-right-front-three-quarter.webp"
+      ],
+      "source_pack_sha256": "81bcfb2cc058efdbc38a605ef2195680b4ed869e266556a2c3292ba8ca9fe109",
+      "target_path": "source/generated/v1-2-motion/20260713_turning_r1_c1.png",
+      "prompt_template_version": "akari_v1_2_representative_motion_v1",
+      "prompt": "Create one clean full-body Akari v1.2 turning motion candidate.\nUse all eight attached reference images as mandatory identity, age, body, outfit, footwear, hair, and construction sources; do not omit or replace any reference and do not generate from prompt text alone.\nIdentity and age lock: preserve the accepted adult Akari v1.2 identity and age impression, face, warm-brown bob and eyes, body proportions, and the pale-blue hair ornament on character-left.\nOutfit and footwear lock: standard white oversized hoodie, gray pleated skirt, striped crew socks, and chunky white-and-blue sneakers.\nCanvas and framing lock: full body including all hair, both hands, and both shoes inside a 1024x1536 RGB portrait; plain light background; restrained perspective; no dramatic foreshortening or camera tilt.\nExclusions: no props, other characters, scenery, text, logos, watermarks, labels, borders, frames, or panel layouts.\nCandidate variation: early mid-turn with gaze leading shoulders.\nTurning specification: show a natural over-shoulder or mid-turn moment derived from standing or walking. Use a believable difference between face, shoulder, and hip rotation without an extreme spinal twist. Connect the accepted front, profile, rear-three-quarter, and back construction without mirroring the character-left hair ornament.",
+      "acceptance_gates": [
+        "Identity matches the accepted v1.2 face and hair lock.",
+        "Age impression remains consistent with the accepted character reference.",
+        "Anatomy and pose are coherent and immediately readable.",
+        "Body proportion remains consistent with the accepted turnaround.",
+        "Hoodie, skirt, socks, and sneakers retain their construction and palette.",
+        "The pale-blue ornament remains on the character-left side.",
+        "The entire figure is framed cleanly without clipped hair, hands, or shoes.",
+        "No extra limbs, merged anatomy, malformed hands or feet, text, or image artifacts are present.",
+        "Weight, balance, garment response, and hair response make the named motion feel natural.",
+        "The candidate is strong enough to serve as a reusable character reference, not merely the safest surviving image."
+      ],
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one motion contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-motion:20260713:turning:r1:c2",
+      "batch_id": "batch:v1-2-motion:20260713:turning:r1",
+      "motion_order": 3,
+      "motion": "turning",
+      "revision": 1,
+      "candidate_number": 2,
+      "variation": "over-shoulder moment with hips lagging",
+      "reference_pack_inputs": [
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-left-front-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-left-profile.webp",
+        "source/finished/v1-2-turnaround/character-left-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/back.webp",
+        "source/finished/v1-2-turnaround/character-right-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-right-profile.webp",
+        "source/finished/v1-2-turnaround/character-right-front-three-quarter.webp"
+      ],
+      "source_pack_sha256": "81bcfb2cc058efdbc38a605ef2195680b4ed869e266556a2c3292ba8ca9fe109",
+      "target_path": "source/generated/v1-2-motion/20260713_turning_r1_c2.png",
+      "prompt_template_version": "akari_v1_2_representative_motion_v1",
+      "prompt": "Create one clean full-body Akari v1.2 turning motion candidate.\nUse all eight attached reference images as mandatory identity, age, body, outfit, footwear, hair, and construction sources; do not omit or replace any reference and do not generate from prompt text alone.\nIdentity and age lock: preserve the accepted adult Akari v1.2 identity and age impression, face, warm-brown bob and eyes, body proportions, and the pale-blue hair ornament on character-left.\nOutfit and footwear lock: standard white oversized hoodie, gray pleated skirt, striped crew socks, and chunky white-and-blue sneakers.\nCanvas and framing lock: full body including all hair, both hands, and both shoes inside a 1024x1536 RGB portrait; plain light background; restrained perspective; no dramatic foreshortening or camera tilt.\nExclusions: no props, other characters, scenery, text, logos, watermarks, labels, borders, frames, or panel layouts.\nCandidate variation: over-shoulder moment with hips lagging.\nTurning specification: show a natural over-shoulder or mid-turn moment derived from standing or walking. Use a believable difference between face, shoulder, and hip rotation without an extreme spinal twist. Connect the accepted front, profile, rear-three-quarter, and back construction without mirroring the character-left hair ornament.",
+      "acceptance_gates": [
+        "Identity matches the accepted v1.2 face and hair lock.",
+        "Age impression remains consistent with the accepted character reference.",
+        "Anatomy and pose are coherent and immediately readable.",
+        "Body proportion remains consistent with the accepted turnaround.",
+        "Hoodie, skirt, socks, and sneakers retain their construction and palette.",
+        "The pale-blue ornament remains on the character-left side.",
+        "The entire figure is framed cleanly without clipped hair, hands, or shoes.",
+        "No extra limbs, merged anatomy, malformed hands or feet, text, or image artifacts are present.",
+        "Weight, balance, garment response, and hair response make the named motion feel natural.",
+        "The candidate is strong enough to serve as a reusable character reference, not merely the safest surviving image."
+      ],
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one motion contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-motion:20260713:turning:r1:c3",
+      "batch_id": "batch:v1-2-motion:20260713:turning:r1",
+      "motion_order": 3,
+      "motion": "turning",
+      "revision": 1,
+      "candidate_number": 3,
+      "variation": "later turn with restrained hair and hoodie follow-through",
+      "reference_pack_inputs": [
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-left-front-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-left-profile.webp",
+        "source/finished/v1-2-turnaround/character-left-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/back.webp",
+        "source/finished/v1-2-turnaround/character-right-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-right-profile.webp",
+        "source/finished/v1-2-turnaround/character-right-front-three-quarter.webp"
+      ],
+      "source_pack_sha256": "81bcfb2cc058efdbc38a605ef2195680b4ed869e266556a2c3292ba8ca9fe109",
+      "target_path": "source/generated/v1-2-motion/20260713_turning_r1_c3.png",
+      "prompt_template_version": "akari_v1_2_representative_motion_v1",
+      "prompt": "Create one clean full-body Akari v1.2 turning motion candidate.\nUse all eight attached reference images as mandatory identity, age, body, outfit, footwear, hair, and construction sources; do not omit or replace any reference and do not generate from prompt text alone.\nIdentity and age lock: preserve the accepted adult Akari v1.2 identity and age impression, face, warm-brown bob and eyes, body proportions, and the pale-blue hair ornament on character-left.\nOutfit and footwear lock: standard white oversized hoodie, gray pleated skirt, striped crew socks, and chunky white-and-blue sneakers.\nCanvas and framing lock: full body including all hair, both hands, and both shoes inside a 1024x1536 RGB portrait; plain light background; restrained perspective; no dramatic foreshortening or camera tilt.\nExclusions: no props, other characters, scenery, text, logos, watermarks, labels, borders, frames, or panel layouts.\nCandidate variation: later turn with restrained hair and hoodie follow-through.\nTurning specification: show a natural over-shoulder or mid-turn moment derived from standing or walking. Use a believable difference between face, shoulder, and hip rotation without an extreme spinal twist. Connect the accepted front, profile, rear-three-quarter, and back construction without mirroring the character-left hair ornament.",
+      "acceptance_gates": [
+        "Identity matches the accepted v1.2 face and hair lock.",
+        "Age impression remains consistent with the accepted character reference.",
+        "Anatomy and pose are coherent and immediately readable.",
+        "Body proportion remains consistent with the accepted turnaround.",
+        "Hoodie, skirt, socks, and sneakers retain their construction and palette.",
+        "The pale-blue ornament remains on the character-left side.",
+        "The entire figure is framed cleanly without clipped hair, hands, or shoes.",
+        "No extra limbs, merged anatomy, malformed hands or feet, text, or image artifacts are present.",
+        "Weight, balance, garment response, and hair response make the named motion feel natural.",
+        "The candidate is strong enough to serve as a reusable character reference, not merely the safest surviving image."
+      ],
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one motion contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-motion:20260713:turning:r2:c1",
+      "batch_id": "batch:v1-2-motion:20260713:turning:r2",
+      "motion_order": 3,
+      "motion": "turning",
+      "revision": 2,
+      "candidate_number": 1,
+      "variation": "early mid-turn with gaze leading shoulders",
+      "reference_pack_inputs": [
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-left-front-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-left-profile.webp",
+        "source/finished/v1-2-turnaround/character-left-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/back.webp",
+        "source/finished/v1-2-turnaround/character-right-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-right-profile.webp",
+        "source/finished/v1-2-turnaround/character-right-front-three-quarter.webp"
+      ],
+      "source_pack_sha256": "81bcfb2cc058efdbc38a605ef2195680b4ed869e266556a2c3292ba8ca9fe109",
+      "target_path": "source/generated/v1-2-motion/20260713_turning_r2_c1.png",
+      "prompt_template_version": "akari_v1_2_representative_motion_v1",
+      "prompt": "Create one clean full-body Akari v1.2 turning motion candidate.\nUse all eight attached reference images as mandatory identity, age, body, outfit, footwear, hair, and construction sources; do not omit or replace any reference and do not generate from prompt text alone.\nIdentity and age lock: preserve the accepted adult Akari v1.2 identity and age impression, face, warm-brown bob and eyes, body proportions, and the pale-blue hair ornament on character-left.\nOutfit and footwear lock: standard white oversized hoodie, gray pleated skirt, striped crew socks, and chunky white-and-blue sneakers.\nCanvas and framing lock: full body including all hair, both hands, and both shoes inside a 1024x1536 RGB portrait; plain light background; restrained perspective; no dramatic foreshortening or camera tilt.\nExclusions: no props, other characters, scenery, text, logos, watermarks, labels, borders, frames, or panel layouts.\nCandidate variation: early mid-turn with gaze leading shoulders.\nTurning specification: show a natural over-shoulder or mid-turn moment derived from standing or walking. Use a believable difference between face, shoulder, and hip rotation without an extreme spinal twist. Connect the accepted front, profile, rear-three-quarter, and back construction without mirroring the character-left hair ornament.\nRegeneration failure observations to correct: rear-facing candidate mirrored the character-left ornament; in rear-facing or rear-three-quarter views character-left must appear on image-left; candidate must preserve a clearly readable face-shoulder-hip turning stagger without overlapping the walking pose.",
+      "acceptance_gates": [
+        "Identity matches the accepted v1.2 face and hair lock.",
+        "Age impression remains consistent with the accepted character reference.",
+        "Anatomy and pose are coherent and immediately readable.",
+        "Body proportion remains consistent with the accepted turnaround.",
+        "Hoodie, skirt, socks, and sneakers retain their construction and palette.",
+        "The pale-blue ornament remains on the character-left side.",
+        "The entire figure is framed cleanly without clipped hair, hands, or shoes.",
+        "No extra limbs, merged anatomy, malformed hands or feet, text, or image artifacts are present.",
+        "Weight, balance, garment response, and hair response make the named motion feel natural.",
+        "The candidate is strong enough to serve as a reusable character reference, not merely the safest surviving image."
+      ],
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one motion contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-motion:20260713:turning:r2:c2",
+      "batch_id": "batch:v1-2-motion:20260713:turning:r2",
+      "motion_order": 3,
+      "motion": "turning",
+      "revision": 2,
+      "candidate_number": 2,
+      "variation": "over-shoulder moment with hips lagging",
+      "reference_pack_inputs": [
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-left-front-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-left-profile.webp",
+        "source/finished/v1-2-turnaround/character-left-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/back.webp",
+        "source/finished/v1-2-turnaround/character-right-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-right-profile.webp",
+        "source/finished/v1-2-turnaround/character-right-front-three-quarter.webp"
+      ],
+      "source_pack_sha256": "81bcfb2cc058efdbc38a605ef2195680b4ed869e266556a2c3292ba8ca9fe109",
+      "target_path": "source/generated/v1-2-motion/20260713_turning_r2_c2.png",
+      "prompt_template_version": "akari_v1_2_representative_motion_v1",
+      "prompt": "Create one clean full-body Akari v1.2 turning motion candidate.\nUse all eight attached reference images as mandatory identity, age, body, outfit, footwear, hair, and construction sources; do not omit or replace any reference and do not generate from prompt text alone.\nIdentity and age lock: preserve the accepted adult Akari v1.2 identity and age impression, face, warm-brown bob and eyes, body proportions, and the pale-blue hair ornament on character-left.\nOutfit and footwear lock: standard white oversized hoodie, gray pleated skirt, striped crew socks, and chunky white-and-blue sneakers.\nCanvas and framing lock: full body including all hair, both hands, and both shoes inside a 1024x1536 RGB portrait; plain light background; restrained perspective; no dramatic foreshortening or camera tilt.\nExclusions: no props, other characters, scenery, text, logos, watermarks, labels, borders, frames, or panel layouts.\nCandidate variation: over-shoulder moment with hips lagging.\nTurning specification: show a natural over-shoulder or mid-turn moment derived from standing or walking. Use a believable difference between face, shoulder, and hip rotation without an extreme spinal twist. Connect the accepted front, profile, rear-three-quarter, and back construction without mirroring the character-left hair ornament.\nRegeneration failure observations to correct: rear-facing candidate mirrored the character-left ornament; in rear-facing or rear-three-quarter views character-left must appear on image-left; candidate must preserve a clearly readable face-shoulder-hip turning stagger without overlapping the walking pose.",
+      "acceptance_gates": [
+        "Identity matches the accepted v1.2 face and hair lock.",
+        "Age impression remains consistent with the accepted character reference.",
+        "Anatomy and pose are coherent and immediately readable.",
+        "Body proportion remains consistent with the accepted turnaround.",
+        "Hoodie, skirt, socks, and sneakers retain their construction and palette.",
+        "The pale-blue ornament remains on the character-left side.",
+        "The entire figure is framed cleanly without clipped hair, hands, or shoes.",
+        "No extra limbs, merged anatomy, malformed hands or feet, text, or image artifacts are present.",
+        "Weight, balance, garment response, and hair response make the named motion feel natural.",
+        "The candidate is strong enough to serve as a reusable character reference, not merely the safest surviving image."
+      ],
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one motion contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    },
+    {
+      "id": "request:v1-2-motion:20260713:turning:r2:c3",
+      "batch_id": "batch:v1-2-motion:20260713:turning:r2",
+      "motion_order": 3,
+      "motion": "turning",
+      "revision": 2,
+      "candidate_number": 3,
+      "variation": "later turn with restrained hair and hoodie follow-through",
+      "reference_pack_inputs": [
+        "source/finished/v1-2-turnaround/front.webp",
+        "source/finished/v1-2-turnaround/character-left-front-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-left-profile.webp",
+        "source/finished/v1-2-turnaround/character-left-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/back.webp",
+        "source/finished/v1-2-turnaround/character-right-rear-three-quarter.webp",
+        "source/finished/v1-2-turnaround/character-right-profile.webp",
+        "source/finished/v1-2-turnaround/character-right-front-three-quarter.webp"
+      ],
+      "source_pack_sha256": "81bcfb2cc058efdbc38a605ef2195680b4ed869e266556a2c3292ba8ca9fe109",
+      "target_path": "source/generated/v1-2-motion/20260713_turning_r2_c3.png",
+      "prompt_template_version": "akari_v1_2_representative_motion_v1",
+      "prompt": "Create one clean full-body Akari v1.2 turning motion candidate.\nUse all eight attached reference images as mandatory identity, age, body, outfit, footwear, hair, and construction sources; do not omit or replace any reference and do not generate from prompt text alone.\nIdentity and age lock: preserve the accepted adult Akari v1.2 identity and age impression, face, warm-brown bob and eyes, body proportions, and the pale-blue hair ornament on character-left.\nOutfit and footwear lock: standard white oversized hoodie, gray pleated skirt, striped crew socks, and chunky white-and-blue sneakers.\nCanvas and framing lock: full body including all hair, both hands, and both shoes inside a 1024x1536 RGB portrait; plain light background; restrained perspective; no dramatic foreshortening or camera tilt.\nExclusions: no props, other characters, scenery, text, logos, watermarks, labels, borders, frames, or panel layouts.\nCandidate variation: later turn with restrained hair and hoodie follow-through.\nTurning specification: show a natural over-shoulder or mid-turn moment derived from standing or walking. Use a believable difference between face, shoulder, and hip rotation without an extreme spinal twist. Connect the accepted front, profile, rear-three-quarter, and back construction without mirroring the character-left hair ornament.\nRegeneration failure observations to correct: rear-facing candidate mirrored the character-left ornament; in rear-facing or rear-three-quarter views character-left must appear on image-left; candidate must preserve a clearly readable face-shoulder-hip turning stagger without overlapping the walking pose.",
+      "acceptance_gates": [
+        "Identity matches the accepted v1.2 face and hair lock.",
+        "Age impression remains consistent with the accepted character reference.",
+        "Anatomy and pose are coherent and immediately readable.",
+        "Body proportion remains consistent with the accepted turnaround.",
+        "Hoodie, skirt, socks, and sneakers retain their construction and palette.",
+        "The pale-blue ornament remains on the character-left side.",
+        "The entire figure is framed cleanly without clipped hair, hands, or shoes.",
+        "No extra limbs, merged anatomy, malformed hands or feet, text, or image artifacts are present.",
+        "Weight, balance, garment response, and hair response make the named motion feel natural.",
+        "The candidate is strong enough to serve as a reusable character reference, not merely the safest surviving image."
+      ],
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "compare all three candidates on one motion contact sheet",
+        "outcomes": [
+          "accept",
+          "hold",
+          "reject"
+        ]
+      }
+    }
+  ]
+}

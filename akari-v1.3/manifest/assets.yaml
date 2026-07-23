@@ -1,0 +1,52 @@
+schema_version: 1
+collection: akari-v1.3-base-definition
+required_image_count: 6
+assets:
+  - asset_id: V13-01
+    descriptor: corrected-key-visual
+    variants: [default]
+    expected_paths:
+      - accepted/base/key-visual/akari-v1.3_v13-01_corrected-key-visual_rNN.png
+    depends_on: []
+    controlling_gate: identity
+    status: accepted
+    revision: r01
+    accepted_paths:
+      - accepted/base/key-visual/akari-v1.3_v13-01_corrected-key-visual_r01.png
+  - asset_id: V13-02
+    descriptor: natural-full-body
+    variants: [default]
+    expected_paths:
+      - accepted/base/full-body/akari-v1.3_v13-02_natural-full-body_rNN.png
+    depends_on: [V13-01]
+    controlling_gate: body
+    status: accepted
+    revision: r01
+    accepted_paths:
+      - accepted/base/full-body/akari-v1.3_v13-02_natural-full-body_r01.png
+  - asset_id: V13-03
+    descriptor: expression-pair
+    variants: [everyday, bright-smile]
+    expected_paths:
+      - accepted/base/expressions/akari-v1.3_v13-03a_everyday_rNN.png
+      - accepted/base/expressions/akari-v1.3_v13-03b_bright-smile_rNN.png
+    depends_on: [V13-01, V13-02]
+    controlling_gate: expression
+    status: accepted
+    revision: r01
+    accepted_paths:
+      - accepted/base/expressions/akari-v1.3_v13-03a_everyday_r01.png
+      - accepted/base/expressions/akari-v1.3_v13-03b_bright-smile_r01.png
+  - asset_id: V13-04
+    descriptor: wardrobe-pair
+    variants: [outdoor, roomwear]
+    expected_paths:
+      - accepted/base/wardrobe/akari-v1.3_v13-04a_outdoor_rNN.png
+      - accepted/base/wardrobe/akari-v1.3_v13-04b_roomwear_rNN.png
+    depends_on: [V13-01, V13-02]
+    controlling_gate: wardrobe
+    status: accepted
+    revision: r01
+    accepted_paths:
+      - accepted/base/wardrobe/akari-v1.3_v13-04a_outdoor_r01.png
+      - accepted/base/wardrobe/akari-v1.3_v13-04b_roomwear_r01.png

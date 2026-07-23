@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "collection_id": "akari-v1.2-canonical-turnaround",
+  "identity_version": "akari-v1.2-standard-face-v1",
+  "prerequisite": {
+    "selection_manifest": "source/manifests/v1-2-face-hair/accepted-selection.json",
+    "selection_manifest_sha256": "f5d552b01b5251c16c93f380e25d4f62f1dc595fa951d586861335c2d98490c0",
+    "accepted_asset": "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp",
+    "accepted_asset_sha256": "e130b7e00d98d02fc05f139ddc3b01f206e7eabf61987e4ad385ed7870fadb66",
+    "source_candidate_sha256": "ad2044cfa407df4ba884c9fa503e0cad7be2a38de77e3865480ccbf2674b2805",
+    "required_status": "accepted"
+  },
+  "identity_rules": {
+    "age_impression": "early-20s university-age young adult; not underage and not older-sister-like",
+    "face": [
+      "Y1 face direction",
+      "warm amber eyes",
+      "small restrained mouth",
+      "rounded cheeks and compact rounded chin"
+    ],
+    "hair": [
+      "warm brown short bob",
+      "v1.1-like bang grouping",
+      "subtle cheek-side face framing",
+      "airy natural short-bob tips"
+    ],
+    "hair_ornament": {
+      "side": "character-left",
+      "upper": "small pale-blue crossed X-shaped hairpins",
+      "lower": "compact pale-blue ribbon-like loop immediately below",
+      "trailing_strand_count": 2,
+      "hard_rejects": [
+        "missing upper or lower component",
+        "wrong-side placement",
+        "flower",
+        "jewel",
+        "oversized fashion bow",
+        "large dangling ribbon"
+      ]
+    },
+    "outfit_context": "white oversized hoodie",
+    "layout": [
+      "same crop as the accepted source",
+      "same pose as the accepted source",
+      "same background layout as the accepted source",
+      "1024x1536 portrait aspect ratio"
+    ]
+  },
+  "canvas": {
+    "width": 1024,
+    "height": 1536,
+    "mode": "RGB",
+    "camera_height": "matched",
+    "pose": "neutral_standing",
+    "sole_baseline": "shared"
+  },
+  "outfit_lock": {
+    "top": "white oversized hoodie",
+    "bottom": "gray pleated skirt",
+    "socks": "white crew socks with two pale-blue stripes",
+    "shoes": "chunky white sneakers with pale-blue accents",
+    "hair_ornament": "two-part pale-blue character-left hair ornament",
+    "excluded_accessories": [
+      "shoulder bag"
+    ]
+  },
+  "reference_inputs": [
+    {
+      "role": "face_hair",
+      "path": "source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp"
+    },
+    {
+      "role": "body_proportion",
+      "path": "source/generated/akari-body-proportion-option-b.webp"
+    },
+    {
+      "role": "standard_outfit_front",
+      "path": "source/generated/akari-hoodie-front-proportion-corrected.webp"
+    },
+    {
+      "role": "standard_outfit_back",
+      "path": "source/originals/v1_1_back.webp"
+    },
+    {
+      "role": "hairpin_side_front_45",
+      "path": "source/originals/v1_1_髪飾り側_45deg.webp"
+    },
+    {
+      "role": "non_hairpin_side_front_45",
+      "path": "source/originals/v1_1_非髪飾り側45deg.webp"
+    },
+    {
+      "role": "legacy_profile",
+      "path": "source/originals/v1_1_真横.webp"
+    },
+    {
+      "role": "footwear_sock",
+      "path": "source/originals/v1_1_standard_foot_set.webp"
+    },
+    {
+      "role": "sneaker_construction",
+      "path": "source/originals/v1_1_shoes.webp"
+    }
+  ]
+}

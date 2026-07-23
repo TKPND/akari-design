@@ -1,0 +1,13 @@
+schema_version: 1
+scope: act-4
+status: accepted
+checks:
+  scene_order: pass
+  identity_and_adult_age: pass
+  indoor_roomwear_and_socks: pass
+  sunset_to_night_progression: pass
+  doorway_pov_and_tiny_cuff: pass
+  emotional_climax: pass
+findings: []
+contact_sheet_sha256: 4a53bc171307f91e497d1e71eeebcd0c6f7e5e3f16ad2005f547d4b5db32a260
+reviewed_at: '2026-07-21T06:24:36Z'

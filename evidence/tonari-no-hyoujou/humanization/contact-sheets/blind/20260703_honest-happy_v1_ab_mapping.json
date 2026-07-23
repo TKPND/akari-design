@@ -1,0 +1,34 @@
+{
+  "original": "source/generated/tonari-no-hyoujou/20260703_honest-happy_v1.webp",
+  "candidate": "source/finished/tonari-no-hyoujou/20260703_honest-happy_v1_humanization_H03_v1.png",
+  "input_details": {
+    "original": {
+      "path": "source/generated/tonari-no-hyoujou/20260703_honest-happy_v1.webp",
+      "sha256": "18acbd1a471bed5a68b185fbcd3b6a49af7c9b26ae10f2daf30c30cf7f7f205f",
+      "width": 1055,
+      "height": 1491,
+      "format": "WEBP"
+    },
+    "candidate": {
+      "path": "source/finished/tonari-no-hyoujou/20260703_honest-happy_v1_humanization_H03_v1.png",
+      "sha256": "ee8bb42ecb9ffcf9ed678234eae82bd63393a9f730d5b3424104d9017d9c27b2",
+      "width": 1055,
+      "height": 1491,
+      "format": "PNG"
+    }
+  },
+  "A": "candidate",
+  "B": "original",
+  "random_seed": 2026070315,
+  "blind": true,
+  "sheet": "evidence/tonari-no-hyoujou/humanization/contact-sheets/blind/20260703_honest-happy_v1_ab_blind.png",
+  "contact_sheet": {
+    "background": "#f3f0ea",
+    "label_height": 56,
+    "gap": 16,
+    "target_height": 1491,
+    "resize_method": "Image.Resampling.LANCZOS",
+    "allow_dimension_mismatch": false,
+    "output_format": "png"
+  }
+}

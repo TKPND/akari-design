@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "image": "source/generated/tonari-no-hyoujou/20260703_honest-happy_v1.webp",
+  "candidate": "source/finished/tonari-no-hyoujou/20260703_honest-happy_v1_humanization_H03_v1.png",
+  "stage": "humanization",
+  "strength": "H03",
+  "decision": "accept_finish",
+  "scores": {
+    "identity_preservation": 5,
+    "face_hairpin_consistency": 5,
+    "anatomy_and_composition": 5,
+    "technical_naturalness": 4,
+    "semantic_naturalness": 5,
+    "edit_minimality": 4,
+    "artifact_regression": 5,
+    "overall_preference": 5
+  },
+  "thumbnail_robustness": "not_checked",
+  "red_flags": [],
+  "failed_gates": [],
+  "reason_codes": [
+    "blind_user_preferred_candidate",
+    "no_instant_red_flags",
+    "post_mapping_identity_gate_clear",
+    "full_frame_generated_output",
+    "retry_after_semantic_facial_mark_drift"
+  ],
+  "human_notes": "Blind phase: user preferred A. User reported no instant red flags. Mapping revealed A as the H03 candidate, and user confirmed identity, face/hairpin, anatomy/composition, neckline, and crop gates clear. An earlier H03 attempt was discarded before review because it added a sweat/tear-like cheek mark that shifted the honest-happy semantic read.",
+  "mapping_file": "evidence/tonari-no-hyoujou/humanization/contact-sheets/blind/20260703_honest-happy_v1_ab_mapping.json",
+  "contact_sheet": "evidence/tonari-no-hyoujou/humanization/contact-sheets/blind/20260703_honest-happy_v1_ab_blind.png",
+  "generation": {
+    "mode": "built-in image_gen",
+    "source_saved_path": "/path/to/.codex/generated_images/019f27eb-2c66-7291-8728-9c4be4c72b39/ig_0abcc866d960f417016a47b048cf388191b7ed5d203a14e35e.png",
+    "discarded_attempts": [
+      {
+        "source_saved_path": "/path/to/.codex/generated_images/019f27eb-2c66-7291-8728-9c4be4c72b39/ig_0a988467758cf249016a47af91f8548191840856279964a401.png",
+        "reason": "Added sweat/tear-like cheek mark, shifting the expression semantics."
+      }
+    ],
+    "exposed_settings": {
+      "edit_strength": "H03 prompt-level instruction",
+      "denoise": "not_exposed",
+      "guidance": "not_exposed",
+      "preservation": "prompt_locked"
+    }
+  },
+  "integrity": {
+    "candidate_is_full_frame_generated_output": true,
+    "local_mechanical_composite": false,
+    "dimensions_match_input": true
+  }
+}

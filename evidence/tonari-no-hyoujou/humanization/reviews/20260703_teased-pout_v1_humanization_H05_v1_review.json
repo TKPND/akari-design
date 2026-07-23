@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "image": "source/generated/tonari-no-hyoujou/20260703_teased-pout_v1.webp",
+  "candidate": "source/finished/tonari-no-hyoujou/20260703_teased-pout_v1_humanization_H05_v1.png",
+  "stage": "humanization",
+  "strength": "H05",
+  "decision": "accept_finish",
+  "scores": {
+    "identity_preservation": 5,
+    "face_hairpin_consistency": 5,
+    "anatomy_and_composition": 5,
+    "technical_naturalness": 4,
+    "semantic_naturalness": 5,
+    "edit_minimality": 4,
+    "artifact_regression": 5,
+    "overall_preference": 5
+  },
+  "thumbnail_robustness": "not_checked",
+  "red_flags": [],
+  "failed_gates": [],
+  "reason_codes": [
+    "blind_user_preferred_candidate",
+    "no_instant_red_flags",
+    "post_mapping_identity_gate_clear",
+    "full_frame_generated_output"
+  ],
+  "human_notes": "Blind phase: user preferred B. User reported no instant red flags. Mapping revealed B as the H05 candidate, and user confirmed identity, face/hairpin, anatomy/composition, neckline, and crop gates clear.",
+  "mapping_file": "evidence/tonari-no-hyoujou/humanization/contact-sheets/blind/20260703_teased-pout_v1_ab_mapping.json",
+  "contact_sheet": "evidence/tonari-no-hyoujou/humanization/contact-sheets/blind/20260703_teased-pout_v1_ab_blind.png",
+  "generation": {
+    "mode": "built-in image_gen",
+    "source_saved_path": "/path/to/.codex/generated_images/019f27eb-2c66-7291-8728-9c4be4c72b39/ig_07ab07d3b9adfcce016a47b54001908191bba4a1b71c234d28.png",
+    "exposed_settings": {
+      "edit_strength": "H05 prompt-level instruction",
+      "denoise": "not_exposed",
+      "guidance": "not_exposed",
+      "preservation": "prompt_locked"
+    }
+  },
+  "integrity": {
+    "candidate_is_full_frame_generated_output": true,
+    "local_mechanical_composite": false,
+    "dimensions_match_input": true
+  }
+}

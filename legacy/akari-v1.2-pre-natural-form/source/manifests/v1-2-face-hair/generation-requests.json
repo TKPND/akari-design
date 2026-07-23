@@ -1,0 +1,352 @@
+{
+  "schema_version": 1,
+  "collection_id": "akari-v1.2-face-hair",
+  "title": "Akari v1.2 Face And Hair",
+  "reference_pack_version": "akari-v1.1-face-hair-identity-v1",
+  "prompt_template_version": "akari_v1_2_face_hair_eye_axis_v1",
+  "batch_policy": {
+    "candidate_count": 8,
+    "composition": "matched_bust_up",
+    "primary_variation_axis": "eyes",
+    "secondary_variation_axis": "organized_v1_1_short_bob",
+    "hair_ornament_policy": "keep_character_left_pale_blue_pin",
+    "pdf_policy": "not_in_this_phase"
+  },
+  "selection_notes": {
+    "decision": "hold_as_v1_2_standard_face_axis",
+    "selected_source_axis_path": "source/generated/v1-2-face-hair/free-reference-batch/20260708_free-ref-05.png",
+    "selected_candidate_path": "source/generated/v1-2-face-hair/free-reference-batch-younger-base05/20260708_base05-younger-01.png",
+    "selected_contact_sheet_path": "evidence/v1-2-face-hair/contact-sheets/akari-v1-2-face-hair-base05-younger-variants.webp",
+    "age_impression": "early-20s university-age young adult; less older-sister-like; still not underage",
+    "rationale": "The user selected the 05 axis for v1.2 gentleness, then selected the younger-01 adjustment because it keeps the BASE stability while moving Akari toward a softer university-age read."
+  },
+  "requests": [
+    {
+      "id": "request:v1-2-face-hair-soft-horizontal-eyes",
+      "candidate_order": 1,
+      "slot": "soft-horizontal-eyes",
+      "japanese_title": "柔らかい水平寄りの目",
+      "eye_variation": "soft horizontal eyes with calm direct gaze",
+      "hair_variation": "baseline organized short bob",
+      "target_path": "source/generated/v1-2-face-hair/20260708_soft-horizontal-eyes_v1.png",
+      "reference_pilot_target_path": "source/generated/v1-2-face-hair/reference-pilot/20260708_soft-horizontal-eyes_ref-v1.png",
+      "strong_reference_pilot_target_path": "source/generated/v1-2-face-hair/reference-pilot/20260708_soft-horizontal-eyes_ref-v2.png",
+      "strong_reference_inputs": [
+        "source/originals/v1_1_front_3.webp",
+        "source/originals/v1_1_髪飾り側_45deg.webp",
+        "source/originals/v1_1_front_1.webp"
+      ],
+      "hyoujou_reference_pilot_target_path": "source/generated/v1-2-face-hair/reference-pilot/20260708_soft-horizontal-eyes_hyoujou-v1.png",
+      "hyoujou_reference_inputs": [
+        "source/generated/tonari-no-hyoujou/20260703_called-turn_v2.webp",
+        "source/generated/tonari-no-hyoujou/20260703_eye-contact-pause_v1.webp",
+        "source/generated/tonari-no-hyoujou/20260706_extra-02_prank-smug_v5.webp"
+      ],
+      "reference_pack_inputs": [
+        "source/originals/v1_1_front_3.webp",
+        "source/originals/v1_1_front_1.webp",
+        "source/originals/v1_1_front_2.webp",
+        "source/references/tonari-no-akari/identity-face-hair.webp"
+      ],
+      "prompt": "Use the visible reference images as identity references. Reference image 1 is the primary Akari v1.1 face identity; reference images 2 and 3 are auxiliary face consistency checks. Preserve the same character identity, face proportions, warm brown eye color, short brown bob mass, small mouth scale, and pale blue character-left hair ornament before making any v1.2 refinement. Image 1: primary Akari v1.1 face identity reference. Image 2: auxiliary v1.1 face and softness reference. Image 3: auxiliary v1.1 face and hair-balance reference. Create one clean bust-up Akari v1.2 face-and-hair design candidate. Akari v1.1 evolving into v1.2; adult early-20s Japanese young woman as character design, not realism; soft approachable innocence; warm brown eyes; warm brown short bob; soft bangs; pale blue hair ornament on Akari's character-left side; white oversized hoodie context. Use the same bust-up composition, neutral simple background, gentle front three-quarter feeling, and matched lighting across the whole set. For this candidate, the eyes are the primary design variable: soft horizontal eyes with calm direct gaze. Hair variation: baseline organized short bob. Keep the v1.1 short bob, clean bang groups, rounded side volume, and natural hair tips. Keep mouth small and restrained. do not redesign the outfit, do not change eye color, do not make her photorealistic, do not make her sharper or colder, and do not make her underage or older-sister-like. no readable text, no logos, no watermarks, no frame, no border, no panel layout.",
+      "strong_reference_prompt": "Use the visible reference images as strict identity references for Akari v1.1. Image 1 is source/originals/v1_1_front_3.webp, the primary expression-board face, eye, hair color, and innocence reference. Image 2 is source/originals/v1_1_髪飾り側_45deg.webp, the strict hair-ornament-side reference: keep pale-blue crossed hairpins or ribbon-like clips on Akari's character-left side, not a flower accessory, not a decorative flower pin, not a generic blue blossom. Image 3 is source/originals/v1_1_front_1.webp, the hoodie and front identity softness reference. Create one bust-up v1.2 pilot that still reads as the same Akari v1.1 character before any refinement. Preserve lighter copper-brown v1.1 hair, warm amber-brown eyes, rounder v1.1 cheeks, compact rounded chin, small restrained mouth, soft innocent expression, airy uneven short-bob ends, and the pale-blue crossed hairpin/ribbon shape. Make only a subtle eye refinement: soft horizontal eyes with calm direct gaze. Avoid darker generic bob hair, mature fashion-portrait face, sharper adult jaw, flower accessory drift, glossy large lips, photorealism, pin-up mood, new outfit design, readable text, logos, watermarks, frames, borders, or panel layout.",
+      "hyoujou_reference_prompt": "Use the visible tonari-no-hyoujou bust-up images as the face family references for Akari. Image 1 is source/generated/tonari-no-hyoujou/20260703_called-turn_v2.webp, the main standard-face reference for Akari's v1.1-to-v1.2 identity, soft smile, hair color, hairpin shape, and overall face proportions. Image 2 is source/generated/tonari-no-hyoujou/20260703_eye-contact-pause_v1.webp, the innocence reference for rounded eyes, shy softness, small mouth, and close familiar expression. Image 3 is source/generated/tonari-no-hyoujou/20260706_extra-02_prank-smug_v5.webp, the appeal reference for a slightly more memorable v1.2 eye read. Create one bust-up v1.2 pilot that belongs to this same Hyoujou face family; do not invent a new face family. Keep the pale-blue crossed hairpins/ribbon-like clips, warm copper-brown short bob, warm amber eyes, rounded cheeks, compact chin, small restrained mouth, white hoodie context, and soft innocent Akari mood. Refine only the eyes toward soft horizontal eyes with calm direct gaze. Avoid flower hair ornaments, darker generic hair, mature fashion-portrait face, glossy lips, realistic rendering, pin-up expression, new outfit design, readable text, logos, watermarks, frames, borders, or panel layout.",
+      "acceptance": "Appeal Gate: the eyes feel soft, close, memorable, and warm. Identity Gate: the image still reads as Akari v1.1 evolving into v1.2. Must be a matched bust-up candidate focused on face and hair. Must preserve warm brown eyes and hair, short bob, pale blue character-left hair ornament, small mouth, soft innocence, and white hoodie context. Must contain no readable text, no logos, no watermarks, no frame, and no panel layout.",
+      "selection_gates": {
+        "appeal": "soft close memorable eyes, warm expression, immediate character charm",
+        "identity": "still reads as Akari v1.1 evolving into v1.2",
+        "hard_rejects": [
+          "long-hair drift",
+          "missing or flipped hair ornament",
+          "eye color drift",
+          "sharp cold generic eyes",
+          "extreme roundness that reads too young",
+          "photorealistic rendering",
+          "large mouth style change",
+          "pin-up expression",
+          "background or lighting hiding the face decision"
+        ]
+      },
+      "risk_profile": {
+        "identity_risk": "high",
+        "eye_drift_risk": "high",
+        "hair_drift_risk": "medium",
+        "age_impression_risk": "medium",
+        "text_logo_watermark_risk": "medium"
+      }
+    },
+    {
+      "id": "request:v1-2-face-hair-round-innocent-eyes",
+      "candidate_order": 2,
+      "slot": "round-innocent-eyes",
+      "japanese_title": "少し丸くあどけない目",
+      "eye_variation": "slightly rounder eyes with strong innocence",
+      "hair_variation": "soft rounded bangs",
+      "target_path": "source/generated/v1-2-face-hair/20260708_round-innocent-eyes_v1.png",
+      "reference_pack_inputs": [
+        "source/originals/v1_1_front_3.webp",
+        "source/originals/v1_1_front_1.webp",
+        "source/originals/v1_1_front_2.webp",
+        "source/references/tonari-no-akari/identity-face-hair.webp"
+      ],
+      "prompt": "Create one clean bust-up Akari v1.2 face-and-hair design candidate. Akari v1.1 evolving into v1.2; adult early-20s Japanese young woman as character design, not realism; soft approachable innocence; warm brown eyes; warm brown short bob; soft bangs; pale blue hair ornament on Akari's character-left side; white oversized hoodie context. Use the same bust-up composition, neutral simple background, gentle front three-quarter feeling, and matched lighting across the whole set. For this candidate, the eyes are the primary design variable: slightly rounder eyes with strong innocence. Hair variation: soft rounded bangs. Keep the v1.1 short bob, clean bang groups, rounded side volume, and natural hair tips. Keep mouth small and restrained. do not redesign the outfit, do not change eye color, do not make her photorealistic, do not make her sharper or colder, and do not make her underage or older-sister-like. no readable text, no logos, no watermarks, no frame, no border, no panel layout.",
+      "acceptance": "Appeal Gate: the eyes feel soft, close, memorable, and warm. Identity Gate: the image still reads as Akari v1.1 evolving into v1.2. Must be a matched bust-up candidate focused on face and hair. Must preserve warm brown eyes and hair, short bob, pale blue character-left hair ornament, small mouth, soft innocence, and white hoodie context. Must contain no readable text, no logos, no watermarks, no frame, and no panel layout.",
+      "selection_gates": {
+        "appeal": "soft close memorable eyes, warm expression, immediate character charm",
+        "identity": "still reads as Akari v1.1 evolving into v1.2",
+        "hard_rejects": [
+          "long-hair drift",
+          "missing or flipped hair ornament",
+          "eye color drift",
+          "sharp cold generic eyes",
+          "extreme roundness that reads too young",
+          "photorealistic rendering",
+          "large mouth style change",
+          "pin-up expression",
+          "background or lighting hiding the face decision"
+        ]
+      },
+      "risk_profile": {
+        "identity_risk": "high",
+        "eye_drift_risk": "high",
+        "hair_drift_risk": "medium",
+        "age_impression_risk": "medium",
+        "text_logo_watermark_risk": "medium"
+      }
+    },
+    {
+      "id": "request:v1-2-face-hair-lowered-lid-gentle",
+      "candidate_order": 3,
+      "slot": "lowered-lid-gentle",
+      "japanese_title": "まぶたに重みのある優しい目",
+      "eye_variation": "gentle eyes with lowered eyelid weight",
+      "hair_variation": "clean side hair framing",
+      "target_path": "source/generated/v1-2-face-hair/20260708_lowered-lid-gentle_v1.png",
+      "reference_pack_inputs": [
+        "source/originals/v1_1_front_3.webp",
+        "source/originals/v1_1_front_1.webp",
+        "source/originals/v1_1_front_2.webp",
+        "source/references/tonari-no-akari/identity-face-hair.webp"
+      ],
+      "prompt": "Create one clean bust-up Akari v1.2 face-and-hair design candidate. Akari v1.1 evolving into v1.2; adult early-20s Japanese young woman as character design, not realism; soft approachable innocence; warm brown eyes; warm brown short bob; soft bangs; pale blue hair ornament on Akari's character-left side; white oversized hoodie context. Use the same bust-up composition, neutral simple background, gentle front three-quarter feeling, and matched lighting across the whole set. For this candidate, the eyes are the primary design variable: gentle eyes with lowered eyelid weight. Hair variation: clean side hair framing. Keep the v1.1 short bob, clean bang groups, rounded side volume, and natural hair tips. Keep mouth small and restrained. do not redesign the outfit, do not change eye color, do not make her photorealistic, do not make her sharper or colder, and do not make her underage or older-sister-like. no readable text, no logos, no watermarks, no frame, no border, no panel layout.",
+      "acceptance": "Appeal Gate: the eyes feel soft, close, memorable, and warm. Identity Gate: the image still reads as Akari v1.1 evolving into v1.2. Must be a matched bust-up candidate focused on face and hair. Must preserve warm brown eyes and hair, short bob, pale blue character-left hair ornament, small mouth, soft innocence, and white hoodie context. Must contain no readable text, no logos, no watermarks, no frame, and no panel layout.",
+      "selection_gates": {
+        "appeal": "soft close memorable eyes, warm expression, immediate character charm",
+        "identity": "still reads as Akari v1.1 evolving into v1.2",
+        "hard_rejects": [
+          "long-hair drift",
+          "missing or flipped hair ornament",
+          "eye color drift",
+          "sharp cold generic eyes",
+          "extreme roundness that reads too young",
+          "photorealistic rendering",
+          "large mouth style change",
+          "pin-up expression",
+          "background or lighting hiding the face decision"
+        ]
+      },
+      "risk_profile": {
+        "identity_risk": "high",
+        "eye_drift_risk": "high",
+        "hair_drift_risk": "medium",
+        "age_impression_risk": "medium",
+        "text_logo_watermark_risk": "medium"
+      }
+    },
+    {
+      "id": "request:v1-2-face-hair-bright-catchlights",
+      "candidate_order": 4,
+      "slot": "bright-catchlights",
+      "japanese_title": "光の入った温かい目",
+      "eye_variation": "warm eyes with brighter catchlights",
+      "hair_variation": "light bang grouping",
+      "target_path": "source/generated/v1-2-face-hair/20260708_bright-catchlights_v1.png",
+      "reference_pack_inputs": [
+        "source/originals/v1_1_front_3.webp",
+        "source/originals/v1_1_front_1.webp",
+        "source/originals/v1_1_front_2.webp",
+        "source/references/tonari-no-akari/identity-face-hair.webp"
+      ],
+      "prompt": "Create one clean bust-up Akari v1.2 face-and-hair design candidate. Akari v1.1 evolving into v1.2; adult early-20s Japanese young woman as character design, not realism; soft approachable innocence; warm brown eyes; warm brown short bob; soft bangs; pale blue hair ornament on Akari's character-left side; white oversized hoodie context. Use the same bust-up composition, neutral simple background, gentle front three-quarter feeling, and matched lighting across the whole set. For this candidate, the eyes are the primary design variable: warm eyes with brighter catchlights. Hair variation: light bang grouping. Keep the v1.1 short bob, clean bang groups, rounded side volume, and natural hair tips. Keep mouth small and restrained. do not redesign the outfit, do not change eye color, do not make her photorealistic, do not make her sharper or colder, and do not make her underage or older-sister-like. no readable text, no logos, no watermarks, no frame, no border, no panel layout.",
+      "acceptance": "Appeal Gate: the eyes feel soft, close, memorable, and warm. Identity Gate: the image still reads as Akari v1.1 evolving into v1.2. Must be a matched bust-up candidate focused on face and hair. Must preserve warm brown eyes and hair, short bob, pale blue character-left hair ornament, small mouth, soft innocence, and white hoodie context. Must contain no readable text, no logos, no watermarks, no frame, and no panel layout.",
+      "selection_gates": {
+        "appeal": "soft close memorable eyes, warm expression, immediate character charm",
+        "identity": "still reads as Akari v1.1 evolving into v1.2",
+        "hard_rejects": [
+          "long-hair drift",
+          "missing or flipped hair ornament",
+          "eye color drift",
+          "sharp cold generic eyes",
+          "extreme roundness that reads too young",
+          "photorealistic rendering",
+          "large mouth style change",
+          "pin-up expression",
+          "background or lighting hiding the face decision"
+        ]
+      },
+      "risk_profile": {
+        "identity_risk": "high",
+        "eye_drift_risk": "high",
+        "hair_drift_risk": "medium",
+        "age_impression_risk": "medium",
+        "text_logo_watermark_risk": "medium"
+      }
+    },
+    {
+      "id": "request:v1-2-face-hair-stable-narrower-eyes",
+      "candidate_order": 5,
+      "slot": "stable-narrower-eyes",
+      "japanese_title": "少し細めで落ち着いた目",
+      "eye_variation": "mildly narrower eyes with stable expression",
+      "hair_variation": "organized bob volume",
+      "target_path": "source/generated/v1-2-face-hair/20260708_stable-narrower-eyes_v1.png",
+      "reference_pack_inputs": [
+        "source/originals/v1_1_front_3.webp",
+        "source/originals/v1_1_front_1.webp",
+        "source/originals/v1_1_front_2.webp",
+        "source/references/tonari-no-akari/identity-face-hair.webp"
+      ],
+      "prompt": "Create one clean bust-up Akari v1.2 face-and-hair design candidate. Akari v1.1 evolving into v1.2; adult early-20s Japanese young woman as character design, not realism; soft approachable innocence; warm brown eyes; warm brown short bob; soft bangs; pale blue hair ornament on Akari's character-left side; white oversized hoodie context. Use the same bust-up composition, neutral simple background, gentle front three-quarter feeling, and matched lighting across the whole set. For this candidate, the eyes are the primary design variable: mildly narrower eyes with stable expression. Hair variation: organized bob volume. Keep the v1.1 short bob, clean bang groups, rounded side volume, and natural hair tips. Keep mouth small and restrained. do not redesign the outfit, do not change eye color, do not make her photorealistic, do not make her sharper or colder, and do not make her underage or older-sister-like. no readable text, no logos, no watermarks, no frame, no border, no panel layout.",
+      "acceptance": "Appeal Gate: the eyes feel soft, close, memorable, and warm. Identity Gate: the image still reads as Akari v1.1 evolving into v1.2. Must be a matched bust-up candidate focused on face and hair. Must preserve warm brown eyes and hair, short bob, pale blue character-left hair ornament, small mouth, soft innocence, and white hoodie context. Must contain no readable text, no logos, no watermarks, no frame, and no panel layout.",
+      "selection_gates": {
+        "appeal": "soft close memorable eyes, warm expression, immediate character charm",
+        "identity": "still reads as Akari v1.1 evolving into v1.2",
+        "hard_rejects": [
+          "long-hair drift",
+          "missing or flipped hair ornament",
+          "eye color drift",
+          "sharp cold generic eyes",
+          "extreme roundness that reads too young",
+          "photorealistic rendering",
+          "large mouth style change",
+          "pin-up expression",
+          "background or lighting hiding the face decision"
+        ]
+      },
+      "risk_profile": {
+        "identity_risk": "high",
+        "eye_drift_risk": "high",
+        "hair_drift_risk": "medium",
+        "age_impression_risk": "medium",
+        "text_logo_watermark_risk": "medium"
+      }
+    },
+    {
+      "id": "request:v1-2-face-hair-shy-soft-gaze",
+      "candidate_order": 6,
+      "slot": "shy-soft-gaze",
+      "japanese_title": "少し照れた柔らかい目線",
+      "eye_variation": "soft eyes with slightly shy gaze",
+      "hair_variation": "gentle hair-tip movement",
+      "target_path": "source/generated/v1-2-face-hair/20260708_shy-soft-gaze_v1.png",
+      "reference_pack_inputs": [
+        "source/originals/v1_1_front_3.webp",
+        "source/originals/v1_1_front_1.webp",
+        "source/originals/v1_1_front_2.webp",
+        "source/references/tonari-no-akari/identity-face-hair.webp"
+      ],
+      "prompt": "Create one clean bust-up Akari v1.2 face-and-hair design candidate. Akari v1.1 evolving into v1.2; adult early-20s Japanese young woman as character design, not realism; soft approachable innocence; warm brown eyes; warm brown short bob; soft bangs; pale blue hair ornament on Akari's character-left side; white oversized hoodie context. Use the same bust-up composition, neutral simple background, gentle front three-quarter feeling, and matched lighting across the whole set. For this candidate, the eyes are the primary design variable: soft eyes with slightly shy gaze. Hair variation: gentle hair-tip movement. Keep the v1.1 short bob, clean bang groups, rounded side volume, and natural hair tips. Keep mouth small and restrained. do not redesign the outfit, do not change eye color, do not make her photorealistic, do not make her sharper or colder, and do not make her underage or older-sister-like. no readable text, no logos, no watermarks, no frame, no border, no panel layout.",
+      "acceptance": "Appeal Gate: the eyes feel soft, close, memorable, and warm. Identity Gate: the image still reads as Akari v1.1 evolving into v1.2. Must be a matched bust-up candidate focused on face and hair. Must preserve warm brown eyes and hair, short bob, pale blue character-left hair ornament, small mouth, soft innocence, and white hoodie context. Must contain no readable text, no logos, no watermarks, no frame, and no panel layout.",
+      "selection_gates": {
+        "appeal": "soft close memorable eyes, warm expression, immediate character charm",
+        "identity": "still reads as Akari v1.1 evolving into v1.2",
+        "hard_rejects": [
+          "long-hair drift",
+          "missing or flipped hair ornament",
+          "eye color drift",
+          "sharp cold generic eyes",
+          "extreme roundness that reads too young",
+          "photorealistic rendering",
+          "large mouth style change",
+          "pin-up expression",
+          "background or lighting hiding the face decision"
+        ]
+      },
+      "risk_profile": {
+        "identity_risk": "high",
+        "eye_drift_risk": "high",
+        "hair_drift_risk": "medium",
+        "age_impression_risk": "medium",
+        "text_logo_watermark_risk": "medium"
+      }
+    },
+    {
+      "id": "request:v1-2-face-hair-v1-1-cleaner-eyes",
+      "candidate_order": 7,
+      "slot": "v1-1-cleaner-eyes",
+      "japanese_title": "v1.1に近い整理された目",
+      "eye_variation": "v1.1-near eyes with cleaner rendering",
+      "hair_variation": "v1.1-near bob cleanup",
+      "target_path": "source/generated/v1-2-face-hair/20260708_v1-1-cleaner-eyes_v1.png",
+      "reference_pack_inputs": [
+        "source/originals/v1_1_front_3.webp",
+        "source/originals/v1_1_front_1.webp",
+        "source/originals/v1_1_front_2.webp",
+        "source/references/tonari-no-akari/identity-face-hair.webp"
+      ],
+      "prompt": "Create one clean bust-up Akari v1.2 face-and-hair design candidate. Akari v1.1 evolving into v1.2; adult early-20s Japanese young woman as character design, not realism; soft approachable innocence; warm brown eyes; warm brown short bob; soft bangs; pale blue hair ornament on Akari's character-left side; white oversized hoodie context. Use the same bust-up composition, neutral simple background, gentle front three-quarter feeling, and matched lighting across the whole set. For this candidate, the eyes are the primary design variable: v1.1-near eyes with cleaner rendering. Hair variation: v1.1-near bob cleanup. Keep the v1.1 short bob, clean bang groups, rounded side volume, and natural hair tips. Keep mouth small and restrained. do not redesign the outfit, do not change eye color, do not make her photorealistic, do not make her sharper or colder, and do not make her underage or older-sister-like. no readable text, no logos, no watermarks, no frame, no border, no panel layout.",
+      "acceptance": "Appeal Gate: the eyes feel soft, close, memorable, and warm. Identity Gate: the image still reads as Akari v1.1 evolving into v1.2. Must be a matched bust-up candidate focused on face and hair. Must preserve warm brown eyes and hair, short bob, pale blue character-left hair ornament, small mouth, soft innocence, and white hoodie context. Must contain no readable text, no logos, no watermarks, no frame, and no panel layout.",
+      "selection_gates": {
+        "appeal": "soft close memorable eyes, warm expression, immediate character charm",
+        "identity": "still reads as Akari v1.1 evolving into v1.2",
+        "hard_rejects": [
+          "long-hair drift",
+          "missing or flipped hair ornament",
+          "eye color drift",
+          "sharp cold generic eyes",
+          "extreme roundness that reads too young",
+          "photorealistic rendering",
+          "large mouth style change",
+          "pin-up expression",
+          "background or lighting hiding the face decision"
+        ]
+      },
+      "risk_profile": {
+        "identity_risk": "high",
+        "eye_drift_risk": "high",
+        "hair_drift_risk": "medium",
+        "age_impression_risk": "medium",
+        "text_logo_watermark_risk": "medium"
+      }
+    },
+    {
+      "id": "request:v1-2-face-hair-balanced-hybrid",
+      "candidate_order": 8,
+      "slot": "balanced-hybrid",
+      "japanese_title": "強い要素を混ぜたバランス案",
+      "eye_variation": "balanced hybrid candidate based on strongest prior traits",
+      "hair_variation": "balanced organized short bob",
+      "target_path": "source/generated/v1-2-face-hair/20260708_balanced-hybrid_v1.png",
+      "reference_pack_inputs": [
+        "source/originals/v1_1_front_3.webp",
+        "source/originals/v1_1_front_1.webp",
+        "source/originals/v1_1_front_2.webp",
+        "source/references/tonari-no-akari/identity-face-hair.webp"
+      ],
+      "prompt": "Create one clean bust-up Akari v1.2 face-and-hair design candidate. Akari v1.1 evolving into v1.2; adult early-20s Japanese young woman as character design, not realism; soft approachable innocence; warm brown eyes; warm brown short bob; soft bangs; pale blue hair ornament on Akari's character-left side; white oversized hoodie context. Use the same bust-up composition, neutral simple background, gentle front three-quarter feeling, and matched lighting across the whole set. For this candidate, the eyes are the primary design variable: balanced hybrid candidate based on strongest prior traits. Hair variation: balanced organized short bob. Keep the v1.1 short bob, clean bang groups, rounded side volume, and natural hair tips. Keep mouth small and restrained. do not redesign the outfit, do not change eye color, do not make her photorealistic, do not make her sharper or colder, and do not make her underage or older-sister-like. no readable text, no logos, no watermarks, no frame, no border, no panel layout.",
+      "acceptance": "Appeal Gate: the eyes feel soft, close, memorable, and warm. Identity Gate: the image still reads as Akari v1.1 evolving into v1.2. Must be a matched bust-up candidate focused on face and hair. Must preserve warm brown eyes and hair, short bob, pale blue character-left hair ornament, small mouth, soft innocence, and white hoodie context. Must contain no readable text, no logos, no watermarks, no frame, and no panel layout.",
+      "selection_gates": {
+        "appeal": "soft close memorable eyes, warm expression, immediate character charm",
+        "identity": "still reads as Akari v1.1 evolving into v1.2",
+        "hard_rejects": [
+          "long-hair drift",
+          "missing or flipped hair ornament",
+          "eye color drift",
+          "sharp cold generic eyes",
+          "extreme roundness that reads too young",
+          "photorealistic rendering",
+          "large mouth style change",
+          "pin-up expression",
+          "background or lighting hiding the face decision"
+        ]
+      },
+      "risk_profile": {
+        "identity_risk": "high",
+        "eye_drift_risk": "high",
+        "hair_drift_risk": "medium",
+        "age_impression_risk": "medium",
+        "text_logo_watermark_risk": "medium"
+      }
+    }
+  ]
+}

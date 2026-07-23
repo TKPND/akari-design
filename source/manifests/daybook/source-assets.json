@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "asset_count": 1,
+  "assets": [
+    {
+      "id": "situation-daybook-lakeside-bench-cover",
+      "original_filename": "situation-daybook-lakeside-bench-cover.webp",
+      "source_path": "source/originals/situation-daybook-lakeside-bench-cover.webp",
+      "width": 1280,
+      "height": 720,
+      "colorspace": "sRGB",
+      "role": "situation_daybook_cover_anchor",
+      "orientation_state": "scene_unmirrored"
+    }
+  ]
+}

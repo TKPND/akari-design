@@ -1,0 +1,149 @@
+schema_version: 1
+request_id: akari-v1.2-d10-r01
+asset_id: D10
+revision: r01
+variation_axis: independent_scene_attempt
+references:
+  - role: accepted_d09_same_evening_continuity
+    path: akari-v1.2/accepted/daily/evening/akari-v1.2_d09_evening-phone-sleepy-bed-sit_r01.png
+  - role: accepted_d02_plain_rug_contact
+    path: akari-v1.2/accepted/daily/morning/akari-v1.2_d02_morning-rug-daze_r01.png
+  - role: accepted_c03_hairpin_three_quarter
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c03_hairpin-side-45_r02.png
+  - role: accepted_c06_1_sleepy_awake_expression
+    path: akari-v1.2/accepted/core/face-hair/akari-v1.2_c06-1_sleepy-neutral_r01.png
+  - role: accepted_c07_seated_sock_feet
+    path: akari-v1.2/accepted/core/indoor-feet/akari-v1.2_c07_indoor-socks-seated_r01.png
+shared_prompt: >-
+  Use the five visible accepted images only in their declared roles to create
+  one standalone same-evening Daily scene of the same naturally cute
+  25-year-old adult Akari. Image 1 controls D09 same-evening adult identity,
+  normal short bob, complete character-left ornament, oversized opaque white
+  hoodie, opaque gray pleated skirt, striped socks, warm compact-room palette,
+  safely sleepy-but-awake state, character-right cuff pushed up one thumb
+  width, and slightly lower character-right sock; do not copy its bed sit,
+  phone, hand pose, vertical body axis, or mattress. Image 2 controls only the
+  plain near-neutral rug material, restrained floor context, body-to-rug contact
+  readability, and soft indoor ground shadow; do not copy its morning light,
+  bed hair, ornament absence, seated daze, smile, or leg arrangement. Image 3
+  controls hairpin-side three-quarter identity, complete character-left
+  pale-blue crossed pins and ribbon-like ornament, cheek contour, and short-bob
+  side construction; do not copy standing, shoes, smile, or white backdrop.
+  Image 4 controls only sleepy-but-awake expression intensity: both eyes
+  visibly open under heavy lids, relaxed brows and cheeks, and a small closed
+  neutral mouth; do not copy morning hair, chest-up crop, or plain backdrop.
+  Image 5 controls warm-white mid-calf socks with exactly two thin pale-blue
+  stripes, healthy ankle and foot volume, relaxed toes, heels, and believable
+  knit shape; do not copy its floor-sitting pose, smile, rug, or exact legs.
+  Show Akari lying calmly on her character-right side on one plain neutral rug
+  in the same compact room under warm diffused evening light. Create a vertical
+  portrait composition on the declared 1024 by 1536 canvas, never a landscape
+  image. Use a gently elevated front-left three-quarter camera and arrange the
+  complete side-lying body on a comfortable diagonal from the upper-left head
+  area toward the lower-right socked feet, with generous rug context around
+  every edge. Render it as a practical,
+  non-sensual full-body character-reference scene with balanced visual weight
+  across the face, hands, torso, support contacts, legs, and feet; never use a
+  low angle or emphasize the chest, skirt, pelvis, thighs, or feet. Place one
+  plain low cushion under
+  only her temple and upper cheek. The lower character-right arm bends
+  naturally near the cushion without disappearing under her head, while the
+  upper character-left hand rests open and relaxed on the rug in front of her
+  torso. Both hands must be separately readable with five natural fingers and
+  neutral wrists. Keep the character-left side of her face and complete
+  ornament visible. Direct her gaze slightly downward and away from the viewer
+  while keeping both eyes visibly open. Her mouth stays small, closed, and
+  neutral. The ribcage, waist, pelvis, outer character-right thigh, and lower
+  leg are fully supported by the rug with coherent soft contact shadows, not
+  hovering. Keep her spine long and gently curved rather than twisted. Let the
+  upper character-left knee move only a little forward for a comfortable
+  side-rest, with the knees and feet resting in a natural modest near-parallel
+  stack rather than opening or splaying toward the camera, while both
+  thigh-to-knee-to-shin chains remain separately
+  traceable, uncrossed, and connected. Keep both striped socks, heels, and toes
+  completely visible, with relaxed feet rather than pointed toes. Carry exactly
+  two Humanization elements from D09: the character-right hoodie cuff stays
+  pushed up by about one thumb width and the character-right sock stays
+  slightly lower while both stripes remain complete. Do not add further
+  costume disorder. Keep the opaque skirt securely covering the pelvis and
+  upper thighs with no underwear view, using natural gravity and side-lying
+  folds without shortening it. The phone has been put away and is outside the
+  frame. Use only the plain rug and one plain cushion as context. Do not add a
+  phone, charger, cable, second cushion, blanket, bed, sofa, clock, mirror, open
+  drawer, laundry pile, footwear, bag, food, drink, medicine, television
+  content, or explanatory prop. The moment is safe ordinary rest before bed,
+  not sleep or collapse, and never sadness, fear, pain, illness, intoxication,
+  dissociation, injury, sensuality, fetish framing, glamour, pin-up posing,
+  viewer performance, or an anatomy plate. When references conflict, D09
+  controls same-evening identity, outfit, state, and Humanization; D02 controls
+  only rug context and contact; C03 controls three-quarter identity and
+  ornament; C06-1 controls only awake-sleepy expression intensity; and C07
+  controls socks and feet. Do not create closed eyes, tears, open mouth, broad
+  smile, viewer focus, hidden face, hand trapped under head, malformed extra or
+  fused fingers, broken wrists, twisted neck or spine, broken shoulder ribcage
+  pelvis knee or ankle, fused crossed hidden or untraceable legs, floating
+  torso or pelvis, pointed feet, wrong ornament side, wrong hair length, wrong
+  outfit, exposed underwear, bare feet, removed sock, incorrect sock stripes,
+  forbidden props, crop loss, text, logo, watermark, border, collage, grid,
+  multiple characters, or severe identity, adult-age, anatomy, continuity, or
+  rendering drift.
+scene_contract:
+  camera: gently-elevated-front-left-three-quarter-portrait-diagonal-full-body
+  location: same-compact-room-plain-neutral-rug
+  support: temple-low-cushion-and-full-body-rug-contact
+  action: character-right-side-lying-rest-on-rug
+  continuity: d09-same-evening-outfit-normal-hair-light-state-and-humanization
+  lighting: warm-diffused-evening-interior
+  gaze: open-heavy-lidded-eyes-down-away-from-viewer
+  pose: supported-side-rest-with-separately-traceable-uncrossed-legs
+  humanization:
+    - character-right-hoodie-cuff-pushed-up-one-thumb-width
+    - character-right-sock-slightly-lower-with-both-stripes-complete
+  outfit:
+    top: oversized-opaque-white-hoodie
+    bottom: opaque-gray-pleated-skirt
+    socks: warm-white-mid-calf-exactly-two-thin-pale-blue-stripes
+  required_visible_features:
+    - complete-head-character-left-ornament-and-both-open-eyes
+    - one-low-cushion-under-temple-with-readable-lower-arm
+    - separate-natural-upper-hand-resting-open-on-rug
+    - continuous-ribcage-waist-pelvis-and-rug-support
+    - separately-traceable-bilateral-thigh-knee-shin-lines
+    - both-striped-socks-heels-and-relaxed-toes
+  forbidden_props: [phone, charger, cable, second-cushion, blanket, bed, sofa, clock, mirror, open-drawer, laundry-pile, footwear, bag, food, drink, medicine, television-content, explanatory-prop]
+production_requirements:
+  file_format: png
+  target_canvas: {width: 1024, height: 1536}
+  accepted_width: {minimum: 1020, maximum: 1028}
+  accepted_height: {minimum: 1532, maximum: 1540}
+  standalone_composition: true
+  generated_grid: forbidden
+  force_exact_resize: forbidden
+candidate_policy:
+  initial_variants: [a, b]
+  optional_variant: c
+  optional_c_only_for: d10-scene-or-distinct-independent-candidate-local-major-failures
+  stop_for_shared_failure: [D09, D02, C03, C06, C07]
+  cross_candidate_references: forbidden
+candidates:
+  - variant: a
+    title: independent-scene-a
+    target_path: source/candidates/d10/r01/akari-v1.2_d10_evening-rug-side-rest_r01-a.png
+  - variant: b
+    title: independent-scene-b
+    target_path: source/candidates/d10/r01/akari-v1.2_d10_evening-rug-side-rest_r01-b.png
+comparison_anchors: []
+acceptance_gates: [identity, body, state, continuity, rendering, production]
+hard_rejects:
+  - severe identity adult-age face body-volume continuity or rendering drift
+  - fused missing duplicated disconnected crossed hidden or untraceable limbs or joints
+  - floating weight broken rug cushion head shoulder ribcage pelvis leg foot or hand support or contradictory contact
+  - missing mirrored relocated duplicated or materially redesigned ornament
+  - wrong hair length extreme bed head wet hair or wind
+  - closed eyes tears distress sadness pain injury illness intoxication sleep collapse dissociation sensual fetish glamour viewer focus broad smile or open mouth
+  - wrong outfit exposed underwear removed sock bare feet incorrect sock height or stripes
+  - malformed extra or fused fingers broken wrist hand trapped under head twisted neck spine shoulder ribcage or pelvis
+  - fused crossed hidden or untraceable legs broken knee or ankle pointed feet or missing heel or toe
+  - phone charger cable second cushion blanket bed sofa clock mirror open drawer laundry pile footwear bag food drink medicine television content or explanatory prop
+  - crop or scale preventing complete head ornament hand torso pelvis leg sock heel toe cushion or rug-contact review
+  - readable text logo watermark border collage grid or multiple character

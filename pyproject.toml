@@ -1,0 +1,12 @@
+[project]
+name = "akari-v1-1-master-pdf"
+version = "0.1.0"
+description = "Reproducible Akari v1.1 master PDF pipeline"
+requires-python = ">=3.11"
+dependencies = [
+    "Pillow>=10,<13",
+    "pyyaml>=6,<7",
+]
+
+[tool.uv]
+package = false

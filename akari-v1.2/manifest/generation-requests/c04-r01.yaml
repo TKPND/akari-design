@@ -1,0 +1,76 @@
+schema_version: 1
+request_id: akari-v1.2-c04-r01
+asset_id: C04
+revision: r01
+variation_axis: independent_generation_attempt
+references:
+  - role: accepted_c01_front_identity
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c01_front-natural-stance_r01.png
+  - role: accepted_c03_hairpin_three_quarter
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c03_hairpin-side-45_r02.png
+  - role: v1_1_indoor_foot_construction
+    path: akari-v1.2/references/v1.1/standard-foot-set.webp
+  - role: legacy_seated_anatomy_warning
+    path: akari-v1.2/references/legacy/seated.webp
+shared_prompt: >-
+  Use the four visible images only in their declared roles. Create one
+  standalone full-body floor-sitting reference of the same naturally cute
+  25-year-old Akari on a 1024 x 1536 nearly plain low-contrast rug canvas.
+  Use a front-biased light three-quarter view at a natural seated viewing
+  height. C01 controls adult identity, healthy body volume, fixed white
+  oversized hoodie and gray pleated skirt, palette, and rendering. Accepted
+  hairpin-side C03 r02 controls the three-quarter face, short fluffy
+  light-brown bob, warm amber eyes, rounded cheeks, compact chin, and correct
+  character-left pale-blue crossed pins and ribbon-like ornament. The v1.1
+  foot reference controls white socks with two pale-blue stripes, ankle volume,
+  and relaxed socked feet; do not reproduce its text or panel layout. The
+  legacy seated image is non-controlling anatomy-warning evidence for pelvis,
+  leg volume, and garment compression only. Do not copy its bench,
+  straight-down lower legs, shoes, hand placement, scene, or exact pose. Seat
+  the pelvis visibly on the rug with a slight posterior tilt and coordinated
+  natural rounding through the back and dropped shoulders. Flow both legs
+  loosely from the front toward one side, offset the knees, and keep a clearly
+  traceable front leg and rear leg from thigh root through relaxed socked toes.
+  Use one hand for the minimum believable body support and rest the other on a
+  knee or the rug. Show modest gravity and contact response in the seated leg
+  volume, hoodie, and skirt. Keep all clothing fully opaque and arrange the
+  skirt hem securely over the lap to the knees. Keep the complete head, hair,
+  hands, socks, and toes visible. Aim
+  broadly for head top y=70..160, lowest toe y=1360..1490, and about 48 px or
+  more lateral breathing room, but preserve believable anatomy and pose over
+  exact pixel placement. Use a small calm secure expression without C05 bed
+  hair or the C06 expression gradient. No chair, bench, bed, room scene,
+  props, shoes, symmetrical symbol pose, artificially aligned toes, fused or
+  untraceable limbs, floating pelvis,
+  contradictory support, thin legs, elongated proportions, childlike or
+  glamorous drift, dramatic lighting, photorealistic skin, readable text,
+  logo, watermark, border, collage, grid, or multiple character.
+framing_guidance:
+  canvas: {width: 1024, height: 1536}
+  enforcement: advisory
+  head_top_y: [70, 160]
+  lowest_toe_y: [1360, 1490]
+  intended_lateral_margin_pixels: 48
+  reject_on_numeric_miss_alone: false
+  major_only_when: crop-or-scale-prevents-structural-review
+candidates:
+  - variant: a
+    title: independent-attempt-a
+    target_path: source/candidates/c04/r01/akari-v1.2_c04_floor-sitting_r01-a.png
+  - variant: b
+    title: independent-attempt-b
+    target_path: source/candidates/c04/r01/akari-v1.2_c04_floor-sitting_r01-b.png
+  - variant: c
+    title: independent-attempt-c
+    target_path: source/candidates/c04/r01/akari-v1.2_c04_floor-sitting_r01-c.png
+comparison_anchors: []
+acceptance_gates: [identity, body, rendering]
+hard_rejects:
+  - fused missing duplicated disconnected or untraceable limbs or joints
+  - floating pelvis or support placement that contradicts body weight
+  - severe identity or age drift
+  - exposed underwear or explicit sexualization
+  - material hand foot sock skirt or hairpin defect
+  - shoes or wrong fixed outfit
+  - unreadable anatomy caused by crop or extreme subject scale
+  - readable text logo watermark collage or multiple character

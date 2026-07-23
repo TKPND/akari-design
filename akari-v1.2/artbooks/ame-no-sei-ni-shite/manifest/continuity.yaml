@@ -1,0 +1,60 @@
+schema_version: 1
+pov:
+  owner: the viewer
+  rule: physically possible first-person point of view
+  visible_exception: scene-12 may show only the edge of the viewer's sleeve
+  banned: [face, body, hand, reflection, shadow]
+identity:
+  age: 25
+  hair: warm-brown short bob
+  ornament: character-left parallel pins and pale-blue small ribbon
+  body: compact anime proportions with healthy substantial legs
+core_references:
+  - role: core-standing-body
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c01_front-natural-stance_r01.png
+    sha256: a977f2798d15f3da9ef0d7720d6f9fc41bd2f84f54f4c8a69908a482596a75c5
+  - role: core-hairpin-side
+    path: akari-v1.2/accepted/core/standing/akari-v1.2_c03_hairpin-side-45_r02.png
+    sha256: 19c8c96113bcbc47f7d1e4cc1d58af466d3a573f0dae40cfcdf9bf456b1a0a9b
+  - role: core-seated-body
+    path: akari-v1.2/accepted/core/sitting/akari-v1.2_c04_floor-sitting_r01.png
+    sha256: 7289ca0d9cbc74b4f1becb949dcf174fdd691af08d19f185de47d7657c1d7c64
+  - role: core-front-hair
+    path: akari-v1.2/accepted/core/face-hair/akari-v1.2_c05_morning-bedhair_r01.png
+    sha256: 4aae292203b389b7ab1f1a44171ec5cf45498843705d7dbefbc47f4452ac8ffa
+  - role: core-soft-smile
+    path: akari-v1.2/accepted/core/face-hair/akari-v1.2_c06-4_soft-smile_r01.png
+    sha256: 7db1ea102a95d45d16e66a7390642d1ceb958ef631af072c40af87b2ee0b71d6
+  - role: core-standing-feet
+    path: akari-v1.2/accepted/core/indoor-feet/akari-v1.2_c07_indoor-socks-standing_r01.png
+    sha256: 57b6d32d00ef10222abcca3664addeb72d514ec1cb772eb9fcae6c657ce7cca4
+  - role: core-seated-feet
+    path: akari-v1.2/accepted/core/indoor-feet/akari-v1.2_c07_indoor-socks-seated_r01.png
+    sha256: 46c812d0f10e2c9df0a7904687ec38939645b4636037dfd537437d1232967d27
+outfits:
+  outdoor:
+    scenes: [scene-01, scene-02, scene-03, scene-04, scene-05, scene-06, scene-07]
+    prompt: "white top, pale beige or light-gray cardigan, gray pleated skirt, warm-white mid-calf socks with exactly two thin pale-blue stripes, white chunky sneakers, and one small pale shoulder bag"
+  indoor:
+    scenes: [scene-08, scene-09, scene-10, scene-11, scene-12]
+    prompt: "loose opaque white short-sleeve T-shirt, simple opaque gray room shorts, warm-white mid-calf socks with exactly two thin pale-blue stripes, and no shoes or slippers"
+reference_sets:
+  scene-01: [core-standing-body, core-hairpin-side, core-soft-smile]
+  scene-02: [outdoor-look-anchor, core-standing-body, core-hairpin-side]
+  scene-03: [outdoor-look-anchor, core-standing-body, core-hairpin-side, core-front-hair, core-soft-smile]
+  scene-04: [outdoor-look-anchor, core-standing-body, core-hairpin-side]
+  scene-05: [outdoor-look-anchor, core-hairpin-side, core-front-hair, core-soft-smile]
+  scene-06: [outdoor-look-anchor, core-hairpin-side, core-front-hair, core-soft-smile]
+  scene-07: [outdoor-look-anchor, core-standing-body, core-hairpin-side, core-standing-feet]
+  scene-08: [core-standing-body, core-hairpin-side, core-front-hair, core-soft-smile, core-standing-feet]
+  scene-09: [indoor-look-anchor, core-hairpin-side, core-front-hair, core-soft-smile, core-standing-feet]
+  scene-10: [indoor-look-anchor, core-seated-body, core-hairpin-side, core-front-hair, core-soft-smile, core-seated-feet]
+  scene-11: [indoor-look-anchor, core-standing-body, core-hairpin-side, core-soft-smile]
+  scene-12: [indoor-look-anchor, core-standing-body, core-hairpin-side, core-front-hair, core-soft-smile, core-standing-feet]
+review_order: [identity, hair, pov, continuity, body, emotion, rendering, production]
+blockers:
+  - wrong identity or underage impression
+  - ornament on the wrong side
+  - physically impossible POV or forbidden viewer visibility
+  - broken anatomy or missing required props
+  - readable text, logo, watermark, collage, or grid

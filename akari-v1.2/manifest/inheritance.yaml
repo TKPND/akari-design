@@ -1,0 +1,114 @@
+schema_version: 1
+references:
+  - role: palette
+    inheritance_class: inherited
+    source_path: source/palette/akari-v1.1-palette.json
+    copied_path: akari-v1.2/references/v1.1/akari-v1.1-palette.json
+    source_collection: v1.1
+    reuse_rationale: D65 sRGB object colors
+    sha256: 3dc24ce693e9f2e43081042d6856f13fed313e4dc1e6b3543d5aaaa188d96332
+  - role: v1.1-front-identity
+    inheritance_class: inherited
+    source_path: source/originals/v1_1_front_1.webp
+    copied_path: akari-v1.2/references/v1.1/front.webp
+    source_collection: v1.1
+    reuse_rationale: face body and standard outfit lock
+    sha256: 6b2896e98657ca4079ea94652c16bb05285c1626f255cd08ea1e56f298151f9a
+  - role: v1.1-back-identity
+    inheritance_class: inherited
+    source_path: source/originals/v1_1_back.webp
+    copied_path: akari-v1.2/references/v1.1/back.webp
+    source_collection: v1.1
+    reuse_rationale: back hair and outfit lock
+    sha256: 77449961e7ae3eebe54be20ee428795fed8b897a08d9dc7c15319315773154f3
+  - role: v1.1-hairpin-side-45
+    inheritance_class: inherited
+    source_path: source/originals/v1_1_髪飾り側_45deg.webp
+    copied_path: akari-v1.2/references/v1.1/hairpin-side-45.webp
+    source_collection: v1.1
+    reuse_rationale: character-left ornament and cheek silhouette
+    sha256: dd144b66f5228934ca95060467ec96f9ef33f38315a3e7a7c70074111cf85a50
+  - role: v1.1-non-hairpin-side-45
+    inheritance_class: inherited
+    source_path: source/originals/v1_1_非髪飾り側45deg.webp
+    copied_path: akari-v1.2/references/v1.1/non-hairpin-side-45.webp
+    source_collection: v1.1
+    reuse_rationale: opposite cheek and bob silhouette
+    sha256: 76b95abbffedb77f392bda065b60f5c9194310996af418b59913868025ac3853
+  - role: v1.1-indoor-foot-base
+    inheritance_class: inherited
+    source_path: source/originals/v1_1_standard_foot_set.webp
+    copied_path: akari-v1.2/references/v1.1/standard-foot-set.webp
+    source_collection: v1.1
+    reuse_rationale: sock stripe and foot construction
+    sha256: 5b4175d87a813f4887cbf3e3361f4007acffa5a25cccfb19ecec431447b4978b
+  - role: v1.1-shoe-base
+    inheritance_class: inherited
+    source_path: source/originals/v1_1_shoes.webp
+    copied_path: akari-v1.2/references/v1.1/shoes.webp
+    source_collection: v1.1
+    reuse_rationale: inherited sneaker construction
+    sha256: acc31bf31a55b770388b796b34f2b57dbeb48dc2fb974fe8e6896d0cda70f344
+  - role: legacy-face-comparison
+    inheritance_class: reference-only
+    source_path: legacy/akari-v1.2-pre-natural-form/source/finished/v1-2-face-hair/akari-v1-2-standard-face.webp
+    copied_path: akari-v1.2/references/legacy/standard-face.webp
+    source_collection: pre-natural-form
+    reuse_rationale: compare the previous accepted face direction without granting acceptance
+    sha256: e130b7e00d98d02fc05f139ddc3b01f206e7eabf61987e4ad385ed7870fadb66
+  - role: legacy-front-comparison
+    inheritance_class: reference-only
+    source_path: legacy/akari-v1.2-pre-natural-form/source/finished/v1-2-turnaround/front.webp
+    copied_path: akari-v1.2/references/legacy/front.webp
+    source_collection: pre-natural-form
+    reuse_rationale: compare corrected front proportions and stance
+    sha256: 7b17fb7169c67376a41a8bdfff4ab7d50d90ec8bf113ab1c50aba85511c92423
+  - role: legacy-back-comparison
+    inheritance_class: reference-only
+    source_path: legacy/akari-v1.2-pre-natural-form/source/finished/v1-2-turnaround/back.webp
+    copied_path: akari-v1.2/references/legacy/back.webp
+    source_collection: pre-natural-form
+    reuse_rationale: compare rear construction and body consistency
+    sha256: e6e9249d704fc60fdbb1ea298dcfc05b43645ffe3b5ec3a1e52e8379e246bb5d
+  - role: legacy-hairpin-side-45-comparison
+    inheritance_class: reference-only
+    source_path: legacy/akari-v1.2-pre-natural-form/source/finished/v1-2-turnaround/character-left-front-three-quarter.webp
+    copied_path: akari-v1.2/references/legacy/character-left-front-three-quarter.webp
+    source_collection: pre-natural-form
+    reuse_rationale: compare ornament-side construction
+    sha256: 425a865eeef4fded914be9ca8dab089457448711b4701a339e5cda903980a412
+  - role: legacy-non-hairpin-side-45-comparison
+    inheritance_class: reference-only
+    source_path: legacy/akari-v1.2-pre-natural-form/source/finished/v1-2-turnaround/character-right-front-three-quarter.webp
+    copied_path: akari-v1.2/references/legacy/character-right-front-three-quarter.webp
+    source_collection: pre-natural-form
+    reuse_rationale: compare non-ornament-side construction
+    sha256: f2bc997c592c58457c08561215d529ffbcf248cc774ee1bf79abbb89a6224ea2
+  - role: legacy-seated-anatomy-comparison
+    inheritance_class: reference-only
+    source_path: legacy/akari-v1.2-pre-natural-form/source/finished/v1-2-motion/seated.webp
+    copied_path: akari-v1.2/references/legacy/seated.webp
+    source_collection: pre-natural-form
+    reuse_rationale: compare pelvis leg and garment compression while redesigning C04
+    sha256: ecad0f6a76bcd81a4bfb7607c5bf4dd8d791d4e14aea048eeedb974ec0342b66
+  - role: supporting_sleepy_expression
+    inheritance_class: reference-only
+    source_path: source/generated/tonari-no-hyoujou/20260705_sleepy-reply_v3.webp
+    copied_path: akari-v1.2/references/supporting/sleepy-reply-v3.webp
+    source_collection: tonari-no-hyoujou
+    reuse_rationale: C05 eyelid weight gaze energy and incomplete visual focus only from a high-priority draft without identity rendering or acceptance authority
+    sha256: a0b4dc00d8b32a0232c6579f3c28f792f49f5ede8f1d3527969c367cc3a9d6b2
+  - role: supporting_morning_hair
+    inheritance_class: reference-only
+    source_path: source/finished/tonari-no-akari/20260701_morning-glance_v1_finish_h05_v1.png
+    copied_path: akari-v1.2/references/supporting/morning-glance-h05.png
+    source_collection: tonari-no-akari
+    reuse_rationale: C05 crown flyaways cheek strand and lower-bob end irregularity only without identity rendering or scene authority
+    sha256: 282379918dd6ff553305bf07e7d7aa47693fcd7edc19908ea94e1a0c5771ba7b
+  - role: v1.1-expression-range
+    inheritance_class: reference-only
+    source_path: source/originals/v1_1_front_3.webp
+    copied_path: akari-v1.2/references/v1.1/expression-grid.webp
+    source_collection: v1.1
+    reuse_rationale: C06 neutral relaxed-mouth and closed-mouth soft-smile mechanics only; open-mouth laughing surprised worried pouting yawning and closed-eye examples are excluded and grant no identity crop rendering hair outfit or background authority
+    sha256: 2b70c639b320275cde6787263bd6fe0f88ad59068154e4c2439ae69502e6f919

@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "review_id": "akari-v1.2-turnaround-profile-20260713-r1",
+  "review_path": "evidence/v1-2-turnaround/reviews/profile-review.json",
+  "stage": "profile",
+  "slots": [
+    "character-left-profile",
+    "character-right-profile"
+  ],
+  "request_batches": {
+    "character-left-profile": "batch:v1-2-turnaround:20260713:character-left-profile:r1",
+    "character-right-profile": "batch:v1-2-turnaround:20260713:character-right-profile:r1"
+  },
+  "user_decision": "approved",
+  "user_selection": {
+    "decision_text": "C1 / C1 (Recommended)",
+    "character-left-profile": 1,
+    "character-right-profile": 1
+  },
+  "candidates": [
+    {
+      "request_id": "request:v1-2-turnaround:20260713:character-left-profile:r1:c1",
+      "slot": "character-left-profile",
+      "candidate_path": "source/generated/v1-2-turnaround/20260713_character-left-profile_r1_c1.png",
+      "state": "accept",
+      "gates": {
+        "identity": "pass",
+        "geometry": "pass",
+        "outfit": "pass",
+        "quality": "pass"
+      },
+      "landmark_y_px": {
+        "crown": 90,
+        "chin": 299,
+        "shoulder": 347,
+        "hoodie_hem": 765,
+        "skirt_hem": 845,
+        "knee": 1000,
+        "ankle": 1290,
+        "sole": 1418
+      },
+      "normalized_landmarks": {
+        "crown": 0.0,
+        "chin": 0.15738,
+        "shoulder": 0.193524,
+        "hoodie_hem": 0.508283,
+        "skirt_hem": 0.568524,
+        "knee": 0.685241,
+        "ankle": 0.903614,
+        "sole": 1.0
+      },
+      "review_findings": {
+        "identity_preservation": 5,
+        "face_hairpin_consistency": 5,
+        "anatomy_and_composition": 5,
+        "artifact_regression": 5,
+        "red_flags": []
+      },
+      "notes": "User-selected left C1 is a clean true profile with a readable forehead-nose-mouth-chin contour, coherent bob depth, hood and torso thickness, healthy calf volume, and a properly profiled chunky sneaker. The character-left upper crossed pins, lower loop, and two strands remain prominent without changing sides.",
+      "rejection_reason": ""
+    },
+    {
+      "request_id": "request:v1-2-turnaround:20260713:character-left-profile:r1:c2",
+      "slot": "character-left-profile",
+      "candidate_path": "source/generated/v1-2-turnaround/20260713_character-left-profile_r1_c2.png",
+      "state": "hold",
+      "gates": {
+        "identity": "pass",
+        "geometry": "hold",
+        "outfit": "pass",
+        "quality": "pass"
+      },
+      "notes": "Strong alternate true profile with correct ornament construction, but the lower body and sneaker mass are slightly lighter than C1. Keep only if a later rear-three-quarter transition needs its straighter torso.",
+      "rejection_reason": ""
+    },
+    {
+      "request_id": "request:v1-2-turnaround:20260713:character-left-profile:r1:c3",
+      "slot": "character-left-profile",
+      "candidate_path": "source/generated/v1-2-turnaround/20260713_character-left-profile_r1_c3.png",
+      "state": "hold",
+      "gates": {
+        "identity": "pass",
+        "geometry": "hold",
+        "outfit": "pass",
+        "quality": "pass"
+      },
+      "notes": "Clean silhouette and ornament, but the body and footwear are the narrowest of the left set and therefore less consistent with the accepted front and front-three-quarter volume.",
+      "rejection_reason": ""
+    },
+    {
+      "request_id": "request:v1-2-turnaround:20260713:character-right-profile:r1:c1",
+      "slot": "character-right-profile",
+      "candidate_path": "source/generated/v1-2-turnaround/20260713_character-right-profile_r1_c1.png",
+      "state": "accept",
+      "gates": {
+        "identity": "pass",
+        "geometry": "pass",
+        "outfit": "pass",
+        "quality": "pass"
+      },
+      "landmark_y_px": {
+        "crown": 80,
+        "chin": 286,
+        "shoulder": 345,
+        "hoodie_hem": 744,
+        "skirt_hem": 812,
+        "knee": 994,
+        "ankle": 1268,
+        "sole": 1405
+      },
+      "normalized_landmarks": {
+        "crown": 0.0,
+        "chin": 0.155472,
+        "shoulder": 0.2,
+        "hoodie_hem": 0.501132,
+        "skirt_hem": 0.552453,
+        "knee": 0.689811,
+        "ankle": 0.896604,
+        "sole": 1.0
+      },
+      "review_findings": {
+        "identity_preservation": 5,
+        "face_hairpin_consistency": 5,
+        "anatomy_and_composition": 5,
+        "artifact_regression": 5,
+        "red_flags": []
+      },
+      "notes": "User-selected right C1 provides the strongest counterpart profile: clean one-eye facial contour, matching head and hood depth, stable torso and calf volume, and a correctly profiled chunky sneaker. The character-left ornament is fully occluded and not mirrored onto the visible side.",
+      "rejection_reason": ""
+    },
+    {
+      "request_id": "request:v1-2-turnaround:20260713:character-right-profile:r1:c2",
+      "slot": "character-right-profile",
+      "candidate_path": "source/generated/v1-2-turnaround/20260713_character-right-profile_r1_c2.png",
+      "state": "hold",
+      "gates": {
+        "identity": "pass",
+        "geometry": "hold",
+        "outfit": "pass",
+        "quality": "pass"
+      },
+      "notes": "Good alternate with correct ornament occlusion and true profile, but its bob, torso, and shoe construction pair less directly with selected left C1 than right C1 does.",
+      "rejection_reason": ""
+    },
+    {
+      "request_id": "request:v1-2-turnaround:20260713:character-right-profile:r1:c3",
+      "slot": "character-right-profile",
+      "candidate_path": "source/generated/v1-2-turnaround/20260713_character-right-profile_r1_c3.png",
+      "state": "hold",
+      "gates": {
+        "identity": "pass",
+        "geometry": "hold",
+        "outfit": "pass",
+        "quality": "pass"
+      },
+      "notes": "Readable profile and no mirrored ornament, but the torso, leg, and sneaker are slimmer than the accepted progression. Keep only as a rejected-volume reference.",
+      "rejection_reason": ""
+    }
+  ]
+}

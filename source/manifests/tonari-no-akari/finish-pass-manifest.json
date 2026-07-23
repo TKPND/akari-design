@@ -1,0 +1,412 @@
+{
+  "schema_version": 1,
+  "document_id": "akari-v1.1-tonari-no-akari",
+  "workflow": "humanization-pass",
+  "source_instruction": "external workflow prompt (not included)",
+  "prompt_template_version": "akari_finish_humanization_v1",
+  "default_strength": "H05",
+  "output_root": "source/finished/tonari-no-akari",
+  "evidence_root": "evidence/finish-pass",
+  "global_rules": {
+    "primary_input_count": 1,
+    "output_image_count": 1,
+    "must_preserve_aspect_ratio": true,
+    "must_preserve_composition": true,
+    "must_not_overwrite_source_candidate": true,
+    "pdf_audit_deferred": true
+  },
+  "review_thresholds": {
+    "identity_preservation": 4,
+    "face_consistency": 4,
+    "hair_and_hairpin_consistency": 4,
+    "anatomy_integrity": 4,
+    "composition_preservation": 4,
+    "ai_polish_reduction": 3
+  },
+  "jobs": [
+    {
+      "image": "20260701_window-breath_v1.webp",
+      "asset_id": "tonari-window-breath",
+      "page_id": "window-breath",
+      "stage": "humanization",
+      "status": "accepted",
+      "strength": "H05",
+      "source_candidate": "source/generated/tonari-no-akari/20260701_window-breath_v1.webp",
+      "output": "source/finished/tonari-no-akari/20260701_window-breath_v1_finish_h05_v1.webp",
+      "generated_image_source": "external image generation artifact (not included)",
+      "source_sha256": "edc66eddd70ff556ee73c305a4ee7411f94923673f3fb59fa68f72579cae2358",
+      "output_sha256": "1f4931009121651f7d3ea1c09237844a413fd890a543fe7f4652ff0ffe752a4f",
+      "scene_intent": "quiet window-side half-body portrait with soft side light and thoughtful expression",
+      "known_risks": [
+        "face_drift",
+        "hairpin_drift",
+        "hand_pose_drift",
+        "curtain_composition_drift",
+        "overdarkening",
+        "over-wrinkling_white_cloth"
+      ],
+      "edit_scope": [
+        "hair_micro_irregularity",
+        "fabric_wrinkles",
+        "line_weight_variation",
+        "lighting_naturalization"
+      ],
+      "do_not_touch_scope": [
+        "face_structure",
+        "hair_silhouette",
+        "hair_ornament",
+        "hands",
+        "composition",
+        "curtain_layout"
+      ],
+      "prompt_addendum": "For this window-side image, preserve the quiet morning indoor mood and the hand near the curtain. Add only subtle hair-end looseness, a few flyaway hairs, tiny wrinkles on the white cardigan and roomwear, and slightly less perfect airbrushed highlights. Keep the face and expression nearly identical. Do not change the hand pose or curtain composition.",
+      "evidence": {
+        "normal_contact_sheet": "evidence/finish-pass/contact-sheets/20260701_window-breath_v1_before_after.webp",
+        "blind_contact_sheet": "evidence/finish-pass/contact-sheets/blind/20260701_window-breath_v1_ab_blind.webp",
+        "blind_mapping": "evidence/finish-pass/contact-sheets/blind/20260701_window-breath_v1_ab_mapping.json"
+      },
+      "human_review": {
+        "status": "completed",
+        "reviewer": "user",
+        "review_date": "2026-07-01",
+        "blind_first_impression": "A",
+        "blind_mapping_revealed": {
+          "A": "finish",
+          "B": "original"
+        },
+        "scores": {
+          "identity_preservation": 5,
+          "face_consistency": 5,
+          "hair_and_hairpin_consistency": 5,
+          "anatomy_integrity": 5,
+          "composition_preservation": 5,
+          "ai_polish_reduction": 3,
+          "everyday_observation_feel": 3,
+          "overall_preference": 4
+        },
+        "decision": "accept_finish",
+        "notes": "Blind A/B first impression preferred A; A was the finish candidate. User reported no rejection-level issues in face, hair ornament, hand, or composition."
+      }
+    },
+    {
+      "image": "20260701_seated-distance_v1.webp",
+      "asset_id": "tonari-seated-distance",
+      "page_id": "seated-distance",
+      "stage": "humanization",
+      "status": "retry_h03",
+      "strength": "H05",
+      "source_candidate": "source/generated/tonari-no-akari/20260701_seated-distance_v1.webp",
+      "output": "source/finished/tonari-no-akari/20260701_seated-distance_v1_finish_h05_v1.webp",
+      "generated_image_source": "external image generation artifact (not included)",
+      "source_sha256": "e281aa94a5e427d7018d6994d609f3f3137d857ba7c2ea4a6b54bcbbb4f07302",
+      "output_sha256": "2aaf5ce2a680bb4b238a29f1df6f5f0c3ece04bfc558cb32d8fa990171f1d4b5",
+      "scene_intent": "shy seated sofa pose with hands on lap, visible socks, couch layout, and coffee table placement",
+      "known_risks": [
+        "face_drift",
+        "hairpin_drift",
+        "hand_pose_drift",
+        "leg_or_sock_drift",
+        "sofa_layout_drift",
+        "over-wrinkling_white_hoodie"
+      ],
+      "edit_scope": [
+        "hair_micro_irregularity",
+        "hoodie_fabric_folds",
+        "sofa_fabric_variation",
+        "room_shadow_naturalization",
+        "line_weight_variation"
+      ],
+      "do_not_touch_scope": [
+        "face_structure",
+        "hair_silhouette",
+        "hair_ornament",
+        "hands",
+        "legs",
+        "socks",
+        "composition",
+        "coffee_table_layout"
+      ],
+      "prompt_addendum": "For this seated sofa image, keep the shy seated pose, hands on lap, socks, couch layout, and coffee table placement unchanged. Add subtle lived-in fabric folds to the hoodie sleeves and hem, slight natural unevenness in the hair tips, and softer hand-drawn variation in the couch fabric and room shadows. Keep the face almost identical. Do not change the hands or legs.",
+      "evidence": {
+        "normal_contact_sheet": "evidence/finish-pass/contact-sheets/20260701_seated-distance_v1_before_after.webp",
+        "blind_contact_sheet": "evidence/finish-pass/contact-sheets/blind/20260701_seated-distance_v1_ab_blind.webp",
+        "blind_mapping": "evidence/finish-pass/contact-sheets/blind/20260701_seated-distance_v1_ab_mapping.json"
+      },
+      "human_review": {
+        "status": "completed",
+        "reviewer": "user",
+        "review_date": "2026-07-01",
+        "blind_first_impression": "A",
+        "blind_mapping_revealed": {
+          "A": "finish",
+          "B": "original"
+        },
+        "scores": {
+          "identity_preservation": 3,
+          "hair_and_hairpin_consistency": 3,
+          "composition_preservation": 5,
+          "ai_polish_reduction": 3,
+          "overall_preference": 3
+        },
+        "decision": "retry_h03",
+        "notes": "Blind A/B first impression preferred A, but A was the H05 finish candidate and the hair ornament was concerning. Retry at H03 with stronger hairpin preservation."
+      }
+    },
+    {
+      "image": "20260701_seated-distance_v1.webp",
+      "asset_id": "tonari-seated-distance",
+      "page_id": "seated-distance",
+      "stage": "humanization",
+      "status": "correction_required",
+      "strength": "H03",
+      "source_candidate": "source/generated/tonari-no-akari/20260701_seated-distance_v1.webp",
+      "output": "source/finished/tonari-no-akari/20260701_seated-distance_v1_finish_h03_v1.webp",
+      "generated_image_source": "external image generation artifact (not included)",
+      "source_sha256": "e281aa94a5e427d7018d6994d609f3f3137d857ba7c2ea4a6b54bcbbb4f07302",
+      "output_sha256": "7bbc1e370bb0bd6db6bf8ae93387639d51fd0ca115834633eac3b8841e8db888",
+      "scene_intent": "shy seated sofa pose with hands on lap, visible socks, couch layout, and coffee table placement",
+      "known_risks": [
+        "hairpin_drift",
+        "face_drift",
+        "hand_pose_drift",
+        "leg_or_sock_drift",
+        "sofa_layout_drift"
+      ],
+      "edit_scope": [
+        "minimal_hair_micro_irregularity",
+        "minimal_hoodie_fabric_folds",
+        "minimal_sofa_fabric_variation"
+      ],
+      "do_not_touch_scope": [
+        "face_structure",
+        "hair_silhouette",
+        "hair_ornament_shape",
+        "hair_ornament_count",
+        "hair_ornament_position",
+        "hands",
+        "legs",
+        "socks",
+        "composition",
+        "coffee_table_layout"
+      ],
+      "prompt_addendum": "H03 retry after H05 hair ornament concern. Keep the pale blue crossed hairpins / ribbon-like hair clips nearly pixel-faithful to the input: same visible side, same count, same crossed-pin/ribbon silhouette, same size, and same position. Keep face, hands, legs, socks, couch layout, and coffee table unchanged. Add only tiny hoodie fabric variation, a few very subtle hair-tip irregularities away from the hair ornament, and mild couch fabric naturalization.",
+      "evidence": {
+        "normal_contact_sheet": "evidence/finish-pass/contact-sheets/20260701_seated-distance_v1_h03_before_after.webp",
+        "blind_contact_sheet": "evidence/finish-pass/contact-sheets/blind/20260701_seated-distance_v1_h03_ab_blind.webp",
+        "blind_mapping": "evidence/finish-pass/contact-sheets/blind/20260701_seated-distance_v1_h03_ab_mapping.json"
+      },
+      "human_review": {
+        "status": "completed",
+        "reviewer": "user",
+        "review_date": "2026-07-01",
+        "blind_first_impression": "B",
+        "blind_mapping_revealed": {
+          "A": "original",
+          "B": "finish"
+        },
+        "scores": {
+          "composition_preservation": 5,
+          "ai_polish_reduction": 3,
+          "overall_preference": 3
+        },
+        "decision": "correction_required",
+        "notes": "Blind A/B first impression preferred B, and B was the H03 finish candidate, but the user identified that socks differ from the settings PDF in both original and finish. Humanization is paused until a separate sock/footwear correction pass resolves the source candidate issue."
+      }
+    },
+    {
+      "image": "20260701_seated-distance_v1.webp",
+      "asset_id": "tonari-seated-distance",
+      "page_id": "seated-distance",
+      "stage": "correction",
+      "status": "accepted",
+      "correction_type": "sock_stripe_correction",
+      "source_candidate": "source/generated/tonari-no-akari/20260701_seated-distance_v1.webp",
+      "output": "source/finished/tonari-no-akari/20260701_seated-distance_v1_correction_socks_v1.webp",
+      "generated_image_source": "external image generation artifact (not included)",
+      "source_sha256": "e281aa94a5e427d7018d6994d609f3f3137d857ba7c2ea4a6b54bcbbb4f07302",
+      "output_sha256": "6a99138f1123c0bd5639fa40822b76b3f681f903094851b25b1a95429e9b0a77",
+      "scene_intent": "targeted correction for seated sofa image socks before any humanization pass",
+      "known_risks": [
+        "over-editing_beyond_socks",
+        "hairpin_drift",
+        "face_drift",
+        "hand_pose_drift",
+        "leg_or_sock_shape_drift",
+        "composition_drift"
+      ],
+      "edit_scope": [
+        "add_two_thin_pale_blue_sock_stripes"
+      ],
+      "do_not_touch_scope": [
+        "face_structure",
+        "hair_silhouette",
+        "hair_ornament",
+        "hands",
+        "legs",
+        "sock_shape",
+        "composition",
+        "coffee_table_layout",
+        "room_background"
+      ],
+      "prompt_addendum": "Correction Pass only: add two thin pale blue horizontal stripes near the top of each visible white ribbed sock. Do not add shoes. Do not change face, hair, hair ornament, hoodie, skirt, hands, legs, sofa, coffee table, room background, crop, or lighting direction.",
+      "evidence": {
+        "normal_contact_sheet": "evidence/finish-pass/contact-sheets/20260701_seated-distance_v1_socks_correction_before_after.webp",
+        "blind_contact_sheet": "evidence/finish-pass/contact-sheets/blind/20260701_seated-distance_v1_socks_correction_ab_blind.webp",
+        "blind_mapping": "evidence/finish-pass/contact-sheets/blind/20260701_seated-distance_v1_socks_correction_ab_mapping.json"
+      },
+      "human_review": {
+        "status": "completed",
+        "reviewer": "user",
+        "review_date": "2026-07-01",
+        "blind_first_impression": "A",
+        "blind_mapping_revealed": {
+          "A": "correction",
+          "B": "original"
+        },
+        "scores": {
+          "sock_setting_consistency": 5,
+          "identity_preservation": 4,
+          "hair_and_hairpin_consistency": 4,
+          "anatomy_integrity": 4,
+          "composition_preservation": 4
+        },
+        "decision": "accept_correction",
+        "notes": "User accepted A as the sock correction candidate. Mapping revealed A was correction and B was original. Correction adds pale blue sock stripes; use this corrected image as the source for any later seated-distance humanization retry."
+      }
+    },
+    {
+      "image": "20260701_seated-distance_v1_correction_socks_v1.webp",
+      "asset_id": "tonari-seated-distance",
+      "page_id": "seated-distance",
+      "stage": "humanization",
+      "status": "use_corrected_source",
+      "strength": "H03",
+      "source_candidate": "source/finished/tonari-no-akari/20260701_seated-distance_v1_correction_socks_v1.webp",
+      "output": "source/finished/tonari-no-akari/20260701_seated-distance_v1_correction_socks_finish_h03_v1.webp",
+      "generated_image_source": "external image generation artifact (not included)",
+      "source_sha256": "6a99138f1123c0bd5639fa40822b76b3f681f903094851b25b1a95429e9b0a77",
+      "output_sha256": "0ce1bd49de9502021bd6530e7922c46fe6b7ddfd18548d1e4b0af5c7cf874596",
+      "scene_intent": "H03 humanization from the accepted sock-corrected seated sofa image",
+      "known_risks": [
+        "sock_stripe_drift",
+        "hairpin_drift",
+        "face_drift",
+        "hand_pose_drift",
+        "leg_or_sock_shape_drift",
+        "composition_drift"
+      ],
+      "edit_scope": [
+        "minimal_hair_micro_irregularity",
+        "minimal_hoodie_fabric_folds",
+        "minimal_sofa_fabric_variation",
+        "room_shadow_naturalization"
+      ],
+      "do_not_touch_scope": [
+        "corrected_sock_stripes",
+        "face_structure",
+        "hair_silhouette",
+        "hair_ornament",
+        "hands",
+        "legs",
+        "sock_shape",
+        "composition",
+        "coffee_table_layout",
+        "room_background"
+      ],
+      "prompt_addendum": "H03 humanization after accepted sock correction. Preserve the corrected white ribbed socks with two thin pale blue stripes, hair ornament, face, hands, legs, sofa layout, coffee table, and room background. Add only tiny hoodie fabric variation, very subtle hair-tip irregularities away from the hair ornament, and mild couch fabric naturalization.",
+      "evidence": {
+        "normal_contact_sheet": "evidence/finish-pass/contact-sheets/20260701_seated-distance_v1_corrected_socks_h03_before_after.webp",
+        "blind_contact_sheet": "evidence/finish-pass/contact-sheets/blind/20260701_seated-distance_v1_corrected_socks_h03_ab_blind.webp",
+        "blind_mapping": "evidence/finish-pass/contact-sheets/blind/20260701_seated-distance_v1_corrected_socks_h03_ab_mapping.json"
+      },
+      "human_review": {
+        "status": "completed",
+        "reviewer": "user",
+        "review_date": "2026-07-01",
+        "blind_first_impression": "B",
+        "blind_mapping_revealed": {
+          "A": "finish",
+          "B": "corrected_source"
+        },
+        "scores": {
+          "sock_setting_consistency": 5,
+          "identity_preservation": 5,
+          "hair_and_hairpin_consistency": 5,
+          "anatomy_integrity": 5,
+          "composition_preservation": 5,
+          "ai_polish_reduction": 2,
+          "overall_preference": 4
+        },
+        "decision": "use_corrected_source",
+        "notes": "User preferred B and reported no rejection-level issues. Mapping revealed B was the accepted sock-corrected source and A was the H03 humanization finish. Keep the sock correction only for seated-distance; do not adopt this H03 finish."
+      }
+    },
+    {
+      "image": "20260701_morning-glance_v1.webp",
+      "asset_id": "tonari-morning-glance",
+      "page_id": "morning-glance",
+      "stage": "humanization",
+      "status": "accepted",
+      "strength": "H05",
+      "source_candidate": "source/generated/tonari-no-akari/20260701_morning-glance_v1.webp",
+      "output": "source/finished/tonari-no-akari/20260701_morning-glance_v1_finish_h05_v1.png",
+      "generated_image_source": "/path/to/.codex/generated_images/019f20af-a303-72c0-bef2-c104111dc370/ig_05776a25d22d5bfc016a45ded3d75c8191a284a9c68c6b884e.png",
+      "source_sha256": "85e0f4734dbe301f1a7323983da007b2e2aaacac184c44a27c9a5b9cfddc5fa0",
+      "output_sha256": "282379918dd6ff553305bf07e7d7aa47693fcd7edc19908ea94e1a0c5771ba7b",
+      "scene_intent": "close eye-contact morning doorway portrait with hand near door edge, white hoodie, warm side light, and quiet nearby Akari mood",
+      "known_risks": [
+        "face_drift",
+        "hairpin_drift",
+        "hand_pose_drift",
+        "door_hardware_drift",
+        "background_layout_drift",
+        "over-wrinkling_white_hoodie",
+        "over-strong_hair_detail"
+      ],
+      "edit_scope": [
+        "hair_micro_irregularity",
+        "hoodie_fabric_wrinkles",
+        "line_weight_variation",
+        "lighting_naturalization",
+        "highlight_polish_reduction"
+      ],
+      "do_not_touch_scope": [
+        "face_structure",
+        "eye_shape",
+        "mouth_shape",
+        "hair_silhouette",
+        "hair_ornament",
+        "hand_and_fingers",
+        "door_hardware",
+        "background_layout",
+        "composition",
+        "crop"
+      ],
+      "prompt_addendum": "H05 humanization for morning-glance. Preserve the close eye-contact morning doorway scene, hand near the door edge, left-side door hardware, background plant/furniture layout, white hoodie, warm side light, face structure, small parted-mouth expression, and pale blue visible-side hairpins. Use Akari identity and hoodie references only for identity/outfit consistency; do not copy their poses or backgrounds. Add subtle flyaway hairs, hoodie cloth wrinkles, line variation, and less glossy polish.",
+      "evidence": {
+        "candidate_batch_dir": "tmp/akari-review/tonari-no-akari/morning-glance-h05",
+        "selected_batch_candidate": "tmp/akari-review/tonari-no-akari/morning-glance-h05/candidate_04.png",
+        "normal_contact_sheet": "evidence/finish-pass/contact-sheets/20260701_morning-glance_v1_before_after.png",
+        "blind_contact_sheet": "evidence/finish-pass/contact-sheets/blind/20260701_morning-glance_v1_ab_blind.png",
+        "blind_mapping": "evidence/finish-pass/contact-sheets/blind/20260701_morning-glance_v1_ab_mapping.json"
+      },
+      "human_review": {
+        "status": "completed",
+        "reviewer": "user",
+        "review_date": "2026-07-02",
+        "candidate_batch_preference": "candidate_04",
+        "scores": {
+          "identity_preservation": 5,
+          "face_hairpin_consistency": 5,
+          "anatomy_and_composition": 5,
+          "naturalization": 4,
+          "overall_preference": 4
+        },
+        "red_flags": [],
+        "decision": "accept_finish",
+        "blind_first_impression": "candidate_04 from batch review",
+        "human_notes": "User selected candidate_04 as the preferred H05 batch candidate and then approved it with no rough red flags. Scores recorded as pass-level approximate scores from that approval."
+      }
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "collection_id": "akari-v1.2-representative-motion-poses",
+  "source_turnaround_manifest": "source/manifests/v1-2-turnaround/accepted-angles.json",
+  "source_turnaround_manifest_sha256": "81bcfb2cc058efdbc38a605ef2195680b4ed869e266556a2c3292ba8ca9fe109",
+  "source_final_review": "evidence/v1-2-turnaround/reviews/final-eight-view-review.json",
+  "turnaround_inputs": [
+    {
+      "slot": "front",
+      "accepted_path": "source/finished/v1-2-turnaround/front.webp",
+      "sha256": "7b17fb7169c67376a41a8bdfff4ab7d50d90ec8bf113ab1c50aba85511c92423"
+    },
+    {
+      "slot": "character-left-front-three-quarter",
+      "accepted_path": "source/finished/v1-2-turnaround/character-left-front-three-quarter.webp",
+      "sha256": "425a865eeef4fded914be9ca8dab089457448711b4701a339e5cda903980a412"
+    },
+    {
+      "slot": "character-left-profile",
+      "accepted_path": "source/finished/v1-2-turnaround/character-left-profile.webp",
+      "sha256": "bad5c474b581ebb4ee4490618cf9a35f917ea585ece742e3bb8698aff0888b1f"
+    },
+    {
+      "slot": "character-left-rear-three-quarter",
+      "accepted_path": "source/finished/v1-2-turnaround/character-left-rear-three-quarter.webp",
+      "sha256": "45e54dd3d104b734462baf269447ba7c5a2cd159f3ac6db490dd19b75baab80a"
+    },
+    {
+      "slot": "back",
+      "accepted_path": "source/finished/v1-2-turnaround/back.webp",
+      "sha256": "e6e9249d704fc60fdbb1ea298dcfc05b43645ffe3b5ec3a1e52e8379e246bb5d"
+    },
+    {
+      "slot": "character-right-rear-three-quarter",
+      "accepted_path": "source/finished/v1-2-turnaround/character-right-rear-three-quarter.webp",
+      "sha256": "e85eb54066cc2b8a485b6cbecb096ad18b21b9bfffefad1bfee7d1f5af80e97d"
+    },
+    {
+      "slot": "character-right-profile",
+      "accepted_path": "source/finished/v1-2-turnaround/character-right-profile.webp",
+      "sha256": "b8e1350ce26673decc36c1782df001f6117180aca22b492155bd50e7931116b3"
+    },
+    {
+      "slot": "character-right-front-three-quarter",
+      "accepted_path": "source/finished/v1-2-turnaround/character-right-front-three-quarter.webp",
+      "sha256": "f2bc997c592c58457c08561215d529ffbcf248cc774ee1bf79abbb89a6224ea2"
+    }
+  ],
+  "motion_slots": [
+    {
+      "slug": "walking",
+      "description": "readable mid-step with traceable leg, clothing, hair, sock, and sneaker motion",
+      "requires_complete_turnaround": true,
+      "required_turnaround_slots": [
+        "front",
+        "character-left-front-three-quarter",
+        "character-left-profile",
+        "character-left-rear-three-quarter",
+        "back",
+        "character-right-rear-three-quarter",
+        "character-right-profile",
+        "character-right-front-three-quarter"
+      ],
+      "candidate_count": 3,
+      "deliverable_count": 1
+    },
+    {
+      "slug": "seated",
+      "description": "natural seated pose with believable proportion, folds, hands, socks, and footwear",
+      "requires_complete_turnaround": true,
+      "required_turnaround_slots": [
+        "front",
+        "character-left-front-three-quarter",
+        "character-left-profile",
+        "character-left-rear-three-quarter",
+        "back",
+        "character-right-rear-three-quarter",
+        "character-right-profile",
+        "character-right-front-three-quarter"
+      ],
+      "candidate_count": 3,
+      "deliverable_count": 1
+    },
+    {
+      "slug": "turning",
+      "description": "over-shoulder or mid-turn pose without flipping the character-left ornament",
+      "requires_complete_turnaround": true,
+      "required_turnaround_slots": [
+        "front",
+        "character-left-front-three-quarter",
+        "character-left-profile",
+        "character-left-rear-three-quarter",
+        "back",
+        "character-right-rear-three-quarter",
+        "character-right-profile",
+        "character-right-front-three-quarter"
+      ],
+      "candidate_count": 3,
+      "deliverable_count": 1
+    }
+  ]
+}

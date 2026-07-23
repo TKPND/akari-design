@@ -1,0 +1,272 @@
+schema_version: 1
+collection: akari-v1.2-natural-form-core
+assets:
+  - asset_id: C01
+    descriptor: front-natural-stance
+    phase: 1
+    variants: [default]
+    expected_paths: [accepted/core/standing/akari-v1.2_c01_front-natural-stance_rNN.png]
+    depends_on: []
+    gate: identity
+    status: accepted
+    revision: r01
+    accepted_paths:
+      - accepted/core/standing/akari-v1.2_c01_front-natural-stance_r01.png
+  - asset_id: C02
+    descriptor: back-natural-stance
+    phase: 1
+    variants: [default]
+    expected_paths: [accepted/core/standing/akari-v1.2_c02_back-natural-stance_rNN.png]
+    depends_on: [C01]
+    gate: identity
+    status: accepted
+    revision: r01
+    accepted_paths:
+      - accepted/core/standing/akari-v1.2_c02_back-natural-stance_r01.png
+  - asset_id: C03
+    descriptor: natural-stance-45
+    phase: 1
+    variants: [hairpin-side-45, non-hairpin-side-45]
+    expected_paths:
+      - accepted/core/standing/akari-v1.2_c03_hairpin-side-45_rNN.png
+      - accepted/core/standing/akari-v1.2_c03_non-hairpin-side-45_rNN.png
+    depends_on: [C01, C02]
+    gate: identity
+    status: accepted
+    revision: r02
+    accepted_paths:
+      - accepted/core/standing/akari-v1.2_c03_hairpin-side-45_r02.png
+      - accepted/core/standing/akari-v1.2_c03_non-hairpin-side-45_r02.png
+  - asset_id: C04
+    descriptor: floor-sitting
+    phase: 2
+    variants: [default]
+    expected_paths: [accepted/core/sitting/akari-v1.2_c04_floor-sitting_rNN.png]
+    depends_on: [C01, C02, C03]
+    gate: body
+    status: accepted
+    revision: r01
+    accepted_paths:
+      - accepted/core/sitting/akari-v1.2_c04_floor-sitting_r01.png
+  - asset_id: C05
+    descriptor: morning-bedhair
+    phase: 3
+    variants: [default]
+    expected_paths: [accepted/core/face-hair/akari-v1.2_c05_morning-bedhair_rNN.png]
+    depends_on: [C01]
+    gate: state
+    status: accepted
+    revision: r01
+    accepted_paths:
+      - accepted/core/face-hair/akari-v1.2_c05_morning-bedhair_r01.png
+  - asset_id: C06
+    descriptor: daily-smile-gradient
+    phase: 3
+    variants: [sleepy-neutral, sleepy-secure, loosened-mouth, soft-smile]
+    expected_paths:
+      - accepted/core/face-hair/akari-v1.2_c06-1_sleepy-neutral_rNN.png
+      - accepted/core/face-hair/akari-v1.2_c06-2_sleepy-secure_rNN.png
+      - accepted/core/face-hair/akari-v1.2_c06-3_loosened-mouth_rNN.png
+      - accepted/core/face-hair/akari-v1.2_c06-4_soft-smile_rNN.png
+    depends_on: [C05]
+    gate: state
+    status: accepted
+    revision: r01
+    accepted_paths:
+      - accepted/core/face-hair/akari-v1.2_c06-1_sleepy-neutral_r01.png
+      - accepted/core/face-hair/akari-v1.2_c06-2_sleepy-secure_r01.png
+      - accepted/core/face-hair/akari-v1.2_c06-3_loosened-mouth_r01.png
+      - accepted/core/face-hair/akari-v1.2_c06-4_soft-smile_r01.png
+  - asset_id: C07
+    descriptor: indoor-sock-feet
+    phase: 2
+    variants: [standing, seated]
+    expected_paths:
+      - accepted/core/indoor-feet/akari-v1.2_c07_indoor-socks-standing_rNN.png
+      - accepted/core/indoor-feet/akari-v1.2_c07_indoor-socks-seated_rNN.png
+    depends_on: [C01, C04]
+    gate: body
+    status: accepted
+    revision: r01
+    accepted_paths:
+      - accepted/core/indoor-feet/akari-v1.2_c07_indoor-socks-standing_r01.png
+      - accepted/core/indoor-feet/akari-v1.2_c07_indoor-socks-seated_r01.png
+  - asset_id: D01
+    descriptor: morning-bedside
+    phase: 4
+    variants: [default]
+    expected_paths: [accepted/daily-validation/akari-v1.2_d01_morning-bedside_rNN.png]
+    depends_on: [C04, C05, C06, C07]
+    gate: daily
+    status: accepted
+    revision: r01
+    accepted_paths:
+      - accepted/daily-validation/akari-v1.2_d01_morning-bedside_r01.png
+  - asset_id: D02
+    descriptor: morning-rug-daze
+    phase: 5
+    variants: [default]
+    expected_paths:
+      - accepted/daily/morning/akari-v1.2_d02_morning-rug-daze_rNN.png
+    depends_on: [D01, C04, C05, C06, C07]
+    gate: daily
+    status: accepted
+    revision: r01
+    accepted_paths:
+      - accepted/daily/morning/akari-v1.2_d02_morning-rug-daze_r01.png
+  - asset_id: D03
+    descriptor: morning-curtain-pause
+    phase: 6
+    variants: [default]
+    expected_paths:
+      - accepted/daily/morning/akari-v1.2_d03_morning-curtain-pause_rNN.png
+    depends_on: [D02, C01, C03, C05, C06, C07]
+    gate: daily
+    status: accepted
+    revision: r01
+    accepted_paths:
+      - accepted/daily/morning/akari-v1.2_d03_morning-curtain-pause_r01.png
+  - asset_id: D04
+    descriptor: morning-drink-fetch
+    phase: 7
+    variants: [default]
+    expected_paths:
+      - accepted/daily/morning/akari-v1.2_d04_morning-drink-fetch_rNN.png
+    depends_on: [D03, C01, C03, C05, C06, C07]
+    gate: daily
+    status: accepted
+    revision: r02
+    accepted_paths:
+      - accepted/daily/morning/akari-v1.2_d04_morning-drink-fetch_r02.png
+  - asset_id: D05
+    descriptor: morning-washroom-route
+    phase: 8
+    variants: [default]
+    expected_paths:
+      - accepted/daily/morning/akari-v1.2_d05_morning-washroom-route_rNN.png
+    depends_on: [D04, C02, C03, C05, C06, C07]
+    gate: daily
+    status: accepted
+    revision: r01
+    accepted_paths:
+      - accepted/daily/morning/akari-v1.2_d05_morning-washroom-route_r01.png
+  - asset_id: D06
+    descriptor: evening-entryway-floor-sit
+    phase: 9
+    variants: [default]
+    expected_paths:
+      - accepted/daily/evening/akari-v1.2_d06_evening-entryway-floor-sit_rNN.png
+    depends_on: [D05, C01, C03, C04, C06, C07]
+    gate: daily
+    status: accepted
+    revision: r01
+    accepted_paths:
+      - accepted/daily/evening/akari-v1.2_d06_evening-entryway-floor-sit_r01.png
+  - asset_id: D07
+    descriptor: evening-shallow-sofa-sit
+    phase: 10
+    variants: [default]
+    expected_paths:
+      - accepted/daily/evening/akari-v1.2_d07_evening-shallow-sofa-sit_rNN.png
+    depends_on: [D06, C03, C04, C06, C07]
+    gate: daily
+    status: accepted
+    revision: r01
+    accepted_paths:
+      - accepted/daily/evening/akari-v1.2_d07_evening-shallow-sofa-sit_r01.png
+  - asset_id: D08
+    descriptor: evening-bed-edge-sock-adjust
+    phase: 11
+    variants: [default]
+    expected_paths:
+      - accepted/daily/evening/akari-v1.2_d08_evening-bed-edge-sock-adjust_rNN.png
+    depends_on: [D07, C03, C04, C06, C07]
+    gate: daily
+    status: accepted
+    revision: r03
+    accepted_paths:
+      - accepted/daily/evening/akari-v1.2_d08_evening-bed-edge-sock-adjust_r03.png
+  - asset_id: D09
+    descriptor: evening-phone-sleepy-bed-sit
+    phase: 12
+    variants: [default]
+    expected_paths:
+      - accepted/daily/evening/akari-v1.2_d09_evening-phone-sleepy-bed-sit_rNN.png
+    depends_on: [D08, C03, C04, C06, C07]
+    gate: daily
+    status: accepted
+    revision: r01
+    accepted_paths:
+      - accepted/daily/evening/akari-v1.2_d09_evening-phone-sleepy-bed-sit_r01.png
+  - asset_id: D10
+    descriptor: evening-rug-side-rest
+    phase: 13
+    variants: [default]
+    expected_paths:
+      - accepted/daily/evening/akari-v1.2_d10_evening-rug-side-rest_rNN.png
+    depends_on: [D09, D02, C03, C06, C07]
+    gate: daily
+    status: accepted
+    revision: r01
+    accepted_paths:
+      - accepted/daily/evening/akari-v1.2_d10_evening-rug-side-rest_r01.png
+  - asset_id: D11
+    descriptor: life-laundry-fold
+    phase: 14
+    variants: [default]
+    expected_paths:
+      - accepted/daily/life/akari-v1.2_d11_life-laundry-fold_rNN.png
+    depends_on: [D10, D07, D02, C03, C07]
+    gate: daily
+    status: accepted
+    revision: r02
+    accepted_paths:
+      - accepted/daily/life/akari-v1.2_d11_life-laundry-fold_r02.png
+  - asset_id: D12
+    descriptor: life-fridge-open
+    phase: 15
+    variants: [default]
+    expected_paths:
+      - accepted/daily/life/akari-v1.2_d12_life-fridge-open_rNN.png
+    depends_on: [D11, D04, C03, C01, C07]
+    gate: daily
+    status: accepted
+    revision: r01
+    accepted_paths:
+      - accepted/daily/life/akari-v1.2_d12_life-fridge-open_r01.png
+  - asset_id: D13
+    descriptor: life-charger-search
+    phase: 16
+    variants: [default]
+    expected_paths:
+      - accepted/daily/life/akari-v1.2_d13_life-charger-search_rNN.png
+    depends_on: [D12, D04, C03, C01, C07]
+    gate: daily
+    status: accepted
+    revision: r02
+    accepted_paths:
+      - accepted/daily/life/akari-v1.2_d13_life-charger-search_r02.png
+  - asset_id: D14
+    descriptor: life-bag-unpack
+    phase: 17
+    variants: [default]
+    expected_paths:
+      - accepted/daily/life/akari-v1.2_d14_life-bag-unpack_rNN.png
+    depends_on: [D13, D11, D06, C03, C07]
+    gate: daily
+    status: accepted
+    revision: r02
+    accepted_paths:
+      - accepted/daily/life/akari-v1.2_d14_life-bag-unpack_r02.png
+  - asset_id: D15
+    descriptor: life-pc-posture-break
+    phase: 18
+    variants: [default]
+    expected_paths:
+      - accepted/daily/life/akari-v1.2_d15_life-pc-posture-break_rNN.png
+    depends_on: [D14, D13, D11, C03, C07]
+    gate: daily
+    status: accepted
+    revision: r01
+    accepted_paths:
+      - accepted/daily/life/akari-v1.2_d15_life-pc-posture-break_r01.png

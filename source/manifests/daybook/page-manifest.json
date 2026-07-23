@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "document_id": "akari-v1.1-situation-daybook",
+  "page_count": 10,
+  "pages": [
+    {
+      "page": 1,
+      "id": "lakeside-bench",
+      "title": "Lakeside Bench",
+      "role": "cover",
+      "layout": "daybook-cover",
+      "source_inputs": ["situation-daybook-lakeside-bench-cover"],
+      "blocks": [{"type": "image"}, {"type": "note-list"}, {"type": "note-list"}],
+      "atmosphere_notes": ["The approved summer anchor: calm water, tree shade, white T-shirt, and close everyday distance."],
+      "generation_notes": [
+        "Preserve the relaxed seated posture.",
+        "Keep the image free of intentional writing.",
+        "Use this page as the mood standard for the rest of the booklet."
+      ]
+    },
+    {
+      "page": 2,
+      "id": "footbridge-breeze",
+      "title": "Footbridge Breeze",
+      "role": "scene",
+      "layout": "daybook-scene",
+      "source_inputs": ["situation-daybook-footbridge-breeze"],
+      "blocks": [{"type": "image"}, {"type": "note-list"}, {"type": "note-list"}],
+      "atmosphere_notes": ["A breezy footbridge pause that keeps the summer shade while changing the silhouette and setting."],
+      "generation_notes": [
+        "Bridge railings should read clearly as the scene anchor.",
+        "Hair and shirt movement can imply a light breeze.",
+        "Shoes and lower legs must remain connected and complete."
+      ]
+    },
+    {
+      "page": 3,
+      "id": "convenience-walk",
+      "title": "Convenience Walk",
+      "role": "scene",
+      "layout": "daybook-scene",
+      "source_inputs": ["situation-daybook-convenience-walk"],
+      "blocks": [{"type": "image"}, {"type": "note-list"}, {"type": "note-list"}],
+      "atmosphere_notes": ["A bright summer errand scene that keeps the outfit simple and unbranded."],
+      "generation_notes": [
+        "No package, sign, or store writing in the image.",
+        "Use bright pavement without harsh overexposure.",
+        "Keep the walking pose stable with visible feet."
+      ]
+    },
+    {
+      "page": 4,
+      "id": "dock-edge",
+      "title": "Dock Edge",
+      "role": "scene",
+      "layout": "daybook-scene",
+      "source_inputs": ["situation-daybook-dock-edge"],
+      "blocks": [{"type": "image"}, {"type": "note-list"}, {"type": "note-list"}],
+      "atmosphere_notes": ["A calm dock-side composition that gives the booklet a stronger water-surface variation."],
+      "generation_notes": [
+        "Let the open water and dock edge carry the composition.",
+        "Avoid making the scene read as another path walk.",
+        "Do not crop hair, hands, or shoes."
+      ]
+    },
+    {
+      "page": 5,
+      "id": "park-steps",
+      "title": "Park Steps",
+      "role": "scene",
+      "layout": "daybook-scene",
+      "source_inputs": ["situation-daybook-park-steps"],
+      "blocks": [{"type": "image"}, {"type": "note-list"}, {"type": "note-list"}],
+      "atmosphere_notes": ["A seated park variation that tests grounded feet and relaxed knees."],
+      "generation_notes": [
+        "Review seated anatomy before acceptance.",
+        "Ground both shoes with a clear shadow.",
+        "Keep the gray bottom and white T-shirt readable."
+      ]
+    },
+    {
+      "page": 6,
+      "id": "window-seat",
+      "title": "Window Seat",
+      "role": "scene",
+      "layout": "daybook-scene",
+      "source_inputs": ["situation-daybook-window-seat"],
+      "blocks": [{"type": "image"}, {"type": "note-list"}, {"type": "note-list"}],
+      "atmosphere_notes": ["A quiet indoor summer page that changes light without changing the character core."],
+      "generation_notes": [
+        "Use soft side light from the window.",
+        "Keep room props simple and free of writing.",
+        "White T-shirt remains the outfit anchor."
+      ]
+    },
+    {
+      "page": 7,
+      "id": "rain-cooled-street",
+      "title": "Rain-Cooled Street",
+      "role": "scene",
+      "layout": "daybook-scene",
+      "source_inputs": ["situation-daybook-rain-cooled-street"],
+      "blocks": [{"type": "image"}, {"type": "note-list"}, {"type": "note-list"}],
+      "atmosphere_notes": ["A damp summer street scene that cools the palette while staying gentle."],
+      "generation_notes": [
+        "Keep reflections subtle.",
+        "Avoid umbrellas, shop signs, and posters with writing.",
+        "A thin cardigan is allowed only if the white T-shirt still leads."
+      ]
+    },
+    {
+      "page": 8,
+      "id": "station-after-sun",
+      "title": "Station After Sun",
+      "role": "scene",
+      "layout": "daybook-scene",
+      "source_inputs": ["situation-daybook-station-after-sun"],
+      "blocks": [{"type": "image"}, {"type": "note-list"}, {"type": "note-list"}],
+      "atmosphere_notes": ["A late-afternoon waiting scene with warm rim light and quiet transit context."],
+      "generation_notes": [
+        "No station-name or timetable writing dependency.",
+        "Keep the waiting pose relaxed.",
+        "Use a thin outer layer only as a light variation."
+      ]
+    },
+    {
+      "page": 9,
+      "id": "vending-machine-night",
+      "title": "Vending Machine Night",
+      "role": "scene",
+      "layout": "daybook-scene",
+      "source_inputs": ["situation-daybook-vending-machine-night"],
+      "blocks": [{"type": "image"}, {"type": "note-list"}, {"type": "note-list"}],
+      "atmosphere_notes": ["A quiet night page that swaps sunlight for practical cool light."],
+      "generation_notes": [
+        "Vending details must remain unreadable as writing.",
+        "Balance cool light with warm skin tones.",
+        "Do not let machine graphics compete with Akari."
+      ]
+    },
+    {
+      "page": 10,
+      "id": "golden-hour-return",
+      "title": "Golden Hour Return",
+      "role": "scene",
+      "layout": "daybook-scene",
+      "source_inputs": ["situation-daybook-golden-hour-return"],
+      "blocks": [{"type": "image"}, {"type": "note-list"}, {"type": "note-list"}],
+      "atmosphere_notes": ["A closing return-path scene with warm backlight and long shadows."],
+      "generation_notes": [
+        "Keep outfit silhouette readable against sunset.",
+        "Use long shadows without hiding shoes.",
+        "Maintain the same calm everyday distance as the cover."
+      ]
+    }
+  ]
+}

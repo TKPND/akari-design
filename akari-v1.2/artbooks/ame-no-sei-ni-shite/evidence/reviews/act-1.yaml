@@ -1,0 +1,13 @@
+schema_version: 1
+scope: act-1
+status: accepted
+checks:
+  scene_order: pass
+  identity_and_adult_age: pass
+  dry_to_first_drops_progression: pass
+  outdoor_outfit_and_single_bag: pass
+  first_person_following_distance: pass
+  anticipation_to_shared_surprise: pass
+findings: []
+contact_sheet_sha256: 9ec727c83aac3814a741b7f7fcdb31ef90af2d745f2419eb253eb0fd3930af92
+reviewed_at: '2026-07-21T06:24:36Z'

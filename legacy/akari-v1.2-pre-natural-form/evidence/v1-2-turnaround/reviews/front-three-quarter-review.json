@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "review_id": "akari-v1.2-turnaround-front-three-quarter-20260713-r2",
+  "review_path": "evidence/v1-2-turnaround/reviews/front-three-quarter-review.json",
+  "stage": "front-three-quarter",
+  "slots": [
+    "character-left-front-three-quarter",
+    "character-right-front-three-quarter"
+  ],
+  "request_batches": {
+    "character-left-front-three-quarter": "batch:v1-2-turnaround:20260713:character-left-front-three-quarter:r2",
+    "character-right-front-three-quarter": "batch:v1-2-turnaround:20260713:character-right-front-three-quarter:r2"
+  },
+  "user_decision": "approved",
+  "user_selection": {
+    "decision_text": "C1 / C1 (Recommended)",
+    "character-left-front-three-quarter": 1,
+    "character-right-front-three-quarter": 1
+  },
+  "candidates": [
+    {
+      "request_id": "request:v1-2-turnaround:20260713:character-left-front-three-quarter:r2:c1",
+      "slot": "character-left-front-three-quarter",
+      "candidate_path": "source/generated/v1-2-turnaround/20260713_character-left-front-three-quarter_r2_c1.png",
+      "state": "accept",
+      "gates": {
+        "identity": "pass",
+        "geometry": "pass",
+        "outfit": "pass",
+        "quality": "pass"
+      },
+      "landmark_y_px": {
+        "crown": 55,
+        "chin": 276,
+        "shoulder": 347,
+        "hoodie_hem": 755,
+        "skirt_hem": 840,
+        "knee": 1002,
+        "ankle": 1284,
+        "sole": 1450
+      },
+      "normalized_landmarks": {
+        "crown": 0.0,
+        "chin": 0.158423,
+        "shoulder": 0.209319,
+        "hoodie_hem": 0.501792,
+        "skirt_hem": 0.562724,
+        "knee": 0.678853,
+        "ankle": 0.881004,
+        "sole": 1.0
+      },
+      "review_findings": {
+        "identity_preservation": 5,
+        "face_hairpin_consistency": 5,
+        "anatomy_and_composition": 5,
+        "artifact_regression": 5,
+        "red_flags": []
+      },
+      "notes": "User-selected left C1 preserves the accepted face and healthy leg volume, reads as a true whole-body character-left front three-quarter, keeps both feet turned with the body, and clearly retains the upper crossed pins, compact lower loop, and two trailing strands. Hoodie, skirt, socks, shoes, hands, and background are clean.",
+      "rejection_reason": ""
+    },
+    {
+      "request_id": "request:v1-2-turnaround:20260713:character-left-front-three-quarter:r2:c2",
+      "slot": "character-left-front-three-quarter",
+      "candidate_path": "source/generated/v1-2-turnaround/20260713_character-left-front-three-quarter_r2_c2.png",
+      "state": "hold",
+      "gates": {
+        "identity": "pass",
+        "geometry": "hold",
+        "outfit": "pass",
+        "quality": "pass"
+      },
+      "notes": "Usable fallback with a soft face and correct ornament, but its stance and crown-to-sole placement are less compatible with the selected right C1 pair. Retry only if a later profile needs its softer head turn.",
+      "rejection_reason": ""
+    },
+    {
+      "request_id": "request:v1-2-turnaround:20260713:character-left-front-three-quarter:r2:c3",
+      "slot": "character-left-front-three-quarter",
+      "candidate_path": "source/generated/v1-2-turnaround/20260713_character-left-front-three-quarter_r2_c3.png",
+      "state": "hold",
+      "gates": {
+        "identity": "pass",
+        "geometry": "hold",
+        "outfit": "pass",
+        "quality": "pass"
+      },
+      "notes": "Clean fallback with a readable two-part ornament, but it is slightly slimmer and more front-facing through the torso and feet than left C1. A retry would strengthen the full 45-degree construction.",
+      "rejection_reason": ""
+    },
+    {
+      "request_id": "request:v1-2-turnaround:20260713:character-right-front-three-quarter:r2:c1",
+      "slot": "character-right-front-three-quarter",
+      "candidate_path": "source/generated/v1-2-turnaround/20260713_character-right-front-three-quarter_r2_c1.png",
+      "state": "accept",
+      "gates": {
+        "identity": "pass",
+        "geometry": "pass",
+        "outfit": "pass",
+        "quality": "pass"
+      },
+      "landmark_y_px": {
+        "crown": 73,
+        "chin": 285,
+        "shoulder": 349,
+        "hoodie_hem": 759,
+        "skirt_hem": 839,
+        "knee": 1001,
+        "ankle": 1286,
+        "sole": 1433
+      },
+      "normalized_landmarks": {
+        "crown": 0.0,
+        "chin": 0.155882,
+        "shoulder": 0.202941,
+        "hoodie_hem": 0.504412,
+        "skirt_hem": 0.563235,
+        "knee": 0.682353,
+        "ankle": 0.891912,
+        "sole": 1.0
+      },
+      "review_findings": {
+        "identity_preservation": 5,
+        "face_hairpin_consistency": 5,
+        "anatomy_and_composition": 5,
+        "artifact_regression": 5,
+        "red_flags": []
+      },
+      "notes": "User-selected right C1 forms the strongest counterpart to left C1: the whole body and both shoes rotate together, leg and sneaker mass remain healthy, and the character-left ornament is naturally occluded rather than mirrored. Face, hands, clothing construction, and background remain clean.",
+      "rejection_reason": ""
+    },
+    {
+      "request_id": "request:v1-2-turnaround:20260713:character-right-front-three-quarter:r2:c2",
+      "slot": "character-right-front-three-quarter",
+      "candidate_path": "source/generated/v1-2-turnaround/20260713_character-right-front-three-quarter_r2_c2.png",
+      "state": "hold",
+      "gates": {
+        "identity": "pass",
+        "geometry": "hold",
+        "outfit": "pass",
+        "quality": "pass"
+      },
+      "notes": "Strong alternate with good footwear and ornament occlusion, but its face softness and torso volume pair less directly with the selected left C1. Keep only as a profile-generation fallback.",
+      "rejection_reason": ""
+    },
+    {
+      "request_id": "request:v1-2-turnaround:20260713:character-right-front-three-quarter:r2:c3",
+      "slot": "character-right-front-three-quarter",
+      "candidate_path": "source/generated/v1-2-turnaround/20260713_character-right-front-three-quarter_r2_c3.png",
+      "state": "hold",
+      "gates": {
+        "identity": "pass",
+        "geometry": "hold",
+        "outfit": "pass",
+        "quality": "pass"
+      },
+      "notes": "Clean alternate with no mirrored ornament, but the torso and feet read more front-facing and the silhouette is narrower than right C1. A retry would increase the 45-degree turn and lower-body mass.",
+      "rejection_reason": ""
+    }
+  ]
+}

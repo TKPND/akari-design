@@ -1,0 +1,471 @@
+{
+  "schema_version": 1,
+  "collection_id": "akari-v1.1-tonari-no-coordinate",
+  "title": "となりのコーデ",
+  "reference_pack_version": "tonari-no-akari-identity-v1",
+  "prompt_template_version": "tonari_coordinate_identity_lock_v1",
+  "batch_policy": {
+    "request_source": "promising_slots_only",
+    "candidate_count": 12,
+    "review_order": "contact_sheet_before_finishing",
+    "pdf_policy": "not_in_first_phase"
+  },
+  "requests": [
+    {
+      "id": "request:tonari-coordinate-spring-cardigan-walk",
+      "coordinate_order": 1,
+      "slot": "spring-cardigan-walk",
+      "japanese_title": "春のカーディガン",
+      "season": "spring",
+      "scene": "walk_home",
+      "outfit_family": "layering",
+      "outfit_notes": "Light oatmeal cardigan over a simple ivory top and soft navy skirt.",
+      "mint_accent": "Pale-blue crossed hairpins plus a tiny mint bag charm.",
+      "composition": "half_body",
+      "tone": "everyday_cute",
+      "risk_note": "Keep the cardigan adult and relaxed; avoid student styling.",
+      "target_path": "source/generated/tonari-no-coordinate/20260706_spring-cardigan-walk_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: 春のカーディガン. Season and scene: spring, walk home. Composition: half-body portrait, close everyday Akari mood, outfit clearly visible. Coordinate: Light oatmeal cardigan over a simple ivory top and soft navy skirt. Identity accent: Pale-blue crossed hairpins plus a tiny mint bag charm. Akari identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, rounded cheeks, compact rounded chin, small subtle nose and mouth; pale-blue crossed hairpins/ribbon-like clips on character-left side when visible; petite/slender healthy adult proportions. Styling boundary: daily wear or lightly dressed-up day-off wear; no student-uniform styling, no character-costume styling, no job-uniform styling, no revealing swim styling, no underwear-like styling, no readable text prints. No image-internal readable text, no logos, no watermarks, no frame, no border, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, 25-year-old adult age impression, face/hair/hairpin consistency, natural body proportions, visible mint or pale-blue identity accent, daily or lightly special outfit readability, and clean clothing continuity. It must be not a fashion-model sheet, not a costume sheet, and not a return to hoodie-heavy sameness. Must contain no image-internal readable text, no logos, no watermarks, no frame, no border, no panel layout. Known slot risk: Keep the cardigan adult and relaxed; avoid student styling.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "outfit_drift_risk": "medium",
+        "age_impression_risk": "medium",
+        "hand_risk": "medium",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "Place in the 12-image coordinate contact sheet before finishing.",
+        "coordinate_gate": "Run the Coordinate Gate for outfit variety, Akari identity, age impression, mint accent, and no text/logo/frame issues.",
+        "strict_review": "If selected, run akari-v1-1-image-review on this single image.",
+        "correction": "Use Correction Pass for concrete face, hairpin, hand, outfit, anatomy, or artifact defects.",
+        "humanization": "Use Humanization Pass only after the image is structurally valid."
+      }
+    },
+    {
+      "id": "request:tonari-coordinate-linen-shirt-window",
+      "coordinate_order": 2,
+      "slot": "linen-shirt-window",
+      "japanese_title": "窓辺のリネンシャツ",
+      "season": "summer",
+      "scene": "window",
+      "outfit_family": "layering",
+      "outfit_notes": "Loose pale linen shirt layer over a muted sage camisole-style inner top and ankle skirt.",
+      "mint_accent": "Hairpins and a mint glass cup near the window.",
+      "composition": "upper_body",
+      "tone": "fresh",
+      "risk_note": "Keep the inner top modest and non-glamorous.",
+      "target_path": "source/generated/tonari-no-coordinate/20260706_linen-shirt-window_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: 窓辺のリネンシャツ. Season and scene: summer, window. Composition: upper-body portrait, close everyday Akari mood, outfit clearly visible. Coordinate: Loose pale linen shirt layer over a muted sage camisole-style inner top and ankle skirt. Identity accent: Hairpins and a mint glass cup near the window. Akari identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, rounded cheeks, compact rounded chin, small subtle nose and mouth; pale-blue crossed hairpins/ribbon-like clips on character-left side when visible; petite/slender healthy adult proportions. Styling boundary: daily wear or lightly dressed-up day-off wear; no student-uniform styling, no character-costume styling, no job-uniform styling, no revealing swim styling, no underwear-like styling, no readable text prints. No image-internal readable text, no logos, no watermarks, no frame, no border, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, 25-year-old adult age impression, face/hair/hairpin consistency, natural body proportions, visible mint or pale-blue identity accent, daily or lightly special outfit readability, and clean clothing continuity. It must be not a fashion-model sheet, not a costume sheet, and not a return to hoodie-heavy sameness. Must contain no image-internal readable text, no logos, no watermarks, no frame, no border, no panel layout. Known slot risk: Keep the inner top modest and non-glamorous.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "outfit_drift_risk": "medium",
+        "age_impression_risk": "medium",
+        "hand_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "Place in the 12-image coordinate contact sheet before finishing.",
+        "coordinate_gate": "Run the Coordinate Gate for outfit variety, Akari identity, age impression, mint accent, and no text/logo/frame issues.",
+        "strict_review": "If selected, run akari-v1-1-image-review on this single image.",
+        "correction": "Use Correction Pass for concrete face, hairpin, hand, outfit, anatomy, or artifact defects.",
+        "humanization": "Use Humanization Pass only after the image is structurally valid."
+      }
+    },
+    {
+      "id": "request:tonari-coordinate-autumn-short-jacket",
+      "coordinate_order": 3,
+      "slot": "autumn-short-jacket",
+      "japanese_title": "秋の短いジャケット",
+      "season": "autumn",
+      "scene": "walk_home",
+      "outfit_family": "layering",
+      "outfit_notes": "Cropped brown short jacket over a cream knit and dark green long skirt.",
+      "mint_accent": "Pale-blue crossed hairpins and a mint zipper pull.",
+      "composition": "knee_up",
+      "tone": "warm",
+      "risk_note": "Avoid hard fashion-model posing; keep the walk-home mood.",
+      "target_path": "source/generated/tonari-no-coordinate/20260706_autumn-short-jacket_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: 秋の短いジャケット. Season and scene: autumn, walk home. Composition: knee-up portrait, close everyday Akari mood, outfit clearly visible. Coordinate: Cropped brown short jacket over a cream knit and dark green long skirt. Identity accent: Pale-blue crossed hairpins and a mint zipper pull. Akari identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, rounded cheeks, compact rounded chin, small subtle nose and mouth; pale-blue crossed hairpins/ribbon-like clips on character-left side when visible; petite/slender healthy adult proportions. Styling boundary: daily wear or lightly dressed-up day-off wear; no student-uniform styling, no character-costume styling, no job-uniform styling, no revealing swim styling, no underwear-like styling, no readable text prints. No image-internal readable text, no logos, no watermarks, no frame, no border, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, 25-year-old adult age impression, face/hair/hairpin consistency, natural body proportions, visible mint or pale-blue identity accent, daily or lightly special outfit readability, and clean clothing continuity. It must be not a fashion-model sheet, not a costume sheet, and not a return to hoodie-heavy sameness. Must contain no image-internal readable text, no logos, no watermarks, no frame, no border, no panel layout. Known slot risk: Avoid hard fashion-model posing; keep the walk-home mood.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "outfit_drift_risk": "medium",
+        "age_impression_risk": "medium",
+        "hand_risk": "medium",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "Place in the 12-image coordinate contact sheet before finishing.",
+        "coordinate_gate": "Run the Coordinate Gate for outfit variety, Akari identity, age impression, mint accent, and no text/logo/frame issues.",
+        "strict_review": "If selected, run akari-v1-1-image-review on this single image.",
+        "correction": "Use Correction Pass for concrete face, hairpin, hand, outfit, anatomy, or artifact defects.",
+        "humanization": "Use Humanization Pass only after the image is structurally valid."
+      }
+    },
+    {
+      "id": "request:tonari-coordinate-rain-light-coat",
+      "coordinate_order": 4,
+      "slot": "rain-light-coat",
+      "japanese_title": "雨の日の薄いコート",
+      "season": "rain",
+      "scene": "doorway",
+      "outfit_family": "layering",
+      "outfit_notes": "Soft beige light coat over a simple top and charcoal skirt.",
+      "mint_accent": "Hairpins plus a mint umbrella handle.",
+      "composition": "half_body",
+      "tone": "quiet",
+      "risk_note": "Umbrella should not hide the hair ornament or face.",
+      "target_path": "source/generated/tonari-no-coordinate/20260706_rain-light-coat_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: 雨の日の薄いコート. Season and scene: rain, doorway. Composition: half-body portrait, close everyday Akari mood, outfit clearly visible. Coordinate: Soft beige light coat over a simple top and charcoal skirt. Identity accent: Hairpins plus a mint umbrella handle. Akari identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, rounded cheeks, compact rounded chin, small subtle nose and mouth; pale-blue crossed hairpins/ribbon-like clips on character-left side when visible; petite/slender healthy adult proportions. Styling boundary: daily wear or lightly dressed-up day-off wear; no student-uniform styling, no character-costume styling, no job-uniform styling, no revealing swim styling, no underwear-like styling, no readable text prints. No image-internal readable text, no logos, no watermarks, no frame, no border, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, 25-year-old adult age impression, face/hair/hairpin consistency, natural body proportions, visible mint or pale-blue identity accent, daily or lightly special outfit readability, and clean clothing continuity. It must be not a fashion-model sheet, not a costume sheet, and not a return to hoodie-heavy sameness. Must contain no image-internal readable text, no logos, no watermarks, no frame, no border, no panel layout. Known slot risk: Umbrella should not hide the hair ornament or face.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "outfit_drift_risk": "medium",
+        "age_impression_risk": "medium",
+        "hand_risk": "medium",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "Place in the 12-image coordinate contact sheet before finishing.",
+        "coordinate_gate": "Run the Coordinate Gate for outfit variety, Akari identity, age impression, mint accent, and no text/logo/frame issues.",
+        "strict_review": "If selected, run akari-v1-1-image-review on this single image.",
+        "correction": "Use Correction Pass for concrete face, hairpin, hand, outfit, anatomy, or artifact defects.",
+        "humanization": "Use Humanization Pass only after the image is structurally valid."
+      }
+    },
+    {
+      "id": "request:tonari-coordinate-day-off-one-piece",
+      "coordinate_order": 11,
+      "slot": "day-off-one-piece",
+      "japanese_title": "休日のワンピース",
+      "season": "spring",
+      "scene": "cafe",
+      "outfit_family": "one_piece_skirt",
+      "outfit_notes": "Soft moss-green one-piece dress with a small cream cardigan.",
+      "mint_accent": "Hairpins plus a pale mint ribbon detail on a simple bag.",
+      "composition": "knee_up",
+      "tone": "lightly_dressed_up",
+      "risk_note": "Keep it day-off casual, not formal datewear.",
+      "target_path": "source/generated/tonari-no-coordinate/20260706_day-off-one-piece_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: 休日のワンピース. Season and scene: spring, cafe. Composition: knee-up portrait, close everyday Akari mood, outfit clearly visible. Coordinate: Soft moss-green one-piece dress with a small cream cardigan. Identity accent: Hairpins plus a pale mint ribbon detail on a simple bag. Akari identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, rounded cheeks, compact rounded chin, small subtle nose and mouth; pale-blue crossed hairpins/ribbon-like clips on character-left side when visible; petite/slender healthy adult proportions. Styling boundary: daily wear or lightly dressed-up day-off wear; no student-uniform styling, no character-costume styling, no job-uniform styling, no revealing swim styling, no underwear-like styling, no readable text prints. No image-internal readable text, no logos, no watermarks, no frame, no border, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, 25-year-old adult age impression, face/hair/hairpin consistency, natural body proportions, visible mint or pale-blue identity accent, daily or lightly special outfit readability, and clean clothing continuity. It must be not a fashion-model sheet, not a costume sheet, and not a return to hoodie-heavy sameness. Must contain no image-internal readable text, no logos, no watermarks, no frame, no border, no panel layout. Known slot risk: Keep it day-off casual, not formal datewear.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "outfit_drift_risk": "high",
+        "age_impression_risk": "medium",
+        "hand_risk": "medium",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "Place in the 12-image coordinate contact sheet before finishing.",
+        "coordinate_gate": "Run the Coordinate Gate for outfit variety, Akari identity, age impression, mint accent, and no text/logo/frame issues.",
+        "strict_review": "If selected, run akari-v1-1-image-review on this single image.",
+        "correction": "Use Correction Pass for concrete face, hairpin, hand, outfit, anatomy, or artifact defects.",
+        "humanization": "Use Humanization Pass only after the image is structurally valid."
+      }
+    },
+    {
+      "id": "request:tonari-coordinate-long-skirt-soft-top",
+      "coordinate_order": 12,
+      "slot": "long-skirt-soft-top",
+      "japanese_title": "ロングスカートと柔らかトップス",
+      "season": "all_season",
+      "scene": "room",
+      "outfit_family": "one_piece_skirt",
+      "outfit_notes": "Soft taupe top tucked lightly into a deep teal long skirt.",
+      "mint_accent": "Pale-blue crossed hairpins and mint socks peeking out.",
+      "composition": "half_body",
+      "tone": "relaxed",
+      "risk_note": "Avoid repeating the existing grey-skirt structure.",
+      "target_path": "source/generated/tonari-no-coordinate/20260706_long-skirt-soft-top_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: ロングスカートと柔らかトップス. Season and scene: all season, room. Composition: half-body portrait, close everyday Akari mood, outfit clearly visible. Coordinate: Soft taupe top tucked lightly into a deep teal long skirt. Identity accent: Pale-blue crossed hairpins and mint socks peeking out. Akari identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, rounded cheeks, compact rounded chin, small subtle nose and mouth; pale-blue crossed hairpins/ribbon-like clips on character-left side when visible; petite/slender healthy adult proportions. Styling boundary: daily wear or lightly dressed-up day-off wear; no student-uniform styling, no character-costume styling, no job-uniform styling, no revealing swim styling, no underwear-like styling, no readable text prints. No image-internal readable text, no logos, no watermarks, no frame, no border, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, 25-year-old adult age impression, face/hair/hairpin consistency, natural body proportions, visible mint or pale-blue identity accent, daily or lightly special outfit readability, and clean clothing continuity. It must be not a fashion-model sheet, not a costume sheet, and not a return to hoodie-heavy sameness. Must contain no image-internal readable text, no logos, no watermarks, no frame, no border, no panel layout. Known slot risk: Avoid repeating the existing grey-skirt structure.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "outfit_drift_risk": "high",
+        "age_impression_risk": "medium",
+        "hand_risk": "medium",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "Place in the 12-image coordinate contact sheet before finishing.",
+        "coordinate_gate": "Run the Coordinate Gate for outfit variety, Akari identity, age impression, mint accent, and no text/logo/frame issues.",
+        "strict_review": "If selected, run akari-v1-1-image-review on this single image.",
+        "correction": "Use Correction Pass for concrete face, hairpin, hand, outfit, anatomy, or artifact defects.",
+        "humanization": "Use Humanization Pass only after the image is structurally valid."
+      }
+    },
+    {
+      "id": "request:tonari-coordinate-summer-airy-blouse-skirt",
+      "coordinate_order": 13,
+      "slot": "summer-airy-blouse-skirt",
+      "japanese_title": "夏の軽いブラウス",
+      "season": "summer",
+      "scene": "window",
+      "outfit_family": "one_piece_skirt",
+      "outfit_notes": "Airy pale yellow blouse with a navy midi skirt.",
+      "mint_accent": "Hairpins and a thin mint bracelet.",
+      "composition": "upper_body",
+      "tone": "fresh",
+      "risk_note": "Blouse should not become sheer or glamorous.",
+      "target_path": "source/generated/tonari-no-coordinate/20260706_summer-airy-blouse-skirt_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: 夏の軽いブラウス. Season and scene: summer, window. Composition: upper-body portrait, close everyday Akari mood, outfit clearly visible. Coordinate: Airy pale yellow blouse with a navy midi skirt. Identity accent: Hairpins and a thin mint bracelet. Akari identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, rounded cheeks, compact rounded chin, small subtle nose and mouth; pale-blue crossed hairpins/ribbon-like clips on character-left side when visible; petite/slender healthy adult proportions. Styling boundary: daily wear or lightly dressed-up day-off wear; no student-uniform styling, no character-costume styling, no job-uniform styling, no revealing swim styling, no underwear-like styling, no readable text prints. No image-internal readable text, no logos, no watermarks, no frame, no border, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, 25-year-old adult age impression, face/hair/hairpin consistency, natural body proportions, visible mint or pale-blue identity accent, daily or lightly special outfit readability, and clean clothing continuity. It must be not a fashion-model sheet, not a costume sheet, and not a return to hoodie-heavy sameness. Must contain no image-internal readable text, no logos, no watermarks, no frame, no border, no panel layout. Known slot risk: Blouse should not become sheer or glamorous.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "outfit_drift_risk": "high",
+        "age_impression_risk": "medium",
+        "hand_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "Place in the 12-image coordinate contact sheet before finishing.",
+        "coordinate_gate": "Run the Coordinate Gate for outfit variety, Akari identity, age impression, mint accent, and no text/logo/frame issues.",
+        "strict_review": "If selected, run akari-v1-1-image-review on this single image.",
+        "correction": "Use Correction Pass for concrete face, hairpin, hand, outfit, anatomy, or artifact defects.",
+        "humanization": "Use Humanization Pass only after the image is structurally valid."
+      }
+    },
+    {
+      "id": "request:tonari-coordinate-winter-warm-knit",
+      "coordinate_order": 20,
+      "slot": "winter-warm-knit",
+      "japanese_title": "冬のあったかニット",
+      "season": "winter",
+      "scene": "room",
+      "outfit_family": "knit_soft",
+      "outfit_notes": "Warm ivory cable knit with a muted blue-grey skirt.",
+      "mint_accent": "Hairpins plus a mint mug held low.",
+      "composition": "upper_body",
+      "tone": "warm",
+      "risk_note": "Hands around the mug must remain simple and readable.",
+      "target_path": "source/generated/tonari-no-coordinate/20260706_winter-warm-knit_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: 冬のあったかニット. Season and scene: winter, room. Composition: upper-body portrait, close everyday Akari mood, outfit clearly visible. Coordinate: Warm ivory cable knit with a muted blue-grey skirt. Identity accent: Hairpins plus a mint mug held low. Akari identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, rounded cheeks, compact rounded chin, small subtle nose and mouth; pale-blue crossed hairpins/ribbon-like clips on character-left side when visible; petite/slender healthy adult proportions. Styling boundary: daily wear or lightly dressed-up day-off wear; no student-uniform styling, no character-costume styling, no job-uniform styling, no revealing swim styling, no underwear-like styling, no readable text prints. No image-internal readable text, no logos, no watermarks, no frame, no border, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, 25-year-old adult age impression, face/hair/hairpin consistency, natural body proportions, visible mint or pale-blue identity accent, daily or lightly special outfit readability, and clean clothing continuity. It must be not a fashion-model sheet, not a costume sheet, and not a return to hoodie-heavy sameness. Must contain no image-internal readable text, no logos, no watermarks, no frame, no border, no panel layout. Known slot risk: Hands around the mug must remain simple and readable.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "outfit_drift_risk": "medium",
+        "age_impression_risk": "medium",
+        "hand_risk": "low",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "Place in the 12-image coordinate contact sheet before finishing.",
+        "coordinate_gate": "Run the Coordinate Gate for outfit variety, Akari identity, age impression, mint accent, and no text/logo/frame issues.",
+        "strict_review": "If selected, run akari-v1-1-image-review on this single image.",
+        "correction": "Use Correction Pass for concrete face, hairpin, hand, outfit, anatomy, or artifact defects.",
+        "humanization": "Use Humanization Pass only after the image is structurally valid."
+      }
+    },
+    {
+      "id": "request:tonari-coordinate-ribbed-top-relaxed-skirt",
+      "coordinate_order": 21,
+      "slot": "ribbed-top-relaxed-skirt",
+      "japanese_title": "リブトップの休日",
+      "season": "all_season",
+      "scene": "desk",
+      "outfit_family": "knit_soft",
+      "outfit_notes": "Muted clay ribbed top with a relaxed dark skirt.",
+      "mint_accent": "Pale-blue crossed hairpins and mint pen cap on the desk.",
+      "composition": "half_body",
+      "tone": "relaxed",
+      "risk_note": "Ribbed fabric should not read as tight glamour styling.",
+      "target_path": "source/generated/tonari-no-coordinate/20260706_ribbed-top-relaxed-skirt_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: リブトップの休日. Season and scene: all season, desk. Composition: half-body portrait, close everyday Akari mood, outfit clearly visible. Coordinate: Muted clay ribbed top with a relaxed dark skirt. Identity accent: Pale-blue crossed hairpins and mint pen cap on the desk. Akari identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, rounded cheeks, compact rounded chin, small subtle nose and mouth; pale-blue crossed hairpins/ribbon-like clips on character-left side when visible; petite/slender healthy adult proportions. Styling boundary: daily wear or lightly dressed-up day-off wear; no student-uniform styling, no character-costume styling, no job-uniform styling, no revealing swim styling, no underwear-like styling, no readable text prints. No image-internal readable text, no logos, no watermarks, no frame, no border, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, 25-year-old adult age impression, face/hair/hairpin consistency, natural body proportions, visible mint or pale-blue identity accent, daily or lightly special outfit readability, and clean clothing continuity. It must be not a fashion-model sheet, not a costume sheet, and not a return to hoodie-heavy sameness. Must contain no image-internal readable text, no logos, no watermarks, no frame, no border, no panel layout. Known slot risk: Ribbed fabric should not read as tight glamour styling.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "outfit_drift_risk": "medium",
+        "age_impression_risk": "medium",
+        "hand_risk": "medium",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "Place in the 12-image coordinate contact sheet before finishing.",
+        "coordinate_gate": "Run the Coordinate Gate for outfit variety, Akari identity, age impression, mint accent, and no text/logo/frame issues.",
+        "strict_review": "If selected, run akari-v1-1-image-review on this single image.",
+        "correction": "Use Correction Pass for concrete face, hairpin, hand, outfit, anatomy, or artifact defects.",
+        "humanization": "Use Humanization Pass only after the image is structurally valid."
+      }
+    },
+    {
+      "id": "request:tonari-coordinate-morning-soft-roomwear",
+      "coordinate_order": 26,
+      "slot": "morning-soft-roomwear",
+      "japanese_title": "朝のやわらか部屋着",
+      "season": "all_season",
+      "scene": "room",
+      "outfit_family": "roomwear_relaxed",
+      "outfit_notes": "Soft long-sleeve room top with relaxed ankle pants.",
+      "mint_accent": "Hairpins and pale mint room socks.",
+      "composition": "half_body",
+      "tone": "relaxed",
+      "risk_note": "Keep it healthy and everyday; avoid sleepwear exposure.",
+      "target_path": "source/generated/tonari-no-coordinate/20260706_morning-soft-roomwear_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: 朝のやわらか部屋着. Season and scene: all season, room. Composition: half-body portrait, close everyday Akari mood, outfit clearly visible. Coordinate: Soft long-sleeve room top with relaxed ankle pants. Identity accent: Hairpins and pale mint room socks. Akari identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, rounded cheeks, compact rounded chin, small subtle nose and mouth; pale-blue crossed hairpins/ribbon-like clips on character-left side when visible; petite/slender healthy adult proportions. Styling boundary: daily wear or lightly dressed-up day-off wear; no student-uniform styling, no character-costume styling, no job-uniform styling, no revealing swim styling, no underwear-like styling, no readable text prints. No image-internal readable text, no logos, no watermarks, no frame, no border, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, 25-year-old adult age impression, face/hair/hairpin consistency, natural body proportions, visible mint or pale-blue identity accent, daily or lightly special outfit readability, and clean clothing continuity. It must be not a fashion-model sheet, not a costume sheet, and not a return to hoodie-heavy sameness. Must contain no image-internal readable text, no logos, no watermarks, no frame, no border, no panel layout. Known slot risk: Keep it healthy and everyday; avoid sleepwear exposure.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "outfit_drift_risk": "medium",
+        "age_impression_risk": "high",
+        "hand_risk": "medium",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "Place in the 12-image coordinate contact sheet before finishing.",
+        "coordinate_gate": "Run the Coordinate Gate for outfit variety, Akari identity, age impression, mint accent, and no text/logo/frame issues.",
+        "strict_review": "If selected, run akari-v1-1-image-review on this single image.",
+        "correction": "Use Correction Pass for concrete face, hairpin, hand, outfit, anatomy, or artifact defects.",
+        "humanization": "Use Humanization Pass only after the image is structurally valid."
+      }
+    },
+    {
+      "id": "request:tonari-coordinate-clean-blouse-simple-pants",
+      "coordinate_order": 31,
+      "slot": "clean-blouse-simple-pants",
+      "japanese_title": "きれいめブラウスとパンツ",
+      "season": "all_season",
+      "scene": "cafe",
+      "outfit_family": "shirt_blouse_pants",
+      "outfit_notes": "Clean ivory blouse with simple navy tapered pants.",
+      "mint_accent": "Pale-blue crossed hairpins and a mint bracelet.",
+      "composition": "half_body",
+      "tone": "lightly_dressed_up",
+      "risk_note": "Adult but not office-uniform or overly formal.",
+      "target_path": "source/generated/tonari-no-coordinate/20260706_clean-blouse-simple-pants_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: きれいめブラウスとパンツ. Season and scene: all season, cafe. Composition: half-body portrait, close everyday Akari mood, outfit clearly visible. Coordinate: Clean ivory blouse with simple navy tapered pants. Identity accent: Pale-blue crossed hairpins and a mint bracelet. Akari identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, rounded cheeks, compact rounded chin, small subtle nose and mouth; pale-blue crossed hairpins/ribbon-like clips on character-left side when visible; petite/slender healthy adult proportions. Styling boundary: daily wear or lightly dressed-up day-off wear; no student-uniform styling, no character-costume styling, no job-uniform styling, no revealing swim styling, no underwear-like styling, no readable text prints. No image-internal readable text, no logos, no watermarks, no frame, no border, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, 25-year-old adult age impression, face/hair/hairpin consistency, natural body proportions, visible mint or pale-blue identity accent, daily or lightly special outfit readability, and clean clothing continuity. It must be not a fashion-model sheet, not a costume sheet, and not a return to hoodie-heavy sameness. Must contain no image-internal readable text, no logos, no watermarks, no frame, no border, no panel layout. Known slot risk: Adult but not office-uniform or overly formal.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "outfit_drift_risk": "medium",
+        "age_impression_risk": "medium",
+        "hand_risk": "medium",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "Place in the 12-image coordinate contact sheet before finishing.",
+        "coordinate_gate": "Run the Coordinate Gate for outfit variety, Akari identity, age impression, mint accent, and no text/logo/frame issues.",
+        "strict_review": "If selected, run akari-v1-1-image-review on this single image.",
+        "correction": "Use Correction Pass for concrete face, hairpin, hand, outfit, anatomy, or artifact defects.",
+        "humanization": "Use Humanization Pass only after the image is structurally valid."
+      }
+    },
+    {
+      "id": "request:tonari-coordinate-updated-hoodie-cardigan",
+      "coordinate_order": 35,
+      "slot": "updated-hoodie-cardigan",
+      "japanese_title": "少し更新したパーカー",
+      "season": "all_season",
+      "scene": "room",
+      "outfit_family": "hoodie_baseline",
+      "outfit_notes": "Soft pale hoodie under a thin colored cardigan with a dark teal skirt.",
+      "mint_accent": "Pale-blue crossed hairpins and mint drawstring tips.",
+      "composition": "half_body",
+      "tone": "everyday_cute",
+      "risk_note": "This is a baseline, so avoid returning to the old white-top grey-skirt default.",
+      "target_path": "source/generated/tonari-no-coordinate/20260706_updated-hoodie-cardigan_v1.webp",
+      "reference_pack_inputs": [
+        "source/references/tonari-no-akari/identity-face-hair.webp",
+        "source/references/tonari-no-akari/identity-body-base.webp",
+        "source/references/tonari-no-akari/identity-basic-outfit.webp",
+        "source/references/tonari-no-akari/identity-side-view.webp"
+      ],
+      "prompt": "Create one A4 portrait draft for Tonari no Coordinate: 少し更新したパーカー. Season and scene: all season, room. Composition: half-body portrait, close everyday Akari mood, outfit clearly visible. Coordinate: Soft pale hoodie under a thin colored cardigan with a dark teal skirt. Identity accent: Pale-blue crossed hairpins and mint drawstring tips. Akari identity lock: adult 25-year-old Japanese woman; naturally cute adult, not glamorous, not model-like, not pin-up, not childlike; short fluffy light-brown bob with airy uneven ends and soft side bangs; warm amber eyes, rounded cheeks, compact rounded chin, small subtle nose and mouth; pale-blue crossed hairpins/ribbon-like clips on character-left side when visible; petite/slender healthy adult proportions. Styling boundary: daily wear or lightly dressed-up day-off wear; no student-uniform styling, no character-costume styling, no job-uniform styling, no revealing swim styling, no underwear-like styling, no readable text prints. No image-internal readable text, no logos, no watermarks, no frame, no border, no panel layout.",
+      "acceptance": "Coordinate Gate: must preserve Akari identity, 25-year-old adult age impression, face/hair/hairpin consistency, natural body proportions, visible mint or pale-blue identity accent, daily or lightly special outfit readability, and clean clothing continuity. It must be not a fashion-model sheet, not a costume sheet, and not a return to hoodie-heavy sameness. Must contain no image-internal readable text, no logos, no watermarks, no frame, no border, no panel layout. Known slot risk: This is a baseline, so avoid returning to the old white-top grey-skirt default.",
+      "risk_profile": {
+        "identity_risk": "high",
+        "outfit_drift_risk": "high",
+        "age_impression_risk": "high",
+        "hand_risk": "medium",
+        "text_logo_watermark_risk": "medium"
+      },
+      "review_plan": {
+        "initial_status": "draft_candidate",
+        "first_pass": "Place in the 12-image coordinate contact sheet before finishing.",
+        "coordinate_gate": "Run the Coordinate Gate for outfit variety, Akari identity, age impression, mint accent, and no text/logo/frame issues.",
+        "strict_review": "If selected, run akari-v1-1-image-review on this single image.",
+        "correction": "Use Correction Pass for concrete face, hairpin, hand, outfit, anatomy, or artifact defects.",
+        "humanization": "Use Humanization Pass only after the image is structurally valid."
+      }
+    }
+  ]
+}

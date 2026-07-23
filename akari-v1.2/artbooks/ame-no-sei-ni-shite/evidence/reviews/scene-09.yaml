@@ -1,0 +1,14 @@
+schema_version: 1
+scene_id: scene-09
+revision: r01
+status: accepted
+selected_variant: a
+findings: []
+selection_reason: Variant A gives the clearest quiet shared-time beat through believable
+  sofa spacing, roomwear continuity, rain at the window, and Akari's unguarded attention
+  toward the first-person viewer.
+reference_roles_confirmed:
+- C01 adult proportions and healthy natural build
+- C03 character-left hairpins and pale-blue ribbon
+- C07 indoor sock continuity
+reviewed_at: '2026-07-21T04:50:43.926861Z'
