@@ -1,1 +1,5 @@
 *.pdf binary
+
+# Preserve byte-frozen generation prompt transcripts.
+akari-v1.4/style-tests/reproducibility-i-seated/PROMPT.md whitespace=-blank-at-eof
+akari-v1.4/style-tests/reproducibility-j-action/PROMPT.md whitespace=-blank-at-eof
