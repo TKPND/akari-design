@@ -1,0 +1,8 @@
+{
+  // These prompt transcripts are byte-frozen to their recorded generation
+  // hashes. Exclude them instead of normalizing their terminal blank line.
+  "ignores": [
+    "akari-v1.4/style-tests/reproducibility-i-seated/PROMPT.md",
+    "akari-v1.4/style-tests/reproducibility-j-action/PROMPT.md"
+  ]
+}
