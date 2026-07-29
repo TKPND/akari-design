@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -40,6 +41,21 @@ class CreateReviewDemoTests(unittest.TestCase):
             for path in batch.rglob("*")
             if path.is_file()
         }
+
+    def _review_first(self, batch: Path, note: str) -> None:
+        reviews_path = batch / "reviews.json"
+        reviews = json.loads(reviews_path.read_text(encoding="utf-8"))
+        reviews["reviews"]["B000-001"] = {
+            "status": "favorite",
+            "reasons": [],
+            "note": note,
+            "revision": 1,
+            "updatedAt": "2026-07-30T00:00:00.000Z",
+        }
+        reviews_path.write_text(
+            json.dumps(reviews, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
 
     def test_demo_has_fifty_non_counting_entries_and_thumbnails(self):
         batch = create_demo_batch(self.data_root)
@@ -167,3 +183,171 @@ class CreateReviewDemoTests(unittest.TestCase):
             create_demo_batch(self.data_root)
 
         self.assertEqual(before, self._snapshot_batch(batch))
+
+    def test_changed_manifest_entry_requires_reset_without_mutation(self):
+        batch = create_demo_batch(self.data_root)
+        self._review_first(batch, "reviewed original semantics")
+        manifest_path = batch / "manifest.json"
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        manifest["entries"][0]["references"][0]["role"] = (
+            "changed identity authority semantics"
+        )
+        manifest_path.write_text(
+            json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        before = self._snapshot_batch(batch)
+
+        with self.assertRaisesRegex(ValueError, "reset B000 reviews"):
+            create_demo_batch(self.data_root)
+
+        self.assertEqual(before, self._snapshot_batch(batch))
+
+    def test_changed_thumbnail_bytes_require_reset_without_mutation(self):
+        batch = create_demo_batch(self.data_root)
+        self._review_first(batch, "reviewed original thumbnail")
+        before = self._snapshot_batch(batch)
+
+        def build_changed_thumbnail(source: Path, output: Path) -> Path:
+            with Image.open(source) as image:
+                converted = image.convert("RGB")
+                converted.thumbnail((512, 512), Image.Resampling.LANCZOS)
+                converted.save(output, "WEBP", quality=40, method=6)
+            return output
+
+        with (
+            patch.object(
+                demo,
+                "build_thumbnail",
+                side_effect=build_changed_thumbnail,
+            ),
+            self.assertRaisesRegex(ValueError, "reset B000 reviews"),
+        ):
+            create_demo_batch(self.data_root)
+
+        self.assertEqual(before, self._snapshot_batch(batch))
+
+    def test_interrupted_swap_restores_deterministic_previous_batch(self):
+        batch = create_demo_batch(self.data_root)
+        self._review_first(batch, "survives interrupted swap")
+        previous = batch.parent / ".B000.previous"
+        os.replace(batch, previous)
+
+        restored = create_demo_batch(self.data_root)
+
+        self.assertEqual(batch, restored)
+        self.assertFalse(previous.exists())
+        reviews = json.loads(
+            (restored / "reviews.json").read_text(encoding="utf-8")
+        )
+        self.assertEqual(
+            "survives interrupted swap",
+            reviews["reviews"]["B000-001"]["note"],
+        )
+
+    def test_valid_current_batch_wins_and_cleans_leftover_previous(self):
+        batch = create_demo_batch(self.data_root)
+        self._review_first(batch, "current review wins")
+        previous = batch.parent / ".B000.previous"
+        shutil.copytree(batch, previous)
+        self._review_first(previous, "stale previous review")
+
+        result = create_demo_batch(self.data_root)
+
+        self.assertEqual(batch, result)
+        self.assertFalse(previous.exists())
+        reviews = json.loads(
+            (result / "reviews.json").read_text(encoding="utf-8")
+        )
+        self.assertEqual(
+            "current review wins",
+            reviews["reviews"]["B000-001"]["note"],
+        )
+
+    def test_post_activation_cleanup_failure_leaves_recoverable_previous(self):
+        batch = create_demo_batch(self.data_root)
+        self._review_first(batch, "preserved through cleanup failure")
+        (batch / "images/stale.png").write_bytes(b"stale")
+        real_rmtree = demo.shutil.rmtree
+
+        def fail_previous_cleanup(path: Path, *args, **kwargs) -> None:
+            if Path(path).name.endswith(".previous"):
+                raise OSError("simulated previous cleanup failure")
+            real_rmtree(path, *args, **kwargs)
+
+        with patch.object(
+            demo.shutil,
+            "rmtree",
+            side_effect=fail_previous_cleanup,
+        ):
+            result = create_demo_batch(self.data_root)
+
+        previous = batch.parent / ".B000.previous"
+        self.assertEqual(batch, result)
+        self.assertTrue(previous.is_dir())
+        self.assertFalse((batch / "images/stale.png").exists())
+        recovered = create_demo_batch(self.data_root)
+        self.assertEqual(batch, recovered)
+        self.assertFalse(previous.exists())
+
+    def test_symlinked_demo_paths_are_rejected_without_external_writes(self):
+        baseline = create_demo_batch(self.data_root)
+        cases_root = self.data_root / "symlink-cases"
+        cases_root.mkdir()
+        for label in (
+            "batches",
+            "B000",
+            "images",
+            "thumbs",
+            "manifest",
+            "reviews",
+            "backup",
+            "media",
+        ):
+            with self.subTest(label=label):
+                case_root = cases_root / label
+                shutil.copytree(self.data_root / "references", case_root / "references")
+                external = cases_root / f"{label}-external"
+                external.mkdir()
+                sentinel = external / "sentinel"
+                sentinel.write_bytes(b"outside must not change")
+                if label == "batches":
+                    (case_root / "batches").symlink_to(
+                        external,
+                        target_is_directory=True,
+                    )
+                elif label == "B000":
+                    shutil.copytree(baseline, external / "B000")
+                    (case_root / "batches").mkdir()
+                    (case_root / "batches/B000").symlink_to(
+                        external / "B000",
+                        target_is_directory=True,
+                    )
+                else:
+                    shutil.copytree(baseline, case_root / "batches/B000")
+                    case_batch = case_root / "batches/B000"
+                    targets = {
+                        "images": case_batch / "images",
+                        "thumbs": case_batch / "thumbs",
+                        "manifest": case_batch / "manifest.json",
+                        "reviews": case_batch / "reviews.json",
+                        "backup": case_batch / "reviews.json.bak",
+                        "media": case_batch / "images/demo-001.png",
+                    }
+                    target = targets[label]
+                    if label == "backup" and not target.exists():
+                        target.write_bytes(b"local backup")
+                    if target.is_dir():
+                        shutil.rmtree(target)
+                        target.symlink_to(external, target_is_directory=True)
+                    else:
+                        target.unlink()
+                        outside_file = external / target.name
+                        outside_file.write_bytes(b"outside file")
+                        target.symlink_to(outside_file)
+                external_before = self._snapshot_batch(external)
+
+                with self.assertRaisesRegex(ValueError, "symlink"):
+                    create_demo_batch(case_root)
+
+                self.assertEqual(external_before, self._snapshot_batch(external))
