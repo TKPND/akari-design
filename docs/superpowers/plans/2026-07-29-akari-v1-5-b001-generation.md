@@ -1713,11 +1713,14 @@ git commit -m "Add Akari B001 request matrix"
   `OwnedBatchFs.pin_batch(mode: Literal["prepare", "mutate", "read"],
   batch_intent_fingerprint: str, intent_lock: dict[str, object] | None = None)
   -> None`,
-  `_install_or_adopt_bootstrap_claim_at(batches_fd: int,
-  fingerprint: str) -> dict[str, object]`,
-  `_scan_bootstrap_prefix_at(batches_fd: int, batch_fd: int | None,
+  `_install_or_adopt_bootstrap_claim_at(batches_fd: int, fingerprint: str,
+  intent_lock: dict[str, object]) -> dict[str, object]`,
+  `_classify_bootstrap_prefix_at(batches_fd: int, batch_fd: int | None,
   lock_fd: int | None, claim: dict[str, object],
-  intent_lock: dict[str, object]) -> BootstrapPrefix`,
+  intent_lock: dict[str, object]) -> BootstrapPrefix |
+  InvalidBootstrapPrefix`,
+  `_cleanup_authoritative_claim_private_at(batches_fd: int,
+  token: ValidatedP0Cleanup) -> None`,
   `_resume_bootstrap_prefix_at(batches_fd: int, claim: dict[str, object],
   intent_lock: dict[str, object]) -> tuple[int, int, list[int]]`,
   `OwnedBatchFs.write_staging_exclusive(name: str, contents: bytes) -> None`,
@@ -1846,6 +1849,14 @@ Test these behaviors with real Pillow PNGs:
   hard-link inode pair, durably removes that private link, and finishes with
   zero bootstrap private names. A foreign or wrong-nonce private claim remains
   untouched and makes both same- and different-intent successors fail closed.
+- Snapshot every B001-reserved sibling and descendant basename, type, symlink
+  target, byte hash, device, and inode before and after recovery from a
+  canonical claim plus same-inode claim-private link combined separately with
+  an unknown B001 entry, non-empty child, impossible child subset, foreign
+  private name, and wrong-inode private file. Every case raises with the full
+  snapshot identical. The exact P0 case alone may remove the validated private
+  hard link; it then converges to completed canonical state with zero private
+  names.
 - A failure attempt increments `technicalFailures` but leaves the intended ID
   pending or failed and eligible for the same prompt retry.
 - Reconcile preserves ledger entries belonging to batches other than B001.
@@ -2136,15 +2147,15 @@ The claim protocol is fully descriptor-relative:
 1. Inspect `B001.bootstrap-claim.json` with
    `O_RDONLY | O_NOFOLLOW`. If present, require a regular file, exact key set,
    exact types, schema version 1, batch ID B001, the candidate fingerprint,
-   canonical bytes, and a valid nonce. Derive the one permitted private claim
-   basename from that authoritative fingerprint and nonce. Reject every other
-   claim-private name. If the derived name exists, open it with
-   `O_RDONLY | O_NOFOLLOW`, require a regular file, require exact canonical
-   claim bytes, and require its `(st_dev, st_ino)` to equal the canonical
-   claim descriptor. Only then unlink it and fsync `batches_fd`; only after
-   proving the private name is absent may the helper return the adopted claim.
-   A different-intent, malformed, foreign, wrong-nonce, wrong-inode, or
-   byte-mismatched claim state rejects without cleanup.
+   canonical bytes, and a valid nonce. Before deriving or unlinking any
+   private name, run the read-only full classifier across batches siblings,
+   B001 contents, lock, boundary, intent, children, and every private entry.
+   An invalid result rejects with the entire tree unchanged. P1 through P5
+   require no claim-private name and return without claim cleanup. Only exact
+   P0 may carry the classifier-issued cleanup token for the one same-inode,
+   canonical-byte, authoritative-nonce private claim; unlink and
+   `fsync(batches_fd)` occur only through that token, followed by another full
+   classification requiring canonical-only P0.
 2. If no canonical claim exists and B001 is absent, enumerate the strict
    private-claim namespace. Zero entries starts a fresh claim. One entry is
    recoverable pre-P0 state C0 only when its parsed filename nonce and
@@ -2160,12 +2171,12 @@ The claim protocol is fully descriptor-relative:
    private descriptor. Then process it through step 1, including durable
    private-link cleanup. Only a canonical claim that survived that complete
    sequence may authorize B001 creation.
-4. If the no-replace claim link loses, durably unlink only the loser's verified
-   private file, reopen the winner through `batches_fd`, and apply step 1.
-   The winner's nonce, not the loser's proposed nonce, becomes authoritative.
-   Because every conforming prepare holds the batches flock, this race path
-   principally protects against a pre-existing creator and never weakens the
-   state scanner.
+4. If the no-replace claim link loses, do not clean either private name.
+   Reopen the winner through `batches_fd` and apply step 1; the full classifier
+   will reject the loser's foreign private name without mutation. Every
+   conforming prepare holds the batches flock, so same-intent concurrency
+   observes the winner only before claim creation, after a crash, or after
+   completed claim removal and does not enter this fail-closed guard path.
 5. If no canonical claim exists but B001 exists, do not create a claim. Open
    B001 and
    `B001.lock` without following links, take `B001.lock LOCK_EX` while
@@ -2174,12 +2185,31 @@ The claim protocol is fully descriptor-relative:
    claim absence all verify exactly. Any claimless unmarked or partial B001
    fails closed.
 
-With an exact canonical claim, the claim installer and
-`_scan_bootstrap_prefix_at` pair accept exactly one ordered phase. P0 entry
-may contain the one verified same-inode claim-private link solely so the claim
-installer can durably remove it before the P0-to-P1 transition:
+With an exact canonical claim, `_classify_bootstrap_prefix_at` first performs
+one read-only full scan. It lists all B001-reserved batches siblings; inspects
+B001 absence or its complete entry listing; opens every lock, boundary,
+intent, child, and private name with `O_NOFOLLOW`; records type, symlink
+status, canonical bytes, `(st_dev, st_ino)`, and empty-directory status; and
+returns one exact ordered phase or `InvalidBootstrapPrefix`. It does not
+unlink, link, mkdir, replace, flock, or otherwise mutate. P0 may contain one
+verified same-inode claim-private link solely through a classifier-issued
+cleanup token:
 
 ```python
+@dataclass(frozen=True)
+class ValidatedP0Cleanup:
+    phase: Literal["P0"]
+    claim: dict[str, object]
+    intent_lock: dict[str, object]
+    private_name: str
+    canonical_device: int
+    canonical_inode: int
+    private_device: int
+    private_inode: int
+    expected_bytes: bytes
+    full_tree_digest: str
+
+
 @dataclass(frozen=True)
 class BootstrapPrefix:
     phase: Literal["P0", "P1", "P2", "P3", "P4", "P5"]
@@ -2196,7 +2226,23 @@ class BootstrapPrefix:
         "canonical-plus-private",
     ]
     child_prefix_length: int
+    p0_cleanup: ValidatedP0Cleanup | None
+
+
+@dataclass(frozen=True)
+class InvalidBootstrapPrefix:
+    phase: Literal["invalid"]
+    reason: str
 ```
+
+The classifier first materializes one immutable canonical snapshot containing
+the sorted reserved sibling and B001 entry names, lstat type, symlink status,
+regular-file SHA-256 and bytes, device/inode pairs, and directory emptiness.
+It computes `full_tree_digest` from that complete snapshot, then classifies
+without calling any mutation helper. It issues `ValidatedP0Cleanup` only when
+the complete snapshot is exact P0 and the sole private claim name has the
+authoritative nonce, canonical bytes, and the same inode as the canonical
+claim. Every invalid result carries no cleanup token.
 
 | Phase | Exact accepted state |
 | --- | --- |
@@ -2206,6 +2252,11 @@ class BootstrapPrefix:
 | P3 | P2 plus intent state only: either exact private intent without canonical intent, or exact canonical intent with at most its exact same-inode private link. Boundary and children are absent. |
 | P4 | Canonical intent exists with no intent-private name. Boundary state only is either exact private boundary without canonical boundary, or exact canonical boundary with at most its exact same-inode private link. Children are absent. |
 | P5 | Canonical intent and boundary exist with no private names. Children are exactly a prefix of `OWNED_CHILDREN = ("images", "thumbs", "receipts", "attempts", "staging")`, from zero through five, and every present child is an empty pinned directory. |
+
+P1 through P5 require the claim-private namespace to be empty. A claim-private
+name beside B001, `B001.lock`, intent, boundary, any child, any unknown B001
+entry, or any non-empty child makes the full classification invalid even when
+that private name is an exact hard link to the canonical claim.
 
 “Exact” scopes sibling inspection to the reserved B001 names; unrelated batch
 names such as B000 remain untouched. Inside B001 every directory entry is
@@ -2218,34 +2269,39 @@ boundary-private state mixed with children, and any unknown file, symlink,
 non-empty child, wrong nonce, wrong payload, or wrong inode are impossible
 states and fail closed before mutation.
 
-`_resume_bootstrap_prefix_at` advances exactly one edge at a time and rescans
-after every durable edge:
+`_resume_bootstrap_prefix_at` advances exactly one edge at a time and runs the
+read-only full classifier after every durable edge:
 
-1. The claim installer completes P0 entry cleanup by verifying and durably
-   removing the optional same-inode private claim. From canonical-only P0,
-   `_resume_bootstrap_prefix_at` mkdirs B001, fsyncs `batches_fd`, pins B001
-   with `O_DIRECTORY | O_NOFOLLOW`, and rescans as P1.
+1. For every existing canonical claim, classify the entire B001 bootstrap tree
+   before any cleanup or phase mutation. `InvalidBootstrapPrefix` raises with
+   no tree change. Only exact P0 with a non-null
+   `ValidatedP0Cleanup` may call the claim-private cleanup helper; after its
+   unlink and parent fsync, classify the whole tree again and require
+   canonical-only P0. P1 through P5 never call claim-private cleanup. From
+   canonical-only P0, `_resume_bootstrap_prefix_at` mkdirs B001, fsyncs
+   `batches_fd`, pins B001 with `O_DIRECTORY | O_NOFOLLOW`, and reclassifies
+   as P1.
 2. P1 creates regular `B001.lock` with no replacement, fsyncs `batches_fd`,
-   takes `LOCK_EX`, verifies its type, and rescans as P2. A P2 restart opens
+   takes `LOCK_EX`, verifies its type, and reclassifies as P2. A P2 restart opens
    and locks the same inode before scanning B001.
 3. P2 writes the exact intent payload to the private filename derived from the
-   authoritative nonce, fsyncs it, and rescans as P3 private-only. P3
+   authoritative nonce, fsyncs it, and reclassifies as P3 private-only. P3
    private-only verifies exact payload bytes and filename nonce, links that
    same inode to `intent-lock.json` without replacement, fsyncs `batch_fd`,
-   and rescans. P3 canonical-plus-private requires equal inode and bytes,
-   unlinks the private name, fsyncs `batch_fd`, proves absence, and rescans as
-   canonical-only P3.
+   and reclassifies. P3 canonical-plus-private requires equal inode and bytes,
+   unlinks the private name, fsyncs `batch_fd`, proves absence, and
+   reclassifies as canonical-only P3.
 4. Canonical-only P3 writes the nonce-bearing boundary payload to its exact
-   private filename relative to `batches_fd`, fsyncs it, and rescans as P4
+   private filename relative to `batches_fd`, fsyncs it, and reclassifies as P4
    private-only. P4 private-only
    verifies the authoritative fingerprint, nonce, lock inode, and batch inode,
    links that same inode to `B001.boundary.json` without replacement, fsyncs
-   `batches_fd`, and rescans. P4 canonical-plus-private requires equal inode
+   `batches_fd`, and reclassifies. P4 canonical-plus-private requires equal inode
    and bytes, unlinks the private name, fsyncs `batches_fd`, proves absence,
-   and rescans as canonical-only P4.
+   and reclassifies as canonical-only P4.
 5. Canonical-only P4 is P5 with a zero-length child prefix. P5 creates only the
    next literal child in `OWNED_CHILDREN`, fsyncs `batch_fd`, pins and verifies
-   that empty directory, then rescans with prefix length increased by one.
+   that empty directory, then reclassifies with prefix length increased by one.
 6. At P5 length five, enumerate both pinned `batches_fd` and `batch_fd`.
    Prove that no claim, intent, or boundary private name exists, and re-read
    the exact claim, intent, boundary, lock/batch inode pairs, and five empty
@@ -2260,8 +2316,10 @@ after every durable edge:
 Every intent/boundary cleanup and the final private-name absence proof runs
 while both the batches flock and `B001.lock LOCK_EX` are held. Claim-private
 cleanup is the necessary P0 exception: P0 formally has no B001 or per-batch
-lock, so it runs under the batches flock before the P0-to-P1 edge. No cleanup
-runs outside `_install_or_adopt_bootstrap_claim_at` or
+lock, so it runs under the batches flock before the P0-to-P1 edge. Its helper
+requires the `ValidatedP0Cleanup` object issued by the immediately preceding
+full classifier and rejects every other phase or null token. No cleanup runs
+outside `_install_or_adopt_bootstrap_claim_at` or
 `_resume_bootstrap_prefix_at`.
 
 Private bootstrap names are strict:
@@ -2298,26 +2356,37 @@ def _claim_private_name(claim: dict[str, object]) -> str:
 
 def _cleanup_authoritative_claim_private_at(
     batches_fd: int,
-    claim: dict[str, object],
+    token: ValidatedP0Cleanup,
 ) -> None:
+    if token.phase != "P0":
+        raise ValueError("claim private cleanup requires validated P0")
+    if _read_only_bootstrap_tree_digest_at(batches_fd) != (
+        token.full_tree_digest
+    ):
+        raise ValueError("bootstrap tree changed after P0 classification")
     canonical_name = "B001.bootstrap-claim.json"
-    private_name = _claim_private_name(claim)
-    names = _claim_private_namespace_names_at(batches_fd)
-    unexpected = names - {private_name}
-    if unexpected:
-        raise ValueError("foreign bootstrap claim private name")
-    if private_name not in names:
-        return
+    private_name = token.private_name
     canonical_fd = _open_regular_at(batches_fd, canonical_name)
     private_fd = _open_regular_at(batches_fd, private_name)
     try:
         canonical_stat = os.fstat(canonical_fd)
         private_stat = os.fstat(private_fd)
-        expected = _canonical_document_bytes(claim)
-        if _read_all_from_start(canonical_fd) != expected:
+        if _read_all_from_start(canonical_fd) != token.expected_bytes:
             raise ValueError("canonical bootstrap claim bytes mismatch")
-        if _read_all_from_start(private_fd) != expected:
+        if _read_all_from_start(private_fd) != token.expected_bytes:
             raise ValueError("private bootstrap claim bytes mismatch")
+        if (
+            canonical_stat.st_dev,
+            canonical_stat.st_ino,
+            private_stat.st_dev,
+            private_stat.st_ino,
+        ) != (
+            token.canonical_device,
+            token.canonical_inode,
+            token.private_device,
+            token.private_inode,
+        ):
+            raise ValueError("bootstrap claim P0 inode snapshot mismatch")
         if (
             canonical_stat.st_dev,
             canonical_stat.st_ino,
@@ -2325,7 +2394,7 @@ def _cleanup_authoritative_claim_private_at(
             private_stat.st_dev,
             private_stat.st_ino,
         ):
-            raise ValueError("bootstrap claim private inode mismatch")
+            raise ValueError("bootstrap claim private is not a hard link")
     finally:
         os.close(private_fd)
         os.close(canonical_fd)
@@ -2335,28 +2404,61 @@ def _cleanup_authoritative_claim_private_at(
     )
     os.fsync(batches_fd)
     _failpoint("after_bootstrap_claim_private_unlink_directory_fsync")
-    if private_name in _claim_private_namespace_names_at(batches_fd):
-        raise ValueError("bootstrap claim private cleanup did not converge")
+    classification = _classify_bootstrap_prefix_at(
+        batches_fd,
+        None,
+        None,
+        token.claim,
+        token.intent_lock,
+    )
+    if (
+        isinstance(classification, InvalidBootstrapPrefix)
+        or classification.phase != "P0"
+        or classification.p0_cleanup is not None
+    ):
+        raise ValueError("bootstrap claim private cleanup did not reach P0")
 
 
-def _durably_remove_owned_unpublished_private_at(
-    directory_fd: int,
-    private_name: str,
-    expected: bytes,
-) -> None:
-    private_fd = _open_regular_at(directory_fd, private_name)
-    try:
-        if _read_all_from_start(private_fd) != expected:
-            raise ValueError("unpublished bootstrap private bytes mismatch")
-    finally:
-        os.close(private_fd)
-    os.unlink(private_name, dir_fd=directory_fd)
-    os.fsync(directory_fd)
+def _classify_existing_claim_before_cleanup_at(
+    batches_fd: int,
+    claim: dict[str, object],
+    intent_lock: dict[str, object],
+) -> BootstrapPrefix:
+    classification = _classify_bootstrap_prefix_at(
+        batches_fd,
+        None,
+        None,
+        claim,
+        intent_lock,
+    )
+    if isinstance(classification, InvalidBootstrapPrefix):
+        raise ValueError(classification.reason)
+    if classification.phase == "P0":
+        token = classification.p0_cleanup
+        if token is not None:
+            _cleanup_authoritative_claim_private_at(batches_fd, token)
+            classification = _classify_bootstrap_prefix_at(
+                batches_fd,
+                None,
+                None,
+                claim,
+                intent_lock,
+            )
+            if (
+                isinstance(classification, InvalidBootstrapPrefix)
+                or classification.phase != "P0"
+                or classification.p0_cleanup is not None
+            ):
+                raise ValueError("bootstrap claim cleanup recheck failed")
+    elif classification.p0_cleanup is not None:
+        raise ValueError("claim private cleanup token outside P0")
+    return classification
 
 
 def _install_or_adopt_bootstrap_claim_at(
     batches_fd: int,
     fingerprint: str,
+    intent_lock: dict[str, object],
 ) -> dict[str, object]:
     try:
         existing = _read_canonical_bootstrap_claim_at(batches_fd)
@@ -2365,7 +2467,11 @@ def _install_or_adopt_bootstrap_claim_at(
     if existing is not None:
         if existing["batchIntentFingerprint"] != fingerprint:
             raise ValueError("bootstrap claim intent mismatch")
-        _cleanup_authoritative_claim_private_at(batches_fd, existing)
+        _classify_existing_claim_before_cleanup_at(
+            batches_fd,
+            existing,
+            intent_lock,
+        )
         return existing
     _require_preclaim_tree_absent_at(batches_fd)
     private_names = _claim_private_namespace_names_at(batches_fd)
@@ -2394,7 +2500,11 @@ def _install_or_adopt_bootstrap_claim_at(
         actual = _read_canonical_bootstrap_claim_at(batches_fd)
         if actual != private_claim:
             raise ValueError("recovered bootstrap claim mismatch")
-        _cleanup_authoritative_claim_private_at(batches_fd, actual)
+        _classify_existing_claim_before_cleanup_at(
+            batches_fd,
+            actual,
+            intent_lock,
+        )
         return actual
     nonce = secrets.token_hex(16)
     proposed = _bootstrap_claim(fingerprint, nonce)
@@ -2419,17 +2529,16 @@ def _install_or_adopt_bootstrap_claim_at(
         _failpoint("after_bootstrap_claim_link_directory_fsync")
     except FileExistsError:
         won = False
-        _durably_remove_owned_unpublished_private_at(
-            batches_fd,
-            temporary_name,
-            _canonical_document_bytes(proposed),
-        )
     actual = _read_canonical_bootstrap_claim_at(batches_fd)
     if actual["batchIntentFingerprint"] != fingerprint:
         raise ValueError("bootstrap claim intent mismatch")
     if won and actual != proposed:
         raise ValueError("bootstrap claim winner mismatch")
-    _cleanup_authoritative_claim_private_at(batches_fd, actual)
+    _classify_existing_claim_before_cleanup_at(
+        batches_fd,
+        actual,
+        intent_lock,
+    )
     return actual
 ```
 
@@ -2443,10 +2552,14 @@ to its exact full-fingerprint/full-nonce grammar.
 `_read_canonical_bootstrap_private_at` applies the same canonical schema,
 regular non-symlink, fingerprint, and nonce validation to C0. The
 `_require_preclaim_tree_absent_at` helper requires B001, `B001.lock`, and
-`B001.boundary.json` all to be absent before C0 recovery or a fresh claim. The
-owned-unpublished helper requires regular non-symlink type and the exact
-proposed bytes before unlink and parent fsync. No losing process compares its
-independently chosen nonce to the winner's nonce.
+`B001.boundary.json` all to be absent before C0 recovery or a fresh claim. A
+lost no-replace link preserves its private name for the full classifier and
+fails closed rather than performing pre-classification cleanup. No losing
+process compares its independently chosen nonce to the winner's nonce.
+`_read_only_bootstrap_tree_digest_at` uses the same full snapshot schema as
+the classifier and performs no mutation. The cleanup helper accepts neither a
+raw claim nor a phase string; only the classifier-issued
+`ValidatedP0Cleanup` object can supply its required interface.
 
 `_bootstrap_or_open_completed_batch_at` first distinguishes an exact
 claimless completed bootstrap from claim acquisition without mutation. The
@@ -3776,9 +3889,10 @@ the tracked B002 plan; the external review/generated tree remains untracked.
   reconcile/manifest validation.
 - Bootstrap consistency: the exclusive pinned-batches flock and durable
   canonical claim precede B001 mkdir; same-intent claim recovery accepts only
-  P0 through P5 ordered prefixes, not arbitrary subsets; claim removal and
-  batches-directory fsync follow verified durable intent, boundary, five empty
-  fixed-order children, and zero bootstrap private names.
+  read-only-full-classified P0 through P5 ordered prefixes, not arbitrary
+  subsets. Claim-private cleanup requires a classifier-issued exact-P0 token;
+  claim removal and batches-directory fsync follow verified durable intent,
+  boundary, five empty fixed-order children, and zero bootstrap private names.
 - Durability order: prepared file fsync precedes its parent-directory fsync;
   both media directory fsyncs precede the prepared receipt; JSON temporary
   unlink precedes a final parent-directory fsync.
