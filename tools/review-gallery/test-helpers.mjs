@@ -1,4 +1,16 @@
+import { createHash } from "node:crypto";
+import { mkdir, writeFile } from "node:fs/promises";
+import { join } from "node:path";
 import { LANES } from "./manifest.mjs";
+
+const ONE_PIXEL_PNG = Buffer.from(
+  "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=",
+  "base64",
+);
+const ONE_PIXEL_WEBP = Buffer.from(
+  "UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEAAUAmJQBOgCHwAP7+3gAA",
+  "base64",
+);
 
 export function makeValidManifest(overrides = {}) {
   const entries = LANES.flatMap((lane, laneIndex) =>
@@ -61,4 +73,53 @@ export function makeValidManifest(overrides = {}) {
     entries,
     ...overrides,
   };
+}
+
+export async function createDemoFixture(
+  dataRoot,
+  { batchId = "B001" } = {},
+) {
+  const manifest = makeValidManifest();
+  const batchDir = join(dataRoot, "batches", batchId);
+  const referencePaths = [
+    "references/akari-v1.5-b3-body-balance.png",
+    "references/akari-v1.4-g2-balanced-lines.png",
+  ];
+  const referenceHash = createHash("sha256")
+    .update(ONE_PIXEL_PNG)
+    .digest("hex");
+
+  manifest.batchId = batchId;
+  manifest.title = `Akari v1.5 Kawaii 1000 ${batchId}`;
+  for (const [index, entry] of manifest.entries.entries()) {
+    const ordinal = index + 1;
+    entry.id = `${batchId}-${String(ordinal).padStart(3, "0")}`;
+    entry.artifact.imagePath =
+      `batches/${batchId}/images/image-${ordinal}.png`;
+    entry.artifact.thumbnailPath =
+      `batches/${batchId}/thumbs/image-${ordinal}.webp`;
+    if (batchId === "B000") entry.generation.toolMode = "demo";
+    for (const reference of entry.references) {
+      reference.sha256 = referenceHash;
+    }
+  }
+
+  await mkdir(join(batchDir, "images"), { recursive: true });
+  await mkdir(join(batchDir, "thumbs"), { recursive: true });
+  await mkdir(join(dataRoot, "references"), { recursive: true });
+  await Promise.all([
+    ...referencePaths.map((path) =>
+      writeFile(join(dataRoot, path), ONE_PIXEL_PNG)
+    ),
+    ...manifest.entries.flatMap((entry) => [
+      writeFile(join(dataRoot, entry.artifact.imagePath), ONE_PIXEL_PNG),
+      writeFile(join(dataRoot, entry.artifact.thumbnailPath), ONE_PIXEL_WEBP),
+    ]),
+  ]);
+  await writeFile(
+    join(batchDir, "manifest.json"),
+    `${JSON.stringify(manifest, null, 2)}\n`,
+    "utf8",
+  );
+  return { manifest, batchDir };
 }
