@@ -1,0 +1,301 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, sans-serif;
+  background: #171619;
+  color: #f7f2f3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+button,
+select,
+textarea {
+  min-height: 44px;
+  border-radius: 0.35rem;
+  font: inherit;
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+button:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+dialog:focus-visible {
+  outline: 3px solid #f4c86b;
+  outline-offset: 2px;
+}
+
+.app-header,
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.75rem 1rem;
+}
+
+.app-header {
+  justify-content: space-between;
+  border-bottom: 1px solid #464147;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: clamp(1.1rem, 3vw, 1.65rem);
+}
+
+.progress-group {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+[data-readiness] {
+  color: #f4c86b;
+}
+
+nav {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  background: rgb(23 22 25 / 96%);
+  border-bottom: 1px solid #39353b;
+}
+
+nav label {
+  display: grid;
+  gap: 0.2rem;
+  color: #d3ccd4;
+  font-size: 0.75rem;
+}
+
+nav select {
+  max-width: min(75vw, 18rem);
+  padding: 0 0.55rem;
+  border: 1px solid #625b64;
+  background: #28242a;
+  color: inherit;
+}
+
+.load-error,
+.save-error {
+  color: #ff9da3;
+}
+
+.load-error {
+  margin: 0;
+  padding: 0 1rem;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+[data-image-id] {
+  min-width: 0;
+  overflow: hidden;
+  padding: 0;
+  border: 3px solid #464147;
+  background: #242126;
+  color: inherit;
+  text-align: left;
+}
+
+[data-image-id]:disabled {
+  cursor: not-allowed;
+  opacity: 0.78;
+}
+
+[data-review-status="reject"] {
+  border-color: #d96b71;
+}
+
+[data-review-status="keep"] {
+  border-color: #75a9d6;
+}
+
+[data-review-status="favorite"] {
+  border-color: #efb74e;
+}
+
+[data-image-id] img,
+[data-detail-image] {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+}
+
+[data-image-id] img {
+  aspect-ratio: 1;
+  background: #111;
+}
+
+.card-copy {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.55rem;
+}
+
+.card-copy small {
+  overflow: hidden;
+  color: #c9c2ca;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.media-unavailable {
+  display: grid;
+  min-height: 170px;
+  place-items: center;
+  padding: 1rem;
+  color: #ffb6ba;
+  text-align: center;
+}
+
+dialog {
+  width: min(96vw, 1100px);
+  max-height: 94vh;
+  padding: 0.75rem;
+  overflow: auto;
+  border: 1px solid #6a626c;
+  background: #211e23;
+  color: inherit;
+}
+
+dialog::backdrop {
+  background: rgb(0 0 0 / 72%);
+}
+
+.dialog-toolbar {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.dialog-toolbar button,
+.status-controls button,
+.reason-controls button,
+.save-review {
+  padding: 0.55rem 0.8rem;
+  border: 1px solid #625b64;
+  background: #312c33;
+  color: inherit;
+}
+
+dialog figure {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+}
+
+[data-detail-image] {
+  max-height: 52vh;
+  background: #111;
+}
+
+.review-panel,
+.note-field {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.status-controls,
+.reason-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.status-controls [aria-pressed="true"],
+.reason-controls [aria-pressed="true"] {
+  border-color: #f4c86b;
+  background: #514327;
+}
+
+.note-field textarea {
+  width: 100%;
+  min-height: 5.5rem;
+  resize: vertical;
+  border: 1px solid #625b64;
+  background: #181619;
+  color: inherit;
+}
+
+.save-review {
+  justify-self: start;
+  background: #3d5b4b;
+}
+
+.save-error {
+  min-height: 1.4em;
+  margin: 0;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 599px) {
+  .review-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  nav {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  nav label:first-child {
+    grid-column: 1 / -1;
+  }
+
+  nav select {
+    width: 100%;
+    max-width: none;
+  }
+
+  dialog {
+    width: 100vw;
+    max-width: none;
+    max-height: 100dvh;
+    margin: 0;
+  }
+
+  [data-detail-image] {
+    max-height: 42vh;
+  }
+
+  .status-controls button,
+  .reason-controls button {
+    flex: 1 1 44%;
+  }
+
+  .save-review {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

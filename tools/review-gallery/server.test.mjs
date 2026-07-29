@@ -108,6 +108,48 @@ async function startFixture(t, options = {}) {
   return { dataRoot, fixture, running };
 }
 
+test("review application serves only its exact public allowlist", async (t) => {
+  const { running } = await startFixture(t);
+  const publicResponses = await Promise.all([
+    fetch(`${running.url}/`),
+    fetch(`${running.url}/styles.css`),
+    fetch(`${running.url}/app.js`),
+  ]);
+  assert.deepEqual(
+    publicResponses.map((response) => response.status),
+    [200, 200, 200],
+  );
+  assert.match(
+    publicResponses[0].headers.get("content-type"),
+    /^text\/html;\s*charset=utf-8$/,
+  );
+  assert.match(
+    publicResponses[1].headers.get("content-type"),
+    /^text\/css;\s*charset=utf-8$/,
+  );
+  assert.match(
+    publicResponses[2].headers.get("content-type"),
+    /^text\/javascript;\s*charset=utf-8$/,
+  );
+  assert.equal(publicResponses[0].headers.get("cache-control"), "no-store");
+
+  for (const path of [
+    "/index.html",
+    "/public/index.html",
+    "/assets/app.js",
+    "/app.js/extra",
+    "/%2e%2e/package.json",
+  ]) {
+    const response = await fetch(`${running.url}${path}`);
+    assert.equal(response.status, 404, path);
+    assert.equal(response.headers.get("content-type"), "application/json; charset=utf-8");
+  }
+  assert.equal(
+    (await fetch(`${running.url}/`, { method: "POST" })).status,
+    404,
+  );
+});
+
 async function descriptorForPath(path) {
   const descriptorDirectory = `/proc/${process.pid}/fd`;
   for (const name of await readdir(descriptorDirectory)) {

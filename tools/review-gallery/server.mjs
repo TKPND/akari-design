@@ -1,5 +1,6 @@
 import { spawn } from "node:child_process";
 import { createHash, randomUUID } from "node:crypto";
+import { readFile } from "node:fs/promises";
 import { createServer } from "node:http";
 import { networkInterfaces } from "node:os";
 import {
@@ -24,6 +25,20 @@ const DEFAULT_THUMBNAIL_REPAIR_TIMEOUT_MS = 15_000;
 const STDERR_LIMIT = 64 * 1024;
 const PNG_SIGNATURE = Buffer.from("89504e470d0a1a0a", "hex");
 const disposePinnedRoot = Symbol("disposePinnedRoot");
+const staticAssets = new Map([
+  ["/", {
+    path: new URL("./public/index.html", import.meta.url),
+    contentType: "text/html; charset=utf-8",
+  }],
+  ["/styles.css", {
+    path: new URL("./public/styles.css", import.meta.url),
+    contentType: "text/css; charset=utf-8",
+  }],
+  ["/app.js", {
+    path: new URL("./public/app.js", import.meta.url),
+    contentType: "text/javascript; charset=utf-8",
+  }],
+]);
 
 class BatchNotFoundError extends Error {}
 class BatchValidationError extends Error {}
@@ -111,6 +126,19 @@ function failure(response, status, code, message) {
 
 function notFound(response) {
   failure(response, 404, "not_found", "resource not found");
+}
+
+async function serveStaticAsset(pathname, response) {
+  const asset = staticAssets.get(pathname);
+  if (asset === undefined) return false;
+  const contents = await readFile(asset.path);
+  response.writeHead(200, {
+    "cache-control": "no-store",
+    "content-length": contents.length,
+    "content-type": asset.contentType,
+  });
+  response.end(contents);
+  return true;
 }
 
 function decodeRoute(pathname) {
@@ -681,6 +709,12 @@ export function createGalleryServer({
       url = new URL(request.url, "http://localhost");
     } catch {
       notFound(response);
+      return;
+    }
+    if (
+      request.method === "GET" &&
+      await serveStaticAsset(url.pathname, response)
+    ) {
       return;
     }
     const segments = decodeRoute(url.pathname);

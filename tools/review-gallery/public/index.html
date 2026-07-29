@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Akari Kawaii 1000 Review</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Akari Kawaii 1000 Review</h1>
+      <div class="progress-group">
+        <div data-progress aria-live="polite">0 / 0</div>
+        <strong data-readiness aria-live="polite" hidden></strong>
+      </div>
+    </header>
+    <nav aria-label="Review filters">
+      <label>
+        <span>Batch</span>
+        <select data-batch-filter aria-label="Batch"></select>
+      </label>
+      <label>
+        <span>Lane</span>
+        <select data-lane-filter aria-label="Lane"></select>
+      </label>
+      <label>
+        <span>Status</span>
+        <select data-status-filter aria-label="Status"></select>
+      </label>
+      <label>
+        <span>Texture</span>
+        <select data-texture-filter aria-label="Texture focus"></select>
+      </label>
+      <label>
+        <span>Reason</span>
+        <select data-reason-filter aria-label="Reject reason"></select>
+      </label>
+    </nav>
+    <main>
+      <p class="load-error" data-load-error role="alert"></p>
+      <div class="review-grid" data-review-grid aria-live="polite"></div>
+    </main>
+    <dialog data-detail-dialog aria-labelledby="detail-caption" tabindex="-1">
+      <div class="dialog-toolbar">
+        <button type="button" data-close aria-label="Close">×</button>
+        <button type="button" data-previous>Previous</button>
+        <button type="button" data-next>Next</button>
+      </div>
+      <figure>
+        <img data-detail-image alt="">
+        <figcaption id="detail-caption" data-detail-caption></figcaption>
+      </figure>
+      <section class="review-panel" aria-label="Review">
+        <div class="status-controls" data-review-controls></div>
+        <div class="reason-controls" data-reason-controls hidden></div>
+        <label class="note-field">
+          <span>Note</span>
+          <textarea data-review-note maxlength="1000"></textarea>
+        </label>
+        <button class="save-review" type="button" data-save-review>
+          Save review
+        </button>
+        <p class="save-error" data-save-error role="alert"></p>
+      </section>
+    </dialog>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
