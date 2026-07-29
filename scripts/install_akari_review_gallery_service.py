@@ -11,7 +11,7 @@ from pathlib import Path
 
 
 SERVICE_NAME = "akari-review-gallery.service"
-UNSAFE_UNIT_PATH_CHARACTERS = {'"', "\\", "%"}
+UNSAFE_UNIT_PATH_CHARACTERS = {'"', "$", "\\", "%"}
 
 
 def _unit_path(path: Path) -> str:

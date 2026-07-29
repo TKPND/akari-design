@@ -130,6 +130,23 @@ WantedBy=default.target
                 port=8787,
             )
 
+    def test_unit_rejects_systemd_variable_expansion_in_all_rendered_paths(self):
+        for label, node, repo_root in (
+            ("execstart_node", Path("/opt/$NODE/bin/node"), Path("/srv/akari-design")),
+            ("derived_server", Path("/opt/node/bin/node"), Path("/srv/$REPO")),
+        ):
+            with self.subTest(label=label), self.assertRaisesRegex(
+                ValueError, "unsafe absolute path"
+            ):
+                render_unit(
+                    node=node,
+                    python=Path("/opt/venv/bin/python"),
+                    repo_root=repo_root,
+                    data_root=Path("/srv/data"),
+                    host="100.125.117.75",
+                    port=8787,
+                )
+
     def test_install_writes_unit_and_runs_user_systemd(self):
         with tempfile.TemporaryDirectory() as temporary:
             calls = []
