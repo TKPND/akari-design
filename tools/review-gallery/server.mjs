@@ -362,15 +362,22 @@ function productionThumbnailBuilder({
       });
       const stderr = [];
       const stderrState = { bytes: 0 };
+      let aborted = false;
       let settled = false;
       let forceKillTimer;
+      const cleanup = () => {
+        clearTimeout(forceKillTimer);
+        signal?.removeEventListener?.("abort", onAbort);
+      };
       const rejectOnce = (error) => {
         if (settled) return;
         settled = true;
+        cleanup();
         rejectRun(error);
       };
       const onAbort = () => {
-        rejectOnce(new Error("thumbnail builder aborted"));
+        if (settled) return;
+        aborted = true;
         child.kill("SIGTERM");
         forceKillTimer = setTimeout(() => child.kill("SIGKILL"), 250);
         forceKillTimer.unref();
@@ -381,10 +388,13 @@ function productionThumbnailBuilder({
       );
       child.once("error", rejectOnce);
       child.once("close", (code, terminationSignal) => {
-        clearTimeout(forceKillTimer);
-        signal?.removeEventListener?.("abort", onAbort);
         if (settled) return;
         settled = true;
+        cleanup();
+        if (aborted) {
+          rejectRun(new Error("thumbnail builder aborted"));
+          return;
+        }
         if (code === 0) {
           resolveRun();
           return;
@@ -445,8 +455,25 @@ export function createGalleryServer({
 
   async function repairThumbnail(source, output) {
     const existing = thumbnailRepairs.get(output);
-    if (existing) return existing;
-    const repair = pinnedRoot.withParent(
+    if (existing) return existing.result;
+    let resultSettled = false;
+    let rejectResult;
+    let resolveResult;
+    const result = new Promise((resolve, reject) => {
+      resolveResult = (value) => {
+        if (resultSettled) return;
+        resultSettled = true;
+        resolve(value);
+      };
+      rejectResult = (error) => {
+        if (resultSettled) return;
+        resultSettled = true;
+        reject(error);
+      };
+    });
+    const entry = { result };
+    thumbnailRepairs.set(output, entry);
+    const lease = pinnedRoot.withParent(
       output,
       async (outputDirectory, outputName) => {
         const alreadyValid = await validWebpAt(
@@ -456,7 +483,6 @@ export function createGalleryServer({
         if (alreadyValid) return alreadyValid;
         const temporaryName = `.akari-thumb-${randomUUID()}`;
         await outputDirectory.mkdir(temporaryName, { mode: 0o700 });
-        let timer;
         try {
           return await outputDirectory.withDirectory(
             temporaryName,
@@ -470,14 +496,21 @@ export function createGalleryServer({
                   { signal: controller.signal },
                 )
               );
-              const timeout = new Promise((_, rejectTimeout) => {
-                timer = setTimeout(() => {
-                  rejectTimeout(new Error("thumbnail repair timed out"));
-                  controller.abort();
-                }, repairTimeoutMs);
-                timer.unref();
-              });
-              await Promise.race([build, timeout]);
+              let timedOut = false;
+              const timer = setTimeout(() => {
+                timedOut = true;
+                rejectResult(new Error("thumbnail repair timed out"));
+                controller.abort();
+              }, repairTimeoutMs);
+              timer.unref();
+              try {
+                await build;
+              } catch (error) {
+                if (!timedOut) throw error;
+              } finally {
+                clearTimeout(timer);
+              }
+              if (timedOut) return undefined;
               const rebuilt = await validWebpAt(
                 temporaryDirectory,
                 "thumbnail.webp",
@@ -503,7 +536,6 @@ export function createGalleryServer({
             },
           );
         } finally {
-          clearTimeout(timer);
           await outputDirectory.remove(temporaryName, {
             recursive: true,
             force: true,
@@ -511,14 +543,12 @@ export function createGalleryServer({
         }
       },
     );
-    thumbnailRepairs.set(output, repair);
-    try {
-      return await repair;
-    } finally {
-      if (thumbnailRepairs.get(output) === repair) {
+    lease.then(resolveResult, rejectResult).finally(() => {
+      if (thumbnailRepairs.get(output) === entry) {
         thumbnailRepairs.delete(output);
       }
-    }
+    });
+    return result;
   }
 
   async function listBatches(response) {
@@ -776,7 +806,7 @@ export function createGalleryServer({
   }
 
   const server = createServer((request, response) => {
-    handle(request, response).catch(() => {
+    pinnedRoot.withLease(() => handle(request, response)).catch(() => {
       if (!response.headersSent) {
         failure(response, 500, "internal_error", "internal server error");
       } else {

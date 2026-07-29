@@ -1,9 +1,13 @@
 import assert from "node:assert/strict";
 import {
+  chmod,
   copyFile,
   mkdtemp,
   mkdir,
+  open,
   readFile,
+  readdir,
+  readlink,
   rename,
   rm,
   symlink,
@@ -17,6 +21,7 @@ import {
   assertSafeBindHost,
   startGalleryServer,
 } from "./server.mjs";
+import { createPinnedRoot } from "./pinned-fs.mjs";
 import { createDemoFixture } from "./test-helpers.mjs";
 
 test("public wildcard hosts are always rejected", () => {
@@ -98,6 +103,91 @@ async function startFixture(t, options = {}) {
   t.after(() => running.close());
   return { dataRoot, fixture, running };
 }
+
+async function descriptorForPath(path) {
+  const descriptorDirectory = `/proc/${process.pid}/fd`;
+  for (const name of await readdir(descriptorDirectory)) {
+    try {
+      if (await readlink(join(descriptorDirectory, name)) === path) {
+        return Number(name);
+      }
+    } catch (error) {
+      if (error.code !== "ENOENT") throw error;
+    }
+  }
+  throw new Error(`no open descriptor for ${path}`);
+}
+
+async function waitForJson(path, timeoutMs = 500) {
+  const deadline = Date.now() + timeoutMs;
+  while (Date.now() < deadline) {
+    try {
+      return JSON.parse(await readFile(path, "utf8"));
+    } catch (error) {
+      if (error.code !== "ENOENT") throw error;
+    }
+    await new Promise((resolve) => setTimeout(resolve, 5));
+  }
+  throw new Error(`timed out waiting for ${path}`);
+}
+
+async function waitForProcessExit(pid, timeoutMs = 1_000) {
+  const deadline = Date.now() + timeoutMs;
+  while (Date.now() < deadline) {
+    try {
+      process.kill(pid, 0);
+    } catch (error) {
+      if (error.code === "ESRCH") return;
+      throw error;
+    }
+    await new Promise((resolve) => setTimeout(resolve, 10));
+  }
+  throw new Error(`process ${pid} did not exit`);
+}
+
+test("pinned root close defers descriptor reuse until active work settles", async () => {
+  const dataRoot = await mkdtemp(join(tmpdir(), "akari-pinned-root-"));
+  await writeFile(join(dataRoot, "probe.txt"), "inside", "utf8");
+  const outside = await mkdtemp(join(tmpdir(), "akari-outside-"));
+  const pinnedRoot = createPinnedRoot(dataRoot);
+  let enterWork;
+  const workEntered = new Promise((resolve) => {
+    enterWork = resolve;
+  });
+  let releaseWork;
+  const workBlocked = new Promise((resolve) => {
+    releaseWork = resolve;
+  });
+  const activeWork = pinnedRoot.withLease(async () => {
+    enterWork();
+    await workBlocked;
+    assert.equal(
+      await pinnedRoot.fileSystem.readFile("probe.txt", "utf8"),
+      "inside",
+    );
+  });
+  await workEntered;
+  const rootFd = await descriptorForPath(dataRoot);
+  pinnedRoot.close();
+
+  const outsideHandles = [];
+  let rootFdWasReused = false;
+  try {
+    for (let index = 0; index < 64; index += 1) {
+      const handle = await open(outside, "r");
+      outsideHandles.push(handle);
+      if (handle.fd === rootFd) rootFdWasReused = true;
+    }
+    assert.equal(rootFdWasReused, false);
+  } finally {
+    releaseWork();
+    await activeWork;
+    await Promise.all(outsideHandles.map((handle) => handle.close()));
+    pinnedRoot.close();
+    await rm(dataRoot, { recursive: true, force: true });
+    await rm(outside, { recursive: true, force: true });
+  }
+});
 
 test("API returns a validated batch and review progress", async (t) => {
   const { running } = await startFixture(t);
@@ -515,7 +605,8 @@ test("thumbnail repair reads a private copy of the validated PNG", async (t) => 
 });
 
 test("parent replacement cannot redirect thumbnail install or cleanup", async (t) => {
-  let outsideSentinel;
+  let outsideCleanupSentinel;
+  let outsideInstallSentinel;
   let pinnedThumbs;
   let validWebp;
   const outside = await mkdtemp(join(tmpdir(), "akari-outside-"));
@@ -530,8 +621,21 @@ test("parent replacement cannot redirect thumbnail install or cleanup", async (t
         basename(dirname(output)),
       );
       await mkdir(redirectedTemporary);
-      outsideSentinel = join(redirectedTemporary, "sentinel.txt");
-      await writeFile(outsideSentinel, "outside sentinel", "utf8");
+      outsideCleanupSentinel = join(
+        redirectedTemporary,
+        "cleanup-sentinel.txt",
+      );
+      outsideInstallSentinel = join(outside, "image-1.webp");
+      await writeFile(
+        outsideCleanupSentinel,
+        "outside cleanup sentinel",
+        "utf8",
+      );
+      await writeFile(
+        outsideInstallSentinel,
+        "outside install sentinel",
+        "utf8",
+      );
       await symlink(outside, thumbs);
     },
   });
@@ -541,7 +645,14 @@ test("parent replacement cannot redirect thumbnail install or cleanup", async (t
   const response = await fetch(
     `${running.url}/media/B001/B001-001/thumb`,
   );
-  assert.equal(await readFile(outsideSentinel, "utf8"), "outside sentinel");
+  assert.equal(
+    await readFile(outsideCleanupSentinel, "utf8"),
+    "outside cleanup sentinel",
+  );
+  assert.equal(
+    await readFile(outsideInstallSentinel, "utf8"),
+    "outside install sentinel",
+  );
   assert.equal(response.status, 200);
   assert.equal(
     (await readFile(join(pinnedThumbs, "image-1.webp")))
@@ -549,6 +660,148 @@ test("parent replacement cannot redirect thumbnail install or cleanup", async (t
       .toString("ascii"),
     "RIFF",
   );
+});
+
+test("timed-out builder cannot access a reused directory descriptor", async (t) => {
+  let builderOutput;
+  let finishBuilder;
+  let validWebp;
+  const builderBlocked = new Promise((resolve) => {
+    finishBuilder = resolve;
+  });
+  let markBuilderFinished;
+  const builderFinished = new Promise((resolve) => {
+    markBuilderFinished = resolve;
+  });
+  const outside = await mkdtemp(join(tmpdir(), "akari-reused-fd-"));
+  t.after(() => rm(outside, { recursive: true, force: true }));
+  const { fixture, running } = await startFixture(t, {
+    thumbnailRepairTimeoutMs: 40,
+    thumbnailBuilder: async (_source, output) => {
+      builderOutput = output;
+      await builderBlocked;
+      try {
+        await writeFile(output, validWebp);
+      } finally {
+        markBuilderFinished();
+      }
+    },
+  });
+  validWebp = await readFile(join(fixture.batchDir, "thumbs/image-2.webp"));
+  await rm(join(fixture.batchDir, "thumbs/image-1.webp"));
+
+  const response = await Promise.race([
+    fetch(`${running.url}/media/B001/B001-001/thumb`),
+    new Promise((_, reject) => setTimeout(
+      () => reject(new Error("thumbnail response exceeded its timeout bound")),
+      500,
+    )),
+  ]);
+  assert.equal(response.status, 404);
+  const descriptor = Number(
+    builderOutput.match(/^\/proc\/\d+\/fd\/(\d+)\//)?.[1],
+  );
+  assert.equal(Number.isInteger(descriptor), true);
+
+  const outsideHandles = [];
+  try {
+    for (let index = 0; index < 64; index += 1) {
+      outsideHandles.push(await open(outside, "r"));
+    }
+    finishBuilder();
+    await builderFinished;
+    await new Promise((resolve) => setImmediate(resolve));
+    await assert.rejects(
+      readFile(join(outside, "thumbnail.webp")),
+      { code: "ENOENT" },
+    );
+  } finally {
+    finishBuilder();
+    await Promise.all(outsideHandles.map((handle) => handle.close()));
+  }
+});
+
+test("production builder keeps its descriptor lease until child exit", async (t) => {
+  const builderDirectory = await mkdtemp(
+    join(tmpdir(), "akari-thumbnail-builder-"),
+  );
+  const executable = join(builderDirectory, "fake-python");
+  const builderScript = join(builderDirectory, "fake-builder.cjs");
+  const marker = join(builderDirectory, "started.json");
+  t.after(() => rm(builderDirectory, { recursive: true, force: true }));
+  await writeFile(
+    builderScript,
+    `
+const { writeFileSync } = require("node:fs");
+const { join } = require("node:path");
+const outputIndex = process.argv.indexOf("--output");
+const output = process.argv[outputIndex + 1];
+process.on("SIGTERM", () => {});
+writeFileSync(join(__dirname, "started.json"), JSON.stringify({
+  pid: process.pid,
+  output,
+}));
+setTimeout(() => {
+  writeFileSync(
+    output,
+    Buffer.from(
+      "UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEAAUAmJQBOgCHwAP7+3gAA",
+      "base64",
+    ),
+  );
+}, 250);
+setInterval(() => {}, 1_000);
+`,
+    "utf8",
+  );
+  await writeFile(
+    executable,
+    `#!/bin/sh
+unset NODE_TEST_CONTEXT
+exec ${process.execPath} ${builderScript} "$@"
+`,
+    "utf8",
+  );
+  await chmod(executable, 0o700);
+  const outside = await mkdtemp(join(tmpdir(), "akari-child-reused-fd-"));
+  t.after(() => rm(outside, { recursive: true, force: true }));
+  const { fixture, running } = await startFixture(t, {
+    repoRoot: process.cwd(),
+    pythonExecutable: executable,
+    thumbnailRepairTimeoutMs: 150,
+  });
+  await rm(join(fixture.batchDir, "thumbs/image-1.webp"));
+
+  const request = fetch(
+    `${running.url}/media/B001/B001-001/thumb`,
+  );
+  const started = await waitForJson(marker);
+  const response = await Promise.race([
+    request,
+    new Promise((_, reject) => setTimeout(
+      () => reject(new Error("thumbnail response exceeded its timeout bound")),
+      700,
+    )),
+  ]);
+  assert.equal(response.status, 404);
+  const descriptor = Number(
+    started.output.match(/^\/proc\/\d+\/fd\/(\d+)\//)?.[1],
+  );
+  assert.equal(Number.isInteger(descriptor), true);
+
+  const outsideHandles = [];
+  try {
+    for (let index = 0; index < 64; index += 1) {
+      outsideHandles.push(await open(outside, "r"));
+    }
+    await waitForProcessExit(started.pid);
+    await assert.rejects(
+      readFile(join(outside, "thumbnail.webp")),
+      { code: "ENOENT" },
+    );
+  } finally {
+    await Promise.all(outsideHandles.map((handle) => handle.close()));
+  }
 });
 
 test("missing thumbnail is rebuilt once", async (t) => {

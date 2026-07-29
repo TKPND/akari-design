@@ -52,7 +52,26 @@ export function createPinnedRoot(dataRoot) {
     closeSync(rootFd);
     throw error;
   }
+  let activeLeases = 0;
+  let closeRequested = false;
   let closed = false;
+
+  function closeIfIdle() {
+    if (!closeRequested || activeLeases !== 0 || closed) return;
+    closed = true;
+    closeSync(rootFd);
+  }
+
+  async function withLease(work) {
+    if (closed) throw new Error("pinned dataRoot is closed");
+    activeLeases += 1;
+    try {
+      return await work();
+    } finally {
+      activeLeases -= 1;
+      closeIfIdle();
+    }
+  }
 
   function partsFor(path) {
     if (typeof path !== "string") throw invalidPath();
@@ -93,12 +112,14 @@ export function createPinnedRoot(dataRoot) {
   }
 
   async function withDirectory(path, work) {
-    const handle = await openDirectory(partsFor(path));
-    try {
-      return await work(handle?.fd ?? rootFd);
-    } finally {
-      await handle?.close();
-    }
+    return withLease(async () => {
+      const handle = await openDirectory(partsFor(path));
+      try {
+        return await work(handle?.fd ?? rootFd);
+      } finally {
+        await handle?.close();
+      }
+    });
   }
 
   async function readAt(fd, name, encoding) {
@@ -171,39 +192,43 @@ export function createPinnedRoot(dataRoot) {
   }
 
   async function withParent(path, work) {
-    const parts = partsFor(path);
-    if (parts.length === 0) throw invalidPath();
-    const name = parts.pop();
-    const handle = await openDirectory(parts);
-    try {
-      return await work(directoryContext(handle?.fd ?? rootFd), name);
-    } finally {
-      await handle?.close();
-    }
+    return withLease(async () => {
+      const parts = partsFor(path);
+      if (parts.length === 0) throw invalidPath();
+      const name = parts.pop();
+      const handle = await openDirectory(parts);
+      try {
+        return await work(directoryContext(handle?.fd ?? rootFd), name);
+      } finally {
+        await handle?.close();
+      }
+    });
   }
 
   async function ensureDirectory(path) {
-    const parts = partsFor(path);
-    let ownedHandle;
-    let currentFd = rootFd;
-    try {
-      for (const part of parts) {
-        const childPath = descriptorPath(currentFd, part);
-        let nextHandle;
-        try {
-          nextHandle = await open(childPath, directoryFlags);
-        } catch (error) {
-          if (error.code !== "ENOENT") throw error;
-          await mkdir(childPath);
-          nextHandle = await open(childPath, directoryFlags);
+    return withLease(async () => {
+      const parts = partsFor(path);
+      let ownedHandle;
+      let currentFd = rootFd;
+      try {
+        for (const part of parts) {
+          const childPath = descriptorPath(currentFd, part);
+          let nextHandle;
+          try {
+            nextHandle = await open(childPath, directoryFlags);
+          } catch (error) {
+            if (error.code !== "ENOENT") throw error;
+            await mkdir(childPath);
+            nextHandle = await open(childPath, directoryFlags);
+          }
+          await ownedHandle?.close();
+          ownedHandle = nextHandle;
+          currentFd = nextHandle.fd;
         }
+      } finally {
         await ownedHandle?.close();
-        ownedHandle = nextHandle;
-        currentFd = nextHandle.fd;
       }
-    } finally {
-      await ownedHandle?.close();
-    }
+    });
   }
 
   const fileSystem = {
@@ -240,6 +265,7 @@ export function createPinnedRoot(dataRoot) {
   return {
     canonicalRoot,
     fileSystem,
+    withLease,
     withParent,
     readdir(path, options) {
       return withDirectory(path, (fd) =>
@@ -247,9 +273,8 @@ export function createPinnedRoot(dataRoot) {
       );
     },
     close() {
-      if (closed) return;
-      closed = true;
-      closeSync(rootFd);
+      closeRequested = true;
+      closeIfIdle();
     },
   };
 }
