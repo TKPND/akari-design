@@ -704,10 +704,19 @@ export function createGalleryServer({
   }
 
   async function handle(request, response) {
+    const requestTarget = request.url;
     let url;
     try {
-      url = new URL(request.url, "http://localhost");
+      url = new URL(requestTarget, "http://localhost");
     } catch {
+      notFound(response);
+      return;
+    }
+    const queryIndex = requestTarget.indexOf("?");
+    const rawPathname = queryIndex === -1
+      ? requestTarget
+      : requestTarget.slice(0, queryIndex);
+    if (rawPathname !== url.pathname) {
       notFound(response);
       return;
     }

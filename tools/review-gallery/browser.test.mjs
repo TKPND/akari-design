@@ -269,3 +269,146 @@ test("readiness appears only after fifty successful review saves", async (t) => 
   await page.waitForSelector("text=Ready for next batch");
   assert.match(await page.locator("[data-progress]").textContent(), /50\s*\/\s*50/);
 });
+
+test("a completed save cannot mutate a newly selected batch", async (t) => {
+  const { page } = await openBrowserFixture(t, {
+    width: 1280,
+    height: 800,
+  }, {
+    additionalBatchIds: ["B002"],
+  });
+  let releaseSave;
+  const saveGate = new Promise((resolve) => {
+    releaseSave = resolve;
+  });
+  let markSaveStarted;
+  const saveStarted = new Promise((resolve) => {
+    markSaveStarted = resolve;
+  });
+  let markSaveCompleted;
+  const saveCompleted = new Promise((resolve) => {
+    markSaveCompleted = resolve;
+  });
+  await page.route(
+    "**/api/batches/B001/reviews/B001-001",
+    async (route) => {
+      markSaveStarted();
+      await saveGate;
+      const response = await route.fetch();
+      await route.fulfill({ response });
+      markSaveCompleted();
+    },
+  );
+
+  await page.locator("[data-image-id='B001-001']").click();
+  await page.locator("[data-review-status-button='keep']").click();
+  await page.locator("[data-save-review]").click();
+  await saveStarted;
+  await page.locator("[data-close]").click();
+  await page.locator("[data-batch-filter]").selectOption("B002");
+  await page.waitForSelector("[data-image-id='B002-001']");
+
+  releaseSave();
+  await saveCompleted;
+  await page.evaluate(() =>
+    new Promise((resolve) =>
+      requestAnimationFrame(() => requestAnimationFrame(resolve))
+    )
+  );
+  assert.equal(await page.locator("[data-batch-filter]").inputValue(), "B002");
+  assert.equal(await page.locator("[data-image-id]").count(), 50);
+  assert.equal(await page.locator("[data-image-id^='B001-']").count(), 0);
+  assert.match(await page.locator("[data-progress]").textContent(), /0\s*\/\s*50/);
+  assert.equal(await page.locator("[data-save-error]").textContent(), "");
+
+  const saved = await page.evaluate(() =>
+    fetch("/api/batches/B001/reviews").then((response) => response.json())
+  );
+  assert.equal(saved.data.reviews["B001-001"].status, "keep");
+});
+
+test("the latest batch selection wins over an earlier slow load", async (t) => {
+  const { page } = await openBrowserFixture(t, {
+    width: 1280,
+    height: 800,
+  }, {
+    additionalBatchIds: ["B002"],
+  });
+  let releaseB002;
+  const b002Gate = new Promise((resolve) => {
+    releaseB002 = resolve;
+  });
+  let startedCount = 0;
+  let markBothStarted;
+  const bothStarted = new Promise((resolve) => {
+    markBothStarted = resolve;
+  });
+  let completedCount = 0;
+  let markBothCompleted;
+  const bothCompleted = new Promise((resolve) => {
+    markBothCompleted = resolve;
+  });
+  const delayB002 = async (route) => {
+    startedCount += 1;
+    if (startedCount === 2) markBothStarted();
+    await b002Gate;
+    const response = await route.fetch();
+    await route.fulfill({ response });
+    completedCount += 1;
+    if (completedCount === 2) markBothCompleted();
+  };
+  await page.route("**/api/batches/B002", delayB002);
+  await page.route("**/api/batches/B002/reviews", delayB002);
+
+  await page.locator("[data-batch-filter]").selectOption("B002");
+  await bothStarted;
+  await page.locator("[data-batch-filter]").selectOption("B001");
+  await page.waitForSelector("[data-image-id='B001-001']");
+
+  releaseB002();
+  await bothCompleted;
+  await page.evaluate(() =>
+    new Promise((resolve) =>
+      requestAnimationFrame(() => requestAnimationFrame(resolve))
+    )
+  );
+  assert.equal(await page.locator("[data-batch-filter]").inputValue(), "B001");
+  assert.equal(await page.locator("[data-image-id]").count(), 50);
+  assert.equal(await page.locator("[data-image-id^='B002-']").count(), 0);
+  assert.equal(await page.locator("[data-image-id='B001-001']").count(), 1);
+});
+
+test("a successful save closes detail when the active status filter removes it", async (t) => {
+  const { page } = await openBrowserFixture(t, {
+    width: 1280,
+    height: 800,
+  });
+  await page.locator("[data-status-filter]").selectOption("unreviewed");
+  await page.locator("[data-image-id='B001-001']").click();
+  await page.locator("[data-review-note]").fill("saved before filter removal");
+  await page.locator("[data-review-status-button='keep']").click();
+  await page.locator("[data-save-review]").click();
+  await page.waitForFunction(
+    () => document.querySelector("[data-progress]").textContent === "1 / 50",
+  );
+
+  assert.equal(
+    await page.locator("[data-detail-dialog]").evaluate((dialog) => dialog.open),
+    false,
+  );
+  assert.equal(await page.locator("[data-image-id]").count(), 49);
+  assert.equal(await page.locator("[data-image-id='B001-001']").count(), 0);
+
+  const saved = await page.evaluate(() =>
+    fetch("/api/batches/B001/reviews").then((response) => response.json())
+  );
+  assert.equal(
+    saved.data.reviews["B001-001"].note,
+    "saved before filter removal",
+  );
+  await page.locator("[data-image-id='B001-002']").click();
+  assert.equal(
+    await page.locator("[data-save-review]").textContent(),
+    "Save review",
+  );
+});

@@ -108,6 +108,29 @@ async function startFixture(t, options = {}) {
   return { dataRoot, fixture, running };
 }
 
+async function rawHttpGet(running, target) {
+  const socket = connect(running.port, running.host);
+  const chunks = [];
+  await new Promise((resolve, reject) => {
+    socket.once("connect", resolve);
+    socket.once("error", reject);
+  });
+  socket.on("data", (chunk) => chunks.push(chunk));
+  const completed = new Promise((resolve, reject) => {
+    socket.once("end", resolve);
+    socket.once("error", reject);
+  });
+  socket.write([
+    `GET ${target} HTTP/1.1`,
+    `Host: ${running.host}:${running.port}`,
+    "Connection: close",
+    "",
+    "",
+  ].join("\r\n"));
+  await completed;
+  return Buffer.concat(chunks).toString("utf8");
+}
+
 test("review application serves only its exact public allowlist", async (t) => {
   const { running } = await startFixture(t);
   const publicResponses = await Promise.all([
@@ -148,6 +171,16 @@ test("review application serves only its exact public allowlist", async (t) => {
     (await fetch(`${running.url}/`, { method: "POST" })).status,
     404,
   );
+
+  for (const target of [
+    "/assets/../app.js",
+    "/./styles.css",
+    "//not-the-server",
+  ]) {
+    const response = await rawHttpGet(running, target);
+    assert.match(response, /^HTTP\/1\.1 404 Not Found/m, target);
+    assert.match(response, /"code":"not_found"/, target);
+  }
 });
 
 async function descriptorForPath(path) {

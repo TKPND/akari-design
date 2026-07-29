@@ -28,6 +28,7 @@ const state = {
   drafts: new Map(),
   unavailableMedia: new Set(),
   saveError: "",
+  loadGeneration: 0,
   filters: {
     lane: "all",
     status: "all",
@@ -274,8 +275,16 @@ function renderDetail() {
   elements.saveError.textContent = state.saveError;
 }
 
+function closeDetail() {
+  if (elements.dialog.open) elements.dialog.close();
+  elements.detailImage.removeAttribute("src");
+  state.activeIndex = -1;
+  state.activeEntryId = null;
+}
+
 function render() {
   applyFilters();
+  if (elements.dialog.open && state.activeIndex === -1) closeDetail();
   renderCards();
   renderProgress();
   renderDetail();
@@ -308,11 +317,16 @@ async function saveActiveReview() {
   syncDraftNote();
   const draft = draftFor(entry);
   const current = reviewFor(entry);
+  const batch = state.batch;
+  const reviews = state.reviews;
+  const drafts = state.drafts;
+  const ownsActiveState = () =>
+    state.batch === batch && state.reviews === reviews;
   state.saving = true;
   renderDetail();
   try {
     const updated = await requestJson(
-      `/api/batches/${encodeURIComponent(state.batch.batchId)}/reviews/${encodeURIComponent(entry.id)}`,
+      `/api/batches/${encodeURIComponent(batch.batchId)}/reviews/${encodeURIComponent(entry.id)}`,
       {
         method: "PUT",
         headers: { "content-type": "application/json" },
@@ -324,18 +338,23 @@ async function saveActiveReview() {
         }),
       },
     );
-    state.reviews.reviews[entry.id] = updated;
-    state.drafts.set(entry.id, {
+    if (!ownsActiveState()) return;
+    reviews.reviews[entry.id] = updated;
+    drafts.set(entry.id, {
       status: updated.status,
       reasons: [...updated.reasons],
       note: updated.note,
     });
     state.saveError = "";
   } catch (error) {
-    state.saveError = `Save failed: ${error.message}`;
+    if (ownsActiveState()) {
+      state.saveError = `Save failed: ${error.message}`;
+    }
   } finally {
-    state.saving = false;
-    render();
+    if (ownsActiveState()) {
+      state.saving = false;
+      render();
+    }
   }
 }
 
@@ -370,6 +389,8 @@ function configureFilters() {
 }
 
 async function loadBatch(batchId) {
+  const generation = state.loadGeneration + 1;
+  state.loadGeneration = generation;
   elements.loadError.textContent = "";
   state.batch = null;
   state.reviews = null;
@@ -379,17 +400,20 @@ async function loadBatch(batchId) {
   state.drafts = new Map();
   state.unavailableMedia = new Set();
   state.saveError = "";
+  state.saving = false;
   render();
   try {
     const [batch, reviews] = await Promise.all([
       requestJson(`/api/batches/${encodeURIComponent(batchId)}`),
       requestJson(`/api/batches/${encodeURIComponent(batchId)}/reviews`),
     ]);
+    if (generation !== state.loadGeneration) return;
     state.batch = batch;
     state.reviews = reviews;
     configureFilters();
     render();
   } catch (error) {
+    if (generation !== state.loadGeneration) return;
     elements.loadError.textContent = `Unable to load batch: ${error.message}`;
   }
 }
@@ -441,8 +465,7 @@ for (const [select, filter] of [
 
 document.querySelector("[data-close]").addEventListener("click", () => {
   syncDraftNote();
-  elements.dialog.close();
-  elements.detailImage.removeAttribute("src");
+  closeDetail();
 });
 document.querySelector("[data-previous]").addEventListener(
   "click",
@@ -485,9 +508,10 @@ document.addEventListener("keydown", async (event) => {
   await saveActiveReview();
 });
 
-elements.dialog.addEventListener("cancel", () => {
+elements.dialog.addEventListener("cancel", (event) => {
+  event.preventDefault();
   syncDraftNote();
-  elements.detailImage.removeAttribute("src");
+  closeDetail();
 });
 
 initialize();
