@@ -82,3 +82,30 @@ test("valid generation metadata is required", () => {
     /invalid generation metadata/,
   );
 });
+
+test("each entry retains both permanent identity and rendering authorities", () => {
+  const invalid = makeValidManifest();
+  invalid.entries[0].references[1].path = "references/contextual-pose.png";
+  assert.throws(
+    () => validateBatchManifest(invalid),
+    /missing permanent authority references/,
+  );
+});
+
+test("absolute artifact paths are rejected even below dataRoot", () => {
+  const invalid = makeValidManifest();
+  invalid.entries[0].artifact.imagePath = "/tmp/review-gallery/batches/B001/images/image-1.png";
+  assert.throws(
+    () => validateBatchManifest(invalid, { dataRoot: "/tmp/review-gallery" }),
+    /unsafe artifact path/,
+  );
+});
+
+test("empty path segments are rejected without dataRoot", () => {
+  const invalid = makeValidManifest();
+  invalid.entries[0].artifact.thumbnailPath = "batches//B001/thumbs/image-1.webp";
+  assert.throws(
+    () => validateBatchManifest(invalid),
+    /unsafe artifact path/,
+  );
+});

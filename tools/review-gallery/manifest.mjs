@@ -43,6 +43,10 @@ const generationStatuses = new Set(["pending", "valid", "failed"]);
 const casts = new Set(["solo", "viewer-pov", "two-person", "group"]);
 const sceneModes = new Set(["action-reaction", "quiet-posed"]);
 const sha256Pattern = /^[a-f0-9]{64}$/;
+const permanentAuthorityPaths = new Set([
+  "references/akari-v1.5-b3-body-balance.png",
+  "references/akari-v1.4-g2-balanced-lines.png",
+]);
 
 export function noveltyKey(entry) {
   return noveltyFields.map((field) => String(entry[field] ?? "")).join("\u241f");
@@ -66,11 +70,11 @@ function hashFile(path) {
 
 function resolveDeclaredPath(path, dataRoot) {
   if (!isNonEmptyString(path)) fail("unsafe artifact path");
+  if (isAbsolute(path) || /^[A-Za-z]:[\\/]/.test(path)) fail("unsafe artifact path");
 
   if (dataRoot === undefined) {
     if (
-      isAbsolute(path) ||
-      path.split(/[\\/]+/).some((segment) => segment === "" || segment === "." || segment === "..")
+      path.split(/[\\/]/).some((segment) => segment === "" || segment === "." || segment === "..")
     ) {
       fail("unsafe artifact path");
     }
@@ -196,6 +200,11 @@ export function validateBatchManifest(manifest, { dataRoot, checkFiles = false }
       }
       if (!sha256Pattern.test(reference.sha256)) fail("invalid reference sha256");
       referencePaths.push({ path: resolveDeclaredPath(reference.path, dataRoot), sha256: reference.sha256 });
+    }
+    if (![...permanentAuthorityPaths].every((path) =>
+      entry.references.some((reference) => reference.path === path),
+    )) {
+      fail("missing permanent authority references");
     }
 
     if (!isObject(entry.artifact) || !isNonEmptyString(entry.artifact.imagePath) || !entry.artifact.imagePath.endsWith(".png") || !isNonEmptyString(entry.artifact.thumbnailPath) || !entry.artifact.thumbnailPath.endsWith(".webp")) {
