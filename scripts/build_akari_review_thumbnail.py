@@ -28,6 +28,8 @@ def inspect_png(source: Path) -> dict[str, object]:
 
 
 def build_thumbnail(source: Path, output: Path, max_edge: int = 512) -> Path:
+    if source.resolve() == output.resolve():
+        raise ValueError("output path must differ from source")
     inspect_png(source)
     output.parent.mkdir(parents=True, exist_ok=True)
     with Image.open(source) as image:

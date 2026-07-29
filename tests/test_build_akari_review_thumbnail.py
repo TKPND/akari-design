@@ -54,3 +54,13 @@ class ReviewThumbnailTests(unittest.TestCase):
         with Image.open(output) as image:
             self.assertEqual("RGB", image.mode)
             self.assertEqual("WEBP", image.format)
+
+    def test_thumbnail_rejects_output_at_source_path_without_mutation(self):
+        source = self.root / "source.png"
+        Image.new("RGB", (40, 60), "#d9b6a0").save(source)
+        before = source.read_bytes()
+
+        with self.assertRaisesRegex(ValueError, "output path must differ from source"):
+            build_thumbnail(source, source)
+
+        self.assertEqual(before, source.read_bytes())
