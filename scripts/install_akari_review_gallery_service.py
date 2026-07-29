@@ -11,11 +11,16 @@ from pathlib import Path
 
 
 SERVICE_NAME = "akari-review-gallery.service"
+UNSAFE_UNIT_PATH_CHARACTERS = {'"', "\\", "%"}
 
 
 def _unit_path(path: Path) -> str:
     value = str(path)
-    if not path.is_absolute() or any(char in value for char in ('"', "\n")):
+    if (
+        not path.is_absolute()
+        or any(char in UNSAFE_UNIT_PATH_CHARACTERS for char in value)
+        or any(ord(char) < 32 or ord(char) == 127 for char in value)
+    ):
         raise ValueError(f"unsafe absolute path: {value}")
     return value
 
