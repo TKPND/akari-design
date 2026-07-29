@@ -7,6 +7,8 @@ import {
   isAbsolute,
   join,
 } from "node:path";
+import { fileURLToPath } from "node:url";
+import { parseArgs } from "node:util";
 import {
   ManifestValidationError,
   declaredMedia,
@@ -39,6 +41,50 @@ const staticAssets = new Map([
     contentType: "text/javascript; charset=utf-8",
   }],
 ]);
+
+export function parseGalleryOptions(argv, env) {
+  const { values } = parseArgs({
+    args: argv,
+    options: {
+      "repo-root": { type: "string" },
+      "data-root": { type: "string" },
+      host: { type: "string" },
+      port: { type: "string" },
+      python: { type: "string" },
+    },
+    strict: true,
+  });
+  const options = {
+    repoRoot: values["repo-root"] ?? env.AKARI_GALLERY_REPO_ROOT,
+    dataRoot: values["data-root"] ?? env.AKARI_GALLERY_DATA_ROOT,
+    host: values.host ?? env.AKARI_GALLERY_HOST,
+    port: Number(values.port ?? env.AKARI_GALLERY_PORT),
+    pythonExecutable: values.python ?? env.AKARI_GALLERY_PYTHON,
+  };
+  for (const [name, value] of [
+    ["repo root", options.repoRoot],
+    ["data root", options.dataRoot],
+    ["host", options.host],
+    ["python executable", options.pythonExecutable],
+  ]) {
+    if (typeof value !== "string" || value.length === 0) {
+      throw new Error(`${name} required`);
+    }
+  }
+  for (const [name, value] of [
+    ["repo root", options.repoRoot],
+    ["data root", options.dataRoot],
+    ["python executable", options.pythonExecutable],
+  ]) {
+    if (!isAbsolute(value)) {
+      throw new Error(`${name} must be an absolute path`);
+    }
+  }
+  if (!Number.isInteger(options.port) || options.port < 1 || options.port > 65_535) {
+    throw new Error("invalid gallery port");
+  }
+  return options;
+}
 
 class BatchNotFoundError extends Error {}
 class BatchValidationError extends Error {}
@@ -940,4 +986,18 @@ export async function startGalleryServer(options) {
       });
     },
   };
+}
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  Promise.resolve()
+    .then(() => startGalleryServer(
+      parseGalleryOptions(process.argv.slice(2), process.env),
+    ))
+    .then(({ url }) => {
+      console.log(`Akari review gallery listening on ${url}`);
+    })
+    .catch((error) => {
+      console.error(error.message);
+      process.exitCode = 1;
+    });
 }

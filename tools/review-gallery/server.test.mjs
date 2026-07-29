@@ -23,10 +23,73 @@ import { PassThrough } from "node:stream";
 import test from "node:test";
 import {
   assertSafeBindHost,
+  parseGalleryOptions,
   startGalleryServer,
 } from "./server.mjs";
 import { createPinnedRoot } from "./pinned-fs.mjs";
 import { createDemoFixture } from "./test-helpers.mjs";
+
+test("gallery options prefer explicit absolute CLI values", () => {
+  assert.deepEqual(
+    parseGalleryOptions([
+      "--repo-root", "/workspace/akari-design",
+      "--data-root", "/var/lib/akari-gallery",
+      "--host", "100.125.117.75",
+      "--port", "8787",
+      "--python", "/usr/bin/python3",
+    ], {
+      AKARI_GALLERY_REPO_ROOT: "/ignored/repo",
+      AKARI_GALLERY_DATA_ROOT: "/ignored/data",
+      AKARI_GALLERY_HOST: "100.64.0.1",
+      AKARI_GALLERY_PORT: "9000",
+      AKARI_GALLERY_PYTHON: "/ignored/python",
+    }),
+    {
+      repoRoot: "/workspace/akari-design",
+      dataRoot: "/var/lib/akari-gallery",
+      host: "100.125.117.75",
+      port: 8787,
+      pythonExecutable: "/usr/bin/python3",
+    },
+  );
+});
+
+test("gallery options use environment fallbacks", () => {
+  assert.deepEqual(
+    parseGalleryOptions([], {
+      AKARI_GALLERY_REPO_ROOT: "/workspace/akari-design",
+      AKARI_GALLERY_DATA_ROOT: "/var/lib/akari-gallery",
+      AKARI_GALLERY_HOST: "100.125.117.75",
+      AKARI_GALLERY_PORT: "8787",
+      AKARI_GALLERY_PYTHON: "/usr/bin/python3",
+    }),
+    {
+      repoRoot: "/workspace/akari-design",
+      dataRoot: "/var/lib/akari-gallery",
+      host: "100.125.117.75",
+      port: 8787,
+      pythonExecutable: "/usr/bin/python3",
+    },
+  );
+});
+
+test("gallery options reject missing required values and invalid paths or ports", () => {
+  assert.throws(() => parseGalleryOptions([], {}), /repo root required/);
+  assert.throws(() => parseGalleryOptions([
+    "--repo-root", "relative/repo",
+    "--data-root", "/var/lib/akari-gallery",
+    "--host", "100.125.117.75",
+    "--port", "8787",
+    "--python", "/usr/bin/python3",
+  ], {}), /repo root must be an absolute path/);
+  assert.throws(() => parseGalleryOptions([
+    "--repo-root", "/workspace/akari-design",
+    "--data-root", "/var/lib/akari-gallery",
+    "--host", "100.125.117.75",
+    "--port", "8787.5",
+    "--python", "/usr/bin/python3",
+  ], {}), /invalid gallery port/);
+});
 
 test("public wildcard hosts are always rejected", () => {
   for (const host of ["0.0.0.0", "::"]) {

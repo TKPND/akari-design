@@ -16,7 +16,18 @@ class WorkflowGateContractTests(unittest.TestCase):
     def test_lightweight_and_integration_gates_are_explicit(self):
         expected = {
             "test:node": (
-                "node --test --test-concurrency=1 tools/pdf/*.test.mjs"
+                "node --test --test-concurrency=1 "
+                "tools/pdf/*.test.mjs tools/review-gallery/*.test.mjs"
+            ),
+            "test:python:review-gallery": (
+                "uv run python -m unittest "
+                "tests.test_init_akari_v1_5_kawaii_1000 "
+                "tests.test_build_akari_review_thumbnail -v"
+            ),
+            "gallery:serve": "node tools/review-gallery/server.mjs",
+            "gate:v1-5:gallery": (
+                "npm run test:node && npm run test:python:review-gallery && "
+                "npm run lint:md"
             ),
             "test:python:natural-form": (
                 "uv run python -m unittest "
@@ -84,6 +95,12 @@ class WorkflowGateContractTests(unittest.TestCase):
         for forbidden in ("pdf", "ocr", "tesseract", "chromium"):
             with self.subTest(forbidden=forbidden):
                 self.assertNotIn(forbidden, lowered)
+
+    def test_v1_5_gallery_gate_excludes_pdf_and_ocr(self):
+        command = self.scripts["gate:v1-5:gallery"].lower()
+        for forbidden in ("pdf", "ocr", "tesseract", "poppler"):
+            with self.subTest(forbidden=forbidden):
+                self.assertNotIn(forbidden, command)
 
     def test_daily_gate_uses_explicit_existing_modules(self):
         command = self.scripts["test:python:daily"]

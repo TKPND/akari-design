@@ -4,7 +4,9 @@
   "type": "module",
   "scripts": {
     "lint:md": "git ls-files -z -- '*.md' | xargs -0 --no-run-if-empty markdownlint-cli2",
-    "test:node": "node --test --test-concurrency=1 tools/pdf/*.test.mjs",
+    "test:node": "node --test --test-concurrency=1 tools/pdf/*.test.mjs tools/review-gallery/*.test.mjs",
+    "test:python:review-gallery": "uv run python -m unittest tests.test_init_akari_v1_5_kawaii_1000 tests.test_build_akari_review_thumbnail -v",
+    "gallery:serve": "node tools/review-gallery/server.mjs",
     "test:python:root": "uv run python -m unittest discover -s tests",
     "test:python:natural-form": "uv run python -m unittest tests.test_akari_v1_2_natural_form_package -v",
     "test:python:v1-3": "uv run python -m unittest tests.test_akari_v1_3_base_package -v",
@@ -110,6 +112,7 @@
     "gate:integration:v1-2": "npm run gate:common:v1-2 && npm run audit:v1-2:pdf:structure && npm run verify:v1-2:release-pins",
     "gate:integration:v1-3": "npm run test:python:v1-3 && npm run validate:v1-3 && npm run lint:md",
     "gate:integration:all": "npm run gate:integration:v1-2 && npm run test:python:legacy-v1-2 && npm run audit:v1-1:pdf:structure",
+    "gate:v1-5:gallery": "npm run test:node && npm run test:python:review-gallery && npm run lint:md",
     "gate:release:ame-no-sei-ni-shite": "npm run gate:edit:ame-no-sei-ni-shite && uv run python scripts/build_ame_no_sei_ni_shite_contact_sheet.py --scope all-acts && uv run python scripts/akari_v1_2_ame_no_sei_ni_shite.py validate-act --act all && uv run python scripts/build_ame_no_sei_ni_shite_contact_sheet.py --scope full && npm run build:ame-no-sei-ni-shite:previews && npm run build:ame-no-sei-ni-shite:pdf && npm run audit:ame-no-sei-ni-shite:pdf && npm run gate:integration:v1-2",
     "gate:release:v1-2": "npm run gate:common:v1-2 && npm run build:v1-2:pdf && npm run audit:v1-2:pdf && npm run verify:v1-2:release-pins",
     "gate:release:v1-1": "npm run gate:common:v1-2 && npm run build:v1-1:pdf && npm run audit:v1-1:pdf"
