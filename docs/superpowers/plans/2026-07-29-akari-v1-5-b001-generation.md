@@ -27,15 +27,17 @@
 - Pass the same opened paths through `referenced_image_paths` in the built-in
   call. Two references are the minimum; four are the maximum.
 - Internal B001 Python filesystem operations pin owned files and directories
-  with no-follow descriptors. `view_image`, built-in `image_gen`, Node, and
-  `curl` are external trust-boundary consumers: they reopen validated absolute
-  display paths themselves. Immediately before each such reference-consuming
-  call, rerun the pinned `prompt` verification, require byte-identical prompt
-  JSON and the same regular-file, non-symlink, SHA-256, and reference-identity
+  with no-follow descriptors. `view_image`, built-in `image_gen`, and Node are
+  external trust-boundary consumers that may reopen validated absolute display
+  paths themselves. Immediately before each such reference-consuming call,
+  rerun the pinned `prompt` verification, require byte-identical prompt JSON
+  and the same regular-file, non-symlink, SHA-256, and reference-identity
   result, then invoke the external consumer without an intervening owned-tree
-  operation. A malicious same-user replacement in the interval after that
-  verification and before the external consumer opens the path is explicitly
-  outside this protocol's threat model.
+  operation. `curl` does not reopen a filesystem path; it consumes a gallery
+  HTTP response immediately after the pinned reconcile/manifest validation.
+  A malicious same-user replacement in the interval after verification and
+  before an external filesystem consumer opens the path is explicitly outside
+  this protocol's threat model.
 - Every prompt is printed by the tested compiler and passed verbatim to
   `image_gen`. Do not rewrite it interactively.
 - Generated PNGs, thumbnails, receipts, attempts, manifests, reviews, recovery
@@ -1711,6 +1713,13 @@ git commit -m "Add Akari B001 request matrix"
   `OwnedBatchFs.pin_batch(mode: Literal["prepare", "mutate", "read"],
   batch_intent_fingerprint: str, intent_lock: dict[str, object] | None = None)
   -> None`,
+  `_install_or_adopt_bootstrap_claim_at(batches_fd: int,
+  fingerprint: str) -> dict[str, object]`,
+  `_scan_bootstrap_prefix_at(batches_fd: int, batch_fd: int | None,
+  lock_fd: int | None, claim: dict[str, object],
+  intent_lock: dict[str, object]) -> BootstrapPrefix`,
+  `_resume_bootstrap_prefix_at(batches_fd: int, claim: dict[str, object],
+  intent_lock: dict[str, object]) -> tuple[int, int, list[int]]`,
   `OwnedBatchFs.write_staging_exclusive(name: str, contents: bytes) -> None`,
   `OwnedBatchFs.close() -> None`,
   `prepare_b001(matrix_path, data_root, archive_root) -> Path`,
@@ -1791,25 +1800,31 @@ Test these behaviors with real Pillow PNGs:
   directory fails the pinned `B001.boundary.json` device/inode check before
   mutation. A replaced `B001.lock`, missing boundary record, symlinked
   component, or malformed intent lock also fails closed.
-- Inject process termination at bootstrap claim-private-file fsync, claim link
-  plus `batches_fd` fsync, B001 mkdir plus `batches_fd` fsync, intent-lock
-  private-file fsync, intent-lock link plus `batch_fd` fsync, boundary link
-  plus `batches_fd` fsync, each owned-child mkdir plus `batch_fd` fsync, claim
-  unlink before `batches_fd` fsync, and claim unlink plus `batches_fd` fsync.
-  From every boundary, a same-intent restart converges to one exact durable
-  bootstrap, while a different-intent restart rejects and preserves every
-  external sentinel byte and directory entry.
+- Inject process termination at every ordered bootstrap prefix: claim private
+  fsync; claim link plus `batches_fd` fsync; claim-private unlink before and
+  after `batches_fd` fsync; B001 mkdir plus `batches_fd` fsync; lock creation
+  plus `batches_fd` fsync and lock acquisition; intent private fsync, intent
+  link plus `batch_fd` fsync, and intent-private unlink before and after
+  `batch_fd` fsync; boundary private fsync, boundary link plus `batches_fd`
+  fsync, and boundary-private unlink before and after `batches_fd` fsync; each
+  one of the five fixed-order child mkdir plus `batch_fd` fsync stages; claim
+  unlink before `batches_fd` fsync; and claim unlink plus `batches_fd` fsync.
+  From every boundary, a same-intent restart converges to one exact completed
+  bootstrap with zero claim, intent, or boundary private temporaries. At every
+  persisted prefix, a different-intent restart rejects with the complete
+  prefix and every external sentinel byte and directory entry unchanged.
 - Trace bootstrap syscalls and assert `flock(batches_fd, LOCK_EX)`, canonical
   claim no-replace link, `fsync(batches_fd)`, and exact claim reopen/validation
   all precede the first permitted B001 mkdir. Assert no process lacking that
   authoritative claim can reach the mkdir helper.
-- For every claim-backed restart state, accept only an absent B001 or the
-  protocol-owned partial subset: exact same-intent `intent-lock.json`, exact
-  same-nonce boundary, known empty owned-child directories, the regular
-  `B001.lock`, and regular private temporaries whose embedded claim nonce
-  matches. Reject malformed claim JSON, an unknown file, a symlink, a
-  non-empty owned child, a wrong-nonce private temporary, and a claimless
-  unmarked B001 without deleting or replacing the unexpected object.
+- Construct every valid P0 through P5 prefix and every impossible permutation.
+  Reject images without intent and boundary, a later child without every
+  earlier child, lock before B001, boundary before intent, a private-only
+  intent or boundary mixed with a later phase, a wrong-nonce private file,
+  canonical/private files with different inodes, malformed bytes, unknown
+  files, symlinks, non-empty children, and claimless unmarked B001. On every
+  rejection leave the complete batches/B001 listing, bytes, inode pairs, and
+  external sentinel unchanged.
 - Parse the state, management CLI, and recovery modules with `ast`. Except for
   the single lexical `/` anchor and declared external read-only inputs, reject
   owned `Path.open`, `Path.mkdir`, `Path.unlink`, `Path.replace`, globbing, or
@@ -1825,6 +1840,12 @@ Test these behaviors with real Pillow PNGs:
   different intent, malformed claim bytes, and a foreign sentinel; assert
   rejection without changing the claim, B001, or sentinel. Use watchdogs to
   prove the declared batches-lock-then-batch-lock order has no deadlock.
+- Reproduce the winner crash immediately after canonical claim link plus
+  directory fsync. The same-intent successor derives the exact private claim
+  basename from the canonical nonce, verifies canonical bytes and the
+  hard-link inode pair, durably removes that private link, and finishes with
+  zero bootstrap private names. A foreign or wrong-nonce private claim remains
+  untouched and makes both same- and different-intent successors fail closed.
 - A failure attempt increments `technicalFailures` but leaves the intended ID
   pending or failed and eligible for the same prompt retry.
 - Reconcile preserves ledger entries belonging to batches other than B001.
@@ -2115,65 +2136,133 @@ The claim protocol is fully descriptor-relative:
 1. Inspect `B001.bootstrap-claim.json` with
    `O_RDONLY | O_NOFOLLOW`. If present, require a regular file, exact key set,
    exact types, schema version 1, batch ID B001, the candidate fingerprint,
-   canonical bytes, and a valid nonce. The restart adopts that stored nonce.
-   A different-intent or malformed claim rejects without cleanup.
-2. If no claim exists and B001 is absent, choose `secrets.token_hex(16)`,
+   canonical bytes, and a valid nonce. Derive the one permitted private claim
+   basename from that authoritative fingerprint and nonce. Reject every other
+   claim-private name. If the derived name exists, open it with
+   `O_RDONLY | O_NOFOLLOW`, require a regular file, require exact canonical
+   claim bytes, and require its `(st_dev, st_ino)` to equal the canonical
+   claim descriptor. Only then unlink it and fsync `batches_fd`; only after
+   proving the private name is absent may the helper return the adopted claim.
+   A different-intent, malformed, foreign, wrong-nonce, wrong-inode, or
+   byte-mismatched claim state rejects without cleanup.
+2. If no canonical claim exists and B001 is absent, enumerate the strict
+   private-claim namespace. Zero entries starts a fresh claim. One entry is
+   recoverable pre-P0 state C0 only when its parsed filename nonce and
+   fingerprint equal its canonical payload and the candidate. Link that
+   verified private inode to the canonical name with no replacement, fsync
+   `batches_fd`, then process it through step 1. More than one entry or any
+   malformed, foreign, wrong-intent, or symlink entry fails closed.
+3. To start a fresh claim, choose `secrets.token_hex(16)`,
    write a private claim temporary with `O_CREAT | O_EXCL | O_NOFOLLOW`,
    fsync the file, link it to the canonical claim name with both directory
-   descriptors and `follow_symlinks=False`, fsync `batches_fd`, unlink the
-   private temporary, and fsync `batches_fd` again. Only after reopening and
-   byte-verifying that canonical claim may this invocation create B001.
-3. If another same-intent creator won the no-replace link, durably unlink only
-   this invocation's private temporary, reopen the canonical claim through
-   `batches_fd`, and apply the exact check in step 1. The winner's nonce, not
-   the loser's proposed nonce, becomes authoritative.
-4. If no canonical claim exists but a private claim temporary remains from a
-   crash before link, remove it only when it is a regular non-symlink, its
-   strict filename nonce matches its canonical payload nonce, its schema,
-   batch ID, and fingerprint exactly match the candidate, and B001 is absent.
-   Fsync `batches_fd` after unlink, then create a fresh claim. A foreign,
-   malformed, wrong-intent, or symlinked temporary is a hard rejection.
-5. If no claim exists but B001 exists, do not create a claim. Open B001 and
+   descriptors and `follow_symlinks=False`, and fsync `batches_fd`. Reopen the
+   canonical name and verify that its canonical bytes and inode equal the
+   private descriptor. Then process it through step 1, including durable
+   private-link cleanup. Only a canonical claim that survived that complete
+   sequence may authorize B001 creation.
+4. If the no-replace claim link loses, durably unlink only the loser's verified
+   private file, reopen the winner through `batches_fd`, and apply step 1.
+   The winner's nonce, not the loser's proposed nonce, becomes authoritative.
+   Because every conforming prepare holds the batches flock, this race path
+   principally protects against a pre-existing creator and never weakens the
+   state scanner.
+5. If no canonical claim exists but B001 exists, do not create a claim. Open
+   B001 and
    `B001.lock` without following links, take `B001.lock LOCK_EX` while
    retaining the batches flock, and accept only an already completed bootstrap
    whose intent, boundary, inode pairs, five child directories, and durable
    claim absence all verify exactly. Any claimless unmarked or partial B001
    fails closed.
 
-With an exact claim held, bootstrap continues in this order:
+With an exact canonical claim, the claim installer and
+`_scan_bootstrap_prefix_at` pair accept exactly one ordered phase. P0 entry
+may contain the one verified same-inode claim-private link solely so the claim
+installer can durably remove it before the P0-to-P1 transition:
 
-1. Inspect the batches directory before mutation. The only B001-owned sibling
-   names allowed are the canonical claim, its same-nonce private temporary,
-   regular `B001.lock`, regular `B001.boundary.json`, and directory `B001`.
-2. If B001 is absent, the authoritative claim holder alone calls
-   `os.mkdir("B001", dir_fd=batches_fd)`, fsyncs `batches_fd`, triggers the
-   mkdir crash point, and pins B001 with `O_DIRECTORY | O_NOFOLLOW`. If it
-   exists, pin it and validate the partial state before writing.
-3. The only allowed B001 entries during claim-backed recovery are exact
-   `intent-lock.json`, the five known owned-child directories, and
-   same-nonce regular private temporaries for the intent. Each existing child
-   must be a directory, must be opened with `O_NOFOLLOW`, and must be empty.
-   Boundary recovery likewise accepts only the exact regular sibling
-   boundary or its same-nonce regular private temporary. Any unknown entry,
-   symlink, wrong nonce, non-empty child, mismatched intent, or mismatched
-   boundary rejects without cleanup.
-4. Create or open regular `B001.lock` relative to `batches_fd`, fsync
-   `batches_fd` if created, and take `LOCK_EX` while still holding the batches
-   flock. Create-or-verify `intent-lock.json`, then create-or-verify the
-   boundary containing the authoritative nonce and pinned inode pairs.
-5. Create each missing owned-child directory one at a time relative to
-   `batch_fd`; after every mkdir, fsync `batch_fd`, open it with
-   `O_DIRECTORY | O_NOFOLLOW`, require it to be empty, and retain its
-   descriptor. Existing children undergo the same open and empty checks.
-6. Re-read and byte-verify the claim, intent, and boundary; recheck the pinned
-   lock and batch inode pairs and all five empty child directories. Only after
-   all are durable and exact, unlink the canonical claim relative to
+```python
+@dataclass(frozen=True)
+class BootstrapPrefix:
+    phase: Literal["P0", "P1", "P2", "P3", "P4", "P5"]
+    intent_state: Literal[
+        "absent",
+        "private-only",
+        "canonical",
+        "canonical-plus-private",
+    ]
+    boundary_state: Literal[
+        "absent",
+        "private-only",
+        "canonical",
+        "canonical-plus-private",
+    ]
+    child_prefix_length: int
+```
+
+| Phase | Exact accepted state |
+| --- | --- |
+| P0 | Canonical claim is durable. B001, `B001.lock`, boundary, intent, and children are absent. During entry cleanup only, the exact same-inode canonical-claim private link may also exist. |
+| P1 | B001 is a pinned empty directory. Lock and boundary are absent. |
+| P2 | B001 exists and is empty; regular `B001.lock` exists and is held exclusively. Boundary is absent. |
+| P3 | P2 plus intent state only: either exact private intent without canonical intent, or exact canonical intent with at most its exact same-inode private link. Boundary and children are absent. |
+| P4 | Canonical intent exists with no intent-private name. Boundary state only is either exact private boundary without canonical boundary, or exact canonical boundary with at most its exact same-inode private link. Children are absent. |
+| P5 | Canonical intent and boundary exist with no private names. Children are exactly a prefix of `OWNED_CHILDREN = ("images", "thumbs", "receipts", "attempts", "staging")`, from zero through five, and every present child is an empty pinned directory. |
+
+“Exact” scopes sibling inspection to the reserved B001 names; unrelated batch
+names such as B000 remain untouched. Inside B001 every directory entry is
+protocol-owned and therefore included in the exact phase comparison.
+
+There is no general allowlist interpretation. Images without canonical intent
+and boundary, a later child without every earlier child, lock before B001,
+boundary before intent, intent-private state mixed with boundary or children,
+boundary-private state mixed with children, and any unknown file, symlink,
+non-empty child, wrong nonce, wrong payload, or wrong inode are impossible
+states and fail closed before mutation.
+
+`_resume_bootstrap_prefix_at` advances exactly one edge at a time and rescans
+after every durable edge:
+
+1. The claim installer completes P0 entry cleanup by verifying and durably
+   removing the optional same-inode private claim. From canonical-only P0,
+   `_resume_bootstrap_prefix_at` mkdirs B001, fsyncs `batches_fd`, pins B001
+   with `O_DIRECTORY | O_NOFOLLOW`, and rescans as P1.
+2. P1 creates regular `B001.lock` with no replacement, fsyncs `batches_fd`,
+   takes `LOCK_EX`, verifies its type, and rescans as P2. A P2 restart opens
+   and locks the same inode before scanning B001.
+3. P2 writes the exact intent payload to the private filename derived from the
+   authoritative nonce, fsyncs it, and rescans as P3 private-only. P3
+   private-only verifies exact payload bytes and filename nonce, links that
+   same inode to `intent-lock.json` without replacement, fsyncs `batch_fd`,
+   and rescans. P3 canonical-plus-private requires equal inode and bytes,
+   unlinks the private name, fsyncs `batch_fd`, proves absence, and rescans as
+   canonical-only P3.
+4. Canonical-only P3 writes the nonce-bearing boundary payload to its exact
+   private filename relative to `batches_fd`, fsyncs it, and rescans as P4
+   private-only. P4 private-only
+   verifies the authoritative fingerprint, nonce, lock inode, and batch inode,
+   links that same inode to `B001.boundary.json` without replacement, fsyncs
+   `batches_fd`, and rescans. P4 canonical-plus-private requires equal inode
+   and bytes, unlinks the private name, fsyncs `batches_fd`, proves absence,
+   and rescans as canonical-only P4.
+5. Canonical-only P4 is P5 with a zero-length child prefix. P5 creates only the
+   next literal child in `OWNED_CHILDREN`, fsyncs `batch_fd`, pins and verifies
+   that empty directory, then rescans with prefix length increased by one.
+6. At P5 length five, enumerate both pinned `batches_fd` and `batch_fd`.
+   Prove that no claim, intent, or boundary private name exists, and re-read
+   the exact claim, intent, boundary, lock/batch inode pairs, and five empty
+   child directories. Only then unlink the canonical claim relative to
    `batches_fd`, trigger the pre-directory-fsync crash point, fsync
-   `batches_fd`, trigger the post-directory-fsync crash point, and verify the
-   claim is absent.
+   `batches_fd`, trigger the post-directory-fsync crash point, and verify
+   durable claim absence.
 7. Return the still-locked `B001.lock`, pinned B001, and pinned children. The
    caller releases the batches flock but retains the per-batch lock through
    the rest of `prepare`.
+
+Every intent/boundary cleanup and the final private-name absence proof runs
+while both the batches flock and `B001.lock LOCK_EX` are held. Claim-private
+cleanup is the necessary P0 exception: P0 formally has no B001 or per-batch
+lock, so it runs under the batches flock before the P0-to-P1 edge. No cleanup
+runs outside `_install_or_adopt_bootstrap_claim_at` or
+`_resume_bootstrap_prefix_at`.
 
 Private bootstrap names are strict:
 `.B001.bootstrap-claim.<fingerprint>.<nonce>.claim`,
@@ -2181,8 +2270,11 @@ Private bootstrap names are strict:
 `.B001.boundary.json.<fingerprint>.<nonce>.prepared`. Bootstrap cleanup never
 uses a glob or prefix-only deletion: it lists through the pinned descriptor,
 parses the complete name, opens without following links, validates canonical
-payload bytes and the authoritative nonce, unlinks exactly that validated
-basename, and fsyncs its parent descriptor.
+payload bytes, authoritative nonce, and canonical/private inode equality,
+unlinks exactly that validated basename, and fsyncs its parent descriptor.
+The ordinary `_cleanup_same_intent_debris_at` helper rejects these three
+bootstrap namespaces and never removes them; their sole owner is the concrete
+claim installer and ordered-prefix state machine above.
 
 The atomic claim installer has this concrete no-replace shape. The
 `_failpoint` calls terminate the subprocess in crash tests:
@@ -2197,6 +2289,71 @@ def _bootstrap_claim(fingerprint: str, nonce: str) -> dict[str, object]:
     }
 
 
+def _claim_private_name(claim: dict[str, object]) -> str:
+    return (
+        ".B001.bootstrap-claim."
+        f"{claim['batchIntentFingerprint']}.{claim['nonce']}.claim"
+    )
+
+
+def _cleanup_authoritative_claim_private_at(
+    batches_fd: int,
+    claim: dict[str, object],
+) -> None:
+    canonical_name = "B001.bootstrap-claim.json"
+    private_name = _claim_private_name(claim)
+    names = _claim_private_namespace_names_at(batches_fd)
+    unexpected = names - {private_name}
+    if unexpected:
+        raise ValueError("foreign bootstrap claim private name")
+    if private_name not in names:
+        return
+    canonical_fd = _open_regular_at(batches_fd, canonical_name)
+    private_fd = _open_regular_at(batches_fd, private_name)
+    try:
+        canonical_stat = os.fstat(canonical_fd)
+        private_stat = os.fstat(private_fd)
+        expected = _canonical_document_bytes(claim)
+        if _read_all_from_start(canonical_fd) != expected:
+            raise ValueError("canonical bootstrap claim bytes mismatch")
+        if _read_all_from_start(private_fd) != expected:
+            raise ValueError("private bootstrap claim bytes mismatch")
+        if (
+            canonical_stat.st_dev,
+            canonical_stat.st_ino,
+        ) != (
+            private_stat.st_dev,
+            private_stat.st_ino,
+        ):
+            raise ValueError("bootstrap claim private inode mismatch")
+    finally:
+        os.close(private_fd)
+        os.close(canonical_fd)
+    os.unlink(private_name, dir_fd=batches_fd)
+    _failpoint(
+        "after_bootstrap_claim_private_unlink_before_directory_fsync"
+    )
+    os.fsync(batches_fd)
+    _failpoint("after_bootstrap_claim_private_unlink_directory_fsync")
+    if private_name in _claim_private_namespace_names_at(batches_fd):
+        raise ValueError("bootstrap claim private cleanup did not converge")
+
+
+def _durably_remove_owned_unpublished_private_at(
+    directory_fd: int,
+    private_name: str,
+    expected: bytes,
+) -> None:
+    private_fd = _open_regular_at(directory_fd, private_name)
+    try:
+        if _read_all_from_start(private_fd) != expected:
+            raise ValueError("unpublished bootstrap private bytes mismatch")
+    finally:
+        os.close(private_fd)
+    os.unlink(private_name, dir_fd=directory_fd)
+    os.fsync(directory_fd)
+
+
 def _install_or_adopt_bootstrap_claim_at(
     batches_fd: int,
     fingerprint: str,
@@ -2208,12 +2365,40 @@ def _install_or_adopt_bootstrap_claim_at(
     if existing is not None:
         if existing["batchIntentFingerprint"] != fingerprint:
             raise ValueError("bootstrap claim intent mismatch")
+        _cleanup_authoritative_claim_private_at(batches_fd, existing)
         return existing
+    _require_preclaim_tree_absent_at(batches_fd)
+    private_names = _claim_private_namespace_names_at(batches_fd)
+    if private_names:
+        if len(private_names) != 1:
+            raise ValueError("ambiguous bootstrap claim private state")
+        private_name = next(iter(private_names))
+        private_claim = _read_canonical_bootstrap_private_at(
+            batches_fd,
+            private_name,
+        )
+        if (
+            private_claim["batchIntentFingerprint"] != fingerprint
+            or private_name != _claim_private_name(private_claim)
+        ):
+            raise ValueError("bootstrap claim private intent mismatch")
+        os.link(
+            private_name,
+            "B001.bootstrap-claim.json",
+            src_dir_fd=batches_fd,
+            dst_dir_fd=batches_fd,
+            follow_symlinks=False,
+        )
+        os.fsync(batches_fd)
+        _failpoint("after_bootstrap_claim_link_directory_fsync")
+        actual = _read_canonical_bootstrap_claim_at(batches_fd)
+        if actual != private_claim:
+            raise ValueError("recovered bootstrap claim mismatch")
+        _cleanup_authoritative_claim_private_at(batches_fd, actual)
+        return actual
     nonce = secrets.token_hex(16)
     proposed = _bootstrap_claim(fingerprint, nonce)
-    temporary_name = (
-        f".B001.bootstrap-claim.{fingerprint}.{nonce}.claim"
-    )
+    temporary_name = _claim_private_name(proposed)
     _write_bytes_exclusive_at(
         batches_fd,
         temporary_name,
@@ -2234,18 +2419,17 @@ def _install_or_adopt_bootstrap_claim_at(
         _failpoint("after_bootstrap_claim_link_directory_fsync")
     except FileExistsError:
         won = False
-    finally:
-        try:
-            os.unlink(temporary_name, dir_fd=batches_fd)
-        except FileNotFoundError:
-            pass
-        else:
-            os.fsync(batches_fd)
+        _durably_remove_owned_unpublished_private_at(
+            batches_fd,
+            temporary_name,
+            _canonical_document_bytes(proposed),
+        )
     actual = _read_canonical_bootstrap_claim_at(batches_fd)
     if actual["batchIntentFingerprint"] != fingerprint:
         raise ValueError("bootstrap claim intent mismatch")
     if won and actual != proposed:
         raise ValueError("bootstrap claim winner mismatch")
+    _cleanup_authoritative_claim_private_at(batches_fd, actual)
     return actual
 ```
 
@@ -2253,8 +2437,24 @@ def _install_or_adopt_bootstrap_claim_at(
 unknown or missing fields, invalid types, invalid hex lengths, wrong schema,
 wrong batch ID, non-regular files, and symlinks. A no-replace loser therefore
 matches the candidate's schema, batch ID, and fingerprint exactly, then adopts
-the winner's validated nonce. No losing process compares its independently
-chosen nonce to the winner's nonce.
+the winner's validated nonce. `_claim_private_namespace_names_at` rejects any
+basename that starts with the reserved claim-private stem but does not parse
+to its exact full-fingerprint/full-nonce grammar.
+`_read_canonical_bootstrap_private_at` applies the same canonical schema,
+regular non-symlink, fingerprint, and nonce validation to C0. The
+`_require_preclaim_tree_absent_at` helper requires B001, `B001.lock`, and
+`B001.boundary.json` all to be absent before C0 recovery or a fresh claim. The
+owned-unpublished helper requires regular non-symlink type and the exact
+proposed bytes before unlink and parent fsync. No losing process compares its
+independently chosen nonce to the winner's nonce.
+
+`_bootstrap_or_open_completed_batch_at` first distinguishes an exact
+claimless completed bootstrap from claim acquisition without mutation. The
+completed branch pins and locks the existing tree and verifies the durable
+boundary. Otherwise it calls `_install_or_adopt_bootstrap_claim_at`, passes
+that exact claim to `_resume_bootstrap_prefix_at`, and returns only its locked,
+fully pinned P5 result. It never invokes the ordinary debris cleanup during
+bootstrap.
 
 The pinned boundary record is created at `batches/B001.boundary.json` only
 after the intent lock is durable:
@@ -2289,8 +2489,9 @@ includes
 directories are opened component by component below `attempts_fd` and retained
 until the attempt write finishes. No helper accepts an owned absolute `Path`.
 External generated source PNGs and archive scanning remain read-only `Path`
-inputs. Operator tools and the existing Node/curl consumers are external
+inputs. Operator tools and the existing Node filesystem consumer are external
 reopeners governed by the explicit trust boundary in Global Constraints.
+`curl` consumes only the gallery's validated HTTP response.
 
 `prepare_b001` accepts
 `archive_root=/home/takahiro/workspace/akari_generated`, excludes the pinned
@@ -2347,19 +2548,28 @@ and re-verifies the complete bootstrap; if it remains absent, the already
 durable intent, boundary, and child-directory state passes the claimless
 completed-bootstrap check.
 
-Create `intent-lock.json` relative to pinned `batch_fd` without replacement,
-flush and fsync the file, then fsync `batch_fd`. If the no-replace hard link
-loses to another creator, remove and durably forget the private temporary,
-re-open the winner with `O_RDONLY | O_NOFOLLOW` relative to the same pinned
-descriptor, and compare exact canonical bytes. Equal bytes are idempotent
-success; different or malformed bytes are a hard rejection.
+The ordered-prefix state machine, not the ordinary JSON helper, exclusively
+creates `intent-lock.json` and `B001.boundary.json`. Its private-only,
+canonical-plus-private, cleanup, and rescan transitions use the authoritative
+nonce and same-inode checks defined for P3 and P4. There is no standalone
+create-or-verify intent or boundary helper; those operations exist only as
+transitions inside `_resume_bootstrap_prefix_at`.
 Instrument exact bootstrap failpoints
 `after_bootstrap_claim_temporary_fsync`,
 `after_bootstrap_claim_link_directory_fsync`,
+`after_bootstrap_claim_private_unlink_before_directory_fsync`,
+`after_bootstrap_claim_private_unlink_directory_fsync`,
 `after_bootstrap_batch_mkdir_directory_fsync`,
+`after_bootstrap_lock_create_directory_fsync`,
+`after_bootstrap_lock_acquired`,
 `after_bootstrap_intent_temporary_fsync`,
 `after_bootstrap_intent_link_directory_fsync`,
+`after_bootstrap_intent_private_unlink_before_directory_fsync`,
+`after_bootstrap_intent_private_unlink_directory_fsync`,
+`after_bootstrap_boundary_temporary_fsync`,
 `after_bootstrap_boundary_link_directory_fsync`,
+`after_bootstrap_boundary_private_unlink_before_directory_fsync`,
+`after_bootstrap_boundary_private_unlink_directory_fsync`,
 `after_bootstrap_child_<name>_directory_fsync`,
 `after_bootstrap_claim_unlink_before_directory_fsync`, and
 `after_bootstrap_claim_unlink_directory_fsync`. The child name token is
@@ -2382,7 +2592,8 @@ manifest is the Task 1 pending manifest plus top-level
 additional top-level metadata, its contract remains valid.
 
 Use only descriptor-relative JSON primitives for manifest, ledger, review,
-intent, attempt, and receipt documents:
+attempt, and receipt documents. Bootstrap intent and boundary use the stricter
+nonce-bearing ordered-prefix helpers above:
 
 ```python
 def _write_bytes_exclusive_at(
@@ -2448,33 +2659,15 @@ def _json_no_replace_at(
     finally:
         os.unlink(temporary_name, dir_fd=directory_fd)
         os.fsync(directory_fd)
-
-
-def _create_or_verify_intent_lock_at(
-    batch_fd: int,
-    intent_lock: dict[str, object],
-    fingerprint: str,
-) -> None:
-    expected = _canonical_document_bytes(intent_lock)
-    try:
-        _json_no_replace_at(
-            batch_fd,
-            "intent-lock.json",
-            intent_lock,
-            fingerprint,
-        )
-    except FileExistsError:
-        actual = _read_regular_bytes_at(batch_fd, "intent-lock.json")
-        if actual != expected:
-            raise ValueError("intent lock create race mismatch")
 ```
 
 `_temporary_name` accepts a validated basename only, rejects every slash,
 backslash, dot component, control character, and non-allowlisted target, and
 returns `.<target>.<full-fingerprint>.<uuid>.<kind>`. The reader helpers use
 `os.open(name, O_RDONLY | O_NOFOLLOW, dir_fd=directory_fd)`, require a regular
-`fstat`, and read from the descriptor. Boundary-record creation uses the same
-create-or-verify rule and additionally compares the pinned device/inode pair.
+`fstat`, and read from the descriptor. The generic temporary-name and
+no-replace helpers reject intent, boundary, and claim targets so bootstrap
+files cannot bypass `_resume_bootstrap_prefix_at`.
 
 The contract test scans the state module to reject `path.parent`, absolute
 owned mutations, or a `_json_no_replace_at` implementation that omits the
@@ -3223,13 +3416,15 @@ The reference-role/exclusion contract for every call is:
    regenerated for subjective weakness; identity, cuteness, garment, anatomy,
    and material judgments belong to the gallery human-review gate.
 
-`view_image`, built-in `image_gen`, Node, and `curl` reopen absolute display
-paths outside the pinned Python filesystem boundary. Whenever Node or `curl`
-is used with an absolute reference path, apply the same immediate `prompt`
-revalidation first. Gallery Node/curl calls that consume generated B001 media
-instead run the pinned reconcile/manifest file-identity gate immediately
-before the external call. A malicious same-user path replacement after the
-immediate verification and before an external open is outside scope.
+`view_image`, built-in `image_gen`, and Node may reopen absolute display paths
+outside the pinned Python filesystem boundary. Whenever Node receives an
+absolute reference path, apply the same immediate `prompt` revalidation first.
+Gallery Node calls that consume generated B001 media instead run the pinned
+reconcile/manifest file-identity gate immediately before the external call.
+`curl` never receives or reopens a filesystem path; it consumes the gallery
+HTTP response immediately after that pinned reconcile/manifest validation. A
+malicious same-user path replacement after the immediate verification and
+before an external filesystem open is outside scope.
 
 ### Task 5: Generate Lane 1 — Classic School Uniform
 
@@ -3426,6 +3621,8 @@ Use the management status and manifest to assert:
   link, directory in place of media, or unrecorded final remains; every
   descriptor-relative debris scan returns only allowlisted final names and
   explicitly retained rollout-recovery sources;
+- pinned enumeration finds zero claim, intent, or boundary private basenames
+  and no canonical bootstrap claim;
 - `acceptedProductionImages` increased by exactly fifty from its pre-B001
   value;
 - technical failure receipts do not increase the accepted count;
@@ -3574,12 +3771,14 @@ the tracked B002 plan; the external review/generated tree remains untracked.
   list, stat, link, unlink, replace, and directory creation receives a
   retained directory descriptor plus one validated relative name. External
   read-only inputs, operator display output, `view_image`, built-in
-  `image_gen`, Node, and `curl` use the documented immediate-revalidation
-  trust boundary.
+  `image_gen`, and Node use the documented immediate-revalidation trust
+  boundary; `curl` consumes only the gallery HTTP response after pinned
+  reconcile/manifest validation.
 - Bootstrap consistency: the exclusive pinned-batches flock and durable
   canonical claim precede B001 mkdir; same-intent claim recovery accepts only
-  the exact protocol-owned partial subset; claim removal and batches-directory
-  fsync follow verified durable intent, boundary, and empty children.
+  P0 through P5 ordered prefixes, not arbitrary subsets; claim removal and
+  batches-directory fsync follow verified durable intent, boundary, five empty
+  fixed-order children, and zero bootstrap private names.
 - Durability order: prepared file fsync precedes its parent-directory fsync;
   both media directory fsyncs precede the prepared receipt; JSON temporary
   unlink precedes a final parent-directory fsync.
