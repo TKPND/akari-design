@@ -1,4 +1,6 @@
 import assert from "node:assert/strict";
+import childProcess from "node:child_process";
+import { EventEmitter } from "node:events";
 import {
   chmod,
   copyFile,
@@ -13,9 +15,11 @@ import {
   symlink,
   writeFile,
 } from "node:fs/promises";
+import { syncBuiltinESMExports } from "node:module";
 import { connect } from "node:net";
 import { tmpdir } from "node:os";
 import { basename, dirname, join } from "node:path";
+import { PassThrough } from "node:stream";
 import test from "node:test";
 import {
   assertSafeBindHost,
@@ -802,6 +806,120 @@ exec ${process.execPath} ${builderScript} "$@"
   } finally {
     await Promise.all(outsideHandles.map((handle) => handle.close()));
   }
+});
+
+test("post-spawn kill error retains production repair leases until close", async (t) => {
+  const originalSpawn = childProcess.spawn;
+  const children = [];
+  const closedChildren = new WeakSet();
+  const closeChild = (child, code = 1) => {
+    if (closedChildren.has(child)) return;
+    closedChildren.add(child);
+    child.emit("close", code, null);
+  };
+  let resolveFirstSpawn;
+  const firstSpawn = new Promise((resolve) => {
+    resolveFirstSpawn = resolve;
+  });
+  const postSpawnError = new Error("simulated post-spawn kill failure");
+  childProcess.spawn = (_executable, argumentsList) => {
+    const child = new EventEmitter();
+    child.pid = 43_210 + children.length;
+    child.stderr = new PassThrough();
+    child.kill = () => {
+      child.emit("error", postSpawnError);
+      return false;
+    };
+    children.push(child);
+    queueMicrotask(() => {
+      child.emit("spawn");
+      if (children.length === 1) {
+        resolveFirstSpawn({ argumentsList, child });
+      } else {
+        closeChild(child);
+      }
+    });
+    return child;
+  };
+  syncBuiltinESMExports();
+  t.after(() => {
+    childProcess.spawn = originalSpawn;
+    syncBuiltinESMExports();
+  });
+  t.after(() => {
+    for (const child of children) closeChild(child);
+  });
+
+  const outside = await mkdtemp(join(tmpdir(), "akari-post-spawn-error-"));
+  t.after(() => rm(outside, { recursive: true, force: true }));
+  const { fixture, running } = await startFixture(t, {
+    repoRoot: process.cwd(),
+    pythonExecutable: process.execPath,
+    thumbnailRepairTimeoutMs: 10_000,
+  });
+  const validWebp = await readFile(
+    join(fixture.batchDir, "thumbs/image-2.webp"),
+  );
+  await rm(join(fixture.batchDir, "thumbs/image-1.webp"));
+
+  const firstRequest = fetch(
+    `${running.url}/media/B001/B001-001/thumb`,
+  );
+  const started = await firstSpawn;
+  const outputIndex = started.argumentsList.indexOf("--output");
+  const output = started.argumentsList[outputIndex + 1];
+  const descriptor = Number(
+    output.match(/^\/proc\/\d+\/fd\/(\d+)\//)?.[1],
+  );
+  assert.equal(Number.isInteger(descriptor), true);
+  await writeFile(output, validWebp);
+
+  let firstSettled = false;
+  const observedFirstRequest = firstRequest.then((response) => {
+    firstSettled = true;
+    return response;
+  });
+  started.child.kill("SIGTERM");
+  await new Promise((resolve) => setTimeout(resolve, 50));
+  const firstSettledBeforeClose = firstSettled;
+
+  let secondSettled = false;
+  const observedSecondRequest = fetch(
+    `${running.url}/media/B001/B001-001/thumb`,
+  ).then((response) => {
+    secondSettled = true;
+    return response;
+  });
+  await new Promise((resolve) => setTimeout(resolve, 50));
+  const secondSettledBeforeClose = secondSettled;
+  const spawnCountBeforeClose = children.length;
+
+  const outsideHandles = [];
+  let descriptorReusedBeforeClose = false;
+  try {
+    for (let index = 0; index < 64; index += 1) {
+      const handle = await open(outside, "r");
+      outsideHandles.push(handle);
+      if (handle.fd === descriptor) descriptorReusedBeforeClose = true;
+    }
+  } finally {
+    closeChild(started.child, 0);
+  }
+  let responses;
+  try {
+    responses = await Promise.all([
+      observedFirstRequest,
+      observedSecondRequest,
+    ]);
+  } finally {
+    await Promise.all(outsideHandles.map((handle) => handle.close()));
+  }
+
+  assert.equal(firstSettledBeforeClose, false);
+  assert.equal(secondSettledBeforeClose, false);
+  assert.equal(spawnCountBeforeClose, 1);
+  assert.equal(descriptorReusedBeforeClose, false);
+  assert.deepEqual(responses.map(({ status }) => status), [404, 404]);
 });
 
 test("missing thumbnail is rebuilt once", async (t) => {

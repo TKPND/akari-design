@@ -363,17 +363,31 @@ function productionThumbnailBuilder({
       const stderr = [];
       const stderrState = { bytes: 0 };
       let aborted = false;
+      let spawned = false;
+      let postSpawnError;
       let settled = false;
       let forceKillTimer;
+      const onSpawn = () => {
+        spawned = true;
+      };
       const cleanup = () => {
         clearTimeout(forceKillTimer);
         signal?.removeEventListener?.("abort", onAbort);
+        child.off("error", onError);
+        child.off("spawn", onSpawn);
       };
       const rejectOnce = (error) => {
         if (settled) return;
         settled = true;
         cleanup();
         rejectRun(error);
+      };
+      const onError = (error) => {
+        if (!spawned) {
+          rejectOnce(error);
+          return;
+        }
+        postSpawnError ??= error;
       };
       const onAbort = () => {
         if (settled) return;
@@ -386,11 +400,16 @@ function productionThumbnailBuilder({
       child.stderr.on("data", (chunk) =>
         appendBounded(stderr, chunk, stderrState)
       );
-      child.once("error", rejectOnce);
+      child.once("spawn", onSpawn);
+      child.on("error", onError);
       child.once("close", (code, terminationSignal) => {
         if (settled) return;
         settled = true;
         cleanup();
+        if (postSpawnError) {
+          rejectRun(postSpawnError);
+          return;
+        }
         if (aborted) {
           rejectRun(new Error("thumbnail builder aborted"));
           return;
