@@ -22,7 +22,8 @@ class WorkflowGateContractTests(unittest.TestCase):
             "test:python:review-gallery": (
                 "uv run python -m unittest "
                 "tests.test_init_akari_v1_5_kawaii_1000 "
-                "tests.test_build_akari_review_thumbnail -v"
+                "tests.test_build_akari_review_thumbnail "
+                "tests.test_install_akari_review_gallery_service -v"
             ),
             "gallery:serve": "node tools/review-gallery/server.mjs",
             "gate:v1-5:gallery": (
