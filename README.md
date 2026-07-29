@@ -15,6 +15,8 @@ The public repository is maintained as `TKPND/akari-design`.
   lifecycle manifests, documentation, and release deliverables.
 - `akari-v1.4/` contains the in-progress style baseline, reproducibility tests,
   and user-selected G–J authority chain.
+- `akari-v1.5/` contains the first v1.5 body-balance checkpoint, with the
+  user-selected B3 baseline and its labeled comparison sheet.
 - `tools/pdf/` contains the Node/Playwright PDF rendering code.
 - `scripts/` contains Python build and audit scripts.
 - `dist/` contains prebuilt PDF deliverables and public contact sheets.
