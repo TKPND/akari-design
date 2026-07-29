@@ -144,6 +144,12 @@ export function validateBatchManifest(manifest, { dataRoot, checkFiles = false }
   if (typeof normalized.batchId !== "string" || !/^B\d{3}$/.test(normalized.batchId)) {
     fail("invalid batchId");
   }
+  if (normalized.batchId === "B000" && normalized.batchType !== "demo") {
+    fail("B000 must use demo batchType");
+  }
+  if (normalized.batchId !== "B000" && normalized.batchType !== "production") {
+    fail("non-B000 batches must use production batchType");
+  }
   if (!Array.isArray(normalized.entries) || normalized.entries.length !== 50 || !normalized.entries.every(isObject)) {
     fail("exactly 50 entries");
   }

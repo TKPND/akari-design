@@ -20,6 +20,39 @@ test("production manifest has fifty entries and five per lane", () => {
   }
 });
 
+test("B000 requires the demo batch type", () => {
+  const invalid = makeValidManifest({
+    batchId: "B000",
+    batchType: "production",
+  });
+  for (const entry of invalid.entries) {
+    entry.id = entry.id.replace("B001-", "B000-");
+    entry.artifact.imagePath = entry.artifact.imagePath.replace(
+      "batches/B001/",
+      "batches/B000/",
+    );
+    entry.artifact.thumbnailPath = entry.artifact.thumbnailPath.replace(
+      "batches/B001/",
+      "batches/B000/",
+    );
+    entry.generation.toolMode = "demo";
+  }
+
+  assert.throws(
+    () => validateBatchManifest(invalid),
+    /B000 must use demo batchType/,
+  );
+});
+
+test("non-B000 batches require the production batch type", () => {
+  const invalid = makeValidManifest({ batchType: "demo" });
+
+  assert.throws(
+    () => validateBatchManifest(invalid),
+    /non-B000 batches must use production batchType/,
+  );
+});
+
 test("production manifest requires ten texture slots", () => {
   const invalid = makeValidManifest();
   invalid.entries[0].textureFocus = false;

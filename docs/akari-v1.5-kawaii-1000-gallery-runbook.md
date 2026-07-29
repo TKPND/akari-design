@@ -28,7 +28,9 @@ uv run python scripts/create_akari_review_demo.py \
 
 The command creates or refreshes exactly fifty PNG demo cards and their WebP
 thumbnails. It preserves an existing `batches/B000/reviews.json` and refuses
-to overwrite a non-demo B000.
+to overwrite a non-demo B000. If the proposed artifact content or paths have
+changed while reviews exist, it fails with a reset-required error before
+changing B000.
 
 B000 is demo-only. It never enters the 1,000 production-image count, and no
 image generation occurs when it is created or reviewed.
@@ -137,7 +139,8 @@ systemctl --user disable --now akari-review-gallery.service
 ```
 
 After repository, executable, host, port, or data-root changes, rerun the
-installer to rewrite and restart the enabled service:
+installer to rewrite and enable the unit. Then explicitly restart an already
+active service so it loads the rewritten command:
 
 ```bash
 uv run python scripts/install_akari_review_gallery_service.py \
@@ -146,4 +149,6 @@ uv run python scripts/install_akari_review_gallery_service.py \
   --host 100.125.117.75 \
   --port 8787 \
   --install
+systemctl --user restart akari-review-gallery.service
+systemctl --user status akari-review-gallery.service
 ```

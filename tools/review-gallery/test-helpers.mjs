@@ -90,6 +90,7 @@ export async function createDemoFixture(
     .digest("hex");
 
   manifest.batchId = batchId;
+  manifest.batchType = batchId === "B000" ? "demo" : "production";
   manifest.title = `Akari v1.5 Kawaii 1000 ${batchId}`;
   for (const [index, entry] of manifest.entries.entries()) {
     const ordinal = index + 1;

@@ -7,6 +7,8 @@ import argparse
 import hashlib
 import json
 import os
+import shutil
+import tempfile
 from pathlib import Path
 
 from PIL import Image, ImageDraw
@@ -74,18 +76,9 @@ def _reference(data_root: Path, name: str, role: str) -> dict[str, object]:
     }
 
 
-def create_demo_batch(data_root: Path) -> Path:
-    """Create or refresh the demo-only B000 batch."""
-
-    data_root = data_root.resolve()
-    batch = data_root / "batches/B000"
-    manifest_path = batch / "manifest.json"
-    if manifest_path.exists():
-        current = json.loads(manifest_path.read_text(encoding="utf-8"))
-        if current.get("batchType") != "demo":
-            raise ValueError("refusing to overwrite non-demo B000")
-    images = batch / "images"
-    thumbs = batch / "thumbs"
+def _build_staged_batch(data_root: Path, staged: Path) -> dict[str, object]:
+    images = staged / "images"
+    thumbs = staged / "thumbs"
     images.mkdir(parents=True, exist_ok=True)
     thumbs.mkdir(parents=True, exist_ok=True)
     authorities = (
@@ -189,10 +182,161 @@ def create_demo_batch(data_root: Path) -> Path:
             for entry in entries
         },
     }
-    _write_json_atomic(manifest_path, manifest)
+    _write_json_atomic(staged / "manifest.json", manifest)
+    _write_json_atomic(staged / "reviews.json", reviews)
+    _validate_staged_batch(staged, manifest)
+    return manifest
+
+
+def _validate_staged_batch(staged: Path, manifest: dict[str, object]) -> None:
+    entries = manifest.get("entries")
+    if not isinstance(entries, list) or len(entries) != 50:
+        raise ValueError("staged B000 must contain exactly 50 entries")
+    expected_images = set()
+    expected_thumbs = set()
+    for entry in entries:
+        artifact = entry["artifact"]
+        image_name = Path(artifact["imagePath"]).name
+        thumb_name = Path(artifact["thumbnailPath"]).name
+        expected_images.add(image_name)
+        expected_thumbs.add(thumb_name)
+        image_path = staged / "images" / image_name
+        thumb_path = staged / "thumbs" / thumb_name
+        technical = inspect_png(image_path)
+        if (
+            technical["sha256"] != artifact["sha256"]
+            or technical["width"] != artifact["width"]
+            or technical["height"] != artifact["height"]
+        ):
+            raise ValueError(f"staged artifact mismatch: {entry['id']}")
+        with Image.open(thumb_path) as thumbnail:
+            thumbnail.verify()
+            if thumbnail.format != "WEBP":
+                raise ValueError(f"invalid staged thumbnail: {entry['id']}")
+    actual_images = {
+        path.name
+        for path in (staged / "images").iterdir()
+        if path.is_file() and not path.is_symlink()
+    }
+    actual_thumbs = {
+        path.name
+        for path in (staged / "thumbs").iterdir()
+        if path.is_file() and not path.is_symlink()
+    }
+    if actual_images != expected_images or actual_thumbs != expected_thumbs:
+        raise ValueError("staged B000 media set does not match manifest")
+
+
+def _artifact_fingerprint(manifest: dict[str, object]) -> tuple[tuple, ...]:
+    try:
+        return tuple(
+            sorted(
+                (
+                    entry["id"],
+                    entry["artifact"]["imagePath"],
+                    entry["artifact"]["thumbnailPath"],
+                    entry["artifact"]["sha256"],
+                )
+                for entry in manifest["entries"]
+            )
+        )
+    except (KeyError, TypeError) as error:
+        raise ValueError("invalid existing B000 manifest") from error
+
+
+def _media_snapshot(batch: Path) -> dict[str, str] | None:
+    snapshot = {}
+    for directory_name in ("images", "thumbs"):
+        directory = batch / directory_name
+        if not directory.is_dir() or directory.is_symlink():
+            return None
+        for path in directory.iterdir():
+            if not path.is_file() or path.is_symlink():
+                return None
+            snapshot[f"{directory_name}/{path.name}"] = _sha256(path)
+    return snapshot
+
+
+def _unchanged(path: Path, snapshot: bytes | None) -> bool:
+    try:
+        current = path.read_bytes() if path.is_file() else None
+    except OSError:
+        return False
+    return current == snapshot
+
+
+def _replace_batch(batch: Path, staged: Path) -> None:
+    if not batch.exists():
+        os.replace(staged, batch)
+        return
+    previous = staged.with_name(f"{staged.name}.previous")
+    os.replace(batch, previous)
+    try:
+        os.replace(staged, batch)
+    except BaseException:
+        os.replace(previous, batch)
+        raise
+    shutil.rmtree(previous)
+
+
+def create_demo_batch(data_root: Path) -> Path:
+    """Create or safely refresh the demo-only B000 batch."""
+
+    data_root = data_root.resolve()
+    batches = data_root / "batches"
+    batches.mkdir(parents=True, exist_ok=True)
+    batch = batches / "B000"
+    manifest_path = batch / "manifest.json"
     reviews_path = batch / "reviews.json"
-    if not reviews_path.exists():
-        _write_json_atomic(reviews_path, reviews)
+    current_manifest = None
+    manifest_snapshot = None
+    reviews_snapshot = None
+    backup_snapshot = None
+    if os.path.lexists(batch):
+        if batch.is_symlink() or not batch.is_dir():
+            raise ValueError("refusing unsafe B000 path")
+        if not manifest_path.is_file():
+            raise ValueError("refusing to refresh incomplete B000")
+        manifest_snapshot = manifest_path.read_bytes()
+        current_manifest = json.loads(manifest_snapshot)
+        if current_manifest.get("batchType") != "demo":
+            raise ValueError("refusing to overwrite non-demo B000")
+        if reviews_path.is_file():
+            reviews_snapshot = reviews_path.read_bytes()
+        backup_path = batch / "reviews.json.bak"
+        if backup_path.is_file():
+            backup_snapshot = backup_path.read_bytes()
+
+    staged = Path(tempfile.mkdtemp(prefix=".B000-", dir=batches))
+    try:
+        proposed_manifest = _build_staged_batch(data_root, staged)
+        if (
+            reviews_snapshot is not None
+            and _artifact_fingerprint(current_manifest)
+            != _artifact_fingerprint(proposed_manifest)
+        ):
+            raise ValueError(
+                "demo content changed; reset B000 reviews before refresh"
+            )
+        if current_manifest is not None:
+            if not _unchanged(manifest_path, manifest_snapshot) or not _unchanged(
+                reviews_path, reviews_snapshot
+            ):
+                raise RuntimeError("B000 changed during refresh; retry")
+            if (
+                manifest_snapshot == (staged / "manifest.json").read_bytes()
+                and reviews_snapshot is not None
+                and _media_snapshot(batch) == _media_snapshot(staged)
+            ):
+                return batch
+        if reviews_snapshot is not None:
+            (staged / "reviews.json").write_bytes(reviews_snapshot)
+        if backup_snapshot is not None:
+            (staged / "reviews.json.bak").write_bytes(backup_snapshot)
+        _replace_batch(batch, staged)
+    finally:
+        if staged.exists():
+            shutil.rmtree(staged)
     return batch
 
 
