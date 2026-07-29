@@ -166,3 +166,95 @@ test("load rejects stored documents with IDs outside the manifest", async () => 
   assert.equal(loaded.reviews["B001-999"], undefined);
   assert.equal(loaded.reviews["B001-001"].status, "unreviewed");
 });
+
+test("load waits behind an update when recovering a corrupt primary", async () => {
+  const dataRoot = await mkdtemp(join(tmpdir(), "akari-review-"));
+  const batchDir = join(dataRoot, "batches", "B001");
+  await mkdir(batchDir, { recursive: true });
+  const manifest = makeValidManifest();
+  const store = createReviewStore({ dataRoot });
+  await store.update("B001", manifest, "B001-001", 0, {
+    status: "keep", reasons: [], note: "",
+  });
+  await store.update("B001", manifest, "B001-001", 1, {
+    status: "favorite", reasons: [], note: "",
+  });
+  await writeFile(join(batchDir, "reviews.json"), "{broken", "utf8");
+
+  const update = store.update("B001", manifest, "B001-001", 1, {
+    status: "reject", reasons: ["skin-flat"], note: "",
+  });
+  const loaded = store.load("B001", manifest);
+  await update;
+
+  assert.equal((await loaded).reviews["B001-001"].status, "reject");
+  const saved = JSON.parse(await readFile(join(batchDir, "reviews.json"), "utf8"));
+  assert.equal(saved.reviews["B001-001"].status, "reject");
+});
+
+test("load discards a stored revision beyond the safe integer range", async () => {
+  const dataRoot = await mkdtemp(join(tmpdir(), "akari-review-"));
+  const batchDir = join(dataRoot, "batches", "B001");
+  await mkdir(batchDir, { recursive: true });
+  const manifest = makeValidManifest();
+  const reviews = Object.fromEntries(manifest.entries.map(({ id }) => [id, {
+    status: "unreviewed",
+    reasons: [],
+    note: "",
+    revision: 0,
+    updatedAt: null,
+  }]));
+  reviews["B001-001"].revision = 2 ** 53;
+  await writeFile(
+    join(batchDir, "reviews.json"),
+    JSON.stringify({ schemaVersion: 1, batchId: "B001", reviews }),
+    "utf8",
+  );
+
+  const loaded = await createReviewStore({ dataRoot }).load("B001", manifest);
+  assert.equal(loaded.reviews["B001-001"].revision, 0);
+});
+
+test("update rejects a revision that cannot be safely incremented", async () => {
+  const dataRoot = await mkdtemp(join(tmpdir(), "akari-review-"));
+  const batchDir = join(dataRoot, "batches", "B001");
+  await mkdir(batchDir, { recursive: true });
+  const manifest = makeValidManifest();
+  const reviews = Object.fromEntries(manifest.entries.map(({ id }) => [id, {
+    status: "unreviewed",
+    reasons: [],
+    note: "",
+    revision: 0,
+    updatedAt: null,
+  }]));
+  reviews["B001-001"].revision = Number.MAX_SAFE_INTEGER;
+  await writeFile(
+    join(batchDir, "reviews.json"),
+    JSON.stringify({ schemaVersion: 1, batchId: "B001", reviews }),
+    "utf8",
+  );
+
+  await assert.rejects(
+    createReviewStore({ dataRoot }).update(
+      "B001",
+      manifest,
+      "B001-001",
+      Number.MAX_SAFE_INTEGER,
+      { status: "keep", reasons: [], note: "" },
+    ),
+    ReviewValidationError,
+  );
+});
+
+test("batch IDs cannot escape the batches directory", async () => {
+  const dataRoot = await mkdtemp(join(tmpdir(), "akari-review-"));
+  const manifest = makeValidManifest({ batchId: "../escape" });
+  const store = createReviewStore({ dataRoot });
+  await assert.rejects(
+    store.update("../escape", manifest, "B001-001", 0, {
+      status: "keep", reasons: [], note: "",
+    }),
+    ReviewValidationError,
+  );
+  await assert.rejects(readFile(join(dataRoot, "escape", "reviews.json"), "utf8"));
+});

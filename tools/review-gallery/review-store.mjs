@@ -33,7 +33,12 @@ function isObject(value) {
 }
 
 function manifestIds(batchId, manifest) {
-  if (!isObject(manifest) || manifest.batchId !== batchId || !Array.isArray(manifest.entries)) {
+  if (
+    !/^B\d{3}$/.test(batchId) ||
+    !isObject(manifest) ||
+    manifest.batchId !== batchId ||
+    !Array.isArray(manifest.entries)
+  ) {
     throw new ReviewValidationError("invalid batch manifest");
   }
   const ids = manifest.entries.map(({ id }) => id);
@@ -64,7 +69,7 @@ function validReviewRecord(review) {
     review.reasons.every((reason) => typeof reason === "string" && rejectReasons.has(reason)) &&
     (review.status === "reject" || review.reasons.length === 0) &&
     typeof review.note === "string" &&
-    Number.isInteger(review.revision) && review.revision >= 0 &&
+    Number.isSafeInteger(review.revision) && review.revision >= 0 &&
     (review.updatedAt === null || typeof review.updatedAt === "string");
 }
 
@@ -132,7 +137,7 @@ export function createReviewStore({ dataRoot, clock = () => new Date().toISOStri
     }
   }
 
-  async function load(batchId, manifest) {
+  async function loadUnlocked(batchId, manifest) {
     const ids = manifestIds(batchId, manifest);
     const { primary, backup } = paths(batchId);
     const primaryDocument = await readValidDocument(primary, batchId, ids);
@@ -154,16 +159,23 @@ export function createReviewStore({ dataRoot, clock = () => new Date().toISOStri
     return result;
   }
 
+  function load(batchId, manifest) {
+    return enqueue(batchId, () => loadUnlocked(batchId, manifest));
+  }
+
   function update(batchId, manifest, imageId, expectedRevision, patch) {
     return enqueue(batchId, async () => {
       const ids = manifestIds(batchId, manifest);
       if (!ids.includes(imageId)) {
         throw new ReviewValidationError("unknown image id");
       }
-      const document = await load(batchId, manifest);
+      const document = await loadUnlocked(batchId, manifest);
       const current = document.reviews[imageId];
       if (expectedRevision !== current.revision) {
         throw new ReviewConflictError("stale review revision");
+      }
+      if (!Number.isSafeInteger(current.revision + 1)) {
+        throw new ReviewValidationError("review revision cannot be incremented safely");
       }
       const reviewPatch = validatePatch(patch);
       const updatedAt = clock();
