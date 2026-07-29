@@ -1,9 +1,25 @@
 import { spawn } from "node:child_process";
 import { createHash } from "node:crypto";
-import { readFile, readdir } from "node:fs/promises";
+import { constants, realpathSync } from "node:fs";
+import {
+  lstat,
+  mkdtemp,
+  open,
+  readdir,
+  realpath,
+  rename,
+  rm,
+} from "node:fs/promises";
 import { createServer } from "node:http";
 import { networkInterfaces } from "node:os";
-import { isAbsolute, join, resolve } from "node:path";
+import {
+  basename,
+  dirname,
+  isAbsolute,
+  join,
+  relative,
+  resolve,
+} from "node:path";
 import {
   ManifestValidationError,
   declaredMedia,
@@ -16,14 +32,19 @@ import {
 } from "./review-store.mjs";
 
 const BODY_LIMIT = 64 * 1024;
+const BODY_READ_TIMEOUT_MS = 10_000;
+const DEFAULT_THUMBNAIL_REPAIR_TIMEOUT_MS = 15_000;
+const STDERR_LIMIT = 64 * 1024;
 const PNG_SIGNATURE = Buffer.from("89504e470d0a1a0a", "hex");
 
 class BatchNotFoundError extends Error {}
 class BatchValidationError extends Error {}
+class UnsafeDataPathError extends Error {}
 class RequestBodyError extends Error {
-  constructor(message, { tooLarge = false } = {}) {
+  constructor(message, { status = 422, code = "invalid_review" } = {}) {
     super(message);
-    this.tooLarge = tooLarge;
+    this.status = status;
+    this.code = code;
   }
 }
 
@@ -114,27 +135,157 @@ function decodeRoute(pathname) {
 }
 
 async function readJsonBody(request) {
-  const chunks = [];
-  let size = 0;
-  let tooLarge = false;
-  for await (const chunk of request) {
-    size += chunk.length;
-    if (size > BODY_LIMIT) {
-      tooLarge = true;
-    } else {
-      chunks.push(chunk);
-    }
-  }
-  if (tooLarge) {
+  const declaredLength = request.headers["content-length"];
+  if (
+    typeof declaredLength === "string" &&
+    /^\d+$/.test(declaredLength) &&
+    BigInt(declaredLength) > BigInt(BODY_LIMIT)
+  ) {
     throw new RequestBodyError("request body exceeds 65536 bytes", {
-      tooLarge: true,
+      status: 413,
+      code: "request_too_large",
     });
   }
+
+  const contents = await new Promise((resolveBody, rejectBody) => {
+    const chunks = [];
+    let size = 0;
+    let timer;
+    const cleanup = () => {
+      clearTimeout(timer);
+      request.off("data", onData);
+      request.off("end", onEnd);
+      request.off("error", onError);
+      request.off("aborted", onAborted);
+    };
+    const reject = (error) => {
+      cleanup();
+      request.pause();
+      rejectBody(error);
+    };
+    const onData = (chunk) => {
+      size += chunk.length;
+      if (size > BODY_LIMIT) {
+        reject(new RequestBodyError("request body exceeds 65536 bytes", {
+          status: 413,
+          code: "request_too_large",
+        }));
+        return;
+      }
+      chunks.push(chunk);
+    };
+    const onEnd = () => {
+      cleanup();
+      resolveBody(Buffer.concat(chunks));
+    };
+    const onError = (error) => reject(error);
+    const onAborted = () => reject(new RequestBodyError(
+      "request body aborted",
+    ));
+    request.on("data", onData);
+    request.once("end", onEnd);
+    request.once("error", onError);
+    request.once("aborted", onAborted);
+    timer = setTimeout(() => {
+      reject(new RequestBodyError("request body timeout", {
+        status: 408,
+        code: "request_timeout",
+      }));
+    }, BODY_READ_TIMEOUT_MS);
+    timer.unref();
+  });
+
   try {
-    return JSON.parse(Buffer.concat(chunks).toString("utf8"));
+    return JSON.parse(contents.toString("utf8"));
   } catch {
     throw new RequestBodyError("invalid JSON body");
   }
+}
+
+function isContained(root, path) {
+  const fromRoot = relative(root, path);
+  return fromRoot === "" ||
+    (fromRoot !== ".." &&
+      !fromRoot.startsWith(`..${"/"}`) &&
+      !fromRoot.startsWith(`..${"\\"}`) &&
+      !isAbsolute(fromRoot));
+}
+
+function requireContained(root, path) {
+  if (!isContained(root, path)) {
+    throw new UnsafeDataPathError("path escapes dataRoot");
+  }
+  return path;
+}
+
+async function canonicalExistingPath(root, path) {
+  const lexicalPath = requireContained(root, resolve(path));
+  const canonicalPath = await realpath(lexicalPath);
+  return requireContained(root, canonicalPath);
+}
+
+async function safeReadFile(root, path, encoding) {
+  const canonicalPath = await canonicalExistingPath(root, path);
+  const handle = await open(
+    canonicalPath,
+    constants.O_RDONLY | constants.O_NOFOLLOW,
+  );
+  try {
+    return {
+      contents: await handle.readFile(encoding),
+      path: canonicalPath,
+    };
+  } finally {
+    await handle.close();
+  }
+}
+
+async function safeWritablePath(root, path) {
+  const lexicalPath = requireContained(root, resolve(path));
+  const canonicalParent = requireContained(
+    root,
+    await realpath(dirname(lexicalPath)),
+  );
+  const canonicalPath = join(canonicalParent, basename(lexicalPath));
+  try {
+    const metadata = await lstat(canonicalPath);
+    if (metadata.isSymbolicLink()) {
+      let symlinkTarget;
+      try {
+        symlinkTarget = await realpath(canonicalPath);
+      } catch (error) {
+        if (error.code === "ENOENT") {
+          throw new UnsafeDataPathError("dangling symlink is unsafe");
+        }
+        throw error;
+      }
+      requireContained(root, symlinkTarget);
+    } else {
+      requireContained(root, await realpath(canonicalPath));
+    }
+  } catch (error) {
+    if (error.code !== "ENOENT") throw error;
+  }
+  return canonicalPath;
+}
+
+function closeRequestAfterResponse(request, response) {
+  response.shouldKeepAlive = false;
+  response.setHeader("connection", "close");
+  response.once("finish", () => request.destroy());
+}
+
+function appendBounded(chunks, chunk, state) {
+  if (state.bytes >= STDERR_LIMIT) return;
+  const remaining = STDERR_LIMIT - state.bytes;
+  const bounded = chunk.length > remaining ? chunk.subarray(0, remaining) : chunk;
+  chunks.push(bounded);
+  state.bytes += bounded.length;
+}
+
+function thumbnailTimeout(value) {
+  if (Number.isFinite(value) && value > 0) return value;
+  return DEFAULT_THUMBNAIL_REPAIR_TIMEOUT_MS;
 }
 
 function sha256(contents) {
@@ -145,13 +296,17 @@ async function readManifest(dataRoot, batchId) {
   if (!/^B\d{3}$/.test(batchId)) throw new BatchNotFoundError();
   let text;
   try {
-    text = await readFile(
+    ({ contents: text } = await safeReadFile(
+      dataRoot,
       join(dataRoot, "batches", batchId, "manifest.json"),
       "utf8",
-    );
+    ));
   } catch (error) {
     if (error.code === "ENOENT" || error.code === "ENOTDIR") {
       throw new BatchNotFoundError();
+    }
+    if (error instanceof UnsafeDataPathError) {
+      throw new BatchValidationError("unsafe data path");
     }
     throw error;
   }
@@ -187,10 +342,16 @@ async function readManifest(dataRoot, batchId) {
       checkedReferences.add(key);
       let contents;
       try {
-        contents = await readFile(resolve(dataRoot, reference.path));
+        ({ contents } = await safeReadFile(
+          dataRoot,
+          resolve(dataRoot, reference.path),
+        ));
       } catch (error) {
         if (error.code === "ENOENT" || error.code === "ENOTDIR") {
           throw new BatchValidationError("declared reference missing");
+        }
+        if (error instanceof UnsafeDataPathError) {
+          throw new BatchValidationError("unsafe data path");
         }
         throw error;
       }
@@ -202,45 +363,53 @@ async function readManifest(dataRoot, batchId) {
   return manifest;
 }
 
-async function readMediaFile(path) {
+async function readMediaFile(dataRoot, path) {
   try {
-    return await readFile(path);
+    return await safeReadFile(dataRoot, path);
   } catch (error) {
-    if (error.code === "ENOENT" || error.code === "ENOTDIR") return null;
+    if (
+      error instanceof UnsafeDataPathError ||
+      error.code === "ENOENT" ||
+      error.code === "ENOTDIR"
+    ) {
+      return null;
+    }
     throw error;
   }
 }
 
-async function validPng(path, expectedSha256 = null) {
-  const contents = await readMediaFile(path);
+async function validPng(dataRoot, path, expectedSha256 = null) {
+  const media = await readMediaFile(dataRoot, path);
+  const contents = media?.contents;
   if (
-    contents === null ||
+    contents === undefined ||
     contents.length < PNG_SIGNATURE.length ||
     !contents.subarray(0, PNG_SIGNATURE.length).equals(PNG_SIGNATURE) ||
     (expectedSha256 !== null && sha256(contents) !== expectedSha256)
   ) {
     return null;
   }
-  return contents;
+  return media;
 }
 
-function hasWebpHeader(contents) {
-  return contents !== null &&
+function hasWebpHeader(media) {
+  const contents = media?.contents;
+  return contents !== undefined &&
     contents.length >= 12 &&
     contents.subarray(0, 4).toString("ascii") === "RIFF" &&
     contents.subarray(8, 12).toString("ascii") === "WEBP";
 }
 
-async function validWebp(path) {
-  const contents = await readMediaFile(path);
-  return hasWebpHeader(contents) ? contents : null;
+async function validWebp(dataRoot, path) {
+  const media = await readMediaFile(dataRoot, path);
+  return hasWebpHeader(media) ? media : null;
 }
 
 function productionThumbnailBuilder({
   repoRoot,
   pythonExecutable,
 }) {
-  return async (source, output) => {
+  return async (source, output, { signal } = {}) => {
     if (
       typeof repoRoot !== "string" ||
       !isAbsolute(repoRoot) ||
@@ -263,16 +432,37 @@ function productionThumbnailBuilder({
         stdio: ["ignore", "ignore", "pipe"],
       });
       const stderr = [];
-      child.stderr.on("data", (chunk) => stderr.push(chunk));
-      child.once("error", rejectRun);
-      child.once("close", (code, signal) => {
+      const stderrState = { bytes: 0 };
+      let settled = false;
+      let forceKillTimer;
+      const rejectOnce = (error) => {
+        if (settled) return;
+        settled = true;
+        rejectRun(error);
+      };
+      const onAbort = () => {
+        rejectOnce(new Error("thumbnail builder aborted"));
+        child.kill("SIGTERM");
+        forceKillTimer = setTimeout(() => child.kill("SIGKILL"), 250);
+        forceKillTimer.unref();
+      };
+      signal?.addEventListener("abort", onAbort, { once: true });
+      child.stderr.on("data", (chunk) =>
+        appendBounded(stderr, chunk, stderrState)
+      );
+      child.once("error", rejectOnce);
+      child.once("close", (code, terminationSignal) => {
+        clearTimeout(forceKillTimer);
+        signal?.removeEventListener?.("abort", onAbort);
+        if (settled) return;
+        settled = true;
         if (code === 0) {
           resolveRun();
           return;
         }
         const detail = Buffer.concat(stderr).toString("utf8").trim();
         rejectRun(new Error(
-          `thumbnail builder failed (${signal ?? code})${detail ? `: ${detail}` : ""}`,
+          `thumbnail builder failed (${terminationSignal ?? code})${detail ? `: ${detail}` : ""}`,
         ));
       });
     });
@@ -310,31 +500,103 @@ export function createGalleryServer({
   dataRoot,
   repoRoot,
   pythonExecutable,
+  thumbnailRepairTimeoutMs,
   thumbnailBuilder = productionThumbnailBuilder({
     repoRoot,
     pythonExecutable,
   }),
 }) {
-  const reviewStore = createReviewStore({ dataRoot });
+  const canonicalDataRoot = realpathSync(dataRoot);
+  const repairTimeoutMs = thumbnailTimeout(thumbnailRepairTimeoutMs);
+  const reviewStore = createReviewStore({ dataRoot: canonicalDataRoot });
   const thumbnailRepairs = new Map();
 
+  async function assertReviewPathsSafe(batchId) {
+    const batchDirectory = await canonicalExistingPath(
+      canonicalDataRoot,
+      join(canonicalDataRoot, "batches", batchId),
+    );
+    await safeWritablePath(
+      canonicalDataRoot,
+      join(batchDirectory, "reviews.json"),
+    );
+    await safeWritablePath(
+      canonicalDataRoot,
+      join(batchDirectory, "reviews.json.bak"),
+    );
+  }
+
   async function repairThumbnail(source, output) {
-    const existing = thumbnailRepairs.get(output);
+    const safeOutput = await safeWritablePath(canonicalDataRoot, output);
+    const existing = thumbnailRepairs.get(safeOutput);
     if (existing) return existing;
     const repair = (async () => {
-      const alreadyValid = await validWebp(output);
+      const alreadyValid = await validWebp(canonicalDataRoot, safeOutput);
       if (alreadyValid) return alreadyValid;
-      await thumbnailBuilder(source, output);
-      const rebuilt = await validWebp(output);
-      if (!rebuilt) throw new Error("thumbnail builder produced invalid WebP");
-      return rebuilt;
+      const temporaryDirectory = await mkdtemp(
+        join(dirname(safeOutput), ".akari-thumb-"),
+      );
+      const temporarySource = join(temporaryDirectory, "source.png");
+      const temporaryOutput = join(temporaryDirectory, "thumbnail.webp");
+      const controller = new AbortController();
+      let timer;
+      try {
+        const sourceHandle = await open(
+          temporarySource,
+          constants.O_WRONLY |
+            constants.O_CREAT |
+            constants.O_EXCL,
+          0o600,
+        );
+        try {
+          await sourceHandle.writeFile(source.contents);
+        } finally {
+          await sourceHandle.close();
+        }
+        const build = Promise.resolve().then(() =>
+          thumbnailBuilder(temporarySource, temporaryOutput, {
+            signal: controller.signal,
+          })
+        );
+        const timeout = new Promise((_, rejectTimeout) => {
+          timer = setTimeout(() => {
+            rejectTimeout(new Error("thumbnail repair timed out"));
+            controller.abort();
+          }, repairTimeoutMs);
+          timer.unref();
+        });
+        await Promise.race([build, timeout]);
+        const rebuilt = await validWebp(
+          canonicalDataRoot,
+          temporaryOutput,
+        );
+        if (!rebuilt) {
+          throw new Error("thumbnail builder produced invalid WebP");
+        }
+        const checkedOutput = await safeWritablePath(
+          canonicalDataRoot,
+          safeOutput,
+        );
+        await rename(temporaryOutput, checkedOutput);
+        const installed = await validWebp(
+          canonicalDataRoot,
+          checkedOutput,
+        );
+        if (!installed) {
+          throw new Error("installed thumbnail is invalid");
+        }
+        return installed;
+      } finally {
+        clearTimeout(timer);
+        await rm(temporaryDirectory, { recursive: true, force: true });
+      }
     })();
-    thumbnailRepairs.set(output, repair);
+    thumbnailRepairs.set(safeOutput, repair);
     try {
       return await repair;
     } finally {
-      if (thumbnailRepairs.get(output) === repair) {
-        thumbnailRepairs.delete(output);
+      if (thumbnailRepairs.get(safeOutput) === repair) {
+        thumbnailRepairs.delete(safeOutput);
       }
     }
   }
@@ -342,7 +604,11 @@ export function createGalleryServer({
   async function listBatches(response) {
     let entries;
     try {
-      entries = await readdir(join(dataRoot, "batches"), {
+      const batchesDirectory = await canonicalExistingPath(
+        canonicalDataRoot,
+        join(canonicalDataRoot, "batches"),
+      );
+      entries = await readdir(batchesDirectory, {
         withFileTypes: true,
       });
     } catch (error) {
@@ -359,7 +625,8 @@ export function createGalleryServer({
     const batches = [];
     for (const batchId of batchIds) {
       try {
-        const manifest = await readManifest(dataRoot, batchId);
+        const manifest = await readManifest(canonicalDataRoot, batchId);
+        await assertReviewPathsSafe(batchId);
         const reviews = await reviewStore.load(batchId, manifest);
         batches.push(progressSummary(manifest, reviews));
       } catch (error) {
@@ -379,7 +646,7 @@ export function createGalleryServer({
 
   async function batchForApi(batchId, response) {
     try {
-      return await readManifest(dataRoot, batchId);
+      return await readManifest(canonicalDataRoot, batchId);
     } catch (error) {
       if (error instanceof BatchNotFoundError) {
         notFound(response);
@@ -396,7 +663,7 @@ export function createGalleryServer({
   async function serveMedia(batchId, imageId, kind, response) {
     let manifest;
     try {
-      manifest = await readManifest(dataRoot, batchId);
+      manifest = await readManifest(canonicalDataRoot, batchId);
     } catch {
       mediaUnavailable(response);
       return;
@@ -408,30 +675,42 @@ export function createGalleryServer({
       return;
     }
     const entry = manifest.entries.find(({ id }) => id === imageId);
-    const mediaPath = resolve(dataRoot, declaredPath);
+    const mediaPath = resolve(canonicalDataRoot, declaredPath);
     if (kind === "image") {
-      const contents = await validPng(mediaPath, entry.artifact.sha256);
-      if (!contents) {
+      const media = await validPng(
+        canonicalDataRoot,
+        mediaPath,
+        entry.artifact.sha256,
+      );
+      if (!media) {
         mediaUnavailable(response);
         return;
       }
-      sendMedia(response, contents, "image/png");
+      sendMedia(response, media.contents, "image/png");
       return;
     }
 
-    const thumbnail = await validWebp(mediaPath);
+    const thumbnail = await validWebp(canonicalDataRoot, mediaPath);
     if (thumbnail) {
-      sendMedia(response, thumbnail, "image/webp");
+      sendMedia(response, thumbnail.contents, "image/webp");
       return;
     }
-    const sourcePath = resolve(dataRoot, entry.artifact.imagePath);
-    if (!await validPng(sourcePath, entry.artifact.sha256)) {
+    const sourcePath = resolve(
+      canonicalDataRoot,
+      entry.artifact.imagePath,
+    );
+    const source = await validPng(
+      canonicalDataRoot,
+      sourcePath,
+      entry.artifact.sha256,
+    );
+    if (!source) {
       mediaUnavailable(response);
       return;
     }
     try {
-      const repaired = await repairThumbnail(sourcePath, mediaPath);
-      sendMedia(response, repaired, "image/webp");
+      const repaired = await repairThumbnail(source, mediaPath);
+      sendMedia(response, repaired.contents, "image/webp");
     } catch {
       mediaUnavailable(response);
     }
@@ -483,6 +762,7 @@ export function createGalleryServer({
       const manifest = await batchForApi(batchId, response);
       if (!manifest) return;
       try {
+        await assertReviewPathsSafe(batchId);
         success(response, await reviewStore.load(batchId, manifest));
       } catch {
         failure(response, 500, "review_load_failed", "failed to load reviews");
@@ -510,10 +790,13 @@ export function createGalleryServer({
         body = await readJsonBody(request);
       } catch (error) {
         if (error instanceof RequestBodyError) {
+          if (error.status === 413 || error.status === 408) {
+            closeRequestAfterResponse(request, response);
+          }
           failure(
             response,
-            error.tooLarge ? 413 : 422,
-            error.tooLarge ? "request_too_large" : "invalid_review",
+            error.status,
+            error.code,
             error.message,
           );
           return;
@@ -536,6 +819,7 @@ export function createGalleryServer({
         return;
       }
       try {
+        await assertReviewPathsSafe(batchId);
         const updated = await reviewStore.update(
           batchId,
           manifest,

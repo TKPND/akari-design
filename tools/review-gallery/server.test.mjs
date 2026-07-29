@@ -1,11 +1,14 @@
 import assert from "node:assert/strict";
 import {
+  copyFile,
   mkdtemp,
   mkdir,
   readFile,
   rm,
+  symlink,
   writeFile,
 } from "node:fs/promises";
+import { connect } from "node:net";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
@@ -154,6 +157,108 @@ test("reference hashes are checked whenever a batch is loaded", async (t) => {
   assert.match(payload.error.message, /invalid reference sha256/);
 });
 
+test("batch manifests cannot be read through a symlink outside dataRoot", async (t) => {
+  const { fixture, running } = await startFixture(t);
+  const outside = await mkdtemp(join(tmpdir(), "akari-outside-"));
+  const manifestPath = join(fixture.batchDir, "manifest.json");
+  const outsideManifest = join(outside, "manifest.json");
+  await copyFile(manifestPath, outsideManifest);
+  await rm(manifestPath);
+  await symlink(outsideManifest, manifestPath);
+
+  const response = await fetch(`${running.url}/api/batches/B001`);
+  assert.equal(response.status, 422);
+  assert.equal((await response.json()).error.code, "invalid_batch");
+});
+
+test("reference snapshots cannot be read through a symlink outside dataRoot", async (t) => {
+  const { dataRoot, running } = await startFixture(t);
+  const outside = await mkdtemp(join(tmpdir(), "akari-outside-"));
+  const referencePath = join(
+    dataRoot,
+    "references/akari-v1.5-b3-body-balance.png",
+  );
+  const outsideReference = join(outside, "reference.png");
+  await copyFile(referencePath, outsideReference);
+  await rm(referencePath);
+  await symlink(outsideReference, referencePath);
+
+  const response = await fetch(`${running.url}/api/batches/B001`);
+  assert.equal(response.status, 422);
+  assert.equal((await response.json()).error.code, "invalid_batch");
+});
+
+test("review state cannot be read through a symlink outside dataRoot", async (t) => {
+  const { fixture, running } = await startFixture(t);
+  const reviews = await fetch(
+    `${running.url}/api/batches/B001/reviews`,
+  ).then((response) => response.json());
+  const outside = await mkdtemp(join(tmpdir(), "akari-outside-"));
+  const outsideReviews = join(outside, "reviews.json");
+  await writeFile(outsideReviews, JSON.stringify(reviews.data), "utf8");
+  await symlink(outsideReviews, join(fixture.batchDir, "reviews.json"));
+
+  const response = await fetch(
+    `${running.url}/api/batches/B001/reviews`,
+  );
+  assert.equal(response.status, 500);
+  assert.equal((await response.json()).error.code, "review_load_failed");
+});
+
+test("review backup cannot overwrite a symlink target outside dataRoot", async (t) => {
+  const { fixture, running } = await startFixture(t);
+  const update = (expectedRevision, status) =>
+    fetch(`${running.url}/api/batches/B001/reviews/B001-001`, {
+      method: "PUT",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        expectedRevision,
+        status,
+        reasons: [],
+        note: "",
+      }),
+    });
+  assert.equal((await update(0, "keep")).status, 200);
+  const outside = await mkdtemp(join(tmpdir(), "akari-outside-"));
+  const outsideBackup = join(outside, "reviews.json.bak");
+  await writeFile(outsideBackup, "outside sentinel", "utf8");
+  await symlink(
+    outsideBackup,
+    join(fixture.batchDir, "reviews.json.bak"),
+  );
+
+  const response = await update(1, "favorite");
+  assert.equal(response.status, 500);
+  assert.equal((await response.json()).error.code, "durable_write_failed");
+  assert.equal(await readFile(outsideBackup, "utf8"), "outside sentinel");
+});
+
+test("dangling review backup symlink cannot create a file outside dataRoot", async (t) => {
+  const { fixture, running } = await startFixture(t);
+  const update = (expectedRevision, status) =>
+    fetch(`${running.url}/api/batches/B001/reviews/B001-001`, {
+      method: "PUT",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        expectedRevision,
+        status,
+        reasons: [],
+        note: "",
+      }),
+    });
+  assert.equal((await update(0, "keep")).status, 200);
+  const outside = await mkdtemp(join(tmpdir(), "akari-outside-"));
+  const missingOutsideBackup = join(outside, "missing-backup.json");
+  await symlink(
+    missingOutsideBackup,
+    join(fixture.batchDir, "reviews.json.bak"),
+  );
+
+  const response = await update(1, "favorite");
+  assert.equal(response.status, 500);
+  await assert.rejects(readFile(missingOutsideBackup), { code: "ENOENT" });
+});
+
 test("unknown batches and malformed paths use stable JSON 404 responses", async (t) => {
   const { running } = await startFixture(t);
   for (const path of [
@@ -220,6 +325,44 @@ test("JSON request bodies are capped at 64 KiB", async (t) => {
   assert.equal(payload.error.code, "request_too_large");
 });
 
+test("oversized chunked body returns 413 without waiting for EOF", async (t) => {
+  const { running } = await startFixture(t);
+  const socket = connect(running.port, running.host);
+  t.after(() => socket.destroy());
+  await new Promise((resolve, reject) => {
+    socket.once("connect", resolve);
+    socket.once("error", reject);
+  });
+  const response = new Promise((resolve, reject) => {
+    socket.once("data", (chunk) => resolve(chunk.toString("utf8")));
+    socket.once("error", reject);
+  });
+  socket.write([
+    "PUT /api/batches/B001/reviews/B001-001 HTTP/1.1",
+    `Host: ${running.host}:${running.port}`,
+    "Content-Type: application/json",
+    "Transfer-Encoding: chunked",
+    "",
+    `${(65_537).toString(16)}`,
+    "x".repeat(65_537),
+    "",
+  ].join("\r\n"));
+
+  let firstChunk;
+  try {
+    firstChunk = await Promise.race([
+      response,
+      new Promise((_, reject) => setTimeout(
+        () => reject(new Error("server waited for request EOF")),
+        500,
+      )),
+    ]);
+  } finally {
+    socket.destroy();
+  }
+  assert.match(firstChunk, /^HTTP\/1\.1 413 Payload Too Large/m);
+});
+
 test("media route rejects traversal and undeclared ids", async (t) => {
   const { running } = await startFixture(t);
   for (const path of [
@@ -243,6 +386,22 @@ test("missing original disables only that media response", async (t) => {
   );
   assert.equal(missing.status, 404);
   assert.equal(available.status, 200);
+});
+
+test("original media cannot be read through a symlink outside dataRoot", async (t) => {
+  const { fixture, running } = await startFixture(t);
+  const outside = await mkdtemp(join(tmpdir(), "akari-outside-"));
+  const imagePath = join(fixture.batchDir, "images/image-1.png");
+  const outsideImage = join(outside, "image.png");
+  await copyFile(imagePath, outsideImage);
+  await rm(imagePath);
+  await symlink(outsideImage, imagePath);
+
+  const response = await fetch(
+    `${running.url}/media/B001/B001-001/image`,
+  );
+  assert.equal(response.status, 404);
+  assert.equal((await response.json()).error.code, "media_unavailable");
 });
 
 test("original media requires a valid PNG signature", async (t) => {
@@ -288,14 +447,78 @@ test("valid original media has PNG headers", async (t) => {
   assert.equal(bytes.subarray(0, 8).toString("hex"), "89504e470d0a1a0a");
 });
 
+test("thumbnail media cannot be read through a symlink outside dataRoot", async (t) => {
+  const { fixture, running } = await startFixture(t);
+  const outside = await mkdtemp(join(tmpdir(), "akari-outside-"));
+  const thumbnailPath = join(fixture.batchDir, "thumbs/image-1.webp");
+  const outsideThumbnail = join(outside, "image.webp");
+  await copyFile(thumbnailPath, outsideThumbnail);
+  await rm(thumbnailPath);
+  await symlink(outsideThumbnail, thumbnailPath);
+
+  const response = await fetch(
+    `${running.url}/media/B001/B001-001/thumb`,
+  );
+  assert.equal(response.status, 404);
+  assert.equal((await response.json()).error.code, "media_unavailable");
+});
+
+test("thumbnail repair cannot overwrite a symlink target outside dataRoot", async (t) => {
+  let repairs = 0;
+  const outside = await mkdtemp(join(tmpdir(), "akari-outside-"));
+  const outsideTarget = join(outside, "target.webp");
+  await writeFile(outsideTarget, Buffer.from("outside sentinel"));
+  const { fixture, running } = await startFixture(t, {
+    thumbnailBuilder: async () => {
+      repairs += 1;
+    },
+  });
+  const thumbnailPath = join(fixture.batchDir, "thumbs/image-1.webp");
+  await rm(thumbnailPath);
+  await symlink(outsideTarget, thumbnailPath);
+
+  const response = await fetch(
+    `${running.url}/media/B001/B001-001/thumb`,
+  );
+  assert.equal(response.status, 404);
+  assert.equal(repairs, 0);
+  assert.equal(await readFile(outsideTarget, "utf8"), "outside sentinel");
+});
+
+test("thumbnail repair reads a private copy of the validated PNG", async (t) => {
+  let observedSource;
+  let validWebp;
+  const outside = await mkdtemp(join(tmpdir(), "akari-outside-"));
+  const outsideSource = join(outside, "outside.png");
+  await writeFile(outsideSource, Buffer.from("outside sentinel"));
+  const { fixture, running } = await startFixture(t, {
+    thumbnailBuilder: async (source, output) => {
+      const declaredSource = join(fixture.batchDir, "images/image-1.png");
+      await rm(declaredSource);
+      await symlink(outsideSource, declaredSource);
+      observedSource = await readFile(source);
+      await writeFile(output, validWebp);
+    },
+  });
+  validWebp = await readFile(join(fixture.batchDir, "thumbs/image-2.webp"));
+  await rm(join(fixture.batchDir, "thumbs/image-1.webp"));
+
+  const response = await fetch(
+    `${running.url}/media/B001/B001-001/thumb`,
+  );
+  assert.equal(response.status, 200);
+  assert.equal(
+    observedSource.subarray(0, 8).toString("hex"),
+    "89504e470d0a1a0a",
+  );
+});
+
 test("missing thumbnail is rebuilt once", async (t) => {
   let repairs = 0;
   let validWebp;
   const { fixture, running } = await startFixture(t, {
-    thumbnailBuilder: async (source, output) => {
+    thumbnailBuilder: async (_source, output) => {
       repairs += 1;
-      assert.equal(source, join(fixture.batchDir, "images/image-1.png"));
-      assert.equal(output, join(fixture.batchDir, "thumbs/image-1.webp"));
       await writeFile(output, validWebp);
     },
   });
@@ -365,6 +588,45 @@ test("invalid immutable PNG prevents thumbnail repair", async (t) => {
   );
   assert.equal(response.status, 404);
   assert.equal(repairs, 0);
+});
+
+test("hung thumbnail repair times out and removes its partial output", async (t) => {
+  let partialOutput;
+  let releaseBuilder;
+  const { fixture, running } = await startFixture(t, {
+    thumbnailRepairTimeoutMs: 40,
+    thumbnailBuilder: async (_source, output, { signal } = {}) => {
+      partialOutput = output;
+      await writeFile(output, Buffer.from("partial"));
+      await new Promise((resolve) => {
+        releaseBuilder = resolve;
+        signal?.addEventListener("abort", resolve, { once: true });
+      });
+    },
+  });
+  const finalOutput = join(fixture.batchDir, "thumbs/image-1.webp");
+  await rm(finalOutput);
+
+  const request = fetch(
+    `${running.url}/media/B001/B001-001/thumb`,
+  );
+  let response;
+  try {
+    response = await Promise.race([
+      request,
+      new Promise((_, reject) => setTimeout(
+        () => reject(new Error("thumbnail repair did not time out")),
+        500,
+      )),
+    ]);
+  } finally {
+    releaseBuilder?.();
+    await request.catch(() => undefined);
+  }
+  assert.equal(response.status, 404);
+  assert.equal((await response.json()).error.code, "media_unavailable");
+  await assert.rejects(readFile(partialOutput), { code: "ENOENT" });
+  await assert.rejects(readFile(finalOutput), { code: "ENOENT" });
 });
 
 test("concurrent clients persist different image reviews", async (t) => {
