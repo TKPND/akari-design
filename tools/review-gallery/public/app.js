@@ -50,6 +50,8 @@ const elements = {
   dialog: document.querySelector("[data-detail-dialog]"),
   detailImage: document.querySelector("[data-detail-image]"),
   detailCaption: document.querySelector("[data-detail-caption]"),
+  previous: document.querySelector("[data-previous]"),
+  next: document.querySelector("[data-next]"),
   reviewControls: document.querySelector("[data-review-controls]"),
   reasonControls: document.querySelector("[data-reason-controls]"),
   note: document.querySelector("[data-review-note]"),
@@ -104,6 +106,15 @@ function draftFor(entry) {
 
 function activeEntry() {
   return state.visibleEntries[state.activeIndex] ?? null;
+}
+
+function reviewableEntry(entry) {
+  return entry.generation.technicalStatus === "valid" &&
+    /^[a-f0-9]{64}$/.test(entry.artifact.sha256) &&
+    Number.isInteger(entry.artifact.width) &&
+    entry.artifact.width > 0 &&
+    Number.isInteger(entry.artifact.height) &&
+    entry.artifact.height > 0;
 }
 
 function syncDraftNote() {
@@ -212,6 +223,7 @@ function renderProgress() {
   elements.progress.textContent = `${reviewed} / ${records.length}`;
   const ready =
     records.length === state.batch.entries.length &&
+    state.batch.entries.every(reviewableEntry) &&
     records.every(({ status }) => status !== "unreviewed");
   elements.readiness.textContent = ready ? "Ready for next batch" : "";
   elements.readiness.hidden = !ready;
@@ -222,6 +234,7 @@ function statusButton(status, label, draft) {
   button.type = "button";
   button.dataset.reviewStatusButton = status;
   button.textContent = label;
+  button.disabled = state.saving;
   button.setAttribute("aria-pressed", String(draft.status === status));
   button.addEventListener("click", () => {
     draft.status = status;
@@ -236,6 +249,7 @@ function reasonButton(reason, draft) {
   button.type = "button";
   button.dataset.reason = reason;
   button.textContent = reason;
+  button.disabled = state.saving;
   button.setAttribute(
     "aria-pressed",
     String(draft.reasons.includes(reason)),
@@ -270,6 +284,9 @@ function renderDetail() {
   );
   elements.reasonControls.hidden = draft.status !== "reject";
   elements.note.value = draft.note;
+  elements.note.disabled = state.saving;
+  elements.previous.disabled = state.saving;
+  elements.next.disabled = state.saving;
   elements.save.disabled = state.saving || draft.status === "unreviewed";
   elements.save.textContent = state.saving ? "Saving…" : "Save review";
   elements.saveError.textContent = state.saveError;
@@ -299,7 +316,7 @@ function openDetail(imageId) {
 }
 
 function navigateDetail(offset) {
-  if (state.visibleEntries.length === 0) return;
+  if (state.saving || state.visibleEntries.length === 0) return;
   syncDraftNote();
   const nextIndex =
     (state.activeIndex + offset + state.visibleEntries.length) %
@@ -479,7 +496,7 @@ elements.note.addEventListener("input", syncDraftNote);
 elements.save.addEventListener("click", saveActiveReview);
 
 document.addEventListener("keydown", async (event) => {
-  if (!elements.dialog.open) return;
+  if (!elements.dialog.open || state.saving) return;
   const target = event.target;
   if (
     target instanceof HTMLElement &&

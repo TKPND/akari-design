@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { mkdtemp } from "node:fs/promises";
+import { mkdtemp, readFile, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
@@ -31,7 +31,7 @@ async function openBrowserFixture(
   });
   await page.goto(running.url);
   await page.waitForSelector("[data-image-id]");
-  return { page, running };
+  return { dataRoot, page, running };
 }
 
 test("desktop grid supports keyboard review and persisted progress", async (t) => {
@@ -270,6 +270,47 @@ test("readiness appears only after fifty successful review saves", async (t) => 
   assert.match(await page.locator("[data-progress]").textContent(), /50\s*\/\s*50/);
 });
 
+test("fully rated reviews never make a pending batch ready", async (t) => {
+  const { dataRoot, page } = await openBrowserFixture(t, {
+    width: 1280,
+    height: 800,
+  });
+  const batchDir = join(dataRoot, "batches/B001");
+  const manifest = JSON.parse(
+    await readFile(join(batchDir, "manifest.json"), "utf8"),
+  );
+  manifest.entries[0].generation.technicalStatus = "pending";
+  manifest.entries[0].artifact.sha256 = null;
+  manifest.entries[0].artifact.width = null;
+  manifest.entries[0].artifact.height = null;
+  await writeFile(
+    join(batchDir, "manifest.json"),
+    JSON.stringify(manifest),
+    "utf8",
+  );
+  const reviews = await page.evaluate(() =>
+    fetch("/api/batches/B001/reviews").then((response) => response.json())
+  );
+  for (const record of Object.values(reviews.data.reviews)) {
+    record.status = "keep";
+    record.revision = 1;
+    record.updatedAt = "2026-07-30T00:00:00.000Z";
+  }
+  await writeFile(
+    join(batchDir, "reviews.json"),
+    JSON.stringify(reviews.data),
+    "utf8",
+  );
+
+  await page.reload();
+  await page.waitForSelector("[data-image-id]");
+  assert.match(
+    await page.locator("[data-progress]").textContent(),
+    /50\s*\/\s*50/,
+  );
+  assert.equal(await page.getByText("Ready for next batch").count(), 0);
+});
+
 test("a completed save cannot mutate a newly selected batch", async (t) => {
   const { page } = await openBrowserFixture(t, {
     width: 1280,
@@ -325,6 +366,86 @@ test("a completed save cannot mutate a newly selected batch", async (t) => {
     fetch("/api/batches/B001/reviews").then((response) => response.json())
   );
   assert.equal(saved.data.reviews["B001-001"].status, "keep");
+});
+
+test("a pending save locks every draft and navigation control", async (t) => {
+  const { page } = await openBrowserFixture(t, {
+    width: 1280,
+    height: 800,
+  });
+  let releaseSave;
+  const saveGate = new Promise((resolve) => {
+    releaseSave = resolve;
+  });
+  let markSaveStarted;
+  const saveStarted = new Promise((resolve) => {
+    markSaveStarted = resolve;
+  });
+  await page.route(
+    "**/api/batches/B001/reviews/B001-001",
+    async (route) => {
+      markSaveStarted();
+      await saveGate;
+      const response = await route.fetch();
+      await route.fulfill({ response });
+    },
+  );
+
+  await page.locator("[data-image-id='B001-001']").click();
+  await page.locator("[data-review-note]").fill("submitted draft");
+  await page.locator("[data-review-status-button='keep']").click();
+  await page.locator("[data-save-review]").click();
+  await saveStarted;
+
+  assert.equal(
+    await page.locator("[data-review-status-button]").evaluateAll(
+      (controls) => controls.every((control) => control.disabled),
+    ),
+    true,
+  );
+  assert.equal(
+    await page.locator("[data-reason]").evaluateAll(
+      (controls) => controls.every((control) => control.disabled),
+    ),
+    true,
+  );
+  for (const selector of [
+    "[data-review-note]",
+    "[data-save-review]",
+    "[data-previous]",
+    "[data-next]",
+  ]) {
+    assert.equal(await page.locator(selector).isDisabled(), true, selector);
+  }
+
+  await page.locator("[data-detail-dialog]").focus();
+  await page.keyboard.press("3");
+  await page.keyboard.press("ArrowRight");
+  assert.equal(
+    await page.locator("[data-detail-dialog]").getAttribute(
+      "data-active-image-id",
+    ),
+    "B001-001",
+  );
+  assert.equal(
+    await page.locator(
+      "[data-review-status-button='keep']",
+    ).getAttribute("aria-pressed"),
+    "true",
+  );
+  assert.equal(
+    await page.locator("[data-review-note]").inputValue(),
+    "submitted draft",
+  );
+
+  releaseSave();
+  await page.waitForSelector(
+    '[data-image-id="B001-001"][data-review-status="keep"]',
+  );
+  const saved = await page.evaluate(() =>
+    fetch("/api/batches/B001/reviews").then((response) => response.json())
+  );
+  assert.equal(saved.data.reviews["B001-001"].note, "submitted draft");
 });
 
 test("the latest batch selection wins over an earlier slow load", async (t) => {

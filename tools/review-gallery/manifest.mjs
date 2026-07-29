@@ -109,6 +109,18 @@ function freezeManifest(manifest) {
   return Object.freeze(manifest);
 }
 
+export function isReviewableEntry(entry) {
+  return isObject(entry) &&
+    isObject(entry.generation) &&
+    isObject(entry.artifact) &&
+    entry.generation.technicalStatus === "valid" &&
+    sha256Pattern.test(entry.artifact.sha256) &&
+    Number.isInteger(entry.artifact.width) &&
+    entry.artifact.width > 0 &&
+    Number.isInteger(entry.artifact.height) &&
+    entry.artifact.height > 0;
+}
+
 function validateGeneration(entry, batchId) {
   const { generation, artifact } = entry;
   const expectedMode = batchId === "B000" ? "demo" : "built-in-imagegen";
@@ -129,8 +141,7 @@ function validateGeneration(entry, batchId) {
     (artifact.sha256 !== null && !sha256Pattern.test(artifact.sha256)) ||
     (artifact.width !== null && (!Number.isInteger(artifact.width) || artifact.width <= 0)) ||
     (artifact.height !== null && (!Number.isInteger(artifact.height) || artifact.height <= 0)) ||
-    (generation.technicalStatus === "valid" &&
-      (artifact.sha256 === null || artifact.width === null || artifact.height === null))
+    (generation.technicalStatus === "valid" && !isReviewableEntry(entry))
   ) {
     fail("invalid generation metadata");
   }

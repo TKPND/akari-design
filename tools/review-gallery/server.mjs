@@ -12,6 +12,7 @@ import { parseArgs } from "node:util";
 import {
   ManifestValidationError,
   declaredMedia,
+  isReviewableEntry,
   validateBatchManifest,
 } from "./manifest.mjs";
 import { createPinnedRoot } from "./pinned-fs.mjs";
@@ -524,7 +525,8 @@ function progressSummary(manifest, reviews) {
     validationMessage: null,
     reviewed,
     total: manifest.entries.length,
-    ready: reviewed === manifest.entries.length,
+    ready: manifest.entries.every(isReviewableEntry) &&
+      reviewed === manifest.entries.length,
   };
 }
 
@@ -713,6 +715,10 @@ export function createGalleryServer({
       return;
     }
     const entry = manifest.entries.find(({ id }) => id === imageId);
+    if (!isReviewableEntry(entry)) {
+      mediaUnavailable(response);
+      return;
+    }
     if (kind === "image") {
       const media = await validPng(
         pinnedRoot,
@@ -830,6 +836,16 @@ export function createGalleryServer({
       if (!manifest) return;
       if (!manifest.entries.some(({ id }) => id === imageId)) {
         notFound(response);
+        return;
+      }
+      const entry = manifest.entries.find(({ id }) => id === imageId);
+      if (!isReviewableEntry(entry)) {
+        failure(
+          response,
+          409,
+          "non_reviewable",
+          "image is not technically valid for review",
+        );
         return;
       }
       let body;

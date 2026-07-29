@@ -56,7 +56,10 @@
 - When a built-in result is visible but no local PNG is available, structurally
   parse the current Codex rollout for `type == "image_generation_call"` and a
   base64 `result` beginning with `iVBOR`; require decoded signature
-  `89504e470d0a1a0a` before recovery.
+  `89504e470d0a1a0a` before recovery. Recovery provenance is never inferred:
+  record the absolute rollout path, the selected call ID when present, the
+  selected payload's one-based eligible ordinal, JSONL line number, staging
+  basename, and decoded payload SHA-256.
 - The production manifest has exactly five entries per lane, ten
   `textureFocus: true` entries, five `subculture: true` entries, thirty-five
   solo entries, ten viewer-POV/two-person entries, five group entries, forty
@@ -1655,12 +1658,23 @@ Pending generation metadata is:
   "generationId": null,
   "requestId": null,
   "sourcePath": null,
+  "provenance": {
+    "sourceKind": null,
+    "rolloutPath": null,
+    "callId": null,
+    "ordinal": null,
+    "recovery": null
+  },
   "technicalStatus": "pending",
   "failureReason": null
 }
 ```
 
 Pending artifact metadata has null SHA-256, width, and height. Add tests that
+require the exact provenance keys above. Failed entries retain the same all-null
+provenance. Valid entries require the success-receipt provenance described in
+Task 2; no CLI or reconciliation path may synthesize missing provenance.
+Add tests that
 write the manifest to a temporary data root and call:
 
 ```bash
@@ -1727,8 +1741,10 @@ git commit -m "Add Akari B001 request matrix"
   `OwnedBatchFs.close() -> None`,
   `prepare_b001(matrix_path, data_root, archive_root) -> Path`,
   `record_success(matrix_path: Path, data_root: Path, image_id: str,
-  source_path: Path | None, staging_name: str | None, generation_id: str |
-  None, request_id: str | None) -> dict[str, object]`,
+  source_path: Path | None, staging_name: str | None, source_kind: str,
+  rollout_path: Path | None, call_id: str | None, ordinal: int | None,
+  recovery: dict[str, object] | None, generation_id: str | None,
+  request_id: str | None) -> dict[str, object]`,
   `record_failure(matrix_path: Path, data_root: Path, image_id: str,
   failure_reason: str, generation_id: str | None, request_id: str | None) ->
   Path`,
@@ -1760,6 +1776,18 @@ Test these behaviors with real Pillow PNGs:
   beneath the pinned data root, accepts a validated staging basename only
   through `staging_fd`, and rejects simultaneous external/staging/resume
   source modes.
+- Direct tool-output success requires `source_kind="tool-output"`, the exact
+  absolute path passed as `source_path`, and null `rollout_path`, `call_id`,
+  `ordinal`, and `recovery`. Rollout recovery requires
+  `source_kind="rollout-payload"`, both `staging_name` and the exact absolute
+  recovered staging PNG as `source_path`, plus the recovery fields defined
+  below. Reject every mixed, omitted, relative, mismatched, or extra
+  provenance combination before reading or mutating media.
+- For rollout recovery, recompute the canonical absolute display path from
+  `data_root`, `B001`, and `staging_name` and require byte-for-byte path
+  equality with `source_path`; still open the PNG only through retained
+  `staging_fd`. Tests prove the absolute provenance path cannot redirect the
+  descriptor read.
 - A valid result creates same-directory prepared PNG/WebP files, durably
   writes prepared metadata, commits each final with an atomic no-replace link,
   writes one final receipt, updates exactly that manifest entry to `valid`,
@@ -2872,7 +2900,18 @@ path exists:
   ],
   "generationId": "<string or null>",
   "requestId": "<string or null>",
-  "sourcePath": "<absolute original generated location>",
+  "sourcePath": "<exact absolute path passed to record-success>",
+  "provenance": {
+    "sourceKind": "rollout-payload",
+    "rolloutPath": "/absolute/rollout.jsonl",
+    "callId": "selected-call-id",
+    "ordinal": 2,
+    "recovery": {
+      "lineNumber": 123,
+      "outputName": "B001-002-recovered.png",
+      "payloadSha256": "<decoded PNG hash>"
+    }
+  },
   "preparedImagePath": "batches/B001/images/.B001-002-<intent-fingerprint>.prepared.png",
   "imagePath": "batches/B001/images/<filenameStem>.png",
   "preparedThumbnailPath": "batches/B001/thumbs/.B001-002-<intent-fingerprint>.prepared.webp",
@@ -2884,6 +2923,15 @@ path exists:
   "recordedAt": "<UTC ISO timestamp>"
 }
 ```
+
+For `sourceKind: "tool-output"`, `rolloutPath`, `callId`, `ordinal`, and
+`recovery` are all null. For `sourceKind: "rollout-payload"`, `rolloutPath`
+is the exact absolute regular non-symlink JSONL input, `ordinal` is the
+one-based ordinal among eligible PNG payloads, and `recovery` has exactly the
+three keys shown. `callId` is the selected payload object's non-empty ID when
+present and explicit null when absent. `lineNumber` and `ordinal` are positive
+integers, `outputName` is the exact safe staging basename, and
+`payloadSha256` equals both the decoded payload hash and receipt `sha256`.
 
 A final success receipt `receipts/<imageId>.json` contains the same intent,
 prompt, ordered references, generation provenance, final relative paths,
@@ -2912,6 +2960,13 @@ For `record_success`:
    target, reject a source beneath the owned data root, and inspect bytes from
    that descriptor. Open a staging source only by basename relative to
    `staging_fd`. Reject a hash already recorded for another production image;
+   before either open, validate the exact provenance union. Direct
+   `tool-output` uses the supplied absolute source path and all-null rollout
+   fields. `rollout-payload` requires a staging basename, the matching
+   canonical absolute recovered staging path, the exact absolute rollout
+   path, positive eligible ordinal, nullable selected call ID, and exact
+   recovery object. Resume takes provenance only from the already durable
+   prepared receipt and rejects new provenance arguments;
 3. write PNG bytes by basename only through `_write_prepared_file` with
    `fs.images_fd`, `prepared_image_name`, the contents, and the two exact
    failpoint callbacks; this exclusively creates and fsyncs the file, then
@@ -3114,6 +3169,7 @@ with OwnedBatchFs.pin_root(data_root) as owned_fs:
                 "generationId": receipt["generationId"],
                 "requestId": receipt["requestId"],
                 "sourcePath": receipt["sourcePath"],
+                "provenance": receipt["provenance"],
                 "technicalStatus": "valid",
                 "failureReason": None,
             })
@@ -3168,8 +3224,9 @@ only on an exact payload match. `_require_receipt_matches_intent` and
 entire ordered relative reference-record list with the locked entry, rejecting
 extra, missing, reordered, or changed reference fields. They also require the
 exact document key set and types shown above, exact locked final paths, valid
-provenance nullability, lowercase hashes, positive dimensions, and a parseable
-UTC `recordedAt`; prepared receipts additionally require the exact
+provenance union, exact `sourcePath`/staging relationship, lowercase hashes,
+positive dimensions, and a parseable UTC `recordedAt`; prepared receipts
+additionally require the exact
 fingerprint-derived prepared paths. `_resume_prepared_records_at` processes
 prepared records in image-ID order through an internal no-replace finalizer;
 it does not recursively invoke reconciliation. It accepts no source path and
@@ -3209,6 +3266,7 @@ uv run python scripts/manage_akari_v1_5_b001.py record-success \
   --data-root /home/takahiro/workspace/akari_generated/v1.5-1000 \
   --image-id B001-001 \
   --source /absolute/generated/result.png \
+  --source-kind tool-output \
   --generation-id '<if exposed>' \
   --request-id '<if exposed>'
 
@@ -3216,7 +3274,14 @@ uv run python scripts/manage_akari_v1_5_b001.py record-success \
   --matrix akari-v1.5/generation/b001-request-matrix.json \
   --data-root /home/takahiro/workspace/akari_generated/v1.5-1000 \
   --image-id B001-001 \
-  --staging-name B001-001-recovered.png
+  --source /home/takahiro/workspace/akari_generated/v1.5-1000/batches/B001/staging/B001-001-recovered.png \
+  --staging-name B001-001-recovered.png \
+  --source-kind rollout-payload \
+  --rollout-path /absolute/rollout.jsonl \
+  --call-id '<selected call ID, omit only when absent>' \
+  --ordinal 2 \
+  --recovery-line 123 \
+  --payload-sha256 '<64 lowercase hex characters>'
 
 uv run python scripts/manage_akari_v1_5_b001.py record-success \
   --matrix akari-v1.5/generation/b001-request-matrix.json \
@@ -3230,6 +3295,12 @@ uv run python scripts/manage_akari_v1_5_b001.py record-failure \
   --image-id B001-001 \
   --reason 'missing local PNG and no recoverable payload'
 ```
+
+The recovery command in Task 3 prints one JSON object containing the exact
+values for `--source`, `--staging-name`, `--rollout-path`, `--call-id` when
+present, `--ordinal`, `--recovery-line`, and `--payload-sha256`. Copy those
+values without normalization or inference. `record-success` recomputes and
+verifies them; it never derives rollout provenance from the current session.
 
 `prompt` prints JSON with `imageId`, `prompt`, `promptSha256`,
 `batchIntentFingerprint`, ordered `referenceRecords`,
@@ -3289,7 +3360,8 @@ git commit -m "Add resume-safe Akari B001 state"
   staging basename.
 - Produces:
   `recover_png(rollout_path: Path, owned_fs: OwnedBatchFs, output_name: str,
-  call_id: str | None = None, ordinal: int | None = None) -> str`
+  call_id: str | None = None, ordinal: int | None = None) ->
+  dict[str, object]`
   and npm script `gate:v1-5:b001`.
 
 - [ ] **Step 1: Write failing structural-recovery tests**
@@ -3303,6 +3375,30 @@ existing staging name. Reject a slash, backslash, dot component, absolute
 name, non-B001 name, or non-PNG suffix. Swap the staging path for an external
 symlink and ordinary sentinel directory after pinning; recovery writes only
 through the retained `staging_fd` and leaves both sentinels unchanged.
+Assert the returned literal-key object is:
+
+```json
+{
+  "sourceKind": "rollout-payload",
+  "sourcePath": "/absolute/data-root/batches/B001/staging/B001-001-recovered.png",
+  "stagingName": "B001-001-recovered.png",
+  "rolloutPath": "/absolute/rollout.jsonl",
+  "callId": "selected-call-id",
+  "ordinal": 2,
+  "recovery": {
+    "lineNumber": 123,
+    "outputName": "B001-001-recovered.png",
+    "payloadSha256": "<decoded PNG hash>"
+  }
+}
+```
+
+The function resolves `rollout_path` before reading it, requires it to be a
+regular non-symlink file, and returns that exact absolute path. Eligible
+ordinal is assigned in JSONL line/structural-walk order starting at one.
+`callId` is the selected object's non-empty string ID when present and null
+when absent. Tests cover selection by ID and by ordinal, and require both
+selectors to identify the same object when both are supplied.
 
 - [ ] **Step 2: Verify RED**
 
@@ -3323,8 +3419,9 @@ signature `89504e470d0a1a0a`, and call
 `owned_fs.write_staging_exclusive(output_name, decoded_bytes)`. That method
 validates one basename, opens it with
 `O_CREAT | O_EXCL | O_WRONLY | O_NOFOLLOW` relative to retained
-`staging_fd`, fsyncs the file, closes it, then fsyncs `staging_fd`. Never
-accept an output path or print the payload.
+`staging_fd`, fsyncs the file, closes it, then fsyncs `staging_fd`. After both
+fsyncs, return the exact provenance object above with `payloadSha256` computed
+from decoded bytes. Never accept an output path or print the payload.
 
 Use an iterative structural walk so large payloads are never copied into
 terminal text:
@@ -3368,9 +3465,10 @@ uv run python scripts/recover_akari_imagegen_payload.py \
 
 The recovery CLI fresh-pins root, references, state, batches, B001, and every
 owned child, takes the exclusive batch lock, verifies the candidate intent and
-boundary, and only then decodes and writes. It returns the staging basename;
-the absolute display path is assembled for the operator only after the pinned
-write and both fsyncs complete.
+boundary, and only then decodes and writes. The function returns and the CLI
+prints the complete provenance JSON object. `sourcePath` is assembled
+for the operator only after the pinned write and both fsyncs complete, and is
+the exact absolute recovered staging PNG later passed to `record-success`.
 
 - [ ] **Step 4: Add the focused B001 gate**
 
@@ -3432,9 +3530,30 @@ uv run python scripts/install_akari_review_gallery_service.py \
   --host 100.125.117.75 \
   --port 8787 \
   --install
+systemctl --user restart akari-review-gallery.service
+systemctl --user is-active --quiet akari-review-gallery.service
+
+main_pid="$(
+  systemctl --user show akari-review-gallery.service \
+    --property MainPID --value
+)"
+test "${main_pid}" -gt 1
+cmdline="$(tr '\0' ' ' < "/proc/${main_pid}/cmdline")"
+case "${cmdline}" in
+  *".worktrees/"*) exit 1 ;;
+esac
+case "${cmdline}" in
+  *"/home/takahiro/workspace/akari-design/tools/review-gallery/server.mjs"*) ;;
+  *) exit 1 ;;
+esac
+printf '%s\n' "${cmdline}"
 ```
 
-Assert the unit `ExecStart` contains no `.worktrees/`.
+The explicit restart is mandatory even when the installer reports an already
+active service. Assert `is-active` succeeds, `MainPID` names a live process,
+the process command line from `/proc/<MainPID>/cmdline` contains no
+`.worktrees/`, and it contains the canonical-main server path exactly as
+shown. Do not prepare B001 while any assertion fails.
 
 - [ ] **Step 2: Run the B001 gate**
 
@@ -3515,13 +3634,18 @@ The reference-role/exclusion contract for every call is:
    verification, hashes, and identities. With no intervening owned-tree
    operation, call `image_gen` once for that ID with the compiled prompt
    verbatim and the exact opened paths in `referenced_image_paths`.
-5. If a local PNG path is returned, pass it to `record-success`. If no local
-   path exists, use Task 3 rollout recovery, then pass its returned basename
-   through `record-success --staging-name`. If neither source works, call
+5. If a local PNG path is returned, pass that exact absolute path to
+   `record-success --source-kind tool-output`; all rollout fields remain null.
+   If no local path exists, use Task 3 rollout recovery and copy every field
+   from its returned JSON into the recovery `record-success` invocation:
+   exact absolute recovered `sourcePath`, `stagingName`, `rolloutPath`,
+   nullable `callId`, positive `ordinal`, and the complete `recovery` object.
+   The state tool verifies the absolute source path matches the pinned staging
+   basename but reads only through `staging_fd`. If neither source works, call
    `record-failure` and retry the same ID with the same prompt; do not advance.
    If `record-success` stops after durable prepared metadata, resume with
-   `record-success --image-id <ID> --resume-prepared`; do not require or
-   reopen the original generated path.
+   `record-success --image-id <ID> --resume-prepared`; it reuses the durable
+   provenance and does not accept new source/provenance arguments.
 6. Assert the returned entry is `technicalStatus: valid`, the PNG and WebP
    exist, `inspect_png` succeeds, the receipt hash matches the immutable PNG,
    and the status advances by one.
@@ -3729,7 +3853,13 @@ Use the management status and manifest to assert:
   contains absolute `referencedImagePaths`;
 - no receipt document, final image path, or final thumbnail path escapes B001;
   relative reference snapshots deliberately resolve under `references/`, and
-  the receipt’s `sourcePath` is absolute generation provenance only;
+  every receipt `sourcePath` is exactly the absolute path passed to
+  `record-success`. Its exact-key provenance union is either `tool-output`
+  with all-null rollout fields, or `rollout-payload` with the verified
+  absolute rollout path, explicit nullable call ID, positive eligible ordinal,
+  line number, safe staging output name, and decoded payload hash. Every valid
+  manifest generation record contains the byte-equal provenance object from
+  its receipt;
 - no prepared metadata, hidden prepared PNG/WebP, JSON temporary, symbolic
   link, directory in place of media, or unrecorded final remains; every
   descriptor-relative debris scan returns only allowlisted final names and

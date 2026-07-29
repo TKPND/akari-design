@@ -32,6 +32,15 @@ to overwrite a non-demo B000. If the proposed artifact content or paths have
 changed while reviews exist, it fails with a reset-required error before
 changing B000.
 
+The command owns the service maintenance window. It fails closed unless the
+user service state is exactly `active` or `inactive`. When active, it stops
+`akari-review-gallery.service` and confirms `inactive` before reading review
+snapshots, staging, recovery, or swap. Immediately before a swap it confirms
+`inactive` again. After all swap, rollback, and temporary cleanup work, it
+restarts and confirms `active` only when the service was active originally.
+An originally inactive service remains inactive. A failed refresh still
+restores a service that was active before the command.
+
 B000 is demo-only. It never enters the 1,000 production-image count, and no
 image generation occurs when it is created or reviewed.
 

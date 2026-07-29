@@ -8,6 +8,7 @@ import hashlib
 import json
 import os
 import shutil
+import subprocess
 import tempfile
 from pathlib import Path
 
@@ -50,6 +51,79 @@ COLORS = (
     "#d9d8e9",
 )
 PREVIOUS_BATCH_NAME = ".B000.previous"
+SERVICE_NAME = "akari-review-gallery.service"
+
+
+class SystemdUserServiceGuard:
+    """Hold the user gallery service inactive for one refresh."""
+
+    def __init__(self, *, runner=subprocess.run):
+        self._runner = runner
+        self._originally_active = False
+
+    def _run(self, operation: str) -> subprocess.CompletedProcess[str]:
+        return self._runner(
+            ["systemctl", "--user", operation, SERVICE_NAME],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+
+    def _state(self) -> str:
+        result = self._run("is-active")
+        state = result.stdout.strip()
+        if not (
+            (state == "active" and result.returncode == 0)
+            or (state == "inactive" and result.returncode in {3, 4})
+        ):
+            raise RuntimeError(
+                "unable to establish inactive gallery service: "
+                f"systemd state {state or 'unknown'}"
+            )
+        return state
+
+    def _change_state(self, operation: str, expected: str) -> None:
+        result = self._run(operation)
+        if result.returncode != 0:
+            detail = result.stderr.strip()
+            raise RuntimeError(
+                f"failed to {operation} gallery service"
+                f"{f': {detail}' if detail else ''}"
+            )
+        actual = self._state()
+        if actual != expected:
+            raise RuntimeError(
+                "unable to establish inactive gallery service"
+                if expected == "inactive"
+                else "failed to restore active gallery service"
+            )
+
+    def __enter__(self) -> SystemdUserServiceGuard:
+        state = self._state()
+        self._originally_active = state == "active"
+        if self._originally_active:
+            try:
+                self._change_state("stop", "inactive")
+            except BaseException:
+                try:
+                    self._change_state("start", "active")
+                except BaseException as restore_error:
+                    raise RuntimeError(
+                        "failed to restore active gallery service"
+                    ) from restore_error
+                raise
+        return self
+
+    def assert_inactive(self) -> None:
+        if self._state() != "inactive":
+            raise RuntimeError(
+                "gallery service became active during refresh"
+            )
+
+    def __exit__(self, exc_type, exc, traceback) -> bool:
+        if self._originally_active:
+            self._change_state("start", "active")
+        return False
 
 
 def _sha256(path: Path) -> str:
@@ -403,13 +477,15 @@ def _replace_batch(batch: Path, staged: Path, previous: Path) -> None:
     _cleanup_previous(previous)
 
 
-def create_demo_batch(data_root: Path) -> Path:
-    """Create or safely refresh the demo-only B000 batch."""
-
+def _create_demo_batch_while_stopped(
+    data_root: Path,
+    service_guard: object,
+) -> Path:
     data_root = data_root.resolve()
     batches = _verified_batches_directory(data_root)
     batch = batches / "B000"
     previous = batches / PREVIOUS_BATCH_NAME
+    service_guard.assert_inactive()
     _recover_interrupted_swap(batch, previous)
     manifest_path = batch / "manifest.json"
     reviews_path = batch / "reviews.json"
@@ -451,11 +527,25 @@ def create_demo_batch(data_root: Path) -> Path:
             (staged / "reviews.json").write_bytes(reviews_snapshot)
         if backup_snapshot is not None:
             (staged / "reviews.json.bak").write_bytes(backup_snapshot)
+        service_guard.assert_inactive()
         _replace_batch(batch, staged, previous)
     finally:
         if staged.exists():
             shutil.rmtree(staged)
     return batch
+
+
+def create_demo_batch(
+    data_root: Path,
+    *,
+    service_guard: object,
+) -> Path:
+    """Create or safely refresh B000 while the gallery cannot write reviews."""
+
+    if service_guard is None:
+        raise ValueError("service_guard is required")
+    with service_guard as maintenance:
+        return _create_demo_batch_while_stopped(data_root, maintenance)
 
 
 def _absolute_path(value: str) -> Path:
@@ -475,7 +565,12 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
-    print(create_demo_batch(args.data_root))
+    print(
+        create_demo_batch(
+            args.data_root,
+            service_guard=SystemdUserServiceGuard(),
+        )
+    )
     return 0
 
 

@@ -100,6 +100,10 @@ export async function createDemoFixture(
     entry.artifact.thumbnailPath =
       `batches/${batchId}/thumbs/image-${ordinal}.webp`;
     if (batchId === "B000") entry.generation.toolMode = "demo";
+    entry.generation.technicalStatus = "valid";
+    entry.artifact.sha256 = referenceHash;
+    entry.artifact.width = 1;
+    entry.artifact.height = 1;
     for (const reference of entry.references) {
       reference.sha256 = referenceHash;
     }

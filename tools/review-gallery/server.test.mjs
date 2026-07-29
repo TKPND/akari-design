@@ -680,6 +680,106 @@ test("valid original media has PNG headers", async (t) => {
   assert.equal(bytes.subarray(0, 8).toString("hex"), "89504e470d0a1a0a");
 });
 
+test("pending entries remain non-reviewable even when media files exist", async (t) => {
+  const { fixture, running } = await startFixture(t);
+  const manifestPath = join(fixture.batchDir, "manifest.json");
+  const manifest = JSON.parse(await readFile(manifestPath, "utf8"));
+  manifest.entries[0].generation.technicalStatus = "pending";
+  manifest.entries[0].artifact.sha256 = null;
+  manifest.entries[0].artifact.width = null;
+  manifest.entries[0].artifact.height = null;
+  await writeFile(manifestPath, JSON.stringify(manifest), "utf8");
+
+  const reviewsPath = join(fixture.batchDir, "reviews.json");
+  const reviews = await fetch(
+    `${running.url}/api/batches/B001/reviews`,
+  ).then((response) => response.json());
+  for (const record of Object.values(reviews.data.reviews)) {
+    record.status = "keep";
+    record.revision = 1;
+    record.updatedAt = "2026-07-30T00:00:00.000Z";
+  }
+  await writeFile(reviewsPath, JSON.stringify(reviews.data), "utf8");
+
+  for (const kind of ["image", "thumb"]) {
+    const response = await fetch(
+      `${running.url}/media/B001/B001-001/${kind}`,
+    );
+    assert.equal(response.status, 404, kind);
+    assert.equal((await response.json()).error.code, "media_unavailable");
+  }
+  const update = await fetch(
+    `${running.url}/api/batches/B001/reviews/B001-001`,
+    {
+      method: "PUT",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        expectedRevision: 1,
+        status: "favorite",
+        reasons: [],
+        note: "",
+      }),
+    },
+  );
+  assert.equal(update.status, 409);
+  assert.deepEqual(await update.json(), {
+    ok: false,
+    error: {
+      code: "non_reviewable",
+      message: "image is not technically valid for review",
+    },
+  });
+
+  const summary = await fetch(`${running.url}/api/batches`)
+    .then((response) => response.json());
+  const batch = summary.data.batches.find(({ batchId }) => batchId === "B001");
+  assert.equal(batch.reviewed, 50);
+  assert.equal(batch.ready, false);
+});
+
+test("failed entries cannot serve, repair, or accept reviews", async (t) => {
+  let repairs = 0;
+  const { fixture, running } = await startFixture(t, {
+    thumbnailBuilder: async () => {
+      repairs += 1;
+    },
+  });
+  const manifestPath = join(fixture.batchDir, "manifest.json");
+  const manifest = JSON.parse(await readFile(manifestPath, "utf8"));
+  manifest.entries[0].generation.technicalStatus = "failed";
+  manifest.entries[0].generation.failureReason = "generation failed";
+  manifest.entries[0].artifact.sha256 = null;
+  manifest.entries[0].artifact.width = null;
+  manifest.entries[0].artifact.height = null;
+  await writeFile(manifestPath, JSON.stringify(manifest), "utf8");
+  await rm(join(fixture.batchDir, "thumbs/image-1.webp"));
+
+  for (const kind of ["image", "thumb"]) {
+    const response = await fetch(
+      `${running.url}/media/B001/B001-001/${kind}`,
+    );
+    assert.equal(response.status, 404, kind);
+    assert.equal((await response.json()).error.code, "media_unavailable");
+  }
+  assert.equal(repairs, 0);
+
+  const update = await fetch(
+    `${running.url}/api/batches/B001/reviews/B001-001`,
+    {
+      method: "PUT",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        expectedRevision: 0,
+        status: "keep",
+        reasons: [],
+        note: "",
+      }),
+    },
+  );
+  assert.equal(update.status, 409);
+  assert.equal((await update.json()).error.code, "non_reviewable");
+});
+
 test("thumbnail media cannot be read through a symlink outside dataRoot", async (t) => {
   const { fixture, running } = await startFixture(t);
   const outside = await mkdtemp(join(tmpdir(), "akari-outside-"));

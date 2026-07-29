@@ -8,8 +8,13 @@ import hashlib
 import json
 import os
 import shutil
+import stat
 from pathlib import Path
 
+
+NEESOCKS_REFERENCE_SHA256 = (
+    "d8185d8f453dbca9a22bbbae676d8f1c9634b4f2f8a2fecd2a8e675a990047d7"
+)
 
 REFERENCE_SOURCES = (
     (
@@ -86,9 +91,30 @@ def _atomic_json(path: Path, value: object) -> None:
     os.replace(temporary, path)
 
 
-def _snapshot(source: Path, destination: Path) -> str:
+def _require_regular_nonsymlink(path: Path, label: str) -> None:
+    try:
+        metadata = path.lstat()
+    except FileNotFoundError:
+        raise FileNotFoundError(path) from None
+    if not stat.S_ISREG(metadata.st_mode):
+        raise ValueError(f"{label} must be a regular non-symlink file: {path}")
+
+
+def _snapshot(
+    source: Path,
+    destination: Path,
+    *,
+    require_regular_nonsymlink: bool = False,
+) -> str:
+    if require_regular_nonsymlink:
+        _require_regular_nonsymlink(source, "reference source")
     source_hash = sha256_file(source)
-    if destination.exists():
+    if os.path.lexists(destination):
+        if require_regular_nonsymlink:
+            _require_regular_nonsymlink(
+                destination,
+                "reference snapshot",
+            )
         if sha256_file(destination) != source_hash:
             raise ValueError(f"reference snapshot mismatch: {destination}")
         return source_hash
@@ -107,6 +133,13 @@ def initialize_data_root(
 
     repo_root = repo_root.resolve()
     data_root = data_root.resolve()
+    _require_regular_nonsymlink(texture_reference, "neesocks.jpeg")
+    texture_sha256 = sha256_file(texture_reference)
+    if texture_sha256 != NEESOCKS_REFERENCE_SHA256:
+        raise ValueError(
+            "neesocks.jpeg SHA-256 mismatch: "
+            f"expected {NEESOCKS_REFERENCE_SHA256}, got {texture_sha256}"
+        )
     texture_reference = texture_reference.resolve()
     sources = [
         (item_id, repo_root / relative_source, destination_name)
@@ -127,7 +160,13 @@ def initialize_data_root(
     records = []
     for item_id, source, destination_name in sources:
         destination = references_dir / destination_name
-        digest = _snapshot(source, destination)
+        digest = _snapshot(
+            source,
+            destination,
+            require_regular_nonsymlink=(
+                item_id == "neesocks-pressure-study"
+            ),
+        )
         role, exclusions = REFERENCE_METADATA[item_id]
         records.append(
             {
