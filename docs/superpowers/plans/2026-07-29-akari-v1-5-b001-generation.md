@@ -26,6 +26,16 @@
   send a byte-identical second B3 copy.
 - Pass the same opened paths through `referenced_image_paths` in the built-in
   call. Two references are the minimum; four are the maximum.
+- Internal B001 Python filesystem operations pin owned files and directories
+  with no-follow descriptors. `view_image`, built-in `image_gen`, Node, and
+  `curl` are external trust-boundary consumers: they reopen validated absolute
+  display paths themselves. Immediately before each such reference-consuming
+  call, rerun the pinned `prompt` verification, require byte-identical prompt
+  JSON and the same regular-file, non-symlink, SHA-256, and reference-identity
+  result, then invoke the external consumer without an intervening owned-tree
+  operation. A malicious same-user replacement in the interval after that
+  verification and before the external consumer opens the path is explicitly
+  outside this protocol's threat model.
 - Every prompt is printed by the tested compiler and passed verbatim to
   `image_gen`. Do not rewrite it interactively.
 - Generated PNGs, thumbnails, receipts, attempts, manifests, reviews, recovery
@@ -133,6 +143,7 @@ External runtime layout created by Task 4:
 │   ├── novelty-ledger.json
 │   └── prior-coverage.json
 └── batches/
+    ├── B001.bootstrap-claim.json  # Exists only during bootstrap
     ├── B001.lock
     ├── B001.boundary.json
     └── B001/
@@ -157,9 +168,10 @@ Responsibility boundaries:
   summary. It also snapshots names and available manifest metadata from the
   pre-existing generated archive as prior coverage without using archive
   pixels as references.
-- `OwnedBatchFs` in `akari_v1_5_b001_state.py` pins every owned directory and
-  file operation to no-follow directory descriptors for one CLI invocation;
-  no owned runtime mutation re-resolves an absolute `Path`.
+- `OwnedBatchFs` in `akari_v1_5_b001_state.py` pins every internal owned-tree
+  filesystem operation to no-follow directory descriptors for one CLI
+  invocation; no internal owned runtime mutation re-resolves an absolute
+  `Path`. External tools remain subject to the trust boundary above.
 - `manage_akari_v1_5_b001.py` is a thin CLI with `prepare`, `prompt`,
   `status`, `record-success`, `record-failure`, `reconcile`, and
   `review-summary` subcommands.
@@ -1456,7 +1468,39 @@ class PinnedReference:
     sha256: str
 ```
 
-The caller closes every returned descriptor in `finally`.
+The caller closes every successfully returned descriptor in reverse order in
+`finally`. The resolver itself also owns partial construction: it appends each
+validated final descriptor to `opened`, sets `completed = True` only after the
+two-through-four count check passes, and uses its own `finally` to close
+`reversed(opened)` when `completed` is false. Directory-walk descriptors close
+as soon as the next component is pinned. The concrete ownership skeleton is:
+
+```python
+def resolve_reference_paths(
+    references_dir_fd: int,
+    data_root_display: Path,
+    references: list[dict[str, object]],
+) -> list[PinnedReference]:
+    opened: list[PinnedReference] = []
+    completed = False
+    try:
+        for reference in references:
+            pinned = _pin_one_reference(
+                references_dir_fd,
+                data_root_display,
+                reference,
+            )
+            opened.append(pinned)
+        if not 2 <= len(opened) <= 4:
+            raise ValueError("reference count must be between two and four")
+        completed = True
+        return opened
+    finally:
+        if not completed:
+            for pinned in reversed(opened):
+                os.close(pinned.fd)
+```
+
 `resolve_reference_paths` is the only relative-to-absolute display boundary.
 It receives the already pinned `<dataRoot>/references` descriptor from
 `OwnedBatchFs`. For every ordered record it must:
@@ -1484,8 +1528,10 @@ Add tests for absolute paths, lexical traversal, a symlinked file, a symlinked
 parent, a directory in place of a file, missing files, a hash mismatch, wrong
 order, one reference, five references, descriptor lifetime, a swap after
 pinning, root containment, and the exact relative-versus-absolute output
-split. The swap test proves hashing continues on the pinned inode and no
-replacement path is opened.
+split. Inject a failure at every resolver ordinal, record descriptor closes,
+and assert all earlier `PinnedReference` descriptors close once in reverse
+order with no `/proc/self/fd` growth. The swap test proves hashing continues
+on the pinned inode and no replacement path is opened.
 
 Use this compilation structure:
 
@@ -1745,18 +1791,40 @@ Test these behaviors with real Pillow PNGs:
   directory fails the pinned `B001.boundary.json` device/inode check before
   mutation. A replaced `B001.lock`, missing boundary record, symlinked
   component, or malformed intent lock also fails closed.
+- Inject process termination at bootstrap claim-private-file fsync, claim link
+  plus `batches_fd` fsync, B001 mkdir plus `batches_fd` fsync, intent-lock
+  private-file fsync, intent-lock link plus `batch_fd` fsync, boundary link
+  plus `batches_fd` fsync, each owned-child mkdir plus `batch_fd` fsync, claim
+  unlink before `batches_fd` fsync, and claim unlink plus `batches_fd` fsync.
+  From every boundary, a same-intent restart converges to one exact durable
+  bootstrap, while a different-intent restart rejects and preserves every
+  external sentinel byte and directory entry.
+- Trace bootstrap syscalls and assert `flock(batches_fd, LOCK_EX)`, canonical
+  claim no-replace link, `fsync(batches_fd)`, and exact claim reopen/validation
+  all precede the first permitted B001 mkdir. Assert no process lacking that
+  authoritative claim can reach the mkdir helper.
+- For every claim-backed restart state, accept only an absent B001 or the
+  protocol-owned partial subset: exact same-intent `intent-lock.json`, exact
+  same-nonce boundary, known empty owned-child directories, the regular
+  `B001.lock`, and regular private temporaries whose embedded claim nonce
+  matches. Reject malformed claim JSON, an unknown file, a symlink, a
+  non-empty owned child, a wrong-nonce private temporary, and a claimless
+  unmarked B001 without deleting or replacing the unexpected object.
 - Parse the state, management CLI, and recovery modules with `ast`. Except for
   the single lexical `/` anchor and declared external read-only inputs, reject
   owned `Path.open`, `Path.mkdir`, `Path.unlink`, `Path.replace`, globbing, or
   any `os.open/stat/mkdir/link/unlink/replace` call missing its required
   `dir_fd`, `src_dir_fd`, or `dst_dir_fd` keyword. Assert every public
   mutation entry point constructs exactly one fresh `OwnedBatchFs`.
-- Run two same-intent `prepare` processes against one pinned batches
-  directory. Both fsync their private intent-lock temporary before attempting
-  the no-replace link; exactly one creates `intent-lock.json`, the loser reads
-  it through its pinned B001 descriptor, verifies canonical byte equality, and
-  returns idempotent success. Repeat with different and malformed existing
-  lock bytes and assert the loser rejects without changing either file.
+- Run concurrent same-intent `prepare` subprocesses against one pinned
+  `batches_fd`. Assert one process acquires its exclusive batches-directory
+  flock, atomically wins the canonical bootstrap claim, and alone performs the
+  first B001 mkdir. The waiting process either adopts the exact durable
+  same-intent claim after an injected winner crash or observes a claimless,
+  completely marked bootstrap and returns idempotent success. Repeat with
+  different intent, malformed claim bytes, and a foreign sentinel; assert
+  rejection without changing the claim, B001, or sentinel. Use watchdogs to
+  prove the declared batches-lock-then-batch-lock order has no deadlock.
 - A failure attempt increments `technicalFailures` but leaves the intended ID
   pending or failed and eligible for the same prompt retry.
 - Reconcile preserves ledger entries belonging to batches other than B001.
@@ -1815,10 +1883,13 @@ descriptors, builds the complete Task 1 batch intent, and calculates
 `batchIntentFingerprint` before any owned write. It then calls
 `pin_batch`:
 
-- `prepare` opens or exclusively creates regular `B001.lock` relative to
-  `batches_fd`, takes `fcntl.flock(lock_fd, LOCK_EX)`, then creates or opens
-  `B001` and its five child directories only through pinned parent
-  descriptors;
+- `prepare` first takes `fcntl.flock(batches_fd, LOCK_EX)` on the already
+  pinned batches directory. Before B001 can be created, it atomically creates
+  or adopts `B001.bootstrap-claim.json` relative to that descriptor. Only the
+  holder of the exact durable claim may mkdir B001. While still holding the
+  batches-directory lock it creates or opens regular `B001.lock`, takes that
+  lock exclusively, finishes and verifies the bootstrap, durably removes the
+  claim, and only then releases the batches-directory lock;
 - `mutate` requires the lock, B001, and all children to exist, takes
   `LOCK_EX`, creates nothing while pinning, and is used by `status` because it
   reconciles first;
@@ -1833,6 +1904,13 @@ Every open uses `O_NOFOLLOW`; directory opens also use `O_DIRECTORY`.
 `fstat` must confirm regular files and directories. All descriptors remain
 open until the entire public operation finishes and close in reverse order in
 `finally`, including every exception path.
+
+The lock order is globally fixed: bootstrap `prepare` acquires
+`batches_fd LOCK_EX` before `B001.lock LOCK_EX`; no code acquires the batches
+flock while holding `B001.lock`. Once the claim is durably absent, ordinary
+`read` and `mutate` entry points acquire only `B001.lock`. Bootstrap helpers
+never call an ordinary entry point. This order and the fact that a crashed
+process releases both kernel flocks are the deadlock-avoidance contract.
 
 The abstraction has this concrete shape:
 
@@ -1889,6 +1967,7 @@ class OwnedBatchFs:
     batches_fd: int
     lock_fd: int | None = None
     batch_fd: int | None = None
+    bootstrap_nonce: str | None = None
     images_fd: int | None = None
     thumbs_fd: int | None = None
     receipts_fd: int | None = None
@@ -1935,65 +2014,52 @@ class OwnedBatchFs:
         batch_intent_fingerprint: str,
         intent_lock: dict[str, object] | None = None,
     ) -> None:
-        self.lock_fd = _open_batch_lock_at(
-            self.batches_fd,
-            create=mode == "prepare",
-        )
-        self.descriptors.append(self.lock_fd)
-        if not stat.S_ISREG(os.fstat(self.lock_fd).st_mode):
-            raise ValueError("B001.lock is not a regular file")
-        fcntl.flock(
-            self.lock_fd,
-            fcntl.LOCK_SH if mode == "read" else fcntl.LOCK_EX,
-        )
-        batch_created = False
-        try:
-            self.batch_fd = _open_directory_at(self.batches_fd, "B001")
-        except FileNotFoundError:
-            if mode != "prepare":
-                raise
-            self.batch_fd = _create_directory_at(self.batches_fd, "B001")
-            batch_created = True
-        self.descriptors.append(self.batch_fd)
         if mode == "prepare":
             if intent_lock is None:
                 raise ValueError("prepare requires candidate intent lock")
-            _verify_prepare_boundary_or_recovery_at(
-                self.batches_fd,
-                self.lock_fd,
-                self.batch_fd,
-                intent_lock,
-                batch_intent_fingerprint,
-                batch_created,
-            )
-            _create_or_verify_intent_lock_at(
-                self.batch_fd,
-                intent_lock,
-                batch_intent_fingerprint,
-            )
-            _create_or_verify_boundary_at(
-                self.batches_fd,
-                self.lock_fd,
-                self.batch_fd,
-                batch_intent_fingerprint,
-                batch_created,
-            )
+            fcntl.flock(self.batches_fd, fcntl.LOCK_EX)
+            try:
+                (
+                    self.bootstrap_nonce,
+                    self.lock_fd,
+                    self.batch_fd,
+                    child_descriptors,
+                ) = _bootstrap_or_open_completed_batch_at(
+                    self.batches_fd,
+                    batch_intent_fingerprint,
+                    intent_lock,
+                )
+                self.descriptors.extend(
+                    [self.lock_fd, self.batch_fd, *child_descriptors]
+                )
+            finally:
+                fcntl.flock(self.batches_fd, fcntl.LOCK_UN)
         else:
+            self.lock_fd = _open_batch_lock_at(
+                self.batches_fd,
+                create=False,
+            )
+            self.descriptors.append(self.lock_fd)
+            if not stat.S_ISREG(os.fstat(self.lock_fd).st_mode):
+                raise ValueError("B001.lock is not a regular file")
+            fcntl.flock(
+                self.lock_fd,
+                fcntl.LOCK_SH if mode == "read" else fcntl.LOCK_EX,
+            )
+            self.batch_fd = _open_directory_at(self.batches_fd, "B001")
+            self.descriptors.append(self.batch_fd)
+            _require_bootstrap_claim_absent_at(self.batches_fd)
             _verify_existing_boundary_at(
                 self.batches_fd,
                 self.lock_fd,
                 self.batch_fd,
                 batch_intent_fingerprint,
             )
-        child_descriptors = []
-        for name in OWNED_CHILDREN:
-            child_fd = (
-                _create_directory_at(self.batch_fd, name)
-                if mode == "prepare"
-                else _open_directory_at(self.batch_fd, name)
-            )
-            child_descriptors.append(child_fd)
-            self.descriptors.append(child_fd)
+            child_descriptors = []
+            for name in OWNED_CHILDREN:
+                child_fd = _open_directory_at(self.batch_fd, name)
+                child_descriptors.append(child_fd)
+                self.descriptors.append(child_fd)
         (
             self.images_fd,
             self.thumbs_fd,
@@ -2029,6 +2095,167 @@ failure after any intermediate child open still closes every retained
 descriptor; tests inject one failure after each open and assert the process
 has no leaked descriptors.
 
+`_bootstrap_or_open_completed_batch_at` runs wholly under the exclusive
+`batches_fd` flock. It retains each lock, batch, and child descriptor in a
+local acquisition list and closes that list in reverse order on every failure;
+ownership transfers to `OwnedBatchFs.descriptors` only on a complete return.
+Its canonical claim is:
+
+```json
+{
+  "schemaVersion": 1,
+  "batchId": "B001",
+  "batchIntentFingerprint": "<64 lowercase hex characters>",
+  "nonce": "<32 lowercase hex characters>"
+}
+```
+
+The claim protocol is fully descriptor-relative:
+
+1. Inspect `B001.bootstrap-claim.json` with
+   `O_RDONLY | O_NOFOLLOW`. If present, require a regular file, exact key set,
+   exact types, schema version 1, batch ID B001, the candidate fingerprint,
+   canonical bytes, and a valid nonce. The restart adopts that stored nonce.
+   A different-intent or malformed claim rejects without cleanup.
+2. If no claim exists and B001 is absent, choose `secrets.token_hex(16)`,
+   write a private claim temporary with `O_CREAT | O_EXCL | O_NOFOLLOW`,
+   fsync the file, link it to the canonical claim name with both directory
+   descriptors and `follow_symlinks=False`, fsync `batches_fd`, unlink the
+   private temporary, and fsync `batches_fd` again. Only after reopening and
+   byte-verifying that canonical claim may this invocation create B001.
+3. If another same-intent creator won the no-replace link, durably unlink only
+   this invocation's private temporary, reopen the canonical claim through
+   `batches_fd`, and apply the exact check in step 1. The winner's nonce, not
+   the loser's proposed nonce, becomes authoritative.
+4. If no canonical claim exists but a private claim temporary remains from a
+   crash before link, remove it only when it is a regular non-symlink, its
+   strict filename nonce matches its canonical payload nonce, its schema,
+   batch ID, and fingerprint exactly match the candidate, and B001 is absent.
+   Fsync `batches_fd` after unlink, then create a fresh claim. A foreign,
+   malformed, wrong-intent, or symlinked temporary is a hard rejection.
+5. If no claim exists but B001 exists, do not create a claim. Open B001 and
+   `B001.lock` without following links, take `B001.lock LOCK_EX` while
+   retaining the batches flock, and accept only an already completed bootstrap
+   whose intent, boundary, inode pairs, five child directories, and durable
+   claim absence all verify exactly. Any claimless unmarked or partial B001
+   fails closed.
+
+With an exact claim held, bootstrap continues in this order:
+
+1. Inspect the batches directory before mutation. The only B001-owned sibling
+   names allowed are the canonical claim, its same-nonce private temporary,
+   regular `B001.lock`, regular `B001.boundary.json`, and directory `B001`.
+2. If B001 is absent, the authoritative claim holder alone calls
+   `os.mkdir("B001", dir_fd=batches_fd)`, fsyncs `batches_fd`, triggers the
+   mkdir crash point, and pins B001 with `O_DIRECTORY | O_NOFOLLOW`. If it
+   exists, pin it and validate the partial state before writing.
+3. The only allowed B001 entries during claim-backed recovery are exact
+   `intent-lock.json`, the five known owned-child directories, and
+   same-nonce regular private temporaries for the intent. Each existing child
+   must be a directory, must be opened with `O_NOFOLLOW`, and must be empty.
+   Boundary recovery likewise accepts only the exact regular sibling
+   boundary or its same-nonce regular private temporary. Any unknown entry,
+   symlink, wrong nonce, non-empty child, mismatched intent, or mismatched
+   boundary rejects without cleanup.
+4. Create or open regular `B001.lock` relative to `batches_fd`, fsync
+   `batches_fd` if created, and take `LOCK_EX` while still holding the batches
+   flock. Create-or-verify `intent-lock.json`, then create-or-verify the
+   boundary containing the authoritative nonce and pinned inode pairs.
+5. Create each missing owned-child directory one at a time relative to
+   `batch_fd`; after every mkdir, fsync `batch_fd`, open it with
+   `O_DIRECTORY | O_NOFOLLOW`, require it to be empty, and retain its
+   descriptor. Existing children undergo the same open and empty checks.
+6. Re-read and byte-verify the claim, intent, and boundary; recheck the pinned
+   lock and batch inode pairs and all five empty child directories. Only after
+   all are durable and exact, unlink the canonical claim relative to
+   `batches_fd`, trigger the pre-directory-fsync crash point, fsync
+   `batches_fd`, trigger the post-directory-fsync crash point, and verify the
+   claim is absent.
+7. Return the still-locked `B001.lock`, pinned B001, and pinned children. The
+   caller releases the batches flock but retains the per-batch lock through
+   the rest of `prepare`.
+
+Private bootstrap names are strict:
+`.B001.bootstrap-claim.<fingerprint>.<nonce>.claim`,
+`.intent-lock.json.<fingerprint>.<nonce>.prepared`, and
+`.B001.boundary.json.<fingerprint>.<nonce>.prepared`. Bootstrap cleanup never
+uses a glob or prefix-only deletion: it lists through the pinned descriptor,
+parses the complete name, opens without following links, validates canonical
+payload bytes and the authoritative nonce, unlinks exactly that validated
+basename, and fsyncs its parent descriptor.
+
+The atomic claim installer has this concrete no-replace shape. The
+`_failpoint` calls terminate the subprocess in crash tests:
+
+```python
+def _bootstrap_claim(fingerprint: str, nonce: str) -> dict[str, object]:
+    return {
+        "schemaVersion": 1,
+        "batchId": "B001",
+        "batchIntentFingerprint": fingerprint,
+        "nonce": nonce,
+    }
+
+
+def _install_or_adopt_bootstrap_claim_at(
+    batches_fd: int,
+    fingerprint: str,
+) -> dict[str, object]:
+    try:
+        existing = _read_canonical_bootstrap_claim_at(batches_fd)
+    except FileNotFoundError:
+        existing = None
+    if existing is not None:
+        if existing["batchIntentFingerprint"] != fingerprint:
+            raise ValueError("bootstrap claim intent mismatch")
+        return existing
+    nonce = secrets.token_hex(16)
+    proposed = _bootstrap_claim(fingerprint, nonce)
+    temporary_name = (
+        f".B001.bootstrap-claim.{fingerprint}.{nonce}.claim"
+    )
+    _write_bytes_exclusive_at(
+        batches_fd,
+        temporary_name,
+        _canonical_document_bytes(proposed),
+    )
+    _failpoint("after_bootstrap_claim_temporary_fsync")
+    won = False
+    try:
+        os.link(
+            temporary_name,
+            "B001.bootstrap-claim.json",
+            src_dir_fd=batches_fd,
+            dst_dir_fd=batches_fd,
+            follow_symlinks=False,
+        )
+        os.fsync(batches_fd)
+        won = True
+        _failpoint("after_bootstrap_claim_link_directory_fsync")
+    except FileExistsError:
+        won = False
+    finally:
+        try:
+            os.unlink(temporary_name, dir_fd=batches_fd)
+        except FileNotFoundError:
+            pass
+        else:
+            os.fsync(batches_fd)
+    actual = _read_canonical_bootstrap_claim_at(batches_fd)
+    if actual["batchIntentFingerprint"] != fingerprint:
+        raise ValueError("bootstrap claim intent mismatch")
+    if won and actual != proposed:
+        raise ValueError("bootstrap claim winner mismatch")
+    return actual
+```
+
+`_read_canonical_bootstrap_claim_at` rejects non-canonical serialization,
+unknown or missing fields, invalid types, invalid hex lengths, wrong schema,
+wrong batch ID, non-regular files, and symlinks. A no-replace loser therefore
+matches the candidate's schema, batch ID, and fingerprint exactly, then adopts
+the winner's validated nonce. No losing process compares its independently
+chosen nonce to the winner's nonce.
+
 The pinned boundary record is created at `batches/B001.boundary.json` only
 after the intent lock is durable:
 
@@ -2037,6 +2264,7 @@ after the intent lock is durable:
   "schemaVersion": 1,
   "batchId": "B001",
   "batchIntentFingerprint": "<64 lowercase hex characters>",
+  "bootstrapNonce": "<32 lowercase hex characters>",
   "lockDevice": 123,
   "lockInode": 456,
   "batchDevice": 123,
@@ -2045,22 +2273,24 @@ after the intent lock is durable:
 ```
 
 On every later entry point, read this file relative to `batches_fd` and
-require its fingerprint, lock pair, and batch pair to equal the candidate
-intent, `os.fstat(lock_fd)`, and `os.fstat(batch_fd)`. A missing boundary is
-allowed only during
-`prepare`: either this invocation created B001, or an exact durable intent
-lock already exists from a crash before boundary-record creation. An existing
-unmarked B001 with no exact lock is rejected rather than initialized.
+require its exact key set, fingerprint, valid bootstrap nonce, lock pair, and
+batch pair to equal the candidate intent, `os.fstat(lock_fd)`, and
+`os.fstat(batch_fd)`. A missing boundary is allowed only while an exact
+canonical bootstrap claim exists and owns recovery. A claimless existing B001
+with no exact durable boundary and intent lock is rejected rather than
+initialized.
 
-After pinning, all owned-tree reads and mutations use a single relative name
-plus the correct retained directory descriptor. This includes
+After pinning, all internal B001 Python owned-tree reads and mutations use a
+single relative name plus the correct retained directory descriptor. This
+includes
 `os.open`, `os.stat(name, dir_fd=directory_fd, follow_symlinks=False)`,
 `os.listdir`,
 `os.mkdir`, `os.link`, `os.unlink`, and `os.replace`. Nested attempt
 directories are opened component by component below `attempts_fd` and retained
 until the attempt write finishes. No helper accepts an owned absolute `Path`.
 External generated source PNGs and archive scanning remain read-only `Path`
-inputs.
+inputs. Operator tools and the existing Node/curl consumers are external
+reopeners governed by the explicit trust boundary in Global Constraints.
 
 `prepare_b001` accepts
 `archive_root=/home/takahiro/workspace/akari_generated`, excludes the pinned
@@ -2096,6 +2326,7 @@ with OwnedBatchFs.pin_root(data_root) as owned_fs:
     fingerprint = _fingerprint(batch_intent)
     intent_lock = _intent_lock(batch_intent, fingerprint)
     owned_fs.pin_batch("prepare", fingerprint, intent_lock)
+    _require_bootstrap_claim_absent_at(owned_fs.batches_fd)
     _cleanup_same_intent_debris_at(owned_fs, intent_lock)
     _prepare_prior_coverage_at(
         owned_fs.state_fd,
@@ -2106,12 +2337,33 @@ with OwnedBatchFs.pin_root(data_root) as owned_fs:
     _prepare_manifest_and_reviews_at(owned_fs, intent_lock)
 ```
 
+`pin_batch("prepare")` completes the claim, B001, intent, boundary, and
+empty-child bootstrap before the ordinary debris cleanup or state preparation
+shown above. Thus claim unlink is never an early success marker: its parent
+directory fsync occurs only after every bootstrap object has been reopened and
+verified. A crash after unlink but before that fsync is safe in both permitted
+filesystem outcomes: if the claim reappears, same-intent recovery adopts it
+and re-verifies the complete bootstrap; if it remains absent, the already
+durable intent, boundary, and child-directory state passes the claimless
+completed-bootstrap check.
+
 Create `intent-lock.json` relative to pinned `batch_fd` without replacement,
 flush and fsync the file, then fsync `batch_fd`. If the no-replace hard link
 loses to another creator, remove and durably forget the private temporary,
 re-open the winner with `O_RDONLY | O_NOFOLLOW` relative to the same pinned
 descriptor, and compare exact canonical bytes. Equal bytes are idempotent
 success; different or malformed bytes are a hard rejection.
+Instrument exact bootstrap failpoints
+`after_bootstrap_claim_temporary_fsync`,
+`after_bootstrap_claim_link_directory_fsync`,
+`after_bootstrap_batch_mkdir_directory_fsync`,
+`after_bootstrap_intent_temporary_fsync`,
+`after_bootstrap_intent_link_directory_fsync`,
+`after_bootstrap_boundary_link_directory_fsync`,
+`after_bootstrap_child_<name>_directory_fsync`,
+`after_bootstrap_claim_unlink_before_directory_fsync`, and
+`after_bootstrap_claim_unlink_directory_fsync`. The child name token is
+expanded only to the five literal `OWNED_CHILDREN` names.
 Every `prepare`, `prompt`, `status`,
 `record-success`, `record-failure`, `reconcile`, and `review-summary`
 invocation must, before any mutation:
@@ -2943,13 +3195,20 @@ The reference-role/exclusion contract for every call is:
 
 1. Run `status`; its `nextImageId` must equal the intended ID.
 2. Run `prompt --image-id <ID>` and retain its exact JSON.
-3. Open every `referencedImagePaths` item with `view_image`. Describe each
-   role to the built-in call exactly as compiled. The B3 snapshot is the
-   current selected candidate plus identity/body authority; G2 is the
-   rendering/skin authority; conditional roles and exclusions come from the
-   reference manifest.
-4. Call `image_gen` once for that ID with the compiled prompt verbatim and the
-   exact opened paths in `referenced_image_paths`.
+3. For each `referencedImagePaths` item, rerun `prompt --image-id <ID>`,
+   require byte-identical JSON to step 2, and thereby freshly revalidate every
+   reference's identity, regular non-symlink type, and SHA-256 through pinned
+   descriptors. With no intervening owned-tree operation, open that item with
+   `view_image`. Describe each role to the built-in call exactly as compiled.
+   The B3 snapshot is the current selected candidate plus identity/body
+   authority; G2 is the rendering/skin authority; conditional roles and
+   exclusions come from the reference manifest.
+4. Immediately before `image_gen`, rerun `prompt --image-id <ID>` once more
+   and require byte-identical JSON, including prompt hash, fingerprint,
+   ordered reference records, absolute display paths, regular non-symlink
+   verification, hashes, and identities. With no intervening owned-tree
+   operation, call `image_gen` once for that ID with the compiled prompt
+   verbatim and the exact opened paths in `referenced_image_paths`.
 5. If a local PNG path is returned, pass it to `record-success`. If no local
    path exists, use Task 3 rollout recovery, then pass its returned basename
    through `record-success --staging-name`. If neither source works, call
@@ -2963,6 +3222,14 @@ The reference-role/exclusion contract for every call is:
 7. Open the saved PNG for technical inspection only. A valid image is not
    regenerated for subjective weakness; identity, cuteness, garment, anatomy,
    and material judgments belong to the gallery human-review gate.
+
+`view_image`, built-in `image_gen`, Node, and `curl` reopen absolute display
+paths outside the pinned Python filesystem boundary. Whenever Node or `curl`
+is used with an absolute reference path, apply the same immediate `prompt`
+revalidation first. Gallery Node/curl calls that consume generated B001 media
+instead run the pinned reconcile/manifest file-identity gate immediately
+before the external call. A malicious same-user path replacement after the
+immediate verification and before an external open is outside scope.
 
 ### Task 5: Generate Lane 1 — Classic School Uniform
 
@@ -3143,8 +3410,9 @@ Use the management status and manifest to assert:
 - `intent-lock.json` contains the complete batch intent and its canonical
   payload hashes to the stored `batchIntentFingerprint`;
 - `B001.boundary.json` matches the pinned lock and batch device/inode pairs,
-  and a fresh read-mode pin opens root, references, state, batches, B001, and
-  all five owned children without following a symlink;
+  contains its valid bootstrap nonce, the canonical bootstrap claim is
+  durably absent, and a fresh read-mode pin opens root, references, state,
+  batches, B001, and all five owned children without following a symlink;
 - every receipt has that exact fingerprint, its locked prompt hash, and its
   full ordered relative reference records with exact role, exclusions,
   snapshot path, and SHA-256;
@@ -3302,10 +3570,16 @@ the tracked B002 plan; the external review/generated tree remains untracked.
 - Type consistency: the matrix properties, compiler outputs, pending manifest,
   receipt fields, ledger fields, CLI subcommands, and final Node manifest shape
   use the same names throughout.
-- Filesystem consistency: every owned runtime read, write, list, stat, link,
-  unlink, replace, and directory creation receives a retained directory
-  descriptor plus one validated relative name; only external read-only inputs
-  and operator display output use absolute paths.
+- Filesystem consistency: every internal B001 Python owned-tree read, write,
+  list, stat, link, unlink, replace, and directory creation receives a
+  retained directory descriptor plus one validated relative name. External
+  read-only inputs, operator display output, `view_image`, built-in
+  `image_gen`, Node, and `curl` use the documented immediate-revalidation
+  trust boundary.
+- Bootstrap consistency: the exclusive pinned-batches flock and durable
+  canonical claim precede B001 mkdir; same-intent claim recovery accepts only
+  the exact protocol-owned partial subset; claim removal and batches-directory
+  fsync follow verified durable intent, boundary, and empty children.
 - Durability order: prepared file fsync precedes its parent-directory fsync;
   both media directory fsyncs precede the prepared receipt; JSON temporary
   unlink precedes a final parent-directory fsync.
