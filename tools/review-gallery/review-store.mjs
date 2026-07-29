@@ -3,6 +3,14 @@ import { copyFile, mkdir, readFile, rename, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { REVIEW_STATUSES } from "./manifest.mjs";
 
+const nativeFileSystem = Object.freeze({
+  copyFile,
+  mkdir,
+  readFile,
+  rename,
+  writeFile,
+});
+
 export const REJECT_REASONS = Object.freeze([
   "identity-drift",
   "age-drift",
@@ -109,7 +117,11 @@ function validatePatch(patch) {
   };
 }
 
-export function createReviewStore({ dataRoot, clock = () => new Date().toISOString() }) {
+export function createReviewStore({
+  dataRoot,
+  clock = () => new Date().toISOString(),
+  fileSystem = nativeFileSystem,
+}) {
   const tails = new Map();
 
   function batchDirectory(batchId) {
@@ -124,7 +136,7 @@ export function createReviewStore({ dataRoot, clock = () => new Date().toISOStri
   async function readValidDocument(path, batchId, ids) {
     let text;
     try {
-      text = await readFile(path, "utf8");
+      text = await fileSystem.readFile(path, "utf8");
     } catch (error) {
       if (error.code === "ENOENT") return null;
       throw error;
@@ -145,8 +157,8 @@ export function createReviewStore({ dataRoot, clock = () => new Date().toISOStri
 
     const backupDocument = await readValidDocument(backup, batchId, ids);
     if (backupDocument) {
-      await mkdir(batchDirectory(batchId), { recursive: true });
-      await copyFile(backup, primary);
+      await fileSystem.mkdir(batchDirectory(batchId), { recursive: true });
+      await fileSystem.copyFile(backup, primary);
       return backupDocument;
     }
     return initialDocument(batchId, ids);
@@ -190,13 +202,17 @@ export function createReviewStore({ dataRoot, clock = () => new Date().toISOStri
       document.reviews[imageId] = updated;
 
       const { primary, backup } = paths(batchId);
-      await mkdir(batchDirectory(batchId), { recursive: true });
+      await fileSystem.mkdir(batchDirectory(batchId), { recursive: true });
       if (await readValidDocument(primary, batchId, ids)) {
-        await copyFile(primary, backup);
+        await fileSystem.copyFile(primary, backup);
       }
       const temporary = `${primary}.${process.pid}.${randomUUID()}.tmp`;
-      await writeFile(temporary, `${JSON.stringify(document, null, 2)}\n`, "utf8");
-      await rename(temporary, primary);
+      await fileSystem.writeFile(
+        temporary,
+        `${JSON.stringify(document, null, 2)}\n`,
+        "utf8",
+      );
+      await fileSystem.rename(temporary, primary);
       return updated;
     });
   }

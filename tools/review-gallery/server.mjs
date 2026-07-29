@@ -1,30 +1,17 @@
 import { spawn } from "node:child_process";
-import { createHash } from "node:crypto";
-import { constants, realpathSync } from "node:fs";
-import {
-  lstat,
-  mkdtemp,
-  open,
-  readdir,
-  realpath,
-  rename,
-  rm,
-} from "node:fs/promises";
+import { createHash, randomUUID } from "node:crypto";
 import { createServer } from "node:http";
 import { networkInterfaces } from "node:os";
 import {
-  basename,
-  dirname,
   isAbsolute,
   join,
-  relative,
-  resolve,
 } from "node:path";
 import {
   ManifestValidationError,
   declaredMedia,
   validateBatchManifest,
 } from "./manifest.mjs";
+import { createPinnedRoot } from "./pinned-fs.mjs";
 import {
   ReviewConflictError,
   ReviewValidationError,
@@ -36,10 +23,10 @@ const BODY_READ_TIMEOUT_MS = 10_000;
 const DEFAULT_THUMBNAIL_REPAIR_TIMEOUT_MS = 15_000;
 const STDERR_LIMIT = 64 * 1024;
 const PNG_SIGNATURE = Buffer.from("89504e470d0a1a0a", "hex");
+const disposePinnedRoot = Symbol("disposePinnedRoot");
 
 class BatchNotFoundError extends Error {}
 class BatchValidationError extends Error {}
-class UnsafeDataPathError extends Error {}
 class RequestBodyError extends Error {
   constructor(message, { status = 422, code = "invalid_review" } = {}) {
     super(message);
@@ -202,73 +189,6 @@ async function readJsonBody(request) {
   }
 }
 
-function isContained(root, path) {
-  const fromRoot = relative(root, path);
-  return fromRoot === "" ||
-    (fromRoot !== ".." &&
-      !fromRoot.startsWith(`..${"/"}`) &&
-      !fromRoot.startsWith(`..${"\\"}`) &&
-      !isAbsolute(fromRoot));
-}
-
-function requireContained(root, path) {
-  if (!isContained(root, path)) {
-    throw new UnsafeDataPathError("path escapes dataRoot");
-  }
-  return path;
-}
-
-async function canonicalExistingPath(root, path) {
-  const lexicalPath = requireContained(root, resolve(path));
-  const canonicalPath = await realpath(lexicalPath);
-  return requireContained(root, canonicalPath);
-}
-
-async function safeReadFile(root, path, encoding) {
-  const canonicalPath = await canonicalExistingPath(root, path);
-  const handle = await open(
-    canonicalPath,
-    constants.O_RDONLY | constants.O_NOFOLLOW,
-  );
-  try {
-    return {
-      contents: await handle.readFile(encoding),
-      path: canonicalPath,
-    };
-  } finally {
-    await handle.close();
-  }
-}
-
-async function safeWritablePath(root, path) {
-  const lexicalPath = requireContained(root, resolve(path));
-  const canonicalParent = requireContained(
-    root,
-    await realpath(dirname(lexicalPath)),
-  );
-  const canonicalPath = join(canonicalParent, basename(lexicalPath));
-  try {
-    const metadata = await lstat(canonicalPath);
-    if (metadata.isSymbolicLink()) {
-      let symlinkTarget;
-      try {
-        symlinkTarget = await realpath(canonicalPath);
-      } catch (error) {
-        if (error.code === "ENOENT") {
-          throw new UnsafeDataPathError("dangling symlink is unsafe");
-        }
-        throw error;
-      }
-      requireContained(root, symlinkTarget);
-    } else {
-      requireContained(root, await realpath(canonicalPath));
-    }
-  } catch (error) {
-    if (error.code !== "ENOENT") throw error;
-  }
-  return canonicalPath;
-}
-
 function closeRequestAfterResponse(request, response) {
   response.shouldKeepAlive = false;
   response.setHeader("connection", "close");
@@ -292,20 +212,23 @@ function sha256(contents) {
   return createHash("sha256").update(contents).digest("hex");
 }
 
-async function readManifest(dataRoot, batchId) {
+function unsafeFileSystemError(error) {
+  return error.code === "EACCES" || error.code === "ELOOP";
+}
+
+async function readManifest(pinnedRoot, batchId) {
   if (!/^B\d{3}$/.test(batchId)) throw new BatchNotFoundError();
   let text;
   try {
-    ({ contents: text } = await safeReadFile(
-      dataRoot,
-      join(dataRoot, "batches", batchId, "manifest.json"),
+    text = await pinnedRoot.fileSystem.readFile(
+      `batches/${batchId}/manifest.json`,
       "utf8",
-    ));
+    );
   } catch (error) {
     if (error.code === "ENOENT" || error.code === "ENOTDIR") {
       throw new BatchNotFoundError();
     }
-    if (error instanceof UnsafeDataPathError) {
+    if (unsafeFileSystemError(error)) {
       throw new BatchValidationError("unsafe data path");
     }
     throw error;
@@ -321,7 +244,7 @@ async function readManifest(dataRoot, batchId) {
   let manifest;
   try {
     manifest = validateBatchManifest(rawManifest, {
-      dataRoot,
+      dataRoot: pinnedRoot.canonicalRoot,
       checkFiles: false,
     });
   } catch (error) {
@@ -342,15 +265,12 @@ async function readManifest(dataRoot, batchId) {
       checkedReferences.add(key);
       let contents;
       try {
-        ({ contents } = await safeReadFile(
-          dataRoot,
-          resolve(dataRoot, reference.path),
-        ));
+        contents = await pinnedRoot.fileSystem.readFile(reference.path);
       } catch (error) {
         if (error.code === "ENOENT" || error.code === "ENOTDIR") {
           throw new BatchValidationError("declared reference missing");
         }
-        if (error instanceof UnsafeDataPathError) {
+        if (unsafeFileSystemError(error)) {
           throw new BatchValidationError("unsafe data path");
         }
         throw error;
@@ -363,12 +283,12 @@ async function readManifest(dataRoot, batchId) {
   return manifest;
 }
 
-async function readMediaFile(dataRoot, path) {
+async function readMediaFile(pinnedRoot, path) {
   try {
-    return await safeReadFile(dataRoot, path);
+    return await pinnedRoot.fileSystem.readFile(path);
   } catch (error) {
     if (
-      error instanceof UnsafeDataPathError ||
+      unsafeFileSystemError(error) ||
       error.code === "ENOENT" ||
       error.code === "ENOTDIR"
     ) {
@@ -378,31 +298,40 @@ async function readMediaFile(dataRoot, path) {
   }
 }
 
-async function validPng(dataRoot, path, expectedSha256 = null) {
-  const media = await readMediaFile(dataRoot, path);
-  const contents = media?.contents;
+async function validPng(pinnedRoot, path, expectedSha256 = null) {
+  const contents = await readMediaFile(pinnedRoot, path);
   if (
-    contents === undefined ||
+    contents == null ||
     contents.length < PNG_SIGNATURE.length ||
     !contents.subarray(0, PNG_SIGNATURE.length).equals(PNG_SIGNATURE) ||
     (expectedSha256 !== null && sha256(contents) !== expectedSha256)
   ) {
     return null;
   }
-  return media;
+  return contents;
 }
 
-function hasWebpHeader(media) {
-  const contents = media?.contents;
-  return contents !== undefined &&
+function hasWebpHeader(contents) {
+  return contents != null &&
     contents.length >= 12 &&
     contents.subarray(0, 4).toString("ascii") === "RIFF" &&
     contents.subarray(8, 12).toString("ascii") === "WEBP";
 }
 
-async function validWebp(dataRoot, path) {
-  const media = await readMediaFile(dataRoot, path);
-  return hasWebpHeader(media) ? media : null;
+async function validWebp(pinnedRoot, path) {
+  const contents = await readMediaFile(pinnedRoot, path);
+  return hasWebpHeader(contents) ? contents : null;
+}
+
+async function validWebpAt(directory, name) {
+  let contents;
+  try {
+    contents = await directory.readFile(name);
+  } catch (error) {
+    if (error.code === "ENOENT" || error.code === "ENOTDIR") return null;
+    throw error;
+  }
+  return hasWebpHeader(contents) ? contents : null;
 }
 
 function productionThumbnailBuilder({
@@ -506,97 +435,88 @@ export function createGalleryServer({
     pythonExecutable,
   }),
 }) {
-  const canonicalDataRoot = realpathSync(dataRoot);
+  const pinnedRoot = createPinnedRoot(dataRoot);
   const repairTimeoutMs = thumbnailTimeout(thumbnailRepairTimeoutMs);
-  const reviewStore = createReviewStore({ dataRoot: canonicalDataRoot });
+  const reviewStore = createReviewStore({
+    dataRoot: pinnedRoot.canonicalRoot,
+    fileSystem: pinnedRoot.fileSystem,
+  });
   const thumbnailRepairs = new Map();
 
-  async function assertReviewPathsSafe(batchId) {
-    const batchDirectory = await canonicalExistingPath(
-      canonicalDataRoot,
-      join(canonicalDataRoot, "batches", batchId),
-    );
-    await safeWritablePath(
-      canonicalDataRoot,
-      join(batchDirectory, "reviews.json"),
-    );
-    await safeWritablePath(
-      canonicalDataRoot,
-      join(batchDirectory, "reviews.json.bak"),
-    );
-  }
-
   async function repairThumbnail(source, output) {
-    const safeOutput = await safeWritablePath(canonicalDataRoot, output);
-    const existing = thumbnailRepairs.get(safeOutput);
+    const existing = thumbnailRepairs.get(output);
     if (existing) return existing;
-    const repair = (async () => {
-      const alreadyValid = await validWebp(canonicalDataRoot, safeOutput);
-      if (alreadyValid) return alreadyValid;
-      const temporaryDirectory = await mkdtemp(
-        join(dirname(safeOutput), ".akari-thumb-"),
-      );
-      const temporarySource = join(temporaryDirectory, "source.png");
-      const temporaryOutput = join(temporaryDirectory, "thumbnail.webp");
-      const controller = new AbortController();
-      let timer;
-      try {
-        const sourceHandle = await open(
-          temporarySource,
-          constants.O_WRONLY |
-            constants.O_CREAT |
-            constants.O_EXCL,
-          0o600,
+    const repair = pinnedRoot.withParent(
+      output,
+      async (outputDirectory, outputName) => {
+        const alreadyValid = await validWebpAt(
+          outputDirectory,
+          outputName,
         );
+        if (alreadyValid) return alreadyValid;
+        const temporaryName = `.akari-thumb-${randomUUID()}`;
+        await outputDirectory.mkdir(temporaryName, { mode: 0o700 });
+        let timer;
         try {
-          await sourceHandle.writeFile(source.contents);
+          return await outputDirectory.withDirectory(
+            temporaryName,
+            async (temporaryDirectory) => {
+              await temporaryDirectory.writeFile("source.png", source);
+              const controller = new AbortController();
+              const build = Promise.resolve().then(() =>
+                thumbnailBuilder(
+                  temporaryDirectory.path("source.png"),
+                  temporaryDirectory.path("thumbnail.webp"),
+                  { signal: controller.signal },
+                )
+              );
+              const timeout = new Promise((_, rejectTimeout) => {
+                timer = setTimeout(() => {
+                  rejectTimeout(new Error("thumbnail repair timed out"));
+                  controller.abort();
+                }, repairTimeoutMs);
+                timer.unref();
+              });
+              await Promise.race([build, timeout]);
+              const rebuilt = await validWebpAt(
+                temporaryDirectory,
+                "thumbnail.webp",
+              );
+              if (!rebuilt) {
+                throw new Error(
+                  "thumbnail builder produced invalid WebP",
+                );
+              }
+              await temporaryDirectory.renameTo(
+                "thumbnail.webp",
+                outputDirectory,
+                outputName,
+              );
+              const installed = await validWebpAt(
+                outputDirectory,
+                outputName,
+              );
+              if (!installed) {
+                throw new Error("installed thumbnail is invalid");
+              }
+              return installed;
+            },
+          );
         } finally {
-          await sourceHandle.close();
+          clearTimeout(timer);
+          await outputDirectory.remove(temporaryName, {
+            recursive: true,
+            force: true,
+          });
         }
-        const build = Promise.resolve().then(() =>
-          thumbnailBuilder(temporarySource, temporaryOutput, {
-            signal: controller.signal,
-          })
-        );
-        const timeout = new Promise((_, rejectTimeout) => {
-          timer = setTimeout(() => {
-            rejectTimeout(new Error("thumbnail repair timed out"));
-            controller.abort();
-          }, repairTimeoutMs);
-          timer.unref();
-        });
-        await Promise.race([build, timeout]);
-        const rebuilt = await validWebp(
-          canonicalDataRoot,
-          temporaryOutput,
-        );
-        if (!rebuilt) {
-          throw new Error("thumbnail builder produced invalid WebP");
-        }
-        const checkedOutput = await safeWritablePath(
-          canonicalDataRoot,
-          safeOutput,
-        );
-        await rename(temporaryOutput, checkedOutput);
-        const installed = await validWebp(
-          canonicalDataRoot,
-          checkedOutput,
-        );
-        if (!installed) {
-          throw new Error("installed thumbnail is invalid");
-        }
-        return installed;
-      } finally {
-        clearTimeout(timer);
-        await rm(temporaryDirectory, { recursive: true, force: true });
-      }
-    })();
-    thumbnailRepairs.set(safeOutput, repair);
+      },
+    );
+    thumbnailRepairs.set(output, repair);
     try {
       return await repair;
     } finally {
-      if (thumbnailRepairs.get(safeOutput) === repair) {
-        thumbnailRepairs.delete(safeOutput);
+      if (thumbnailRepairs.get(output) === repair) {
+        thumbnailRepairs.delete(output);
       }
     }
   }
@@ -604,11 +524,7 @@ export function createGalleryServer({
   async function listBatches(response) {
     let entries;
     try {
-      const batchesDirectory = await canonicalExistingPath(
-        canonicalDataRoot,
-        join(canonicalDataRoot, "batches"),
-      );
-      entries = await readdir(batchesDirectory, {
+      entries = await pinnedRoot.readdir("batches", {
         withFileTypes: true,
       });
     } catch (error) {
@@ -625,8 +541,7 @@ export function createGalleryServer({
     const batches = [];
     for (const batchId of batchIds) {
       try {
-        const manifest = await readManifest(canonicalDataRoot, batchId);
-        await assertReviewPathsSafe(batchId);
+        const manifest = await readManifest(pinnedRoot, batchId);
         const reviews = await reviewStore.load(batchId, manifest);
         batches.push(progressSummary(manifest, reviews));
       } catch (error) {
@@ -646,7 +561,7 @@ export function createGalleryServer({
 
   async function batchForApi(batchId, response) {
     try {
-      return await readManifest(canonicalDataRoot, batchId);
+      return await readManifest(pinnedRoot, batchId);
     } catch (error) {
       if (error instanceof BatchNotFoundError) {
         notFound(response);
@@ -663,7 +578,7 @@ export function createGalleryServer({
   async function serveMedia(batchId, imageId, kind, response) {
     let manifest;
     try {
-      manifest = await readManifest(canonicalDataRoot, batchId);
+      manifest = await readManifest(pinnedRoot, batchId);
     } catch {
       mediaUnavailable(response);
       return;
@@ -675,33 +590,28 @@ export function createGalleryServer({
       return;
     }
     const entry = manifest.entries.find(({ id }) => id === imageId);
-    const mediaPath = resolve(canonicalDataRoot, declaredPath);
     if (kind === "image") {
       const media = await validPng(
-        canonicalDataRoot,
-        mediaPath,
+        pinnedRoot,
+        declaredPath,
         entry.artifact.sha256,
       );
       if (!media) {
         mediaUnavailable(response);
         return;
       }
-      sendMedia(response, media.contents, "image/png");
+      sendMedia(response, media, "image/png");
       return;
     }
 
-    const thumbnail = await validWebp(canonicalDataRoot, mediaPath);
+    const thumbnail = await validWebp(pinnedRoot, declaredPath);
     if (thumbnail) {
-      sendMedia(response, thumbnail.contents, "image/webp");
+      sendMedia(response, thumbnail, "image/webp");
       return;
     }
-    const sourcePath = resolve(
-      canonicalDataRoot,
-      entry.artifact.imagePath,
-    );
     const source = await validPng(
-      canonicalDataRoot,
-      sourcePath,
+      pinnedRoot,
+      entry.artifact.imagePath,
       entry.artifact.sha256,
     );
     if (!source) {
@@ -709,8 +619,8 @@ export function createGalleryServer({
       return;
     }
     try {
-      const repaired = await repairThumbnail(source, mediaPath);
-      sendMedia(response, repaired.contents, "image/webp");
+      const repaired = await repairThumbnail(source, declaredPath);
+      sendMedia(response, repaired, "image/webp");
     } catch {
       mediaUnavailable(response);
     }
@@ -762,7 +672,6 @@ export function createGalleryServer({
       const manifest = await batchForApi(batchId, response);
       if (!manifest) return;
       try {
-        await assertReviewPathsSafe(batchId);
         success(response, await reviewStore.load(batchId, manifest));
       } catch {
         failure(response, 500, "review_load_failed", "failed to load reviews");
@@ -819,7 +728,6 @@ export function createGalleryServer({
         return;
       }
       try {
-        await assertReviewPathsSafe(batchId);
         const updated = await reviewStore.update(
           batchId,
           manifest,
@@ -867,7 +775,7 @@ export function createGalleryServer({
     notFound(response);
   }
 
-  return createServer((request, response) => {
+  const server = createServer((request, response) => {
     handle(request, response).catch(() => {
       if (!response.headersSent) {
         failure(response, 500, "internal_error", "internal server error");
@@ -876,6 +784,15 @@ export function createGalleryServer({
       }
     });
   });
+  let pinnedRootClosed = false;
+  const closePinnedRoot = () => {
+    if (pinnedRootClosed) return;
+    pinnedRootClosed = true;
+    pinnedRoot.close();
+  };
+  server[disposePinnedRoot] = closePinnedRoot;
+  server.once("close", closePinnedRoot);
+  return server;
 }
 
 export async function startGalleryServer(options) {
@@ -898,6 +815,7 @@ export async function startGalleryServer(options) {
   await new Promise((resolveListen, rejectListen) => {
     const onError = (error) => {
       server.off("listening", onListening);
+      server[disposePinnedRoot]?.();
       rejectListen(new Error(
         `failed to listen on ${normalizedHost}:${port}: ${error.message}`,
         { cause: error },

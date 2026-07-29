@@ -4,13 +4,14 @@ import {
   mkdtemp,
   mkdir,
   readFile,
+  rename,
   rm,
   symlink,
   writeFile,
 } from "node:fs/promises";
 import { connect } from "node:net";
 import { tmpdir } from "node:os";
-import { join } from "node:path";
+import { basename, dirname, join } from "node:path";
 import test from "node:test";
 import {
   assertSafeBindHost,
@@ -510,6 +511,43 @@ test("thumbnail repair reads a private copy of the validated PNG", async (t) => 
   assert.equal(
     observedSource.subarray(0, 8).toString("hex"),
     "89504e470d0a1a0a",
+  );
+});
+
+test("parent replacement cannot redirect thumbnail install or cleanup", async (t) => {
+  let outsideSentinel;
+  let pinnedThumbs;
+  let validWebp;
+  const outside = await mkdtemp(join(tmpdir(), "akari-outside-"));
+  const { fixture, running } = await startFixture(t, {
+    thumbnailBuilder: async (_source, output) => {
+      await writeFile(output, validWebp);
+      const thumbs = join(fixture.batchDir, "thumbs");
+      pinnedThumbs = `${thumbs}-pinned`;
+      await rename(thumbs, pinnedThumbs);
+      const redirectedTemporary = join(
+        outside,
+        basename(dirname(output)),
+      );
+      await mkdir(redirectedTemporary);
+      outsideSentinel = join(redirectedTemporary, "sentinel.txt");
+      await writeFile(outsideSentinel, "outside sentinel", "utf8");
+      await symlink(outside, thumbs);
+    },
+  });
+  validWebp = await readFile(join(fixture.batchDir, "thumbs/image-2.webp"));
+  await rm(join(fixture.batchDir, "thumbs/image-1.webp"));
+
+  const response = await fetch(
+    `${running.url}/media/B001/B001-001/thumb`,
+  );
+  assert.equal(await readFile(outsideSentinel, "utf8"), "outside sentinel");
+  assert.equal(response.status, 200);
+  assert.equal(
+    (await readFile(join(pinnedThumbs, "image-1.webp")))
+      .subarray(0, 4)
+      .toString("ascii"),
+    "RIFF",
   );
 });
 
