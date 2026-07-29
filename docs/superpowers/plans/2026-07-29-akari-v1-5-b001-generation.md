@@ -28,12 +28,13 @@
   call. Two references are the minimum; four are the maximum.
 - Every prompt is printed by the tested compiler and passed verbatim to
   `image_gen`. Do not rewrite it interactively.
-- Generated PNGs, thumbnails, receipts, attempts, manifests, reviews, staging
-  files, and novelty state live only under
+- Generated PNGs, thumbnails, receipts, attempts, manifests, reviews, recovery
+  staging, prepared metadata, same-directory prepared files, and novelty state
+  live only under
   `/home/takahiro/workspace/akari_generated/v1.5-1000/`.
 - Never commit generated images or external state. Never overwrite an existing
-  final PNG, thumbnail, receipt, manifest with a different matrix fingerprint,
-  or reference snapshot.
+  final PNG, thumbnail, receipt, manifest with a different batch-intent
+  fingerprint, or reference snapshot.
 - A technically valid, byte-distinct PNG counts even when its later human
   review is `reject`. Do not silently regenerate a visually weak but
   technically valid image.
@@ -135,8 +136,9 @@ External runtime layout created by Task 4:
     ├── attempts/
     ├── images/
     ├── receipts/
-    ├── staging/
+    ├── staging/  # Rollout-recovery sources only, never commit preparation
     ├── thumbs/
+    ├── intent-lock.json
     ├── manifest.json
     └── reviews.json
 ```
@@ -1128,9 +1130,16 @@ the two permanent references. Conditional reference IDs use
 - Produces:
   `load_matrix(path: Path) -> dict[str, object]`,
   `validate_matrix(matrix: dict[str, object]) -> None`,
-  `compile_prompt(entry: dict[str, object], references: dict[str, object]) -> str`,
-  `reference_records(entry, reference_manifest) -> list[dict[str, object]]`,
-  and `build_pending_manifest(matrix, reference_manifest) -> dict[str, object]`.
+  `reference_records(entry: dict[str, object], reference_manifest:
+  dict[str, object]) -> list[dict[str, object]]`,
+  `resolve_reference_paths(data_root: Path, references:
+  list[dict[str, object]]) -> list[Path]`,
+  `compile_prompt(entry: dict[str, object], references:
+  list[dict[str, object]]) -> str`,
+  `build_batch_intent(matrix: dict[str, object], reference_manifest:
+  dict[str, object]) -> dict[str, object]`, and
+  `build_pending_manifest(batch_intent: dict[str, object]) ->
+  dict[str, object]`.
 
 - [ ] **Step 1: Write failing contract tests**
 
@@ -1169,9 +1178,10 @@ self.assertEqual(
 
 Also assert five `subculture` rows, exact sequential filenames, at most two
 uses of one `wardrobeFamily`, at most three uses of one `setting`, at most two
-uses of one `action`, unique existing `noveltyKey` field tuples, and no string
-matching case-insensitive
-the case-insensitive unresolved-marker expression assembled in the test from
+uses of one `action`, unique existing `noveltyKey` field tuples, no ASCII or
+Unicode ellipsis in any creative string, every required prose field non-empty,
+and no string matching the case-insensitive unresolved-marker expression
+assembled in the test from
 `("T" + "BD", "TO" + "DO", "fill" + " in", "place" + "holder",
 "appro" + "priate", "similar" + " to")`.
 
@@ -1199,47 +1209,116 @@ The root is:
 }
 ```
 
-Each entry has exactly these matrix-owned properties:
+The “Exact B001 Creative Matrix” section in this plan is the authority for all
+fifty final rows. The executor mechanically copies its exact wardrobe,
+cute-beat, pose/hands/gaze, targeted-avoid prose and exact novelty-axis values
+into JSON. For `wardrobe`, copy the words after `wardrobe is`; for `cuteBeat`,
+copy the text inside its code span after the equals sign; for
+`poseHandsGaze`, copy the words after `pose/hands/gaze:`. Collapse Markdown
+line wrapping to one space and omit only terminal sentence punctuation
+outside a code span. Preserve word choice, case, and order. The executor must
+not invent, summarize, localize, capitalize, add a subject to, or paraphrase a
+creative clause.
+
+Each entry has exactly these matrix-owned properties. These three fully
+concrete rows demonstrate the literal transcription for an action row, a
+texture row, and a quiet group row:
 
 ```json
-{
-  "id": "B001-002",
-  "filenameScene": "library-ribbon-adjustment",
-  "lane": "classic-school-uniform",
-  "conceptTitle": "Library ribbon adjustment",
-  "scene": "In a quiet library corridor, ...",
-  "cuteBeat": "She becomes visibly embarrassed ...",
-  "wardrobeFamily": "cream-cardigan-sailor-collar",
-  "wardrobe": "Cream cardigan, navy sailor collar, ...",
-  "setting": "quiet-library-corridor",
-  "action": "reties-loosened-ribbon",
-  "sceneMode": "action-reaction",
-  "composition": "knee-up-intimate-gesture",
-  "camera": "slightly-high-left-three-quarter-65mm",
-  "lighting": "soft-window-afternoon",
-  "cast": "solo",
-  "dominantColor": "cream-navy-dusty-blue",
-  "textureFocus": true,
-  "textureType": "over-knee-socks",
-  "subculture": false,
-  "poseHandsGaze": "Both hands lightly retie the bow ...",
-  "material": "Dark over-knee knit remains distinct from warm skin ...",
-  "conditionalReferenceIds": [
-    "v1.4-action",
-    "neesocks-pressure-study"
-  ],
-  "targetedAvoid": [
-    "uniform rubber-ring compression",
-    "isolated leg framing"
-  ]
-}
+[
+  {
+    "id": "B001-001",
+    "filenameScene": "courtyard-schedule-dash",
+    "lane": "classic-school-uniform",
+    "conceptTitle": "Courtyard schedule dash",
+    "cuteBeat": "leans forward with sudden happiness after finding the right room",
+    "wardrobeFamily": "navy-blazer-burgundy-ribbon",
+    "wardrobe": "a navy adult-academy blazer, ivory rounded-collar blouse, burgundy ribbon, charcoal knee-length pleated skirt, and brown loafers",
+    "setting": "adult-academy-courtyard",
+    "action": "jogs-with-windblown-schedule",
+    "sceneMode": "action-reaction",
+    "composition": "full-body-forward-motion",
+    "camera": "eye-level-front-three-quarter-50mm",
+    "lighting": "clear-morning-open-shade",
+    "cast": "solo",
+    "dominantColor": "navy-burgundy-ivory",
+    "textureFocus": false,
+    "textureType": "none",
+    "subculture": false,
+    "poseHandsGaze": "one hand secures the schedule, the other balances her stride, gaze toward the doorway",
+    "conditionalReferenceIds": ["v1.4-action"],
+    "targetedAvoid": [
+      "fashion-catalog stillness",
+      "copied B3 apartment"
+    ]
+  },
+  {
+    "id": "B001-002",
+    "filenameScene": "library-ribbon-adjustment",
+    "lane": "classic-school-uniform",
+    "conceptTitle": "Library ribbon adjustment",
+    "cuteBeat": "becomes visibly embarrassed when she notices the crooked bow",
+    "wardrobeFamily": "cream-cardigan-sailor-collar",
+    "wardrobe": "a cream cardigan, navy sailor collar, muted blue pleated skirt, dark over-knee socks, and oxford shoes",
+    "setting": "quiet-library-corridor",
+    "action": "reties-loosened-ribbon",
+    "sceneMode": "action-reaction",
+    "composition": "knee-up-intimate-gesture",
+    "camera": "slightly-high-left-three-quarter-65mm",
+    "lighting": "soft-window-afternoon",
+    "cast": "solo",
+    "dominantColor": "cream-navy-dusty-blue",
+    "textureFocus": true,
+    "textureType": "over-knee-socks",
+    "subculture": false,
+    "poseHandsGaze": "both hands lightly retie the bow, knees relaxed, gaze briefly down and aside",
+    "conditionalReferenceIds": [
+      "v1.4-action",
+      "neesocks-pressure-study"
+    ],
+    "targetedAvoid": [
+      "uniform rubber-ring compression",
+      "isolated leg framing"
+    ]
+  },
+  {
+    "id": "B001-050",
+    "filenameScene": "dawn-rooftop-cleanup",
+    "lane": "subculture-wildcard",
+    "conceptTitle": "Dawn rooftop cleanup",
+    "cuteBeat": "shares a calm relieved smile with friends after cleanup",
+    "wardrobeFamily": "angelcore-knit-sheerlayer-skirt",
+    "wardrobe": "an ivory angelcore knit, pale-blue long skirt with an opaque lining and soft sheer outer layer, gray tights, and ivory flats",
+    "setting": "rooftop-picnic-at-dawn",
+    "action": "rests-after-folding-picnic-cloth",
+    "sceneMode": "quiet-posed",
+    "composition": "small-group-seated-wide",
+    "camera": "eye-level-side-three-quarter-65mm",
+    "lighting": "pale-dawn-backlight",
+    "cast": "group",
+    "dominantColor": "ivory-paleblue-gray",
+    "textureFocus": false,
+    "textureType": "none",
+    "subculture": true,
+    "poseHandsGaze": "Akari sits with natural weight on a bench, folded cloth in her lap, friends nearby, gaze toward sunrise",
+    "conditionalReferenceIds": ["v1.4-seated"],
+    "targetedAvoid": [
+      "translucent underwear",
+      "angel wings",
+      "religious symbols"
+    ]
+  }
+]
 ```
 
 Transcribe every decision in “Exact B001 Creative Matrix” without weakening
-specific nouns into generic labels. `scene`, `cuteBeat`, `wardrobe`,
-`poseHandsGaze`, and `material` are complete English prompt clauses, not tags.
-For `textureType=none`, `material` names the row’s most important garment
-fabric plus the global skin direction. Construct
+specific nouns into generic labels. `cuteBeat`, `wardrobe`, and
+`poseHandsGaze` are exact English prompt fragments, not tags or invitations
+for rewriting. The contract test embeds and compares the normalized literal
+values for all fifty rows, not only the three representative rows above.
+Settings, actions, composition, camera, lighting, and colors retain the exact
+canonical slugs in the plan; the compiler humanizes a slug only by replacing
+hyphens with spaces. Construct
 `filenameStem` in code as:
 
 ```python
@@ -1250,16 +1329,21 @@ f"{entry['lane']}_{entry['filenameScene']}"
 - [ ] **Step 4: Implement validation and deterministic prompt compilation**
 
 Validate exact property names, types, allowed enums, quotas, ordered IDs,
-filename slug syntax, string non-emptiness, uniqueness, and reference count.
+filename slug syntax, string non-emptiness, uniqueness, no ASCII `\u002e`
+repeated three times, no Unicode `\u2026`, and reference count. Require the
+matrix, reference manifest, batch-intent, and pending-manifest schema versions
+to equal their declared module constants.
 The compiler emits exactly nine paragraphs in the design’s order:
 
-1. `scene` plus `conceptTitle`;
+1. a fixed scene sentence from humanized `setting` and `action`, plus
+   `conceptTitle`;
 2. `cuteBeat`;
 3. `wardrobe`;
 4. `poseHandsGaze`;
 5. expanded `composition` and `camera`;
 6. expanded `lighting` and `dominantColor`;
-7. `material` plus the global soft-skin paragraph;
+7. fixed material text selected by `textureType`, plus the global soft-skin
+   paragraph;
 8. explicit role and exclusion sentence for every active reference;
 9. only `targetedAvoid` plus the global output invariants.
 
@@ -1283,10 +1367,102 @@ rear tissue, warm reflected shadow, no pore-level photorealism, oily gloss,
 plastic smoothing, or hard muscle definition.
 ```
 
+The exact compiler fields and material constants are:
+
+```python
+PROMPT_TEMPLATE_FIELDS = (
+    "scene-action-concept",
+    "cuteBeat",
+    "wardrobe",
+    "poseHandsGaze",
+    "composition-camera",
+    "lighting-dominantColor",
+    "material-skin",
+    "reference-contract",
+    "identity-output-avoids",
+)
+
+MATERIAL_BY_TEXTURE = {
+    "none": (
+        "Render every named garment material with distinct weave, weight, "
+        "fold scale, edge response, and restrained highlights; avoid one "
+        "generic plastic fabric treatment."
+    ),
+    "over-knee-socks": (
+        "Over-knee knit stays visibly separate from skin, carries plausible "
+        "vertical and circumferential tension, and its band sinks unevenly "
+        "into soft tissue with a small rounded transition above it, never a "
+        "uniform rubber-ring groove."
+    ),
+    "tights-stockings": (
+        "Tights or stockings read as a thin continuous textile layer with "
+        "subtle tension and value shift over form, never painted-on color or "
+        "plastic gloss."
+    ),
+    "knee-high-socks": (
+        "Knee-high rib knit shows believable stretch, fold recovery, and a "
+        "soft nonuniform band transition without cutting a hard groove."
+    ),
+    "crew-ankle-socks": (
+        "Crew or ankle sock ribbing, cuff pressure, and shoe contact remain "
+        "locally readable without becoming the composition focus."
+    ),
+    "bare-contact": (
+        "Bare-skin contact with seat or clothing shows gentle flattening, "
+        "warm occlusion, and continuous anatomy without hard dents."
+    ),
+}
+```
+
 Reference roles come from the live reference manifest and must preserve its
 exact `role`, `snapshotPath`, SHA-256, and `exclusions`. Active references are
 always `v1.5-body-balance`, `v1.4-rendering`, then the row’s conditional IDs.
 Reject more than four references.
+
+Define `BATCH_INTENT_SCHEMA_VERSION = 1`,
+`PENDING_MANIFEST_SCHEMA_VERSION = 1`,
+`REFERENCE_MANIFEST_SCHEMA_VERSION = 1`,
+`PROMPT_CONTRACT_VERSION = 1`,
+`PROMPT_TEMPLATE_FIELDS`, `FIXED_IDENTITY_OUTPUT_SENTENCE`,
+`FIXED_SKIN_SENTENCE`, and all `MATERIAL_BY_TEXTURE` strings as module
+constants. Their exact canonical JSON representation is part of the batch
+intent in Task 2. There is no runtime prose rewriting.
+
+`reference_records` returns ordered manifest records with relative paths only:
+
+```json
+{
+  "id": "v1.5-body-balance",
+  "snapshotPath": "references/akari-v1.5-b3-body-balance.png",
+  "role": "v1.5 identity and body balance",
+  "exclusions": ["outfit", "pose", "background"],
+  "sha256": "e0cd9a7e9abfcbe5997df156f1e6ecb246ca91fe91ba0b1d84d7947050c66734"
+}
+```
+
+`resolve_reference_paths` is the only relative-to-absolute boundary. For every
+ordered record it must:
+
+1. reject an absolute, empty, dot, parent, Windows-rooted, or backslash path;
+2. require the first lexical segment to be exactly `references`;
+3. resolve from the normalized absolute data root and require the result to
+   remain under the normalized `<dataRoot>/references` directory;
+4. `lstat` every segment from `references` through the file and reject any
+   symbolic link;
+5. require a regular file, compare its SHA-256 with the record, and preserve
+   input order;
+6. require two through four resolved paths.
+
+The batch intent, prepared records, and final receipts store only the relative
+`snapshotPath`. Manifest references store the same relative value under the
+existing validator’s `path` key. The `prompt` command alone adds
+`referencedImagePaths`, containing normalized absolute strings returned by
+`resolve_reference_paths`.
+
+Add tests for absolute paths, lexical traversal, a symlinked file, a symlinked
+parent, a directory in place of a file, missing files, a hash mismatch, wrong
+order, one reference, five references, root containment, and the exact
+relative-versus-absolute output split.
 
 Use this compilation structure:
 
@@ -1304,15 +1480,20 @@ def compile_prompt(
     entry: dict[str, object],
     references: list[dict[str, object]],
 ) -> str:
+    human_setting = str(entry["setting"]).replace("-", " ")
+    human_action = str(entry["action"]).replace("-", " ")
     reference_text = " ".join(
         _reference_sentence(reference) for reference in references
     )
     avoid_text = "; ".join(entry["targetedAvoid"])
     paragraphs = (
-        f"{entry['scene']} Concept: {entry['conceptTitle']}.",
-        str(entry["cuteBeat"]),
-        str(entry["wardrobe"]),
-        str(entry["poseHandsGaze"]),
+        (
+            f"Scene: {human_setting}. Current action: {human_action}. "
+            f"Concept: {entry['conceptTitle']}."
+        ),
+        f"Cute beat: Akari {entry['cuteBeat']}.",
+        f"Wardrobe: Akari wears {entry['wardrobe']}.",
+        f"Pose, hands, and gaze: {entry['poseHandsGaze']}.",
         (
             f"Composition: {entry['composition']}. "
             f"Camera: {entry['camera']}."
@@ -1321,17 +1502,74 @@ def compile_prompt(
             f"Lighting: {entry['lighting']}. "
             f"Dominant colors: {entry['dominantColor']}."
         ),
-        f"{entry['material']} {FIXED_SKIN_SENTENCE}",
+        f"{MATERIAL_BY_TEXTURE[entry['textureType']]} {FIXED_SKIN_SENTENCE}",
         reference_text,
         f"{FIXED_IDENTITY_OUTPUT_SENTENCE} Targeted avoids: {avoid_text}.",
     )
     return "\n\n".join(paragraphs)
 ```
 
-- [ ] **Step 5: Build pending manifest entries**
+- [ ] **Step 5: Build the canonical batch intent and pending manifest**
+
+`build_batch_intent` canonicalizes everything that may change a generated
+result:
+
+```python
+intent_entries = []
+for matrix_entry in matrix["entries"]:
+    references = reference_records(matrix_entry, reference_manifest)
+    compiled_prompt = compile_prompt(matrix_entry, references)
+    filename_stem = filename_stem_for(matrix_entry)
+    intent_entries.append({
+        "id": matrix_entry["id"],
+        "compiledPrompt": compiled_prompt,
+        "promptSha256": hashlib.sha256(
+            compiled_prompt.encode("utf-8")
+        ).hexdigest(),
+        "references": references,
+        "imagePath": f"batches/B001/images/{filename_stem}.png",
+        "thumbnailPath": f"batches/B001/thumbs/{filename_stem}.webp",
+    })
+
+batch_intent = {
+    "schemaVersion": BATCH_INTENT_SCHEMA_VERSION,
+    "batchId": "B001",
+    "schemaContract": {
+        "intentSchemaVersion": BATCH_INTENT_SCHEMA_VERSION,
+        "matrixSchemaVersion": matrix["schemaVersion"],
+        "pendingManifestSchemaVersion": PENDING_MANIFEST_SCHEMA_VERSION,
+        "referenceManifestSchemaVersion": REFERENCE_MANIFEST_SCHEMA_VERSION,
+    },
+    "matrixContract": matrix,
+    "compilerContract": {
+        "promptContractVersion": PROMPT_CONTRACT_VERSION,
+        "templateFields": list(PROMPT_TEMPLATE_FIELDS),
+        "fixedIdentityOutputSentence": FIXED_IDENTITY_OUTPUT_SENTENCE,
+        "fixedSkinSentence": FIXED_SKIN_SENTENCE,
+        "materialByTexture": MATERIAL_BY_TEXTURE,
+    },
+    "entries": intent_entries,
+}
+```
+
+Serialize this payload as UTF-8 canonical compact JSON with sorted object keys
+and list order preserved. Its SHA-256 is `batchIntentFingerprint`. Tests assert
+exactly fifty compiled prompts, fifty prompt hashes, two through four resolved
+reference records per row, and one fingerprint change when an intent, matrix,
+pending-manifest, or reference-manifest schema version, any matrix field,
+compiler constant, template field, reference role, exclusion, relative path,
+order, or SHA changes.
 
 Map the matrix into the existing `validateBatchManifest` shape. The prompt is
-the compiled prompt. Artifact paths are:
+the compiled prompt. The manifest uses `batchType: "production"` and copies
+every novelty-axis property without renaming it. Its reference objects use the
+validator’s `path` key, mechanically mapped from each locked record’s
+`snapshotPath`; `role`, `exclusions`, and `sha256` remain byte-for-byte equal.
+The batch intent and prepared/final receipts retain the canonical
+`snapshotPath` name, while CLI prompt JSON exposes those same canonical
+records as `referenceRecords`. Tests assert this deliberate boundary and reject
+`snapshotPath` in a manifest reference or `path` in an intent/receipt
+reference. Artifact paths are:
 
 ```text
 batches/B001/images/<filenameStem>.png
@@ -1386,6 +1624,8 @@ git commit -m "Add Akari B001 request matrix"
 
 **Files:**
 
+- Modify: `scripts/build_akari_review_thumbnail.py`
+- Modify: `tests/test_build_akari_review_thumbnail.py`
 - Create: `scripts/akari_v1_5_b001_state.py`
 - Create: `scripts/manage_akari_v1_5_b001.py`
 - Create: `tests/test_akari_v1_5_b001_state.py`
@@ -1395,39 +1635,92 @@ git commit -m "Add Akari B001 request matrix"
 - Consumes: matrix path, data root, image ID, optional generated source PNG,
   generation ID, request ID, and failure reason.
 - Produces:
+  `render_thumbnail_bytes(source: Path, max_edge: int = 512) -> bytes`,
   `prepare_b001(matrix_path, data_root, archive_root) -> Path`,
-  `record_success(...) -> dict[str, object]`,
-  `record_failure(...) -> Path`,
-  `reconcile_b001(...) -> dict[str, object]`,
-  `b001_status(...) -> dict[str, object]`, and
-  `summarize_b001_reviews(...) -> dict[str, object]`.
+  `record_success(matrix_path: Path, data_root: Path, image_id: str,
+  source_path: Path | None, generation_id: str | None, request_id: str |
+  None) -> dict[str, object]`,
+  `record_failure(matrix_path: Path, data_root: Path, image_id: str,
+  failure_reason: str, generation_id: str | None, request_id: str | None) ->
+  Path`,
+  `reconcile_b001(matrix_path: Path, data_root: Path) ->
+  dict[str, object]`,
+  `b001_status(matrix_path: Path, data_root: Path) ->
+  dict[str, object]`, and
+  `summarize_b001_reviews(matrix_path: Path, data_root: Path) ->
+  dict[str, object]`.
 
 - [ ] **Step 1: Write failing persistence tests**
 
 Test these behaviors with real Pillow PNGs:
 
 - `prepare_b001` creates the external directory structure, pending
-  `manifest.json`, and fifty revision-zero `reviews.json` entries.
-- Re-running prepare with the same matrix fingerprint is byte-idempotent.
-- A changed matrix fingerprint is rejected before mutation.
+  `intent-lock.json`, `manifest.json`, and fifty revision-zero `reviews.json`
+  entries.
+- Re-running prepare with the same batch intent is byte-idempotent, including
+  `prior-coverage.json`.
+- Changing the matrix, any of the four schema-version contracts,
+  prompt-contract version, compiler constant, template order, reference role,
+  exclusion, relative path, SHA, or reference order changes
+  `batchIntentFingerprint` and is rejected before mutation.
+- A receipt or prepared record from another fingerprint is rejected; a run
+  cannot mix prompt or reference contracts.
 - `record_success` rejects a non-PNG, a damaged PNG, an unknown ID, and a
   SHA-256 already present in the ledger.
-- A valid result creates one immutable PNG, one WebP, and one receipt; updates
-  exactly that manifest entry to `valid`; and increments
-  `acceptedProductionImages` exactly once.
+- A valid result creates same-directory prepared PNG/WebP files, durably
+  writes prepared metadata, commits each final with an atomic no-replace link,
+  writes one final receipt, updates exactly that manifest entry to `valid`,
+  and increments `acceptedProductionImages` exactly once.
+- `render_thumbnail_bytes` returns a verified `RIFF`/`WEBP` payload without
+  opening any destination; `build_thumbnail` delegates to it so thumbnail
+  derivation remains owned by the existing module. The existing thumbnail
+  tests assert the byte API has the same size bounds and decoded RGB result as
+  the path API, and rejects the same invalid PNG inputs.
 - Re-recording the same ID/source is idempotent; a different source for the
   completed ID is rejected without overwrite.
-- A simulated crash after PNG install, after thumbnail install, and after
-  receipt write is repaired by `reconcile_b001`.
+- Inject a crash after each of: image-stage fsync, thumbnail-stage fsync,
+  prepared-record fsync, image link plus directory fsync, thumbnail link plus
+  directory fsync, final-receipt fsync, and reconcile before prepared cleanup.
+  Before prepared-record durability, retry requires the source. At and after
+  prepared-record durability, retry with `source_path=None` finishes from
+  prepared metadata and valid same-directory files.
+- Crash before the final link leaves no final file. Crash after a final link
+  but before a final receipt recovers without the source. A mismatched
+  pre-existing final, symbolic link, directory, or wrong hash is rejected
+  without replacement.
+- Thumbnail commit has the same no-overwrite, regular-file, non-symlink,
+  prepared-hash, atomic-link, and directory-fsync assertions as the PNG.
 - A failure attempt increments `technicalFailures` but leaves the intended ID
   pending or failed and eligible for the same prompt retry.
 - Reconcile preserves ledger entries belonging to batches other than B001.
 - Prior-coverage indexing scans the pre-existing generated archive while
   excluding the active `v1.5-1000` data root, records relative filenames and
   any available novelty metadata, never changes archive files, and is
-  idempotent.
+  byte-idempotent; operational scan time is absent from authoritative JSON.
 - Review summary rejects any `unreviewed` record and, once complete, returns
-  counts, reason totals, favorite IDs, keep IDs, reject IDs, and notes.
+  counts, reason totals, favorite IDs, keep IDs, reject IDs, notes, exact
+  per-lane status cross-tabs, and exact per-texture-type status cross-tabs.
+
+For the cross-tab test, rate offset 0 in every lane `favorite`, offsets 1 and
+2 `keep`, and offsets 3 and 4 `reject`, then assert:
+
+```python
+self.assertTrue(all(
+    counts == {"favorite": 1, "keep": 2, "reject": 2}
+    for counts in summary["byLane"].values()
+))
+self.assertEqual(
+    {
+        "over-knee-socks": {"favorite": 2, "keep": 3, "reject": 0},
+        "tights-stockings": {"favorite": 1, "keep": 1, "reject": 0},
+        "knee-high-socks": {"favorite": 1, "keep": 0, "reject": 0},
+        "crew-ankle-socks": {"favorite": 0, "keep": 1, "reject": 0},
+        "bare-contact": {"favorite": 0, "keep": 1, "reject": 0},
+        "none": {"favorite": 6, "keep": 14, "reject": 20},
+    },
+    summary["byTextureType"],
+)
+```
 
 - [ ] **Step 2: Verify RED**
 
@@ -1441,22 +1734,51 @@ Expected: FAIL because the state module does not exist.
 
 - [ ] **Step 3: Implement durable preparation**
 
-Calculate `matrixFingerprint` as SHA-256 of canonical compact JSON with sorted
-keys. `prepare_b001` verifies reference hashes, then creates directories with
-mode-safe ordinary directory operations and refuses symlinks at `batches`,
-`B001`, and every owned child. It accepts
+`prepare_b001` validates the matrix and reference manifest, safely resolves
+the ordered reference paths, builds the complete Task 1 batch intent, and
+calculates `batchIntentFingerprint` before any external write. If an intent
+lock already exists, it performs all four lock checks below before creating,
+rewriting, or removing any path. On the first invocation only, it then creates
+directories with mode-safe
+ordinary directory operations and refuses symlinks at `batches`, `B001`, and
+every owned child. It accepts
 `archive_root=/home/takahiro/workspace/akari_generated`, excludes the resolved
-active data root, and atomically writes `state/prior-coverage.json` with source
-root, scan time, sorted relative PNG names, and normalized novelty metadata
-found in adjacent manifests. It rejects any full novelty key already present
-in the production ledger or prior-coverage metadata. Archive images are never
+active data root, and computes deterministic `state/prior-coverage.json`
+content with schema version, normalized source root, sorted relative PNG
+names, and normalized novelty metadata found in adjacent manifests. The
+authoritative document contains no clock value. If the file exists with equal
+canonical bytes, do not rewrite it; if it differs, reject with an explicit
+prior-coverage drift error. Reject any full novelty key already present in the
+production ledger or prior-coverage metadata. Archive images are never
 returned as generation references.
+
+The create-once intent lock is:
+
+```python
+intent_lock = {
+    "schemaVersion": 1,
+    "batchId": "B001",
+    "batchIntentFingerprint": batch_intent_fingerprint,
+    "batchIntent": batch_intent,
+}
+```
+
+Write `batches/B001/intent-lock.json` without replacement, flush and fsync the
+file, then fsync the B001 directory. Every `prepare`, `prompt`, `status`,
+`record-success`, `record-failure`, `reconcile`, and `review-summary`
+invocation must, before any mutation:
+
+1. rebuild candidate intent from current matrix, compiler constants/template,
+   and current full relative reference records;
+2. verify its fingerprint equals the stored fingerprint;
+3. verify the canonical stored payload itself hashes to that fingerprint;
+4. reject any drift, corrupt lock, or mixed receipt/prepared fingerprint.
 
 Write JSON through a same-directory temporary file, flush, `os.fsync`, then
 `os.replace`. After replacement, fsync the parent directory. The initial
 manifest is the Task 1 pending manifest plus top-level
-`matrixFingerprint`. Because the existing Node validator ignores additional
-top-level metadata, its contract remains valid.
+`batchIntentFingerprint`. Because the existing Node validator ignores
+additional top-level metadata, its contract remains valid.
 
 Use this durable JSON primitive for manifest, ledger, review, and receipt
 documents:
@@ -1477,6 +1799,34 @@ def _atomic_json(path: Path, value: object) -> None:
         os.fsync(directory_fd)
     finally:
         os.close(directory_fd)
+
+
+def _write_json_file_and_fsync(path: Path, value: object) -> None:
+    with path.open("x", encoding="utf-8") as stream:
+        json.dump(value, stream, ensure_ascii=False, indent=2)
+        stream.write("\n")
+        stream.flush()
+        os.fsync(stream.fileno())
+
+
+def _fsync_directory(path: Path) -> None:
+    descriptor = os.open(path, os.O_RDONLY | os.O_DIRECTORY)
+    try:
+        os.fsync(descriptor)
+    finally:
+        os.close(descriptor)
+
+
+def _json_no_replace(path: Path, value: object) -> None:
+    prepared = path.with_name(
+        f".{path.name}.{os.getpid()}.{uuid.uuid4().hex}.prepared"
+    )
+    _write_json_file_and_fsync(prepared, value)
+    try:
+        os.link(prepared, path)
+        _fsync_directory(path.parent)
+    finally:
+        prepared.unlink(missing_ok=True)
 ```
 
 The initial review document is:
@@ -1510,7 +1860,17 @@ One failed attempt is an immutable JSON file in
   "schemaVersion": 1,
   "batchId": "B001",
   "imageId": "B001-002",
+  "batchIntentFingerprint": "<64 lowercase hex characters>",
   "promptSha256": "<compiled prompt hash>",
+  "references": [
+    {
+      "id": "v1.5-body-balance",
+      "snapshotPath": "references/akari-v1.5-b3-body-balance.png",
+      "role": "v1.5 identity and body balance",
+      "exclusions": ["outfit", "pose", "background"],
+      "sha256": "e0cd9a7e9abfcbe5997df156f1e6ecb246ca91fe91ba0b1d84d7947050c66734"
+    }
+  ],
   "generationId": null,
   "requestId": null,
   "failureReason": "missing local PNG and no recoverable payload",
@@ -1518,50 +1878,97 @@ One failed attempt is an immutable JSON file in
 }
 ```
 
-One success receipt is:
+A durable prepared record is
+`receipts/<imageId>.prepared.json`. It is written before either final media
+path exists:
 
 ```json
 {
   "schemaVersion": 1,
   "batchId": "B001",
   "imageId": "B001-002",
-  "matrixFingerprint": "<matrix hash>",
+  "batchIntentFingerprint": "<64 lowercase hex characters>",
   "promptSha256": "<compiled prompt hash>",
+  "references": [
+    {
+      "id": "v1.5-body-balance",
+      "snapshotPath": "references/akari-v1.5-b3-body-balance.png",
+      "role": "v1.5 identity and body balance",
+      "exclusions": ["outfit", "pose", "background"],
+      "sha256": "e0cd9a7e9abfcbe5997df156f1e6ecb246ca91fe91ba0b1d84d7947050c66734"
+    }
+  ],
   "generationId": "<string or null>",
   "requestId": "<string or null>",
   "sourcePath": "<absolute original generated location>",
+  "preparedImagePath": "batches/B001/images/.B001-002-<intent-prefix>.prepared.png",
   "imagePath": "batches/B001/images/<filenameStem>.png",
+  "preparedThumbnailPath": "batches/B001/thumbs/.B001-002-<intent-prefix>.prepared.webp",
   "thumbnailPath": "batches/B001/thumbs/<filenameStem>.webp",
   "sha256": "<PNG hash>",
+  "thumbnailSha256": "<WebP hash>",
   "width": 1024,
   "height": 1536,
   "recordedAt": "<UTC ISO timestamp>"
 }
 ```
 
+A final success receipt `receipts/<imageId>.json` contains the same intent,
+prompt, ordered references, generation provenance, final relative paths,
+hashes, dimensions, and `recordedAt`, but omits prepared paths. Validate every
+field against the intent lock before reconciliation.
+
+Refactor the existing thumbnail module without changing its output settings:
+`render_thumbnail_bytes` runs `inspect_png`, converts to RGB, bounds the long
+edge at 512 with LANCZOS, saves to `io.BytesIO` as WebP with quality 82 and
+method 6, validates the two WebP header spans, and returns immutable bytes.
+`build_thumbnail` delegates to that function and preserves its current
+path-writing API. The B001 state layer calls only `render_thumbnail_bytes` and
+owns exclusive persistence.
+
 For `record_success`:
 
-1. run existing `inspect_png(source)`;
-2. reject a hash already recorded for another production image;
-3. install bytes with `os.open(..., O_CREAT | O_EXCL | O_WRONLY)`, flush, and
-   fsync;
-4. re-run `inspect_png` on the installed final;
-5. build the thumbnail to a unique staging path, verify `RIFF....WEBP`, then
-   install without overwrite;
-6. atomically write the receipt as the commit point;
-7. call `reconcile_b001`;
-8. return the final valid manifest entry.
+1. verify the current candidate batch intent equals `intent-lock.json`;
+2. with a source, run `inspect_png(source)` and reject a hash already recorded
+   for another production image;
+3. write PNG bytes only to the deterministic hidden `preparedImagePath` in the
+   final `images/` directory with exclusive create, flush, and fsync;
+4. re-run `inspect_png` and SHA-256 verification on the prepared PNG;
+5. call `render_thumbnail_bytes(prepared_image)`, verify bytes 0–3 are `RIFF`
+   and bytes 8–11 are `WEBP`, then install those bytes only through
+   `_write_prepared_file` at the deterministic hidden
+   `preparedThumbnailPath` in the final `thumbs/` directory; re-open the
+   prepared WebP through the non-symlink hash verifier and record its SHA-256;
+6. create `receipts/<imageId>.prepared.json` with `_json_no_replace`, including
+   full intent fingerprint, prompt hash, ordered full relative reference
+   records, provenance, prepared/final paths, hashes, and dimensions;
+7. commit PNG with `os.link(prepared_image, final_image)`, which atomically
+   fails if final exists, then fsync `images/`;
+8. commit WebP with `os.link(prepared_thumb, final_thumb)`, then fsync
+   `thumbs/`;
+9. create the final receipt with `_json_no_replace`, fsync `receipts/`, call
+   `reconcile_b001`, then remove prepared paths and prepared metadata and fsync
+   their parent directories;
+10. return the final valid manifest entry.
 
-If a matching final PNG exists without a receipt, verify it against the source
-or its own immutable metadata, finish the missing thumbnail/receipt, and
-reconcile. Never unlink or rewrite a mismatched final.
+If a final path already exists, require a regular non-symlink file and verify
+its bytes against the prepared record. A match means its no-replace link
+already completed; continue. Any mismatch is a hard rejection without
+unlinking or rewriting the final.
 
-The immutable install primitive is:
+Before the prepared record is durable, retry may clean a matching orphan
+prepared path and requires the source again. Once the prepared record is
+durable, `record_success(source_path=None)` verifies the prepared record,
+prepared media or matching committed final media, full intent, prompt, and
+references, then completes thumbnail/final links, receipt, and reconciliation
+without reading the original source location.
+
+Use these primitives; never open a final media path for writing:
 
 ```python
-def _install_exclusive(contents: bytes, destination: Path) -> None:
+def _write_prepared_file(contents: bytes, prepared_path: Path) -> None:
     descriptor = os.open(
-        destination,
+        prepared_path,
         os.O_CREAT | os.O_EXCL | os.O_WRONLY,
         0o644,
     )
@@ -1572,33 +1979,99 @@ def _install_exclusive(contents: bytes, destination: Path) -> None:
             os.fsync(stream.fileno())
     finally:
         os.close(descriptor)
+
+
+def _require_regular_nonsymlink_hash(
+    path: Path,
+    expected_sha256: str,
+) -> None:
+    descriptor = os.open(path, os.O_RDONLY | os.O_NOFOLLOW)
+    try:
+        metadata = os.fstat(descriptor)
+        if not stat.S_ISREG(metadata.st_mode):
+            raise ValueError(f"not a regular non-symlink file: {path}")
+        digest = hashlib.sha256()
+        while chunk := os.read(descriptor, 1024 * 1024):
+            digest.update(chunk)
+        actual_sha256 = digest.hexdigest()
+    finally:
+        os.close(descriptor)
+    if actual_sha256 != expected_sha256:
+        raise ValueError(f"immutable file hash mismatch: {path}")
+
+
+def _commit_no_replace(
+    prepared_path: Path,
+    final_path: Path,
+    expected_sha256: str,
+) -> None:
+    if os.path.lexists(final_path):
+        _require_regular_nonsymlink_hash(final_path, expected_sha256)
+        return
+    _require_regular_nonsymlink_hash(prepared_path, expected_sha256)
+    try:
+        os.link(
+            prepared_path,
+            final_path,
+            follow_symlinks=False,
+        )
+    except FileExistsError:
+        _require_regular_nonsymlink_hash(final_path, expected_sha256)
+        return
+    _fsync_directory(final_path.parent)
+    _require_regular_nonsymlink_hash(final_path, expected_sha256)
 ```
+
+Inject failures at named boundaries
+`after_image_stage_fsync`, `after_thumbnail_stage_fsync`,
+`after_prepared_record_fsync`, `after_image_link_fsync`,
+`after_thumbnail_link_fsync`, `after_final_receipt_fsync`, and
+`after_reconcile_before_cleanup`. For each boundary, tests assert exact
+expected files, restart with the source requirement described above, finish to
+one receipt/count, and prove no existing final was overwritten.
 
 - [ ] **Step 5: Implement deterministic reconciliation**
 
-Receipts are authoritative for successful results. Rebuild each B001 manifest
-entry from the matrix, then apply its receipt to generation/artifact metadata.
-If the newest failure has no later success, use `technicalStatus: "failed"` and
-its reason; the same ID remains the next retry target.
+After verifying the current candidate intent lock, reconciliation first
+finishes every valid prepared record using the source-free no-replace protocol.
+Final receipts are then authoritative for successful results. Rebuild each
+B001 manifest entry from the locked batch intent, then apply its strictly
+matching receipt to generation/artifact metadata. If the newest matching
+failure has no later success, use `technicalStatus: "failed"` and its reason;
+the same ID remains the next retry target.
 
 Rebuild only B001’s ledger entries, preserving all other batches. A ledger
-success entry contains batch ID, image ID, novelty key, prompt hash, PNG hash,
-artifact path, and reference hashes. Set `acceptedProductionImages` to the
-number of unique successful production entries across the full ledger and
-`technicalFailures` to the number of immutable failure receipts. Atomically
-write manifest, then ledger; every CLI entry point starts with reconciliation,
-so a crash between those writes converges on the next invocation.
+success entry contains batch ID, image ID, batch-intent fingerprint, novelty
+key, prompt hash, PNG hash, artifact path, and ordered full relative reference
+records. Set `acceptedProductionImages` to the number of unique successful
+production entries across the full ledger and `technicalFailures` to the
+number of immutable matching failure receipts. Atomically write manifest, then
+ledger; every CLI entry point starts with intent verification and
+reconciliation, so a crash between those writes converges on the next
+invocation.
 
 The reconciliation loop has this shape:
 
 ```python
-manifest = build_pending_manifest(matrix, reference_manifest)
-manifest["matrixFingerprint"] = matrix_fingerprint(matrix)
+intent_lock = _load_and_verify_intent(
+    matrix_path,
+    data_root,
+)
+_resume_prepared_records(data_root, intent_lock)
+batch_intent = intent_lock["batchIntent"]
+fingerprint = intent_lock["batchIntentFingerprint"]
+manifest = build_pending_manifest(batch_intent)
+manifest["batchIntentFingerprint"] = fingerprint
 b001_ledger_entries = []
 for entry in manifest["entries"]:
     receipt = _read_valid_receipt(receipts_dir, entry["id"])
     failure = _latest_valid_failure(attempts_dir, entry["id"])
     if receipt is not None:
+        _require_receipt_matches_intent(
+            receipt,
+            batch_intent,
+            fingerprint,
+        )
         _verify_receipt_media(data_root, entry, receipt)
         entry["generation"].update({
             "generationId": receipt["generationId"],
@@ -1614,6 +2087,11 @@ for entry in manifest["entries"]:
         })
         b001_ledger_entries.append(_ledger_entry(entry, receipt))
     elif failure is not None:
+        _require_failure_matches_intent(
+            failure,
+            batch_intent,
+            fingerprint,
+        )
         entry["generation"]["technicalStatus"] = "failed"
         entry["generation"]["failureReason"] = failure["failureReason"]
 
@@ -1625,6 +2103,22 @@ ledger["technicalFailures"] = _count_failure_receipts(data_root)
 _atomic_json(manifest_path, manifest)
 _atomic_json(ledger_path, ledger)
 ```
+
+`_load_and_verify_intent` is read-only: it loads the reference manifest,
+rebuilds the complete candidate batch intent, verifies both candidate and
+stored canonical hashes against the locked fingerprint, and returns the lock
+only on an exact payload match. `_require_receipt_matches_intent` and
+`_require_failure_matches_intent` compare the fingerprint, prompt hash, and
+entire ordered relative reference-record list with the locked entry, rejecting
+extra, missing, reordered, or changed reference fields. They also require the
+exact document key set and types shown above, exact locked final paths, valid
+provenance nullability, lowercase hashes, positive dimensions, and a parseable
+UTC `recordedAt`; prepared receipts additionally require the exact
+fingerprint-derived prepared paths. `_resume_prepared_records` processes
+prepared records in image-ID order through an internal no-replace finalizer;
+it does not recursively invoke reconciliation. It accepts no source path and
+advances only records that exactly match the locked entry and whose prepared
+or already-linked final media match every recorded hash.
 
 Status output is stable JSON:
 
@@ -1662,6 +2156,12 @@ uv run python scripts/manage_akari_v1_5_b001.py record-success \
   --generation-id '<if exposed>' \
   --request-id '<if exposed>'
 
+uv run python scripts/manage_akari_v1_5_b001.py record-success \
+  --matrix akari-v1.5/generation/b001-request-matrix.json \
+  --data-root /home/takahiro/workspace/akari_generated/v1.5-1000 \
+  --image-id B001-001 \
+  --resume-prepared
+
 uv run python scripts/manage_akari_v1_5_b001.py record-failure \
   --matrix akari-v1.5/generation/b001-request-matrix.json \
   --data-root /home/takahiro/workspace/akari_generated/v1.5-1000 \
@@ -1670,9 +2170,12 @@ uv run python scripts/manage_akari_v1_5_b001.py record-failure \
 ```
 
 `prompt` prints JSON with `imageId`, `prompt`, `promptSha256`,
-`referencedImagePaths`, `roles`, and `targetPath`. The first referenced path is
-the B3 snapshot and is labeled current selected plus permanent identity/body
-authority.
+`batchIntentFingerprint`, ordered `referenceRecords`,
+`referencedImagePaths`, and `targetPath`. `referenceRecords` contain only
+relative manifest paths and the full role/exclusion/SHA contract.
+`referencedImagePaths` contain only safely resolved normalized absolute paths
+for `view_image` and `image_gen`. The first record/path is the B3 snapshot and
+is labeled current selected plus permanent identity/body authority.
 
 - [ ] **Step 7: Verify GREEN and commit**
 
@@ -1681,6 +2184,7 @@ Run:
 ```bash
 uv run python -m unittest tests.test_akari_v1_5_b001_state -v
 uv run python -m unittest \
+  tests.test_build_akari_review_thumbnail \
   tests.test_akari_v1_5_b001_contract \
   tests.test_akari_v1_5_b001_state -v
 ```
@@ -1690,8 +2194,10 @@ Expected: PASS.
 Commit:
 
 ```bash
-git add scripts/akari_v1_5_b001_state.py \
+git add scripts/build_akari_review_thumbnail.py \
+  scripts/akari_v1_5_b001_state.py \
   scripts/manage_akari_v1_5_b001.py \
+  tests/test_build_akari_review_thumbnail.py \
   tests/test_akari_v1_5_b001_state.py
 git commit -m "Add resume-safe Akari B001 state"
 ```
@@ -1772,7 +2278,7 @@ CLI:
 
 ```bash
 uv run python scripts/recover_akari_imagegen_payload.py \
-  --rollout "$CODEX_HOME/sessions/YYYY/MM/DD/rollout-....jsonl" \
+  --rollout "$CODEX_HOME/sessions/YYYY/MM/DD/rollout-<rollout-id>.jsonl" \
   --call-id '<image generation call id>' \
   --output /home/takahiro/workspace/akari_generated/v1.5-1000/batches/B001/staging/B001-001-recovered.png
 ```
@@ -1916,7 +2422,9 @@ The reference-role/exclusion contract for every call is:
 5. If a local PNG path is returned, pass it to `record-success`. If no local
    path exists, use Task 3 rollout recovery, then pass the recovered PNG.
    If neither path works, call `record-failure` and retry the same ID with the
-   same prompt; do not advance.
+   same prompt; do not advance. If `record-success` stops after durable
+   prepared metadata, resume with `record-success --image-id <ID>
+   --resume-prepared`; do not require or reopen the original generated path.
 6. Assert the returned entry is `technicalStatus: valid`, the PNG and WebP
    exist, `inspect_png` succeeds, the receipt hash matches the immutable PNG,
    and the status advances by one.
@@ -2100,7 +2608,19 @@ Use the management status and manifest to assert:
 
 - fifty receipts, PNGs, and WebPs;
 - fifty distinct PNG SHA-256 values;
-- no receipt or artifact path outside B001;
+- `intent-lock.json` contains the complete batch intent and its canonical
+  payload hashes to the stored `batchIntentFingerprint`;
+- every receipt has that exact fingerprint, its locked prompt hash, and its
+  full ordered relative reference records with exact role, exclusions,
+  snapshot path, and SHA-256;
+- every manifest reference `path` and receipt reference `snapshotPath` is
+  relative beneath `references/`, while only transient `prompt` output
+  contains absolute `referencedImagePaths`;
+- no receipt document, final image path, or final thumbnail path escapes B001;
+  relative reference snapshots deliberately resolve under `references/`, and
+  the receipt’s `sourcePath` is absolute generation provenance only;
+- no prepared metadata, hidden prepared PNG/WebP, JSON temporary, symbolic
+  link, directory in place of media, or unrecorded final remains;
 - `acceptedProductionImages` increased by exactly fifty from its pre-B001
   value;
 - technical failure receipts do not increase the accepted count;
@@ -2109,7 +2629,10 @@ Use the management status and manifest to assert:
 - five subculture rows;
 - cast distribution 35/5/5/5;
 - scene distribution 40/10;
-- all compiled prompt hashes and reference hashes match receipts.
+- all fifty compiled prompt hashes and all reference hashes match receipts;
+- rebuilding the candidate intent from the tracked matrix, compiler constants,
+  template order, schema versions, and current reference manifest yields the
+  locked fingerprint before any final-gate mutation.
 
 - [ ] **Step 3: Exercise live gallery media**
 
