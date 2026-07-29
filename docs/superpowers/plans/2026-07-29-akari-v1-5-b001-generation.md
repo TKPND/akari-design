@@ -132,15 +132,18 @@ External runtime layout created by Task 4:
 ├── state/
 │   ├── novelty-ledger.json
 │   └── prior-coverage.json
-└── batches/B001/
-    ├── attempts/
-    ├── images/
-    ├── receipts/
-    ├── staging/  # Rollout-recovery sources only, never commit preparation
-    ├── thumbs/
-    ├── intent-lock.json
-    ├── manifest.json
-    └── reviews.json
+└── batches/
+    ├── B001.lock
+    ├── B001.boundary.json
+    └── B001/
+        ├── attempts/
+        ├── images/
+        ├── receipts/
+        ├── staging/  # Rollout-recovery sources only
+        ├── thumbs/
+        ├── intent-lock.json
+        ├── manifest.json
+        └── reviews.json
 ```
 
 Responsibility boundaries:
@@ -154,6 +157,9 @@ Responsibility boundaries:
   summary. It also snapshots names and available manifest metadata from the
   pre-existing generated archive as prior coverage without using archive
   pixels as references.
+- `OwnedBatchFs` in `akari_v1_5_b001_state.py` pins every owned directory and
+  file operation to no-follow directory descriptors for one CLI invocation;
+  no owned runtime mutation re-resolves an absolute `Path`.
 - `manage_akari_v1_5_b001.py` is a thin CLI with `prepare`, `prompt`,
   `status`, `record-success`, `record-failure`, `reconcile`, and
   `review-summary` subcommands.
@@ -1132,8 +1138,8 @@ the two permanent references. Conditional reference IDs use
   `validate_matrix(matrix: dict[str, object]) -> None`,
   `reference_records(entry: dict[str, object], reference_manifest:
   dict[str, object]) -> list[dict[str, object]]`,
-  `resolve_reference_paths(data_root: Path, references:
-  list[dict[str, object]]) -> list[Path]`,
+  `resolve_reference_paths(references_dir_fd: int, data_root_display: Path,
+  references: list[dict[str, object]]) -> list[PinnedReference]`,
   `compile_prompt(entry: dict[str, object], references:
   list[dict[str, object]]) -> str`,
   `build_batch_intent(matrix: dict[str, object], reference_manifest:
@@ -1440,29 +1446,46 @@ intent in Task 2. There is no runtime prose rewriting.
 }
 ```
 
-`resolve_reference_paths` is the only relative-to-absolute boundary. For every
-ordered record it must:
+The pinned result type is:
+
+```python
+@dataclass(frozen=True)
+class PinnedReference:
+    display_path: Path
+    fd: int
+    sha256: str
+```
+
+The caller closes every returned descriptor in `finally`.
+`resolve_reference_paths` is the only relative-to-absolute display boundary.
+It receives the already pinned `<dataRoot>/references` descriptor from
+`OwnedBatchFs`. For every ordered record it must:
 
 1. reject an absolute, empty, dot, parent, Windows-rooted, or backslash path;
 2. require the first lexical segment to be exactly `references`;
-3. resolve from the normalized absolute data root and require the result to
-   remain under the normalized `<dataRoot>/references` directory;
-4. `lstat` every segment from `references` through the file and reject any
-   symbolic link;
-5. require a regular file, compare its SHA-256 with the record, and preserve
-   input order;
-6. require two through four resolved paths.
+3. open every remaining directory component relative to the prior descriptor
+   with `O_DIRECTORY | O_NOFOLLOW`, then the final name with
+   `O_RDONLY | O_NOFOLLOW`;
+4. require the pinned final descriptor to be a regular file, hash bytes from
+   that descriptor, compare SHA-256 with the record, and preserve input order;
+5. construct `display_path` only after descriptor verification, without using
+   that path for validation or an owned mutation;
+6. retain all final file descriptors until prompt JSON is emitted or intent
+   compilation completes, and require two through four results.
 
 The batch intent, prepared records, and final receipts store only the relative
 `snapshotPath`. Manifest references store the same relative value under the
 existing validator’s `path` key. The `prompt` command alone adds
-`referencedImagePaths`, containing normalized absolute strings returned by
-`resolve_reference_paths`.
+`referencedImagePaths`, containing normalized absolute display strings from
+the pinned results. It keeps reference and intent descriptors open until the
+JSON has been completely written, then closes them in `finally`.
 
 Add tests for absolute paths, lexical traversal, a symlinked file, a symlinked
 parent, a directory in place of a file, missing files, a hash mismatch, wrong
-order, one reference, five references, root containment, and the exact
-relative-versus-absolute output split.
+order, one reference, five references, descriptor lifetime, a swap after
+pinning, root containment, and the exact relative-versus-absolute output
+split. The swap test proves hashing continues on the pinned inode and no
+replacement path is opened.
 
 Use this compilation structure:
 
@@ -1636,10 +1659,18 @@ git commit -m "Add Akari B001 request matrix"
   generation ID, request ID, and failure reason.
 - Produces:
   `render_thumbnail_bytes(source: Path, max_edge: int = 512) -> bytes`,
+  `render_thumbnail_bytes_from_fd(source_fd: int, max_edge: int = 512) ->
+  bytes`,
+  `OwnedBatchFs.pin_root(data_root: Path) -> OwnedBatchFs`,
+  `OwnedBatchFs.pin_batch(mode: Literal["prepare", "mutate", "read"],
+  batch_intent_fingerprint: str, intent_lock: dict[str, object] | None = None)
+  -> None`,
+  `OwnedBatchFs.write_staging_exclusive(name: str, contents: bytes) -> None`,
+  `OwnedBatchFs.close() -> None`,
   `prepare_b001(matrix_path, data_root, archive_root) -> Path`,
   `record_success(matrix_path: Path, data_root: Path, image_id: str,
-  source_path: Path | None, generation_id: str | None, request_id: str |
-  None) -> dict[str, object]`,
+  source_path: Path | None, staging_name: str | None, generation_id: str |
+  None, request_id: str | None) -> dict[str, object]`,
   `record_failure(matrix_path: Path, data_root: Path, image_id: str,
   failure_reason: str, generation_id: str | None, request_id: str | None) ->
   Path`,
@@ -1655,8 +1686,8 @@ git commit -m "Add Akari B001 request matrix"
 Test these behaviors with real Pillow PNGs:
 
 - `prepare_b001` creates the external directory structure, pending
-  `intent-lock.json`, `manifest.json`, and fifty revision-zero `reviews.json`
-  entries.
+  `B001.lock`, `B001.boundary.json`, `intent-lock.json`, `manifest.json`, and
+  fifty revision-zero `reviews.json` entries.
 - Re-running prepare with the same batch intent is byte-idempotent, including
   `prior-coverage.json`.
 - Changing the matrix, any of the four schema-version contracts,
@@ -1667,6 +1698,10 @@ Test these behaviors with real Pillow PNGs:
   cannot mix prompt or reference contracts.
 - `record_success` rejects a non-PNG, a damaged PNG, an unknown ID, and a
   SHA-256 already present in the ledger.
+- `record_success` rejects an absolute source whose opened descriptor resolves
+  beneath the pinned data root, accepts a validated staging basename only
+  through `staging_fd`, and rejects simultaneous external/staging/resume
+  source modes.
 - A valid result creates same-directory prepared PNG/WebP files, durably
   writes prepared metadata, commits each final with an atomic no-replace link,
   writes one final receipt, updates exactly that manifest entry to `valid`,
@@ -1676,20 +1711,52 @@ Test these behaviors with real Pillow PNGs:
   derivation remains owned by the existing module. The existing thumbnail
   tests assert the byte API has the same size bounds and decoded RGB result as
   the path API, and rejects the same invalid PNG inputs.
+- `render_thumbnail_bytes_from_fd` reads a duplicated pinned descriptor,
+  leaves the caller’s descriptor open, and returns the identical deterministic
+  payload; the B001 state layer never reopens prepared media by absolute path.
 - Re-recording the same ID/source is idempotent; a different source for the
   completed ID is rejected without overwrite.
-- Inject a crash after each of: image-stage fsync, thumbnail-stage fsync,
-  prepared-record fsync, image link plus directory fsync, thumbnail link plus
-  directory fsync, final-receipt fsync, and reconcile before prepared cleanup.
-  Before prepared-record durability, retry requires the source. At and after
-  prepared-record durability, retry with `source_path=None` finishes from
-  prepared metadata and valid same-directory files.
+- Inject crashes at `after_prepared_image_file_fsync`,
+  `after_prepared_image_dir_fsync`, `after_prepared_thumb_file_fsync`,
+  `after_prepared_thumb_dir_fsync`, and `after_prepared_record_fsync`.
+  At every boundary before the prepared receipt is durable, restart safely
+  removes only same-intent regular orphan stages and requires the source. At
+  `after_prepared_record_fsync`, restart with `source_path=None` finishes from
+  the durable receipt and prepared or already-linked media.
+- Also inject crashes after image link plus directory fsync, thumbnail link
+  plus directory fsync, final-receipt fsync, JSON temporary unlink before its
+  directory fsync, and reconcile before prepared cleanup. Startup/reconcile
+  removes only validated same-intent debris and converges to one receipt and
+  count.
 - Crash before the final link leaves no final file. Crash after a final link
   but before a final receipt recovers without the source. A mismatched
   pre-existing final, symbolic link, directory, or wrong hash is rejected
   without replacement.
 - Thumbnail commit has the same no-overwrite, regular-file, non-symlink,
   prepared-hash, atomic-link, and directory-fsync assertions as the PNG.
+- Every mutation test records an external sentinel directory and file hash.
+  After pinning, replace the data root, `references`, `state`, `batches`,
+  `batches/B001`, and each owned child in turn by a symlink or by renaming the
+  pinned directory and installing an ordinary replacement. Inject the swap
+  before each write/link/unlink/replace/list family; the operation must remain
+  on the pinned inode or reject, and every external sentinel hash and directory
+  listing must remain unchanged.
+- On a fresh entry point after a completed prepare, a replaced ordinary B001
+  directory fails the pinned `B001.boundary.json` device/inode check before
+  mutation. A replaced `B001.lock`, missing boundary record, symlinked
+  component, or malformed intent lock also fails closed.
+- Parse the state, management CLI, and recovery modules with `ast`. Except for
+  the single lexical `/` anchor and declared external read-only inputs, reject
+  owned `Path.open`, `Path.mkdir`, `Path.unlink`, `Path.replace`, globbing, or
+  any `os.open/stat/mkdir/link/unlink/replace` call missing its required
+  `dir_fd`, `src_dir_fd`, or `dst_dir_fd` keyword. Assert every public
+  mutation entry point constructs exactly one fresh `OwnedBatchFs`.
+- Run two same-intent `prepare` processes against one pinned batches
+  directory. Both fsync their private intent-lock temporary before attempting
+  the no-replace link; exactly one creates `intent-lock.json`, the loser reads
+  it through its pinned B001 descriptor, verifies canonical byte equality, and
+  returns idempotent success. Repeat with different and malformed existing
+  lock bytes and assert the loser rejects without changing either file.
 - A failure attempt increments `technicalFailures` but leaves the intended ID
   pending or failed and eligible for the same prompt retry.
 - Reconcile preserves ledger entries belonging to batches other than B001.
@@ -1734,23 +1801,278 @@ Expected: FAIL because the state module does not exist.
 
 - [ ] **Step 3: Implement durable preparation**
 
-`prepare_b001` validates the matrix and reference manifest, safely resolves
-the ordered reference paths, builds the complete Task 1 batch intent, and
-calculates `batchIntentFingerprint` before any external write. If an intent
-lock already exists, it performs all four lock checks below before creating,
-rewriting, or removing any path. On the first invocation only, it then creates
-directories with mode-safe
-ordinary directory operations and refuses symlinks at `batches`, `B001`, and
-every owned child. It accepts
-`archive_root=/home/takahiro/workspace/akari_generated`, excludes the resolved
-active data root, and computes deterministic `state/prior-coverage.json`
-content with schema version, normalized source root, sorted relative PNG
-names, and normalized novelty metadata found in adjacent manifests. The
-authoritative document contains no clock value. If the file exists with equal
-canonical bytes, do not rewrite it; if it differs, reject with an explicit
-prior-coverage drift error. Reject any full novelty key already present in the
-production ledger or prior-coverage metadata. Archive images are never
-returned as generation references.
+Every CLI invocation begins with a fresh `OwnedBatchFs.pin_root(data_root)`.
+It requires an absolute lexical data-root path with no dot or parent
+components, opens `/`, and walks each component with
+`os.open(name, O_RDONLY | O_DIRECTORY | O_NOFOLLOW, dir_fd=parent_fd)`.
+Intermediate descriptors close only after the next component is pinned. It
+then pins `references`, `state`, and `batches` the same way. Absolute paths are
+display/provenance values only after this point.
+
+The caller reads `references/manifest.json` relative to the pinned
+`references_fd`, resolves and hashes reference records through pinned file
+descriptors, builds the complete Task 1 batch intent, and calculates
+`batchIntentFingerprint` before any owned write. It then calls
+`pin_batch`:
+
+- `prepare` opens or exclusively creates regular `B001.lock` relative to
+  `batches_fd`, takes `fcntl.flock(lock_fd, LOCK_EX)`, then creates or opens
+  `B001` and its five child directories only through pinned parent
+  descriptors;
+- `mutate` requires the lock, B001, and all children to exist, takes
+  `LOCK_EX`, creates nothing while pinning, and is used by `status` because it
+  reconciles first;
+- `read` requires the existing boundary and takes `LOCK_SH`; `prompt` and
+  `review-summary` hold both this boundary and the reference descriptors until
+  their output is complete.
+
+The five child descriptors are `images_fd`, `thumbs_fd`, `receipts_fd`,
+`attempts_fd`, and `staging_fd`. The context also retains `root_fd`,
+`references_fd`, `state_fd`, `batches_fd`, `lock_fd`, and `batch_fd`.
+Every open uses `O_NOFOLLOW`; directory opens also use `O_DIRECTORY`.
+`fstat` must confirm regular files and directories. All descriptors remain
+open until the entire public operation finishes and close in reverse order in
+`finally`, including every exception path.
+
+The abstraction has this concrete shape:
+
+```python
+DIRECTORY_FLAGS = os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW
+OWNED_CHILDREN = ("images", "thumbs", "receipts", "attempts", "staging")
+
+
+def _open_directory_at(parent_fd: int, name: str) -> int:
+    descriptor = os.open(name, DIRECTORY_FLAGS, dir_fd=parent_fd)
+    if not stat.S_ISDIR(os.fstat(descriptor).st_mode):
+        os.close(descriptor)
+        raise ValueError(f"not a directory: {name}")
+    return descriptor
+
+
+def _create_directory_at(parent_fd: int, name: str) -> int:
+    try:
+        os.mkdir(name, 0o755, dir_fd=parent_fd)
+        os.fsync(parent_fd)
+    except FileExistsError:
+        pass
+    return _open_directory_at(parent_fd, name)
+
+
+def _open_batch_lock_at(batches_fd: int, create: bool) -> int:
+    flags = os.O_RDWR | os.O_NOFOLLOW
+    if not create:
+        return os.open("B001.lock", flags, dir_fd=batches_fd)
+    try:
+        descriptor = os.open(
+            "B001.lock",
+            flags | os.O_CREAT | os.O_EXCL,
+            0o600,
+            dir_fd=batches_fd,
+        )
+        try:
+            os.fsync(batches_fd)
+            return descriptor
+        except BaseException:
+            os.close(descriptor)
+            raise
+    except FileExistsError:
+        return os.open("B001.lock", flags, dir_fd=batches_fd)
+
+
+@dataclass
+class OwnedBatchFs:
+    display_root: Path
+    descriptors: list[int]
+    root_fd: int
+    references_fd: int
+    state_fd: int
+    batches_fd: int
+    lock_fd: int | None = None
+    batch_fd: int | None = None
+    images_fd: int | None = None
+    thumbs_fd: int | None = None
+    receipts_fd: int | None = None
+    attempts_fd: int | None = None
+    staging_fd: int | None = None
+
+    @classmethod
+    def pin_root(cls, data_root: Path) -> "OwnedBatchFs":
+        _require_safe_absolute_components(data_root)
+        current_fd = os.open("/", DIRECTORY_FLAGS)
+        retained = []
+        try:
+            for component in data_root.parts[1:]:
+                next_fd = _open_directory_at(current_fd, component)
+                os.close(current_fd)
+                current_fd = next_fd
+            root_fd = current_fd
+            retained.append(root_fd)
+            references_fd = _open_directory_at(root_fd, "references")
+            retained.append(references_fd)
+            state_fd = _open_directory_at(root_fd, "state")
+            retained.append(state_fd)
+            batches_fd = _open_directory_at(root_fd, "batches")
+            retained.append(batches_fd)
+            return cls(
+                data_root,
+                retained,
+                root_fd,
+                references_fd,
+                state_fd,
+                batches_fd,
+            )
+        except BaseException:
+            if retained:
+                while retained:
+                    os.close(retained.pop())
+            else:
+                os.close(current_fd)
+            raise
+
+    def pin_batch(
+        self,
+        mode: Literal["prepare", "mutate", "read"],
+        batch_intent_fingerprint: str,
+        intent_lock: dict[str, object] | None = None,
+    ) -> None:
+        self.lock_fd = _open_batch_lock_at(
+            self.batches_fd,
+            create=mode == "prepare",
+        )
+        self.descriptors.append(self.lock_fd)
+        if not stat.S_ISREG(os.fstat(self.lock_fd).st_mode):
+            raise ValueError("B001.lock is not a regular file")
+        fcntl.flock(
+            self.lock_fd,
+            fcntl.LOCK_SH if mode == "read" else fcntl.LOCK_EX,
+        )
+        batch_created = False
+        try:
+            self.batch_fd = _open_directory_at(self.batches_fd, "B001")
+        except FileNotFoundError:
+            if mode != "prepare":
+                raise
+            self.batch_fd = _create_directory_at(self.batches_fd, "B001")
+            batch_created = True
+        self.descriptors.append(self.batch_fd)
+        if mode == "prepare":
+            if intent_lock is None:
+                raise ValueError("prepare requires candidate intent lock")
+            _verify_prepare_boundary_or_recovery_at(
+                self.batches_fd,
+                self.lock_fd,
+                self.batch_fd,
+                intent_lock,
+                batch_intent_fingerprint,
+                batch_created,
+            )
+            _create_or_verify_intent_lock_at(
+                self.batch_fd,
+                intent_lock,
+                batch_intent_fingerprint,
+            )
+            _create_or_verify_boundary_at(
+                self.batches_fd,
+                self.lock_fd,
+                self.batch_fd,
+                batch_intent_fingerprint,
+                batch_created,
+            )
+        else:
+            _verify_existing_boundary_at(
+                self.batches_fd,
+                self.lock_fd,
+                self.batch_fd,
+                batch_intent_fingerprint,
+            )
+        child_descriptors = []
+        for name in OWNED_CHILDREN:
+            child_fd = (
+                _create_directory_at(self.batch_fd, name)
+                if mode == "prepare"
+                else _open_directory_at(self.batch_fd, name)
+            )
+            child_descriptors.append(child_fd)
+            self.descriptors.append(child_fd)
+        (
+            self.images_fd,
+            self.thumbs_fd,
+            self.receipts_fd,
+            self.attempts_fd,
+            self.staging_fd,
+        ) = child_descriptors
+
+    def write_staging_exclusive(
+        self,
+        name: str,
+        contents: bytes,
+    ) -> None:
+        if self.staging_fd is None:
+            raise RuntimeError("batch tree is not pinned")
+        _require_recovery_basename(name)
+        _write_bytes_exclusive_at(self.staging_fd, name, contents)
+        os.fsync(self.staging_fd)
+
+    def close(self) -> None:
+        while self.descriptors:
+            os.close(self.descriptors.pop())
+
+    def __enter__(self) -> "OwnedBatchFs":
+        return self
+
+    def __exit__(self, *_error: object) -> None:
+        self.close()
+```
+
+Production code wraps descriptor acquisition in one outer `try` so that a
+failure after any intermediate child open still closes every retained
+descriptor; tests inject one failure after each open and assert the process
+has no leaked descriptors.
+
+The pinned boundary record is created at `batches/B001.boundary.json` only
+after the intent lock is durable:
+
+```json
+{
+  "schemaVersion": 1,
+  "batchId": "B001",
+  "batchIntentFingerprint": "<64 lowercase hex characters>",
+  "lockDevice": 123,
+  "lockInode": 456,
+  "batchDevice": 123,
+  "batchInode": 789
+}
+```
+
+On every later entry point, read this file relative to `batches_fd` and
+require its fingerprint, lock pair, and batch pair to equal the candidate
+intent, `os.fstat(lock_fd)`, and `os.fstat(batch_fd)`. A missing boundary is
+allowed only during
+`prepare`: either this invocation created B001, or an exact durable intent
+lock already exists from a crash before boundary-record creation. An existing
+unmarked B001 with no exact lock is rejected rather than initialized.
+
+After pinning, all owned-tree reads and mutations use a single relative name
+plus the correct retained directory descriptor. This includes
+`os.open`, `os.stat(name, dir_fd=directory_fd, follow_symlinks=False)`,
+`os.listdir`,
+`os.mkdir`, `os.link`, `os.unlink`, and `os.replace`. Nested attempt
+directories are opened component by component below `attempts_fd` and retained
+until the attempt write finishes. No helper accepts an owned absolute `Path`.
+External generated source PNGs and archive scanning remain read-only `Path`
+inputs.
+
+`prepare_b001` accepts
+`archive_root=/home/takahiro/workspace/akari_generated`, excludes the pinned
+active data-root inode, and computes deterministic
+`state/prior-coverage.json` content with schema version, normalized source
+root, sorted relative PNG names, and normalized novelty metadata found in
+adjacent manifests. The authoritative document contains no clock value. If
+the pinned state file exists with equal canonical bytes, do not rewrite it; if
+it differs, reject with an explicit prior-coverage drift error. Reject any
+full novelty key already present in the pinned production ledger or
+prior-coverage metadata. Archive images are never returned as generation
+references.
 
 The create-once intent lock is:
 
@@ -1763,8 +2085,34 @@ intent_lock = {
 }
 ```
 
-Write `batches/B001/intent-lock.json` without replacement, flush and fsync the
-file, then fsync the B001 directory. Every `prepare`, `prompt`, `status`,
+Preparation uses this ordering:
+
+```python
+with OwnedBatchFs.pin_root(data_root) as owned_fs:
+    batch_intent = _build_candidate_intent_from_pinned_references(
+        matrix_path,
+        owned_fs,
+    )
+    fingerprint = _fingerprint(batch_intent)
+    intent_lock = _intent_lock(batch_intent, fingerprint)
+    owned_fs.pin_batch("prepare", fingerprint, intent_lock)
+    _cleanup_same_intent_debris_at(owned_fs, intent_lock)
+    _prepare_prior_coverage_at(
+        owned_fs.state_fd,
+        archive_root,
+        owned_fs.root_fd,
+        fingerprint,
+    )
+    _prepare_manifest_and_reviews_at(owned_fs, intent_lock)
+```
+
+Create `intent-lock.json` relative to pinned `batch_fd` without replacement,
+flush and fsync the file, then fsync `batch_fd`. If the no-replace hard link
+loses to another creator, remove and durably forget the private temporary,
+re-open the winner with `O_RDONLY | O_NOFOLLOW` relative to the same pinned
+descriptor, and compare exact canonical bytes. Equal bytes are idempotent
+success; different or malformed bytes are a hard rejection.
+Every `prepare`, `prompt`, `status`,
 `record-success`, `record-failure`, `reconcile`, and `review-summary`
 invocation must, before any mutation:
 
@@ -1774,60 +2122,126 @@ invocation must, before any mutation:
 3. verify the canonical stored payload itself hashes to that fingerprint;
 4. reject any drift, corrupt lock, or mixed receipt/prepared fingerprint.
 
-Write JSON through a same-directory temporary file, flush, `os.fsync`, then
-`os.replace`. After replacement, fsync the parent directory. The initial
+Write replaceable JSON through a same-directory relative temporary, flush,
+`os.fsync`, then call `os.replace` with both source and destination directory
+descriptors. After replacement, fsync that retained descriptor. The initial
 manifest is the Task 1 pending manifest plus top-level
 `batchIntentFingerprint`. Because the existing Node validator ignores
 additional top-level metadata, its contract remains valid.
 
-Use this durable JSON primitive for manifest, ledger, review, and receipt
-documents:
+Use only descriptor-relative JSON primitives for manifest, ledger, review,
+intent, attempt, and receipt documents:
 
 ```python
-def _atomic_json(path: Path, value: object) -> None:
-    temporary = path.with_name(
-        f".{path.name}.{os.getpid()}.{uuid.uuid4().hex}.tmp"
+def _write_bytes_exclusive_at(
+    directory_fd: int,
+    name: str,
+    contents: bytes,
+) -> None:
+    descriptor = os.open(
+        name,
+        os.O_CREAT | os.O_EXCL | os.O_WRONLY | os.O_NOFOLLOW,
+        0o600,
+        dir_fd=directory_fd,
     )
-    with temporary.open("x", encoding="utf-8") as stream:
-        json.dump(value, stream, ensure_ascii=False, indent=2)
-        stream.write("\n")
-        stream.flush()
-        os.fsync(stream.fileno())
-    os.replace(temporary, path)
-    directory_fd = os.open(path.parent, os.O_RDONLY | os.O_DIRECTORY)
     try:
-        os.fsync(directory_fd)
-    finally:
-        os.close(directory_fd)
-
-
-def _write_json_file_and_fsync(path: Path, value: object) -> None:
-    with path.open("x", encoding="utf-8") as stream:
-        json.dump(value, stream, ensure_ascii=False, indent=2)
-        stream.write("\n")
-        stream.flush()
-        os.fsync(stream.fileno())
-
-
-def _fsync_directory(path: Path) -> None:
-    descriptor = os.open(path, os.O_RDONLY | os.O_DIRECTORY)
-    try:
+        _write_all(descriptor, contents)
         os.fsync(descriptor)
     finally:
         os.close(descriptor)
 
 
-def _json_no_replace(path: Path, value: object) -> None:
-    prepared = path.with_name(
-        f".{path.name}.{os.getpid()}.{uuid.uuid4().hex}.prepared"
+def _atomic_json_at(
+    directory_fd: int,
+    target_name: str,
+    value: object,
+    fingerprint: str,
+) -> None:
+    temporary_name = _temporary_name(target_name, fingerprint, "tmp")
+    _write_bytes_exclusive_at(
+        directory_fd,
+        temporary_name,
+        _canonical_document_bytes(value),
     )
-    _write_json_file_and_fsync(prepared, value)
+    os.replace(
+        temporary_name,
+        target_name,
+        src_dir_fd=directory_fd,
+        dst_dir_fd=directory_fd,
+    )
+    os.fsync(directory_fd)
+
+
+def _json_no_replace_at(
+    directory_fd: int,
+    target_name: str,
+    value: object,
+    fingerprint: str,
+) -> None:
+    temporary_name = _temporary_name(target_name, fingerprint, "prepared")
+    _write_bytes_exclusive_at(
+        directory_fd,
+        temporary_name,
+        _canonical_document_bytes(value),
+    )
     try:
-        os.link(prepared, path)
-        _fsync_directory(path.parent)
+        os.link(
+            temporary_name,
+            target_name,
+            src_dir_fd=directory_fd,
+            dst_dir_fd=directory_fd,
+            follow_symlinks=False,
+        )
+        os.fsync(directory_fd)
     finally:
-        prepared.unlink(missing_ok=True)
+        os.unlink(temporary_name, dir_fd=directory_fd)
+        os.fsync(directory_fd)
+
+
+def _create_or_verify_intent_lock_at(
+    batch_fd: int,
+    intent_lock: dict[str, object],
+    fingerprint: str,
+) -> None:
+    expected = _canonical_document_bytes(intent_lock)
+    try:
+        _json_no_replace_at(
+            batch_fd,
+            "intent-lock.json",
+            intent_lock,
+            fingerprint,
+        )
+    except FileExistsError:
+        actual = _read_regular_bytes_at(batch_fd, "intent-lock.json")
+        if actual != expected:
+            raise ValueError("intent lock create race mismatch")
 ```
+
+`_temporary_name` accepts a validated basename only, rejects every slash,
+backslash, dot component, control character, and non-allowlisted target, and
+returns `.<target>.<full-fingerprint>.<uuid>.<kind>`. The reader helpers use
+`os.open(name, O_RDONLY | O_NOFOLLOW, dir_fd=directory_fd)`, require a regular
+`fstat`, and read from the descriptor. Boundary-record creation uses the same
+create-or-verify rule and additionally compares the pinned device/inode pair.
+
+The contract test scans the state module to reject `path.parent`, absolute
+owned mutations, or a `_json_no_replace_at` implementation that omits the
+post-unlink directory fsync.
+
+At startup and before reconciliation, list each pinned owned descriptor with
+`os.listdir(directory_fd)`. Temporary names encode the exact target and full
+64-character intent fingerprint. Remove a regular non-symlink JSON temporary
+only when its name targets a known document and its fingerprint is current.
+Remove deterministic prepared PNG/WebP stages without a prepared receipt only
+when both final media names and the final receipt are absent; these pre-receipt
+orphans are non-authoritative and the retry still requires its source.
+When a prepared or final receipt exists, validate its full intent and hashes
+before removing any stage. Unknown names, another fingerprint, a symlink,
+directory, unexpected final, or inconsistent pair rejects cleanup without
+unlinking. `staging_fd` separately allowlists regular
+`B001-NNN-recovered.png` sources and retains them; they are never interpreted
+as prepared media. Every successful unlink is followed by `os.fsync` on its
+pinned parent descriptor, so a crash before that fsync safely repeats cleanup.
 
 The initial review document is:
 
@@ -1901,9 +2315,9 @@ path exists:
   "generationId": "<string or null>",
   "requestId": "<string or null>",
   "sourcePath": "<absolute original generated location>",
-  "preparedImagePath": "batches/B001/images/.B001-002-<intent-prefix>.prepared.png",
+  "preparedImagePath": "batches/B001/images/.B001-002-<intent-fingerprint>.prepared.png",
   "imagePath": "batches/B001/images/<filenameStem>.png",
-  "preparedThumbnailPath": "batches/B001/thumbs/.B001-002-<intent-prefix>.prepared.webp",
+  "preparedThumbnailPath": "batches/B001/thumbs/.B001-002-<intent-fingerprint>.prepared.webp",
   "thumbnailPath": "batches/B001/thumbs/<filenameStem>.webp",
   "sha256": "<PNG hash>",
   "thumbnailSha256": "<WebP hash>",
@@ -1922,33 +2336,48 @@ Refactor the existing thumbnail module without changing its output settings:
 `render_thumbnail_bytes` runs `inspect_png`, converts to RGB, bounds the long
 edge at 512 with LANCZOS, saves to `io.BytesIO` as WebP with quality 82 and
 method 6, validates the two WebP header spans, and returns immutable bytes.
-`build_thumbnail` delegates to that function and preserves its current
-path-writing API. The B001 state layer calls only `render_thumbnail_bytes` and
-owns exclusive persistence.
+`render_thumbnail_bytes_from_fd` duplicates the supplied descriptor, seeks the
+duplicate to zero, performs the same verification/conversion, and closes only
+the duplicate. `render_thumbnail_bytes` and `build_thumbnail` delegate to that
+descriptor implementation and preserve their current path APIs for external
+callers. The B001 state layer calls only the descriptor API and owns exclusive
+persistence.
 
 For `record_success`:
 
-1. verify the current candidate batch intent equals `intent-lock.json`;
-2. with a source, run `inspect_png(source)` and reject a hash already recorded
-   for another production image;
-3. write PNG bytes only to the deterministic hidden `preparedImagePath` in the
-   final `images/` directory with exclusive create, flush, and fsync;
-4. re-run `inspect_png` and SHA-256 verification on the prepared PNG;
-5. call `render_thumbnail_bytes(prepared_image)`, verify bytes 0–3 are `RIFF`
-   and bytes 8–11 are `WEBP`, then install those bytes only through
-   `_write_prepared_file` at the deterministic hidden
-   `preparedThumbnailPath` in the final `thumbs/` directory; re-open the
-   prepared WebP through the non-symlink hash verifier and record its SHA-256;
-6. create `receipts/<imageId>.prepared.json` with `_json_no_replace`, including
+1. enter fresh pinned root and full exclusive B001 contexts, verify the current
+   candidate batch intent, boundary record, and `intent-lock.json`;
+2. require exactly one of an external `source_path`, a validated
+   `staging_name`, or resume-without-source mode. Open an external source once
+   with `O_RDONLY | O_NOFOLLOW`, compare the Linux
+   `/proc/self/fd/<descriptor>` target against the retained root-descriptor
+   target, reject a source beneath the owned data root, and inspect bytes from
+   that descriptor. Open a staging source only by basename relative to
+   `staging_fd`. Reject a hash already recorded for another production image;
+3. write PNG bytes by basename only through `_write_prepared_file` with
+   `fs.images_fd`, `prepared_image_name`, the contents, and the two exact
+   failpoint callbacks; this exclusively creates and fsyncs the file, then
+   fsyncs `images_fd`;
+4. re-open the PNG relative to `images_fd` with `O_NOFOLLOW`, verify its hash
+   and dimensions from the descriptor, and call
+   `render_thumbnail_bytes_from_fd`;
+5. verify WebP bytes 0–3 are `RIFF` and bytes 8–11 are `WEBP`, then write them
+   by basename only through `_write_prepared_file` with `fs.thumbs_fd`,
+   `prepared_thumb_name`, the contents, and the two exact failpoint callbacks;
+   re-open and verify through `thumbs_fd`;
+6. only after both prepared directory fsyncs return, create
+   `receipts/<imageId>.prepared.json` with `_json_no_replace_at`, including
    full intent fingerprint, prompt hash, ordered full relative reference
    records, provenance, prepared/final paths, hashes, and dimensions;
-7. commit PNG with `os.link(prepared_image, final_image)`, which atomically
-   fails if final exists, then fsync `images/`;
-8. commit WebP with `os.link(prepared_thumb, final_thumb)`, then fsync
-   `thumbs/`;
-9. create the final receipt with `_json_no_replace`, fsync `receipts/`, call
-   `reconcile_b001`, then remove prepared paths and prepared metadata and fsync
-   their parent directories;
+7. commit PNG with `_commit_no_replace_at(fs.images_fd,
+   prepared_image_name, final_image_name, sha256)`, then fsync `images_fd`;
+8. commit WebP with `_commit_no_replace_at(fs.thumbs_fd,
+   prepared_thumb_name, final_thumb_name, thumbnail_sha256)`, then fsync
+   `thumbs_fd`;
+9. create the final receipt with `_json_no_replace_at` on `fs.receipts_fd`,
+   call internal reconciliation with the same pinned context, then unlink
+   prepared basenames and metadata relative to their retained descriptors and
+   fsync each descriptor after its unlink;
 10. return the final valid manifest entry.
 
 If a final path already exists, require a regular non-symlink file and verify
@@ -1956,9 +2385,10 @@ its bytes against the prepared record. A match means its no-replace link
 already completed; continue. Any mismatch is a hard rejection without
 unlinking or rewriting the final.
 
-Before the prepared record is durable, retry may clean a matching orphan
-prepared path and requires the source again. Once the prepared record is
-durable, `record_success(source_path=None)` verifies the prepared record,
+Before the prepared record and its receipts-directory entry are durable,
+retry may clean matching regular same-intent orphan prepared names and
+requires the source again. Once `_json_no_replace_at` has fsynced
+`receipts_fd`, `record_success(source_path=None)` verifies the prepared record,
 prepared media or matching committed final media, full intent, prompt, and
 references, then completes thumbnail/final links, receipt, and reconciliation
 without reading the original source location.
@@ -1966,30 +2396,43 @@ without reading the original source location.
 Use these primitives; never open a final media path for writing:
 
 ```python
-def _write_prepared_file(contents: bytes, prepared_path: Path) -> None:
+def _write_prepared_file(
+    directory_fd: int,
+    prepared_name: str,
+    contents: bytes,
+    after_file_fsync: Callable[[], None],
+    after_directory_fsync: Callable[[], None],
+) -> None:
     descriptor = os.open(
-        prepared_path,
-        os.O_CREAT | os.O_EXCL | os.O_WRONLY,
+        prepared_name,
+        os.O_CREAT | os.O_EXCL | os.O_WRONLY | os.O_NOFOLLOW,
         0o644,
+        dir_fd=directory_fd,
     )
     try:
-        with os.fdopen(descriptor, "wb", closefd=False) as stream:
-            stream.write(contents)
-            stream.flush()
-            os.fsync(stream.fileno())
+        _write_all(descriptor, contents)
+        os.fsync(descriptor)
+        after_file_fsync()
     finally:
         os.close(descriptor)
+    os.fsync(directory_fd)
+    after_directory_fsync()
 
 
-def _require_regular_nonsymlink_hash(
-    path: Path,
+def _require_regular_nonsymlink_hash_at(
+    directory_fd: int,
+    name: str,
     expected_sha256: str,
 ) -> None:
-    descriptor = os.open(path, os.O_RDONLY | os.O_NOFOLLOW)
+    descriptor = os.open(
+        name,
+        os.O_RDONLY | os.O_NOFOLLOW,
+        dir_fd=directory_fd,
+    )
     try:
         metadata = os.fstat(descriptor)
         if not stat.S_ISREG(metadata.st_mode):
-            raise ValueError(f"not a regular non-symlink file: {path}")
+            raise ValueError(f"not a regular non-symlink file: {name}")
         digest = hashlib.sha256()
         while chunk := os.read(descriptor, 1024 * 1024):
             digest.update(chunk)
@@ -1997,33 +2440,55 @@ def _require_regular_nonsymlink_hash(
     finally:
         os.close(descriptor)
     if actual_sha256 != expected_sha256:
-        raise ValueError(f"immutable file hash mismatch: {path}")
+        raise ValueError(f"immutable file hash mismatch: {name}")
 
 
-def _commit_no_replace(
-    prepared_path: Path,
-    final_path: Path,
+def _commit_no_replace_at(
+    directory_fd: int,
+    prepared_name: str,
+    final_name: str,
     expected_sha256: str,
 ) -> None:
-    if os.path.lexists(final_path):
-        _require_regular_nonsymlink_hash(final_path, expected_sha256)
+    try:
+        _require_regular_nonsymlink_hash_at(
+            directory_fd,
+            final_name,
+            expected_sha256,
+        )
         return
-    _require_regular_nonsymlink_hash(prepared_path, expected_sha256)
+    except FileNotFoundError:
+        pass
+    _require_regular_nonsymlink_hash_at(
+        directory_fd,
+        prepared_name,
+        expected_sha256,
+    )
     try:
         os.link(
-            prepared_path,
-            final_path,
+            prepared_name,
+            final_name,
+            src_dir_fd=directory_fd,
+            dst_dir_fd=directory_fd,
             follow_symlinks=False,
         )
     except FileExistsError:
-        _require_regular_nonsymlink_hash(final_path, expected_sha256)
+        _require_regular_nonsymlink_hash_at(
+            directory_fd,
+            final_name,
+            expected_sha256,
+        )
         return
-    _fsync_directory(final_path.parent)
-    _require_regular_nonsymlink_hash(final_path, expected_sha256)
+    os.fsync(directory_fd)
+    _require_regular_nonsymlink_hash_at(
+        directory_fd,
+        final_name,
+        expected_sha256,
+    )
 ```
 
 Inject failures at named boundaries
-`after_image_stage_fsync`, `after_thumbnail_stage_fsync`,
+`after_prepared_image_file_fsync`, `after_prepared_image_dir_fsync`,
+`after_prepared_thumb_file_fsync`, `after_prepared_thumb_dir_fsync`,
 `after_prepared_record_fsync`, `after_image_link_fsync`,
 `after_thumbnail_link_fsync`, `after_final_receipt_fsync`, and
 `after_reconcile_before_cleanup`. For each boundary, tests assert exact
@@ -2053,58 +2518,91 @@ invocation.
 The reconciliation loop has this shape:
 
 ```python
-intent_lock = _load_and_verify_intent(
-    matrix_path,
-    data_root,
-)
-_resume_prepared_records(data_root, intent_lock)
-batch_intent = intent_lock["batchIntent"]
-fingerprint = intent_lock["batchIntentFingerprint"]
-manifest = build_pending_manifest(batch_intent)
-manifest["batchIntentFingerprint"] = fingerprint
-b001_ledger_entries = []
-for entry in manifest["entries"]:
-    receipt = _read_valid_receipt(receipts_dir, entry["id"])
-    failure = _latest_valid_failure(attempts_dir, entry["id"])
-    if receipt is not None:
-        _require_receipt_matches_intent(
-            receipt,
-            batch_intent,
-            fingerprint,
+with OwnedBatchFs.pin_root(data_root) as owned_fs:
+    candidate_intent = _build_candidate_intent_from_pinned_references(
+        matrix_path,
+        owned_fs,
+    )
+    fingerprint = _fingerprint(candidate_intent)
+    owned_fs.pin_batch("mutate", fingerprint)
+    intent_lock = _load_and_verify_intent_at(
+        owned_fs.batch_fd,
+        candidate_intent,
+        fingerprint,
+    )
+    _cleanup_same_intent_debris_at(owned_fs, intent_lock)
+    _resume_prepared_records_at(owned_fs, intent_lock)
+    batch_intent = intent_lock["batchIntent"]
+    manifest = build_pending_manifest(batch_intent)
+    manifest["batchIntentFingerprint"] = fingerprint
+    b001_ledger_entries = []
+    for entry in manifest["entries"]:
+        receipt = _read_valid_receipt_at(
+            owned_fs.receipts_fd,
+            entry["id"],
         )
-        _verify_receipt_media(data_root, entry, receipt)
-        entry["generation"].update({
-            "generationId": receipt["generationId"],
-            "requestId": receipt["requestId"],
-            "sourcePath": receipt["sourcePath"],
-            "technicalStatus": "valid",
-            "failureReason": None,
-        })
-        entry["artifact"].update({
-            "sha256": receipt["sha256"],
-            "width": receipt["width"],
-            "height": receipt["height"],
-        })
-        b001_ledger_entries.append(_ledger_entry(entry, receipt))
-    elif failure is not None:
-        _require_failure_matches_intent(
-            failure,
-            batch_intent,
-            fingerprint,
+        failure = _latest_valid_failure_at(
+            owned_fs.attempts_fd,
+            entry["id"],
         )
-        entry["generation"]["technicalStatus"] = "failed"
-        entry["generation"]["failureReason"] = failure["failureReason"]
+        if receipt is not None:
+            _require_receipt_matches_intent(
+                receipt,
+                batch_intent,
+                fingerprint,
+            )
+            _verify_receipt_media_at(owned_fs, entry, receipt)
+            entry["generation"].update({
+                "generationId": receipt["generationId"],
+                "requestId": receipt["requestId"],
+                "sourcePath": receipt["sourcePath"],
+                "technicalStatus": "valid",
+                "failureReason": None,
+            })
+            entry["artifact"].update({
+                "sha256": receipt["sha256"],
+                "width": receipt["width"],
+                "height": receipt["height"],
+            })
+            b001_ledger_entries.append(_ledger_entry(entry, receipt))
+        elif failure is not None:
+            _require_failure_matches_intent(
+                failure,
+                batch_intent,
+                fingerprint,
+            )
+            entry["generation"]["technicalStatus"] = "failed"
+            entry["generation"]["failureReason"] = failure["failureReason"]
 
-ledger["entries"] = [
-    item for item in ledger["entries"] if item["batchId"] != "B001"
-] + b001_ledger_entries
-ledger["acceptedProductionImages"] = len(ledger["entries"])
-ledger["technicalFailures"] = _count_failure_receipts(data_root)
-_atomic_json(manifest_path, manifest)
-_atomic_json(ledger_path, ledger)
+    ledger = _read_ledger_at(owned_fs.state_fd)
+    ledger["entries"] = [
+        item for item in ledger["entries"] if item["batchId"] != "B001"
+    ] + b001_ledger_entries
+    ledger["acceptedProductionImages"] = len(ledger["entries"])
+    ledger["technicalFailures"] = _count_failure_receipts_at(
+        owned_fs.attempts_fd,
+    )
+    _atomic_json_at(
+        owned_fs.batch_fd,
+        "manifest.json",
+        manifest,
+        fingerprint,
+    )
+    _atomic_json_at(
+        owned_fs.state_fd,
+        "novelty-ledger.json",
+        ledger,
+        fingerprint,
+    )
 ```
 
-`_load_and_verify_intent` is read-only: it loads the reference manifest,
+The public function owns the context above. Calls from `record_success`,
+`record_failure`, `prepare`, or status use an internal pinned variant and pass
+the same `OwnedBatchFs`; they never reopen the tree or recursively acquire the
+batch lock.
+
+`_load_and_verify_intent_at` is read-only: it loads the intent lock relative
+to pinned `batch_fd`,
 rebuilds the complete candidate batch intent, verifies both candidate and
 stored canonical hashes against the locked fingerprint, and returns the lock
 only on an exact payload match. `_require_receipt_matches_intent` and
@@ -2114,7 +2612,7 @@ extra, missing, reordered, or changed reference fields. They also require the
 exact document key set and types shown above, exact locked final paths, valid
 provenance nullability, lowercase hashes, positive dimensions, and a parseable
 UTC `recordedAt`; prepared receipts additionally require the exact
-fingerprint-derived prepared paths. `_resume_prepared_records` processes
+fingerprint-derived prepared paths. `_resume_prepared_records_at` processes
 prepared records in image-ID order through an internal no-replace finalizer;
 it does not recursively invoke reconciliation. It accepts no source path and
 advances only records that exactly match the locked entry and whose prepared
@@ -2160,6 +2658,12 @@ uv run python scripts/manage_akari_v1_5_b001.py record-success \
   --matrix akari-v1.5/generation/b001-request-matrix.json \
   --data-root /home/takahiro/workspace/akari_generated/v1.5-1000 \
   --image-id B001-001 \
+  --staging-name B001-001-recovered.png
+
+uv run python scripts/manage_akari_v1_5_b001.py record-success \
+  --matrix akari-v1.5/generation/b001-request-matrix.json \
+  --data-root /home/takahiro/workspace/akari_generated/v1.5-1000 \
+  --image-id B001-001 \
   --resume-prepared
 
 uv run python scripts/manage_akari_v1_5_b001.py record-failure \
@@ -2176,6 +2680,15 @@ relative manifest paths and the full role/exclusion/SHA contract.
 `referencedImagePaths` contain only safely resolved normalized absolute paths
 for `view_image` and `image_gen`. The first record/path is the B3 snapshot and
 is labeled current selected plus permanent identity/body authority.
+`targetPath` is an operator display value only; no persistence helper accepts
+it.
+
+Each CLI call creates and closes one fresh `OwnedBatchFs`. `prompt` and
+`review-summary` take the shared read mode and perform no reconciliation.
+`prepare`, `record-success`, `record-failure`, `reconcile`, and `status` take
+the exclusive full-tree mode because `status` first converges any durable
+receipt. All mutation subcommands reuse one pinned context through return and
+never call a public entry point from another public entry point.
 
 - [ ] **Step 7: Verify GREEN and commit**
 
@@ -2213,10 +2726,12 @@ git commit -m "Add resume-safe Akari B001 state"
 
 **Interfaces:**
 
-- Consumes: one rollout JSONL, one image-generation call ID or ordinal, and an
-  external staging output path.
+- Consumes: one read-only rollout JSONL, one image-generation call ID or
+  ordinal, a fully pinned and intent-verified `OwnedBatchFs`, and one safe
+  staging basename.
 - Produces:
-  `recover_png(rollout_path, output_path, call_id=None, ordinal=None) -> Path`
+  `recover_png(rollout_path: Path, owned_fs: OwnedBatchFs, output_name: str,
+  call_id: str | None = None, ordinal: int | None = None) -> str`
   and npm script `gate:v1-5:b001`.
 
 - [ ] **Step 1: Write failing structural-recovery tests**
@@ -2224,8 +2739,12 @@ git commit -m "Add resume-safe Akari B001 state"
 Use synthetic JSONL containing unrelated assistant events, one invalid
 `image_generation_call`, and two valid PNG base64 payloads. Assert explicit
 call-ID selection, explicit ordinal selection, rejection of ambiguous default
-selection, PNG signature verification, exclusive output creation, and refusal
-to overwrite an existing staging file.
+selection, PNG signature verification, exclusive descriptor-relative output
+creation, file and staging-directory fsync, and refusal to overwrite an
+existing staging name. Reject a slash, backslash, dot component, absolute
+name, non-B001 name, or non-PNG suffix. Swap the staging path for an external
+symlink and ordinary sentinel directory after pinning; recovery writes only
+through the retained `staging_fd` and leaves both sentinels unchanged.
 
 - [ ] **Step 2: Verify RED**
 
@@ -2242,8 +2761,12 @@ Expected: FAIL because the recovery module does not exist.
 Parse each line with `json.loads`; recursively inspect JSON objects but select
 only objects whose `type` equals `image_generation_call` and whose `result`
 starts with `iVBOR`. Decode with strict base64 validation, require PNG
-signature `89504e470d0a1a0a`, and write with exclusive creation under the
-caller-supplied external `staging/` path. Never print the payload.
+signature `89504e470d0a1a0a`, and call
+`owned_fs.write_staging_exclusive(output_name, decoded_bytes)`. That method
+validates one basename, opens it with
+`O_CREAT | O_EXCL | O_WRONLY | O_NOFOLLOW` relative to retained
+`staging_fd`, fsyncs the file, closes it, then fsyncs `staging_fd`. Never
+accept an output path or print the payload.
 
 Use an iterative structural walk so large payloads are never copied into
 terminal text:
@@ -2280,8 +2803,16 @@ CLI:
 uv run python scripts/recover_akari_imagegen_payload.py \
   --rollout "$CODEX_HOME/sessions/YYYY/MM/DD/rollout-<rollout-id>.jsonl" \
   --call-id '<image generation call id>' \
-  --output /home/takahiro/workspace/akari_generated/v1.5-1000/batches/B001/staging/B001-001-recovered.png
+  --matrix akari-v1.5/generation/b001-request-matrix.json \
+  --data-root /home/takahiro/workspace/akari_generated/v1.5-1000 \
+  --output-name B001-001-recovered.png
 ```
+
+The recovery CLI fresh-pins root, references, state, batches, B001, and every
+owned child, takes the exclusive batch lock, verifies the candidate intent and
+boundary, and only then decodes and writes. It returns the staging basename;
+the absolute display path is assembled for the operator only after the pinned
+write and both fsyncs complete.
 
 - [ ] **Step 4: Add the focused B001 gate**
 
@@ -2420,11 +2951,12 @@ The reference-role/exclusion contract for every call is:
 4. Call `image_gen` once for that ID with the compiled prompt verbatim and the
    exact opened paths in `referenced_image_paths`.
 5. If a local PNG path is returned, pass it to `record-success`. If no local
-   path exists, use Task 3 rollout recovery, then pass the recovered PNG.
-   If neither path works, call `record-failure` and retry the same ID with the
-   same prompt; do not advance. If `record-success` stops after durable
-   prepared metadata, resume with `record-success --image-id <ID>
-   --resume-prepared`; do not require or reopen the original generated path.
+   path exists, use Task 3 rollout recovery, then pass its returned basename
+   through `record-success --staging-name`. If neither source works, call
+   `record-failure` and retry the same ID with the same prompt; do not advance.
+   If `record-success` stops after durable prepared metadata, resume with
+   `record-success --image-id <ID> --resume-prepared`; do not require or
+   reopen the original generated path.
 6. Assert the returned entry is `technicalStatus: valid`, the PNG and WebP
    exist, `inspect_png` succeeds, the receipt hash matches the immutable PNG,
    and the status advances by one.
@@ -2610,6 +3142,9 @@ Use the management status and manifest to assert:
 - fifty distinct PNG SHA-256 values;
 - `intent-lock.json` contains the complete batch intent and its canonical
   payload hashes to the stored `batchIntentFingerprint`;
+- `B001.boundary.json` matches the pinned lock and batch device/inode pairs,
+  and a fresh read-mode pin opens root, references, state, batches, B001, and
+  all five owned children without following a symlink;
 - every receipt has that exact fingerprint, its locked prompt hash, and its
   full ordered relative reference records with exact role, exclusions,
   snapshot path, and SHA-256;
@@ -2620,7 +3155,9 @@ Use the management status and manifest to assert:
   relative reference snapshots deliberately resolve under `references/`, and
   the receipt’s `sourcePath` is absolute generation provenance only;
 - no prepared metadata, hidden prepared PNG/WebP, JSON temporary, symbolic
-  link, directory in place of media, or unrecorded final remains;
+  link, directory in place of media, or unrecorded final remains; every
+  descriptor-relative debris scan returns only allowlisted final names and
+  explicitly retained rollout-recovery sources;
 - `acceptedProductionImages` increased by exactly fifty from its pre-B001
   value;
 - technical failure receipts do not increase the accepted count;
@@ -2765,6 +3302,13 @@ the tracked B002 plan; the external review/generated tree remains untracked.
 - Type consistency: the matrix properties, compiler outputs, pending manifest,
   receipt fields, ledger fields, CLI subcommands, and final Node manifest shape
   use the same names throughout.
+- Filesystem consistency: every owned runtime read, write, list, stat, link,
+  unlink, replace, and directory creation receives a retained directory
+  descriptor plus one validated relative name; only external read-only inputs
+  and operator display output use absolute paths.
+- Durability order: prepared file fsync precedes its parent-directory fsync;
+  both media directory fsyncs precede the prepared receipt; JSON temporary
+  unlink precedes a final parent-directory fsync.
 - Scope: no new application, browser generation feature, PDF, B002 image, or
   generated Git asset is introduced.
 - Unresolved-marker scan: no implementation instruction relies on an executor
