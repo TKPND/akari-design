@@ -109,3 +109,21 @@ test("empty path segments are rejected without dataRoot", () => {
     /unsafe artifact path/,
   );
 });
+
+test("Windows UNC artifact paths are rejected with dataRoot", () => {
+  const invalid = makeValidManifest();
+  invalid.entries[0].artifact.imagePath = "\\\\server\\share\\image.png";
+  assert.throws(
+    () => validateBatchManifest(invalid, { dataRoot: "/tmp/review-gallery" }),
+    /unsafe artifact path/,
+  );
+});
+
+test("Windows rooted artifact paths are rejected with dataRoot", () => {
+  const invalid = makeValidManifest();
+  invalid.entries[0].artifact.thumbnailPath = "\\batches\\B001\\thumbs\\image-1.webp";
+  assert.throws(
+    () => validateBatchManifest(invalid, { dataRoot: "/tmp/review-gallery" }),
+    /unsafe artifact path/,
+  );
+});

@@ -70,7 +70,9 @@ function hashFile(path) {
 
 function resolveDeclaredPath(path, dataRoot) {
   if (!isNonEmptyString(path)) fail("unsafe artifact path");
-  if (isAbsolute(path) || /^[A-Za-z]:[\\/]/.test(path)) fail("unsafe artifact path");
+  if (isAbsolute(path) || path.startsWith("\\") || /^[A-Za-z]:[\\/]/.test(path)) {
+    fail("unsafe artifact path");
+  }
 
   if (dataRoot === undefined) {
     if (
