@@ -1,8 +1,17 @@
 # Akari v1.7 Intimate Baseline Design
 
-Status: approved design, awaiting written-spec review.
+Status: complete.
 
 Date: 2026-07-31.
+
+## Outcome
+
+- The design was approved and candidate B / Slightly Happy was explicitly
+  selected as the V17-01 working baseline.
+- The final independent review returned `READY` with zero Critical and zero
+  Important findings.
+- The selected PNG was promoted byte-for-byte to
+  `akari-v1.7/accepted/base/akari-v1.7-v17-01-intimate-front.png`.
 
 ## Summary
 
