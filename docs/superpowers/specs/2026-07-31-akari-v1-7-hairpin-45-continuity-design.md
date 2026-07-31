@@ -1,6 +1,6 @@
 # Akari v1.7 Hairpin-Side 45-Degree Continuity Design
 
-Status: approved design, awaiting written-spec review.
+Status: approved design.
 
 Date: 2026-07-31.
 
