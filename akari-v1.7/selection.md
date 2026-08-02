@@ -1,6 +1,8 @@
 # Akari v1.7 Selection History
 
-Date: 2026-07-31.
+Original selection-history date: 2026-07-31.
+
+Updated: 2026-08-02.
 
 ## V17-01 Intimate Front Selection
 
@@ -121,3 +123,75 @@ face, ornament, hands, feet, background, and finish remained intact. Both
 targeted and repository Markdown lint passed, and bounded Git-scope assertions
 confirmed that only the accepted PNG, this selection history, and the v1.7
 README comprise the tracked promotion.
+
+## V17-03 Hairpin-Side 45-Degree Selection
+
+Selection date: 2026-08-01.
+
+### V17-03 Promoted Result
+
+**r02 C / hairpin-side 45-degree continuity is the explicit user choice.**
+
+The user explicitly selected r02 C. Candidates A and C passed all seven hard
+gates. Candidate B failed Gate 3 because it did not complete the mandatory
+body correction. Among the passing candidates, the quality order was C then
+A.
+
+C gives the strongest balance of complete localized correction, natural adult
+volume, same-person read, and finished image quality. It corrected the rounder
+near-side bust projection, newly stronger under-bust definition, narrowed
+waist, and tight T-shirt fall while preserving the fixed 45-degree view and
+every out-of-scope attribute.
+
+### V17-03 Authority and Provenance
+
+- Accepted destination:
+  `accepted/base/akari-v1.7-v17-03-hairpin-side-45.png`.
+- Ignored review source:
+  `/home/takahiro/workspace/akari-design/.worktrees/akari-v1-7-hairpin-45-continuity-r02/build/v1.7-hairpin-45-continuity-r02/akari-v1.7-v17-03-hairpin-45-r02-c.png`.
+- Authoritative generated source:
+  `/home/takahiro/.codex/generated_images/019fb8fe-27cc-73b0-a506-039a2a0afc77/exec-4fa1ac22-7b22-413e-a85a-02bcdef3c6c4.png`.
+- Outer request ID: `call_rd98V3j0ikTsdm1c3h04392x`.
+- Completed generation ID:
+  `exec-4fa1ac22-7b22-413e-a85a-02bcdef3c6c4`.
+- Immutable prompt SHA-256:
+  `19459cdff592ecb59a32dbce7f082f233e96e66e5a74a1383ef678773e9c572c`.
+- Review comparison SHA-256:
+  `92856c88e45541bc9f4e6e776e8d8bf936202faa298e4e4a50ba7901ccfe8095`.
+
+V17-01 remains the sole accepted front-view authority. V17-02 remains the
+accepted character-left hairpin-side 30-degree continuity authority. V17-03
+is the accepted character-left hairpin-side 45-degree continuity authority
+for this selected fixed moment; it does not supersede either earlier asset.
+
+### V17-03 Review Result
+
+C is not recorded as globally flawless. Its slightly stronger eye polish and
+compressed cord are the two known r01 A Minor findings; both remain materially
+unchanged in C and are not new r02 findings.
+
+The final task and process review returned zero Critical, Important, and Minor
+findings, with no eligibility disagreement or tie-break. Candidate B's Gate 3
+failure was an expected candidate-level result, not an implementation or
+process defect. No repair, composite, r03 generation, or further image edit
+followed the selection.
+
+### V17-03 File Hashes
+
+| Role | SHA-256 |
+| --- | --- |
+| V17-03 selected review source | `bffe8e124a6cfed9319d903baa9e109d2dd0016d7d2cd7a13538f460e8992954` |
+| V17-03 authoritative generated source | `bffe8e124a6cfed9319d903baa9e109d2dd0016d7d2cd7a13538f460e8992954` |
+| V17-03 accepted destination | `bffe8e124a6cfed9319d903baa9e109d2dd0016d7d2cd7a13538f460e8992954` |
+
+### V17-03 Promotion Verification
+
+The accepted destination was copied without transformation and verified
+byte-identical to both the ignored review source and authoritative generated
+source. Its PNG signature is `89504e470d0a1a0a`, its dimensions are
+`1024 x 1536`, and its SHA-256 is the recorded digest above. Original-detail
+inspection confirmed the complete figure, face, torso correction, ornament,
+hands, feet, room, and finish remained intact. Both targeted and repository
+Markdown lint passed, and bounded precommit Git-scope assertions confirmed
+that only the accepted PNG, this selection history, and the v1.7 README
+comprise the tracked promotion.
