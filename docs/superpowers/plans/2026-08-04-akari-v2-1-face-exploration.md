@@ -321,6 +321,22 @@ if (!callId || !destination || !sessionDay) {
   );
 }
 
+const tokyoDateParts = new Intl.DateTimeFormat("en-CA", {
+  timeZone: "Asia/Tokyo",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+}).formatToParts(new Date());
+const currentSessionDay = ["year", "month", "day"]
+  .map((type) => tokyoDateParts.find((part) => part.type === type).value)
+  .join("/");
+
+if (sessionDay !== currentSessionDay) {
+  throw new Error(
+    `session day must be current Asia/Tokyo day ${currentSessionDay}; received ${sessionDay}`,
+  );
+}
+
 const codexRoot = process.env.CODEX_HOME ?? "/home/takahiro/.codex";
 const rolloutRoot = resolve(codexRoot, "sessions", sessionDay);
 const payloads = new Map();
@@ -394,10 +410,12 @@ bash -lc 'node --check tmp/akari-v2.1-redesign/r01/recover-image-payload.mjs'
 ```
 
 Expected: syntax check passes. Use the helper only when the image is visible but
-the tool-provided local PNG is absent or unreadable. It must match the exact
-returned call ID, parse the current-day rollout structurally, accept only an
-`iVBOR` payload, verify `89504e470d0a1a0a`, refuse an ambiguous match, and never
-overwrite an existing candidate.
+the tool-provided local PNG is absent or unreadable. It derives the current
+`Asia/Tokyo` day internally and rejects any supplied session day mismatch before
+resolving the rollout directory. It must match the exact returned call ID, parse
+that current-day rollout structurally, accept only an `iVBOR` payload, verify
+`89504e470d0a1a0a`, refuse an ambiguous match, and never overwrite an existing
+candidate.
 
 - [ ] **Step 8: Create the run ledger**
 
