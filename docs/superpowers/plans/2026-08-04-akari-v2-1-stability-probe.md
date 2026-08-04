@@ -71,6 +71,8 @@ Use `apply_patch` to:
 Create the run directory and record this full prompt verbatim at the named prompt path:
 
 ```text
+# Akari v2.1 30-Degree Stability Probe Prompt
+
 Use case: identity-preserving novel-view character continuity generation.
 Asset: Akari v2.1 noncanonical 30-degree hairpin-side stability probe, r01.
 
@@ -103,6 +105,7 @@ visible. This is a true modest three-quarter camera view, not a mirrored image,
 not a near-front substitute, and not an independently turned head.
 
 Identity and expression locks:
+
 - Keep the exact same 18-year-old young-adult read: naturally cute, fresh,
   familiar, and approachable; neither childlike nor mid-20s.
 - Preserve Image 1's soft compact face and friendly small open smile without
@@ -115,6 +118,7 @@ Identity and expression locks:
   chin, jaw-to-neck connection, and warm skin treatment in correct perspective.
 
 Hair and laterality locks:
+
 - Preserve the warm chestnut or cocoa-brown hair, off-center V-bang structure
   with two or three primary groups, slightly quiet crown volume, low-gloss shine,
   and restrained internal strand detail.
@@ -126,6 +130,7 @@ Hair and laterality locks:
   hide it completely, detach it, duplicate it, or move it to character-right.
 
 Composition and rendering locks:
+
 - Shoulder-up portrait crop, level head, direct familiar gaze, relaxed level
   shoulders, complete hair silhouette, comfortable margins, and the same plain
   warm off-white background as Image 1.
