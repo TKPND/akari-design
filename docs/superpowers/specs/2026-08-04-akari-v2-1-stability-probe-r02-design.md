@@ -1,6 +1,6 @@
 # Akari v2.1 Stability Probe r02 Design
 
-Status: approved in conversation; written-spec review pending.
+Status: approved by the user; ready for implementation planning.
 
 Date: 2026-08-04.
 
