@@ -1,6 +1,6 @@
 # Akari v2.1 Bounded Redesign Design
 
-Status: approved design; awaiting written-spec review.
+Status: approved by the user; Stage 1 execution awaits implementation-plan choice.
 
 Date: 2026-08-04.
 
