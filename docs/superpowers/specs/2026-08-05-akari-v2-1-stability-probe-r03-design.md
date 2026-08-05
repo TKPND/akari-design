@@ -1,7 +1,6 @@
 # Akari v2.1 Stability Probe r03 Design
 
-Status: direction approved by the user; written specification awaits user
-review before implementation planning.
+Status: approved by the user; ready for implementation planning.
 
 Date: 2026-08-05.
 
