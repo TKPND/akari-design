@@ -1,7 +1,7 @@
 # Akari v2.2 Single-Hairpin Baseline
 
-Status: full-figure and close-portrait authorities promoted; first daily-life
-scene accepted.
+Status: full-figure and close-portrait authorities promoted; two daily-life
+scenes accepted.
 
 Date: 2026-08-07.
 
@@ -55,6 +55,8 @@ identity or single-hairpin construction.
   accepted V2.2 daily-life illustration.
 - It establishes a lively home-cooking direction in which natural motion,
   steam, light, and ingredient colors provide the decorative rhythm.
+- `accepted/daily/life/akari-v2.2-d02-laundry-breeze.png` extends that direction
+  through billowing fabric, breeze, and filtered summer light.
 - Speech balloons, comic punctuation, enclosing poster frames, and sticker-like
   character outlines are intentionally excluded from this direction.
 

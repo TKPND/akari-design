@@ -14,6 +14,17 @@ Promotion date: 2026-08-07.
 - The accepted PNG is preserved without resizing, cropping, recompression, or
   retouching. Other exploration images remain ignored and noncanonical.
 
+## Daily Scene D02 — Laundry Breeze
+
+- The user selected the first laundry-breeze candidate and explicitly requested
+  formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d02-laundry-breeze.png`.
+- The scene uses the real movement of a sunlit bedsheet, breeze-responsive hair,
+  and clothespin colors instead of graphic symbols or an enclosing frame.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
 ## Promoted Decisions
 
 - The user accepted the full-figure candidate's quiet dark hairpin edge as a
