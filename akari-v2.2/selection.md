@@ -61,6 +61,21 @@ Latest promotion date: 2026-08-08.
 - The accepted PNG is preserved without resizing, cropping, recompression, or
   retouching. Other exploration images remain ignored and noncanonical.
 
+## Daily Scene D06 — Bookshelf Reach
+
+- The user selected the first bookshelf-reach candidate and explicitly
+  requested formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d06-bookshelf-reach.png`.
+- The sunset bedroom study, clearly readable bookcase, tiptoe posture, and
+  focused "almost there" expression make the action and setting immediately
+  legible without graphic symbols or a frame.
+- The ponytail sits higher and reads more like a standard ponytail than the
+  canonical low side ponytail; the user explicitly accepted that variation for
+  this scene.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
 ## Promoted Decisions
 
 - The user accepted the full-figure candidate's quiet dark hairpin edge as a

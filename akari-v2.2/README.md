@@ -1,6 +1,6 @@
 # Akari v2.2 Single-Hairpin Baseline
 
-Status: full-figure and close-portrait authorities promoted; five daily-life
+Status: full-figure and close-portrait authorities promoted; six daily-life
 scenes accepted.
 
 Date: 2026-08-08.
@@ -67,6 +67,9 @@ identity or single-hairpin construction.
   window-side plant scene through leaf silhouettes, a watering arc, and warm
   morning light; its playful spatial oddities are retained as an accepted
   composition reference.
+- `accepted/daily/life/akari-v2.2-d06-bookshelf-reach.png` uses sunset light,
+  an upward-reaching pose, and the line from Akari's gaze to a blue book to
+  make a quiet bedroom study moment feel lively without graphic decoration.
 - Speech balloons, comic punctuation, enclosing poster frames, and sticker-like
   character outlines are intentionally excluded from this direction.
 
