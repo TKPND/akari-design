@@ -24,7 +24,9 @@ equal-scale comparison. No canonical or tracked image changes during execution.
 - Use exactly one straight, slender, filled capsule-shaped hairpin.
 - Place it on character-left/canvas-right above the temple, rising about 35
   degrees from face-front/lower toward crown-back/upper.
-- Use a matte, muted medium blue and no outline or internal construction line.
+- Use a matte, muted medium blue. Exactly one quiet dark edge is permitted only
+  when needed for legibility; heavy black border, doubled outline, separate
+  line, or internal construction line remain forbidden.
 - Change only the hairpin; preserve identity, age, face, hair silhouette,
   expression, pose, crop, body, outfit, palette, and rendering finish.
 - Keep full-figure and portrait generation calls independent.
@@ -137,7 +139,7 @@ Use case: precise-object-edit
 Asset type: Akari v2.2 close-portrait character-design review candidate
 Input images: Image 1 is the sole edit target and controls every existing visual decision; Image 2 is a supporting cross-scale identity and hair-continuity reference only and must not replace Image 1's composition, face, pose, outfit, or rendering.
 Primary request: In Image 1, replace only the crossed blue hairpin above the character-left temple, visible on canvas-right, with exactly one straight slender filled capsule-shaped hairpin. Remove every remnant of the old crossed-pin construction.
-Hairpin construction: one continuous solid piece with softly rounded ends; no opening or internal line; length approximately 0.8 of the visible eye width; narrow but unmistakably one filled shape at close-portrait scale; anchored on the outer hair mass above the character-left temple; rising approximately 35 degrees from face-front/lower toward crown-back/upper along the local hair plane; matte muted medium blue coordinated with the existing blue accents; no black outline and no glossy stripe.
+Hairpin construction: one continuous solid piece with softly rounded ends; no opening; length approximately 0.8 of the visible eye width; narrow but unmistakably one filled shape at close-portrait scale; anchored on the outer hair mass above the character-left temple; rising approximately 35 degrees from face-front/lower toward crown-back/upper along the local hair plane; matte muted medium blue coordinated with the existing blue accents; exactly one quiet dark edge is permitted only when needed for legibility; heavy black border, doubled outline, separate line, or internal construction line remain forbidden; no glossy stripe.
 Composition/framing: preserve Image 1's exact close-portrait composition, camera, crop, head angle, hand gesture, and white background.
 Style/medium: preserve Image 1's exact polished anime illustration style, linework, cel shading, color balance, and finish.
 Constraints: change only the hairpin; preserve the same person, apparent age, face, eyes, gaze, brows, cheeks, nose, mouth, smile, expression, bangs, hairline, side ponytail, ponytail tie, flyaways, highlights, chestnut hair palette, hair volume, ear, jaw-to-neck connection, visible anatomy, white T-shirt, and background; do not beautify, polish, repair, redraw, recolor, or restyle any other region; no text, logo, watermark, border, or seam.
@@ -225,6 +227,20 @@ pin is not exactly one filled capsule, if any old pin remnant remains, or if
 any face, hair, hand, body, clothing, shoe, crop, or rendering drift is visible.
 
 No commit: the candidate and record remain ignored review material.
+
+### Post-Task 2 User Ruling (2026-08-07)
+
+Task 2's full-figure candidate was originally reviewed as `REJECT` under the
+historical fullbody prompt's stricter `no black outline` wording. After the
+user explicitly ruled `Minorとして許容`, its unchanged PNG is adjudicated `PASS`
+under the revised contract: one quiet dark edge is permitted only when needed
+for legibility, while heavy black borders, doubled outlines, separate lines,
+and internal construction lines remain forbidden. The quiet dark edge and the
+`2x3`-pixel dimension delta (`942x1669` vs `944x1672`) are recorded as Minor;
+original-detail review found no material visual drift. The historical
+fullbody prompt, Task 2 call, source, copied PNG, hash, and byte record remain
+immutable provenance and are not rewritten. This ruling does not authorize a
+retry, retouch, composite, or pixel change.
 
 ### Task 3: Edit and Verify the Close-Portrait Candidate
 

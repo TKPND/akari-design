@@ -55,7 +55,9 @@ Use exactly one straight, slender, filled capsule-shaped hairpin:
   shape at full-figure scale;
 - matte, muted medium blue, coordinated with the existing blue accents but not
   electric, neon, or glossy;
-- no black outline, internal line, opening, hinge, tooth, highlight stripe, or
+- exactly one quiet dark edge is permitted only when needed for legibility.
+  Heavy black border, doubled outline, separate line, or internal construction
+  line remain forbidden; so do an opening, hinge, tooth, highlight stripe, or
   separate clasp detail.
 
 Do not add a second pin, crossing, bow, ribbon, loop, bead, flower, symbol, or
@@ -121,6 +123,18 @@ If an output fails any gate, reject that output and preserve its original edit
 target unchanged. Do not silently accept the least-bad result, promote it,
 composite it, or start an additional correction round without a new user
 decision.
+
+## Post-Task 2 User Ruling (2026-08-07)
+
+The completed full-figure r01 candidate was originally rejected under the
+stricter, historical `no black outline` contract because its otherwise-correct
+single pin has one quiet dark edge. The user explicitly ruled
+`Minorとして許容`: that one quiet edge is accepted as the legibility allowance
+defined above. The existing full-figure PNG is therefore a `PASS` with the
+following Minor findings: the quiet dark edge and a `2x3`-pixel output-dimension
+delta (`942x1669` rather than `944x1672`). Original-detail review found no
+material visual drift. This is an adjudication of the unchanged candidate, not
+authorization to regenerate, retouch, composite, promote, or alter any image.
 
 ## Verification
 
