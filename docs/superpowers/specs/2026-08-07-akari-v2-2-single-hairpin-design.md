@@ -48,14 +48,16 @@ Use exactly one straight, slender, filled capsule-shaped hairpin:
 - placed on character-left, which appears on canvas-right in both supplied
   views;
 - anchored above the character-left temple on the outer hair mass;
-- rising approximately 35 degrees from face-front/lower toward
-  crown-back/upper, following the local hair plane rather than the page edge;
-- approximately 0.8 of the visible eye width in length;
+- rising toward crown-back/upper within approximately 45–60 degrees from
+  horizontal along the local hair plane, rather than the page edge;
+- approximately 0.8–1.0 of the visible eye width in length;
 - narrow enough to read as a hairpin, but thick enough to remain one filled
   shape at full-figure scale;
 - matte, muted medium blue, coordinated with the existing blue accents but not
   electric, neon, or glossy;
-- no black outline, internal line, opening, hinge, tooth, highlight stripe, or
+- exactly one quiet dark edge is permitted only when needed for legibility.
+  Heavy black border, doubled outline, separate line, or internal construction
+  line remain forbidden; so do an opening, hinge, tooth, highlight stripe, or
   separate clasp detail.
 
 Do not add a second pin, crossing, bow, ribbon, loop, bead, flower, symbol, or
@@ -121,6 +123,38 @@ If an output fails any gate, reject that output and preserve its original edit
 target unchanged. Do not silently accept the least-bad result, promote it,
 composite it, or start an additional correction round without a new user
 decision.
+
+## Post-Task 2 User Ruling (2026-08-07)
+
+The completed full-figure r01 candidate was originally rejected under the
+stricter, historical `no black outline` contract because its otherwise-correct
+single pin has one quiet dark edge. The user explicitly ruled
+`Minorとして許容`: that one quiet edge is accepted as the legibility allowance
+defined above. The existing full-figure PNG is therefore a `PASS` with the
+following Minor findings: the quiet dark edge and a `2x3`-pixel output-dimension
+delta (`942x1669` rather than `944x1672`). Original-detail review found no
+material visual drift. This is an adjudication of the unchanged candidate, not
+authorization to regenerate, retouch, composite, promote, or alter any image.
+
+## Post-Task 3 User Ruling (2026-08-07)
+
+Original-detail review found that the unchanged close-portrait r01 pin was
+approximately 55–60 degrees from horizontal and approximately one visible eye
+width long. Those values did not satisfy the earlier, stricter numeric wording
+in the historical Task 1 prompts (approximately 35 degrees and 0.8 eye width),
+although the single filled capsule, placement, and permitted quiet dark
+legibility edge otherwise passed review. The user explicitly ruled
+`この形を正式化 (Recommended)`: the final approved geometry is the 45–60-degree
+and 0.8–1.0-eye-width contract above. Under that final contract, the unchanged
+portrait PNG is `PASS`; its `2x3`-pixel output-dimension delta remains a
+Minor, with no material visual drift found.
+
+Both completed image calls retain their earlier, stricter numeric prompt text
+as immutable execution provenance. The final contract adjudicates the existing
+pixels and does not authorize a retry, retouch, composite, prompt mutation, or
+other pixel change. The execution used the active isolated-worktree input root
+instead of the stale root-checkout path printed by the original brief; the
+relative files, order, and Image 1/Image 2 roles were unchanged.
 
 ## Verification
 
