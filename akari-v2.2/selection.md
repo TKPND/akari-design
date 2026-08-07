@@ -36,6 +36,18 @@ Latest promotion date: 2026-08-08.
 - The accepted PNG is preserved without resizing, cropping, recompression, or
   retouching. Other exploration images remain ignored and noncanonical.
 
+## Daily Scene D04 — Rainy Entry
+
+- The user selected the first rainy-entry candidate and explicitly requested
+  formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d04-rain-entry.png`.
+- The scene uses real water beads on a transparent umbrella, wet pavement
+  reflections, and contrasting cool rain and warm entrance light instead of
+  graphic symbols or a frame.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
 ## Promoted Decisions
 
 - The user accepted the full-figure candidate's quiet dark hairpin edge as a

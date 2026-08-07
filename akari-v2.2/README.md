@@ -1,6 +1,6 @@
 # Akari v2.2 Single-Hairpin Baseline
 
-Status: full-figure and close-portrait authorities promoted; three daily-life
+Status: full-figure and close-portrait authorities promoted; four daily-life
 scenes accepted.
 
 Date: 2026-08-08.
@@ -60,6 +60,9 @@ identity or single-hairpin construction.
 - `accepted/daily/life/akari-v2.2-d03-dryer-breeze.png` brings the same
   natural-motion principle indoors through windblown hair, a lifted towel, and
   the quiet curve of the dryer cord.
+- `accepted/daily/life/akari-v2.2-d04-rain-entry.png` uses a transparent
+  umbrella, water beads, reflected pavement light, and the meeting of cool rain
+  with a warm entrance glow.
 - Speech balloons, comic punctuation, enclosing poster frames, and sticker-like
   character outlines are intentionally excluded from this direction.
 
