@@ -1,6 +1,6 @@
 # Akari v2.2 Selection History
 
-Promotion date: 2026-08-07.
+Latest promotion date: 2026-08-08.
 
 ## Daily Scene D01 — Kitchen Steam Ribbon
 
@@ -22,6 +22,17 @@ Promotion date: 2026-08-07.
   `accepted/daily/life/akari-v2.2-d02-laundry-breeze.png`.
 - The scene uses the real movement of a sunlit bedsheet, breeze-responsive hair,
   and clothespin colors instead of graphic symbols or an enclosing frame.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
+## Daily Scene D03 — Hair-Dryer Breeze
+
+- The user selected the first hair-dryer candidate and explicitly requested
+  formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d03-dryer-breeze.png`.
+- The scene uses the real movement of windblown hair, a lifted towel, and the
+  dryer cord to create visual rhythm without graphic symbols or a frame.
 - The accepted PNG is preserved without resizing, cropping, recompression, or
   retouching. Other exploration images remain ignored and noncanonical.
 

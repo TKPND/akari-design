@@ -1,9 +1,9 @@
 # Akari v2.2 Single-Hairpin Baseline
 
-Status: full-figure and close-portrait authorities promoted; two daily-life
+Status: full-figure and close-portrait authorities promoted; three daily-life
 scenes accepted.
 
-Date: 2026-08-07.
+Date: 2026-08-08.
 
 Akari v2.2 began as a compact two-image character-design checkpoint. It
 formalizes the friendly V-sign presentation and replaces the unstable crossed
@@ -57,6 +57,9 @@ identity or single-hairpin construction.
   steam, light, and ingredient colors provide the decorative rhythm.
 - `accepted/daily/life/akari-v2.2-d02-laundry-breeze.png` extends that direction
   through billowing fabric, breeze, and filtered summer light.
+- `accepted/daily/life/akari-v2.2-d03-dryer-breeze.png` brings the same
+  natural-motion principle indoors through windblown hair, a lifted towel, and
+  the quiet curve of the dryer cord.
 - Speech balloons, comic punctuation, enclosing poster frames, and sticker-like
   character outlines are intentionally excluded from this direction.
 
