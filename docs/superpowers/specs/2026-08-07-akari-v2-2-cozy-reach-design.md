@@ -1,6 +1,6 @@
 # Akari v2.2 Cozy-Reach Illustration Design
 
-Status: approved in conversation; awaiting written-spec review.
+Status: approved by the user; ready for implementation.
 
 Date: 2026-08-07.
 
