@@ -76,6 +76,23 @@ Latest promotion date: 2026-08-08.
 - The accepted PNG is preserved without resizing, cropping, recompression, or
   retouching. Other exploration images remain ignored and noncanonical.
 
+## Daily Scene D07 — Fan Breeze
+
+- The user selected the first fan-breeze candidate and explicitly requested
+  formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d07-fan-breeze.png`.
+- The close face, diagonal foreshortening, relieved smile, low side ponytail,
+  and bright summer color shapes restore the strongest cute qualities of the
+  original visual references without copying their graphic decoration.
+- A complete floor fan stands separately beyond the rug with visible floor
+  between them; Akari's hands, legs, and feet read coherently without touching
+  furniture or appliances.
+- The blue hairpin sits slightly flatter than the canonical 45–60-degree angle;
+  the user explicitly accepted the complete candidate for this scene.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
 ## Promoted Decisions
 
 - The user accepted the full-figure candidate's quiet dark hairpin edge as a

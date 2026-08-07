@@ -1,6 +1,6 @@
 # Akari v2.2 Single-Hairpin Baseline
 
-Status: full-figure and close-portrait authorities promoted; six daily-life
+Status: full-figure and close-portrait authorities promoted; seven daily-life
 scenes accepted.
 
 Date: 2026-08-08.
@@ -49,6 +49,20 @@ image as the body, outfit, pose, laterality, and complete-figure reference. Do
 not let a supporting pose or wardrobe reference replace the portrait's face
 identity or single-hairpin construction.
 
+## Daily-Life Art Direction
+
+Future daily-life exploration should keep the face-forward appeal, close
+perspective, gentle foreshortening, diagonal energy, bright clean color shapes,
+and immediately readable expressions found in the original visual references.
+Those references guide composition and charm only; they do not replace Akari's
+canonical identity, hair, ornament, age impression, or proportions.
+
+Use real motion, light, steam, breeze, fabric, water, or other physically
+grounded scene elements for decorative rhythm. Keep rooms and props simple
+enough that the floor plane, furniture gaps, object contact, and body placement
+remain clear. Speech balloons, comic punctuation, enclosing poster frames,
+decorative symbol fields, and sticker-like character outlines remain excluded.
+
 ## Accepted Daily-Life Scene
 
 - `accepted/daily/life/akari-v2.2-d01-kitchen-steam-ribbon.png` is the first
@@ -70,6 +84,10 @@ identity or single-hairpin construction.
 - `accepted/daily/life/akari-v2.2-d06-bookshelf-reach.png` uses sunset light,
   an upward-reaching pose, and the line from Akari's gaze to a blue book to
   make a quiet bedroom study moment feel lively without graphic decoration.
+- `accepted/daily/life/akari-v2.2-d07-fan-breeze.png` returns to a close,
+  face-first diagonal composition while using a real fan breeze, lifted hair,
+  and a moving curtain for energy. The fan, rug, floor, and body remain clearly
+  separated in a simple, coherent room.
 - Speech balloons, comic punctuation, enclosing poster frames, and sticker-like
   character outlines are intentionally excluded from this direction.
 
