@@ -48,6 +48,19 @@ Latest promotion date: 2026-08-08.
 - The accepted PNG is preserved without resizing, cropping, recompression, or
   retouching. Other exploration images remain ignored and noncanonical.
 
+## Daily Scene D05 — Window Watering
+
+- The user selected the first window-watering candidate and explicitly
+  requested formal preservation as a composition reference.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d05-window-watering.png`.
+- The scene uses real leaf silhouettes, a visible water arc, and window light
+  rather than graphic symbols or a frame.
+- The leaf overlap and the water-to-pot alignment remain known playful spatial
+  oddities that the user accepted for this reference.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
 ## Promoted Decisions
 
 - The user accepted the full-figure candidate's quiet dark hairpin edge as a

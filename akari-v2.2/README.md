@@ -1,6 +1,6 @@
 # Akari v2.2 Single-Hairpin Baseline
 
-Status: full-figure and close-portrait authorities promoted; four daily-life
+Status: full-figure and close-portrait authorities promoted; five daily-life
 scenes accepted.
 
 Date: 2026-08-08.
@@ -63,6 +63,10 @@ identity or single-hairpin construction.
 - `accepted/daily/life/akari-v2.2-d04-rain-entry.png` uses a transparent
   umbrella, water beads, reflected pavement light, and the meeting of cool rain
   with a warm entrance glow.
+- `accepted/daily/life/akari-v2.2-d05-window-watering.png` explores a bright
+  window-side plant scene through leaf silhouettes, a watering arc, and warm
+  morning light; its playful spatial oddities are retained as an accepted
+  composition reference.
 - Speech balloons, comic punctuation, enclosing poster frames, and sticker-like
   character outlines are intentionally excluded from this direction.
 
