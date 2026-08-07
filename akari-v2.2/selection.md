@@ -2,6 +2,18 @@
 
 Promotion date: 2026-08-07.
 
+## Daily Scene D01 — Kitchen Steam Ribbon
+
+- The user selected the refined kitchen illustration and explicitly requested
+  formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d01-kitchen-steam-ribbon.png`.
+- The scene keeps the energetic ladle-and-pot cooking moment while replacing
+  speech-bubble-like marks, comic symbols, enclosing frames, and sticker
+  outlines with soft steam ribbons and sparse ingredient-color flecks.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
 ## Promoted Decisions
 
 - The user accepted the full-figure candidate's quiet dark hairpin edge as a

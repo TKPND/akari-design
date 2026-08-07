@@ -1,13 +1,15 @@
 # Akari v2.2 Single-Hairpin Baseline
 
-Status: full-figure and close-portrait authorities promoted.
+Status: full-figure and close-portrait authorities promoted; first daily-life
+scene accepted.
 
 Date: 2026-08-07.
 
-Akari v2.2 is a compact two-image character-design checkpoint. It formalizes
-the friendly V-sign presentation and replaces the unstable crossed ornament
-with one simple blue hairpin that remains readable at both portrait and
-full-figure scale.
+Akari v2.2 began as a compact two-image character-design checkpoint. It
+formalizes the friendly V-sign presentation and replaces the unstable crossed
+ornament with one simple blue hairpin that remains readable at both portrait
+and full-figure scale. Accepted daily-life scenes now extend that identity
+without replacing the two canonical authorities.
 
 ## Canonical Authorities
 
@@ -47,9 +49,18 @@ image as the body, outfit, pose, laterality, and complete-figure reference. Do
 not let a supporting pose or wardrobe reference replace the portrait's face
 identity or single-hairpin construction.
 
+## Accepted Daily-Life Scene
+
+- `accepted/daily/life/akari-v2.2-d01-kitchen-steam-ribbon.png` is the first
+  accepted V2.2 daily-life illustration.
+- It establishes a lively home-cooking direction in which natural motion,
+  steam, light, and ingredient colors provide the decorative rhythm.
+- Speech balloons, comic punctuation, enclosing poster frames, and sticker-like
+  character outlines are intentionally excluded from this direction.
+
 ## Scope Boundary
 
-This is a minimal two-image character-design package. It is not a turnaround,
-angle set, expression sheet, wardrobe set, manifest-backed release, or PDF.
-The larger PNG working outputs, prompts, comparison, and execution ledger stay
-ignored and noncanonical.
+This remains a lightweight character and scene package. It is not a
+turnaround, angle set, expression sheet, wardrobe set, manifest-backed release,
+or PDF. Unselected working outputs, prompts, comparisons, and execution notes
+stay ignored and noncanonical.
