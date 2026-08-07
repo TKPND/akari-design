@@ -96,23 +96,14 @@ Do not overwrite existing files, stage generated material, create a mechanical
 contact sheet, promote a candidate, or start a correction round during this
 batch.
 
-## Review Order
+## Human Selection Boundary
 
-Inspect every candidate at original detail and reduced sheet scale. Review in
-this order:
-
-1. eye integrity and coordinated gaze in both face-scale depictions;
-2. the same recognizable Akari identity in all four depictions;
-3. coherent anatomy without duplicated or merged features;
-4. exactly one blue capsule hairpin and no crossed-pin remnants;
-5. consistent hair, outfit, body balance, palette, and finish;
-6. a genuinely landscape, readable four-depiction character sheet;
-7. overall appeal and layout quality.
-
-Record failures instead of hiding them. The selection set includes the twelve
-authorized calls as generated; no failed candidate is silently replaced by a
-thirteenth call. Present all twelve with concise review labels so the user can
-choose.
+The user will judge the images directly. Do not assign automated or agent
+PASS/FAIL labels, score the candidates, rank them, or choose a winner. Preserve
+and present the twelve authorized calls as generated so the user can compare
+the eyes, identity, anatomy, hairpin, outfit, landscape readability, and
+overall appeal visually. Do not silently replace a weak candidate with a
+thirteenth call.
 
 ## Verification
 
@@ -130,13 +121,14 @@ After each generation:
 - verify the PNG signature, dimensions, SHA-256, and byte identity against the
   built-in generated source when that source path is available;
 - record the generation identifier or request identifier returned by the tool;
-- inspect the original-size output against the review order above.
+- open the saved output for presentation without assigning a quality verdict.
 
 After the batch, confirm the bounded Git scope and that no canonical or tracked
 image changed.
 
 ## Non-Goals
 
-This batch does not choose or promote a winner, repair individual candidates,
-create a turnaround, create a release package, update a manifest, build a PDF,
-add written character lore, or redesign Akari beyond the supplied v2.2 draft.
+This batch does not run an automated visual audit, score or rank candidates,
+choose or promote a winner, repair individual candidates, create a turnaround,
+create a release package, update a manifest, build a PDF, add written character
+lore, or redesign Akari beyond the supplied v2.2 draft.

@@ -34,7 +34,12 @@ sheet.
 - Do not overwrite, retry, repair, promote, stage, or commit generated review
   material.
 - The twelve authorized calls remain the complete selection set even when a
-  candidate fails review; do not silently replace it with a thirteenth call.
+  call fails or an image looks weak; do not silently replace it with a
+  thirteenth call.
+- Per the user's execution override, do not assign automated or agent visual
+  audit results, PASS/FAIL labels, scores, rankings, or a winner. Verify only
+  that each returned PNG was preserved correctly, then present all outcomes
+  for direct human selection.
 
 ---
 
@@ -147,8 +152,7 @@ Use `apply_patch` to create `tmp/akari-v2.2-character-sheet/r01/run.md`
 with the run title, both source attachment paths and roles, both verified hashes,
 the exact master-prompt path, and an initially empty candidate table with these
 columns: candidate, built-in source path, generation or request identifier,
-saved path, dimensions, SHA-256, eye review, identity review, anatomy review,
-hairpin review, and overall note.
+saved path, dimensions, and SHA-256.
 
 - [ ] **Step 6: Open and label both reference roles**
 
@@ -220,12 +224,12 @@ sha256sum tmp/akari-v2.2-character-sheet/r01/outputs/candidate-0{1,2,3,4}.png
 Expected: every successful file begins `89504e470d0a1a0a`, is PNG with width
 greater than height, and has a recorded SHA-256.
 
-- [ ] **Step 4: Inspect and record candidates 01-04**
+- [ ] **Step 4: Open and record candidates 01-04**
 
-Open each saved PNG with `view_image` at original detail. Record the actual
-source path, returned identifier, saved path, dimensions, hash, and concise
-PASS/FAIL notes for eyes, same-person identity, anatomy, and single hairpin in
-`run.md`. Keep failures; do not repair or replace them.
+Open each saved PNG with `view_image` for later presentation. Record the actual
+source path, returned identifier, saved path, dimensions, and hash in `run.md`.
+Do not assign a quality verdict, score, or rank, and do not repair or replace a
+candidate.
 
 No commit: the four candidates and run updates are intentionally ignored.
 
@@ -288,10 +292,11 @@ sha256sum tmp/akari-v2.2-character-sheet/r01/outputs/candidate-0{5,6,7,8}.png
 Expected: every successful file begins `89504e470d0a1a0a`, is PNG with width
 greater than height, and has a recorded SHA-256.
 
-- [ ] **Step 4: Inspect and record candidates 05-08**
+- [ ] **Step 4: Open and record candidates 05-08**
 
-Open each saved PNG at original detail and add its actual metadata and concise
-PASS/FAIL notes to `run.md`. Keep failures unchanged.
+Open each saved PNG for later presentation and add its actual metadata to
+`run.md`. Do not assign a quality verdict, score, or rank. Keep failures
+unchanged.
 
 No commit: the four candidates and run updates are intentionally ignored.
 
@@ -358,14 +363,15 @@ sha256sum \
 Expected: every successful file begins `89504e470d0a1a0a`, is PNG with width
 greater than height, and has a recorded SHA-256.
 
-- [ ] **Step 4: Inspect and record candidates 09-12**
+- [ ] **Step 4: Open and record candidates 09-12**
 
-Open each saved PNG at original detail and add its actual metadata and concise
-PASS/FAIL notes to `run.md`. Keep failures unchanged.
+Open each saved PNG for later presentation and add its actual metadata to
+`run.md`. Do not assign a quality verdict, score, or rank. Keep failures
+unchanged.
 
 No commit: the four candidates and run updates are intentionally ignored.
 
-### Task 5: Audit the Complete Selection Set
+### Task 5: Present the Complete Selection Set
 
 **Files:**
 
@@ -386,8 +392,8 @@ No commit: the four candidates and run updates are intentionally ignored.
 **Interfaces:**
 
 - Consumes: all twelve generation outcomes and their per-candidate reviews.
-- Produces: a complete, ranked-but-unselected review set for the user's visual
-  decision, plus proof that no canonical image changed.
+- Produces: a complete unranked set for the user's visual decision, plus proof
+  that no canonical image changed.
 
 - [ ] **Step 1: Verify the complete output inventory**
 
@@ -402,12 +408,11 @@ Expected: one filename for every successful authorized call, with no filename
 outside `candidate-01.png` through `candidate-12.png`. Any failed call must be
 listed explicitly in `run.md` instead of being regenerated.
 
-- [ ] **Step 2: Compare review results in the approved order**
+- [ ] **Step 2: Prepare the unranked human-selection list**
 
-Read all twelve rows and add a final ranking section to `run.md`. Rank by eye
-integrity first, then same-person identity, anatomy, single hairpin, outfit and
-finish consistency, landscape readability, and overall appeal. Do not mark a
-winner or promote a file.
+Read all twelve rows and add a numeric presentation list to `run.md` in
+candidate order. Do not add visual judgments, scores, rankings, a winner, or a
+promotion recommendation.
 
 - [ ] **Step 3: Confirm bounded Git scope**
 
@@ -426,9 +431,8 @@ generated file is staged. Preserve the pre-existing untracked
 
 - [ ] **Step 4: Present all candidates for user selection**
 
-Render each successful saved PNG with its candidate number and concise review
-label. Lead with the highest-ranked candidates, but include the complete set
-and make no selection, correction, promotion, PDF, or manifest change without
-the user's next decision.
+Render each successful saved PNG in candidate-number order. Include the
+complete set without review labels and make no selection, correction,
+promotion, PDF, or manifest change without the user's next decision.
 
 No commit: final outputs and review notes remain ignored selection material.
