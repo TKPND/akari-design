@@ -93,6 +93,22 @@ Latest promotion date: 2026-08-08.
 - The accepted PNG is preserved without resizing, cropping, recompression, or
   retouching. Other exploration images remain ignored and noncanonical.
 
+## Daily Scene D08 — Scarf Gust
+
+- The user selected the first scarf-gust candidate and explicitly requested
+  formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d08-scarf-gust.png`.
+- The close face, diagonal foreshortening, low side ponytail, and warm
+  early-autumn riverside light continue the accepted daily-life direction.
+- The large foreground hand visibly grips one end of the connected coral
+  scarf, while the other hand holds it near Akari's neck; the railing and trees
+  remain clearly behind her without fused props or impossible intersections.
+- The blue hairpin sits slightly flatter than the canonical 45–60-degree angle;
+  the user explicitly accepted the complete candidate for this scene.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
 ## Promoted Decisions
 
 - The user accepted the full-figure candidate's quiet dark hairpin edge as a

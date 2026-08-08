@@ -1,6 +1,6 @@
 # Akari v2.2 Single-Hairpin Baseline
 
-Status: full-figure and close-portrait authorities promoted; seven daily-life
+Status: full-figure and close-portrait authorities promoted; eight daily-life
 scenes accepted.
 
 Date: 2026-08-08.
@@ -88,6 +88,10 @@ decorative symbol fields, and sticker-like character outlines remain excluded.
   face-first diagonal composition while using a real fan breeze, lifted hair,
   and a moving curtain for energy. The fan, rug, floor, and body remain clearly
   separated in a simple, coherent room.
+- `accepted/daily/life/akari-v2.2-d08-scarf-gust.png` carries that close,
+  face-first energy outdoors through a wind-caught coral scarf, a large
+  foreground hand, and warm early-autumn riverside light. Akari visibly grips
+  the connected scarf while the railing and trees stay clearly behind her.
 - Speech balloons, comic punctuation, enclosing poster frames, and sticker-like
   character outlines are intentionally excluded from this direction.
 
