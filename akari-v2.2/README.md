@@ -1,6 +1,6 @@
 # Akari v2.2 Single-Hairpin Baseline
 
-Status: full-figure and close-portrait authorities promoted; ten daily-life
+Status: full-figure and close-portrait authorities promoted; eleven daily-life
 scenes accepted.
 
 Date: 2026-08-08.
@@ -100,6 +100,10 @@ decorative symbol fields, and sticker-like character outlines remain excluded.
   ginkgo leaf, a close foreground hand, and filtered autumn light for a playful
   walking moment. The leaf connects visibly to its stem while the path and
   foliage remain clearly behind Akari.
+- `accepted/daily/life/akari-v2.2-d11-sleepy-sleeve.png` uses a sleeve-covered
+  eye rub, clear yawn, and dawn window light for a quiet morning moment. The
+  covered hand and raised arm remain connected while the sparse room stays
+  behind Akari.
 - Speech balloons, comic punctuation, enclosing poster frames, and sticker-like
   character outlines are intentionally excluded from this direction.
 

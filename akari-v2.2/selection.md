@@ -139,6 +139,21 @@ Latest promotion date: 2026-08-08.
 - The accepted PNG is preserved without resizing, cropping, recompression, or
   retouching. Other exploration images remain ignored and noncanonical.
 
+## Daily Scene D11 — Sleepy Sleeve
+
+- The user selected the first sleepy-sleeve candidate and explicitly requested
+  formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d11-sleepy-sleeve.png`.
+- The close face, unmistakable yawn, half-lidded eye, low side ponytail, and
+  dawn light continue the accepted face-first daily-life direction.
+- One long sleeve fully covers the rubbing hand and connects coherently through
+  cuff, forearm, and shoulder; the simple window and wall remain behind Akari.
+- The blue hairpin sits slightly flatter than the canonical 45–60-degree angle;
+  the user explicitly accepted the complete candidate for this scene.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
 ## Promoted Decisions
 
 - The user accepted the full-figure candidate's quiet dark hairpin edge as a
