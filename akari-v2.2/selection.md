@@ -123,6 +123,22 @@ Latest promotion date: 2026-08-08.
 - The accepted PNG is preserved without resizing, cropping, recompression, or
   retouching. Other exploration images remain ignored and noncanonical.
 
+## Daily Scene D10 — Ginkgo Find
+
+- The user selected the first ginkgo-find candidate and explicitly requested
+  formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d10-ginkgo-find.png`.
+- The close face, playful open smile, low side ponytail, coral sweatshirt, and
+  filtered golden light carry the accepted direction into an autumn walk.
+- One foreground hand visibly pinches the connected ginkgo-leaf stem with five
+  plausible fingers. Scattered leaves rest on the path and one distant falling
+  leaf supports the season without becoming a graphic symbol field.
+- The path and foliage remain clearly behind Akari without fused props or
+  impossible intersections.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
 ## Promoted Decisions
 
 - The user accepted the full-figure candidate's quiet dark hairpin edge as a

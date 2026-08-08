@@ -1,6 +1,6 @@
 # Akari v2.2 Single-Hairpin Baseline
 
-Status: full-figure and close-portrait authorities promoted; nine daily-life
+Status: full-figure and close-portrait authorities promoted; ten daily-life
 scenes accepted.
 
 Date: 2026-08-08.
@@ -96,6 +96,10 @@ decorative symbol fields, and sticker-like character outlines remain excluded.
   bottle, condensation, and warm window light for a close, refreshed kitchen
   moment. The bottle visibly touches Akari's cheek, her hand wraps around it
   naturally, and the sparse counter remains clearly behind her.
+- `accepted/daily/life/akari-v2.2-d10-ginkgo-find.png` uses a pinched golden
+  ginkgo leaf, a close foreground hand, and filtered autumn light for a playful
+  walking moment. The leaf connects visibly to its stem while the path and
+  foliage remain clearly behind Akari.
 - Speech balloons, comic punctuation, enclosing poster frames, and sticker-like
   character outlines are intentionally excluded from this direction.
 
