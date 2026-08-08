@@ -1,6 +1,6 @@
 # Akari v2.2 Single-Hairpin Baseline
 
-Status: full-figure and close-portrait authorities promoted; eight daily-life
+Status: full-figure and close-portrait authorities promoted; nine daily-life
 scenes accepted.
 
 Date: 2026-08-08.
@@ -92,6 +92,10 @@ decorative symbol fields, and sticker-like character outlines remain excluded.
   face-first energy outdoors through a wind-caught coral scarf, a large
   foreground hand, and warm early-autumn riverside light. Akari visibly grips
   the connected scarf while the railing and trees stay clearly behind her.
+- `accepted/daily/life/akari-v2.2-d09-cold-bottle.png` uses a chilled frosted
+  bottle, condensation, and warm window light for a close, refreshed kitchen
+  moment. The bottle visibly touches Akari's cheek, her hand wraps around it
+  naturally, and the sparse counter remains clearly behind her.
 - Speech balloons, comic punctuation, enclosing poster frames, and sticker-like
   character outlines are intentionally excluded from this direction.
 
