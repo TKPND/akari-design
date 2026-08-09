@@ -202,6 +202,23 @@ Latest promotion date: 2026-08-09.
 - The accepted PNG is preserved without resizing, cropping, recompression, or
   retouching. Other exploration images remain ignored and noncanonical.
 
+## Daily Scene D15 — First-Snow Mitten
+
+- The user selected the first first-snow-mitten candidate and explicitly
+  requested formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d15-first-snow-mitten.png`.
+- The very close face, relaxed open smile, low side ponytail, coral scarf, and
+  crisp winter light continue the accepted face-first direction.
+- One blue knitted mitten carries a small mound of powder snow and connects
+  continuously through cuff, coat sleeve, and bent arm without merging into
+  Akari's face or hair.
+- Exactly one blue hairpin remains visible on canvas-right. The snowy path,
+  evergreen hedge, and distant house remain clearly behind Akari without
+  graphic symbols, frames, or sticker-like outlines.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
 ## Promoted Decisions
 
 - The user accepted the full-figure candidate's quiet dark hairpin edge as a
