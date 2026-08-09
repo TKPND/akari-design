@@ -1,6 +1,6 @@
 # Akari v2.2 Selection History
 
-Latest promotion date: 2026-08-09.
+Latest promotion date: 2026-08-10.
 
 ## Daily Scene D01 — Kitchen Steam Ribbon
 
@@ -396,6 +396,39 @@ Latest promotion date: 2026-08-09.
   fruit, and market floor.
 - The accepted PNG is preserved without resizing, cropping, recompression, or
   retouching. Other exploration images remain ignored and noncanonical.
+
+## Daily Scene D28 — Rubber Glove Snap
+
+- The user selected pop-study batch candidate 01 and explicitly requested
+  formal preservation before moving to the next batch.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d28-rubber-glove-snap.png`.
+- The oversized yellow glove and stretched cuff form one clear foreground
+  action, with Akari's smiling face, white T-shirt, blue denim, and clean sink
+  area arranged along a lively diagonal.
+- Her bare fingers visibly pinch the connected glove cuff while the gloved hand,
+  faucet, sink rim, basin, and tiled wall remain separate and physically
+  readable. Sparse bubbles and coral action marks stay secondary to the scene.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
+## Daily Scene D29 — Headphone Listen
+
+- The user selected pop-study batch candidate 05 and explicitly requested
+  formal preservation before moving to the next batch.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d29-headphone-listen.png`.
+- A close face-forward crop, closed-eye smile, pale-aqua headphones, and navy
+  cardigan create a calm listening moment against simple coral and aqua color
+  blocks.
+- One hand presses the connected ear cup while the headband and both cups remain
+  coherent around her head; the sparse dots and curves remain secondary pop
+  accents rather than a substitute for the action.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+- This acceptance does not lock the batch's stronger saturation. The user asked
+  the following exploration to retain the pop clarity while moving slightly
+  toward a softer pastel palette.
 
 ## Promoted Decisions
 

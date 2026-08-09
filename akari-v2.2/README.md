@@ -1,9 +1,9 @@
 # Akari v2.2 Single-Hairpin Baseline
 
-Status: full-figure and close-portrait authorities promoted; twenty-seven
+Status: full-figure and close-portrait authorities promoted; twenty-nine
 daily-life scenes accepted.
 
-Date: 2026-08-09.
+Date: 2026-08-10.
 
 Akari v2.2 began as a compact two-image character-design checkpoint. It
 formalizes the friendly V-sign presentation and replaces the unstable crossed
@@ -170,8 +170,18 @@ decorative symbol fields, and sticker-like character outlines remain excluded.
   crates, a close fruit, and Akari's crouched teal-and-yellow silhouette as
   large physical color masses. The fruit, hands, knees, shoes, crates, and
   market floor remain visibly distinct.
+- `accepted/daily/life/akari-v2.2-d28-rubber-glove-snap.png` uses an oversized
+  yellow glove as the foreground gesture in a clean kitchen-sink view. Akari's
+  bare fingers visibly stretch the connected cuff while the sink, basin, and
+  tiled wall remain readable behind her.
+- `accepted/daily/life/akari-v2.2-d29-headphone-listen.png` uses a close
+  face-forward crop, pale-aqua headphones, and a quiet eyes-closed smile. One
+  hand presses a connected ear cup while the headband and opposite cup remain
+  coherent around her head.
 - Speech balloons, comic punctuation, enclosing poster frames, and sticker-like
-  character outlines are intentionally excluded from this direction.
+  character outlines remain excluded. Sparse nonfigurative color blocks,
+  curves, dots, bubbles, and action marks may appear as secondary pop accents
+  when the physical setting and action remain primary.
 
 ## Scope Boundary
 
