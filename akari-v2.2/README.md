@@ -1,7 +1,7 @@
 # Akari v2.2 Single-Hairpin Baseline
 
-Status: full-figure and close-portrait authorities promoted; seventeen daily-life
-scenes accepted.
+Status: full-figure and close-portrait authorities promoted; twenty-three
+daily-life scenes accepted.
 
 Date: 2026-08-09.
 
@@ -129,6 +129,31 @@ decorative symbol fields, and sticker-like character outlines remain excluded.
   Akari walks through a bright hallway. Her turn and stepping legs counter the
   leaning cushion stack, preserving a lively full-body diagonal without
   decorative graphics.
+- `accepted/daily/life/akari-v2.2-d18-parcel-peek.png` uses the open parcel as a
+  real foreground frame while Akari leans over it with a curious smile. Two
+  connected hands rest on separate box flaps, and the wood floor remains one
+  readable plane behind the box.
+- `accepted/daily/life/akari-v2.2-d19-wall-roller.png` uses an aqua paint field,
+  one continuous roller, and a reaching diagonal to turn a simple home project
+  into a lively full-body scene. The roller head visibly touches the wall while
+  Akari remains supported on the floor.
+- `accepted/daily/life/akari-v2.2-d20-breakfast-slide.png` uses a large breakfast
+  plate and toast as the foreground launcher in a warm kitchen. Akari's hand
+  meets the plate rim while the table surface separates the food, cup, body,
+  and room.
+- `accepted/daily/life/akari-v2.2-d21-curtain-pull.png` uses a rear three-quarter
+  turn, a broad yellow curtain, and cool morning window light for a clean
+  silhouette change. One hand grips the curtain while both feet remain visibly
+  supported on the bedroom floor.
+- `accepted/daily/life/akari-v2.2-d22-sneaker-heel.png` uses a floor-level shoe
+  view, a bent seated pose, and a coral entry rug for strong depth. Akari's hand
+  pulls the connected heel tab while her foot remains visibly inside the blue
+  sneaker; spare white shoes in the distant entry remain an accepted minor
+  extra.
+- `accepted/daily/life/akari-v2.2-d23-puzzle-piece.png` uses a colorful jigsaw
+  field across the foreground table and a large pinched piece to guide the eye
+  toward Akari's focused smile. Both arms connect clearly to the tabletop
+  action without graphic framing.
 - Speech balloons, comic punctuation, enclosing poster frames, and sticker-like
   character outlines are intentionally excluded from this direction.
 

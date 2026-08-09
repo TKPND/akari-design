@@ -256,6 +256,88 @@ Latest promotion date: 2026-08-09.
 - The accepted PNG is preserved without resizing, cropping, recompression, or
   retouching. Other exploration images remain ignored and noncanonical.
 
+## Daily Scene D18 — Parcel Peek
+
+- The user selected numbered batch candidate 03 and explicitly requested
+  formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d18-parcel-peek.png`.
+- The parcel interior supplies a real foreground frame while Akari's close,
+  curious face and low side ponytail remain the focal point.
+- Both hands connect visibly through wrists and sleeves while resting on
+  separate flaps; the box, floor, and background furniture remain distinct.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
+## Daily Scene D19 — Wall Roller
+
+- The user selected numbered batch candidate 04 and explicitly requested
+  formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d19-wall-roller.png`.
+- A broad aqua paint field, one roller, and Akari's reaching body create a
+  strong diagonal with bright coral and white counter-masses.
+- The roller head visibly contacts the wall and connects through one unbroken
+  handle to Akari's gripping hand, wrist, arm, and shoulder.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
+## Daily Scene D20 — Breakfast Slide
+
+- The user selected numbered batch candidate 07 and explicitly requested
+  formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d20-breakfast-slide.png`.
+- A large plate, toast, and berries fill the near table plane and lead through
+  Akari's connected hand and arm to her bright morning expression.
+- The plate rests fully on the table while the cup, chair, window, and body
+  remain clearly separated in the warm kitchen.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
+## Daily Scene D21 — Curtain Pull
+
+- The user selected numbered batch candidate 08 and explicitly requested
+  formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d21-curtain-pull.png`.
+- The rear three-quarter body turn, broad yellow curtain, and cool blue window
+  light provide a new full-body silhouette and clear color-plane contrast.
+- One hand visibly grips the curtain edge while both feet support Akari on one
+  continuous bedroom floor plane.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
+## Daily Scene D22 — Sneaker Heel Pull
+
+- The user selected numbered batch candidate 09 and explicitly requested
+  formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d22-sneaker-heel.png`.
+- The low floor-level camera, bent seated pose, blue sneaker, and coral rug
+  create strong depth without an artificial frame.
+- Akari's fingers pinch the connected heel tab while the foot remains visibly
+  inside the sneaker and her wrist, forearm, and shoulder stay continuous.
+- A pair of spare white shoes appears in the distant entry despite the prompt's
+  simpler shoe count; the user accepted the complete numbered candidate.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
+## Daily Scene D23 — Puzzle Piece
+
+- The user selected numbered batch candidate 11 and explicitly requested
+  formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d23-puzzle-piece.png`.
+- A colorful jigsaw field fills the foreground table while one large pinched
+  piece leads through Akari's hand and arm to her focused, playful smile.
+- Both arms connect clearly to the tabletop action, and the room remains a
+  quiet physical backdrop without decorative borders or symbol fields.
+- The exact destination of the lifted piece is slightly ambiguous within the
+  dense puzzle, but the user accepted the complete numbered candidate.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
 ## Promoted Decisions
 
 - The user accepted the full-figure candidate's quiet dark hairpin edge as a
