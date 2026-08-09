@@ -1,6 +1,6 @@
 # Akari v2.2 Single-Hairpin Baseline
 
-Status: full-figure and close-portrait authorities promoted; sixteen daily-life
+Status: full-figure and close-portrait authorities promoted; seventeen daily-life
 scenes accepted.
 
 Date: 2026-08-09.
@@ -124,6 +124,11 @@ decorative symbol fields, and sticker-like character outlines remain excluded.
   wiper, a forward cleaning lunge, and bright morning light across the wood
   floor. One unbroken handle connects the grounded wiper head to Akari's
   gripping hand while her body and both socked feet remain clearly supported.
+- `accepted/daily/life/akari-v2.2-d17-cushion-carry.png` uses three oversized
+  yellow, coral, and aqua cushions as staggered foreground color masses while
+  Akari walks through a bright hallway. Her turn and stepping legs counter the
+  leaning cushion stack, preserving a lively full-body diagonal without
+  decorative graphics.
 - Speech balloons, comic punctuation, enclosing poster frames, and sticker-like
   character outlines are intentionally excluded from this direction.
 

@@ -237,6 +237,25 @@ Latest promotion date: 2026-08-09.
 - The accepted PNG is preserved without resizing, cropping, recompression, or
   retouching. Other exploration images remain ignored and noncanonical.
 
+## Daily Scene D17 — Cushion Carry
+
+- The user accepted the first cushion-carry candidate, noting that the lower
+  supporting fingertips could read as slightly ambiguous, and explicitly
+  requested formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d17-cushion-carry.png`.
+- Three oversized butter-yellow, coral, and aqua cushions form distinct
+  staggered foreground masses while Akari's upper-right face, turning torso,
+  and long stepping legs create a counter-diagonal through the hallway.
+- The upper hand connects continuously through wrist and forearm to the
+  shoulder. The lower supporting arm stays hidden behind the aqua cushion, with
+  only its accepted fingertips visible beneath the cushion edge.
+- Exactly one blue hairpin remains visible on canvas-right. The wood floor is
+  one continuous plane, both socked feet support the walking pose, and the
+  hallway doors remain clearly behind Akari.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
 ## Promoted Decisions
 
 - The user accepted the full-figure candidate's quiet dark hairpin edge as a
