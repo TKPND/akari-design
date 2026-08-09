@@ -219,6 +219,24 @@ Latest promotion date: 2026-08-09.
 - The accepted PNG is preserved without resizing, cropping, recompression, or
   retouching. Other exploration images remain ignored and noncanonical.
 
+## Daily Scene D16 — Floor-Wiper Sweep
+
+- The user selected the first floor-wiper-sweep candidate and explicitly
+  requested formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d16-floor-wiper-sweep.png`.
+- The low floor-level close-wide camera, off-center open smile, low side
+  ponytail, coral T-shirt, and bright wood-floor plane restore strong diagonal
+  energy to the accepted daily-life direction.
+- One flat aqua wiper head rests visibly on the floor and connects through one
+  swivel joint and one unbroken shaft to a naturally gripping hand, with the
+  wrist, forearm, elbow, upper arm, and shoulder remaining continuous.
+- Exactly one blue hairpin remains visible on canvas-right. Both socked feet
+  support the forward lunge while the curtain, wall, and small cabinet remain
+  behind Akari without fused furniture or impossible intersections.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
 ## Promoted Decisions
 
 - The user accepted the full-figure candidate's quiet dark hairpin edge as a

@@ -1,6 +1,6 @@
 # Akari v2.2 Single-Hairpin Baseline
 
-Status: full-figure and close-portrait authorities promoted; fifteen daily-life
+Status: full-figure and close-portrait authorities promoted; sixteen daily-life
 scenes accepted.
 
 Date: 2026-08-09.
@@ -119,6 +119,11 @@ decorative symbol fields, and sticker-like character outlines remain excluded.
   smile, powder snow resting on one blue knitted mitten, and crisp winter light
   for a first-snow moment. The mitten connects continuously through its cuff
   and coat sleeve while the snowy path and house remain clearly behind Akari.
+- `accepted/daily/life/akari-v2.2-d16-floor-wiper-sweep.png` restores a dynamic
+  close-wide direction through a low floor-level view, an enlarged aqua floor
+  wiper, a forward cleaning lunge, and bright morning light across the wood
+  floor. One unbroken handle connects the grounded wiper head to Akari's
+  gripping hand while her body and both socked feet remain clearly supported.
 - Speech balloons, comic punctuation, enclosing poster frames, and sticker-like
   character outlines are intentionally excluded from this direction.
 
