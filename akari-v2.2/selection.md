@@ -1,6 +1,6 @@
 # Akari v2.2 Selection History
 
-Latest promotion date: 2026-08-08.
+Latest promotion date: 2026-08-09.
 
 ## Daily Scene D01 — Kitchen Steam Ribbon
 
@@ -151,6 +151,22 @@ Latest promotion date: 2026-08-08.
   cuff, forearm, and shoulder; the simple window and wall remain behind Akari.
 - The blue hairpin sits slightly flatter than the canonical 45–60-degree angle;
   the user explicitly accepted the complete candidate for this scene.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
+## Daily Scene D12 — Flour-Nose Baking
+
+- The user selected the first flour-nose baking candidate and explicitly
+  requested formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d12-flour-nose-baking.png`.
+- The close face, relaxed embarrassed smile, tiny flour dab, low side ponytail,
+  and warm kitchen light continue the accepted face-first daily-life direction.
+- One visible hand grips the wooden spoon through a connected forearm, and the
+  spoon enters a mixing bowl resting firmly on the countertop.
+- Exactly one blue hairpin remains visible on canvas-right. The simple window,
+  shelf, and counter stay behind Akari without fused props or impossible
+  intersections.
 - The accepted PNG is preserved without resizing, cropping, recompression, or
   retouching. Other exploration images remain ignored and noncanonical.
 

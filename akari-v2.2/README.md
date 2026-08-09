@@ -1,9 +1,9 @@
 # Akari v2.2 Single-Hairpin Baseline
 
-Status: full-figure and close-portrait authorities promoted; eleven daily-life
+Status: full-figure and close-portrait authorities promoted; twelve daily-life
 scenes accepted.
 
-Date: 2026-08-08.
+Date: 2026-08-09.
 
 Akari v2.2 began as a compact two-image character-design checkpoint. It
 formalizes the friendly V-sign presentation and replaces the unstable crossed
@@ -104,6 +104,9 @@ decorative symbol fields, and sticker-like character outlines remain excluded.
   eye rub, clear yawn, and dawn window light for a quiet morning moment. The
   covered hand and raised arm remain connected while the sparse room stays
   behind Akari.
+- `accepted/daily/life/akari-v2.2-d12-flour-nose-baking.png` uses a tiny flour
+  dab, relaxed embarrassed smile, and warm kitchen light for a playful baking
+  moment. One connected hand stirs a bowl resting firmly on the countertop.
 - Speech balloons, comic punctuation, enclosing poster frames, and sticker-like
   character outlines are intentionally excluded from this direction.
 
