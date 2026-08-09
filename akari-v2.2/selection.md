@@ -338,6 +338,65 @@ Latest promotion date: 2026-08-09.
 - The accepted PNG is preserved without resizing, cropping, recompression, or
   retouching. Other exploration images remain ignored and noncanonical.
 
+## Daily Scene D24 — Café Cloche Reveal
+
+- The user selected numbered batch candidate 01 and explicitly requested
+  formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d24-cafe-cloche.png`.
+- A large silver cloche launches the low customer-side view toward Akari's
+  bright expression, while the yellow lemon tart supplies a second saturated
+  foreground mass.
+- One hand lifts the cloche by its knob and the other grips the serving cart;
+  both arms remain connected while the plate, cart, legs, shoes, and café floor
+  stay clearly separated.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
+## Daily Scene D25 — Puddle Hop
+
+- The user selected numbered batch candidate 06 and explicitly requested
+  formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d25-puddle-hop.png`.
+- A pale-yellow umbrella, coral raincoat, long airborne stride, and reflected
+  blue pavement make a dynamic full-body post-rain composition.
+- Akari's gripping hand connects to one umbrella shaft and canopy, both shoes
+  remain attached to readable legs, and the splash stays on the wet curb and
+  road below rather than merging with her body.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
+## Daily Scene D26 — Train Boarding Turn
+
+- The user selected numbered batch candidate 07 and explicitly requested
+  formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d26-train-board.png`.
+- The open train doorway, rear three-quarter turn, long platform perspective,
+  and warm sunset create a strong depth path from Akari's offered hand to her
+  face and the distant station.
+- One hand holds the doorway while the other reaches toward the viewer; her
+  two stepping feet remain separated by the visible train threshold and both
+  arms connect clearly to the shoulders.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
+## Daily Scene D27 — Citrus Market
+
+- The user selected numbered batch candidate 10 and explicitly requested
+  formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d27-citrus-market.png`.
+- Stacked orange crates, one close fruit, a mustard wrap, and Akari's teal
+  crouched silhouette form four large physical color masses without graphic
+  decoration.
+- One hand holds the orange near her nose while the other rests naturally on
+  her knee; both feet support the crouch and remain distinct from the crates,
+  fruit, and market floor.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
 ## Promoted Decisions
 
 - The user accepted the full-figure candidate's quiet dark hairpin edge as a

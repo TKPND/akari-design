@@ -1,6 +1,6 @@
 # Akari v2.2 Single-Hairpin Baseline
 
-Status: full-figure and close-portrait authorities promoted; twenty-three
+Status: full-figure and close-portrait authorities promoted; twenty-seven
 daily-life scenes accepted.
 
 Date: 2026-08-09.
@@ -154,6 +154,22 @@ decorative symbol fields, and sticker-like character outlines remain excluded.
   field across the foreground table and a large pinched piece to guide the eye
   toward Akari's focused smile. Both arms connect clearly to the tabletop
   action without graphic framing.
+- `accepted/daily/life/akari-v2.2-d24-cafe-cloche.png` uses a large silver
+  cloche and yellow lemon tart as real foreground masses in a low customer-side
+  café view. Akari's lifting hand, cart grip, feet, and serving cart remain
+  clearly connected and supported.
+- `accepted/daily/life/akari-v2.2-d25-puddle-hop.png` uses a full-body airborne
+  stride, pale-yellow umbrella, coral raincoat, and reflected blue pavement for
+  a bright post-rain scene. The umbrella and both shoes remain coherent while
+  the splash stays grounded on the curb and road.
+- `accepted/daily/life/akari-v2.2-d26-train-board.png` uses a rear
+  three-quarter turn, open train doorway, and long sunset platform perspective
+  to create strong depth. One hand holds the doorway while the other reaches
+  toward the viewer and the stepping feet remain separated by the threshold.
+- `accepted/daily/life/akari-v2.2-d27-citrus-market.png` uses stacked orange
+  crates, a close fruit, and Akari's crouched teal-and-yellow silhouette as
+  large physical color masses. The fruit, hands, knees, shoes, crates, and
+  market floor remain visibly distinct.
 - Speech balloons, comic punctuation, enclosing poster frames, and sticker-like
   character outlines are intentionally excluded from this direction.
 
