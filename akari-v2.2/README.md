@@ -1,6 +1,6 @@
 # Akari v2.2 Single-Hairpin Baseline
 
-Status: full-figure and close-portrait authorities promoted; twelve daily-life
+Status: full-figure and close-portrait authorities promoted; thirteen daily-life
 scenes accepted.
 
 Date: 2026-08-09.
@@ -107,6 +107,10 @@ decorative symbol fields, and sticker-like character outlines remain excluded.
 - `accepted/daily/life/akari-v2.2-d12-flour-nose-baking.png` uses a tiny flour
   dab, relaxed embarrassed smile, and warm kitchen light for a playful baking
   moment. One connected hand stirs a bowl resting firmly on the countertop.
+- `accepted/daily/life/akari-v2.2-d13-watermelon-offer.png` uses a close
+  wide-angle reach, relaxed summer smile, and vivid garden light for a playful
+  offered-watermelon moment. The foreground hand connects clearly to the
+  shoulder while the uncluttered garden stays behind Akari.
 - Speech balloons, comic punctuation, enclosing poster frames, and sticker-like
   character outlines are intentionally excluded from this direction.
 

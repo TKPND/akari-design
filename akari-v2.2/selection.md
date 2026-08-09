@@ -170,6 +170,23 @@ Latest promotion date: 2026-08-09.
 - The accepted PNG is preserved without resizing, cropping, recompression, or
   retouching. Other exploration images remain ignored and noncanonical.
 
+## Daily Scene D13 — Watermelon Offer
+
+- The user selected the first watermelon-offer candidate and explicitly
+  requested formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d13-watermelon-offer.png`.
+- The very close face, relaxed open smile, low side ponytail, coral summer top,
+  and vivid garden light continue the accepted face-first daily-life direction.
+- One foreshortened arm remains visibly connected from shoulder through wrist
+  to the foreground hand, which grips one continuous watermelon wedge by its
+  rind without a table or furniture intersection.
+- Exactly one blue hairpin remains visible on canvas-right. The foliage and sky
+  stay clearly behind Akari without graphic symbols, frames, or sticker-like
+  outlines.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
 ## Promoted Decisions
 
 - The user accepted the full-figure candidate's quiet dark hairpin edge as a
