@@ -1,7 +1,7 @@
 # Akari v2.2 Milky Pastel-Pop Batch Design
 
 Date: 2026-08-10
-Status: direction approved; written-spec review pending
+Status: approved for generation on 2026-08-10
 
 ## Goal
 
