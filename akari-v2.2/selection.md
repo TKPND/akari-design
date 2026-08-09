@@ -187,6 +187,21 @@ Latest promotion date: 2026-08-09.
 - The accepted PNG is preserved without resizing, cropping, recompression, or
   retouching. Other exploration images remain ignored and noncanonical.
 
+## Daily Scene D14 — Wind-Chime Listen
+
+- The user selected the first wind-chime-listening candidate and explicitly
+  requested formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d14-wind-chime-listen.png`.
+- The close face, relaxed listening smile, low side ponytail, pale aqua top,
+  and bright summer-window light continue the accepted face-first direction.
+- One open hand cups behind the ear and connects continuously through wrist,
+  forearm, sleeve, and shoulder without merging into hair or ear.
+- One transparent wind chime hangs separately from a visible window-frame hook
+  by a continuous cord, with one clapper and one blank pale-blue strip.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. Other exploration images remain ignored and noncanonical.
+
 ## Promoted Decisions
 
 - The user accepted the full-figure candidate's quiet dark hairpin edge as a

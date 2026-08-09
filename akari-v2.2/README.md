@@ -1,6 +1,6 @@
 # Akari v2.2 Single-Hairpin Baseline
 
-Status: full-figure and close-portrait authorities promoted; thirteen daily-life
+Status: full-figure and close-portrait authorities promoted; fourteen daily-life
 scenes accepted.
 
 Date: 2026-08-09.
@@ -111,6 +111,10 @@ decorative symbol fields, and sticker-like character outlines remain excluded.
   wide-angle reach, relaxed summer smile, and vivid garden light for a playful
   offered-watermelon moment. The foreground hand connects clearly to the
   shoulder while the uncluttered garden stays behind Akari.
+- `accepted/daily/life/akari-v2.2-d14-wind-chime-listen.png` uses a close
+  listening gesture, transparent glass reflections, a moving curtain, and
+  clear summer-window light. One connected hand cups behind Akari's ear while
+  the wind chime hangs separately from a visible window-frame hook.
 - Speech balloons, comic punctuation, enclosing poster frames, and sticker-like
   character outlines are intentionally excluded from this direction.
 
