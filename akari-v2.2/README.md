@@ -1,6 +1,6 @@
 # Akari v2.2 Single-Hairpin Baseline
 
-Status: full-figure and close-portrait authorities promoted; thirty-three
+Status: full-figure and close-portrait authorities promoted; thirty-four
 daily-life scenes accepted.
 
 Date: 2026-08-10.
@@ -197,6 +197,11 @@ decorative symbol fields, and sticker-like character outlines remain excluded.
   foreground cup and saucer. One connected five-fingered hand supports the
   saucer while the cup, apron straps, waist band, body, counter, and room depth
   remain physically separated and readable.
+- `accepted/daily/life/akari-v2.2-d34-charm-bracelet.png` uses a close
+  face-forward dressing-nook crop, an aqua cardigan, an apricot dress, and one
+  fine bracelet with three enamel charms. One connected hand lifts the wrist
+  near her cheek while the opposite fingers touch one attached charm, with the
+  chain, charms, hands, sleeves, and body remaining clearly separated.
 - Speech balloons, comic punctuation, enclosing poster frames, and sticker-like
   character outlines remain excluded. Sparse nonfigurative color blocks,
   curves, dots, bubbles, and action marks may appear as secondary pop accents

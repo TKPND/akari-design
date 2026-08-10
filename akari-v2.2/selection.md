@@ -491,6 +491,22 @@ Latest promotion date: 2026-08-10.
 - The accepted PNG is preserved without resizing, cropping, recompression, or
   retouching. The other five study candidates remain ignored and noncanonical.
 
+## Daily Scene D34 — Charm Bracelet
+
+- The user selected candy-tactile study candidate 03 and explicitly requested
+  formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d34-charm-bracelet.png`.
+- A close face-forward dressing-nook crop, aqua cardigan, apricot dress, and
+  warm direct smile preserve Akari's canonical cocoa hair, low side ponytail,
+  amber eyes, and single blue hairpin.
+- One fine bracelet with three attached enamel charms—a round disc, crescent,
+  and four-petal flower—encircles the lifted wrist while the opposite connected
+  hand touches the flower charm; both hands, the chain, charms, sleeves, and
+  body remain physically separated and readable.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. The other five study candidates remain ignored and noncanonical.
+
 ## Promoted Decisions
 
 - The user accepted the full-figure candidate's quiet dark hairpin edge as a
