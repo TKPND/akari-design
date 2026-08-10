@@ -461,6 +461,21 @@ Latest promotion date: 2026-08-10.
 - The accepted PNG is preserved without resizing, cropping, recompression, or
   retouching. The rejected r01 remains ignored and noncanonical.
 
+## Daily Scene D32 — Prism Rainbow
+
+- The user selected the V2.2-reference-guided prism-rainbow r01 candidate and
+  explicitly requested formal preservation before moving to the next scene.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d32-prism-rainbow.png`.
+- A close face-forward crop, direct pleased gaze, clear triangular prism, and
+  warm window light preserve Akari's canonical cocoa hair, low side ponytail,
+  amber eyes, and single blue hairpin.
+- One connected five-fingered hand holds the prism while the left-side window,
+  prism, and one narrow spectrum stripe on her cheek form a readable optical
+  path without a second rainbow or a visible beam in the air.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. The working source remains ignored and noncanonical.
+
 ## Promoted Decisions
 
 - The user accepted the full-figure candidate's quiet dark hairpin edge as a

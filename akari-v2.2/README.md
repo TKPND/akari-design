@@ -1,6 +1,6 @@
 # Akari v2.2 Single-Hairpin Baseline
 
-Status: full-figure and close-portrait authorities promoted; thirty-one
+Status: full-figure and close-portrait authorities promoted; thirty-two
 daily-life scenes accepted.
 
 Date: 2026-08-10.
@@ -187,6 +187,11 @@ decorative symbol fields, and sticker-like character outlines remain excluded.
   butter-yellow popcorn across a bright living-room view. One hand grips the
   bowl rim while the opposite palm catches the kernels, with Akari's seated
   body, sofa, window, and furniture remaining clearly separated.
+- `accepted/daily/life/akari-v2.2-d32-prism-rainbow.png` uses a close
+  face-forward crop, a clear triangular prism, and warm window light to place
+  one narrow spectrum stripe across Akari's cheek. One connected five-fingered
+  hand holds the prism while the window, prism, and cheek form a readable
+  optical path without a second rainbow or a visible beam in the air.
 - Speech balloons, comic punctuation, enclosing poster frames, and sticker-like
   character outlines remain excluded. Sparse nonfigurative color blocks,
   curves, dots, bubbles, and action marks may appear as secondary pop accents
