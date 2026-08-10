@@ -430,6 +430,22 @@ Latest promotion date: 2026-08-10.
   the following exploration to retain the pop clarity while moving slightly
   toward a softer pastel palette.
 
+## Daily Scene D30 — Glasses Cloth Polish
+
+- The user selected milky pastel-pop batch candidate 01 and explicitly
+  requested formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d30-glasses-cloth-polish.png`.
+- A close face-forward crop, round glasses, powder-blue cleaning cloth, and
+  pale periwinkle field establish the softer pastel-pop direction while keeping
+  Akari's canonical cocoa hair, low side ponytail, and single blue hairpin.
+- The cloth visibly presses the viewer-left lens while the opposite hand
+  steadies the frame at the temple; the round frame remains coherent and the
+  viewer-right eye stays unobstructed through the other lens.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. The other five exploration images remain ignored and
+  noncanonical.
+
 ## Promoted Decisions
 
 - The user accepted the full-figure candidate's quiet dark hairpin edge as a

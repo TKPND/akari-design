@@ -1,6 +1,6 @@
 # Akari v2.2 Single-Hairpin Baseline
 
-Status: full-figure and close-portrait authorities promoted; twenty-nine
+Status: full-figure and close-portrait authorities promoted; thirty
 daily-life scenes accepted.
 
 Date: 2026-08-10.
@@ -178,6 +178,10 @@ decorative symbol fields, and sticker-like character outlines remain excluded.
   face-forward crop, pale-aqua headphones, and a quiet eyes-closed smile. One
   hand presses a connected ear cup while the headband and opposite cup remain
   coherent around her head.
+- `accepted/daily/life/akari-v2.2-d30-glasses-cloth-polish.png` uses a close
+  face-forward crop, round glasses, a powder-blue cloth, and a large pale
+  periwinkle field. One hand steadies the frame at the temple while the cloth
+  visibly presses one lens and the opposite eye remains unobstructed.
 - Speech balloons, comic punctuation, enclosing poster frames, and sticker-like
   character outlines remain excluded. Sparse nonfigurative color blocks,
   curves, dots, bubbles, and action marks may appear as secondary pop accents
