@@ -1,6 +1,6 @@
 # Akari v2.2 Single-Hairpin Baseline
 
-Status: full-figure and close-portrait authorities promoted; thirty
+Status: full-figure and close-portrait authorities promoted; thirty-one
 daily-life scenes accepted.
 
 Date: 2026-08-10.
@@ -182,6 +182,11 @@ decorative symbol fields, and sticker-like character outlines remain excluded.
   face-forward crop, round glasses, a powder-blue cloth, and a large pale
   periwinkle field. One hand steadies the frame at the temple while the cloth
   visibly presses one lens and the opposite eye remains unobstructed.
+- `accepted/daily/life/akari-v2.2-d31-popcorn-catch.png` uses a close
+  face-forward crop, an oversized coral bowl, and a short diagonal arc of
+  butter-yellow popcorn across a bright living-room view. One hand grips the
+  bowl rim while the opposite palm catches the kernels, with Akari's seated
+  body, sofa, window, and furniture remaining clearly separated.
 - Speech balloons, comic punctuation, enclosing poster frames, and sticker-like
   character outlines remain excluded. Sparse nonfigurative color blocks,
   curves, dots, bubbles, and action marks may appear as secondary pop accents

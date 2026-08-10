@@ -446,6 +446,21 @@ Latest promotion date: 2026-08-10.
   retouching. The other five exploration images remain ignored and
   noncanonical.
 
+## Daily Scene D31 — Popcorn Catch
+
+- The user selected the V2.2-reference-guided popcorn-study r02 candidate and
+  explicitly requested formal preservation before moving to the next scene.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d31-popcorn-catch.png`.
+- A close face-forward crop, oversized coral bowl, and short diagonal popcorn
+  arc create a bright living-room mishap while preserving Akari's canonical
+  cocoa hair, low side ponytail, amber eyes, and single blue hairpin.
+- One hand grips the connected bowl rim while the opposite palm catches the
+  kernels; her seated body, sofa, window, and furniture remain physically
+  separated and readable.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. The rejected r01 remains ignored and noncanonical.
+
 ## Promoted Decisions
 
 - The user accepted the full-figure candidate's quiet dark hairpin edge as a
