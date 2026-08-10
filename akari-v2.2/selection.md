@@ -476,6 +476,21 @@ Latest promotion date: 2026-08-10.
 - The accepted PNG is preserved without resizing, cropping, recompression, or
   retouching. The working source remains ignored and noncanonical.
 
+## Daily Scene D33 — Deep Teal Cafe Maid
+
+- The user selected apron-and-maid study candidate 06 and explicitly requested
+  formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d33-deep-teal-cafe-maid.png`.
+- A close face-forward café crop, deep-teal dress, ivory bib apron, and warm
+  direct smile preserve Akari's canonical cocoa hair, low side ponytail, amber
+  eyes, and single blue hairpin.
+- One connected five-fingered hand supports one saucer and its grounded cup
+  while the apron bib, two shoulder straps, waist band, body, counter, and café
+  depth remain physically separated and readable.
+- The accepted PNG is preserved without resizing, cropping, recompression, or
+  retouching. The other five study candidates remain ignored and noncanonical.
+
 ## Promoted Decisions
 
 - The user accepted the full-figure candidate's quiet dark hairpin edge as a

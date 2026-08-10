@@ -1,6 +1,6 @@
 # Akari v2.2 Single-Hairpin Baseline
 
-Status: full-figure and close-portrait authorities promoted; thirty-two
+Status: full-figure and close-portrait authorities promoted; thirty-three
 daily-life scenes accepted.
 
 Date: 2026-08-10.
@@ -192,6 +192,11 @@ decorative symbol fields, and sticker-like character outlines remain excluded.
   one narrow spectrum stripe across Akari's cheek. One connected five-fingered
   hand holds the prism while the window, prism, and cheek form a readable
   optical path without a second rainbow or a visible beam in the air.
+- `accepted/daily/life/akari-v2.2-d33-deep-teal-cafe-maid.png` uses a close
+  face-forward café view, a deep-teal dress, an ivory bib apron, and one
+  foreground cup and saucer. One connected five-fingered hand supports the
+  saucer while the cup, apron straps, waist band, body, counter, and room depth
+  remain physically separated and readable.
 - Speech balloons, comic punctuation, enclosing poster frames, and sticker-like
   character outlines remain excluded. Sparse nonfigurative color blocks,
   curves, dots, bubbles, and action marks may appear as secondary pop accents
