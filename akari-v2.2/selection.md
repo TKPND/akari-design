@@ -1,6 +1,6 @@
 # Akari v2.2 Selection History
 
-Latest promotion date: 2026-08-10.
+Latest promotion date: 2026-08-11.
 
 ## Daily Scene D01 — Kitchen Steam Ribbon
 
@@ -506,6 +506,60 @@ Latest promotion date: 2026-08-10.
   body remain physically separated and readable.
 - The accepted PNG is preserved without resizing, cropping, recompression, or
   retouching. The other five study candidates remain ignored and noncanonical.
+
+## Daily Scene D35 — Cheek Press
+
+- The user selected milky-pop cat-ear study candidate 01 as one of three images
+  and explicitly requested formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d35-cheek-press.png`.
+- An extreme face-forward crop, peach, mint, and cream diagonals, and two
+  naturally grown asymmetric cocoa cat ears create a compact pop portrait
+  while preserving Akari's canonical amber eyes, cocoa hair, single blue
+  hairpin, and same-side low ponytail.
+- One connected index finger presses one cheek while the hand, face, hairpin,
+  ponytail, and fantasy ears remain clearly separated; no human ears or tail
+  appear.
+- The cat ears are an intentional scene-specific fantasy trait and do not
+  replace the two canonical base authorities. The accepted PNG is preserved
+  without resizing, cropping, recompression, or retouching; the nine unselected
+  study images remain ignored and noncanonical.
+
+## Daily Scene D36 — Cat-Ear Sleeve Rest
+
+- The user selected milky-pop cat-ear study candidate 04 as one of three images
+  and explicitly requested formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d36-cat-ear-sleeve-rest.png`.
+- A close sleepy face crop, soft butter, cream, and lavender window light, an
+  oversized cream knit cuff, and two asymmetric cocoa cat ears preserve
+  Akari's canonical amber eyes, cocoa hair, single blue hairpin, and same-side
+  low ponytail.
+- One connected relaxed hand emerges from the cuff to support her cheek. The
+  user accepted the softer, more painterly color separation and lower camera
+  energy as a Minor rather than an identity, anatomy, or action defect.
+- The cat ears are an intentional scene-specific fantasy trait; no human ears
+  or tail appear, and the base authorities remain unchanged. The accepted PNG
+  is preserved without resizing, cropping, recompression, or retouching; the
+  nine unselected study images remain ignored and noncanonical.
+
+## Daily Scene D37 — Jump-Rope Cross-Step
+
+- The user selected milky-pop cat-ear study candidate 12 as one of three images
+  and explicitly requested formal preservation.
+- Accepted destination:
+  `accepted/daily/life/akari-v2.2-d37-jump-rope-cross-step.png`.
+- A low wide-angle terrace crop, opposing body-and-rope curves, a peach hoodie,
+  mint culottes, and two asymmetric cocoa cat ears create a bright action scene
+  while preserving Akari's amber eyes, single blue hairpin, and same-side low
+  ponytail.
+- One continuous lavender rope connects exactly two handles held by separate
+  connected hands while both shoes share the terrace plane in a compact crossed
+  step; no human ears or tail appear.
+- The cat ears are an intentional scene-specific fantasy trait and do not
+  replace the two canonical base authorities. The accepted PNG is preserved
+  without resizing, cropping, recompression, or retouching; the nine unselected
+  study images remain ignored and noncanonical.
 
 ## Promoted Decisions
 

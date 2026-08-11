@@ -1,9 +1,9 @@
 # Akari v2.2 Single-Hairpin Baseline
 
-Status: full-figure and close-portrait authorities promoted; thirty-four
+Status: full-figure and close-portrait authorities promoted; thirty-seven
 daily-life scenes accepted.
 
-Date: 2026-08-10.
+Date: 2026-08-11.
 
 Akari v2.2 began as a compact two-image character-design checkpoint. It
 formalizes the friendly V-sign presentation and replaces the unstable crossed
@@ -202,6 +202,21 @@ decorative symbol fields, and sticker-like character outlines remain excluded.
   fine bracelet with three enamel charms. One connected hand lifts the wrist
   near her cheek while the opposite fingers touch one attached charm, with the
   chain, charms, hands, sleeves, and body remaining clearly separated.
+- `accepted/daily/life/akari-v2.2-d35-cheek-press.png` uses an extreme
+  face-forward crop, two naturally grown asymmetric cocoa cat ears, and broad
+  peach, mint, and cream diagonals. One connected index finger presses Akari's
+  cheek while her single blue hairpin and same-side low ponytail remain
+  visible; no human ears or tail appear.
+- `accepted/daily/life/akari-v2.2-d36-cat-ear-sleeve-rest.png` uses a close
+  sleepy face crop, two asymmetric cocoa cat ears, an oversized cream knit
+  cuff, and soft butter, cream, and lavender window light. One connected hand
+  emerges from the sleeve to support her cheek while the hairpin, ponytail,
+  sleeve, and face remain distinct; no human ears or tail appear.
+- `accepted/daily/life/akari-v2.2-d37-jump-rope-cross-step.png` uses a low
+  wide-angle terrace view, two asymmetric cocoa cat ears, a peach hoodie, mint
+  culottes, and one large lavender rope arc. The continuous rope connects two
+  handles held by separate hands while both shoes share the terrace plane in a
+  compact crossed step; no human ears or tail appear.
 - Speech balloons, comic punctuation, enclosing poster frames, and sticker-like
   character outlines remain excluded. Sparse nonfigurative color blocks,
   curves, dots, bubbles, and action marks may appear as secondary pop accents
