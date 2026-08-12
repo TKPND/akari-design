@@ -1,7 +1,7 @@
 # Akari V2.2 Milky-Pastel Jumperskirt 24-Scene Design
 
 Date: 2026-08-12
-Status: approved in conversation; written-spec review pending
+Status: approved in conversation and written-spec review on 2026-08-12
 
 ## Goal
 
