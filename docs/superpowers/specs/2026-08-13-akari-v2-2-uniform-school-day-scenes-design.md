@@ -1,7 +1,7 @@
 # Akari V2.2 Uniform School-Day Scene Set Design
 
 Date: 2026-08-13
-Status: approved design; awaiting written-spec review
+Status: approved for execution
 
 ## Goal
 
