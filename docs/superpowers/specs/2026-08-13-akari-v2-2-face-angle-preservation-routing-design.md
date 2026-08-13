@@ -1,7 +1,7 @@
 # Akari V2.2 Face-Angle Preservation and Routing Design
 
 Date: 2026-08-13
-Status: approved direction; written-spec review pending
+Status: approved for implementation
 
 ## Decision
 
