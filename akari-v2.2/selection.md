@@ -1,6 +1,6 @@
 # Akari v2.2 Selection History
 
-Latest promotion date: 2026-08-11.
+Latest promotion date: 2026-08-13.
 
 ## Daily Scene D01 — Kitchen Steam Ribbon
 
@@ -560,6 +560,34 @@ Latest promotion date: 2026-08-11.
   replace the two canonical base authorities. The accepted PNG is preserved
   without resizing, cropping, recompression, or retouching; the nine unselected
   study images remain ignored and noncanonical.
+
+## Face-Angle Pack F00 / F01-r02 / F02
+
+- The user approved F00, F01-r02, and F02 as Akari V2.2 faces on 2026-08-13,
+  selected F01-r02 over F01-r01, and then explicitly approved formal
+  preservation as angle-specific supporting authorities.
+- F00 is preserved at
+  `accepted/base/face-angles/akari-v2.2-face-near-front-f00.png`. It is the
+  near-front or shallow-three-quarter closed-mouth support image; its dimensions
+  are `1086 x 1448` and its SHA-256 is
+  `8ff5e5369b9877225b2c2bbc87ea92b6cb0e60309e846cb9250fc2a366cae957`.
+- F01-r02 is preserved at
+  `accepted/base/face-angles/akari-v2.2-face-hairpin-side-f01-r02.png`. It is the
+  approximately 30-degree hairpin-side support image; its dimensions are
+  `1086 x 1448` and its SHA-256 is
+  `a8d1574fd1edb071be5ddf111768aa1e5c8fa38a02d5f7aac76b5023823e6902`.
+- F02 is preserved at
+  `accepted/base/face-angles/akari-v2.2-face-opposite-side-f02.png`. It is the
+  approximately 30-degree opposite-side support image; its dimensions are
+  `1024 x 1536` and its SHA-256 is
+  `338568d22fc150b5b965b259a731de1d30d33c41d0d1238e3c28c044cb7734ad`.
+- All three accepted PNGs are byte-identical to the reviewed working files and
+  were copied without resizing, cropping, recompression, color conversion, or
+  retouching.
+- The canonical portrait remains the primary base face authority. A generation
+  call may use exactly one angle-matched support image and no more than three
+  total references. F01-r01 remains approved comparison history only and is
+  excluded from accepted files and generation inputs.
 
 ## Promoted Decisions
 

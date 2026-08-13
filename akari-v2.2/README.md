@@ -24,6 +24,32 @@ When drawing scale creates a visible difference, the portrait wins for face,
 hair, and ornament decisions. The full-figure image wins for body balance,
 outfit construction, pose, and complete-figure composition.
 
+## Face-Angle Supporting Authorities
+
+The canonical portrait remains the primary authority for Akari's base face
+identity. The following user-approved PNGs supplement it with one intended head
+direction at a time:
+
+- `accepted/base/face-angles/akari-v2.2-face-near-front-f00.png` supports a
+  near-front or shallow-three-quarter view with both eyes similarly readable
+  and a neutral closed-mouth smile.
+- `accepted/base/face-angles/akari-v2.2-face-hairpin-side-f01-r02.png` supports
+  an approximately 30-degree turn toward Akari's hairpin side, where that cheek,
+  ear, hairpin, and ponytail relationship is more visible.
+- `accepted/base/face-angles/akari-v2.2-face-opposite-side-f02.png` supports an
+  approximately 30-degree turn toward the side opposite the hairpin, where the
+  hairpin may be naturally less visible but never mirrored or relocated.
+
+Choose the angle from Akari's anatomy before any canvas flip. Use exactly one
+matching face-angle image in a generation call, never the whole pack. Keep the
+canonical portrait in every new identity-sensitive scene and keep the total
+input-reference limit at three. The canonical portrait wins any base-identity
+conflict.
+
+These three images do not define strict profile, rear, overhead, or extreme
+foreshortened views. Such views require a task-specific transition gate rather
+than treating the nearest pack image as an exact authority.
+
 ## Locked Design
 
 - Approachable young-adult impression with a bright, familiar smile.
@@ -43,11 +69,14 @@ outfit construction, pose, and complete-figure composition.
 
 ## Generation Use
 
-Open both canonical images before identity-sensitive generation. Use the
-portrait as the primary face, hair, and ornament reference, and the full-body
-image as the body, outfit, pose, laterality, and complete-figure reference. Do
-not let a supporting pose or wardrobe reference replace the portrait's face
-identity or single-hairpin construction.
+Open the canonical portrait, the canonical full-body image, and the one
+angle-matched supporting authority needed for the intended view before
+identity-sensitive generation. Use the portrait as the primary face, hair, and
+ornament reference. Add the selected face-angle image only for head-direction
+relationships, and add the full-body image only when body, outfit, pose,
+laterality, or complete-figure information is required. Do not let either
+supporting image replace the portrait's face identity or single-hairpin
+construction.
 
 ## Daily-Life Art Direction
 
