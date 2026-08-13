@@ -1,7 +1,7 @@
 # Akari V2.2 GPT Pro Face-Angle Pack Design
 
 Date: 2026-08-13
-Status: approach approved; written-spec review pending
+Status: approved for implementation
 
 ## Decision
 
