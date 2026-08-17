@@ -5,12 +5,12 @@ Status: approved for implementation
 
 ## Decision
 
-Create a series-scoped recovery control pack for the 24-shot Akari V2.2
-Weekend Happenings handoff. Treat the completed handoff as frozen historical
+Add a series-scoped recovery overlay to the active 24-shot Akari V2.2 Weekend
+Happenings handoff. Treat its completed shot state as frozen historical
 evidence. Do not rewrite its 23 accepted decisions, the rejected S06 decision,
-accepted image bytes, or decision log.
+accepted image bytes, shot manifest, status table, or decision log.
 
-The recovery pack applies a `strict_identity_recovery` profile only to this
+The recovery overlay applies a `strict_identity_recovery` profile only to this
 series. It does not change the installed global Akari V2.2 generation skill or
 the reference policy for unrelated V2.2 work.
 
@@ -19,36 +19,32 @@ creation is part of this implementation.
 
 ## Location and Source Boundary
 
-Create the ignored local control pack at:
+Apply the overlay inside the ignored active handoff at:
 
-`tmp/handoffs/akari-v2.2-weekend-happenings-24shot-recovery-2026-08-17/`
+`tmp/handoffs/akari-v2.2-weekend-happenings-24shot-handoff-2026-08-17/`
 
-The pack references these immutable inputs:
+Only `00-START-HERE.md` and `tracking/README.md` are edited, so the normal
+resume path cannot bypass recovery mode. New recovery policy, data, ledger, and
+validation files live under the existing `runbook/`, `tracking/`, and `scripts/`
+directories.
 
-- Source handoff:
-  `tmp/handoffs/akari-v2.2-weekend-happenings-24shot-handoff-2026-08-17/`
-- A minimal copied audit snapshot under `data/audit-source/`, taken from the
-  verified GPT Pro attachment whose SHA-256 is
-  `05846f006c461b80659378316e1725ad57ad36590b8703df5614b5bf0fedf9c1`
-- Repository canonical Akari V2.2 authorities under
-  `akari-v2.2/accepted/base/`
-
-The copied audit snapshot contains the JSON audit, overlay CSV, corrected
-rebuild source, and source metadata needed for reproducible validation; it does
-not copy evidence images. The recovery pack stores paths and SHA-256 values for
-source binding. Its validator fails when a bound source is absent or its
-expected hash changes.
+The overlay records the verified GPT Pro attachment SHA-256
+`05846f006c461b80659378316e1725ad57ad36590b8703df5614b5bf0fedf9c1`
+and binds the current historical `DECISION-LOG.md`, `tracking/shot-status.csv`,
+and `tracking/shot-manifest.json` by SHA-256. Its validator fails when a bound
+historical source changes. Repository canonical Akari V2.2 authorities remain
+under `akari-v2.2/accepted/base/` and are verified by active path and hash.
 
 ## Recovery Pack Components
 
 ### Recovery entrypoint and policy
 
-`00-START-HERE.md` is the only recovery entrypoint. It states that the original
-handoff is historical, image generation still requires a separate explicit
-request, and the series profile overrides only reference eligibility and audit
-workflow for future recovery calls.
+`00-START-HERE.md` remains the entrypoint and dispatches to recovery mode before
+the historical production runbook. It states that image generation still
+requires a separate explicit request and that the series profile narrows only
+reference eligibility and audit workflow for future recovery calls.
 
-`STRICT-IDENTITY-RECOVERY.md` defines:
+`runbook/STRICT-IDENTITY-RECOVERY.md` defines:
 
 - generated face-bearing images are deliverables, never identity inputs;
 - a user-approved deliverable remains historically accepted but is not thereby
@@ -66,7 +62,7 @@ workflow for future recovery calls.
 
 ### Historical status overlay
 
-`data/post-audit-status.csv` contains exactly one row for each S01-S24. It
+`tracking/shot-status.post-audit.csv` contains exactly one row for each S01-S24. It
 copies the historical status fields without changing them and adds:
 
 - `deliverable_status`
@@ -97,30 +93,33 @@ Expected audit counts are fixed at:
 
 ### Reference policy and actual-input ledger
 
-`data/reference-authorities.tsv` is an allowlist for face-bearing inputs. It
-contains only the canonical portrait, canonical full-body inventory record,
-and the three approved canonical angle helpers with active repository paths and
-SHA-256 values. The policy marks the full-body image as inventory-only for
-strict recovery generation calls; it may later be the source of a deterministic
-head-masked body plate.
+`tracking/strict-identity-recovery.json` is the machine-readable policy. Its
+default reference decision is deny. Its face-bearing allowlist contains only
+the canonical portrait and three approved canonical angle helpers with active
+repository paths and SHA-256 values. The canonical full-body image is recorded
+as inventory-only for strict recovery generation calls; it may later be the
+source of a deterministic head-masked body plate.
 
-`data/actual-input-ledger.csv` records future calls, one input per row, with:
+`tracking/recovery-input-ledger.jsonl` starts with a schema record and stores
+future actual calls. Each attempt record includes:
 
 - `call_id`
 - `shot_id`
-- `input_order`
-- `path`
-- `sha256`
-- `source_class`
-- `contains_face`
-- `role`
+- `operation`
+- `output_path`
+- `inputs`, preserving input order and each input's `path`, `sha256`,
+  `source_class`, `contains_face`, and `role`
 - `authorization`
+- `outfit_observation`
+- `identity_review`
+- `user_gate`
 
 Before a future image-generation call, every planned input must be written to
 the ledger and validated. A face-bearing row passes only when its path and hash
 match an enabled canonical face authority. A face-free plate row passes only
-when its source class is `deterministic_face_free_plate` and its provenance is
-present in `data/face-free-plates.csv`. The plate ledger is initially header-only.
+when its source class is `deterministic_face_free_plate` and its complete source
+and transform provenance is present in that ledger record. The ledger contains
+no attempt records initially.
 
 The existing generated candidates, rejected S06 controls, P00/T00/T01/E01-E06
 lineage images, and derived comparison/contact-sheet assets are denied by class,
@@ -128,9 +127,8 @@ not by an incomplete path-only quarantine list.
 
 ### Reviewer-recorded continuity gate
 
-`data/review-observations.csv` contains one S01-S24 row with the expected
-`outfit_key` copied from `shots.yaml`. It separates expected values from
-reviewer-recorded observations:
+`tracking/shot-status.post-audit.csv` contains the expected `outfit_key` for
+each shot and separates it from reviewer-recorded observations:
 
 - `expected_outfit_key`
 - `observed_outfit_key`
@@ -148,8 +146,8 @@ khaki shorts. Unreviewed rows remain explicitly `not_reviewed`.
 
 ### Rebuild dependencies
 
-`data/rebuild-plan.json` preserves the audited shot sets and corrects the
-dependency ambiguity:
+`tracking/strict-identity-recovery.json` preserves the audited shot sets and
+corrects the dependency ambiguity:
 
 - S11 follows clean S09 and S10.
 - S17-S19 follow a clean Sunday gate and S16.
@@ -162,10 +160,11 @@ without a separate explicit generation request.
 
 ## Validation
 
-Implement a standard-library-only Python validator and `unittest` coverage.
+Implement `scripts/validate_strict_identity_recovery.py` with Python's standard
+library and add `unittest` coverage under `scripts/tests/`. The validator checks:
 The validator checks:
 
-- source paths and hashes;
+- historical source paths and hashes;
 - exact S01-S24 ID coverage with no duplicates;
 - immutability of historical statuses against the source tracking CSV;
 - the five expected audit counts;
@@ -174,19 +173,20 @@ The validator checks:
 - all actual-input ledger rows against strict face-bearing and face-free rules;
 - reviewer-recorded outfit mismatches before an acceptance-ready state;
 - `generation_permission=false` and an empty initial actual-input ledger;
-- no image files exist in the recovery control pack.
+- every future recovery output path is under `outputs/recovery/`;
+- no image file was created by this implementation.
 
 Tests include a passing fixture plus failures for a generated face-bearing
 input, an unregistered face-free plate, a changed historical status, an S09
 outfit mismatch marked as passing, and the old S23-after-S21 dependency.
 
-Run the validator, its unit tests, and repository Markdown lint. Generate a
-fresh `SHA256SUMS` for the recovery pack after all files are final, then verify
-it from the pack root.
+Run the validator, its unit tests, and repository Markdown lint. Create a
+recovery-specific checksum file for the new overlay files without rewriting the
+handoff's original snapshot `SHA256SUMS`.
 
 ## Manual Re-gate Boundary
 
-The recovery pack records S03, S04, S07, S13, and S14 as awaiting the user's
+The recovery overlay records S03, S04, S07, S13, and S14 as awaiting the user's
 strict identity verdict. Existing audit evidence may be presented for review,
 but this implementation does not create new image artifacts or convert the
 five rows to pass or fail without the user's verdict.
@@ -199,8 +199,10 @@ keeps history intact and confirms the rebuild action.
 
 - Editing the installed global `generating-akari-v2-2-images` skill.
 - Modifying repository canonical authorities or accepted scene images.
-- Modifying the frozen source handoff or its checksums.
+- Modifying `DECISION-LOG.md`, `tracking/shot-status.csv`,
+  `tracking/shot-manifest.json`, prompt cards, the historical production
+  runbook, or the original handoff checksums.
 - Generating or regenerating any Akari image.
 - Creating crops, masks, comparisons, composites, or face-free plates.
 - Automatically deciding Akari identity on the user's behalf.
-- Committing ignored recovery outputs or unrelated working-tree changes.
+- Committing ignored handoff files or unrelated working-tree changes.
