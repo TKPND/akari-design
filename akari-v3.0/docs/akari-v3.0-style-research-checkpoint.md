@@ -2,7 +2,7 @@
 
 Date: 2026-08-19
 
-Status: D1 preferred over D2; mouth-stress pilot approved; no V3.0 face anchor accepted
+Status: mouth-stress pilot generated; user verdict pending; no V3.0 face anchor accepted
 
 ## このメモで固定する判断
 
@@ -288,12 +288,160 @@ V3.0へ適用せず、D1の残課題に対応する一変数実験へ縮める�
 髪の光沢が増える、黒髪やツインテールが混入する、口以外の形が変わる場合は
 失敗とする。四枚は研究候補に留め、ユーザー判断なしで顔アンカーへ昇格しない。
 
+## 四枚の口元パイロットでは局所効果と保持性能が分かれた
+
+2026-08-19に、承認済み設計どおりA条件とB条件を二枚ずつ生成した。
+A条件はD1だけを入力し、B条件はD1に役割限定の顔クロップを追加した。
+各条件内では同じプロンプトを使い、出力のばらつきも観察対象にした。
+
+B条件で使った顔クロップは、パッケージ内の
+`refs/20_ref_face_crop.png`である。寸法は`768x768`、SHA-256は
+`a8d850cff91a69d799a5c5d86ab8e7b8a6fd0e3fa97f7ee29e4cbff28e583c92`。
+
+### 生成した四枚
+
+#### D1-MOUTH-A1
+
+- Generation ID: `exec-8d8f0485-f0b4-4fef-86fd-6c9ce54725ea`
+- Path:
+  `/home/takahiro/.codex/generated_images/01a017d1-a2a4-7513-b31f-81ede290da2b/exec-8d8f0485-f0b4-4fef-86fd-6c9ce54725ea.png`
+- Dimensions: `1145x1373`
+- SHA-256:
+  `946a658fe8c5ddd85eee0e7b3e3d3fdf7f16d4ffab975c6833440b27d520187f`
+
+#### D1-MOUTH-A2
+
+- Generation ID: `exec-6d36438f-55be-4f7e-821b-ab20c9ca09b2`
+- Path:
+  `/home/takahiro/.codex/generated_images/01a017d1-a2a4-7513-b31f-81ede290da2b/exec-6d36438f-55be-4f7e-821b-ab20c9ca09b2.png`
+- Dimensions: `1143x1376`
+- SHA-256:
+  `e07b4c5864134e0711b696b8c7d941be32120bf9a15a6c59cccdef9943628fdb`
+
+#### D1-MOUTH-B1
+
+- Generation ID: `exec-ca57f0df-fff9-4cb6-97d3-ea50be4b6e0d`
+- Path:
+  `/home/takahiro/.codex/generated_images/01a017d1-a2a4-7513-b31f-81ede290da2b/exec-ca57f0df-fff9-4cb6-97d3-ea50be4b6e0d.png`
+- Dimensions: `1144x1375`
+- SHA-256:
+  `22eaf33c98e55822dcfae1b59ad09ab3bf7c928ce8b12dc216eb9966f9b6ad36`
+
+#### D1-MOUTH-B2
+
+- Generation ID: `exec-7cf3c009-f907-46dc-9df9-f58f055eb0c8`
+- Path:
+  `/home/takahiro/.codex/generated_images/01a017d1-a2a4-7513-b31f-81ede290da2b/exec-7cf3c009-f907-46dc-9df9-f58f055eb0c8.png`
+- Dimensions: `1143x1376`
+- SHA-256:
+  `47edb1cf0f4f8e8c68ff3e493c990e8c4907c34953100790f99c350833fa70b2`
+
+比較画像は、D1、A1、A2、B1、B2の順に並べた。
+
+- 顔比較:
+  `/home/takahiro/.codex/visualizations/2026/08/19/01a017d1-a2a4-7513-b31f-81ede290da2b/v3-style-spike/mouth-pilot/d1-mouth-pilot-face-grid.png`
+- 顔比較の寸法: `1940x450`
+- 顔比較のSHA-256:
+  `7046b95142a6056b9346607a2ee5beb4e6f64220f7f0abd56e04a56313752332`
+- 全体比較:
+  `/home/takahiro/.codex/visualizations/2026/08/19/01a017d1-a2a4-7513-b31f-81ede290da2b/v3-style-spike/mouth-pilot/d1-mouth-pilot-full-grid.png`
+- 全体比較の寸法: `1660x482`
+- 全体比較のSHA-256:
+  `3c274ffd0f97617e5948f67b464608051d682fcfd65ad4d84c7055bc2b1f2d33`
+
+### 観察結果
+
+四枚とも、D1の平たい目の開口、虹彩の上下分割、小さな非対称反射、
+茶髪、低いサイドポニー、一本の青いヘアピンを目視上は維持した。
+開口笑顔へ変えても、今回の四枚では目の丸型化や宝石状の虹彩への明確な
+回帰は起きなかった。黒髪、ツインテール、水色の髪飾りの混入もない。
+
+A1とA2は、D1からの変化が比較的控えめな小さい開口になった。A2はA1より
+口内が暗く、形も少し明瞭である。B1とB2は、パッケージ参照に近い、幅が
+広く丸みのある開口になった。顔クロップには口の形を強める局所効果が
+見えるが、目、顔幅、顎、髪、ヘアピンを含む顔全体の保持性能を改善したとは
+まだ言えない。
+
+目視確認の仮採点は次のとおり。候補選びの補助であり、ユーザーの顔ゲートを
+代替しない。
+
+| 候補 | 顔形 /20 | 目 /25 | 既定感の低さ /20 | 口の簡潔さ /10 | D1保持 /15 | 指示遵守 /10 | 合計 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| D1 | 18 | 22 | 13 | 8 | 15 | 10 | 86 |
+| A1 | 18 | 22 | 16 | 8 | 15 | 10 | 89 |
+| A2 | 18 | 22 | 16 | 9 | 15 | 10 | 90 |
+| B1 | 18 | 22 | 17 | 9 | 15 | 10 | 91 |
+| B2 | 18 | 22 | 17 | 9 | 15 | 10 | 91 |
+
+ImageMagickの`compare -metric SSIM`でも、D1との差を補助的に調べた。
+各出力をD1の`1142x1377`へリサイズしてから測ったため、寸法補正そのものの
+差を含む。この環境の出力値はdistortionであり、小さいほどD1に近い。
+
+| 候補 | 全体 | 上部 | 目領域 |
+| --- | ---: | ---: | ---: |
+| A1 | 0.0735263 | 0.0737516 | 0.0849889 |
+| A2 | 0.0415150 | 0.0401714 | 0.0423226 |
+| B1 | 0.0714970 | 0.0733557 | 0.0764293 |
+| B2 | 0.0613794 | 0.0646920 | 0.0635377 |
+| A平均 | 0.0575207 | 0.0569615 | 0.0636558 |
+| B平均 | 0.0664382 | 0.0690239 | 0.0699835 |
+
+この測定では、A条件のほうが平均してD1に近い。A2とB2は元の寸法も同じ
+なので比較しやすく、A2のほうが三領域とも差が小さい。したがって、
+「Bは口の文法を強くする」と「Bは顔全体をよく保持する」を分けて扱う。
+B条件を勝者とは判定しない。
+
+現時点の読みは、D1を閉じ口の対照、A2を外部クロップなしの控えめな
+開口候補、B1とB2を口形が強い候補としてユーザーへ提示する、というものに
+なる。各条件二枚だけなので、パッケージが提案する四枚中三枚の合格基準を
+評価するには足りない。四枚とも研究候補のままで、正式な顔アンカー、
+正準画像、本人性の承認済み画像ではない。
+
+### A条件の完全プロンプト
+
+```text
+Use case: precise-object-edit
+Asset type: Akari V3.0 D1 mouth-stress research pilot, preview only
+
+Input images:
+- Image 1 is the sole edit target and the sole authority for the character, face, eyes, hair, clothing, composition, crop, and rendering.
+
+Primary request:
+Edit Image 1 in place. Change only the small closed-mouth smile into a simple, moderately wide open smile. Keep the mouth centered at the same position. Draw the opening as one clean, softly rounded graphic shape with a muted warm rose interior. Show no teeth, tongue, lips, lip gloss, saliva, inner-mouth highlight, or detailed cavity.
+
+Hard invariants:
+Preserve Image 1's exact canvas and crop, head angle, face outline, cheek volume, chin, eye openings, asymmetric eyelids, iris size and flat upper/middle/lower color planes, pupils, tiny asymmetric eye reflections, sclera wedges, eyebrows, nose mark, blush hatching, skin color, hair silhouette and warm brown color, bang grouping, low side ponytail, blue tie, single blue hairpin, hair reflections, shirt, line thickness, cel-shadow shapes, warm off-white background, and every non-mouth pixel as closely as the edit system allows.
+
+Failure conditions:
+Do not round or enlarge the eyes. Do not enlarge or gloss the irises. Do not add catchlights. Do not narrow the jaw, sharpen the chin, brighten the nose, increase hair gloss, smooth the blush into airbrush, redesign the face, or alter anything outside the mouth. No text, logo, or watermark.
+```
+
+### B条件の完全プロンプト
+
+```text
+Use case: precise-object-edit
+Asset type: Akari V3.0 D1 mouth-stress research pilot with a role-limited face crop, preview only
+
+Input images:
+- Image 1 is the sole edit target and the sole authority for the character, face outline, eyes, hair, clothing, composition, crop, and rendering.
+- Image 2 is a supporting reference only for the simple toothless open-mouth topology, low information density around the mouth, and flat matte mouth fill. Do not copy Image 2's facial identity, face outline, jaw, chin, eyes, irises, eyebrows, nose, black hair, twin tails, blue scrunchies, skin tone, clothing, hand, pose, background, or character.
+
+Primary request:
+Edit Image 1 in place. Change only the small closed-mouth smile into a simple, moderately wide open smile. Keep the mouth centered at the same position. Borrow only Image 2's clean, softly rounded open shape and restrained low-detail treatment. Use one muted warm rose interior. Show no teeth, tongue, lips, lip gloss, saliva, inner-mouth highlight, or detailed cavity.
+
+Hard invariants:
+Preserve Image 1's exact canvas and crop, head angle, face outline, cheek volume, chin, eye openings, asymmetric eyelids, iris size and flat upper/middle/lower color planes, pupils, tiny asymmetric eye reflections, sclera wedges, eyebrows, nose mark, blush hatching, skin color, hair silhouette and warm brown color, bang grouping, low side ponytail, blue tie, single blue hairpin, hair reflections, shirt, line thickness, cel-shadow shapes, warm off-white background, and every non-mouth pixel as closely as the edit system allows.
+
+Failure conditions:
+Do not round or enlarge the eyes. Do not enlarge or gloss the irises. Do not add catchlights. Do not narrow the jaw, sharpen the chin, brighten the nose, increase hair gloss, smooth the blush into airbrush, copy any identity or accessory from Image 2, redesign the face, or alter anything outside the mouth. No text, logo, or watermark.
+```
+
 ## 次は一項目ずつ変える
 
 今後は次の順で進める。ただし各候補を自動的にアンカーへ昇格しない。
 
 1. D1: D2より優勢な研究ベース。正式な顔アンカーではない。
-2. 口元パイロット: D1からA/B各二枚を生成し、表情変更時の回帰を比べる。
+2. 口元パイロット: A/B各二枚を生成済み。ユーザー判断を待つ。
 3. 顔ゲート: D1を含め、ユーザーが明示的に承認した候補だけを
    V3.0顔アンカー候補にする。
 4. 線の試験: ユーザーが選んだ顔候補から、線の太さと密度だけを調整する。
