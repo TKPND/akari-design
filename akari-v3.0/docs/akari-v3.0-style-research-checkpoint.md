@@ -2,7 +2,7 @@
 
 Date: 2026-08-19
 
-Status: D1 direction promising; not accepted as a V3.0 face anchor
+Status: D2 generated; user verdict pending; no V3.0 face anchor accepted
 
 ## このメモで固定する判断
 
@@ -161,8 +161,8 @@ D1では、目の開口をさらに平たくし、白い丸反射を小さな非
 左右が同じ型ではなくなり、A、B、CよりGPT既定顔から離れた。
 
 残る問題は、髪の稲妻形反射、線の太さと密度の均一さ、口元と顔面配置に
-残る既定感である。次のD2では髪の反射形だけを変え、目、顔、構図、色、
-ポニーテール、ヘアピン、服、影を固定する。
+残る既定感である。このうちD2では髪の反射形だけを変え、目、顔、構図、色、
+ポニーテール、ヘアピン、服、影を固定した。
 
 ### D1の完全プロンプト
 
@@ -178,12 +178,75 @@ Remove every current glossy white catchlight and sparkle. Add exactly one tiny i
 Upper lashes must be tapered dark wedges; lower lids only short warm strokes. Retain the fine coral blush hatching. The result should read as matte flat cel drawing, not glossy rendered anime eyes. No other changes.
 ```
 
+## D2では髪の稲妻形反射を疎な単線へ変えた
+
+- Generation ID: `exec-908c176d-3437-4875-bfc5-5589b34d549b`
+- Edit target: D1
+- Supporting input: 髪面だけを拡大したスタイルカード
+- Path:
+  `/home/takahiro/.codex/generated_images/01a017d1-a2a4-7513-b31f-81ede290da2b/exec-908c176d-3437-4875-bfc5-5589b34d549b.png`
+- Dimensions: `1143x1376`
+- SHA-256:
+  `9a957e6341974f8b2ec181c1e30a3614b2462c25aebf8f13f3253f181a390084`
+
+D2は、D1に並んでいたW字、稲妻形、山形の反射を除き、短い縦楕円と
+単線の反射へ置き換えた。反射のない髪面が広くなり、同じ記号の反復も
+減った。目の開口、虹彩の上下分割、小さな反射、口、顔向き、髪型、
+ヘアピン、服、背景は、目視比較ではD1の方向を維持している。
+
+ただし、これはピクセル単位の局所編集ではない。D1の`1142x1377`に対して
+D2は`1143x1376`で、髪色や輪郭にも軽い再描画がある。そのため、D2の
+髪反射テストは内部評価で狙いどおりだが、全体採用はユーザー判断待ちとする。
+
+### D2用の髪面スタイルカード
+
+- Path:
+  `/home/takahiro/.codex/visualizations/2026/08/19/01a017d1-a2a4-7513-b31f-81ede290da2b/v3-style-spike/hair-card/v3-hh1-hair-surface-card-v2.png`
+- Dimensions: `1024x1024`
+- SHA-256:
+  `d26f17d715e17a4d4b9665c919dab6e3c06ed29e3dc5de48affcd6217086dfc9`
+- 権限: 短い縦楕円、孤立した単線、低い明暗差、広い無反射面
+- 権限外: 黒髪、顔、目、前髪形、髪型、髪飾り、参照キャラクター本人
+
+```bash
+rtk magick "$V3_STYLE_SRC" -crop 900x560+120+0 +repage \
+  -resize '1024x1024^' -gravity center -extent 1024x1024 \
+  "$V3_SPIKE_DIR/hair-card/v3-hh1-hair-surface-card-v2.png"
+```
+
+D1とD2のローカル比較画像は次にある。左がD1、右がD2である。
+
+- Path:
+  `/home/takahiro/.codex/visualizations/2026/08/19/01a017d1-a2a4-7513-b31f-81ede290da2b/v3-style-spike/d1-d2-side-by-side.png`
+- Dimensions: `1232x740`
+- SHA-256:
+  `fd62f1111de13516d98ee3c829b930a5998d5f9935a6a88202a00135f8e3890a`
+
+### D2の完全プロンプト
+
+```text
+Use case: precise-object-edit.
+Asset type: Akari V3.0 D2 hair-reflection research spike.
+
+Input images:
+- Image 1 is the edit target. Preserve its exact character, composition, crop, head angle, facial proportions, D1 eyes and eyelids, pupils and highlights, eyebrows, nose, mouth, blush, skin, hair silhouette and brown color, bang grouping, low side ponytail, blue tie, single blue hairpin, shirt, cel-shadow shapes, linework, and warm off-white background.
+- Image 2 is a supporting reference only for sparse hair-surface mark vocabulary. Borrow only its short vertical ovals, isolated tapered dashes, low contrast, and large uninterrupted matte hair planes. Do not copy its black color, face, eyes, bangs, hairstyle, accessories, or character identity. Ignore the kinked central highlight in Image 2.
+
+Primary request:
+Change only the small light-colored reflection marks painted inside the brown hair masses of Image 1.
+
+Remove every tan zigzag, W, M, chevron, sawtooth, and lightning-bolt reflection from the crown, bangs, side locks, and ponytail. Replace them with a sparse, uneven set of muted low-contrast marks: short tapered oval dabs and slightly curved single brush dashes that follow each local strand direction. Vary their length, spacing, angle, and grouping. Leave most of every hair plane completely unhighlighted. Use no continuous crown band and no repeating motif.
+
+Constraints:
+Do not alter any hair boundary, strand contour, bang tip, ponytail shape, hair color, shadow plane, or internal dark line. Do not change the face or eyes in any visible way. Do not add gloss, bloom, gradients, extra strands, texture noise, text, logo, or watermark. No changes outside the existing hair highlight marks.
+```
+
 ## 次は一項目ずつ変える
 
 今後は次の順で進める。ただし各候補を自動的にアンカーへ昇格しない。
 
-1. D2: D1を編集対象にし、髪の反射形だけを変更する。
-2. D3: D2の方向が有望なら、線の太さと密度だけを調整する。
+1. D2: 生成済み。髪反射の狙いは満たし、全体評価はユーザー判断待ち。
+2. D3: D2の方向がユーザーに承認された場合だけ、線の太さと密度を調整する。
 3. 顔ゲート: ユーザーが明示的に承認した候補だけをV3.0顔アンカー候補にする。
 4. バストアップ: 承認済み顔アンカーを主入力にし、構図変更を一段だけ試す。
 5. シーン: バストアップまで安定してから、構図参照を一枚だけ追加する。
