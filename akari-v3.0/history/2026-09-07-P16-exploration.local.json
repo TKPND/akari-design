@@ -1,0 +1,73 @@
+{
+  "project": "akari-v3.0",
+  "step": 21,
+  "status": "candidate_ready_for_user_review",
+  "user_request": "これの続きでシチュ絵作りたいな",
+  "scene_proposal": {
+    "id": "P16",
+    "title_ja": "放課後の帰り道、隣で思わず笑う",
+    "selection": "Assistant-proposed first situation based on approved expression references."
+  },
+  "source_context": {
+    "thread_id": "01a07b97-db08-7801-b412-60ff0b6c71c6",
+    "host_id": "remote-ssh-discovered:abe01",
+    "read_method": "read_thread was invoked but did not return; context recovered by structurally reading the exact local rollout and verifying the current working-reference manifest.",
+    "state_manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-20-working-reference/reference-manifest.json"
+  },
+  "references": [
+    {
+      "id": "P1",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+      "role": "primary facial identity, black bob and drawing treatment",
+      "opened_with_view_image": true
+    },
+    {
+      "id": "P14",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-19-laugh-surprise/P14-spontaneous-laugh.png",
+      "role": "approved spontaneous laugh only",
+      "opened_with_view_image": true
+    },
+    {
+      "id": "P6",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+      "role": "body proportions and summer uniform only",
+      "opened_with_view_image": true
+    }
+  ],
+  "generation": {
+    "tool": "built-in image_gen",
+    "operation": "new_scene_with_references",
+    "model": "Not exposed by the built-in tool response",
+    "generation_id": "exec-4f783484-a1fe-44fe-83f0-d52e9ae14c0a",
+    "started_at": "2026-09-07T12:15:39.111Z",
+    "elapsed_ms": 34079,
+    "prompt_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-21-walk-home-laugh/P16-prompt.txt",
+    "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-4f783484-a1fe-44fe-83f0-d52e9ae14c0a.png"
+  },
+  "output": {
+    "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-21-walk-home-laugh/P16-walk-home-laugh.png",
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "bytes": 2240489,
+    "sha256": "e3bc36dbad6083ed35919bd54a487820ff17bbdadc28e2dfceb011390d1ebcd4",
+    "copy_verified": true,
+    "png_chunks_crc_verified": true
+  },
+  "visual_review": {
+    "reviewer": "assistant",
+    "identity": "P1 black bob, segmented bangs, grey rounded eyes and cheek/chin balance remain recognizable.",
+    "expression": "Visible grey irises and open laughing smile read as warm spontaneous amusement.",
+    "outfit": "White blue-grey-piped open-collar shirt, pleated skirt and navy sock tops remain consistent.",
+    "anatomy": "Visible hands and walking stance are coherent on full-image visual inspection.",
+    "composition": "Finished leafy residential path scene. Character faces the viewer more frontally than the intended alongside view.",
+    "limitations": [
+      "Friendly walking conversation is legible; the exact alongside camera relationship remains approximate.",
+      "Candidate has not yet been accepted by the user."
+    ]
+  },
+  "promotion": {
+    "user_approved": false
+  }
+}

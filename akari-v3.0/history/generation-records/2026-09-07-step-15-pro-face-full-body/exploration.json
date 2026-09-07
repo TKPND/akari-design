@@ -1,0 +1,166 @@
+{
+  "project": "akari-v3.0",
+  "stage": "15-pro-face-full-body",
+  "status": "P6_selected_full_body_baseline",
+  "preceding_approval_user_quote": "大丈夫そう。",
+  "face_authority": "P1",
+  "expression_authority": "P2",
+  "body_and_outfit_authority": "B7",
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "mode": "built-in",
+    "backend_model": "not_exposed",
+    "seed": "not_exposed",
+    "calls_planned": 2,
+    "calls_completed": 2,
+    "total_elapsed_ms": 51658
+  },
+  "reference_preparation": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/assets/preparation-manifest.json",
+  "reference_policy": "Both candidates independently use original P1, selected P2, and the same face-hidden B7 copy, in that order. Approved P4/P5 are angle comparison only. No candidate is chained or promoted automatically.",
+  "variants": [
+    {
+      "id": "P6",
+      "concept_ja": "B7の自然な斜め立ちを引き継ぐ",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+      "status": "user_selected_full_body_baseline",
+      "prompt": "Use case: identity-preserve.\nProduce ONE full-length anime character standing illustration, integrating the approved face and quiet smile with the supplied full-body design.\n\nINPUT ROLES\nImage 1 (P1): original facial-identity and drawing reference. Its broad rounded grey eyes with descending outer corners, full cheeks, short lower face, small chin, fine diagonal cheek hatching, black bob and separated blunt bangs define the character.\nImage 2 (P2): user-selected everyday expression reference. Use its small, relaxed CLOSED-MOUTH smile, open eyes and easygoing warmth. Do not reproduce its forward lean, close camera or green background.\nImage 3 (B7 with the old face hidden): primary FULL-BODY canvas, body proportions, costume, scale, stance and plain background. The grey rectangle is missing image content, not an object. Fully reconstruct the face and fringe there from Images 1 and 2, integrate naturally with the head and neck, and remove all grey rectangle edges.\n\nKEEP THE APPROVED FULL-BODY DESIGN\nUse Image 3 for shoulder width, head-to-body scale, natural clothed upper-body volume, torso length, waist, hips, arm thickness, hands, and leg length. Preserve its healthy full thigh and calf contours and knee shapes; these were deliberately chosen. White short-sleeve open-collar shirt with narrow blue-grey piping at collar edges and sleeve hems, opaque loosely draped fabric, blue-grey pleated skirt with the same waistband and hem length. Navy ribbed knee-high socks ending below the knees and white lace-up low sneakers. No extra accessories or costume changes.\n\nFACE AND RENDERING\nTranslate the actual P1/P2 eye geometry and cheek/mouth balance at full-body scale. Keep rounded eye openings, softly falling outer eyelids and substantial grey irises; avoid generic narrow almond eyes. Preserve short cheek-to-mouth-to-chin spacing, warm cheek hatching and the small closed smile. The bob stays rounded and chin-length with wispy cheek strands. Do not simplify the eyes to dots, narrow the jaw, enlarge the head or change the body to match the close portrait. Blend line weight, shading and color coherently across head and body without seams. No age-label-driven redesign.\n\nSTANCE\nPreserve Image 3's existing relaxed slight three-quarter standing pose as closely as possible: the same shoulder angle, arms naturally at the sides, hand positions, gentle weight shift and placement of both feet. Keep its head position and scale; use P2's quiet smile looking toward the viewer. Limit changes below the head to the natural rendering integration needed.\n\nFRAME AND SCENE\nPortrait 2:3, one complete figure from crown through both sneaker soles, comfortable small margins, matching Image 3 framing. Simple softly textured blue-grey background and grounded soft floor shadow, gentle diffuse light. The face remains crisply drawn and readable when viewed closely. Normal full-body perspective, no foreshortening or dramatic camera. No inset portrait, panels, text, logos, extra people, missing or merged fingers. Return one complete full-length illustration.\n",
+      "prompt_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-prompt.txt",
+      "prompt_sha256": "d3139f3a1998f75a6296a4e3b34eb56d28da66853e5c7dd12338a1dc81cab904",
+      "referenced_image_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/assets/B7-face-hidden.png"
+      ],
+      "input_sha256": [
+        "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+        "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+        "ee049f1e3a2d1b190c7019d0fac776477d4bae9a693ba4731340177b970b0d5a"
+      ],
+      "generated_original": "/home/abe/.codex/generated_images/01a07aac-bb77-7420-886e-f3f0daecfe49/exec-221281f9-0172-4148-9d2f-d8796754911c.png",
+      "elapsed_ms": 24255,
+      "sha256": "018f45133acb2d9cd3625d27090b38084f6b795a92a726ff641785d889c0a823",
+      "bytes": 1664313,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "tool_call": {
+        "tool": "image_gen.imagegen",
+        "arguments": {
+          "prompt": "Use case: identity-preserve.\nProduce ONE full-length anime character standing illustration, integrating the approved face and quiet smile with the supplied full-body design.\n\nINPUT ROLES\nImage 1 (P1): original facial-identity and drawing reference. Its broad rounded grey eyes with descending outer corners, full cheeks, short lower face, small chin, fine diagonal cheek hatching, black bob and separated blunt bangs define the character.\nImage 2 (P2): user-selected everyday expression reference. Use its small, relaxed CLOSED-MOUTH smile, open eyes and easygoing warmth. Do not reproduce its forward lean, close camera or green background.\nImage 3 (B7 with the old face hidden): primary FULL-BODY canvas, body proportions, costume, scale, stance and plain background. The grey rectangle is missing image content, not an object. Fully reconstruct the face and fringe there from Images 1 and 2, integrate naturally with the head and neck, and remove all grey rectangle edges.\n\nKEEP THE APPROVED FULL-BODY DESIGN\nUse Image 3 for shoulder width, head-to-body scale, natural clothed upper-body volume, torso length, waist, hips, arm thickness, hands, and leg length. Preserve its healthy full thigh and calf contours and knee shapes; these were deliberately chosen. White short-sleeve open-collar shirt with narrow blue-grey piping at collar edges and sleeve hems, opaque loosely draped fabric, blue-grey pleated skirt with the same waistband and hem length. Navy ribbed knee-high socks ending below the knees and white lace-up low sneakers. No extra accessories or costume changes.\n\nFACE AND RENDERING\nTranslate the actual P1/P2 eye geometry and cheek/mouth balance at full-body scale. Keep rounded eye openings, softly falling outer eyelids and substantial grey irises; avoid generic narrow almond eyes. Preserve short cheek-to-mouth-to-chin spacing, warm cheek hatching and the small closed smile. The bob stays rounded and chin-length with wispy cheek strands. Do not simplify the eyes to dots, narrow the jaw, enlarge the head or change the body to match the close portrait. Blend line weight, shading and color coherently across head and body without seams. No age-label-driven redesign.\n\nSTANCE\nPreserve Image 3's existing relaxed slight three-quarter standing pose as closely as possible: the same shoulder angle, arms naturally at the sides, hand positions, gentle weight shift and placement of both feet. Keep its head position and scale; use P2's quiet smile looking toward the viewer. Limit changes below the head to the natural rendering integration needed.\n\nFRAME AND SCENE\nPortrait 2:3, one complete figure from crown through both sneaker soles, comfortable small margins, matching Image 3 framing. Simple softly textured blue-grey background and grounded soft floor shadow, gentle diffuse light. The face remains crisply drawn and readable when viewed closely. Normal full-body perspective, no foreshortening or dramatic camera. No inset portrait, panels, text, logos, extra people, missing or merged fingers. Return one complete full-length illustration.\n",
+          "referenced_image_paths": [
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png",
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/assets/B7-face-hidden.png"
+          ]
+        }
+      },
+      "visual_review": {
+        "expression_and_face": "Native-pixel face crop retains a small closed smile, grey rounded downturned eye openings, cheek hatching and recognizable compact P1/P2 face. Fine iris detail is reduced at whole-body scale.",
+        "body_outfit": "Healthy thigh/calf contours, below-knee navy socks, white shoes and B7 costume survive. Whole torso, folds, collar, hands and feet are redrawn; head/hair appears a little more compact and body alignment shifts slightly. This is not a face-only pixel replacement.",
+        "composition": "Relaxed shallow-angle stance and complete body in frame. Hands and shoes read coherently at full resolution; no grey patch or head/neck seam observed.",
+        "assessment": "Preferred everyday full-body integration candidate for user review, pending explicit choice."
+      }
+    },
+    {
+      "id": "P7",
+      "concept_ja": "正面・自然な立ち姿",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P7-front-full-body.png",
+      "status": "not_selected",
+      "prompt": "Use case: identity-preserve.\nProduce ONE full-length anime character standing illustration, integrating the approved face and quiet smile with the supplied full-body design.\n\nINPUT ROLES\nImage 1 (P1): original facial-identity and drawing reference. Its broad rounded grey eyes with descending outer corners, full cheeks, short lower face, small chin, fine diagonal cheek hatching, black bob and separated blunt bangs define the character.\nImage 2 (P2): user-selected everyday expression reference. Use its small, relaxed CLOSED-MOUTH smile, open eyes and easygoing warmth. Do not reproduce its forward lean, close camera or green background.\nImage 3 (B7 with the old face hidden): primary FULL-BODY canvas, body proportions, costume, scale, stance and plain background. The grey rectangle is missing image content, not an object. Fully reconstruct the face and fringe there from Images 1 and 2, integrate naturally with the head and neck, and remove all grey rectangle edges.\n\nKEEP THE APPROVED FULL-BODY DESIGN\nUse Image 3 for shoulder width, head-to-body scale, natural clothed upper-body volume, torso length, waist, hips, arm thickness, hands, and leg length. Preserve its healthy full thigh and calf contours and knee shapes; these were deliberately chosen. White short-sleeve open-collar shirt with narrow blue-grey piping at collar edges and sleeve hems, opaque loosely draped fabric, blue-grey pleated skirt with the same waistband and hem length. Navy ribbed knee-high socks ending below the knees and white lace-up low sneakers. No extra accessories or costume changes.\n\nFACE AND RENDERING\nTranslate the actual P1/P2 eye geometry and cheek/mouth balance at full-body scale. Keep rounded eye openings, softly falling outer eyelids and substantial grey irises; avoid generic narrow almond eyes. Preserve short cheek-to-mouth-to-chin spacing, warm cheek hatching and the small closed smile. The bob stays rounded and chin-length with wispy cheek strands. Do not simplify the eyes to dots, narrow the jaw, enlarge the head or change the body to match the close portrait. Blend line weight, shading and color coherently across head and body without seams. No age-label-driven redesign.\n\nSTANCE\nTranslate the same Image 3 body and outfit into a relaxed straight-on front view: upright level head, face and shoulders toward the camera, arms naturally down beside the skirt, hands relaxed and fully formed, legs comfortably apart with a small natural weight shift. Both feet on the ground. Preserve the same shoulder-to-head balance, body volume, healthy legs and garment lengths through the turn; no rigid mannequin stance.\n\nFRAME AND SCENE\nPortrait 2:3, one complete figure from crown through both sneaker soles, comfortable small margins, matching Image 3 framing. Simple softly textured blue-grey background and grounded soft floor shadow, gentle diffuse light. The face remains crisply drawn and readable when viewed closely. Normal full-body perspective, no foreshortening or dramatic camera. No inset portrait, panels, text, logos, extra people, missing or merged fingers. Return one complete full-length illustration.\n",
+      "prompt_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P7-prompt.txt",
+      "prompt_sha256": "d21047338946a4d34a01d4e1be835fe4212ad871200d9fe587c8619e55f7110d",
+      "referenced_image_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/assets/B7-face-hidden.png"
+      ],
+      "input_sha256": [
+        "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+        "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+        "ee049f1e3a2d1b190c7019d0fac776477d4bae9a693ba4731340177b970b0d5a"
+      ],
+      "generated_original": "/home/abe/.codex/generated_images/01a07aac-bb77-7420-886e-f3f0daecfe49/exec-fa2987de-e5c3-4922-8ff7-c9d6efba5722.png",
+      "elapsed_ms": 27403,
+      "sha256": "fce4364136f42cd1ef9d01789d9965e7c14d1ddb1709f6f04e3b0f5defb881f0",
+      "bytes": 1618809,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "tool_call": {
+        "tool": "image_gen.imagegen",
+        "arguments": {
+          "prompt": "Use case: identity-preserve.\nProduce ONE full-length anime character standing illustration, integrating the approved face and quiet smile with the supplied full-body design.\n\nINPUT ROLES\nImage 1 (P1): original facial-identity and drawing reference. Its broad rounded grey eyes with descending outer corners, full cheeks, short lower face, small chin, fine diagonal cheek hatching, black bob and separated blunt bangs define the character.\nImage 2 (P2): user-selected everyday expression reference. Use its small, relaxed CLOSED-MOUTH smile, open eyes and easygoing warmth. Do not reproduce its forward lean, close camera or green background.\nImage 3 (B7 with the old face hidden): primary FULL-BODY canvas, body proportions, costume, scale, stance and plain background. The grey rectangle is missing image content, not an object. Fully reconstruct the face and fringe there from Images 1 and 2, integrate naturally with the head and neck, and remove all grey rectangle edges.\n\nKEEP THE APPROVED FULL-BODY DESIGN\nUse Image 3 for shoulder width, head-to-body scale, natural clothed upper-body volume, torso length, waist, hips, arm thickness, hands, and leg length. Preserve its healthy full thigh and calf contours and knee shapes; these were deliberately chosen. White short-sleeve open-collar shirt with narrow blue-grey piping at collar edges and sleeve hems, opaque loosely draped fabric, blue-grey pleated skirt with the same waistband and hem length. Navy ribbed knee-high socks ending below the knees and white lace-up low sneakers. No extra accessories or costume changes.\n\nFACE AND RENDERING\nTranslate the actual P1/P2 eye geometry and cheek/mouth balance at full-body scale. Keep rounded eye openings, softly falling outer eyelids and substantial grey irises; avoid generic narrow almond eyes. Preserve short cheek-to-mouth-to-chin spacing, warm cheek hatching and the small closed smile. The bob stays rounded and chin-length with wispy cheek strands. Do not simplify the eyes to dots, narrow the jaw, enlarge the head or change the body to match the close portrait. Blend line weight, shading and color coherently across head and body without seams. No age-label-driven redesign.\n\nSTANCE\nTranslate the same Image 3 body and outfit into a relaxed straight-on front view: upright level head, face and shoulders toward the camera, arms naturally down beside the skirt, hands relaxed and fully formed, legs comfortably apart with a small natural weight shift. Both feet on the ground. Preserve the same shoulder-to-head balance, body volume, healthy legs and garment lengths through the turn; no rigid mannequin stance.\n\nFRAME AND SCENE\nPortrait 2:3, one complete figure from crown through both sneaker soles, comfortable small margins, matching Image 3 framing. Simple softly textured blue-grey background and grounded soft floor shadow, gentle diffuse light. The face remains crisply drawn and readable when viewed closely. Normal full-body perspective, no foreshortening or dramatic camera. No inset portrait, panels, text, logos, extra people, missing or merged fingers. Return one complete full-length illustration.\n",
+          "referenced_image_paths": [
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png",
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/assets/B7-face-hidden.png"
+          ]
+        }
+      },
+      "visual_review": {
+        "expression_and_face": "Native-pixel face crop keeps a small closed smile, grey eyes, diagonal cheek hatching and the rounded bob. Eye rendering is more simplified than the bust references.",
+        "body_outfit": "Same selected clothing, healthy leg volume and knee socks are recognizable. Broader frontal stance changes leg spacing; shoulders, torso and clothing are redrawn for the turn.",
+        "composition": "Body is more frontal, but head tilt and shallow face turn remain. Suitable near-frontal standing illustration, not a strict level-front model sheet. Complete shoes and hands are visible, with no major discontinuity observed.",
+        "assessment": "Useful alternate full-body candidate; requested strictly frontal head was not achieved."
+      }
+    }
+  ],
+  "selected": "P6",
+  "approved_set": [
+    "P6"
+  ],
+  "evaluation": [
+    "P1/P2 facial identity and closed smile readable at full-body scale",
+    "B7 shoulder, torso and healthy leg proportions retained",
+    "Navy below-knee socks and original summer outfit retained",
+    "Hands, knees, ankles, shoes and hair connect naturally",
+    "Full figure in frame; no grey rectangle or compositing seam"
+  ],
+  "limits": "Generated integration, not pixel-preserving replacement; assess both close face detail and full-body balance. P1/P2 remain face and expression references; B7 remains body/outfit authority until further user choice.",
+  "comparison_crops": [
+    {
+      "id": "P6",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/comparison/P6-face-detail.png",
+      "source": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+      "crop_xywh": [
+        340,
+        30,
+        340,
+        350
+      ],
+      "operation": "Exact pixel crop only, no resizing or retouching; comparison display, not generation input.",
+      "verified_exact_source_pixels": true,
+      "sha256": "683c14d2f49cf73f9ba5e4d481b39594c562967f7e61e9b4c1141118efefd2df"
+    },
+    {
+      "id": "P7",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/comparison/P7-face-detail.png",
+      "source": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P7-front-full-body.png",
+      "crop_xywh": [
+        340,
+        30,
+        340,
+        350
+      ],
+      "operation": "Exact pixel crop only, no resizing or retouching; comparison display, not generation input.",
+      "verified_exact_source_pixels": true,
+      "sha256": "0e77da34187d4b692fbb7306c4e66ad4912ef9178ebc9753ed9d64e3012f07bf"
+    }
+  ],
+  "assistant_recommended_everyday_full_body": "P6",
+  "verification": {
+    "original_generated_bytes_preserved": true,
+    "png_dimensions_and_hashes_valid": true,
+    "exact_prompts_and_ordered_inputs_recorded": true,
+    "both_outputs_directly_use_original_P1_P2_and_same_prepared_B7": true,
+    "P4_P5_approval_recorded_consistently": true,
+    "face_expression_body_outfit_baselines_unchanged": true,
+    "reference_mask_preserves_source_pixels_elsewhere": true,
+    "comparison_crops_are_unretouched_source_pixels": true,
+    "new_candidates_not_promoted": true
+  },
+  "selection_user_quote": "P6かな。",
+  "selection_scope": "Current full-body illustration, body proportions and costume rendering. P1 remains original facial reference and P2 remains everyday expression reference."
+}

@@ -1,0 +1,31 @@
+{
+  "project": "akari-v3.0",
+  "user_quote": "良いと思う",
+  "approved_at": "2026-09-07T11:29:02.272397+00:00",
+  "approved_expression_ids": [
+    "P10-2",
+    "P11"
+  ],
+  "approved_expressions": [
+    {
+      "id": "P10-2",
+      "concept_ja": "照れ隠し・口を結ぶ",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/P10-2-shy-held-smile.png",
+      "sha256": "eebfb8bb0112adace66d8c5843cc84bf22648375fffd9770afb1197fb7095320"
+    },
+    {
+      "id": "P11",
+      "concept_ja": "ちょっと拗ねる",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/P11-gentle-pout.png",
+      "sha256": "6640bb1d48b8ea48dc343be9e7b004d8954c70327da188483c9e788bcebadb72"
+    }
+  ],
+  "authoritative_references": {
+    "face": "P1",
+    "everyday_expression": "P2",
+    "full_body_and_outfit": "P6"
+  },
+  "approval_scope": "Displayed P10-2 shy-deflection refinement and P11 gentle pout accepted as expression examples. Original P10 remains a preserved draft.",
+  "state": "/home/abe/workspace/akari-design/tmp/akari-v3.0/design-state.json",
+  "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/exploration.json"
+}

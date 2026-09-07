@@ -1,0 +1,101 @@
+{
+  "project": "akari-v3.0",
+  "stage": "19-laugh-surprise",
+  "user_quote": "ええと思う！採用して進めよう",
+  "status": "ready_for_user_review",
+  "face_authority": "P1",
+  "everyday_expression": "P2",
+  "body_authority": "P6",
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "mode": "built-in",
+    "backend_model": "not_exposed",
+    "calls_planned": 2,
+    "calls_completed": 2,
+    "total_elapsed_ms": 58152,
+    "seed": "not_exposed"
+  },
+  "variants": [
+    {
+      "id": "P14",
+      "concept_ja": "思わず笑う",
+      "name": "P14-spontaneous-laugh.png",
+      "prompt": "Use case: identity-preserve.\nAsset type: Akari v3.0 expressive portrait study, one standalone illustration.\n\nInput roles:\n- Image 1 (P2) is the sole edit target and the selected everyday portrait. Keep its camera, square waist-up framing, head position, body pose, costume and environment. Change only the coordinated facial expression.\n- Image 2 (P1) is the original facial identity, hair and drawing authority. Preserve its distinctive facial geometry and rendering through expression changes. Its easy open smile is a baseline, not the requested result.\n\nExpression — spontaneous warm laughter:\nShe has just heard her childhood friend say something unexpectedly funny, and a natural little laugh escapes. Show a clearly fuller, more joyful reaction than P1's polite open smile: a medium broad open laughing mouth with lifted corners, gently raised cheeks and lower eyelids, and softly lifted relaxed eyebrows. Keep the mouth as a simple clean rounded shape with restrained warm pink interior, without detailed teeth or a detailed oral cavity. The eye openings may gently shorten from the lower-lid lift while retaining rounded grey irises, their recognizable soft downturned outer corners and an alert, smiling gaze toward the viewer. Both mouth and eye region must communicate laughter; do not simply paste a large mouth onto an unchanged expression. Make it unguarded, familiar and charming, not a shouting face or an exaggerated comedy grimace.\n\nPreserve identity: broad rounded grey eyes with the same soft outer droop, normal iris size/grey tonal structure and small highlights, eye spacing, full rounded cheeks, short lower face and small chin. Let brows, upper and lower lids, cheeks and mouth coordinate naturally for the requested expression, while preserving the person's underlying facial proportions. Do not freeze the eyelids and change only the mouth. Do not turn the eyes into generic shiny circles, narrow sleepy slits or closed chevrons. Keep the grey irises clearly visible.\n\nKeep the black rounded bob with separated blunt-bang groups, fine cheek-framing strands, delicate lash and contour lines, fine diagonal cheek hatching, skin tones and soft cel-shadow treatment. Keep the source head tilt, slight forward lean, shoulders, arms behind the body, natural proportions, white short-sleeve open-collar shirt with blue-grey piping, buttons, skirt, leafy path and wall backdrop, and neutral daylight. No anatomy, body or clothing redesign; no new gestures, accessories, tears, motion symbols, text, panels or extra people. Return one polished square illustration.",
+      "referenced_image_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png"
+      ],
+      "input_sha256": [
+        "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+        "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc"
+      ],
+      "generated_original": "/home/abe/.codex/generated_images/01a07b97-db08-7801-b412-60ff0b6c71c6/exec-28a4b207-014f-40b1-8876-bc84b96d801c.png",
+      "elapsed_ms": 30628,
+      "visual_review": {
+        "expression": "Open laughing mouth, lifted cheeks and raised lower eyelids read as spontaneous laughter, clearly stronger than P1/P2.",
+        "identity": "Grey irises remain readable despite the smiling lid lift; cheek/chin proportions, hair and hatching remain recognizable.",
+        "composition": "Source pose, framing, costume and leafy path broadly retained.",
+        "assessment": "Suitable for user review."
+      },
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-19-laugh-surprise/P14-spontaneous-laugh.png",
+      "sha256": "c93bf600fbcc94c5b4e1390de6d81cccb4d963dfba365dfb462ae064829b5dc1",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "bytes": 1864519,
+      "status": "pending_user_review",
+      "prompt_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-19-laugh-surprise/P14-prompt.txt",
+      "prompt_sha256": "98b1e49aaefcc9b77703f9ab1e508c49aae52d1f682a730c7a3ad98ea4e0fc03"
+    },
+    {
+      "id": "P15",
+      "concept_ja": "少し驚く",
+      "name": "P15-soft-surprise.png",
+      "prompt": "Use case: identity-preserve.\nAsset type: Akari v3.0 expressive portrait study, one standalone illustration.\n\nInput roles:\n- Image 1 (P2) is the sole edit target and the selected everyday portrait. Keep its camera, square waist-up framing, head position, body pose, costume and environment. Change only the coordinated facial expression.\n- Image 2 (P1) is the original facial identity, hair and drawing authority. Preserve its distinctive facial geometry and rendering through expression changes. Its easy open smile is a baseline, not the requested result.\n\nExpression — mild, interested surprise:\nShe has just heard a small unexpected piece of news from her childhood friend, reacting with a quiet \"oh?\". Raise the brows naturally a little above their resting position, lift the upper eyelids slightly to make the eyes more alert while retaining the original grey iris size, and part the mouth into a small softly rounded vertical opening at the original mouth centre. Preserve a soft attentive gaze toward the viewer. The opening should be noticeably different from a smile or pout, small and understated, with a simple muted pink interior and no rendered teeth. Keep the face relaxed: no fear, distress, pleading, angry tension, blown-wide eyes or tiny pupils. Let mouth, brows and eyes work together so the surprise reads at normal viewing size without caricature.\n\nPreserve identity: broad rounded grey eyes with the same soft outer droop, normal iris size/grey tonal structure and small highlights, eye spacing, full rounded cheeks, short lower face and small chin. Let brows, upper and lower lids, cheeks and mouth coordinate naturally for the requested expression, while preserving the person's underlying facial proportions. Do not freeze the eyelids and change only the mouth. Do not turn the eyes into generic shiny circles, narrow sleepy slits or closed chevrons. Keep the grey irises clearly visible.\n\nKeep the black rounded bob with separated blunt-bang groups, fine cheek-framing strands, delicate lash and contour lines, fine diagonal cheek hatching, skin tones and soft cel-shadow treatment. Keep the source head tilt, slight forward lean, shoulders, arms behind the body, natural proportions, white short-sleeve open-collar shirt with blue-grey piping, buttons, skirt, leafy path and wall backdrop, and neutral daylight. No anatomy, body or clothing redesign; no new gestures, accessories, tears, motion symbols, text, panels or extra people. Return one polished square illustration.",
+      "referenced_image_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png"
+      ],
+      "input_sha256": [
+        "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+        "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc"
+      ],
+      "generated_original": "/home/abe/.codex/generated_images/01a07b97-db08-7801-b412-60ff0b6c71c6/exec-de3d496c-c2ba-4222-9a27-5745fbe2ab8d.png",
+      "elapsed_ms": 27524,
+      "visual_review": {
+        "expression": "Small rounded open mouth, lifted brows and wider upper-lid opening convey mild surprise.",
+        "identity": "Eyes are rounder as intended by the expression, while grey iris rendering, soft outer corners, cheeks, short lower face and bob remain recognizable.",
+        "composition": "Source pose, framing, costume and leafy path broadly retained.",
+        "assessment": "Suitable for user review; compare widened-eye impression to P1/P2."
+      },
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-19-laugh-surprise/P15-soft-surprise.png",
+      "sha256": "b119638fcc560a783ec254548bf796500593c74c1121c21f632b311e054ad193",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "bytes": 1868734,
+      "status": "pending_user_review",
+      "prompt_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-19-laugh-surprise/P15-prompt.txt",
+      "prompt_sha256": "46a00ab35350d57cb8ee2311f40cb132a1f7bc12b5b7a471793cf4488c9260a0"
+    }
+  ],
+  "selected": null,
+  "approved_set": [],
+  "pending_review": [
+    "P14",
+    "P15"
+  ],
+  "reference_policy": "Each variant independently edits selected P2 with original P1 directly supplied. P6 remains body/outfit authority; existing pose and clothing are retained in the edit canvas. P14/P15 are expression candidates, not new facial authorities.",
+  "limits": "One near-frontal head pose and camera; no cross-angle or full-body expression stability claim. User review pending.",
+  "verification": {
+    "outputs_equal_generated_originals": true,
+    "valid_png_headers_and_dimensions": true,
+    "saved_prompts_match_calls": true,
+    "reference_hashes_unchanged": true,
+    "approved_baselines_preserved": true,
+    "previous_state_saved": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-19-laugh-surprise/previous-design-state.json",
+    "pending_review_only": true
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "project": "akari-v3.0",
+  "id": "P1",
+  "source": "/home/abe/.codex/attachments/8a0809f7-f1dc-4f5f-bd96-915e9c7f451a/ChatGPT Image 2026年9月7日 19_31_54.png",
+  "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+  "operation": "import_user_supplied_image",
+  "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+  "bytes": 1869375,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "user_feedback": "F2は割といい (ちなみにGPT Proにも作らせてみたがわりといいかも)",
+  "provenance": {
+    "user_reported_tool": "GPT Pro",
+    "exact_generation_tool_or_model": "unknown",
+    "prompt": "not_supplied",
+    "reference_inputs": "not_supplied",
+    "generation_elapsed_ms": null,
+    "generated_in_this_turn": false
+  },
+  "status": "user_selected_working_face_baseline",
+  "replacement_requested": true,
+  "face_master_promoted": true,
+  "current_face_authority": "P1",
+  "current_body_authority": "B7",
+  "comparison_with": "F2",
+  "limitations": [
+    "Different head angle and pose from F2; appearance difference is not an isolated facial-contour test.",
+    "No causal attribution to model or prompting from unavailable generation history."
+  ],
+  "verification": {
+    "source_copy_byte_identical": true,
+    "png_signature_valid": true
+  },
+  "selected": true,
+  "visual_review": {
+    "appeal": "Frontal-leaning pose, hands behind back and relaxed smile give an approachable familiar feeling; cheeks and eye area read soft and coherent.",
+    "versus_F2": "Pro eyes read slightly wider/flatter; F2 keeps clearer vertical eyelid arcs. Pro has a small visible central chin point.",
+    "versus_A2": "Shares round-eye/soft-cheek direction but not proven closer in every feature. Different angle, tilt and pose confound direct contour comparison.",
+    "independent_read": "Separate visual reviewer reached similar observations.",
+    "recommendation": "Retain both positive candidates; choose the next preferred working direction with user before a face-master change."
+  },
+  "selection_history": {
+    "previous_status": "positively_received_comparison_candidate",
+    "previous_selected": false,
+    "previous_face_authority": "A2"
+  },
+  "replacement_scope": "Working facial reference only; B7 body/outfit remains.",
+  "selection_user_quote": "Proのやつ土台にしてみよう"
+}

@@ -1,0 +1,45 @@
+{
+  "project": "akari-v3.0",
+  "user_quote": "P6かな。",
+  "selected_full_body": "P6",
+  "primary_references": [
+    {
+      "id": "P1",
+      "role": "original facial geometry, hair and drawing reference",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc"
+    },
+    {
+      "id": "P2",
+      "role": "selected everyday closed-mouth smile",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png",
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f"
+    },
+    {
+      "id": "P6",
+      "role": "selected full-body proportions, outfit and standing illustration",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+      "sha256": "018f45133acb2d9cd3625d27090b38084f6b795a92a726ff641785d889c0a823"
+    }
+  ],
+  "approved_angle_support": [
+    {
+      "id": "P4",
+      "concept_ja": "正面・P2の微笑み",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-14-pro-base-angles/P4-front-bust.png"
+    },
+    {
+      "id": "P5",
+      "concept_ja": "浅い斜め・P2の微笑み",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-14-pro-base-angles/P5-three-quarter-bust.png"
+    }
+  ],
+  "original_body_construction_reference": {
+    "id": "B7",
+    "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-05-user-full-body/B7-user-refined-full-body.png",
+    "role": "Preserved user-authored shoulder, healthy-leg and sock design intent; current selected rendition is P6."
+  },
+  "state": "/home/abe/workspace/akari-design/tmp/akari-v3.0/design-state.json",
+  "generation_manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/exploration.json",
+  "note": "Selection record only; no images regenerated, retouched or overwritten in this step."
+}

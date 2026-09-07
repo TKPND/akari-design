@@ -1,0 +1,10 @@
+Use case: identity-preserve. Edit the supplied anime illustration into ONE expression variant.
+
+The supplied P1 portrait is both the editing canvas and the sole authority for this character's face, hair and drawing style. Preserve its specific facial proportions, full cheeks, small chin, broad rounded grey eyes with softly descending outer corners, iris-to-white balance, direct gaze, segmented bangs, rounded black bob and wispy cheek-framing strands.
+
+EXPRESSION CHANGE
+Change the smile to a gently delighted OPEN-MOUTH smile. Make the opening clearly a little broader and taller than the original, with the mouth corners lifted and a slight natural lift in the cheeks. Keep a simple soft pink mouth interior without adding a teeth-heavy grin. The grey eyes stay open and readable with the same soft outer droop; any lower-lid movement must be small. Convey a modest increase in happiness, keeping the same easygoing expression and facial proportions.
+
+Keep the same eye spacing, head size and position, near-frontal head tilt, slight forward lean, body proportions, shoulders and arms held behind the body. Preserve the fine diagonal cheek hatching and existing skin/iris/hair rendering. Let only the small natural facial movement required by the new expression occur. Keep the character's face recognizable as this exact portrait.
+
+Keep the original square waist-up crop, camera, white short-sleeve open-collar shirt, blue-grey piping and pleated skirt, buttons and fabric drape, trees, wall and neutral soft daylight. No clothing redesign, camera change, new accessories, added text or panels. Return one standalone square image with the same character and composition.

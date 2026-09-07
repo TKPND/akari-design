@@ -1,0 +1,31 @@
+{
+  "project": "akari-v3.0",
+  "user_quote": "ええと思う！採用して進めよう",
+  "approved_at": "2026-09-07T11:44:06.247625+00:00",
+  "approved_gesture_ids": [
+    "P12",
+    "P13"
+  ],
+  "approved_gestures": [
+    {
+      "id": "P12",
+      "concept_ja": "褒められて頬に手を添える",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-18-expression-gestures/P12-shy-cheek-gesture.png",
+      "sha256": "9885918ebc0f31a2202150e4e80f6e67303613d0c49c506c6cbfc21c669fb03f"
+    },
+    {
+      "id": "P13",
+      "concept_ja": "軽く腕を組んで拗ねる",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-18-expression-gestures/P13-pout-folded-arms.png",
+      "sha256": "b7146b672f8668b9c760ecdef028580d47de7d9d076892aafc9381c7ea26ee5c"
+    }
+  ],
+  "authoritative_references": {
+    "face": "P1",
+    "everyday_expression": "P2",
+    "body_and_outfit": "P6"
+  },
+  "approval_scope": "Displayed P12 and P13 accepted as expression-and-gesture examples; continuation requested.",
+  "state": "/home/abe/workspace/akari-design/tmp/akari-v3.0/design-state.json",
+  "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-18-expression-gestures/exploration.json"
+}

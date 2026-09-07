@@ -1,0 +1,110 @@
+{
+  "project": "akari-v3.0",
+  "stage": "18-expression-gestures",
+  "user_quote": "進めていいよ〜",
+  "status": "user_approved_gesture_set",
+  "face_authority": "P1",
+  "everyday_expression": "P2",
+  "body_authority": "P6",
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "mode": "built-in",
+    "backend_model": "not_exposed",
+    "calls_planned": 2,
+    "calls_completed": 2,
+    "total_elapsed_ms": 70013,
+    "seed": "not_exposed"
+  },
+  "variants": [
+    {
+      "id": "P12",
+      "concept_ja": "褒められて頬に手を添える",
+      "name": "P12-shy-cheek-gesture.png",
+      "expression_reference": "P10-2",
+      "referenced_image_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/P10-2-shy-held-smile.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/assets/P6-body-only.png"
+      ],
+      "prompt": "Use case: identity-preserve.\nAsset type: Akari v3.0 expression-and-gesture illustration.\n\nInput images and roles:\n- Image 1 is the sole editing canvas and the selected expression example. Keep its existing face expression, head scale, face angle, camera, square waist-up framing and leafy path setting while changing the arm gesture as requested.\n- Image 2 (P1) is the original facial identity, hair and drawing authority. Preserve its specific face structure and rendering; do not copy its open smile.\n- Image 3 is a body-only crop of selected P6, used only for established body proportions and summer uniform construction. Its cropped boundary is not a composition guide.\n\nGesture change — shy deflection after a gentle compliment:\nKeep image 1's sideways glance and small compressed closed mouth trying to suppress a smile. She casually raises one hand to the outside of her cheek near the jaw, with just relaxed fingertips lightly touching the cheek-framing hair. Let the palm stay beside the face and the wrist relaxed; do not cup, press or distort the cheek. Keep both eyes, nose, mouth and most of the cheek fully visible. The raised hand has a clear thumb and four naturally grouped fingers; the forearm and elbow form one comfortable continuous gesture. Her other arm rests loosely down at her side. Shoulders remain relaxed and only subtly respond to raising the arm. Preserve the original slight forward conversational lean. It should feel like a spontaneous self-conscious reaction to her childhood friend, warm and unposed.\n\nIdentity/style: retain the same broad rounded grey eyes with softly downturned outer corners, grey layered irises and small highlights, eye spacing, short lower face, full cheeks and small chin, black rounded bob, segmented blunt bangs and thin cheek-framing strands. Preserve delicate linework, cel shading and fine diagonal pink cheek hatching. Do not substitute a generic anime face or narrow sleepy eyes. The source expression must remain clearly recognizable.\n\nKeep the same white short-sleeve open-collar shirt with blue-grey piping, sensible collar opening, buttons and blue-grey pleated skirt. Cloth folds may adjust naturally to the arm movement. Keep existing body and shoulder proportions, natural clothing fit and ordinary conversational mood. Both arms must connect anatomically to their own shoulders; realistic elbow and wrist bends, no fused or extra digits. Preserve image 1's head position and readable face size, slight head tilt and warm neutral daylight. One character only, no additional props, accessories, text, speech bubbles, panels or watermark. Return one polished square waist-up illustration.",
+      "input_sha256": [
+        "eebfb8bb0112adace66d8c5843cc84bf22648375fffd9770afb1197fb7095320",
+        "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+        "aaed9f2b532699f36cec6f469d5d55a4173a1d2b00526259a20de63f5d09d7a1"
+      ],
+      "generated_original": "/home/abe/.codex/generated_images/01a07b97-db08-7801-b412-60ff0b6c71c6/exec-0a2ec5e3-0d90-4466-9626-ae50bc88e5c1.png",
+      "elapsed_ms": 38226,
+      "visual_review": {
+        "expression": "P10-2 side glance and held closed mouth are readable; fingertip gesture strengthens the shy, self-conscious reaction.",
+        "identity": "Rounded grey eyes, cheek/chin silhouette, black bob and fine blush hatching remain close to the supplied references at normal display.",
+        "gesture": "One raised arm connects through a bent elbow and wrist to fingertips at the cheek-framing hair; facial features remain unobscured, other arm hangs at her side.",
+        "scene_and_costume": "Original face size, waist-up crop, leafy path and summer uniform design retained; shirt folds and sleeve respond to the gesture.",
+        "assessment": "Suitable for user review."
+      },
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-18-expression-gestures/P12-shy-cheek-gesture.png",
+      "sha256": "9885918ebc0f31a2202150e4e80f6e67303613d0c49c506c6cbfc21c669fb03f",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "bytes": 1941047,
+      "status": "user_approved_gesture_example",
+      "prompt_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-18-expression-gestures/P12-prompt.txt",
+      "prompt_sha256": "83b3b852edbea8932de7b0814dd64922ca279b717e1d88c8efe60cc6f376e743"
+    },
+    {
+      "id": "P13",
+      "concept_ja": "軽く腕を組んで拗ねる",
+      "name": "P13-pout-folded-arms.png",
+      "expression_reference": "P11",
+      "referenced_image_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/P11-gentle-pout.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/assets/P6-body-only.png"
+      ],
+      "prompt": "Use case: identity-preserve.\nAsset type: Akari v3.0 expression-and-gesture illustration.\n\nInput images and roles:\n- Image 1 is the sole editing canvas and the selected expression example. Keep its existing face expression, head scale, face angle, camera, square waist-up framing and leafy path setting while changing the arm gesture as requested.\n- Image 2 (P1) is the original facial identity, hair and drawing authority. Preserve its specific face structure and rendering; do not copy its open smile.\n- Image 3 is a body-only crop of selected P6, used only for established body proportions and summer uniform construction. Its cropped boundary is not a composition guide.\n\nGesture change — a brief playful sulk after harmless teasing:\nKeep image 1's small closed pouting mouth, mildly protesting brows and direct gaze toward her familiar childhood friend. Bring both arms in front into a LOW, LOOSE, RELAXED folded-arm pose across the lower ribcage/upper waist. The forearms overlap naturally, with one hand resting lightly on the opposite forearm and the other naturally tucked behind the opposite elbow. Keep elbows lowered and close to her sides, shoulders relaxed, hands unclenched. Do not squeeze or lift the chest, pull fabric tight or exaggerate body curves. Maintain an easy conversational stance, not a stern authoritarian pose. The gesture should strengthen the mild \"hmph\" impression while keeping the low-intensity pout comfortable and endearing. Preserve the original large readable face and small head tilt.\n\nIdentity/style: retain the same broad rounded grey eyes with softly downturned outer corners, grey layered irises and small highlights, eye spacing, short lower face, full cheeks and small chin, black rounded bob, segmented blunt bangs and thin cheek-framing strands. Preserve delicate linework, cel shading and fine diagonal pink cheek hatching. Do not substitute a generic anime face or narrow sleepy eyes. The source expression must remain clearly recognizable.\n\nKeep the same white short-sleeve open-collar shirt with blue-grey piping, sensible collar opening, buttons and blue-grey pleated skirt. Cloth folds may adjust naturally to the arm movement. Keep existing body and shoulder proportions, natural clothing fit and ordinary conversational mood. Both arms must connect anatomically to their own shoulders; realistic elbow and wrist bends, no fused or extra digits. Preserve image 1's head position and readable face size, slight head tilt and warm neutral daylight. One character only, no additional props, accessories, text, speech bubbles, panels or watermark. Return one polished square waist-up illustration.",
+      "input_sha256": [
+        "6640bb1d48b8ea48dc343be9e7b004d8954c70327da188483c9e788bcebadb72",
+        "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+        "aaed9f2b532699f36cec6f469d5d55a4173a1d2b00526259a20de63f5d09d7a1"
+      ],
+      "generated_original": "/home/abe/.codex/generated_images/01a07b97-db08-7801-b412-60ff0b6c71c6/exec-0766a4fe-d6e3-4e5e-8151-f6f83df5fd70.png",
+      "elapsed_ms": 31787,
+      "visual_review": {
+        "expression": "P11 direct gaze and small pursed pout retained; loose folded arms make the mild protest more readable.",
+        "identity": "Specific round grey eye shapes, full cheeks, small chin, hatching and bob remain recognizable.",
+        "gesture": "Low folded arms show natural overlap, a visible relaxed hand and the other hand hidden by the fold; shoulder and elbow connections appear coherent at normal display.",
+        "scene_and_costume": "Waist-up framing, neutral daylight, background and uniform design retained with natural sleeve and torso fold changes.",
+        "assessment": "Suitable for user review."
+      },
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-18-expression-gestures/P13-pout-folded-arms.png",
+      "sha256": "b7146b672f8668b9c760ecdef028580d47de7d9d076892aafc9381c7ea26ee5c",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "bytes": 1910284,
+      "status": "user_approved_gesture_example",
+      "prompt_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-18-expression-gestures/P13-prompt.txt",
+      "prompt_sha256": "d7af5adbfb1dd3846aad04f8607d34e326718522b3da8603184b40e09ae8ca16"
+    }
+  ],
+  "selected": null,
+  "approved_set": [
+    "P12",
+    "P13"
+  ],
+  "pending_review": [],
+  "reference_policy": "Each pose variant independently edits its approved expression image (P10-2 or P11), with original P1 supplied directly for facial identity and existing P6 body-only crop for body/outfit. New gestures are text-directed; no legacy images or earlier unapproved candidates are inputs. Generated gesture scenes are not promoted to face authority.",
+  "limits": "Two arm gestures at a nearly unchanged face angle and camera; no claim of robustness at new head angles or full-body scale. User approval pending.",
+  "verification": {
+    "output_files_equal_generated_originals": true,
+    "valid_png_headers_and_dimensions": true,
+    "saved_prompts_match_tool_calls": true,
+    "reference_hashes_unchanged": true,
+    "approved_baselines_and_expression_selections_preserved": true,
+    "previous_state_saved": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-18-expression-gestures/previous-design-state.json",
+    "pending_review_only": true
+  },
+  "approval_user_quote": "ええと思う！採用して進めよう"
+}

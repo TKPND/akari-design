@@ -1,0 +1,31 @@
+{
+  "project": "akari-v3.0",
+  "user_quote": "良いね〜採用して進めよう",
+  "approved_at": "2026-09-07T11:48:56.507763+00:00",
+  "approved_expression_ids": [
+    "P14",
+    "P15"
+  ],
+  "approved_expressions": [
+    {
+      "id": "P14",
+      "concept_ja": "思わず笑う",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-19-laugh-surprise/P14-spontaneous-laugh.png",
+      "sha256": "c93bf600fbcc94c5b4e1390de6d81cccb4d963dfba365dfb462ae064829b5dc1"
+    },
+    {
+      "id": "P15",
+      "concept_ja": "少し驚く",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-19-laugh-surprise/P15-soft-surprise.png",
+      "sha256": "b119638fcc560a783ec254548bf796500593c74c1121c21f632b311e054ad193"
+    }
+  ],
+  "authoritative_references": {
+    "face": "P1",
+    "everyday_expression": "P2",
+    "body_and_outfit": "P6"
+  },
+  "approval_scope": "Displayed P14 and P15 accepted as expression examples; continuation requested.",
+  "state": "/home/abe/workspace/akari-design/tmp/akari-v3.0/design-state.json",
+  "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-19-laugh-surprise/exploration.json"
+}

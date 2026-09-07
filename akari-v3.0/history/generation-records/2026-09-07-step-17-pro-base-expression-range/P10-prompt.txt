@@ -1,0 +1,14 @@
+Use case: identity-preserve.
+Asset type: Akari v3.0 expression exploration, one standalone illustration.
+
+Input images and roles:
+- Image 1 (P2) is the sole editing canvas: preserve its composition, crop, head position and tilt, body, clothes, background and rendering. Change the facial expression only.
+- Image 2 (P1) is the original facial identity, hair and drawing reference. Use it to preserve the specific facial geometry and rendering as expression changes; do not copy its open smile.
+
+Expression change — shy deflection (照れ隠し):
+She has just been gently complimented by a familiar childhood friend and tries to act casual, but a restrained smile gives her away. Shift both irises together a little toward one side, so she briefly avoids direct eye contact without turning her head. Draw a small closed mouth holding back a smile, with a slight charming asymmetry and only one corner faintly lifted. Give the brows a softly self-conscious subtle lift, not a worried arch. Make the existing cheek blush a little warmer while preserving its fine diagonal hatching. The expression should read clearly as mildly flustered and quietly pleased, with natural warmth and familiarity. Avoid sadness, distress, tears, sweating symbols, a big embarrassed grin or a caricature. Keep the face relaxed and recognizable.
+
+Identity and style invariants:
+Preserve this exact character's broad rounded grey eyes with softly descending outer corners, eye spacing, iris size and grey tonal structure, small highlights, full round cheeks, short lower face and small chin. Retain black rounded bob, separated blunt bang groups, fine cheek-framing strands, delicate lash/line treatment and diagonal pink cheek hatching. Let brows, gaze and mouth move to express the emotion naturally, without replacing the specific face with a generic anime face. Keep eyes open with round vertical volume rather than narrow sleepy slits. Preserve the cheek/jaw silhouette and existing facial feature positions.
+
+Keep Image 1's square waist-up framing and face size, slight forward lean, arms behind the body, white short-sleeve open-collar shirt with blue-grey piping, collar, buttons, fabric drape, pleated skirt, leafy wall/path backdrop and neutral soft daylight. Body and clothing remain unchanged. No accessories, hand gesture, camera shift, extra person, speech bubble, panel, text or watermark. Return one finished square illustration.

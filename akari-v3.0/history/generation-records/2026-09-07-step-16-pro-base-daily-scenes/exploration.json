@@ -1,0 +1,188 @@
+{
+  "project": "akari-v3.0",
+  "stage": "16-pro-base-daily-scenes",
+  "status": "user_approved_daily_scene_set",
+  "user_quote": "じゃあ進めようか。",
+  "face_authority": "P1",
+  "expression_authority": "P2",
+  "body_and_outfit_authority": "P6",
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "mode": "built-in",
+    "backend_model": "not_exposed",
+    "seed": "not_exposed",
+    "calls_planned": 3,
+    "calls_completed": 3,
+    "total_elapsed_ms": 109964
+  },
+  "reference_preparation": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/assets/preparation-manifest.json",
+  "reference_policy": "P8 and initial P9 independently use original P1, P2 and P6 body crop. One P9 camera refinement additionally uses its own scene draft as editing canvas while directly retaining original P1/P2 and P6 body crop. No scene becomes the facial authority.",
+  "variants": [
+    {
+      "id": "P8",
+      "concept_ja": "待ち合わせで小さく手を振る",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/P8-casual-greeting.png",
+      "status": "user_approved_daily_scene_example",
+      "prompt": "Use case: identity-preserve.\nCreate ONE finished anime illustration of Akari in the everyday scene below.\n\nREFERENCE ROLES\nImage 1, original P1: primary face, eye geometry, hair and drawing style. Preserve this particular face in the new scene.\nImage 2, selected P2: the everyday expression, a small relaxed closed-mouth smile, open grey eyes and natural familiarity. Use this expression throughout.\nImage 3, body-only crop of selected P6: body proportions and summer uniform only. Preserve its shoulder width, natural clothed torso, healthy build, white short-sleeve open-collar shirt with narrow blue-grey piping, and blue-grey pleated skirt. Navy ribbed below-knee socks and white sneakers remain the outfit even where outside the frame.\n\nFACIAL CONTINUITY\nKeep the P1/P2 rounded vertically open grey eyes, arched upper lids with softly falling outer corners, substantial grey irises, full cheeks, short lower face and small chin in their pictured proportions. Preserve fine diagonal blush hatching, restrained nose, layered iris detail, delicate irregular linework and softly textured shading. Keep the rounded chin-length black bob, distinct blunt fringe clumps and wispy cheek strands. Adapt these shapes to the pose; do not substitute elongated almond eyes, narrow beauty-face cheeks, sleepy eyelids or a sharpened jaw. The expression stays a quiet closed-mouth smile, with no teeth or open mouth. No age-label-driven redesign.\n\nSCENE AND COMPOSITION\nAkari has spotted the viewer at a quiet leafy neighborhood path. Eye-level medium-close view from crown to hips, face near frontal with a slight natural tilt, head and hair approximately 40 percent of image height. She makes a small casual greeting wave beside one shoulder: elbow comfortably bent, one fully visible anatomically correct hand with five relaxed fingers, palm angled toward the viewer. Keep the hand clear of her face. Her other arm rests naturally at her side. She looks directly toward the viewer with the selected calm closed smile. A pale wall, summer foliage and a softly receding walkway provide understated context. Keep the interaction unposed and familiar.\n\nSoft natural daylight and a quiet, familiar everyday mood. Retain the visual texture and face treatment of P1/P2. Keep the face large and detailed enough to inspect. All visible limbs and fingers connect naturally; coherent collar, sleeves and fabric folds. One character only; the viewer is the implied familiar companion and is not drawn. No added accessories, captions, panels, watermarks or logos. Return one standalone square illustration.\n",
+      "prompt_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/P8-prompt.txt",
+      "prompt_sha256": "d067331dde353bd500687169c082e36481edb82d17e1c695484c01f884c06158",
+      "referenced_image_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/assets/P6-body-only.png"
+      ],
+      "input_sha256": [
+        "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+        "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+        "aaed9f2b532699f36cec6f469d5d55a4173a1d2b00526259a20de63f5d09d7a1"
+      ],
+      "generated_original": "/home/abe/.codex/generated_images/01a07aac-bb77-7420-886e-f3f0daecfe49/exec-def099b3-fbcc-44c6-9cf5-192af415fc04.png",
+      "elapsed_ms": 32355,
+      "sha256": "3824973509e5587e83f3f257e8faf7822f0ff37a14d03e9157a4017ad070bd98",
+      "bytes": 2067723,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "tool_call": {
+        "tool": "image_gen.imagegen",
+        "arguments": {
+          "prompt": "Use case: identity-preserve.\nCreate ONE finished anime illustration of Akari in the everyday scene below.\n\nREFERENCE ROLES\nImage 1, original P1: primary face, eye geometry, hair and drawing style. Preserve this particular face in the new scene.\nImage 2, selected P2: the everyday expression, a small relaxed closed-mouth smile, open grey eyes and natural familiarity. Use this expression throughout.\nImage 3, body-only crop of selected P6: body proportions and summer uniform only. Preserve its shoulder width, natural clothed torso, healthy build, white short-sleeve open-collar shirt with narrow blue-grey piping, and blue-grey pleated skirt. Navy ribbed below-knee socks and white sneakers remain the outfit even where outside the frame.\n\nFACIAL CONTINUITY\nKeep the P1/P2 rounded vertically open grey eyes, arched upper lids with softly falling outer corners, substantial grey irises, full cheeks, short lower face and small chin in their pictured proportions. Preserve fine diagonal blush hatching, restrained nose, layered iris detail, delicate irregular linework and softly textured shading. Keep the rounded chin-length black bob, distinct blunt fringe clumps and wispy cheek strands. Adapt these shapes to the pose; do not substitute elongated almond eyes, narrow beauty-face cheeks, sleepy eyelids or a sharpened jaw. The expression stays a quiet closed-mouth smile, with no teeth or open mouth. No age-label-driven redesign.\n\nSCENE AND COMPOSITION\nAkari has spotted the viewer at a quiet leafy neighborhood path. Eye-level medium-close view from crown to hips, face near frontal with a slight natural tilt, head and hair approximately 40 percent of image height. She makes a small casual greeting wave beside one shoulder: elbow comfortably bent, one fully visible anatomically correct hand with five relaxed fingers, palm angled toward the viewer. Keep the hand clear of her face. Her other arm rests naturally at her side. She looks directly toward the viewer with the selected calm closed smile. A pale wall, summer foliage and a softly receding walkway provide understated context. Keep the interaction unposed and familiar.\n\nSoft natural daylight and a quiet, familiar everyday mood. Retain the visual texture and face treatment of P1/P2. Keep the face large and detailed enough to inspect. All visible limbs and fingers connect naturally; coherent collar, sleeves and fabric folds. One character only; the viewer is the implied familiar companion and is not drawn. No added accessories, captions, panels, watermarks or logos. Return one standalone square illustration.\n",
+          "referenced_image_paths": [
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png",
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/assets/P6-body-only.png"
+          ]
+        }
+      },
+      "visual_review": {
+        "face_expression": "Large readable grey irises and rounded downturned eye openings, full cheeks, short lower-face balance, hatching and bob remain recognizable from P1/P2. Small closed smile and direct gaze read clearly. No major generic-face drift observed at normal display.",
+        "scene_anatomy": "Five-finger wave is clear; hand, wrist and bent forearm connect coherently and do not cover the face. Head-to-hips framing and leafy path read naturally.",
+        "body_outfit": "Selected white short-sleeve shirt, narrow blue-grey piping and pleated skirt retained. Sleeve and torso folds adapt to arm gesture. Lower legs and socks are outside frame.",
+        "assessment": "Strong greeting-scene candidate; original face/expression references remain authoritative."
+      }
+    },
+    {
+      "id": "P9",
+      "concept_ja": "ベンチで隣の相手の話を聞く",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/P9-2-bench-eye-level.png",
+      "status": "user_approved_daily_scene_example",
+      "prompt": "Use case: identity-preserve. Refine the camera of the supplied park-bench illustration into one finished square image.\n\nINPUT ROLES\nImage 1 (original P1) defines facial identity, rounded downturned grey eyes, full cheeks, small chin, blunt fringe, bob and delicate illustrated rendering.\nImage 2 (approved P2) defines the quiet closed-mouth smile and relaxed open eyes. Keep these original references for the face.\nImage 3 (P9 bench scene) is the editing canvas: preserve this character, summer clothes, seated listening moment, wooden bench and soft park setting.\nImage 4 (body-only P6) supports selected shoulder width, body volume and outfit design.\n\nCAMERA CHANGE\nMove the viewpoint to a companion seated immediately beside Akari on the same bench, at exactly her seated eye height, looking horizontally toward her face. This must be visibly lower and more alongside than Image 3. Her shoulders turn toward the nearby viewer naturally. Use a close head-and-torso framing, with part of her resting hands and skirt-covered lap near the lower edge. Favor the sideward depth of the bench back and very little bench-seat top surface. Do not look down at her scalp, neckline or lap. Keep normal perspective; no low dramatic angle or wide-angle distortion.\n\nPreserve the P1/P2 cheek and eye proportions, grey iris rendering, fine diagonal cheek hatching, chin-length rounded black bob and wispy face-side strands. Keep the same small closed smile and soft attentive gaze. Maintain coherent body and hand anatomy, plain white short-sleeve shirt with narrow blue-grey piping, blue-grey pleated skirt, and subtle daylight. Change perspective and necessary pose geometry without beautifying, lengthening or narrowing the face. A natural close conversation with a familiar person; no extra person, props, text or panels. Return one standalone square illustration.",
+      "prompt_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/P9-refinement-prompt.txt",
+      "prompt_sha256": "dbd314f5152f178ebb575d68ea79b487352460bf5ffb4c5f407e868f73fa73fc",
+      "referenced_image_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/P9-bench-listening.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/assets/P6-body-only.png"
+      ],
+      "input_sha256": [
+        "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+        "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+        "40e22c78272dbd85a1158a2905fffb67c0a53bafe52f8ee0c72fa0fa6b34b3a1",
+        "aaed9f2b532699f36cec6f469d5d55a4173a1d2b00526259a20de63f5d09d7a1"
+      ],
+      "replaces_draft": "P9-draft-high-camera",
+      "refinement_reason": "Initial composition looked down at the seated character; bring the camera to seated eye height and beside her.",
+      "generated_original": "/home/abe/.codex/generated_images/01a07aac-bb77-7420-886e-f3f0daecfe49/exec-6ec7ba68-e65c-4773-82b6-2fbe6a013199.png",
+      "elapsed_ms": 41161,
+      "sha256": "689e3d1e4a792a7fc67ce004bfb8ebe249eacc311bf405d3a4d960c33d127069",
+      "bytes": 2081597,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "tool_call": {
+        "tool": "image_gen.imagegen",
+        "arguments": {
+          "prompt": "Use case: identity-preserve. Refine the camera of the supplied park-bench illustration into one finished square image.\n\nINPUT ROLES\nImage 1 (original P1) defines facial identity, rounded downturned grey eyes, full cheeks, small chin, blunt fringe, bob and delicate illustrated rendering.\nImage 2 (approved P2) defines the quiet closed-mouth smile and relaxed open eyes. Keep these original references for the face.\nImage 3 (P9 bench scene) is the editing canvas: preserve this character, summer clothes, seated listening moment, wooden bench and soft park setting.\nImage 4 (body-only P6) supports selected shoulder width, body volume and outfit design.\n\nCAMERA CHANGE\nMove the viewpoint to a companion seated immediately beside Akari on the same bench, at exactly her seated eye height, looking horizontally toward her face. This must be visibly lower and more alongside than Image 3. Her shoulders turn toward the nearby viewer naturally. Use a close head-and-torso framing, with part of her resting hands and skirt-covered lap near the lower edge. Favor the sideward depth of the bench back and very little bench-seat top surface. Do not look down at her scalp, neckline or lap. Keep normal perspective; no low dramatic angle or wide-angle distortion.\n\nPreserve the P1/P2 cheek and eye proportions, grey iris rendering, fine diagonal cheek hatching, chin-length rounded black bob and wispy face-side strands. Keep the same small closed smile and soft attentive gaze. Maintain coherent body and hand anatomy, plain white short-sleeve shirt with narrow blue-grey piping, blue-grey pleated skirt, and subtle daylight. Change perspective and necessary pose geometry without beautifying, lengthening or narrowing the face. A natural close conversation with a familiar person; no extra person, props, text or panels. Return one standalone square illustration.",
+          "referenced_image_paths": [
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png",
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/P9-bench-listening.png",
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/assets/P6-body-only.png"
+          ]
+        }
+      },
+      "visual_review": {
+        "face_expression": "The tighter portrait retains the P1/P2 round grey eyes, full near cheek, small closed smile, hatching and black bob. Face remains large and recognizable, with redraws in chin/cheek contours and eye highlights.",
+        "scene_anatomy": "Seated torso, bent arms and hands on the skirt-covered lap read coherently. Close crop slightly clips the crown; bench and foliage provide clear seated context.",
+        "camera_result": "Refinement mainly tightens the crop and changes body/hand orientation. Some downward camera angle remains; a strict companion-at-seated-eye-height view is not demonstrated.",
+        "body_outfit": "P6 shoulder/body character and summer uniform remain recognizable in the visible region. New folds and lap geometry are generated; legs and socks outside crop.",
+        "assessment": "Useful close bench-conversation candidate with unresolved camera-height limitation. Keep initial draft as an alternate; do not claim camera correction fully achieved."
+      }
+    }
+  ],
+  "selected": null,
+  "approved_set": [
+    "P8",
+    "P9"
+  ],
+  "evaluation": [
+    "Original P1/P2 eyes, cheek/chin balance, hatching and bob retained in new scene",
+    "Selected small closed smile and natural childhood-friend familiarity read clearly",
+    "P6 body and summer uniform consistent in visible areas",
+    "Greeting hand/arm or seated hands/lap/bench anatomy coherent",
+    "Face stays large; natural eye-level composition without dramatic perspective"
+  ],
+  "limits": "Scene candidates awaiting user review; no automatic facial-reference promotion. Features outside the crop cannot be visually verified in a scene.",
+  "drafts": [
+    {
+      "id": "P9-draft-high-camera",
+      "concept_ja": "ベンチで隣の相手の話を聞く",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/P9-bench-listening.png",
+      "status": "camera_refinement_needed",
+      "prompt": "Use case: identity-preserve.\nCreate ONE finished anime illustration of Akari in the everyday scene below.\n\nREFERENCE ROLES\nImage 1, original P1: primary face, eye geometry, hair and drawing style. Preserve this particular face in the new scene.\nImage 2, selected P2: the everyday expression, a small relaxed closed-mouth smile, open grey eyes and natural familiarity. Use this expression throughout.\nImage 3, body-only crop of selected P6: body proportions and summer uniform only. Preserve its shoulder width, natural clothed torso, healthy build, white short-sleeve open-collar shirt with narrow blue-grey piping, and blue-grey pleated skirt. Navy ribbed below-knee socks and white sneakers remain the outfit even where outside the frame.\n\nFACIAL CONTINUITY\nKeep the P1/P2 rounded vertically open grey eyes, arched upper lids with softly falling outer corners, substantial grey irises, full cheeks, short lower face and small chin in their pictured proportions. Preserve fine diagonal blush hatching, restrained nose, layered iris detail, delicate irregular linework and softly textured shading. Keep the rounded chin-length black bob, distinct blunt fringe clumps and wispy cheek strands. Adapt these shapes to the pose; do not substitute elongated almond eyes, narrow beauty-face cheeks, sleepy eyelids or a sharpened jaw. The expression stays a quiet closed-mouth smile, with no teeth or open mouth. No age-label-driven redesign.\n\nSCENE AND COMPOSITION\nAkari sits comfortably on a simple wooden park bench beside the implied viewer. The camera is at her seated eye height, slightly to one side at a normal conversational distance, not looking down on her. Her body sits naturally along the bench while head and shoulders turn a little toward the viewer. She quietly listens with the selected small closed smile and attentive open grey eyes. Frame closely from crown to lap and upper thighs, keeping head and hair approximately 40 percent of image height; show both relaxed hands resting naturally on the skirt-covered lap and enough bench seat/back to make sitting unmistakable. Keep the skirt covering the seated lap with natural folds and normal garment length. Soft trees and a quiet path in the background. No dramatic perspective, overhead camera, exaggerated leaning or forced pose.\n\nSoft natural daylight and a quiet, familiar everyday mood. Retain the visual texture and face treatment of P1/P2. Keep the face large and detailed enough to inspect. All visible limbs and fingers connect naturally; coherent collar, sleeves and fabric folds. One character only; the viewer is the implied familiar companion and is not drawn. No added accessories, captions, panels, watermarks or logos. Return one standalone square illustration.\n",
+      "prompt_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/P9-prompt.txt",
+      "prompt_sha256": "c8f40f2b44f3ad750f6e015c2af5421449f5d1f97e46609edc794580e06d6bf8",
+      "referenced_image_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/assets/P6-body-only.png"
+      ],
+      "input_sha256": [
+        "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+        "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+        "aaed9f2b532699f36cec6f469d5d55a4173a1d2b00526259a20de63f5d09d7a1"
+      ],
+      "generated_original": "/home/abe/.codex/generated_images/01a07aac-bb77-7420-886e-f3f0daecfe49/exec-b059a0e6-09a5-477e-af5e-21fd0a77e326.png",
+      "elapsed_ms": 36448,
+      "sha256": "40e22c78272dbd85a1158a2905fffb67c0a53bafe52f8ee0c72fa0fa6b34b3a1",
+      "bytes": 2102461,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "visual_review": {
+        "face": "P1/P2 grey eyes, rounded cheeks, hatching, bob and small closed smile remain recognizable.",
+        "scene": "Seated body, lap and hands read naturally, but the camera appears above seated eye level and in front; does not fully read as a companion seated beside her.",
+        "action": "One targeted camera refinement, preserving original as a draft."
+      },
+      "tool_call": {
+        "tool": "image_gen.imagegen",
+        "arguments": {
+          "prompt": "Use case: identity-preserve.\nCreate ONE finished anime illustration of Akari in the everyday scene below.\n\nREFERENCE ROLES\nImage 1, original P1: primary face, eye geometry, hair and drawing style. Preserve this particular face in the new scene.\nImage 2, selected P2: the everyday expression, a small relaxed closed-mouth smile, open grey eyes and natural familiarity. Use this expression throughout.\nImage 3, body-only crop of selected P6: body proportions and summer uniform only. Preserve its shoulder width, natural clothed torso, healthy build, white short-sleeve open-collar shirt with narrow blue-grey piping, and blue-grey pleated skirt. Navy ribbed below-knee socks and white sneakers remain the outfit even where outside the frame.\n\nFACIAL CONTINUITY\nKeep the P1/P2 rounded vertically open grey eyes, arched upper lids with softly falling outer corners, substantial grey irises, full cheeks, short lower face and small chin in their pictured proportions. Preserve fine diagonal blush hatching, restrained nose, layered iris detail, delicate irregular linework and softly textured shading. Keep the rounded chin-length black bob, distinct blunt fringe clumps and wispy cheek strands. Adapt these shapes to the pose; do not substitute elongated almond eyes, narrow beauty-face cheeks, sleepy eyelids or a sharpened jaw. The expression stays a quiet closed-mouth smile, with no teeth or open mouth. No age-label-driven redesign.\n\nSCENE AND COMPOSITION\nAkari sits comfortably on a simple wooden park bench beside the implied viewer. The camera is at her seated eye height, slightly to one side at a normal conversational distance, not looking down on her. Her body sits naturally along the bench while head and shoulders turn a little toward the viewer. She quietly listens with the selected small closed smile and attentive open grey eyes. Frame closely from crown to lap and upper thighs, keeping head and hair approximately 40 percent of image height; show both relaxed hands resting naturally on the skirt-covered lap and enough bench seat/back to make sitting unmistakable. Keep the skirt covering the seated lap with natural folds and normal garment length. Soft trees and a quiet path in the background. No dramatic perspective, overhead camera, exaggerated leaning or forced pose.\n\nSoft natural daylight and a quiet, familiar everyday mood. Retain the visual texture and face treatment of P1/P2. Keep the face large and detailed enough to inspect. All visible limbs and fingers connect naturally; coherent collar, sleeves and fabric folds. One character only; the viewer is the implied familiar companion and is not drawn. No added accessories, captions, panels, watermarks or logos. Return one standalone square illustration.\n",
+          "referenced_image_paths": [
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png",
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/assets/P6-body-only.png"
+          ]
+        }
+      }
+    }
+  ],
+  "verification": {
+    "all_generated_originals_preserved": true,
+    "png_dimensions_and_hashes_valid": true,
+    "prompts_match_recorded_tool_arguments": true,
+    "original_P1_P2_directly_referenced_in_every_call": true,
+    "P6_body_crop_exact_and_unchanged": true,
+    "selected_face_expression_body_outfit_baselines_unchanged": true,
+    "historical_scene_feedback_preserved": true,
+    "camera_draft_and_refinement_lineage_preserved": true,
+    "scene_candidates_not_promoted": true
+  },
+  "approval_user_quote": "だいじょぶそう",
+  "approval_scope": "Displayed P8 greeting and refined P9 bench scene accepted as daily scene examples. P1 face, P2 expression and P6 full-body references remain authoritative. The recorded P9 camera limitation remains.",
+  "assistant_assessment_before_user_review": "P8 is the stronger identity/scene check. P9 remains a useful close seated scene, with a modest downward viewpoint after one camera refinement. Both await user review."
+}

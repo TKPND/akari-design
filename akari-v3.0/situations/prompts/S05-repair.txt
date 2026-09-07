@@ -1,0 +1,7 @@
+Use case: precise-object-edit. Repair one local anatomical error in Image 1.
+
+Image 1 is the sole edit target and complete scene authority: Akari offering a plain silver cold drink beside a vending machine. Image 2 (P1) is supporting facial identity only, to preserve the existing recognizable face; do not change the expression or face.
+
+Change ONLY the foreground hand gripping the offered can, on the viewer-left side of the image. The current hand incorrectly has an extra digit on top of the can in addition to four fingers along the viewer-left edge and a thumb at the viewer-right edge. Reconstruct a single natural five-digit right-hand grip: exactly four fingers curled down along the viewer-left side of the can, and exactly one thumb resting against the viewer-right side of the can. REMOVE the extra top digit entirely. The can lid must be fully unobstructed by fingers. Connect the hand and palm plausibly to the existing forearm behind the can. Keep the can's shape, top ellipse, condensation, scale, position and plain design, with natural finger contact and no gaps or extra fingertips.
+
+Preserve all other content as closely as possible: entire face and eyes, smile, black bob and bangs, skin and blush, body proportions, arm pose outside the small hand repair region, other hand and its can, shirt and blue-grey piping, skirt, socks, street, vending machine, greenery, background perspective, light, linework, color palette and original portrait 2:3 framing. No additional props, no text, no other edits. Return the complete corrected original scene.

@@ -1,0 +1,1128 @@
+{
+  "project": "akari-v3.0",
+  "updated": "2026-09-07",
+  "workflow": "stepwise image-led exploration: face and hair, then body proportions, then outfits",
+  "current_stage": "laugh_and_surprise_ready_for_review",
+  "constraints": {
+    "legacy_assets": "Do not use earlier repository versions",
+    "face_style": "Use user-selected P1 Pro image for current facial geometry, soft downturned grey eyes, cheek-mouth balance, black bob, segmented bangs and drawing treatment; no age-label-driven redesign.",
+    "relationship": "childhood friend",
+    "personality": "natural and easygoing",
+    "current_full_body_reference": "P6 selected full-body integration; B7 retained as original body-construction history.",
+    "leg_and_sock_design_intent": "Keep the healthy leg contours and navy ribbed below-knee socks in selected P6, inherited from user-refined B7.",
+    "facial_detail_reference_priority": "P1 is the original face/hair/drawing reference; P2 is the selected everyday smile. P4/P5 are approved bust-angle support. P6 is the selected body/outfit and whole-body appearance. Supply original face/expression references directly for future generation."
+  },
+  "face": {
+    "selected": "P1",
+    "status": "user_selected_working_baseline",
+    "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+    "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+    "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/import.json",
+    "user_quote": "Proのやつ土台にしてみよう",
+    "supersedes": "A2",
+    "scope": "Working facial design, hair and drawing treatment; original A2/R0 remain historical taste audit."
+  },
+  "body": {
+    "selected": "P6",
+    "status": "user_selected_current_baseline",
+    "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+    "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/exploration.json",
+    "historical_base_proportions": "B3-2",
+    "historical_shoulder_selection": "B5-2",
+    "current_reference_priority": "Use selected P6 for current full-body proportions. B7 preserves the user-authored healthy-leg and shoulder intent as construction history.",
+    "leg_design_intent": "Retain the fuller, healthy-looking thigh and calf contours in the supplied image.",
+    "user_quote": "ちょっと脚を健康的な感じにしてる。",
+    "sha256": "018f45133acb2d9cd3625d27090b38084f6b795a92a726ff641785d889c0a823",
+    "supersedes": "B7",
+    "construction_reference": "B7",
+    "selection_user_quote": "P6かな。"
+  },
+  "outfit": {
+    "selected": "B5-with-navy-high-socks",
+    "status": "user_selected_current_baseline",
+    "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+    "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/exploration.json",
+    "base_design": "B5",
+    "current_full_body_reference": "P6",
+    "description": "White open-collar short-sleeve shirt with blue-grey piping, blue-grey pleated skirt, white sneakers.",
+    "socks": "Navy ribbed knee-high socks ending below the knees are deliberate, to show the leg silhouette.",
+    "user_quote": "ハイソックスにしたのはラインが映えるように意図的。",
+    "sha256": "018f45133acb2d9cd3625d27090b38084f6b795a92a726ff641785d889c0a823",
+    "previous_full_body_reference": "B7",
+    "selection_user_quote": "P6かな。"
+  },
+  "outfit_history": [
+    {
+      "selected": null,
+      "status": "three_options_ready",
+      "comparison_clothes": "Common plain long-sleeve top, straight trousers, low-top sneakers; provisional only",
+      "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-03-outfits/exploration.json",
+      "candidates": [
+        {
+          "id": "A4",
+          "concept_ja": "カーディガンで柔らかく",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-03-outfits/A4-soft-cardigan.png"
+        },
+        {
+          "id": "B4",
+          "concept_ja": "スウェットで気楽に",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-03-outfits/B4-easy-sweatshirt.png"
+        },
+        {
+          "id": "C4",
+          "concept_ja": "ブラウスで少しきれいめ",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-03-outfits/C4-soft-blouse.png"
+        }
+      ]
+    },
+    {
+      "selected": "B5",
+      "status": "working_baseline_selected",
+      "direction": "simple summer uniform; original design inspired by user attachment, not a copy",
+      "user_quote": "シンプルにこういう夏制服にしたいな。(参考画像と同じだとつまらんからコピーは無しでw)",
+      "reference": "/home/abe/.codex/attachments/59371e7e-78d7-424d-ba53-4c9427959b41/Codex 画像 2026年9月7日 16_43_57.png",
+      "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-03b-summer-uniform/exploration.json",
+      "candidates": [
+        {
+          "id": "A5",
+          "concept_ja": "丸襟・くすみローズのリボン",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-03b-summer-uniform/A5-rounded-collar-rose-ribbon.png"
+        },
+        {
+          "id": "B5",
+          "concept_ja": "開襟・ブルーグレー",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-03b-summer-uniform/B5-open-collar-blue-grey.png"
+        },
+        {
+          "id": "C5",
+          "concept_ja": "小さめセーラー襟・青緑",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-03b-summer-uniform/C5-small-sailor-teal.png"
+        }
+      ],
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-03b-summer-uniform/B5-open-collar-blue-grey.png",
+      "selection_user_quote": "B5が良さげ"
+    },
+    {
+      "selected": "B5-with-navy-high-socks",
+      "status": "user_selected_current_baseline",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-05-user-full-body/B7-user-refined-full-body.png",
+      "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-05-user-full-body/import.json",
+      "base_design": "B5",
+      "current_full_body_reference": "B7",
+      "description": "White open-collar short-sleeve shirt with blue-grey piping, blue-grey pleated skirt, white sneakers.",
+      "socks": "Navy ribbed knee-high socks ending below the knees are deliberate, to show the leg silhouette.",
+      "user_quote": "ハイソックスにしたのはラインが映えるように意図的。"
+    }
+  ],
+  "appearance": {
+    "selected": "P6",
+    "status": "user_selected_current_baseline",
+    "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+    "sha256": "018f45133acb2d9cd3625d27090b38084f6b795a92a726ff641785d889c0a823",
+    "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/exploration.json",
+    "face_identity": "P1",
+    "everyday_expression": "P2",
+    "body_proportions": "P6 selected integration, derived from user-refined B7 shoulders and healthy leg contours.",
+    "outfit_design": "White open-collar short-sleeve shirt with blue-grey piping, blue-grey pleated skirt, navy below-knee ribbed socks and white sneakers.",
+    "supersedes": "B7",
+    "selection_user_quote": "P6かな。",
+    "face_reference_note": "Use original P1 directly for facial detail and P2 for the everyday closed smile. P6 is the selected whole-body illustration."
+  },
+  "expressions": {
+    "status": "user_selected_everyday_expression",
+    "face_baseline": "P1",
+    "body_baseline": "B7",
+    "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/exploration.json",
+    "selected": "P2",
+    "approved_set": [
+      "P2"
+    ],
+    "pending_review": [],
+    "baseline_expression": "P1 original open smile",
+    "current_generation_role": "P2 is the selected everyday closed-smile reference. Original P1 stays the facial drawing/geometry source; use both directly for new views.",
+    "assistant_recommended_everyday_expression": "P2",
+    "candidates": [
+      {
+        "id": "P2",
+        "concept_ja": "口を閉じた普段の微笑み",
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png"
+      },
+      {
+        "id": "P3",
+        "concept_ja": "少し嬉しそうな笑顔",
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P3-pleased-smile.png"
+      }
+    ],
+    "everyday_expression": "P2",
+    "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png",
+    "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+    "selection_user_quote": "P2で進めたい"
+  },
+  "appearance_history": [
+    {
+      "status": "working_baseline_selected",
+      "selected": "B5-2",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-03c-shoulder-balance/B5-2-balanced-shoulder-width.png",
+      "sha256": "740f5209553108966b381eb0317242f7e8e5100c83c3b771a79710e8817fbc04",
+      "face_identity": "A2",
+      "body_proportions": "B3-2 with B5-2 shoulder adjustment",
+      "outfit_design": "B5",
+      "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-03c-shoulder-balance/exploration.json",
+      "selection_user_quote": "B5-2ぐらいがいいね"
+    },
+    {
+      "selected": "B7",
+      "status": "user_selected_current_baseline",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-05-user-full-body/B7-user-refined-full-body.png",
+      "sha256": "5ac907c49276cf680c6eb426055d8701891ad2300d663cbe68f105dfc1ff4863",
+      "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-05-user-full-body/import.json",
+      "face_identity": "P1",
+      "body_proportions": "User-refined B5-2 with fuller healthy-looking legs; supplied B7 image is authoritative.",
+      "outfit_design": "B5 with navy knee-high socks as shown in B7",
+      "supersedes": "B5-2",
+      "selection_user_quote": "差し替えておいて",
+      "face_reference_note": "B7 remains the unchanged full-body image; future face rendering follows separately selected P1."
+    }
+  ],
+  "body_history": [
+    {
+      "selected": "B3",
+      "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-02-body/exploration.json",
+      "candidates": [
+        {
+          "id": "A3",
+          "concept_ja": "小柄でコンパクト",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-02-body/A3-compact.png"
+        },
+        {
+          "id": "B3",
+          "concept_ja": "自然な全身バランス",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-02-body/B3-natural-balance.png"
+        },
+        {
+          "id": "C3",
+          "concept_ja": "少しふっくらした体つき",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-02-body/C3-soft-build.png"
+        }
+      ],
+      "status": "working_baseline_selected",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-02b-body-refinement/B3-2-moderate-volume.png",
+      "user_quote": "B3かな。しかし胸はもう少し大きくしたい.",
+      "refinement_manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-02b-body-refinement/exploration.json",
+      "refinement_candidates": [
+        {
+          "id": "B3-1",
+          "concept_ja": "胸の量感を少し足す",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-02b-body-refinement/B3-1-subtle-volume.png"
+        },
+        {
+          "id": "B3-2",
+          "concept_ja": "胸の量感をもう一段足す",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-02b-body-refinement/B3-2-moderate-volume.png"
+        }
+      ],
+      "refinement_selected": "B3-2",
+      "refinement_user_quote": "B3-2ぐらいがええね。",
+      "shoulder_refinement": {
+        "selected": "B5-2",
+        "status": "working_baseline_selected",
+        "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-03c-shoulder-balance/exploration.json",
+        "user_feedback": "B5が良さげ。気になる点としてはちょっと顔に対して微妙に肩幅が小さい気がする",
+        "original": {
+          "id": "B5",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-03b-summer-uniform/B5-open-collar-blue-grey.png"
+        },
+        "candidates": [
+          {
+            "id": "B5-1",
+            "concept_ja": "肩幅を少し広げる",
+            "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-03c-shoulder-balance/B5-1-subtle-shoulder-width.png"
+          },
+          {
+            "id": "B5-2",
+            "concept_ja": "肩幅をもう一段広げる",
+            "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-03c-shoulder-balance/B5-2-balanced-shoulder-width.png"
+          }
+        ],
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-03c-shoulder-balance/B5-2-balanced-shoulder-width.png",
+        "selection_user_quote": "B5-2ぐらいがいいね"
+      }
+    },
+    {
+      "selected": "B7",
+      "status": "user_selected_current_baseline",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-05-user-full-body/B7-user-refined-full-body.png",
+      "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-05-user-full-body/import.json",
+      "historical_base_proportions": "B3-2",
+      "historical_shoulder_selection": "B5-2",
+      "current_reference_priority": "Use B7 for all current full-body proportions, including shoulders and legs.",
+      "leg_design_intent": "Retain the fuller, healthy-looking thigh and calf contours in the supplied image.",
+      "user_quote": "ちょっと脚を健康的な感じにしてる。"
+    }
+  ],
+  "reference_views": {
+    "status": "accepted_for_full_body_use",
+    "approved_views": [
+      "A8",
+      "B8",
+      "C8"
+    ],
+    "appearance_baseline": "B7",
+    "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-06-three-views/exploration.json",
+    "inferred_details": "Side and rear geometry and plain shirt-back construction accepted for full-body use; use close-ups for facial detail.",
+    "candidates": [
+      {
+        "id": "A8",
+        "concept_ja": "正面",
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-06-three-views/A8-front-view.png"
+      },
+      {
+        "id": "B8",
+        "concept_ja": "横",
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-06-three-views/B8-side-view.png"
+      },
+      {
+        "id": "C8",
+        "concept_ja": "後ろ",
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-06-three-views/C8-back-view.png"
+      }
+    ],
+    "approval_user_quote": "まぁ許容範囲だが、やっぱバストアップの絵も作った方がいいと思う(引き絵だと特徴が省略されやすい)",
+    "facial_reference_note": "Historical A8/B8/C8 full-body views are not face authorities. Current facial identity follows original P1 with P2 everyday expression; P4/P5 are approved angle support."
+  },
+  "bust_details": {
+    "status": "user_approved_angle_set",
+    "face_baseline": "P1",
+    "expression_baseline": "P2",
+    "body_baseline": "B7",
+    "approved_details": [
+      "P4",
+      "P5"
+    ],
+    "pending_review": [],
+    "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-14-pro-base-angles/exploration.json",
+    "purpose": "Inspect selected P1 face and P2 everyday smile at front and shallow three-quarter views.",
+    "candidates": [
+      {
+        "id": "P4",
+        "concept_ja": "正面・P2の微笑み",
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-14-pro-base-angles/P4-front-bust.png"
+      },
+      {
+        "id": "P5",
+        "concept_ja": "浅い斜め・P2の微笑み",
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-14-pro-base-angles/P5-three-quarter-bust.png"
+      }
+    ],
+    "current_generation_role": "Approved angle support and comparison, with original P1 face and selected P2 expression remaining direct sources.",
+    "assistant_assessment": "Both retain the selected quiet smile and recognizable P1/P2 features at normal display. P4 fulfills the front view; P5 is useful for shallow-angle comparison but misses the specified turn direction and level head. Neither is promoted to face authority.",
+    "approval_user_quote": "大丈夫そう。"
+  },
+  "everyday_moments": {
+    "status": "user_approved_daily_scene_set",
+    "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/exploration.json",
+    "face_baseline": "P1",
+    "expression_baseline": "P2",
+    "body_baseline": "P6",
+    "selected": null,
+    "approved_set": [
+      "P8",
+      "P9"
+    ],
+    "pending_review": [],
+    "candidates": [
+      {
+        "id": "P8",
+        "concept_ja": "待ち合わせで小さく手を振る",
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/P8-casual-greeting.png"
+      },
+      {
+        "id": "P9",
+        "concept_ja": "ベンチで隣の相手の話を聞く",
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/P9-2-bench-eye-level.png"
+      }
+    ],
+    "camera_limitation": "P9 retains some downward view; not a strict seated-eye-level reference.",
+    "assistant_assessment_before_user_review": "P8 is the stronger identity/scene check. P9 remains a useful close seated scene, with a modest downward viewpoint after one camera refinement. Both await user review.",
+    "approval_user_quote": "だいじょぶそう",
+    "current_generation_role": "Approved daily-scene examples and composition support. Continue to reference original P1 face, selected P2 expression and selected P6 body/outfit directly."
+  },
+  "external_face_review": {
+    "status": "received_and_assessed",
+    "scope": "Trace facial identity and rendering drift from original reference through selected v3 stages.",
+    "user_feedback": "構図はいいが顔がチャッピー絵(GPT Imagesの汎用的な絵)に戻ってきたな。どこでドリフトしたんだか。。。 一旦、gpt-pro-review挟もうか。",
+    "generation_paused_for_review": false,
+    "historical_approvals": "Retained as chronology; approval is not proof of zero visual drift.",
+    "package_dir": "/home/abe/workspace/akari-design/tmp/gpt-pro-review/akari-v3-face-drift/deliverables/akari-v3-face-drift-2026-09-07-181616",
+    "prompt_path": "/home/abe/workspace/akari-design/tmp/gpt-pro-review/akari-v3-face-drift/deliverables/akari-v3-face-drift-2026-09-07-181616/PROMPT.md",
+    "archive_path": "/home/abe/workspace/akari-design/tmp/gpt-pro-review/akari-v3-face-drift/deliverables/akari-v3-face-drift-2026-09-07-181616/akari-v3-face-drift-2026-09-07-181616.tar.gz",
+    "image_count": 27,
+    "archive_sha256": "7ee28c808a7363f6e4faa7d31396e9e2607f03dedb081fb181ecbbfaa3f04a0a",
+    "external_review_executed": true,
+    "review_received_from_user": true,
+    "review_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-09-face-restoration/external-review.md",
+    "execution_provenance": "User supplied review from GPT Pro; no external review service was run by this assistant.",
+    "local_history_audit": "Key input-role claims and A6/B9 byte identity verified against current manifests.",
+    "cause_status": "Hypotheses, not controlled causal findings."
+  },
+  "reference_policy_history": [
+    {
+      "reason": "External face drift review received; preserve previous current-policy wording",
+      "facial_detail_reference_priority": "Use approved A9, B9 (identical to A6) and C9 close-ups for their respective face angles; A2 remains the original face design foundation. Full-body view faces are not the authority for fine features.",
+      "snapshot": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-09-face-restoration/previous-design-state.json"
+    },
+    {
+      "reason": "User explicitly selected P1 Pro image as new working facial base",
+      "user_quote": "Proのやつ土台にしてみよう",
+      "policy": {
+        "face_geometry_and_drawing": {
+          "id": "A2",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-01-face-round02/A2-reference-faithful.png",
+          "input_variant": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-09-face-restoration/assets/A2-head-crop.png"
+        },
+        "original_taste_audit": {
+          "id": "R0",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-01-face/reference-user.png",
+          "generation_input_this_step": false
+        },
+        "body_and_outfit": {
+          "id": "B7",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-05-user-full-body/B7-user-refined-full-body.png",
+          "input_variant": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-09-face-restoration/assets/B7-body-only.png"
+        },
+        "composition_this_step": {
+          "id": "A10",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-08-everyday-moments/A10-casual-greeting.png"
+        },
+        "expression_this_step": "Small open-mouth greeting, gaze to viewer; A2 face shapes adapted to A10 orientation.",
+        "limited_roles": {
+          "A6/B9": "closed smile intention and history only; same PNG",
+          "A9/C9": "angle proposals and re-audit only",
+          "A8/B8/C8": "full-body directions, clothing and posture only",
+          "A10/B10/C10": "scene composition and gesture only"
+        },
+        "promotion_rule": "Scene approval never automatically promotes generated face to identity authority. A2 remains until explicit user decision.",
+        "role_limit": "Text input roles do not guarantee spatial isolation; reference crops and face hiding reduce visible competing content.",
+        "editing_canvas_this_step": {
+          "id": "E2",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-09-face-restoration/E2-hidden-face-reference.png",
+          "role": "Local cheek/jaw refinement canvas; not a facial identity master. Existing outfit differences versus A10 remain recorded."
+        }
+      },
+      "snapshot": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/previous-design-state.json"
+    },
+    {
+      "reason": "User selected P2 everyday expression; progress to two angle studies",
+      "user_quote": "P2で進めたい",
+      "policy": {
+        "face_geometry_and_drawing": {
+          "id": "P1",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+          "input_variant": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+          "selection_user_quote": "Proのやつ土台にしてみよう"
+        },
+        "original_taste_audit": {
+          "ids": [
+            "A2",
+            "R0"
+          ],
+          "paths": [
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-01-face-round02/A2-reference-faithful.png",
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-01-face/reference-user.png"
+          ],
+          "generation_input_this_step": false,
+          "role": "Historical taste comparison; do not force P1 back to A2 geometry or blend their faces."
+        },
+        "body_and_outfit": {
+          "id": "B7",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-05-user-full-body/B7-user-refined-full-body.png",
+          "input_variant": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-09-face-restoration/assets/B7-body-only.png"
+        },
+        "composition_this_step": {
+          "id": "P1",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png"
+        },
+        "expression_this_step": "P2 closed everyday smile; P3 slightly happier open smile. Preserve P1 head pose, eyes and face proportions.",
+        "limited_roles": {
+          "A6/B9": "closed smile intention and history only; same PNG",
+          "A9/C9": "angle proposals and re-audit only",
+          "A8/B8/C8": "full-body directions, clothing and posture only",
+          "A10/B10/C10": "scene composition and gesture only",
+          "E2/F2": "Restoration comparison/history; user chose P1 as new working facial base."
+        },
+        "promotion_rule": "P1 is current face authority by explicit user choice. New expression/scene approval never automatically promotes a derived image to face authority.",
+        "role_limit": "Text input roles do not guarantee spatial isolation; reference crops and face hiding reduce visible competing content.",
+        "editing_canvas_this_step": {
+          "id": "P1",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+          "role": "Each expression variant independently edits this same original."
+        }
+      },
+      "snapshot": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-14-pro-base-angles/previous-design-state.json"
+    },
+    {
+      "reason": "P4/P5 accepted; next integrate selected face/expression with B7 whole-body design",
+      "user_quote": "大丈夫そう。",
+      "policy": {
+        "face_geometry_and_drawing": {
+          "id": "P1",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+          "input_variant": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+          "selection_user_quote": "Proのやつ土台にしてみよう"
+        },
+        "original_taste_audit": {
+          "ids": [
+            "A2",
+            "R0"
+          ],
+          "paths": [
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-01-face-round02/A2-reference-faithful.png",
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-01-face/reference-user.png"
+          ],
+          "generation_input_this_step": false,
+          "role": "Historical taste comparison; do not force P1 back to A2 geometry or blend their faces."
+        },
+        "body_and_outfit": {
+          "id": "B7",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-05-user-full-body/B7-user-refined-full-body.png",
+          "input_variant": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-09-face-restoration/assets/B7-body-only.png",
+          "generation_input_this_step": false
+        },
+        "composition_this_step": {
+          "description": "P4 level frontal bust and P5 shallow three-quarter bust, eye-level camera, familiar summer background"
+        },
+        "expression_this_step": {
+          "id": "P2",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png",
+          "role": "User-selected everyday closed-mouth smile"
+        },
+        "limited_roles": {
+          "A6/B9": "closed smile intention and history only; same PNG",
+          "A9/C9": "angle proposals and re-audit only",
+          "A8/B8/C8": "full-body directions, clothing and posture only",
+          "A10/B10/C10": "scene composition and gesture only",
+          "E2/F2": "Restoration comparison/history; user chose P1 as new working facial base."
+        },
+        "promotion_rule": "P1 is current face authority by explicit user choice. New expression/scene approval never automatically promotes a derived image to face authority.",
+        "role_limit": "Text input roles do not guarantee spatial isolation; reference crops and face hiding reduce visible competing content.",
+        "editing_canvas_this_step": {
+          "id": "P2",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png",
+          "role": "Selected visual starting point, with original P1 directly supplied for facial geometry and drawing. Each view independently uses these same inputs."
+        }
+      },
+      "snapshot": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/previous-design-state.json"
+    },
+    {
+      "reason": "User selected P6 as current full-body baseline",
+      "user_quote": "P6かな。",
+      "policy": {
+        "face_geometry_and_drawing": {
+          "id": "P1",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+          "input_variant": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+          "selection_user_quote": "Proのやつ土台にしてみよう"
+        },
+        "original_taste_audit": {
+          "ids": [
+            "A2",
+            "R0"
+          ],
+          "paths": [
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-01-face-round02/A2-reference-faithful.png",
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-01-face/reference-user.png"
+          ],
+          "generation_input_this_step": false,
+          "role": "Historical taste comparison; do not force P1 back to A2 geometry or blend their faces."
+        },
+        "body_and_outfit": {
+          "id": "B7",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-05-user-full-body/B7-user-refined-full-body.png",
+          "input_variant": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/assets/B7-face-hidden.png",
+          "generation_input_this_step": true
+        },
+        "composition_this_step": {
+          "id": "B7",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-05-user-full-body/B7-user-refined-full-body.png",
+          "description": "P6 retains B7 relaxed standing composition; P7 translates the same character into a level frontal stance."
+        },
+        "expression_this_step": {
+          "id": "P2",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png",
+          "role": "User-selected everyday closed-mouth smile"
+        },
+        "limited_roles": {
+          "A6/B9": "closed smile intention and history only; same PNG",
+          "A9/C9": "angle proposals and re-audit only",
+          "A8/B8/C8": "full-body directions, clothing and posture only",
+          "A10/B10/C10": "scene composition and gesture only",
+          "E2/F2": "Restoration comparison/history; user chose P1 as new working facial base."
+        },
+        "promotion_rule": "P1 is current face authority by explicit user choice. New expression/scene approval never automatically promotes a derived image to face authority.",
+        "role_limit": "Text input roles do not guarantee spatial isolation; reference crops and face hiding reduce visible competing content.",
+        "editing_canvas_this_step": {
+          "id": "B7-face-hidden",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/assets/B7-face-hidden.png",
+          "role": "Both full-body variants independently use this same prepared copy. Original B7 remains body/outfit authority."
+        },
+        "angle_support": {
+          "ids": [
+            "P4",
+            "P5"
+          ],
+          "role": "User-approved bust-angle references for comparison; not inputs in this two-variant integration."
+        }
+      },
+      "snapshot": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/before-P6-selection-design-state.json"
+    },
+    {
+      "reason": "Selected full-body P6; begin independent daily scene checks using original P1/P2 and P6 body crop",
+      "policy": {
+        "face_geometry_and_drawing": {
+          "id": "P1",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+          "input_variant": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+          "selection_user_quote": "Proのやつ土台にしてみよう"
+        },
+        "original_taste_audit": {
+          "ids": [
+            "A2",
+            "R0"
+          ],
+          "paths": [
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-01-face-round02/A2-reference-faithful.png",
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-01-face/reference-user.png"
+          ],
+          "generation_input_this_step": false,
+          "role": "Historical taste comparison; do not force P1 back to A2 geometry or blend their faces."
+        },
+        "body_and_outfit": {
+          "id": "P6",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+          "input_variant": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+          "selection_user_quote": "P6かな。",
+          "role": "Selected full-body proportions and costume; B7 is construction history."
+        },
+        "composition_this_step": {
+          "id": "P6",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+          "description": "User-selected relaxed shallow-angle full-body standing illustration."
+        },
+        "expression_this_step": {
+          "id": "P2",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png",
+          "role": "User-selected everyday closed-mouth smile"
+        },
+        "limited_roles": {
+          "A6/B9": "closed smile intention and history only; same PNG",
+          "A9/C9": "angle proposals and re-audit only",
+          "A8/B8/C8": "full-body directions, clothing and posture only",
+          "A10/B10/C10": "scene composition and gesture only",
+          "E2/F2": "Restoration comparison/history; user chose P1 as new working facial base."
+        },
+        "promotion_rule": "P1 is current face authority by explicit user choice. New expression/scene approval never automatically promotes a derived image to face authority.",
+        "role_limit": "Text input roles do not guarantee spatial isolation; reference crops and face hiding reduce visible competing content.",
+        "editing_canvas_this_step": {
+          "id": "P6",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+          "role": "Current selected full-body asset; no new generation pending. For future identity-sensitive edits also reference original P1 and selected P2."
+        },
+        "angle_support": {
+          "ids": [
+            "P4",
+            "P5"
+          ],
+          "paths": [
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-14-pro-base-angles/P4-front-bust.png",
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-14-pro-base-angles/P5-three-quarter-bust.png"
+          ],
+          "role": "Approved bust-angle support. P5 is a shallow-angle view with a small tilt, not a strict measured turnaround."
+        },
+        "body_construction_history": {
+          "id": "B7",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-05-user-full-body/B7-user-refined-full-body.png",
+          "role": "Preserved user-authored shoulder, healthy-leg and sock design intent; current selected rendition is P6."
+        }
+      },
+      "snapshot": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/previous-design-state.json"
+    },
+    {
+      "reason": "User approved displayed daily scene set P8/P9",
+      "user_quote": "だいじょぶそう",
+      "policy": {
+        "face_geometry_and_drawing": {
+          "id": "P1",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+          "input_variant": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+          "selection_user_quote": "Proのやつ土台にしてみよう"
+        },
+        "original_taste_audit": {
+          "ids": [
+            "A2",
+            "R0"
+          ],
+          "paths": [
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-01-face-round02/A2-reference-faithful.png",
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-01-face/reference-user.png"
+          ],
+          "generation_input_this_step": false,
+          "role": "Historical taste comparison; do not force P1 back to A2 geometry or blend their faces."
+        },
+        "body_and_outfit": {
+          "id": "P6",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+          "input_variant": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/assets/P6-body-only.png",
+          "selection_user_quote": "P6かな。",
+          "role": "Selected full-body proportions and costume; B7 is construction history."
+        },
+        "composition_this_step": {
+          "description": "P8 close greeting on a leafy path; P9 seated eye-level listening on a bench, both with large readable faces."
+        },
+        "expression_this_step": {
+          "id": "P2",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png",
+          "role": "User-selected everyday closed-mouth smile"
+        },
+        "limited_roles": {
+          "A6/B9": "closed smile intention and history only; same PNG",
+          "A9/C9": "angle proposals and re-audit only",
+          "A8/B8/C8": "full-body directions, clothing and posture only",
+          "A10/B10/C10": "scene composition and gesture only",
+          "E2/F2": "Restoration comparison/history; user chose P1 as new working facial base."
+        },
+        "promotion_rule": "P1 is current face authority by explicit user choice. New expression/scene approval never automatically promotes a derived image to face authority.",
+        "role_limit": "Text input roles do not guarantee spatial isolation; reference crops and face hiding reduce visible competing content.",
+        "editing_canvas_this_step": {
+          "id": "P9-draft-high-camera",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/P9-bench-listening.png",
+          "role": "Only P9 camera refinement uses this scene draft as editing canvas. Original P1/P2 and P6 body-only crop are still supplied directly. P8 and initial P9 were independent new scenes."
+        },
+        "angle_support": {
+          "ids": [
+            "P4",
+            "P5"
+          ],
+          "paths": [
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-14-pro-base-angles/P4-front-bust.png",
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-14-pro-base-angles/P5-three-quarter-bust.png"
+          ],
+          "role": "Approved bust-angle support. P5 is a shallow-angle view with a small tilt, not a strict measured turnaround."
+        },
+        "body_construction_history": {
+          "id": "B7",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-05-user-full-body/B7-user-refined-full-body.png",
+          "role": "Preserved user-authored shoulder, healthy-leg and sock design intent; current selected rendition is P6."
+        }
+      },
+      "snapshot": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/before-scene-approval-design-state.json"
+    }
+  ],
+  "current_reference_policy": {
+    "face_geometry_and_drawing": {
+      "id": "P1",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+      "input_variant": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+      "selection_user_quote": "Proのやつ土台にしてみよう"
+    },
+    "original_taste_audit": {
+      "ids": [
+        "A2",
+        "R0"
+      ],
+      "paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-01-face-round02/A2-reference-faithful.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-01-face/reference-user.png"
+      ],
+      "generation_input_this_step": false,
+      "role": "Historical taste comparison; do not force P1 back to A2 geometry or blend their faces."
+    },
+    "body_and_outfit": {
+      "id": "P6",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+      "input_variant": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/assets/P6-body-only.png",
+      "selection_user_quote": "P6かな。",
+      "role": "Selected full-body proportions and costume; B7 is construction history."
+    },
+    "composition_this_step": {
+      "description": "P8 close greeting on a leafy path; P9 seated eye-level listening on a bench, both with large readable faces."
+    },
+    "expression_this_step": {
+      "id": "P2",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png",
+      "role": "User-selected everyday closed-mouth smile"
+    },
+    "limited_roles": {
+      "A6/B9": "closed smile intention and history only; same PNG",
+      "A9/C9": "angle proposals and re-audit only",
+      "A8/B8/C8": "full-body directions, clothing and posture only",
+      "A10/B10/C10": "scene composition and gesture only",
+      "E2/F2": "Restoration comparison/history; user chose P1 as new working facial base."
+    },
+    "promotion_rule": "P1 is current face authority by explicit user choice. New expression/scene approval never automatically promotes a derived image to face authority.",
+    "role_limit": "Text input roles do not guarantee spatial isolation; reference crops and face hiding reduce visible competing content.",
+    "editing_canvas_this_step": {
+      "id": null,
+      "role": "Scene review complete; no active edit. Choose the relevant target for any next edit and directly include the selected P1/P2/P6 references as applicable."
+    },
+    "angle_support": {
+      "ids": [
+        "P4",
+        "P5"
+      ],
+      "paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-14-pro-base-angles/P4-front-bust.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-14-pro-base-angles/P5-three-quarter-bust.png"
+      ],
+      "role": "Approved bust-angle support. P5 is a shallow-angle view with a small tilt, not a strict measured turnaround."
+    },
+    "body_construction_history": {
+      "id": "B7",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-05-user-full-body/B7-user-refined-full-body.png",
+      "role": "Preserved user-authored shoulder, healthy-leg and sock design intent; current selected rendition is P6."
+    },
+    "daily_scene_examples": {
+      "ids": [
+        "P8",
+        "P9"
+      ],
+      "paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/P8-casual-greeting.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/P9-2-bench-eye-level.png"
+      ],
+      "role": "User-approved example scenes; composition and gesture support, without automatic promotion to facial reference."
+    },
+    "additional_expression_examples": {
+      "ids": [
+        "P10-2",
+        "P11"
+      ],
+      "paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/P10-2-shy-held-smile.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/P11-gentle-pout.png"
+      ],
+      "role": "User-approved shy-deflection and gentle-pout examples. Expression support only; directly supply original P1 for identity in future generation.",
+      "approval_user_quote": "良いと思う"
+    },
+    "expression_gesture_examples": {
+      "ids": [
+        "P12",
+        "P13"
+      ],
+      "paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-18-expression-gestures/P12-shy-cheek-gesture.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-18-expression-gestures/P13-pout-folded-arms.png"
+      ],
+      "role": "User-approved shy cheek gesture and gentle pout with folded arms. Gesture/expression support only; retain original P1 as facial authority.",
+      "approval_user_quote": "ええと思う！採用して進めよう"
+    }
+  },
+  "face_restoration": {
+    "status": "E2_preferred_but_incomplete",
+    "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-09-face-restoration/exploration.json",
+    "selected": null,
+    "approved_set": [],
+    "pending_review": [],
+    "face_authority": "A2",
+    "body_authority": "B7",
+    "composition": "A10",
+    "assistant_assessment": "E2 is closer in eye and cheek rendering; cheek/chin and scene/clothing preservation still need work. Neither is promoted to face authority.",
+    "candidates": [
+      {
+        "id": "E1",
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-09-face-restoration/E1-visible-face-reference.png"
+      },
+      {
+        "id": "E2",
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-09-face-restoration/E2-hidden-face-reference.png"
+      }
+    ],
+    "preferred_for_refinement": "E2",
+    "user_feedback": "完全ではなさそうだけどE2の方が近いね。"
+  },
+  "cheek_contour_refinement": {
+    "status": "reviewed_no_clear_improvement",
+    "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-10-cheek-contour/exploration.json",
+    "base": "E2",
+    "face_authority": "A2",
+    "selected": null,
+    "approved_set": [],
+    "pending_review": [],
+    "candidates": [
+      {
+        "id": "E2-1",
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-10-cheek-contour/E2-1-softened-jaw.png"
+      },
+      {
+        "id": "E2-2",
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-10-cheek-contour/E2-2-fuller-cheek-curve.png"
+      }
+    ],
+    "assistant_assessment": "Both changes are small; neither demonstrates contour restoration. Keep original E2 as current refinement canvas and A2 as facial authority.",
+    "user_feedback": "じゃあ進めよう(確かにまだ微妙)"
+  },
+  "masked_lower_face_reconstruction": {
+    "status": "F2_positive_feedback",
+    "base": "E2",
+    "face_authority": "A2",
+    "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-11-masked-lower-face/exploration.json",
+    "selected": null,
+    "approved_set": [],
+    "pending_review": [],
+    "candidates": [
+      {
+        "id": "F1",
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-11-masked-lower-face/F1-contour-rebuilt.png"
+      },
+      {
+        "id": "F2",
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-11-masked-lower-face/F2-lower-face-rebuilt.png"
+      }
+    ],
+    "assistant_assessment": "F2 gives a more compact lower face; clear A2 cheek restoration remains unconfirmed. A2 stays facial authority and E2 stays working base until user comparison.",
+    "user_feedback": "F2は割といい (ちなみにGPT Proにも作らせてみたがわりといいかも)",
+    "preferred_for_comparison": "F2"
+  },
+  "user_pro_candidate": {
+    "id": "P1",
+    "status": "user_selected_working_face_baseline",
+    "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+    "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/import.json",
+    "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+    "user_feedback": "F2は割といい (ちなみにGPT Proにも作らせてみたがわりといいかも)",
+    "selected": true,
+    "face_authority_promotion": true,
+    "selection_user_quote": "Proのやつ土台にしてみよう"
+  },
+  "face_history": [
+    {
+      "selected": "A2",
+      "status": "working_baseline",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-01-face-round02/A2-reference-faithful.png",
+      "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-01-face-round02/exploration.json",
+      "user_quote": "A2土台かな。"
+    }
+  ],
+  "expressions_history": [
+    {
+      "selected": "A6",
+      "approved_set": [
+        "A6",
+        "B6",
+        "C6"
+      ],
+      "status": "approved_set",
+      "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-04-expressions/exploration.json",
+      "appearance_baseline": "B5-2",
+      "proposed_everyday_expression": "A6",
+      "candidates": [
+        {
+          "id": "A6",
+          "concept_ja": "自然な微笑み",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-04-expressions/A6-natural-smile.png"
+        },
+        {
+          "id": "B6",
+          "concept_ja": "楽しそうな笑顔",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-04-expressions/B6-happy-smile.png"
+        },
+        {
+          "id": "C6",
+          "concept_ja": "ちょっと照れた顔",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-04-expressions/C6-shy-smile.png"
+        }
+      ],
+      "everyday_expression": "A6",
+      "approval_user_quote": "良いと思う。",
+      "appearance_baseline_note": "B5-2 records the actual generation source; use current B7 for future full-body work.",
+      "current_generation_role": "Expression intention and history; not facial identity or rendering authority."
+    }
+  ],
+  "bust_details_history": [
+    {
+      "status": "approved_set",
+      "approved_details": [
+        "A9",
+        "B9",
+        "C9"
+      ],
+      "pending_review": [],
+      "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-07-bust-detail/exploration.json",
+      "purpose": "Dedicated detailed face references across front, three-quarter and profile views; prevent simplified full-body faces from becoming identity sources.",
+      "candidates": [
+        {
+          "id": "A9",
+          "concept_ja": "正面・顔の詳細",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-07-bust-detail/A9-front-bust.png",
+          "operation": "generate"
+        },
+        {
+          "id": "B9",
+          "concept_ja": "斜め・採用済みA6",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-07-bust-detail/B9-three-quarter-A6.png",
+          "operation": "reuse_approved_image"
+        },
+        {
+          "id": "C9",
+          "concept_ja": "横・顔の詳細",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-07-bust-detail/C9-profile-bust.png",
+          "operation": "generate"
+        }
+      ],
+      "approval_user_quote": "問題ないと思う 進めよう",
+      "current_generation_role": "Under face re-audit; historical approved_details retained; not active facial identity/rendering anchors."
+    }
+  ],
+  "full_body_integration": {
+    "status": "P6_selected_full_body_baseline",
+    "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/exploration.json",
+    "face_baseline": "P1",
+    "expression_baseline": "P2",
+    "body_baseline": "B7",
+    "selected": "P6",
+    "approved_set": [
+      "P6"
+    ],
+    "pending_review": [],
+    "candidates": [
+      {
+        "id": "P6",
+        "concept_ja": "B7の自然な斜め立ちを引き継ぐ",
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png"
+      },
+      {
+        "id": "P7",
+        "concept_ja": "正面・自然な立ち姿",
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P7-front-full-body.png"
+      }
+    ],
+    "assistant_recommended_everyday_full_body": "P6",
+    "selection_user_quote": "P6かな。",
+    "selected_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+    "selected_sha256": "018f45133acb2d9cd3625d27090b38084f6b795a92a726ff641785d889c0a823"
+  },
+  "everyday_moments_history": [
+    {
+      "status": "composition_accepted_face_drift_flagged",
+      "selected": null,
+      "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-08-everyday-moments/exploration.json",
+      "candidates": [
+        {
+          "id": "A10",
+          "concept_ja": "軽く手を上げて挨拶",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-08-everyday-moments/A10-casual-greeting.png"
+        },
+        {
+          "id": "B10",
+          "concept_ja": "近くで話を聞く",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-08-everyday-moments/B10-attentive-listening.png"
+        },
+        {
+          "id": "C10",
+          "concept_ja": "隣に座って気楽に話す",
+          "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-08-everyday-moments/C10-bench-conversation.png"
+        }
+      ],
+      "pending_review": [],
+      "approved_set": [],
+      "user_feedback": "構図はいいが顔がチャッピー絵(GPT Imagesの汎用的な絵)に戻ってきたな。どこでドリフトしたんだか。。。 一旦、gpt-pro-review挟もうか。"
+    }
+  ],
+  "expression_range": {
+    "status": "user_approved_expression_set",
+    "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/exploration.json",
+    "face_baseline": "P1",
+    "everyday_expression": "P2",
+    "body_baseline": "P6",
+    "selected": null,
+    "approved_set": [
+      "P10-2",
+      "P11"
+    ],
+    "pending_review": [],
+    "user_request": "表情を広げる：照れ隠し・ちょっと拗ねる（おすすめ）",
+    "candidates": [
+      {
+        "id": "P10",
+        "concept_ja": "照れ隠し",
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/P10-shy-deflection.png",
+        "status": "draft_preserved"
+      },
+      {
+        "id": "P11",
+        "concept_ja": "ちょっと拗ねる",
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/P11-gentle-pout.png",
+        "status": "user_approved_expression_example"
+      },
+      {
+        "id": "P10-2",
+        "concept_ja": "照れ隠し・口を結ぶ",
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/P10-2-shy-held-smile.png",
+        "status": "user_approved_expression_example"
+      }
+    ],
+    "current_generation_role": "Approved expression examples; P1 remains the original facial authority, P2 the everyday smile, and P6 the full-body/outfit authority.",
+    "approval_user_quote": "良いと思う"
+  },
+  "expression_gestures": {
+    "status": "user_approved_gesture_set",
+    "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-18-expression-gestures/exploration.json",
+    "face_baseline": "P1",
+    "body_baseline": "P6",
+    "source_expressions": [
+      "P10-2",
+      "P11"
+    ],
+    "selected": null,
+    "approved_set": [
+      "P12",
+      "P13"
+    ],
+    "pending_review": [],
+    "candidates": [
+      {
+        "id": "P12",
+        "concept_ja": "褒められて頬に手を添える",
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-18-expression-gestures/P12-shy-cheek-gesture.png",
+        "expression_reference": "P10-2",
+        "status": "user_approved_gesture_example"
+      },
+      {
+        "id": "P13",
+        "concept_ja": "軽く腕を組んで拗ねる",
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-18-expression-gestures/P13-pout-folded-arms.png",
+        "expression_reference": "P11",
+        "status": "user_approved_gesture_example"
+      }
+    ],
+    "current_generation_role": "Approved expression-and-gesture examples; original P1 remains facial authority.",
+    "approval_user_quote": "ええと思う！採用して進めよう"
+  },
+  "dynamic_expressions": {
+    "status": "ready_for_user_review",
+    "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-19-laugh-surprise/exploration.json",
+    "face_baseline": "P1",
+    "everyday_expression": "P2",
+    "body_baseline": "P6",
+    "selected": null,
+    "approved_set": [],
+    "pending_review": [
+      "P14",
+      "P15"
+    ],
+    "candidates": [
+      {
+        "id": "P14",
+        "concept_ja": "思わず笑う",
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-19-laugh-surprise/P14-spontaneous-laugh.png",
+        "status": "pending_user_review"
+      },
+      {
+        "id": "P15",
+        "concept_ja": "少し驚く",
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-19-laugh-surprise/P15-soft-surprise.png",
+        "status": "pending_user_review"
+      }
+    ],
+    "current_generation_role": "Laugh and mild-surprise comparison only; original P1 remains facial authority."
+  }
+}

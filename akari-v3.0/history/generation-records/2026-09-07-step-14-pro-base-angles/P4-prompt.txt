@@ -1,0 +1,17 @@
+Use case: identity-preserve.
+Create ONE detailed anime bust portrait of the same Akari, changing the viewing angle as specified below.
+
+INPUT ROLES
+Image 1 (P1, original Pro portrait): primary authority for facial geometry, eyes, cheek and chin balance, black bob, segmented blunt bangs and the specific illustration style. Translate this exact face into the requested view.
+Image 2 (P2, approved closed smile): selected everyday expression. Keep its small, softly curved closed mouth, relaxed brows, open grey eyes and approachable calm. P2 is also the current visual starting point for the outfit and upper-body balance.
+
+PRESERVE THE CHARACTER
+Keep the rounded, vertically open downturned eyes with substantial grey irises, rounded upper eyelid arches and softly falling outer corners. Retain the full cheeks, short lower face and small chin as pictured; preserve their actual proportions rather than idealizing them. Keep the restrained nose, fine diagonal blush hatching, delicate slightly uneven linework, layered grey iris rendering and softly textured shading. Retain the rounded chin-length black bob, separated blunt fringe clumps and fine loose cheek strands. Maintain the same healthy shoulder width, neck length and clothed upper-body proportions.
+
+COMPOSITION
+One square illustration. Detailed head-and-upper-torso view, from a little space above the crown to below the chest; both shoulders and sleeve edges comfortably visible. Head and hair occupy roughly the upper half of the frame, eyes large enough to inspect. Natural eye-level camera and normal portrait perspective. Same softly blurred summer greenery and pale wall, soft daylight and colors as the references. White short-sleeve open-collar shirt with narrow blue-grey piping and natural opaque fabric drape. Relaxed posture.
+
+VIEW CHANGE
+A true straight-on front view: head upright with no sideways tilt, nose centered, both eyes seen frontally, shoulders square to the camera. Gaze into the lens. Adapt the reference face to a level front view without changing its eye shape or cheek fullness.
+
+Keep P2's quiet closed-mouth smile, direct engagement and natural familiarity. No open mouth, teeth, sleepy narrowed eyes, elongated almond eyes, new makeup, glossy generic beauty-face rendering, sharpened jaw, accessories, text or multiple panels. Preserve the chosen design without using age labels to redesign the face. Return one standalone finished portrait.

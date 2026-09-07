@@ -1,0 +1,2 @@
+# Preserve the original request record, including its terminal blank line.
+history/generation-records/2026-09-07-step-17-pro-base-expression-range/request.json whitespace=-blank-at-eof

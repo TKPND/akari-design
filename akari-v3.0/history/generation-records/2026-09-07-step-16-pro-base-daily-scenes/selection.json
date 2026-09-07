@@ -1,0 +1,31 @@
+{
+  "project": "akari-v3.0",
+  "user_quote": "だいじょぶそう",
+  "approved_scene_ids": [
+    "P8",
+    "P9"
+  ],
+  "approved_scenes": [
+    {
+      "id": "P8",
+      "concept_ja": "待ち合わせで小さく手を振る",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/P8-casual-greeting.png",
+      "sha256": "3824973509e5587e83f3f257e8faf7822f0ff37a14d03e9157a4017ad070bd98"
+    },
+    {
+      "id": "P9",
+      "concept_ja": "ベンチで隣の相手の話を聞く",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/P9-2-bench-eye-level.png",
+      "sha256": "689e3d1e4a792a7fc67ce004bfb8ebe249eacc311bf405d3a4d960c33d127069"
+    }
+  ],
+  "authoritative_references": {
+    "face": "P1",
+    "everyday_expression": "P2",
+    "full_body_and_outfit": "P6"
+  },
+  "approval_scope": "Displayed P8 greeting and refined P9 bench scene accepted as daily scene examples. P1 face, P2 expression and P6 full-body references remain authoritative. The recorded P9 camera limitation remains.",
+  "state": "/home/abe/workspace/akari-design/tmp/akari-v3.0/design-state.json",
+  "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/exploration.json",
+  "note": "Approval record only; no new image generation or image changes."
+}

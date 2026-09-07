@@ -1,0 +1,51 @@
+{
+  "project": "akari-v3.0",
+  "stage": "18-expression-gestures",
+  "user_quote": "進めていいよ〜",
+  "status": "generation_requested",
+  "face_authority": "P1",
+  "everyday_expression": "P2",
+  "body_authority": "P6",
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "mode": "built-in",
+    "backend_model": "not_exposed",
+    "calls_planned": 2
+  },
+  "variants": [
+    {
+      "id": "P12",
+      "concept_ja": "褒められて頬に手を添える",
+      "name": "P12-shy-cheek-gesture.png",
+      "expression_reference": "P10-2",
+      "referenced_image_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/P10-2-shy-held-smile.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/assets/P6-body-only.png"
+      ],
+      "prompt": "Use case: identity-preserve.\nAsset type: Akari v3.0 expression-and-gesture illustration.\n\nInput images and roles:\n- Image 1 is the sole editing canvas and the selected expression example. Keep its existing face expression, head scale, face angle, camera, square waist-up framing and leafy path setting while changing the arm gesture as requested.\n- Image 2 (P1) is the original facial identity, hair and drawing authority. Preserve its specific face structure and rendering; do not copy its open smile.\n- Image 3 is a body-only crop of selected P6, used only for established body proportions and summer uniform construction. Its cropped boundary is not a composition guide.\n\nGesture change — shy deflection after a gentle compliment:\nKeep image 1's sideways glance and small compressed closed mouth trying to suppress a smile. She casually raises one hand to the outside of her cheek near the jaw, with just relaxed fingertips lightly touching the cheek-framing hair. Let the palm stay beside the face and the wrist relaxed; do not cup, press or distort the cheek. Keep both eyes, nose, mouth and most of the cheek fully visible. The raised hand has a clear thumb and four naturally grouped fingers; the forearm and elbow form one comfortable continuous gesture. Her other arm rests loosely down at her side. Shoulders remain relaxed and only subtly respond to raising the arm. Preserve the original slight forward conversational lean. It should feel like a spontaneous self-conscious reaction to her childhood friend, warm and unposed.\n\nIdentity/style: retain the same broad rounded grey eyes with softly downturned outer corners, grey layered irises and small highlights, eye spacing, short lower face, full cheeks and small chin, black rounded bob, segmented blunt bangs and thin cheek-framing strands. Preserve delicate linework, cel shading and fine diagonal pink cheek hatching. Do not substitute a generic anime face or narrow sleepy eyes. The source expression must remain clearly recognizable.\n\nKeep the same white short-sleeve open-collar shirt with blue-grey piping, sensible collar opening, buttons and blue-grey pleated skirt. Cloth folds may adjust naturally to the arm movement. Keep existing body and shoulder proportions, natural clothing fit and ordinary conversational mood. Both arms must connect anatomically to their own shoulders; realistic elbow and wrist bends, no fused or extra digits. Preserve image 1's head position and readable face size, slight head tilt and warm neutral daylight. One character only, no additional props, accessories, text, speech bubbles, panels or watermark. Return one polished square waist-up illustration.",
+      "input_sha256": [
+        "eebfb8bb0112adace66d8c5843cc84bf22648375fffd9770afb1197fb7095320",
+        "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+        "aaed9f2b532699f36cec6f469d5d55a4173a1d2b00526259a20de63f5d09d7a1"
+      ]
+    },
+    {
+      "id": "P13",
+      "concept_ja": "軽く腕を組んで拗ねる",
+      "name": "P13-pout-folded-arms.png",
+      "expression_reference": "P11",
+      "referenced_image_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/P11-gentle-pout.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/assets/P6-body-only.png"
+      ],
+      "prompt": "Use case: identity-preserve.\nAsset type: Akari v3.0 expression-and-gesture illustration.\n\nInput images and roles:\n- Image 1 is the sole editing canvas and the selected expression example. Keep its existing face expression, head scale, face angle, camera, square waist-up framing and leafy path setting while changing the arm gesture as requested.\n- Image 2 (P1) is the original facial identity, hair and drawing authority. Preserve its specific face structure and rendering; do not copy its open smile.\n- Image 3 is a body-only crop of selected P6, used only for established body proportions and summer uniform construction. Its cropped boundary is not a composition guide.\n\nGesture change — a brief playful sulk after harmless teasing:\nKeep image 1's small closed pouting mouth, mildly protesting brows and direct gaze toward her familiar childhood friend. Bring both arms in front into a LOW, LOOSE, RELAXED folded-arm pose across the lower ribcage/upper waist. The forearms overlap naturally, with one hand resting lightly on the opposite forearm and the other naturally tucked behind the opposite elbow. Keep elbows lowered and close to her sides, shoulders relaxed, hands unclenched. Do not squeeze or lift the chest, pull fabric tight or exaggerate body curves. Maintain an easy conversational stance, not a stern authoritarian pose. The gesture should strengthen the mild \"hmph\" impression while keeping the low-intensity pout comfortable and endearing. Preserve the original large readable face and small head tilt.\n\nIdentity/style: retain the same broad rounded grey eyes with softly downturned outer corners, grey layered irises and small highlights, eye spacing, short lower face, full cheeks and small chin, black rounded bob, segmented blunt bangs and thin cheek-framing strands. Preserve delicate linework, cel shading and fine diagonal pink cheek hatching. Do not substitute a generic anime face or narrow sleepy eyes. The source expression must remain clearly recognizable.\n\nKeep the same white short-sleeve open-collar shirt with blue-grey piping, sensible collar opening, buttons and blue-grey pleated skirt. Cloth folds may adjust naturally to the arm movement. Keep existing body and shoulder proportions, natural clothing fit and ordinary conversational mood. Both arms must connect anatomically to their own shoulders; realistic elbow and wrist bends, no fused or extra digits. Preserve image 1's head position and readable face size, slight head tilt and warm neutral daylight. One character only, no additional props, accessories, text, speech bubbles, panels or watermark. Return one polished square waist-up illustration.",
+      "input_sha256": [
+        "6640bb1d48b8ea48dc343be9e7b004d8954c70327da188483c9e788bcebadb72",
+        "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+        "aaed9f2b532699f36cec6f469d5d55a4173a1d2b00526259a20de63f5d09d7a1"
+      ]
+    }
+  ]
+}

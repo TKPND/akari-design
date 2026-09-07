@@ -1,0 +1,22 @@
+Use case: illustration-story.
+Asset type: one finished Akari v3.0 situation illustration, new scene.
+
+Input image roles:
+- Image 1 (P1) is the PRIMARY authority for the exact facial identity, facial geometry, black bob, separated blunt bangs, eye rendering and fine line drawing. Preserve this particular character, not a generic anime face. Its original leaning pose and leafy wall composition are not the target.
+- Image 2 (P14) is supporting authority ONLY for her spontaneous warm laugh: lifted cheeks and lower lids, recognizable grey irises still visible, softly animated brows, simple open laughing mouth. Keep the same person as Image 1. Do not copy its pose or framing.
+- Image 3 (P6) is supporting authority ONLY for natural body proportions, shoulder width and the summer uniform: opaque white short-sleeve open-collar button shirt with narrow blue-grey piping at collar edges and sleeve hems, blue-grey pleated skirt, navy ribbed socks ending below the knees, white low-top lace-up sneakers. Preserve the garment design and natural drape at the new pose; its small face is not the facial-detail source.
+
+Scene and moment:
+After class on a quiet leafy residential walking path, Akari is walking home next to her childhood friend. The camera is that friend's ordinary eye-level viewpoint alongside her, a little ahead. Something he just said has made her unexpectedly laugh, and she turns her face and a little of her upper torso toward him while continuing an easy walking step. An unguarded everyday moment, familiar and lively, with the strong feeling of a conversation already in progress. Only Akari is visible; the friend stays entirely offscreen.
+
+Composition:
+One vertical 2:3 illustration, head through just below her knees, including the skirt hem, knees and the top of her navy socks, with a little breathing room above her hair. Normal perspective and natural viewing distance, no low angle or overhead view. Make her face large and crisply readable. Her torso faces partly along the path while her face turns toward the viewer in a modest three-quarter view, not a severe side profile. Let her near hand make a small loose conversational gesture around waist level, palm angled naturally and fingers relaxed; her other arm swings slightly beside her. Balanced natural anatomy and credible walking posture. Keep the hands clear and coherent. The path recedes past a low light-grey wall and leafy greenery; a few softly simplified houses in the distance give a believable neighborhood, without clutter.
+
+Expression and identity:
+Borrow the warm spontaneous laugh of P14, with softly smiling eyes, visible grey irises, and a clean moderately open mouth; no detailed oral cavity. Preserve P1's broad rounded grey eyes with gently descending outer corners, the exact eye spacing, full rounded cheeks, short lower face, small chin, tiny simple nose and fine diagonal cheek blush hatching. The eyes must not become narrow sleepy slits or closed chevrons. Keep P1's rounded chin-length black bob, segmented blunt bangs and fine cheek-framing strands. A very light breeze can shift a few tips, not change the hairstyle. Do not impose age-label-driven changes to the referenced design.
+
+Light and finish:
+Soft late-afternoon sunlight gently catches her hair edge and shoulder; cool open-sky fill keeps the face clear and the grey eyes readable. Warmth is subtle, not a heavy orange filter. Restrained dappled light on the path and wall, natural depth. Match the references' delicate clean linework, coherent soft cel shading, restrained color transitions and subtle painterly background. Keep charcoal-black hair and grey eyes, not brown hair or amber eyes. The emotional focus is the shared laugh and direct connection with the viewer.
+
+Constraints:
+One coherent finished scene, no panels or inset portrait. Keep the original costume cut and comfortable opaque fit. Preserve body balance without exaggerated proportions. No added bags, hair accessories, jewelry, drinks or props. No extra people, visible companion limbs, floating fingers, fused hands, excessive hair gloss, bloom, lens flare, text, logos, watermark, hearts or comic symbols.

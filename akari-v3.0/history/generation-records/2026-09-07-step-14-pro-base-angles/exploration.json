@@ -1,0 +1,131 @@
+{
+  "project": "akari-v3.0",
+  "stage": "14-pro-base-angles",
+  "status": "user_approved_angle_set",
+  "user_quote": "P2で進めたい",
+  "face_authority": "P1",
+  "selected_everyday_expression": "P2",
+  "body_authority": "B7",
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "mode": "built-in",
+    "backend_model": "not_exposed",
+    "seed": "not_exposed",
+    "calls_planned": 2,
+    "calls_completed": 2,
+    "total_elapsed_ms": 64464
+  },
+  "variants": [
+    {
+      "id": "P4",
+      "concept_ja": "正面・P2の微笑み",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-14-pro-base-angles/P4-front-bust.png",
+      "status": "user_approved_angle_reference",
+      "prompt": "Use case: identity-preserve.\nCreate ONE detailed anime bust portrait of the same Akari, changing the viewing angle as specified below.\n\nINPUT ROLES\nImage 1 (P1, original Pro portrait): primary authority for facial geometry, eyes, cheek and chin balance, black bob, segmented blunt bangs and the specific illustration style. Translate this exact face into the requested view.\nImage 2 (P2, approved closed smile): selected everyday expression. Keep its small, softly curved closed mouth, relaxed brows, open grey eyes and approachable calm. P2 is also the current visual starting point for the outfit and upper-body balance.\n\nPRESERVE THE CHARACTER\nKeep the rounded, vertically open downturned eyes with substantial grey irises, rounded upper eyelid arches and softly falling outer corners. Retain the full cheeks, short lower face and small chin as pictured; preserve their actual proportions rather than idealizing them. Keep the restrained nose, fine diagonal blush hatching, delicate slightly uneven linework, layered grey iris rendering and softly textured shading. Retain the rounded chin-length black bob, separated blunt fringe clumps and fine loose cheek strands. Maintain the same healthy shoulder width, neck length and clothed upper-body proportions.\n\nCOMPOSITION\nOne square illustration. Detailed head-and-upper-torso view, from a little space above the crown to below the chest; both shoulders and sleeve edges comfortably visible. Head and hair occupy roughly the upper half of the frame, eyes large enough to inspect. Natural eye-level camera and normal portrait perspective. Same softly blurred summer greenery and pale wall, soft daylight and colors as the references. White short-sleeve open-collar shirt with narrow blue-grey piping and natural opaque fabric drape. Relaxed posture.\n\nVIEW CHANGE\nA true straight-on front view: head upright with no sideways tilt, nose centered, both eyes seen frontally, shoulders square to the camera. Gaze into the lens. Adapt the reference face to a level front view without changing its eye shape or cheek fullness.\n\nKeep P2's quiet closed-mouth smile, direct engagement and natural familiarity. No open mouth, teeth, sleepy narrowed eyes, elongated almond eyes, new makeup, glossy generic beauty-face rendering, sharpened jaw, accessories, text or multiple panels. Preserve the chosen design without using age labels to redesign the face. Return one standalone finished portrait.\n",
+      "prompt_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-14-pro-base-angles/P4-prompt.txt",
+      "prompt_sha256": "81766a2ad122ecade7942bca56bc2c33c5f31842c108a8f48704e3eda21db1b0",
+      "referenced_image_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png"
+      ],
+      "input_sha256": [
+        "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+        "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f"
+      ],
+      "generated_original": "/home/abe/.codex/generated_images/01a07aac-bb77-7420-886e-f3f0daecfe49/exec-4bc11f5f-f6ad-4439-ba5e-4a8b3b64ceb6.png",
+      "elapsed_ms": 37500,
+      "sha256": "2496ce968332c8f081945eec49cf4461d982968a44812a1e081e08d91322bd88",
+      "bytes": 1882215,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "tool_call": {
+        "tool": "image_gen.imagegen",
+        "arguments": {
+          "prompt": "Use case: identity-preserve.\nCreate ONE detailed anime bust portrait of the same Akari, changing the viewing angle as specified below.\n\nINPUT ROLES\nImage 1 (P1, original Pro portrait): primary authority for facial geometry, eyes, cheek and chin balance, black bob, segmented blunt bangs and the specific illustration style. Translate this exact face into the requested view.\nImage 2 (P2, approved closed smile): selected everyday expression. Keep its small, softly curved closed mouth, relaxed brows, open grey eyes and approachable calm. P2 is also the current visual starting point for the outfit and upper-body balance.\n\nPRESERVE THE CHARACTER\nKeep the rounded, vertically open downturned eyes with substantial grey irises, rounded upper eyelid arches and softly falling outer corners. Retain the full cheeks, short lower face and small chin as pictured; preserve their actual proportions rather than idealizing them. Keep the restrained nose, fine diagonal blush hatching, delicate slightly uneven linework, layered grey iris rendering and softly textured shading. Retain the rounded chin-length black bob, separated blunt fringe clumps and fine loose cheek strands. Maintain the same healthy shoulder width, neck length and clothed upper-body proportions.\n\nCOMPOSITION\nOne square illustration. Detailed head-and-upper-torso view, from a little space above the crown to below the chest; both shoulders and sleeve edges comfortably visible. Head and hair occupy roughly the upper half of the frame, eyes large enough to inspect. Natural eye-level camera and normal portrait perspective. Same softly blurred summer greenery and pale wall, soft daylight and colors as the references. White short-sleeve open-collar shirt with narrow blue-grey piping and natural opaque fabric drape. Relaxed posture.\n\nVIEW CHANGE\nA true straight-on front view: head upright with no sideways tilt, nose centered, both eyes seen frontally, shoulders square to the camera. Gaze into the lens. Adapt the reference face to a level front view without changing its eye shape or cheek fullness.\n\nKeep P2's quiet closed-mouth smile, direct engagement and natural familiarity. No open mouth, teeth, sleepy narrowed eyes, elongated almond eyes, new makeup, glossy generic beauty-face rendering, sharpened jaw, accessories, text or multiple panels. Preserve the chosen design without using age labels to redesign the face. Return one standalone finished portrait.\n",
+          "referenced_image_paths": [
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png"
+          ]
+        }
+      },
+      "visual_review": {
+        "expression": "Small closed smile retained, with relaxed brows and readable open grey eyes.",
+        "identity": "Rounded upper-eye arches, grey irises, blush hatching and compact cheek/chin balance remain recognizable from P1/P2. Face is more symmetric in the new frontal view.",
+        "angle_and_crop": "Clear straight-on head and square shoulders, detailed head/upper-torso crop, crown and sleeve hems visible.",
+        "body_outfit": "Shoulder width and white blue-grey-piped shirt are coherent; collar opening and folds are redrawn for the front view.",
+        "assessment": "Suitable front-view candidate for user review; not proof of exact identity preservation."
+      }
+    },
+    {
+      "id": "P5",
+      "concept_ja": "浅い斜め・P2の微笑み",
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-14-pro-base-angles/P5-three-quarter-bust.png",
+      "status": "user_approved_angle_reference",
+      "prompt": "Use case: identity-preserve.\nCreate ONE detailed anime bust portrait of the same Akari, changing the viewing angle as specified below.\n\nINPUT ROLES\nImage 1 (P1, original Pro portrait): primary authority for facial geometry, eyes, cheek and chin balance, black bob, segmented blunt bangs and the specific illustration style. Translate this exact face into the requested view.\nImage 2 (P2, approved closed smile): selected everyday expression. Keep its small, softly curved closed mouth, relaxed brows, open grey eyes and approachable calm. P2 is also the current visual starting point for the outfit and upper-body balance.\n\nPRESERVE THE CHARACTER\nKeep the rounded, vertically open downturned eyes with substantial grey irises, rounded upper eyelid arches and softly falling outer corners. Retain the full cheeks, short lower face and small chin as pictured; preserve their actual proportions rather than idealizing them. Keep the restrained nose, fine diagonal blush hatching, delicate slightly uneven linework, layered grey iris rendering and softly textured shading. Retain the rounded chin-length black bob, separated blunt fringe clumps and fine loose cheek strands. Maintain the same healthy shoulder width, neck length and clothed upper-body proportions.\n\nCOMPOSITION\nOne square illustration. Detailed head-and-upper-torso view, from a little space above the crown to below the chest; both shoulders and sleeve edges comfortably visible. Head and hair occupy roughly the upper half of the frame, eyes large enough to inspect. Natural eye-level camera and normal portrait perspective. Same softly blurred summer greenery and pale wall, soft daylight and colors as the references. White short-sleeve open-collar shirt with narrow blue-grey piping and natural opaque fabric drape. Relaxed posture.\n\nVIEW CHANGE\nA shallow three-quarter view: turn head and shoulders together about 30 degrees toward the right side of the picture, with the nose pointing gently toward picture-right. Keep the head upright and both eyes clearly visible, with natural perspective on the farther eye. Eyes look back gently toward the camera. Maintain cheek roundness through the turn; do not sharpen the far jaw or flatten the eyes.\n\nKeep P2's quiet closed-mouth smile, direct engagement and natural familiarity. No open mouth, teeth, sleepy narrowed eyes, elongated almond eyes, new makeup, glossy generic beauty-face rendering, sharpened jaw, accessories, text or multiple panels. Preserve the chosen design without using age labels to redesign the face. Return one standalone finished portrait.\n",
+      "prompt_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-14-pro-base-angles/P5-prompt.txt",
+      "prompt_sha256": "c39aa6305e2a7b37080185fbc5c902257e9165a191e5c1cea53da8d4c8e46a7e",
+      "referenced_image_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png"
+      ],
+      "input_sha256": [
+        "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+        "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f"
+      ],
+      "generated_original": "/home/abe/.codex/generated_images/01a07aac-bb77-7420-886e-f3f0daecfe49/exec-7d07f64c-5c22-4402-bbd0-30c39a9bed94.png",
+      "elapsed_ms": 26964,
+      "sha256": "e4f24cdb01287db7a6ff373762c2bde3ca64e16fb0c753b7c28c4cfccc322b85",
+      "bytes": 1864863,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "tool_call": {
+        "tool": "image_gen.imagegen",
+        "arguments": {
+          "prompt": "Use case: identity-preserve.\nCreate ONE detailed anime bust portrait of the same Akari, changing the viewing angle as specified below.\n\nINPUT ROLES\nImage 1 (P1, original Pro portrait): primary authority for facial geometry, eyes, cheek and chin balance, black bob, segmented blunt bangs and the specific illustration style. Translate this exact face into the requested view.\nImage 2 (P2, approved closed smile): selected everyday expression. Keep its small, softly curved closed mouth, relaxed brows, open grey eyes and approachable calm. P2 is also the current visual starting point for the outfit and upper-body balance.\n\nPRESERVE THE CHARACTER\nKeep the rounded, vertically open downturned eyes with substantial grey irises, rounded upper eyelid arches and softly falling outer corners. Retain the full cheeks, short lower face and small chin as pictured; preserve their actual proportions rather than idealizing them. Keep the restrained nose, fine diagonal blush hatching, delicate slightly uneven linework, layered grey iris rendering and softly textured shading. Retain the rounded chin-length black bob, separated blunt fringe clumps and fine loose cheek strands. Maintain the same healthy shoulder width, neck length and clothed upper-body proportions.\n\nCOMPOSITION\nOne square illustration. Detailed head-and-upper-torso view, from a little space above the crown to below the chest; both shoulders and sleeve edges comfortably visible. Head and hair occupy roughly the upper half of the frame, eyes large enough to inspect. Natural eye-level camera and normal portrait perspective. Same softly blurred summer greenery and pale wall, soft daylight and colors as the references. White short-sleeve open-collar shirt with narrow blue-grey piping and natural opaque fabric drape. Relaxed posture.\n\nVIEW CHANGE\nA shallow three-quarter view: turn head and shoulders together about 30 degrees toward the right side of the picture, with the nose pointing gently toward picture-right. Keep the head upright and both eyes clearly visible, with natural perspective on the farther eye. Eyes look back gently toward the camera. Maintain cheek roundness through the turn; do not sharpen the far jaw or flatten the eyes.\n\nKeep P2's quiet closed-mouth smile, direct engagement and natural familiarity. No open mouth, teeth, sleepy narrowed eyes, elongated almond eyes, new makeup, glossy generic beauty-face rendering, sharpened jaw, accessories, text or multiple panels. Preserve the chosen design without using age labels to redesign the face. Return one standalone finished portrait.\n",
+          "referenced_image_paths": [
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png"
+          ]
+        }
+      },
+      "visual_review": {
+        "expression": "Quiet closed smile and approachable gaze retained.",
+        "identity": "Grey eyes, full near cheek, fine diagonal hatching and black bob remain recognizable. Some eye-contour and cheek-line redraw is visible in the turn.",
+        "angle_and_crop": "A shallow three-quarter upper-body view is readable, but the result turns toward picture-left rather than requested picture-right, and retains a slight head tilt. This is not a strict requested-angle reference.",
+        "body_outfit": "Shoulders and sleeve forms remain coherent, shirt piping remains; perspective and fabric folds are redrawn.",
+        "assessment": "Useful shallow-angle design candidate; retain for user comparison because face appeal and continuity are good, with angle noncompliance explicitly recorded."
+      }
+    }
+  ],
+  "selected": null,
+  "approved_set": [
+    "P4",
+    "P5"
+  ],
+  "reference_policy": "Both angle variants independently use original P1 and approved P2 in that order. No new angle candidate is chained into the next. B7 is visually inspected for body/outfit consistency but is not an input to these bust studies. A2/R0 and previous faces remain history only.",
+  "evaluation": [
+    "P2 closed everyday smile retained",
+    "P1/P2 grey eye openings, cheek/chin balance and bob remain recognizable across the intended angle",
+    "Both intended angles readable with sufficient face detail",
+    "Shoulder proportions and summer shirt preserved",
+    "No major anatomy, hair or fabric discontinuity"
+  ],
+  "limits": "Two angle studies are candidates, not automatically new facial masters. Requested turn angle is a prompt target, not a measured output.",
+  "assistant_assessment": "Both retain the selected quiet smile and recognizable P1/P2 features at normal display. P4 fulfills the front view; P5 is useful for shallow-angle comparison but misses the specified turn direction and level head. Neither is promoted to face authority.",
+  "verification": {
+    "outputs_match_generated_originals": true,
+    "png_dimensions_and_hashes_valid": true,
+    "prompts_match_saved_text_and_tool_arguments": true,
+    "both_views_directly_use_unchanged_P1_and_P2": true,
+    "P2_selection_recorded_consistently": true,
+    "P1_face_authority_unchanged": true,
+    "B7_body_and_outfit_unchanged": true,
+    "historical_bust_details_preserved": true,
+    "new_angle_candidates_not_promoted": true
+  },
+  "approval_user_quote": "大丈夫そう。"
+}

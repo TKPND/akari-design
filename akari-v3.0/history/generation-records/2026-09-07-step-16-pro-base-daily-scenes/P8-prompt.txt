@@ -1,0 +1,15 @@
+Use case: identity-preserve.
+Create ONE finished anime illustration of Akari in the everyday scene below.
+
+REFERENCE ROLES
+Image 1, original P1: primary face, eye geometry, hair and drawing style. Preserve this particular face in the new scene.
+Image 2, selected P2: the everyday expression, a small relaxed closed-mouth smile, open grey eyes and natural familiarity. Use this expression throughout.
+Image 3, body-only crop of selected P6: body proportions and summer uniform only. Preserve its shoulder width, natural clothed torso, healthy build, white short-sleeve open-collar shirt with narrow blue-grey piping, and blue-grey pleated skirt. Navy ribbed below-knee socks and white sneakers remain the outfit even where outside the frame.
+
+FACIAL CONTINUITY
+Keep the P1/P2 rounded vertically open grey eyes, arched upper lids with softly falling outer corners, substantial grey irises, full cheeks, short lower face and small chin in their pictured proportions. Preserve fine diagonal blush hatching, restrained nose, layered iris detail, delicate irregular linework and softly textured shading. Keep the rounded chin-length black bob, distinct blunt fringe clumps and wispy cheek strands. Adapt these shapes to the pose; do not substitute elongated almond eyes, narrow beauty-face cheeks, sleepy eyelids or a sharpened jaw. The expression stays a quiet closed-mouth smile, with no teeth or open mouth. No age-label-driven redesign.
+
+SCENE AND COMPOSITION
+Akari has spotted the viewer at a quiet leafy neighborhood path. Eye-level medium-close view from crown to hips, face near frontal with a slight natural tilt, head and hair approximately 40 percent of image height. She makes a small casual greeting wave beside one shoulder: elbow comfortably bent, one fully visible anatomically correct hand with five relaxed fingers, palm angled toward the viewer. Keep the hand clear of her face. Her other arm rests naturally at her side. She looks directly toward the viewer with the selected calm closed smile. A pale wall, summer foliage and a softly receding walkway provide understated context. Keep the interaction unposed and familiar.
+
+Soft natural daylight and a quiet, familiar everyday mood. Retain the visual texture and face treatment of P1/P2. Keep the face large and detailed enough to inspect. All visible limbs and fingers connect naturally; coherent collar, sleeves and fabric folds. One character only; the viewer is the implied familiar companion and is not drawn. No added accessories, captions, panels, watermarks or logos. Return one standalone square illustration.

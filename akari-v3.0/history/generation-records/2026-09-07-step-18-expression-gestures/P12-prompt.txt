@@ -1,0 +1,14 @@
+Use case: identity-preserve.
+Asset type: Akari v3.0 expression-and-gesture illustration.
+
+Input images and roles:
+- Image 1 is the sole editing canvas and the selected expression example. Keep its existing face expression, head scale, face angle, camera, square waist-up framing and leafy path setting while changing the arm gesture as requested.
+- Image 2 (P1) is the original facial identity, hair and drawing authority. Preserve its specific face structure and rendering; do not copy its open smile.
+- Image 3 is a body-only crop of selected P6, used only for established body proportions and summer uniform construction. Its cropped boundary is not a composition guide.
+
+Gesture change — shy deflection after a gentle compliment:
+Keep image 1's sideways glance and small compressed closed mouth trying to suppress a smile. She casually raises one hand to the outside of her cheek near the jaw, with just relaxed fingertips lightly touching the cheek-framing hair. Let the palm stay beside the face and the wrist relaxed; do not cup, press or distort the cheek. Keep both eyes, nose, mouth and most of the cheek fully visible. The raised hand has a clear thumb and four naturally grouped fingers; the forearm and elbow form one comfortable continuous gesture. Her other arm rests loosely down at her side. Shoulders remain relaxed and only subtly respond to raising the arm. Preserve the original slight forward conversational lean. It should feel like a spontaneous self-conscious reaction to her childhood friend, warm and unposed.
+
+Identity/style: retain the same broad rounded grey eyes with softly downturned outer corners, grey layered irises and small highlights, eye spacing, short lower face, full cheeks and small chin, black rounded bob, segmented blunt bangs and thin cheek-framing strands. Preserve delicate linework, cel shading and fine diagonal pink cheek hatching. Do not substitute a generic anime face or narrow sleepy eyes. The source expression must remain clearly recognizable.
+
+Keep the same white short-sleeve open-collar shirt with blue-grey piping, sensible collar opening, buttons and blue-grey pleated skirt. Cloth folds may adjust naturally to the arm movement. Keep existing body and shoulder proportions, natural clothing fit and ordinary conversational mood. Both arms must connect anatomically to their own shoulders; realistic elbow and wrist bends, no fused or extra digits. Preserve image 1's head position and readable face size, slight head tilt and warm neutral daylight. One character only, no additional props, accessories, text, speech bubbles, panels or watermark. Return one polished square waist-up illustration.

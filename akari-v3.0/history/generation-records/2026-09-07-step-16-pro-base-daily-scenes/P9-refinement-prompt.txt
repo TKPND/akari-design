@@ -1,0 +1,12 @@
+Use case: identity-preserve. Refine the camera of the supplied park-bench illustration into one finished square image.
+
+INPUT ROLES
+Image 1 (original P1) defines facial identity, rounded downturned grey eyes, full cheeks, small chin, blunt fringe, bob and delicate illustrated rendering.
+Image 2 (approved P2) defines the quiet closed-mouth smile and relaxed open eyes. Keep these original references for the face.
+Image 3 (P9 bench scene) is the editing canvas: preserve this character, summer clothes, seated listening moment, wooden bench and soft park setting.
+Image 4 (body-only P6) supports selected shoulder width, body volume and outfit design.
+
+CAMERA CHANGE
+Move the viewpoint to a companion seated immediately beside Akari on the same bench, at exactly her seated eye height, looking horizontally toward her face. This must be visibly lower and more alongside than Image 3. Her shoulders turn toward the nearby viewer naturally. Use a close head-and-torso framing, with part of her resting hands and skirt-covered lap near the lower edge. Favor the sideward depth of the bench back and very little bench-seat top surface. Do not look down at her scalp, neckline or lap. Keep normal perspective; no low dramatic angle or wide-angle distortion.
+
+Preserve the P1/P2 cheek and eye proportions, grey iris rendering, fine diagonal cheek hatching, chin-length rounded black bob and wispy face-side strands. Keep the same small closed smile and soft attentive gaze. Maintain coherent body and hand anatomy, plain white short-sleeve shirt with narrow blue-grey piping, blue-grey pleated skirt, and subtle daylight. Change perspective and necessary pose geometry without beautifying, lengthening or narrowing the face. A natural close conversation with a familiar person; no extra person, props, text or panels. Return one standalone square illustration.

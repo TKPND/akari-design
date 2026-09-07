@@ -1,0 +1,167 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Akari v3.0 作業用リファレンス</title><style>* { box-sizing: border-box; }
+:root { font-family: "Noto Sans CJK JP", "Noto Sans JP", sans-serif; color: #293742; background: #e8ecef; }
+body { margin: 0; }
+nav { max-width: 1122px; margin: 18px auto; padding: 0 12px; display: flex; gap: 20px; align-items: center; flex-wrap: wrap; font-size: 14px; }
+nav a { color: #324f68; text-underline-offset: 4px; }
+nav span { margin-left: auto; color: #586a77; }
+.sheet { position: relative; width: 1122px; height: 793px; padding: 32px 38px 36px; background: #fafaf7; margin: 20px auto; overflow: hidden; }
+header { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; }
+.eyebrow { font-size: 10px; letter-spacing: .15em; margin: 0 0 7px; color: #536e80; font-weight: 600; }
+h1 { font-size: 27px; font-weight: 600; margin: 0; letter-spacing: .06em; }
+h2 { font-size: 18px; line-height: 1.6; margin: 0 0 12px; font-weight: 600; }
+.date { font-size: 11px; color: #657786; padding-top: 5px; }
+.subtitle { font-size: 13px; margin: 9px 0 22px; color: #526572; }
+footer { position: absolute; left: 38px; right: 38px; bottom: 18px; display: flex; justify-content: space-between; font-size: 10px; color: #657786; border-top: 1px solid #d7dfe3; padding-top: 9px; }
+.image-card { margin: 0; min-width: 0; }
+.image-button { display: block; width: 100%; border: 0; padding: 0; background: transparent; cursor: zoom-in; text-align: left; }
+.frame { display: block; overflow: hidden; background: #edf0ee; }
+.frame img { display: block; width: 100%; height: 100%; object-fit: contain; }
+figcaption { font-size: 13px; line-height: 1.5; padding-top: 8px; }
+figcaption b { font-size: 11px; letter-spacing: .04em; margin-right: 6px; color: #3b5f78; }
+figcaption small { display: block; font-size: 11px; line-height: 1.5; color: #596b78; margin-top: 3px; }
+.core-grid { display: grid; grid-template-columns: 360px 1fr; gap: 28px; }
+.body-card .frame { height: 544px; background: #bdcadd; }
+.portrait-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.face-card .frame { height: 218px; }
+.face-card .frame img { width: 140%; max-width: none; height: auto; object-fit: initial; margin-left: -20%; margin-top: -1.5%; }
+.design-notes { padding-top: 20px; }
+.design-notes dl { margin: 0; display: grid; grid-template-columns: 48px 1fr; column-gap: 12px; row-gap: 9px; font-size: 12px; line-height: 1.7; }
+dt { color: #3b5f78; font-weight: 600; }
+dd { margin: 0; }
+.expression-grid { display: grid; grid-template-columns: repeat(3,1fr); column-gap: 20px; row-gap: 21px; }
+.expression-grid .face-card .frame { height: 232px; }
+.usage-note { padding: 18px 12px 0; }
+.usage-note p { font-size: 13px; line-height: 1.9; margin: 10px 0; }
+.gesture-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; }
+.gesture-grid .frame { height: 511px; }
+.support-grid { display: grid; grid-template-columns: repeat(2,1fr); column-gap: 24px; row-gap: 18px; }
+.support-grid .frame { height: 217px; background: #e9eee9; }
+.support-grid .frame img { width: 100%; height: 100%; object-fit: contain; }
+dialog { border: 0; padding: 14px; max-width: min(95vw,1400px); max-height: 94vh; color: #293742; background: #fafaf7; }
+dialog::backdrop { background: #17232ad9; }
+.dialog-bar { display: flex; gap: 16px; align-items: center; margin-bottom: 12px; flex-wrap: wrap; }
+.dialog-bar p { margin: 0; flex: 1; font-size: 14px; }
+.dialog-bar a { color: #324f68; font-size: 13px; }
+.dialog-bar button { border: 1px solid #bcc8d0; background: #edf0f1; color: #293742; padding: 8px 15px; cursor: pointer; }
+#dialog-image { display: block; max-width: 100%; max-height: 80vh; object-fit: contain; margin: 0 auto; }
+@media screen and (max-width: 1153px) { .sheet { width: calc(100% - 24px); height: auto; min-height: 793px; padding: 26px 26px 56px; } .core-grid { grid-template-columns: minmax(220px,34%) 1fr; gap: 20px; } .body-card .frame { height: 530px; } .face-card .frame { height: 180px; } .gesture-grid .frame { height: auto; aspect-ratio: 1; } footer { left: 26px; right: 26px; } }
+@media screen and (max-width: 760px) { nav { gap: 13px; } nav span { width: 100%; margin-left: 0; } .sheet { min-height: 0; padding: 22px 18px 64px; } h1 { font-size: 23px; } .date { display: none; } .core-grid { grid-template-columns: 1fr; } .body-card .frame { height: 480px; } .face-card .frame { height: 160px; } .expression-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px 14px; } .expression-grid .face-card .frame { height: 150px; } .gesture-grid,.support-grid { grid-template-columns: 1fr; gap: 25px; } .support-grid .frame { height: auto; aspect-ratio: 1.4; } footer { left: 18px; right: 18px; font-size: 9px; } .usage-note { padding: 0; } .usage-note h2 { font-size: 15px; } .usage-note p { font-size: 12px; } }
+@media screen and (max-width: 440px) { .portrait-pair { gap: 10px; } .portrait-pair .face-card .frame { height: 115px; } .expression-grid { grid-template-columns: 1fr; } .expression-grid .face-card .frame { height: 220px; } .design-notes dl { grid-template-columns: 36px 1fr; gap: 8px; } .body-card .frame { height: 410px; } }
+@page { size: A4 landscape; margin: 0; }
+@media print { :root,body { background: white; } nav,dialog { display: none !important; } .sheet { width: 297mm; height: 210mm; margin: 0; padding: 32px 38px 36px; break-after: page; page-break-after: always; } .sheet:last-child { break-after: auto; page-break-after: auto; } .image-button { cursor: default; } * { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+</style></head><body>
+<nav aria-label="資料のページ"><strong>Akari v3.0</strong><a href="#page-1">基準</a><a href="#page-2">表情</a><a href="#page-3">仕草</a><a href="#page-4">補助資料</a><span>画像を押すと拡大</span></nav>
+<main><section class="sheet " id="page-1" aria-label="あかりの基準デザイン">
+      <header><div><p class="eyebrow">AKARI / V3.0 / WORKING REFERENCE</p><h1>あかりの基準デザイン</h1></div><span class="date">2026.09.07</span></header>
+      <p class="subtitle">顔 P1 ／ 普段の表情 P2 ／ 全身・夏制服 P6</p><div class="core-grid">
+    <figure class="image-card body-card">
+      <button class="image-button" type="button" data-image="P6" aria-label="P6 全身・夏制服を拡大">
+        <span class="frame"><img src="../references/P6-relaxed-full-body.png" alt="P6 全身・夏制服"></span>
+      </button>
+      <figcaption><b>P6</b> 全身・夏制服<small>体型・肩幅・夏制服の基準</small></figcaption>
+    </figure>
+    <div class="core-right"><div class="portrait-pair">
+      <figure class="image-card face-card">
+      <button class="image-button" type="button" data-image="P1" aria-label="P1 顔・髪の原本を拡大">
+        <span class="frame"><img src="../references/P1-user-pro-portrait.png" alt="P1 顔・髪の原本"></span>
+      </button>
+      <figcaption><b>P1</b> 顔・髪の原本<small>新しい画像でも直接参照する</small></figcaption>
+    </figure>
+      <figure class="image-card face-card">
+      <button class="image-button" type="button" data-image="P2" aria-label="P2 普段の微笑みを拡大">
+        <span class="frame"><img src="../references/P2-quiet-smile.png" alt="P2 普段の微笑み"></span>
+      </button>
+      <figcaption><b>P2</b> 普段の微笑み<small>日常の基本表情</small></figcaption>
+    </figure>
+    </div><div class="design-notes"><h2>安心する、自然体の幼馴染</h2>
+      <dl><dt>顔</dt><dd>丸みのあるグレーのタレ目。ふっくらした頬、短めの下顔面、小さな顎。</dd>
+      <dt>髪</dt><dd>黒髪の丸いボブ。束に分かれた前髪と、頬にかかる細い毛束。</dd>
+      <dt>描き方</dt><dd>細い線、柔らかい陰影、頬の斜線。目の形と頬のまとまりを大切にする。</dd>
+      <dt>制服</dt><dd>白の半袖開襟シャツにブルーグレーの縁取り。同系色のプリーツスカート。</dd>
+      <dt>足元</dt><dd>健康的な脚の量感。紺の膝下ハイソックスと白いスニーカー。</dd></dl>
+    </div></div></div>
+      <footer><span>採用済み画像から構成 · 作業用リファレンス</span><span>01 / 04</span></footer>
+    </section><section class="sheet " id="page-2" aria-label="表情の幅">
+      <header><div><p class="eyebrow">AKARI / V3.0 / WORKING REFERENCE</p><h1>表情の幅</h1></div><span class="date">2026.09.07</span></header>
+      <p class="subtitle">普段の微笑みから、照れ・拗ね・笑い・驚きまで。</p><div class="expression-grid"><figure class="image-card face-card">
+      <button class="image-button" type="button" data-image="P2" aria-label="P2 普段の微笑みを拡大">
+        <span class="frame"><img src="../references/P2-quiet-smile.png" alt="P2 普段の微笑み"></span>
+      </button>
+      <figcaption><b>P2</b> 普段の微笑み<small>安心感のある、小さな閉じ口</small></figcaption>
+    </figure><figure class="image-card face-card">
+      <button class="image-button" type="button" data-image="P10-2" aria-label="P10-2 照れ隠しを拡大">
+        <span class="frame"><img src="../references/P10-2-shy-held-smile.png" alt="P10-2 照れ隠し"></span>
+      </button>
+      <figcaption><b>P10-2</b> 照れ隠し<small>視線をそらし、笑みをこらえる</small></figcaption>
+    </figure><figure class="image-card face-card">
+      <button class="image-button" type="button" data-image="P11" aria-label="P11 ちょっと拗ねるを拡大">
+        <span class="frame"><img src="../references/P11-gentle-pout.png" alt="P11 ちょっと拗ねる"></span>
+      </button>
+      <figcaption><b>P11</b> ちょっと拗ねる<small>小さな「むっ」。強く怒らない</small></figcaption>
+    </figure><figure class="image-card face-card">
+      <button class="image-button" type="button" data-image="P14" aria-label="P14 思わず笑うを拡大">
+        <span class="frame"><img src="../references/P14-spontaneous-laugh.png" alt="P14 思わず笑う"></span>
+      </button>
+      <figcaption><b>P14</b> 思わず笑う<small>口・頬・下まぶたが一緒に動く</small></figcaption>
+    </figure><figure class="image-card face-card">
+      <button class="image-button" type="button" data-image="P15" aria-label="P15 少し驚くを拡大">
+        <span class="frame"><img src="../references/P15-soft-surprise.png" alt="P15 少し驚く"></span>
+      </button>
+      <figcaption><b>P15</b> 少し驚く<small>小さく開いた口と、上がった眉</small></figcaption>
+    </figure><aside class="usage-note"><span class="eyebrow">REFERENCE ROLES</span><h2>表情が動いても、同じ顔に。</h2><p>顔の形と描き方は原本P1。普段の表情はP2。ほかの採用例は、それぞれの感情を描くための補助に使う。</p><p>新しい表情・仕草を採用しても、顔の基準を自動的に置き換えない。</p></aside></div>
+      <footer><span>採用済み画像から構成 · 作業用リファレンス</span><span>02 / 04</span></footer>
+    </section><section class="sheet " id="page-3" aria-label="表情と仕草">
+      <header><div><p class="eyebrow">AKARI / V3.0 / WORKING REFERENCE</p><h1>表情と仕草</h1></div><span class="date">2026.09.07</span></header>
+      <p class="subtitle">幼馴染との会話に自然に出る、小さな反応。</p><div class="gesture-grid"><figure class="image-card ">
+      <button class="image-button" type="button" data-image="P12" aria-label="P12 照れて頬に手を添えるを拡大">
+        <span class="frame"><img src="../references/P12-shy-cheek-gesture.png" alt="P12 照れて頬に手を添える"></span>
+      </button>
+      <figcaption><b>P12</b> 照れて頬に手を添える<small>顔を隠さず、頬の横の髪に軽く触れる</small></figcaption>
+    </figure><figure class="image-card ">
+      <button class="image-button" type="button" data-image="P13" aria-label="P13 腕を組んでちょっと拗ねるを拡大">
+        <span class="frame"><img src="../references/P13-pout-folded-arms.png" alt="P13 腕を組んでちょっと拗ねる"></span>
+      </button>
+      <figcaption><b>P13</b> 腕を組んでちょっと拗ねる<small>肩と肘に力を入れすぎない、低い腕組み</small></figcaption>
+    </figure></div>
+      <footer><span>採用済み画像から構成 · 作業用リファレンス</span><span>03 / 04</span></footer>
+    </section><section class="sheet " id="page-4" aria-label="角度と日常シーン">
+      <header><div><p class="eyebrow">AKARI / V3.0 / WORKING REFERENCE</p><h1>角度と日常シーン</h1></div><span class="date">2026.09.07</span></header>
+      <p class="subtitle">本人らしさと、会話の距離感を確かめる補助資料。</p><div class="support-grid"><figure class="image-card ">
+      <button class="image-button" type="button" data-image="P4" aria-label="P4 正面の顔を拡大">
+        <span class="frame"><img src="../references/P4-front-bust.png" alt="P4 正面の顔"></span>
+      </button>
+      <figcaption><b>P4</b> 正面の顔<small>P1・P2の顔を確認する角度資料</small></figcaption>
+    </figure><figure class="image-card ">
+      <button class="image-button" type="button" data-image="P5" aria-label="P5 浅い斜めの顔を拡大">
+        <span class="frame"><img src="../references/P5-three-quarter-bust.png" alt="P5 浅い斜めの顔"></span>
+      </button>
+      <figcaption><b>P5</b> 浅い斜めの顔<small>首の傾きがあり、厳密な三面図ではない</small></figcaption>
+    </figure><figure class="image-card ">
+      <button class="image-button" type="button" data-image="P8" aria-label="P8 待ち合わせの挨拶を拡大">
+        <span class="frame"><img src="../references/P8-casual-greeting.png" alt="P8 待ち合わせの挨拶"></span>
+      </button>
+      <figcaption><b>P8</b> 待ち合わせの挨拶<small>小さく手を振る、気楽な距離感</small></figcaption>
+    </figure><figure class="image-card ">
+      <button class="image-button" type="button" data-image="P9" aria-label="P9 ベンチで話を聞くを拡大">
+        <span class="frame"><img src="../references/P9-2-bench-eye-level.png" alt="P9 ベンチで話を聞く"></span>
+      </button>
+      <figcaption><b>P9</b> ベンチで話を聞く<small>採用例。カメラは少し見下ろし気味</small></figcaption>
+    </figure></div>
+      <footer><span>採用済み画像から構成 · 作業用リファレンス</span><span>04 / 04</span></footer>
+    </section></main><dialog id="image-dialog" aria-labelledby="dialog-label"><div class="dialog-bar"><p id="dialog-label"></p><a id="download-image" download>原寸PNGを保存</a><button id="close-dialog" type="button">閉じる</button></div><img id="dialog-image" alt=""></dialog><script>const imageDialog = document.getElementById('image-dialog');
+const dialogImage = document.getElementById('dialog-image');
+const dialogLabel = document.getElementById('dialog-label');
+const downloadImage = document.getElementById('download-image');
+document.querySelectorAll('[data-image]').forEach(button => {
+  button.addEventListener('click', () => {
+    const image = button.querySelector('img');
+    dialogImage.src = image.src;
+    dialogImage.alt = image.alt;
+    dialogLabel.textContent = image.alt;
+    downloadImage.href = image.src;
+    downloadImage.download = button.dataset.image + '.png';
+    imageDialog.showModal();
+  });
+});
+document.getElementById('close-dialog').addEventListener('click', () => imageDialog.close());
+</script></body></html>

@@ -1,0 +1,20 @@
+{
+  "source": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-05-user-full-body/B7-user-refined-full-body.png",
+  "source_sha256": "5ac907c49276cf680c6eb426055d8701891ad2300d663cbe68f105dfc1ff4863",
+  "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/assets/B7-face-hidden.png",
+  "sha256": "ee049f1e3a2d1b190c7019d0fac776477d4bae9a693ba4731340177b970b0d5a",
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "operation": "Opaque neutral RGB127 rectangle on a copy, using ImageMagick; no resize, warp or blending. Reference preparation only.",
+  "rectangle_right_bottom_exclusive": [
+    398,
+    150,
+    605,
+    340
+  ],
+  "verified_exact_pixels_outside_rectangle": true,
+  "verified_uniform_rectangle": true,
+  "role": "B7 whole-body canvas with competing face features hidden. This is a supplied reference image, not a tool mask parameter."
+}

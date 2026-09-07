@@ -1,0 +1,46 @@
+{
+  "project": "akari-v3.0",
+  "date": "2026-09-07",
+  "path_base": "Paths are relative to the akari-v3.0 directory.",
+  "user_quote": "気にいった奴もはっとく",
+  "ids": [
+    "S01",
+    "S09",
+    "S18",
+    "S21",
+    "S24"
+  ],
+  "scope": "User favorites for continued scene work; no change to face, expression or body authorities.",
+  "assets": [
+    {
+      "id": "S01",
+      "title_ja": "朝の曲がり角でおはよう",
+      "path": "situations/S01-morning-greeting.png",
+      "sha256": "7ed7c8582a58b1d51f265934a0d729927b09c76db104b2260629a4ef2a71c1bf"
+    },
+    {
+      "id": "S09",
+      "title_ja": "バス待ちで、ちょっと拗ねる",
+      "path": "situations/S09-missed-bus.png",
+      "sha256": "dc447eb94b23c13a76e763cc5b2290603e19a47c5d573978e79b804c6b7a945d"
+    },
+    {
+      "id": "S18",
+      "title_ja": "踏切待ちの照れ隠し",
+      "path": "situations/S18-sunset-crossing.png",
+      "sha256": "3bd696f8b4d538f598a8cd6ae50d7f6dd06cd678a6d0f28020229d0cdf1add60"
+    },
+    {
+      "id": "S21",
+      "title_ja": "海沿いで、声が弾む",
+      "path": "situations/S21-seaside-laugh.png",
+      "sha256": "9b254654dde2dd942fc130ab1f661424d0d1b051784518033943a0bc5c178e07"
+    },
+    {
+      "id": "S24",
+      "title_ja": "別れ際の、ありがと",
+      "path": "situations/S24-doorway-thanks.png",
+      "sha256": "74ae3697987dcdac5b9cf563a48dcfab33ec52388d776172cf469e5dd0212e49"
+    }
+  ]
+}

@@ -1,0 +1,351 @@
+{
+  "project": "akari-v3.0",
+  "path_base": "Paths are relative to the akari-v3.0 directory.",
+  "assets": [
+    {
+      "path": "history/B7-user-refined-full-body.png",
+      "sha256": "5ac907c49276cf680c6eb426055d8701891ad2300d663cbe68f105dfc1ff4863",
+      "bytes": 1611961
+    },
+    {
+      "path": "history/S05-cold-drink-original.png",
+      "sha256": "1863027bb582c9fd454e11a66c72cfdac8e4ef2cffae4a4c40ca7c7a904f99a3",
+      "bytes": 2185448
+    },
+    {
+      "path": "references/P1-user-pro-portrait.png",
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "bytes": 1869375
+    },
+    {
+      "path": "references/P10-2-shy-held-smile.png",
+      "sha256": "eebfb8bb0112adace66d8c5843cc84bf22648375fffd9770afb1197fb7095320",
+      "bytes": 1913657
+    },
+    {
+      "path": "references/P11-gentle-pout.png",
+      "sha256": "6640bb1d48b8ea48dc343be9e7b004d8954c70327da188483c9e788bcebadb72",
+      "bytes": 1871588
+    },
+    {
+      "path": "references/P12-shy-cheek-gesture.png",
+      "sha256": "9885918ebc0f31a2202150e4e80f6e67303613d0c49c506c6cbfc21c669fb03f",
+      "bytes": 1941047
+    },
+    {
+      "path": "references/P13-pout-folded-arms.png",
+      "sha256": "b7146b672f8668b9c760ecdef028580d47de7d9d076892aafc9381c7ea26ee5c",
+      "bytes": 1910284
+    },
+    {
+      "path": "references/P14-spontaneous-laugh.png",
+      "sha256": "c93bf600fbcc94c5b4e1390de6d81cccb4d963dfba365dfb462ae064829b5dc1",
+      "bytes": 1864519
+    },
+    {
+      "path": "references/P15-soft-surprise.png",
+      "sha256": "b119638fcc560a783ec254548bf796500593c74c1121c21f632b311e054ad193",
+      "bytes": 1868734
+    },
+    {
+      "path": "references/P2-quiet-smile.png",
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "bytes": 1836424
+    },
+    {
+      "path": "references/P4-front-bust.png",
+      "sha256": "2496ce968332c8f081945eec49cf4461d982968a44812a1e081e08d91322bd88",
+      "bytes": 1882215
+    },
+    {
+      "path": "references/P5-three-quarter-bust.png",
+      "sha256": "e4f24cdb01287db7a6ff373762c2bde3ca64e16fb0c753b7c28c4cfccc322b85",
+      "bytes": 1864863
+    },
+    {
+      "path": "references/P6-relaxed-full-body.png",
+      "sha256": "018f45133acb2d9cd3625d27090b38084f6b795a92a726ff641785d889c0a823",
+      "bytes": 1664313
+    },
+    {
+      "path": "references/P8-casual-greeting.png",
+      "sha256": "3824973509e5587e83f3f257e8faf7822f0ff37a14d03e9157a4017ad070bd98",
+      "bytes": 2067723
+    },
+    {
+      "path": "references/P9-2-bench-eye-level.png",
+      "sha256": "689e3d1e4a792a7fc67ce004bfb8ebe249eacc311bf405d3a4d960c33d127069",
+      "bytes": 2081597
+    },
+    {
+      "path": "situations/P16-walk-home-laugh.png",
+      "sha256": "e3bc36dbad6083ed35919bd54a487820ff17bbdadc28e2dfceb011390d1ebcd4",
+      "bytes": 2240489
+    },
+    {
+      "path": "situations/S01-morning-greeting.png",
+      "sha256": "7ed7c8582a58b1d51f265934a0d729927b09c76db104b2260629a4ef2a71c1bf",
+      "bytes": 2331870
+    },
+    {
+      "path": "situations/S02-desk-turn.png",
+      "sha256": "26b06dfd147123b31f9571f1e23eb9ba896a4eaecf657c4c8214c6c9022e336f",
+      "bytes": 1943672
+    },
+    {
+      "path": "situations/S03-library-hush.png",
+      "sha256": "012be2117ba80d66094349ab2bdd0995577a7af4c49e396e3dc64ee28db142fa",
+      "bytes": 2021753
+    },
+    {
+      "path": "situations/S04-study-window.png",
+      "sha256": "1dad916fbf699d3c20537a0a2192f1b1044bea40e5c52ca3b66fc24d90be750b",
+      "bytes": 1944114
+    },
+    {
+      "path": "situations/S05-cold-drink-r2.png",
+      "sha256": "a046a3a772efd8e4dec18b1e9c723c7568c315e9901da5cc89ead975d40d5792",
+      "bytes": 2198926
+    },
+    {
+      "path": "situations/S06-lunch-bench.png",
+      "sha256": "167948c370e8167939fc1e26b5efcc8f7ae5dddb430098fa473915eab5019da0",
+      "bytes": 2271658
+    },
+    {
+      "path": "situations/S07-aquarium.png",
+      "sha256": "5a565e77215f01ba78bb2878285e526bdecef649ff166257bf4c09fde5500265",
+      "bytes": 2027525
+    },
+    {
+      "path": "situations/S08-windy-bridge.png",
+      "sha256": "e337688f86c8c4464323c41b14f5d09afa1f3e273468c81a7964fb4abd64f920",
+      "bytes": 2228165
+    },
+    {
+      "path": "situations/S09-missed-bus.png",
+      "sha256": "dc447eb94b23c13a76e763cc5b2290603e19a47c5d573978e79b804c6b7a945d",
+      "bytes": 2204238
+    },
+    {
+      "path": "situations/S10-rain-shelter.png",
+      "sha256": "0c95ebef94d30b7579ad3d098f7d75b955b6985ad09bd2e922e7fb6e4e6e4f1b",
+      "bytes": 2280188
+    },
+    {
+      "path": "situations/S11-shared-umbrella.png",
+      "sha256": "a47f053a5ada3b754ef80d8e59cdcf37656c328b752ff1ed9cd77d5598e3377c",
+      "bytes": 2165958
+    },
+    {
+      "path": "situations/S12-puddle-step.png",
+      "sha256": "062350edc3c78ed5ee0484499059babcc5bb0f7605303f59ccde3cbeef0f1ac2",
+      "bytes": 2503231
+    },
+    {
+      "path": "situations/S13-street-cat.png",
+      "sha256": "470d064edc3c54c141dfe0d3f02c6c6ca59c012ff67a7d621f96631309e00a97",
+      "bytes": 2621202
+    },
+    {
+      "path": "situations/S14-flower-shop.png",
+      "sha256": "cca2ebee085167abb71d98926933d296e80d4ad4c5f5c581ec6ef2244caff0d4",
+      "bytes": 2289364
+    },
+    {
+      "path": "situations/S15-bookshop-find.png",
+      "sha256": "82ede2ba8d3228324f5571e8733ba04767f0821721eac22f95096e35979c14be",
+      "bytes": 2126078
+    },
+    {
+      "path": "situations/S16-arcade-pout.png",
+      "sha256": "98c5f4dda855017f275d5e039d61224ab247c922fc5ce5b051df46937d593b12",
+      "bytes": 1980457
+    },
+    {
+      "path": "situations/S17-cafe-dessert.png",
+      "sha256": "b26c57d7c1e7e859b1b6b490fdcc47a2c762a3c067bf7086a72cdd7d7c38ad77",
+      "bytes": 2064228
+    },
+    {
+      "path": "situations/S18-sunset-crossing.png",
+      "sha256": "3bd696f8b4d538f598a8cd6ae50d7f6dd06cd678a6d0f28020229d0cdf1add60",
+      "bytes": 2150389
+    },
+    {
+      "path": "situations/S19-music-room.png",
+      "sha256": "2d0caef09ae9c5d4bea88be78ffd8bde5d687858655040d746794e3aeb1479d2",
+      "bytes": 1989322
+    },
+    {
+      "path": "situations/S20-window-listen.png",
+      "sha256": "33410b69ba5b4ef00556c012c71c4fea937f64fad255c455e7e11e863bfd3b43",
+      "bytes": 2002273
+    },
+    {
+      "path": "situations/S21-seaside-laugh.png",
+      "sha256": "9b254654dde2dd942fc130ab1f661424d0d1b051784518033943a0bc5c178e07",
+      "bytes": 2114852
+    },
+    {
+      "path": "situations/S22-lantern-evening.png",
+      "sha256": "f261324c7f598240dd1292f6492c232b7d99d3002be24cda5e4dbe4c330be911",
+      "bytes": 2118071
+    },
+    {
+      "path": "situations/S23-platform-goodbye.png",
+      "sha256": "19595dc3f1c5270f83979274d955090695ea4395915b051cccc943035ddd91c7",
+      "bytes": 2290121
+    },
+    {
+      "path": "situations/S24-doorway-thanks.png",
+      "sha256": "74ae3697987dcdac5b9cf563a48dcfab33ec52388d776172cf469e5dd0212e49",
+      "bytes": 1998288
+    },
+    {
+      "path": "situations/contact-sheet-1.jpg",
+      "sha256": "fb0d4f48d035103c8b7ddc892cf3809c42d7e7fc09141a7584db9dc47810f67f",
+      "bytes": 508468
+    },
+    {
+      "path": "situations/contact-sheet-2.jpg",
+      "sha256": "ea46eb77e188957c1fb0d766aa327f3e7e1614c7957882aa83ff56336f6415a8",
+      "bytes": 493184
+    },
+    {
+      "path": "situations/previews/S01.webp",
+      "sha256": "fa0108e29af83de99967fbbfc613fe335fb895acc77a9f74183e60a3665920eb",
+      "bytes": 31132
+    },
+    {
+      "path": "situations/previews/S02.webp",
+      "sha256": "c12fec7d794a8c7cd23da93ba9ce520d66061361501dc7bac39df9620f9e61fe",
+      "bytes": 17404
+    },
+    {
+      "path": "situations/previews/S03.webp",
+      "sha256": "dad4466e925b2b3d069e828476bf5c32486926ada33024c71a3bed5641390534",
+      "bytes": 22826
+    },
+    {
+      "path": "situations/previews/S04.webp",
+      "sha256": "0b0a068d357fae2e557ca7a03637595a6b911e59442c96b437d0a3fdd9f4bb68",
+      "bytes": 20324
+    },
+    {
+      "path": "situations/previews/S05.webp",
+      "sha256": "fbf26f53cc9ba4d84a2ab6bed821ecbc782832c6dfb261364bb8059e598c537f",
+      "bytes": 30276
+    },
+    {
+      "path": "situations/previews/S06.webp",
+      "sha256": "278a0d8054176aaef54366b8d8ce6f37f4333623cc8546f91e26ac0979461cc5",
+      "bytes": 25476
+    },
+    {
+      "path": "situations/previews/S07.webp",
+      "sha256": "8e6439428cb9c7afa2b2f57967092cf7638354c969326bf40d5f646a86215f8f",
+      "bytes": 24670
+    },
+    {
+      "path": "situations/previews/S08.webp",
+      "sha256": "21c50863646c97e8908481ac5f3a86336ab65bdc9c83762c55d5cc33764442cb",
+      "bytes": 29922
+    },
+    {
+      "path": "situations/previews/S09.webp",
+      "sha256": "8a32fb3fe6163afb8629cf96617c3e328bac1a326f7c0f24e8ad33abc68c3e6c",
+      "bytes": 20074
+    },
+    {
+      "path": "situations/previews/S10.webp",
+      "sha256": "11898ed09d7090959172fb719fb95a69dbaa35e6d0a86344137ffa622c42454b",
+      "bytes": 28216
+    },
+    {
+      "path": "situations/previews/S11.webp",
+      "sha256": "5c1b68d3d555751e10e71b032da3d1f3f1268cc53808dbe6210c9cb9e37833a7",
+      "bytes": 22634
+    },
+    {
+      "path": "situations/previews/S12.webp",
+      "sha256": "0abcaaf5e1ced991aa3530f16c91c1778827ea9c4ec49cca2509f07130c88ee4",
+      "bytes": 34864
+    },
+    {
+      "path": "situations/previews/S13.webp",
+      "sha256": "aab973d0b85c6ac91317c996663baa9919456459347cd9e54b579fecff4417ee",
+      "bytes": 28888
+    },
+    {
+      "path": "situations/previews/S14.webp",
+      "sha256": "deb40eec0841fb7ca784156db366f0d9b281da0cc8ac1e01dbadffb58c2eec4c",
+      "bytes": 34128
+    },
+    {
+      "path": "situations/previews/S15.webp",
+      "sha256": "cbfce454b6c6ada5c56321ab4e43459168cf9f21d3dc2b8fdeec77f11f59f326",
+      "bytes": 23678
+    },
+    {
+      "path": "situations/previews/S16.webp",
+      "sha256": "5f115c14707ae53272acbd699a77d74324610a1f0501357acc2a20bcda6b569a",
+      "bytes": 23758
+    },
+    {
+      "path": "situations/previews/S17.webp",
+      "sha256": "226b34e257c6e57b3f8f2f3cf23da5345869dbc4d5159f17e9e5d969330dd2c2",
+      "bytes": 21144
+    },
+    {
+      "path": "situations/previews/S18.webp",
+      "sha256": "47d78a5149be58bb6ef02e5dbb8520f243a654baab10e2056be927738d78a013",
+      "bytes": 27992
+    },
+    {
+      "path": "situations/previews/S19.webp",
+      "sha256": "6499225982d3813bc1508a63a6c5e00bf9c1675b9952947d6e8823d685ce630a",
+      "bytes": 20346
+    },
+    {
+      "path": "situations/previews/S20.webp",
+      "sha256": "b1f930c1737a3409431af7b529ee2e651c5965c69c1f956b96329a7f9587f895",
+      "bytes": 21608
+    },
+    {
+      "path": "situations/previews/S21.webp",
+      "sha256": "c3dfcd1c243cee7a9f72933bb600858ece0d94c91c480f4cbab0827081ccd29a",
+      "bytes": 20730
+    },
+    {
+      "path": "situations/previews/S22.webp",
+      "sha256": "03c99a90580e60794636fd73533bdfef3ac0516f26e46e021a293234b847d1ed",
+      "bytes": 23808
+    },
+    {
+      "path": "situations/previews/S23.webp",
+      "sha256": "b0aed6a44874cb9974aa98a2e7cdb6405ca49c7ec42aaa53db6fcef8ce29526b",
+      "bytes": 24688
+    },
+    {
+      "path": "situations/previews/S24.webp",
+      "sha256": "485ef5263d50ed8b29903d071a5768c3d85cd947bcce2661bb9de06bc1b12a04",
+      "bytes": 21252
+    },
+    {
+      "path": "working-reference/akari-v3.0-working-reference.pdf",
+      "sha256": "02d0c1501eaaa8252cbd08a5f3448bfecc1228ae708f132ddf1c874f3e99cfd1",
+      "bytes": 41367746
+    },
+    {
+      "path": "working-reference/expressions-preview.png",
+      "sha256": "718eb9d0aa869cc5aa259902b41dae4ab33cce44de7791d31764129eeeaa7fb4",
+      "bytes": 1139341
+    },
+    {
+      "path": "working-reference/overview.png",
+      "sha256": "67d2c8d88b4479b11b30278384c1666cb4ebb88930e75602d8071b7a6e039a43",
+      "bytes": 1078051
+    }
+  ]
+}

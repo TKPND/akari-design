@@ -1,0 +1,744 @@
+{
+  "project": "akari-v3.0",
+  "date": "2026-09-07",
+  "path_base": "Paths are relative to the akari-v3.0 directory.",
+  "tool": "built-in image_gen",
+  "model": "Not exposed by built-in tool",
+  "reference_manifest": "references/manifest.json",
+  "favorite_ids": [
+    "S01",
+    "S09",
+    "S18",
+    "S21",
+    "S24"
+  ],
+  "selection_scope": "Favorites identify preferred situation illustrations. They do not replace P1, P2 or P6 as primary references; other scenes remain candidates.",
+  "scene_count": 25,
+  "initial_scene": {
+    "id": "P16",
+    "title_ja": "放課後の帰り道、隣で思わず笑う",
+    "path": "situations/P16-walk-home-laugh.png",
+    "sha256": "e3bc36dbad6083ed35919bd54a487820ff17bbdadc28e2dfceb011390d1ebcd4",
+    "bytes": 2240489,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "status": "reviewed_candidate",
+    "user_favorite": false,
+    "face_authority_promoted": false,
+    "prompt_path": "situations/prompts/P16.txt",
+    "reference_paths": [
+      "references/P1-user-pro-portrait.png",
+      "references/P14-spontaneous-laugh.png",
+      "references/P6-relaxed-full-body.png"
+    ],
+    "generation_id": "exec-4f783484-a1fe-44fe-83f0-d52e9ae14c0a",
+    "elapsed_ms": 34079,
+    "visual_review": {
+      "reviewer": "assistant",
+      "identity": "P1 black bob, segmented bangs, grey rounded eyes and cheek/chin balance remain recognizable.",
+      "expression": "Visible grey irises and open laughing smile read as warm spontaneous amusement.",
+      "outfit": "White blue-grey-piped open-collar shirt, pleated skirt and navy sock tops remain consistent.",
+      "anatomy": "Visible hands and walking stance are coherent on full-image visual inspection.",
+      "composition": "Finished leafy residential path scene. Character faces the viewer more frontally than the intended alongside view.",
+      "limitations": [
+        "Friendly walking conversation is legible; the exact alongside camera relationship remains approximate.",
+        "Candidate has not yet been accepted by the user."
+      ]
+    }
+  },
+  "scenes": [
+    {
+      "id": "S01",
+      "slug": "morning-greeting",
+      "title_ja": "朝の曲がり角でおはよう",
+      "expression_id": "P2",
+      "filename": "S01-morning-greeting.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "7ed7c8582a58b1d51f265934a0d729927b09c76db104b2260629a4ef2a71c1bf",
+      "bytes": 2331870,
+      "generation_id": "exec-a0db0b48-a445-4d02-8888-056fea147402",
+      "elapsed_ms": 37830,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "composition_note": "Generated full figure instead of the proposed knee-up crop.",
+      "path": "situations/S01-morning-greeting.png",
+      "prompt_path": "situations/prompts/S01.txt",
+      "preview_path": "situations/previews/S01.webp",
+      "reference_paths": [
+        "references/P1-user-pro-portrait.png",
+        "references/P6-relaxed-full-body.png",
+        "references/P2-quiet-smile.png"
+      ],
+      "user_favorite": true,
+      "status": "user_favorite",
+      "face_authority_promoted": false,
+      "selection": {
+        "date": "2026-09-07",
+        "evidence": "User attached this exact PNG and said 気にいった奴もはっとく",
+        "attachment_sha256_matched": true
+      }
+    },
+    {
+      "id": "S02",
+      "slug": "desk-turn",
+      "title_ja": "隣の席から、ねえねえ",
+      "expression_id": "P2",
+      "filename": "S02-desk-turn.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "26b06dfd147123b31f9571f1e23eb9ba896a4eaecf657c4c8214c6c9022e336f",
+      "bytes": 1943672,
+      "generation_id": "exec-d1578763-f488-4c5e-a74d-81a6d7fe4f3d",
+      "elapsed_ms": 36249,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "composition_note": "Generated chin-resting seated conversation rather than a distinct turn from the adjacent desk.",
+      "path": "situations/S02-desk-turn.png",
+      "prompt_path": "situations/prompts/S02.txt",
+      "preview_path": "situations/previews/S02.webp",
+      "reference_paths": [
+        "references/P1-user-pro-portrait.png",
+        "references/P6-relaxed-full-body.png",
+        "references/P2-quiet-smile.png"
+      ],
+      "user_favorite": false,
+      "status": "reviewed_candidate",
+      "face_authority_promoted": false
+    },
+    {
+      "id": "S03",
+      "slug": "library-hush",
+      "title_ja": "図書室で、しーっ",
+      "expression_id": "P2",
+      "filename": "S03-library-hush.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "012be2117ba80d66094349ab2bdd0995577a7af4c49e396e3dc64ee28db142fa",
+      "bytes": 2021753,
+      "generation_id": "exec-6953120e-0a1a-421f-a735-a44b83178d5e",
+      "elapsed_ms": 33876,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "path": "situations/S03-library-hush.png",
+      "prompt_path": "situations/prompts/S03.txt",
+      "preview_path": "situations/previews/S03.webp",
+      "reference_paths": [
+        "references/P1-user-pro-portrait.png",
+        "references/P6-relaxed-full-body.png",
+        "references/P2-quiet-smile.png"
+      ],
+      "user_favorite": false,
+      "status": "reviewed_candidate",
+      "face_authority_promoted": false
+    },
+    {
+      "id": "S04",
+      "slug": "study-window",
+      "title_ja": "窓辺で真剣に考え中",
+      "expression_id": "P2",
+      "filename": "S04-study-window.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "1dad916fbf699d3c20537a0a2192f1b1044bea40e5c52ca3b66fc24d90be750b",
+      "bytes": 1944114,
+      "generation_id": "exec-65bae042-0e17-4aaf-aa6c-5a92b02a36c5",
+      "elapsed_ms": 61261,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "path": "situations/S04-study-window.png",
+      "prompt_path": "situations/prompts/S04.txt",
+      "preview_path": "situations/previews/S04.webp",
+      "reference_paths": [
+        "references/P1-user-pro-portrait.png",
+        "references/P6-relaxed-full-body.png",
+        "references/P2-quiet-smile.png"
+      ],
+      "user_favorite": false,
+      "status": "reviewed_candidate",
+      "face_authority_promoted": false
+    },
+    {
+      "id": "S05",
+      "slug": "cold-drink",
+      "title_ja": "冷たいの、飲む？",
+      "expression_id": "P2",
+      "filename": "S05-cold-drink-r2.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "a046a3a772efd8e4dec18b1e9c723c7568c315e9901da5cc89ead975d40d5792",
+      "bytes": 2198926,
+      "generation_id": "exec-892b0236-201c-4a9d-8943-6c5a3ed5dbf2",
+      "elapsed_ms": 114528,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "path": "situations/S05-cold-drink-r2.png",
+      "prompt_path": "situations/prompts/S05.txt",
+      "preview_path": "situations/previews/S05.webp",
+      "reference_paths": [
+        "references/P1-user-pro-portrait.png",
+        "references/P6-relaxed-full-body.png",
+        "references/P2-quiet-smile.png"
+      ],
+      "user_favorite": false,
+      "status": "reviewed_candidate",
+      "face_authority_promoted": false,
+      "repair": {
+        "reason": "Extra sixth digit on the foreground can-holding hand",
+        "prompt_path": "situations/prompts/S05-repair.txt",
+        "elapsed_ms": 51114,
+        "reference_paths": [
+          "history/S05-cold-drink-original.png",
+          "references/P1-user-pro-portrait.png"
+        ],
+        "result": "Removed the top extra digit; conventional five-digit grip visible.",
+        "original_sha256": "1863027bb582c9fd454e11a66c72cfdac8e4ef2cffae4a4c40ca7c7a904f99a3",
+        "original_generation_id": "exec-88a3cd41-badf-4f00-aea3-3aa49d3d83d8"
+      }
+    },
+    {
+      "id": "S06",
+      "slug": "lunch-bench",
+      "title_ja": "中庭でお昼休み",
+      "expression_id": "P14",
+      "filename": "S06-lunch-bench.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "167948c370e8167939fc1e26b5efcc8f7ae5dddb430098fa473915eab5019da0",
+      "bytes": 2271658,
+      "generation_id": "exec-881e9335-ba13-495f-92d3-118ef8d8706b",
+      "elapsed_ms": 31171,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "path": "situations/S06-lunch-bench.png",
+      "prompt_path": "situations/prompts/S06.txt",
+      "preview_path": "situations/previews/S06.webp",
+      "reference_paths": [
+        "references/P1-user-pro-portrait.png",
+        "references/P6-relaxed-full-body.png",
+        "references/P14-spontaneous-laugh.png"
+      ],
+      "user_favorite": false,
+      "status": "reviewed_candidate",
+      "face_authority_promoted": false
+    },
+    {
+      "id": "S07",
+      "slug": "aquarium",
+      "title_ja": "水槽の前で目が合う",
+      "expression_id": "P15",
+      "filename": "S07-aquarium.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "5a565e77215f01ba78bb2878285e526bdecef649ff166257bf4c09fde5500265",
+      "bytes": 2027525,
+      "generation_id": "exec-ea49f87d-27bd-4852-a1b7-b054bdff6cc5",
+      "elapsed_ms": 33757,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "path": "situations/S07-aquarium.png",
+      "prompt_path": "situations/prompts/S07.txt",
+      "preview_path": "situations/previews/S07.webp",
+      "reference_paths": [
+        "references/P1-user-pro-portrait.png",
+        "references/P6-relaxed-full-body.png",
+        "references/P15-soft-surprise.png"
+      ],
+      "user_favorite": false,
+      "status": "reviewed_candidate",
+      "face_authority_promoted": false
+    },
+    {
+      "id": "S08",
+      "slug": "windy-bridge",
+      "title_ja": "風に前髪を押さえて",
+      "expression_id": "P14",
+      "filename": "S08-windy-bridge.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "e337688f86c8c4464323c41b14f5d09afa1f3e273468c81a7964fb4abd64f920",
+      "bytes": 2228165,
+      "generation_id": "exec-55f930df-fc22-4e3f-99d7-a81789f2c2bf",
+      "elapsed_ms": 33348,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "path": "situations/S08-windy-bridge.png",
+      "prompt_path": "situations/prompts/S08.txt",
+      "preview_path": "situations/previews/S08.webp",
+      "reference_paths": [
+        "references/P1-user-pro-portrait.png",
+        "references/P6-relaxed-full-body.png",
+        "references/P14-spontaneous-laugh.png"
+      ],
+      "user_favorite": false,
+      "status": "reviewed_candidate",
+      "face_authority_promoted": false
+    },
+    {
+      "id": "S09",
+      "slug": "missed-bus",
+      "title_ja": "バス待ちで、ちょっと拗ねる",
+      "expression_id": "P11",
+      "filename": "S09-missed-bus.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "dc447eb94b23c13a76e763cc5b2290603e19a47c5d573978e79b804c6b7a945d",
+      "bytes": 2204238,
+      "generation_id": "exec-166f4ba4-fdbd-42ce-b1b0-90db04455d2c",
+      "elapsed_ms": 64746,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "composition_note": "The distant bus faces the camera, so the title follows the finished waiting scene.",
+      "path": "situations/S09-missed-bus.png",
+      "prompt_path": "situations/prompts/S09.txt",
+      "preview_path": "situations/previews/S09.webp",
+      "reference_paths": [
+        "references/P1-user-pro-portrait.png",
+        "references/P6-relaxed-full-body.png",
+        "references/P11-gentle-pout.png"
+      ],
+      "user_favorite": true,
+      "status": "user_favorite",
+      "face_authority_promoted": false,
+      "selection": {
+        "date": "2026-09-07",
+        "evidence": "User attached this exact PNG and said 気にいった奴もはっとく",
+        "attachment_sha256_matched": true
+      }
+    },
+    {
+      "id": "S10",
+      "slug": "rain-shelter",
+      "title_ja": "急な雨に、ちょっとびっくり",
+      "expression_id": "P15",
+      "filename": "S10-rain-shelter.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "0c95ebef94d30b7579ad3d098f7d75b955b6985ad09bd2e922e7fb6e4e6e4f1b",
+      "bytes": 2280188,
+      "generation_id": "exec-dd7b4b2a-f3c8-4742-8913-7aa948aadb76",
+      "elapsed_ms": 38700,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "path": "situations/S10-rain-shelter.png",
+      "prompt_path": "situations/prompts/S10.txt",
+      "preview_path": "situations/previews/S10.webp",
+      "reference_paths": [
+        "references/P1-user-pro-portrait.png",
+        "references/P6-relaxed-full-body.png",
+        "references/P15-soft-surprise.png"
+      ],
+      "user_favorite": false,
+      "status": "reviewed_candidate",
+      "face_authority_promoted": false
+    },
+    {
+      "id": "S11",
+      "slug": "shared-umbrella",
+      "title_ja": "傘の中、少し近い距離",
+      "expression_id": "P10",
+      "filename": "S11-shared-umbrella.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "a47f053a5ada3b754ef80d8e59cdcf37656c328b752ff1ed9cd77d5598e3377c",
+      "bytes": 2165958,
+      "generation_id": "exec-bdd725ff-a56a-4cc5-a71a-0fef8850a693",
+      "elapsed_ms": 33088,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "path": "situations/S11-shared-umbrella.png",
+      "prompt_path": "situations/prompts/S11.txt",
+      "preview_path": "situations/previews/S11.webp",
+      "reference_paths": [
+        "references/P1-user-pro-portrait.png",
+        "references/P6-relaxed-full-body.png",
+        "references/P10-2-shy-held-smile.png"
+      ],
+      "user_favorite": false,
+      "status": "reviewed_candidate",
+      "face_authority_promoted": false
+    },
+    {
+      "id": "S12",
+      "slug": "puddle-step",
+      "title_ja": "雨上がり、振り向いて",
+      "expression_id": "P2",
+      "filename": "S12-puddle-step.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "062350edc3c78ed5ee0484499059babcc5bb0f7605303f59ccde3cbeef0f1ac2",
+      "bytes": 2503231,
+      "generation_id": "exec-a10f4f79-2bf0-472d-9c98-34b89a28e79d",
+      "elapsed_ms": 43393,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "composition_note": "One shoe enters the puddle; the finished scene is a backward glance after rain.",
+      "path": "situations/S12-puddle-step.png",
+      "prompt_path": "situations/prompts/S12.txt",
+      "preview_path": "situations/previews/S12.webp",
+      "reference_paths": [
+        "references/P1-user-pro-portrait.png",
+        "references/P6-relaxed-full-body.png",
+        "references/P2-quiet-smile.png"
+      ],
+      "user_favorite": false,
+      "status": "reviewed_candidate",
+      "face_authority_promoted": false
+    },
+    {
+      "id": "S13",
+      "slug": "street-cat",
+      "title_ja": "道ばたの猫にごあいさつ",
+      "expression_id": "P2",
+      "filename": "S13-street-cat.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "470d064edc3c54c141dfe0d3f02c6c6ca59c012ff67a7d621f96631309e00a97",
+      "bytes": 2621202,
+      "generation_id": "exec-c3fa72b2-2e6f-4564-a2c6-4cf094706aeb",
+      "elapsed_ms": 34972,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "path": "situations/S13-street-cat.png",
+      "prompt_path": "situations/prompts/S13.txt",
+      "preview_path": "situations/previews/S13.webp",
+      "reference_paths": [
+        "references/P1-user-pro-portrait.png",
+        "references/P6-relaxed-full-body.png",
+        "references/P2-quiet-smile.png"
+      ],
+      "user_favorite": false,
+      "status": "reviewed_candidate",
+      "face_authority_promoted": false
+    },
+    {
+      "id": "S14",
+      "slug": "flower-shop",
+      "title_ja": "花屋の軒先で",
+      "expression_id": "P2",
+      "filename": "S14-flower-shop.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "cca2ebee085167abb71d98926933d296e80d4ad4c5f5c581ec6ef2244caff0d4",
+      "bytes": 2289364,
+      "generation_id": "exec-10dd5410-4289-4642-908a-db6f323f7d4c",
+      "elapsed_ms": 33682,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "path": "situations/S14-flower-shop.png",
+      "prompt_path": "situations/prompts/S14.txt",
+      "preview_path": "situations/previews/S14.webp",
+      "reference_paths": [
+        "references/P1-user-pro-portrait.png",
+        "references/P6-relaxed-full-body.png",
+        "references/P2-quiet-smile.png"
+      ],
+      "user_favorite": false,
+      "status": "reviewed_candidate",
+      "face_authority_promoted": false
+    },
+    {
+      "id": "S15",
+      "slug": "bookshop-find",
+      "title_ja": "この本、気になってたんだ",
+      "expression_id": "P14",
+      "filename": "S15-bookshop-find.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "82ede2ba8d3228324f5571e8733ba04767f0821721eac22f95096e35979c14be",
+      "bytes": 2126078,
+      "generation_id": "exec-3745d48a-ef88-4d56-aa80-96aac419cbfd",
+      "elapsed_ms": 37093,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "path": "situations/S15-bookshop-find.png",
+      "prompt_path": "situations/prompts/S15.txt",
+      "preview_path": "situations/previews/S15.webp",
+      "reference_paths": [
+        "references/P1-user-pro-portrait.png",
+        "references/P6-relaxed-full-body.png",
+        "references/P14-spontaneous-laugh.png"
+      ],
+      "user_favorite": false,
+      "status": "reviewed_candidate",
+      "face_authority_promoted": false
+    },
+    {
+      "id": "S16",
+      "slug": "arcade-pout",
+      "title_ja": "あとちょっとだったのに",
+      "expression_id": "P11",
+      "filename": "S16-arcade-pout.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "98c5f4dda855017f275d5e039d61224ab247c922fc5ce5b051df46937d593b12",
+      "bytes": 1980457,
+      "generation_id": "exec-894a65e6-8f88-4d3d-9c7a-5c5ba50f106d",
+      "elapsed_ms": 40387,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "path": "situations/S16-arcade-pout.png",
+      "prompt_path": "situations/prompts/S16.txt",
+      "preview_path": "situations/previews/S16.webp",
+      "reference_paths": [
+        "references/P1-user-pro-portrait.png",
+        "references/P6-relaxed-full-body.png",
+        "references/P11-gentle-pout.png"
+      ],
+      "user_favorite": false,
+      "status": "reviewed_candidate",
+      "face_authority_promoted": false
+    },
+    {
+      "id": "S17",
+      "slug": "cafe-dessert",
+      "title_ja": "喫茶店のごほうびパフェ",
+      "expression_id": "P14",
+      "filename": "S17-cafe-dessert.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "b26c57d7c1e7e859b1b6b490fdcc47a2c762a3c067bf7086a72cdd7d7c38ad77",
+      "bytes": 2064228,
+      "generation_id": "exec-387feedd-1a26-45dd-ab0a-941b964d6245",
+      "elapsed_ms": 40445,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "path": "situations/S17-cafe-dessert.png",
+      "prompt_path": "situations/prompts/S17.txt",
+      "preview_path": "situations/previews/S17.webp",
+      "reference_paths": [
+        "references/P1-user-pro-portrait.png",
+        "references/P6-relaxed-full-body.png",
+        "references/P14-spontaneous-laugh.png"
+      ],
+      "user_favorite": false,
+      "status": "reviewed_candidate",
+      "face_authority_promoted": false
+    },
+    {
+      "id": "S18",
+      "slug": "sunset-crossing",
+      "title_ja": "踏切待ちの照れ隠し",
+      "expression_id": "P10",
+      "filename": "S18-sunset-crossing.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "3bd696f8b4d538f598a8cd6ae50d7f6dd06cd678a6d0f28020229d0cdf1add60",
+      "bytes": 2150389,
+      "generation_id": "exec-20896935-cf4f-40be-af5a-2a339f603ef6",
+      "elapsed_ms": 30890,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "path": "situations/S18-sunset-crossing.png",
+      "prompt_path": "situations/prompts/S18.txt",
+      "preview_path": "situations/previews/S18.webp",
+      "reference_paths": [
+        "references/P1-user-pro-portrait.png",
+        "references/P6-relaxed-full-body.png",
+        "references/P10-2-shy-held-smile.png"
+      ],
+      "user_favorite": true,
+      "status": "user_favorite",
+      "face_authority_promoted": false,
+      "selection": {
+        "date": "2026-09-07",
+        "evidence": "User attached this exact PNG and said 気にいった奴もはっとく",
+        "attachment_sha256_matched": true
+      }
+    },
+    {
+      "id": "S19",
+      "slug": "music-room",
+      "title_ja": "音楽室で一音だけ",
+      "expression_id": "P15",
+      "filename": "S19-music-room.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "2d0caef09ae9c5d4bea88be78ffd8bde5d687858655040d746794e3aeb1479d2",
+      "bytes": 1989322,
+      "generation_id": "exec-f13dcba1-f098-4b21-9cf7-e1de1db52dfa",
+      "elapsed_ms": 34945,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "path": "situations/S19-music-room.png",
+      "prompt_path": "situations/prompts/S19.txt",
+      "preview_path": "situations/previews/S19.webp",
+      "reference_paths": [
+        "references/P1-user-pro-portrait.png",
+        "references/P6-relaxed-full-body.png",
+        "references/P15-soft-surprise.png"
+      ],
+      "user_favorite": false,
+      "status": "reviewed_candidate",
+      "face_authority_promoted": false
+    },
+    {
+      "id": "S20",
+      "slug": "window-listen",
+      "title_ja": "教室の窓辺で話を聞く",
+      "expression_id": "P2",
+      "filename": "S20-window-listen.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "33410b69ba5b4ef00556c012c71c4fea937f64fad255c455e7e11e863bfd3b43",
+      "bytes": 2002273,
+      "generation_id": "exec-2f5ebbfc-0fd0-4a90-b335-8cb7d022ad38",
+      "elapsed_ms": 38921,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "path": "situations/S20-window-listen.png",
+      "prompt_path": "situations/prompts/S20.txt",
+      "preview_path": "situations/previews/S20.webp",
+      "reference_paths": [
+        "references/P1-user-pro-portrait.png",
+        "references/P6-relaxed-full-body.png",
+        "references/P2-quiet-smile.png"
+      ],
+      "user_favorite": false,
+      "status": "reviewed_candidate",
+      "face_authority_promoted": false
+    },
+    {
+      "id": "S21",
+      "slug": "seaside-laugh",
+      "title_ja": "海沿いで、声が弾む",
+      "expression_id": "P14",
+      "filename": "S21-seaside-laugh.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "9b254654dde2dd942fc130ab1f661424d0d1b051784518033943a0bc5c178e07",
+      "bytes": 2114852,
+      "generation_id": "exec-3db7b29f-eedf-4a62-adf0-adbd2aec2c29",
+      "elapsed_ms": 37128,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "path": "situations/S21-seaside-laugh.png",
+      "prompt_path": "situations/prompts/S21.txt",
+      "preview_path": "situations/previews/S21.webp",
+      "reference_paths": [
+        "references/P1-user-pro-portrait.png",
+        "references/P6-relaxed-full-body.png",
+        "references/P14-spontaneous-laugh.png"
+      ],
+      "user_favorite": true,
+      "status": "user_favorite",
+      "face_authority_promoted": false,
+      "selection": {
+        "date": "2026-09-07",
+        "evidence": "User attached this exact PNG and said 気にいった奴もはっとく",
+        "attachment_sha256_matched": true
+      }
+    },
+    {
+      "id": "S22",
+      "slug": "lantern-evening",
+      "title_ja": "夕祭りの綿あめ",
+      "expression_id": "P2",
+      "filename": "S22-lantern-evening.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "f261324c7f598240dd1292f6492c232b7d99d3002be24cda5e4dbe4c330be911",
+      "bytes": 2118071,
+      "generation_id": "exec-75a70cd2-acc9-483d-9223-5d609206488b",
+      "elapsed_ms": 39055,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "path": "situations/S22-lantern-evening.png",
+      "prompt_path": "situations/prompts/S22.txt",
+      "preview_path": "situations/previews/S22.webp",
+      "reference_paths": [
+        "references/P1-user-pro-portrait.png",
+        "references/P6-relaxed-full-body.png",
+        "references/P2-quiet-smile.png"
+      ],
+      "user_favorite": false,
+      "status": "reviewed_candidate",
+      "face_authority_promoted": false
+    },
+    {
+      "id": "S23",
+      "slug": "platform-goodbye",
+      "title_ja": "ホームで小さく手を振る",
+      "expression_id": "P2",
+      "filename": "S23-platform-goodbye.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "19595dc3f1c5270f83979274d955090695ea4395915b051cccc943035ddd91c7",
+      "bytes": 2290121,
+      "generation_id": "exec-cf8752be-43e0-4418-ae60-3c815d71c66d",
+      "elapsed_ms": 62117,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "path": "situations/S23-platform-goodbye.png",
+      "prompt_path": "situations/prompts/S23.txt",
+      "preview_path": "situations/previews/S23.webp",
+      "reference_paths": [
+        "references/P1-user-pro-portrait.png",
+        "references/P6-relaxed-full-body.png",
+        "references/P2-quiet-smile.png"
+      ],
+      "user_favorite": false,
+      "status": "reviewed_candidate",
+      "face_authority_promoted": false
+    },
+    {
+      "id": "S24",
+      "slug": "doorway-thanks",
+      "title_ja": "別れ際の、ありがと",
+      "expression_id": "P10",
+      "filename": "S24-doorway-thanks.png",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "74ae3697987dcdac5b9cf563a48dcfab33ec52388d776172cf469e5dd0212e49",
+      "bytes": 1998288,
+      "generation_id": "exec-aa3cb55b-ca81-417b-a8d1-8e2997afb46c",
+      "elapsed_ms": 34048,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "path": "situations/S24-doorway-thanks.png",
+      "prompt_path": "situations/prompts/S24.txt",
+      "preview_path": "situations/previews/S24.webp",
+      "reference_paths": [
+        "references/P1-user-pro-portrait.png",
+        "references/P6-relaxed-full-body.png",
+        "references/P10-2-shy-held-smile.png"
+      ],
+      "user_favorite": true,
+      "status": "user_favorite",
+      "face_authority_promoted": false,
+      "selection": {
+        "date": "2026-09-07",
+        "evidence": "User attached this exact PNG and said 気にいった奴もはっとく",
+        "attachment_sha256_matched": true
+      }
+    }
+  ],
+  "generation_calls": 26,
+  "generation_elapsed_ms": 1059709
+}

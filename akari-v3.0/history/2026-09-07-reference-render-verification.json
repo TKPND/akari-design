@@ -1,0 +1,250 @@
+{
+  "desktop": {
+    "width": 1280,
+    "overflow": false,
+    "images": [
+      {
+        "alt": "P6 全身・夏制服",
+        "loaded": true
+      },
+      {
+        "alt": "P1 顔・髪の原本",
+        "loaded": true
+      },
+      {
+        "alt": "P2 普段の微笑み",
+        "loaded": true
+      },
+      {
+        "alt": "P2 普段の微笑み",
+        "loaded": true
+      },
+      {
+        "alt": "P10-2 照れ隠し",
+        "loaded": true
+      },
+      {
+        "alt": "P11 ちょっと拗ねる",
+        "loaded": true
+      },
+      {
+        "alt": "P14 思わず笑う",
+        "loaded": true
+      },
+      {
+        "alt": "P15 少し驚く",
+        "loaded": true
+      },
+      {
+        "alt": "P12 照れて頬に手を添える",
+        "loaded": true
+      },
+      {
+        "alt": "P13 腕を組んでちょっと拗ねる",
+        "loaded": true
+      },
+      {
+        "alt": "P4 正面の顔",
+        "loaded": true
+      },
+      {
+        "alt": "P5 浅い斜めの顔",
+        "loaded": true
+      },
+      {
+        "alt": "P8 待ち合わせの挨拶",
+        "loaded": true
+      },
+      {
+        "alt": "P9 ベンチで話を聞く",
+        "loaded": true
+      }
+    ],
+    "sheets": [
+      {
+        "id": "page-1",
+        "overlapsFooter": false
+      },
+      {
+        "id": "page-2",
+        "overlapsFooter": false
+      },
+      {
+        "id": "page-3",
+        "overlapsFooter": false
+      },
+      {
+        "id": "page-4",
+        "overlapsFooter": false
+      }
+    ]
+  },
+  "mobile": {
+    "width": 360,
+    "overflow": false,
+    "images": [
+      {
+        "alt": "P6 全身・夏制服",
+        "loaded": true
+      },
+      {
+        "alt": "P1 顔・髪の原本",
+        "loaded": true
+      },
+      {
+        "alt": "P2 普段の微笑み",
+        "loaded": true
+      },
+      {
+        "alt": "P2 普段の微笑み",
+        "loaded": true
+      },
+      {
+        "alt": "P10-2 照れ隠し",
+        "loaded": true
+      },
+      {
+        "alt": "P11 ちょっと拗ねる",
+        "loaded": true
+      },
+      {
+        "alt": "P14 思わず笑う",
+        "loaded": true
+      },
+      {
+        "alt": "P15 少し驚く",
+        "loaded": true
+      },
+      {
+        "alt": "P12 照れて頬に手を添える",
+        "loaded": true
+      },
+      {
+        "alt": "P13 腕を組んでちょっと拗ねる",
+        "loaded": true
+      },
+      {
+        "alt": "P4 正面の顔",
+        "loaded": true
+      },
+      {
+        "alt": "P5 浅い斜めの顔",
+        "loaded": true
+      },
+      {
+        "alt": "P8 待ち合わせの挨拶",
+        "loaded": true
+      },
+      {
+        "alt": "P9 ベンチで話を聞く",
+        "loaded": true
+      }
+    ],
+    "sheets": [
+      {
+        "id": "page-1",
+        "overlapsFooter": false
+      },
+      {
+        "id": "page-2",
+        "overlapsFooter": false
+      },
+      {
+        "id": "page-3",
+        "overlapsFooter": false
+      },
+      {
+        "id": "page-4",
+        "overlapsFooter": false
+      }
+    ]
+  },
+  "print": {
+    "width": 1280,
+    "overflow": false,
+    "images": [
+      {
+        "alt": "P6 全身・夏制服",
+        "loaded": true
+      },
+      {
+        "alt": "P1 顔・髪の原本",
+        "loaded": true
+      },
+      {
+        "alt": "P2 普段の微笑み",
+        "loaded": true
+      },
+      {
+        "alt": "P2 普段の微笑み",
+        "loaded": true
+      },
+      {
+        "alt": "P10-2 照れ隠し",
+        "loaded": true
+      },
+      {
+        "alt": "P11 ちょっと拗ねる",
+        "loaded": true
+      },
+      {
+        "alt": "P14 思わず笑う",
+        "loaded": true
+      },
+      {
+        "alt": "P15 少し驚く",
+        "loaded": true
+      },
+      {
+        "alt": "P12 照れて頬に手を添える",
+        "loaded": true
+      },
+      {
+        "alt": "P13 腕を組んでちょっと拗ねる",
+        "loaded": true
+      },
+      {
+        "alt": "P4 正面の顔",
+        "loaded": true
+      },
+      {
+        "alt": "P5 浅い斜めの顔",
+        "loaded": true
+      },
+      {
+        "alt": "P8 待ち合わせの挨拶",
+        "loaded": true
+      },
+      {
+        "alt": "P9 ベンチで話を聞く",
+        "loaded": true
+      }
+    ],
+    "sheets": [
+      {
+        "id": "page-1",
+        "overlapsFooter": false
+      },
+      {
+        "id": "page-2",
+        "overlapsFooter": false
+      },
+      {
+        "id": "page-3",
+        "overlapsFooter": false
+      },
+      {
+        "id": "page-4",
+        "overlapsFooter": false
+      }
+    ]
+  },
+  "dialog": {
+    "open": true,
+    "label": "P14 思わず笑う",
+    "download": "P14.png",
+    "imageMatches": true
+  },
+  "errors": [],
+  "artworkGeneration": false
+}

@@ -1,0 +1,55 @@
+{
+  "project": "akari-v3.0",
+  "stage": "05-user-full-body",
+  "date": "2026-09-07",
+  "status": "user_selected_current_baseline",
+  "selected_variant": "B7",
+  "operation": "Import the exact user-supplied PNG and replace current full-body reference pointers.",
+  "user_request": "良いと思う。あと、全身立ち絵の方はGPT Proの方でちょっと調整してみたw ちょっと脚を健康的な感じにしてる。ハイソックスにしたのはラインが映えるように意図的。差し替えておいて",
+  "provenance": {
+    "type": "user_supplied_image",
+    "source_attachment": "/home/abe/.codex/attachments/6ac3a381-01b9-4e53-bc0c-5ff0399ecb09/ChatGPT Image 2026年9月7日 17_24_28.png",
+    "user_reported_edit_tool": "GPT Pro",
+    "model": null,
+    "prompt": null,
+    "note": "Imported unchanged; external edit prompt, backend model and generation duration were not supplied."
+  },
+  "image": {
+    "id": "B7",
+    "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-05-user-full-body/B7-user-refined-full-body.png",
+    "width": 1024,
+    "height": 1536,
+    "bytes": 1611961,
+    "sha256": "5ac907c49276cf680c6eb426055d8701891ad2300d663cbe68f105dfc1ff4863",
+    "matches_attachment": true
+  },
+  "supersedes": {
+    "status": "working_baseline_selected",
+    "selected": "B5-2",
+    "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-03c-shoulder-balance/B5-2-balanced-shoulder-width.png",
+    "sha256": "740f5209553108966b381eb0317242f7e8e5100c83c3b771a79710e8817fbc04",
+    "face_identity": "A2",
+    "body_proportions": "B3-2 with B5-2 shoulder adjustment",
+    "outfit_design": "B5",
+    "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-03c-shoulder-balance/exploration.json",
+    "selection_user_quote": "B5-2ぐらいがいいね"
+  },
+  "design_intent": {
+    "legs": "Retain the fuller, healthy-looking thigh and calf contours in the supplied image.",
+    "socks": "Navy ribbed knee-high socks ending below the knees are deliberate, to show the leg silhouette.",
+    "uniform": "White open-collar short-sleeve shirt with blue-grey piping, blue-grey pleated skirt, white sneakers.",
+    "source_priority": "Use B7 as the current full-body, body-proportion and outfit reference. Older full-body images are historical; A2 remains a supporting face reference."
+  },
+  "visual_review": "Viewed the uploaded image: fuller leg contours and navy below-knee socks are visible; black rounded bob, downturned grey eyes, open smile and selected summer uniform remain recognizable.",
+  "approved_expressions": {
+    "ids": [
+      "A6",
+      "B6",
+      "C6"
+    ],
+    "everyday_expression": "A6",
+    "manifest": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-04-expressions/exploration.json",
+    "approval_quote": "良いと思う。",
+    "generation_provenance_note": "Existing expressions were generated from B5-2; their original prompts and references are preserved."
+  }
+}

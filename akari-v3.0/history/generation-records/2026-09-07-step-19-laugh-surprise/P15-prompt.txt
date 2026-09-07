@@ -1,0 +1,13 @@
+Use case: identity-preserve.
+Asset type: Akari v3.0 expressive portrait study, one standalone illustration.
+
+Input roles:
+- Image 1 (P2) is the sole edit target and the selected everyday portrait. Keep its camera, square waist-up framing, head position, body pose, costume and environment. Change only the coordinated facial expression.
+- Image 2 (P1) is the original facial identity, hair and drawing authority. Preserve its distinctive facial geometry and rendering through expression changes. Its easy open smile is a baseline, not the requested result.
+
+Expression — mild, interested surprise:
+She has just heard a small unexpected piece of news from her childhood friend, reacting with a quiet "oh?". Raise the brows naturally a little above their resting position, lift the upper eyelids slightly to make the eyes more alert while retaining the original grey iris size, and part the mouth into a small softly rounded vertical opening at the original mouth centre. Preserve a soft attentive gaze toward the viewer. The opening should be noticeably different from a smile or pout, small and understated, with a simple muted pink interior and no rendered teeth. Keep the face relaxed: no fear, distress, pleading, angry tension, blown-wide eyes or tiny pupils. Let mouth, brows and eyes work together so the surprise reads at normal viewing size without caricature.
+
+Preserve identity: broad rounded grey eyes with the same soft outer droop, normal iris size/grey tonal structure and small highlights, eye spacing, full rounded cheeks, short lower face and small chin. Let brows, upper and lower lids, cheeks and mouth coordinate naturally for the requested expression, while preserving the person's underlying facial proportions. Do not freeze the eyelids and change only the mouth. Do not turn the eyes into generic shiny circles, narrow sleepy slits or closed chevrons. Keep the grey irises clearly visible.
+
+Keep the black rounded bob with separated blunt-bang groups, fine cheek-framing strands, delicate lash and contour lines, fine diagonal cheek hatching, skin tones and soft cel-shadow treatment. Keep the source head tilt, slight forward lean, shoulders, arms behind the body, natural proportions, white short-sleeve open-collar shirt with blue-grey piping, buttons, skirt, leafy path and wall backdrop, and neutral daylight. No anatomy, body or clothing redesign; no new gestures, accessories, tears, motion symbols, text, panels or extra people. Return one polished square illustration.

@@ -1,0 +1,756 @@
+{
+  "project": "akari-v3.0",
+  "batch": "24 additional situation illustrations",
+  "created_at": "2026-09-07T12:37:18.254Z",
+  "directory": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24",
+  "status": "24_candidates_ready",
+  "tool": "built-in image_gen",
+  "model": "Not exposed by built-in tool",
+  "requested_count": 24,
+  "reference_basis": "P1 face, P6 body/outfit, approved expression per scene",
+  "scenes": [
+    {
+      "id": "S01",
+      "slug": "morning-greeting",
+      "title_ja": "朝の曲がり角でおはよう",
+      "expression_id": "P2",
+      "reference_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished standalone Akari v3.0 situation illustration, a new scene.\n\nReference roles:\nImage 1 (P1): PRIMARY facial identity, hair and drawing authority. Preserve this exact character's broad rounded GREY eyes with softly descending outer corners, recognizable iris structure and restrained highlights, eye spacing, full rounded cheeks, short lower face, small chin, tiny simple nose and fine diagonal cheek hatching. Preserve her rounded chin-length BLACK bob, separated blunt bang groups and fine cheek-framing strands. Do not copy the old background, head tilt, forward lean or pose.\nImage 2 (P6): body proportions and costume ONLY. Keep natural shoulders and body balance, healthy leg contours when visible. Exact opaque white short-sleeve open-collar button shirt with narrow blue-grey piping on collar edges and sleeve hems, blue-grey pleated skirt, navy ribbed socks ending BELOW knees and white low-top lace-up sneakers. Maintain comfortable opaque fabric and original cut. Its simplified small face is NOT the face authority.\nImage 3: approved supporting expression reference ONLY. Translate the expression to the new scene without copying its pose, background or framing. P1 remains the underlying facial authority. Expression can naturally coordinate brows, lids, cheeks and mouth.\n\nKeep the reference character and delicate anime illustration treatment consistent throughout. Clean fine contours, coherent soft cel shadows and restrained color transitions, background slightly softer than face. Keep facial details crisp even in a wider composition. Do not narrow the jaw, elongate the lower face, make generic almond eyes or change eye/hair colors. No age-label-driven redesign.\n\nSCENE:\nPortrait 2:3, three-quarter figure through knees. At a sunny neighborhood corner in the fresh morning, she has spotted her childhood friend and gives a small relaxed raised-hand greeting, a bright closed smile and lively eye contact. One hand waves naturally near shoulder height, the other rests beside her. Pale house walls, green shrubs, long early-morning shadows. Camera at eye level; candid slight three-quarter stance.\n\nFinish and constraints:\nStrong scene-specific gesture, gaze and emotional read. Avoid repeating the reference's static centered leaning portrait; honor the new camera and activity. Ordinary natural perspective, coherent anatomy, each hand has five fingers with credible contact and grips, no doubled limbs or detached objects. All clothing remains opaque and normally draped. No extra jewelry, hair accessories or unrequested bags. Only the props and creatures named in the scene. The friend remains offscreen, no companion body or hands. No collage, panels, inset faces, text, captions, readable logos, watermarks, floating hearts or comic symbols. Return one complete illustration.",
+      "filename": "S01-morning-greeting.png",
+      "status": "reviewed_candidate",
+      "user_approved": false,
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S01-morning-greeting.png",
+      "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-a0db0b48-a445-4d02-8888-056fea147402.png",
+      "generation_id": "exec-a0db0b48-a445-4d02-8888-056fea147402",
+      "elapsed_ms": 37830,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "7ed7c8582a58b1d51f265934a0d729927b09c76db104b2260629a4ef2a71c1bf",
+      "bytes": 2331870,
+      "saved_at": "2026-09-07T12:38:50.402721+00:00",
+      "png_integrity_verified": true,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "composition_note": "Generated full figure instead of the proposed knee-up crop.",
+      "preview_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/previews/S01.webp"
+    },
+    {
+      "id": "S02",
+      "slug": "desk-turn",
+      "title_ja": "隣の席から、ねえねえ",
+      "expression_id": "P2",
+      "reference_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished standalone Akari v3.0 situation illustration, a new scene.\n\nReference roles:\nImage 1 (P1): PRIMARY facial identity, hair and drawing authority. Preserve this exact character's broad rounded GREY eyes with softly descending outer corners, recognizable iris structure and restrained highlights, eye spacing, full rounded cheeks, short lower face, small chin, tiny simple nose and fine diagonal cheek hatching. Preserve her rounded chin-length BLACK bob, separated blunt bang groups and fine cheek-framing strands. Do not copy the old background, head tilt, forward lean or pose.\nImage 2 (P6): body proportions and costume ONLY. Keep natural shoulders and body balance, healthy leg contours when visible. Exact opaque white short-sleeve open-collar button shirt with narrow blue-grey piping on collar edges and sleeve hems, blue-grey pleated skirt, navy ribbed socks ending BELOW knees and white low-top lace-up sneakers. Maintain comfortable opaque fabric and original cut. Its simplified small face is NOT the face authority.\nImage 3: approved supporting expression reference ONLY. Translate the expression to the new scene without copying its pose, background or framing. P1 remains the underlying facial authority. Expression can naturally coordinate brows, lids, cheeks and mouth.\n\nKeep the reference character and delicate anime illustration treatment consistent throughout. Clean fine contours, coherent soft cel shadows and restrained color transitions, background slightly softer than face. Keep facial details crisp even in a wider composition. Do not narrow the jaw, elongate the lower face, make generic almond eyes or change eye/hair colors. No age-label-driven redesign.\n\nSCENE:\nLandscape 3:2, seated waist-up. In a sunlit classroom before lessons, she sits at the desk immediately beside the viewer and turns her head and shoulders toward them, forearms loosely on her own desk. A small knowing closed smile as she starts a quiet conversation. Books and a pencil case on the desk, empty desks softly receding, open curtains. Peer eye-level seated camera, no overhead angle. Face prominent in frame.\n\nFinish and constraints:\nStrong scene-specific gesture, gaze and emotional read. Avoid repeating the reference's static centered leaning portrait; honor the new camera and activity. Ordinary natural perspective, coherent anatomy, each hand has five fingers with credible contact and grips, no doubled limbs or detached objects. All clothing remains opaque and normally draped. No extra jewelry, hair accessories or unrequested bags. Only the props and creatures named in the scene. The friend remains offscreen, no companion body or hands. No collage, panels, inset faces, text, captions, readable logos, watermarks, floating hearts or comic symbols. Return one complete illustration.",
+      "filename": "S02-desk-turn.png",
+      "status": "reviewed_candidate",
+      "user_approved": false,
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S02-desk-turn.png",
+      "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-d1578763-f488-4c5e-a74d-81a6d7fe4f3d.png",
+      "generation_id": "exec-d1578763-f488-4c5e-a74d-81a6d7fe4f3d",
+      "elapsed_ms": 36249,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "26b06dfd147123b31f9571f1e23eb9ba896a4eaecf657c4c8214c6c9022e336f",
+      "bytes": 1943672,
+      "saved_at": "2026-09-07T12:39:39.453912+00:00",
+      "png_integrity_verified": true,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "composition_note": "Generated chin-resting seated conversation rather than a distinct turn from the adjacent desk.",
+      "preview_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/previews/S02.webp"
+    },
+    {
+      "id": "S03",
+      "slug": "library-hush",
+      "title_ja": "図書室で、しーっ",
+      "expression_id": "P2",
+      "reference_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished standalone Akari v3.0 situation illustration, a new scene.\n\nReference roles:\nImage 1 (P1): PRIMARY facial identity, hair and drawing authority. Preserve this exact character's broad rounded GREY eyes with softly descending outer corners, recognizable iris structure and restrained highlights, eye spacing, full rounded cheeks, short lower face, small chin, tiny simple nose and fine diagonal cheek hatching. Preserve her rounded chin-length BLACK bob, separated blunt bang groups and fine cheek-framing strands. Do not copy the old background, head tilt, forward lean or pose.\nImage 2 (P6): body proportions and costume ONLY. Keep natural shoulders and body balance, healthy leg contours when visible. Exact opaque white short-sleeve open-collar button shirt with narrow blue-grey piping on collar edges and sleeve hems, blue-grey pleated skirt, navy ribbed socks ending BELOW knees and white low-top lace-up sneakers. Maintain comfortable opaque fabric and original cut. Its simplified small face is NOT the face authority.\nImage 3: approved supporting expression reference ONLY. Translate the expression to the new scene without copying its pose, background or framing. P1 remains the underlying facial authority. Expression can naturally coordinate brows, lids, cheeks and mouth.\n\nKeep the reference character and delicate anime illustration treatment consistent throughout. Clean fine contours, coherent soft cel shadows and restrained color transitions, background slightly softer than face. Keep facial details crisp even in a wider composition. Do not narrow the jaw, elongate the lower face, make generic almond eyes or change eye/hair colors. No age-label-driven redesign.\n\nSCENE:\nPortrait 2:3, waist-up. Between warm wooden library shelves, she holds a closed book against her lower torso in one arm and brings the index finger of the other hand upright near, not inside, her lips, sharing a gentle amused 'shh' with the viewer. Familiar smiling eyes, restrained closed-mouth smile. Diffuse window light, quiet atmosphere, readable hand with exactly five fingers, books have abstract unlettered spines.\n\nFinish and constraints:\nStrong scene-specific gesture, gaze and emotional read. Avoid repeating the reference's static centered leaning portrait; honor the new camera and activity. Ordinary natural perspective, coherent anatomy, each hand has five fingers with credible contact and grips, no doubled limbs or detached objects. All clothing remains opaque and normally draped. No extra jewelry, hair accessories or unrequested bags. Only the props and creatures named in the scene. The friend remains offscreen, no companion body or hands. No collage, panels, inset faces, text, captions, readable logos, watermarks, floating hearts or comic symbols. Return one complete illustration.",
+      "filename": "S03-library-hush.png",
+      "status": "reviewed_candidate",
+      "user_approved": false,
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S03-library-hush.png",
+      "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-6953120e-0a1a-421f-a735-a44b83178d5e.png",
+      "generation_id": "exec-6953120e-0a1a-421f-a735-a44b83178d5e",
+      "elapsed_ms": 33876,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "012be2117ba80d66094349ab2bdd0995577a7af4c49e396e3dc64ee28db142fa",
+      "bytes": 2021753,
+      "saved_at": "2026-09-07T12:40:26.655521+00:00",
+      "png_integrity_verified": true,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "preview_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/previews/S03.webp"
+    },
+    {
+      "id": "S04",
+      "slug": "study-window",
+      "title_ja": "窓辺で真剣に考え中",
+      "expression_id": "P2",
+      "reference_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished standalone Akari v3.0 situation illustration, a new scene.\n\nReference roles:\nImage 1 (P1): PRIMARY facial identity, hair and drawing authority. Preserve this exact character's broad rounded GREY eyes with softly descending outer corners, recognizable iris structure and restrained highlights, eye spacing, full rounded cheeks, short lower face, small chin, tiny simple nose and fine diagonal cheek hatching. Preserve her rounded chin-length BLACK bob, separated blunt bang groups and fine cheek-framing strands. Do not copy the old background, head tilt, forward lean or pose.\nImage 2 (P6): body proportions and costume ONLY. Keep natural shoulders and body balance, healthy leg contours when visible. Exact opaque white short-sleeve open-collar button shirt with narrow blue-grey piping on collar edges and sleeve hems, blue-grey pleated skirt, navy ribbed socks ending BELOW knees and white low-top lace-up sneakers. Maintain comfortable opaque fabric and original cut. Its simplified small face is NOT the face authority.\nImage 3: approved supporting expression reference ONLY. Translate the expression to the new scene without copying its pose, background or framing. P1 remains the underlying facial authority. Expression can naturally coordinate brows, lids, cheeks and mouth.\n\nKeep the reference character and delicate anime illustration treatment consistent throughout. Clean fine contours, coherent soft cel shadows and restrained color transitions, background slightly softer than face. Keep facial details crisp even in a wider composition. Do not narrow the jaw, elongate the lower face, make generic almond eyes or change eye/hair colors. No age-label-driven redesign.\n\nSCENE:\nLandscape 3:2, seated torso and desk. A calm school study room beside a large window. She is looking down at an open notebook with an attentive thoughtful expression and lightly knit brows, pen held naturally over the paper, the other hand resting on the page. The camera is at a neighboring seat in a modest three-quarter view. Late-morning clean light, foliage outside, a few faint abstract notebook marks. Underlying P1 eyes remain recognizable with lowered gaze; no viewer-directed smile required.\n\nFinish and constraints:\nStrong scene-specific gesture, gaze and emotional read. Avoid repeating the reference's static centered leaning portrait; honor the new camera and activity. Ordinary natural perspective, coherent anatomy, each hand has five fingers with credible contact and grips, no doubled limbs or detached objects. All clothing remains opaque and normally draped. No extra jewelry, hair accessories or unrequested bags. Only the props and creatures named in the scene. The friend remains offscreen, no companion body or hands. No collage, panels, inset faces, text, captions, readable logos, watermarks, floating hearts or comic symbols. Return one complete illustration.",
+      "filename": "S04-study-window.png",
+      "status": "reviewed_candidate",
+      "user_approved": false,
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S04-study-window.png",
+      "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-65bae042-0e17-4aaf-aa6c-5a92b02a36c5.png",
+      "generation_id": "exec-65bae042-0e17-4aaf-aa6c-5a92b02a36c5",
+      "elapsed_ms": 61261,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "1dad916fbf699d3c20537a0a2192f1b1044bea40e5c52ca3b66fc24d90be750b",
+      "bytes": 1944114,
+      "saved_at": "2026-09-07T12:41:39.527645+00:00",
+      "png_integrity_verified": true,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "preview_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/previews/S04.webp"
+    },
+    {
+      "id": "S05",
+      "slug": "cold-drink",
+      "title_ja": "冷たいの、飲む？",
+      "expression_id": "P2",
+      "reference_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished standalone Akari v3.0 situation illustration, a new scene.\n\nReference roles:\nImage 1 (P1): PRIMARY facial identity, hair and drawing authority. Preserve this exact character's broad rounded GREY eyes with softly descending outer corners, recognizable iris structure and restrained highlights, eye spacing, full rounded cheeks, short lower face, small chin, tiny simple nose and fine diagonal cheek hatching. Preserve her rounded chin-length BLACK bob, separated blunt bang groups and fine cheek-framing strands. Do not copy the old background, head tilt, forward lean or pose.\nImage 2 (P6): body proportions and costume ONLY. Keep natural shoulders and body balance, healthy leg contours when visible. Exact opaque white short-sleeve open-collar button shirt with narrow blue-grey piping on collar edges and sleeve hems, blue-grey pleated skirt, navy ribbed socks ending BELOW knees and white low-top lace-up sneakers. Maintain comfortable opaque fabric and original cut. Its simplified small face is NOT the face authority.\nImage 3: approved supporting expression reference ONLY. Translate the expression to the new scene without copying its pose, background or framing. P1 remains the underlying facial authority. Expression can naturally coordinate brows, lids, cheeks and mouth.\n\nKeep the reference character and delicate anime illustration treatment consistent throughout. Clean fine contours, coherent soft cel shadows and restrained color transitions, background slightly softer than face. Keep facial details crisp even in a wider composition. Do not narrow the jaw, elongate the lower face, make generic almond eyes or change eye/hair colors. No age-label-driven redesign.\n\nSCENE:\nPortrait 2:3, head through upper thighs. Beside a softly defocused outdoor vending machine on a warm afternoon, she offers a small plain chilled drink can toward the viewer with one hand at a modest distance, relaxed friendly closed smile. Her other hand holds her own matching can near her waist. Small condensation beads on cans, no logos or readable text, no extreme hand foreshortening. Cool shade with sunny pavement behind; familiar childhood-friend generosity.\n\nFinish and constraints:\nStrong scene-specific gesture, gaze and emotional read. Avoid repeating the reference's static centered leaning portrait; honor the new camera and activity. Ordinary natural perspective, coherent anatomy, each hand has five fingers with credible contact and grips, no doubled limbs or detached objects. All clothing remains opaque and normally draped. No extra jewelry, hair accessories or unrequested bags. Only the props and creatures named in the scene. The friend remains offscreen, no companion body or hands. No collage, panels, inset faces, text, captions, readable logos, watermarks, floating hearts or comic symbols. Return one complete illustration.",
+      "filename": "S05-cold-drink-r2.png",
+      "status": "reviewed_candidate",
+      "user_approved": false,
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S05-cold-drink-r2.png",
+      "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-892b0236-201c-4a9d-8943-6c5a3ed5dbf2.png",
+      "generation_id": "exec-892b0236-201c-4a9d-8943-6c5a3ed5dbf2",
+      "elapsed_ms": 114528,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "a046a3a772efd8e4dec18b1e9c723c7568c315e9901da5cc89ead975d40d5792",
+      "bytes": 2198926,
+      "saved_at": "2026-09-07T12:42:52.901395+00:00",
+      "png_integrity_verified": true,
+      "original_generation": {
+        "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S05-cold-drink.png",
+        "filename": "S05-cold-drink.png",
+        "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-88a3cd41-badf-4f00-aea3-3aa49d3d83d8.png",
+        "generation_id": "exec-88a3cd41-badf-4f00-aea3-3aa49d3d83d8",
+        "elapsed_ms": 63414,
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "sha256": "1863027bb582c9fd454e11a66c72cfdac8e4ef2cffae4a4c40ca7c7a904f99a3",
+        "bytes": 2185448
+      },
+      "repair": {
+        "reason": "Extra sixth digit on the foreground can-holding hand",
+        "prompt_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/prompts/S05-repair.txt",
+        "elapsed_ms": 51114,
+        "reference_paths": [
+          "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S05-cold-drink.png",
+          "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png"
+        ],
+        "result": "Removed the top extra digit; conventional five-digit grip visible."
+      },
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "preview_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/previews/S05.webp"
+    },
+    {
+      "id": "S06",
+      "slug": "lunch-bench",
+      "title_ja": "中庭でお昼休み",
+      "expression_id": "P14",
+      "reference_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-19-laugh-surprise/P14-spontaneous-laugh.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished standalone Akari v3.0 situation illustration, a new scene.\n\nReference roles:\nImage 1 (P1): PRIMARY facial identity, hair and drawing authority. Preserve this exact character's broad rounded GREY eyes with softly descending outer corners, recognizable iris structure and restrained highlights, eye spacing, full rounded cheeks, short lower face, small chin, tiny simple nose and fine diagonal cheek hatching. Preserve her rounded chin-length BLACK bob, separated blunt bang groups and fine cheek-framing strands. Do not copy the old background, head tilt, forward lean or pose.\nImage 2 (P6): body proportions and costume ONLY. Keep natural shoulders and body balance, healthy leg contours when visible. Exact opaque white short-sleeve open-collar button shirt with narrow blue-grey piping on collar edges and sleeve hems, blue-grey pleated skirt, navy ribbed socks ending BELOW knees and white low-top lace-up sneakers. Maintain comfortable opaque fabric and original cut. Its simplified small face is NOT the face authority.\nImage 3: approved supporting expression reference ONLY. Translate the expression to the new scene without copying its pose, background or framing. P1 remains the underlying facial authority. Expression can naturally coordinate brows, lids, cheeks and mouth.\n\nKeep the reference character and delicate anime illustration treatment consistent throughout. Clean fine contours, coherent soft cel shadows and restrained color transitions, background slightly softer than face. Keep facial details crisp even in a wider composition. Do not narrow the jaw, elongate the lower face, make generic almond eyes or change eye/hair colors. No age-label-driven redesign.\n\nSCENE:\nLandscape 3:2, seated medium shot from a neighboring bench position. In a quiet green school courtyard, she sits comfortably on a wooden bench, laughing at a remark while holding a small sandwich in a neat paper wrapper at chest height. A simple closed lunch box rests beside her. Keep mouth clear of food and grey eyes visible. Natural seated posture, skirt draped normally over knees. Dappled midday sunlight and gentle breeze, warm everyday ease.\n\nFinish and constraints:\nStrong scene-specific gesture, gaze and emotional read. Avoid repeating the reference's static centered leaning portrait; honor the new camera and activity. Ordinary natural perspective, coherent anatomy, each hand has five fingers with credible contact and grips, no doubled limbs or detached objects. All clothing remains opaque and normally draped. No extra jewelry, hair accessories or unrequested bags. Only the props and creatures named in the scene. The friend remains offscreen, no companion body or hands. No collage, panels, inset faces, text, captions, readable logos, watermarks, floating hearts or comic symbols. Return one complete illustration.",
+      "filename": "S06-lunch-bench.png",
+      "status": "reviewed_candidate",
+      "user_approved": false,
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S06-lunch-bench.png",
+      "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-881e9335-ba13-495f-92d3-118ef8d8706b.png",
+      "generation_id": "exec-881e9335-ba13-495f-92d3-118ef8d8706b",
+      "elapsed_ms": 31171,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "167948c370e8167939fc1e26b5efcc8f7ae5dddb430098fa473915eab5019da0",
+      "bytes": 2271658,
+      "saved_at": "2026-09-07T12:43:42.401690+00:00",
+      "png_integrity_verified": true,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "preview_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/previews/S06.webp"
+    },
+    {
+      "id": "S07",
+      "slug": "aquarium",
+      "title_ja": "水槽の前で目が合う",
+      "expression_id": "P15",
+      "reference_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-19-laugh-surprise/P15-soft-surprise.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished standalone Akari v3.0 situation illustration, a new scene.\n\nReference roles:\nImage 1 (P1): PRIMARY facial identity, hair and drawing authority. Preserve this exact character's broad rounded GREY eyes with softly descending outer corners, recognizable iris structure and restrained highlights, eye spacing, full rounded cheeks, short lower face, small chin, tiny simple nose and fine diagonal cheek hatching. Preserve her rounded chin-length BLACK bob, separated blunt bang groups and fine cheek-framing strands. Do not copy the old background, head tilt, forward lean or pose.\nImage 2 (P6): body proportions and costume ONLY. Keep natural shoulders and body balance, healthy leg contours when visible. Exact opaque white short-sleeve open-collar button shirt with narrow blue-grey piping on collar edges and sleeve hems, blue-grey pleated skirt, navy ribbed socks ending BELOW knees and white low-top lace-up sneakers. Maintain comfortable opaque fabric and original cut. Its simplified small face is NOT the face authority.\nImage 3: approved supporting expression reference ONLY. Translate the expression to the new scene without copying its pose, background or framing. P1 remains the underlying facial authority. Expression can naturally coordinate brows, lids, cheeks and mouth.\n\nKeep the reference character and delicate anime illustration treatment consistent throughout. Clean fine contours, coherent soft cel shadows and restrained color transitions, background slightly softer than face. Keep facial details crisp even in a wider composition. Do not narrow the jaw, elongate the lower face, make generic almond eyes or change eye/hair colors. No age-label-driven redesign.\n\nSCENE:\nPortrait 2:3, waist-up. During an after-class visit to an aquarium, she has been watching small silver fish in a large blue tank and turns back to the friend beside her with a small delighted 'oh' and softly raised eyebrows. One relaxed hand is near the glass but does not press on it. Tank occupies one side and depth behind her; cool blue reflected light balanced with soft neutral light on the face, grey eye color preserved. No extra people or giant fantasy fish. Delicate curiosity.\n\nFinish and constraints:\nStrong scene-specific gesture, gaze and emotional read. Avoid repeating the reference's static centered leaning portrait; honor the new camera and activity. Ordinary natural perspective, coherent anatomy, each hand has five fingers with credible contact and grips, no doubled limbs or detached objects. All clothing remains opaque and normally draped. No extra jewelry, hair accessories or unrequested bags. Only the props and creatures named in the scene. The friend remains offscreen, no companion body or hands. No collage, panels, inset faces, text, captions, readable logos, watermarks, floating hearts or comic symbols. Return one complete illustration.",
+      "filename": "S07-aquarium.png",
+      "status": "reviewed_candidate",
+      "user_approved": false,
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S07-aquarium.png",
+      "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-ea49f87d-27bd-4852-a1b7-b054bdff6cc5.png",
+      "generation_id": "exec-ea49f87d-27bd-4852-a1b7-b054bdff6cc5",
+      "elapsed_ms": 33757,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "5a565e77215f01ba78bb2878285e526bdecef649ff166257bf4c09fde5500265",
+      "bytes": 2027525,
+      "saved_at": "2026-09-07T12:44:24.790069+00:00",
+      "png_integrity_verified": true,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "preview_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/previews/S07.webp"
+    },
+    {
+      "id": "S08",
+      "slug": "windy-bridge",
+      "title_ja": "風に前髪を押さえて",
+      "expression_id": "P14",
+      "reference_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-19-laugh-surprise/P14-spontaneous-laugh.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished standalone Akari v3.0 situation illustration, a new scene.\n\nReference roles:\nImage 1 (P1): PRIMARY facial identity, hair and drawing authority. Preserve this exact character's broad rounded GREY eyes with softly descending outer corners, recognizable iris structure and restrained highlights, eye spacing, full rounded cheeks, short lower face, small chin, tiny simple nose and fine diagonal cheek hatching. Preserve her rounded chin-length BLACK bob, separated blunt bang groups and fine cheek-framing strands. Do not copy the old background, head tilt, forward lean or pose.\nImage 2 (P6): body proportions and costume ONLY. Keep natural shoulders and body balance, healthy leg contours when visible. Exact opaque white short-sleeve open-collar button shirt with narrow blue-grey piping on collar edges and sleeve hems, blue-grey pleated skirt, navy ribbed socks ending BELOW knees and white low-top lace-up sneakers. Maintain comfortable opaque fabric and original cut. Its simplified small face is NOT the face authority.\nImage 3: approved supporting expression reference ONLY. Translate the expression to the new scene without copying its pose, background or framing. P1 remains the underlying facial authority. Expression can naturally coordinate brows, lids, cheeks and mouth.\n\nKeep the reference character and delicate anime illustration treatment consistent throughout. Clean fine contours, coherent soft cel shadows and restrained color transitions, background slightly softer than face. Keep facial details crisp even in a wider composition. Do not narrow the jaw, elongate the lower face, make generic almond eyes or change eye/hair colors. No age-label-driven redesign.\n\nSCENE:\nPortrait 2:3, knee-up. On a pedestrian bridge over a small river, a mild breeze lifts the tips of her bob, and she laughs while holding her fringe in place with one hand at the side of her forehead. Other arm relaxed. Her skirt stays naturally down, only a little fabric movement. Blue sky, distant houses, metal bridge railing, clear daytime light. Normal eye-level three-quarter view, lively but gentle motion.\n\nFinish and constraints:\nStrong scene-specific gesture, gaze and emotional read. Avoid repeating the reference's static centered leaning portrait; honor the new camera and activity. Ordinary natural perspective, coherent anatomy, each hand has five fingers with credible contact and grips, no doubled limbs or detached objects. All clothing remains opaque and normally draped. No extra jewelry, hair accessories or unrequested bags. Only the props and creatures named in the scene. The friend remains offscreen, no companion body or hands. No collage, panels, inset faces, text, captions, readable logos, watermarks, floating hearts or comic symbols. Return one complete illustration.",
+      "filename": "S08-windy-bridge.png",
+      "status": "reviewed_candidate",
+      "user_approved": false,
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S08-windy-bridge.png",
+      "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-55f930df-fc22-4e3f-99d7-a81789f2c2bf.png",
+      "generation_id": "exec-55f930df-fc22-4e3f-99d7-a81789f2c2bf",
+      "elapsed_ms": 33348,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "e337688f86c8c4464323c41b14f5d09afa1f3e273468c81a7964fb4abd64f920",
+      "bytes": 2228165,
+      "saved_at": "2026-09-07T12:45:07.623486+00:00",
+      "png_integrity_verified": true,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "preview_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/previews/S08.webp"
+    },
+    {
+      "id": "S09",
+      "slug": "missed-bus",
+      "title_ja": "バス待ちで、ちょっと拗ねる",
+      "expression_id": "P11",
+      "reference_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/P11-gentle-pout.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished standalone Akari v3.0 situation illustration, a new scene.\n\nReference roles:\nImage 1 (P1): PRIMARY facial identity, hair and drawing authority. Preserve this exact character's broad rounded GREY eyes with softly descending outer corners, recognizable iris structure and restrained highlights, eye spacing, full rounded cheeks, short lower face, small chin, tiny simple nose and fine diagonal cheek hatching. Preserve her rounded chin-length BLACK bob, separated blunt bang groups and fine cheek-framing strands. Do not copy the old background, head tilt, forward lean or pose.\nImage 2 (P6): body proportions and costume ONLY. Keep natural shoulders and body balance, healthy leg contours when visible. Exact opaque white short-sleeve open-collar button shirt with narrow blue-grey piping on collar edges and sleeve hems, blue-grey pleated skirt, navy ribbed socks ending BELOW knees and white low-top lace-up sneakers. Maintain comfortable opaque fabric and original cut. Its simplified small face is NOT the face authority.\nImage 3: approved supporting expression reference ONLY. Translate the expression to the new scene without copying its pose, background or framing. P1 remains the underlying facial authority. Expression can naturally coordinate brows, lids, cheeks and mouth.\n\nKeep the reference character and delicate anime illustration treatment consistent throughout. Clean fine contours, coherent soft cel shadows and restrained color transitions, background slightly softer than face. Keep facial details crisp even in a wider composition. Do not narrow the jaw, elongate the lower face, make generic almond eyes or change eye/hair colors. No age-label-driven redesign.\n\nSCENE:\nLandscape 3:2, waist-up at a sheltered neighborhood bus stop. A bus is a tiny receding shape far down the road. She looks toward the viewer with a small playful disappointed pout and lightly folded arms, shoulders relaxed, not genuinely distressed. Soft overcast afternoon, timetable shown only as indistinct abstract blocks with no readable text. Preserve round grey eyes and rounded cheeks. Focus on a familiar little complaint shared with a friend.\n\nFinish and constraints:\nStrong scene-specific gesture, gaze and emotional read. Avoid repeating the reference's static centered leaning portrait; honor the new camera and activity. Ordinary natural perspective, coherent anatomy, each hand has five fingers with credible contact and grips, no doubled limbs or detached objects. All clothing remains opaque and normally draped. No extra jewelry, hair accessories or unrequested bags. Only the props and creatures named in the scene. The friend remains offscreen, no companion body or hands. No collage, panels, inset faces, text, captions, readable logos, watermarks, floating hearts or comic symbols. Return one complete illustration.",
+      "filename": "S09-missed-bus.png",
+      "status": "reviewed_candidate",
+      "user_approved": false,
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S09-missed-bus.png",
+      "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-166f4ba4-fdbd-42ce-b1b0-90db04455d2c.png",
+      "generation_id": "exec-166f4ba4-fdbd-42ce-b1b0-90db04455d2c",
+      "elapsed_ms": 64746,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "dc447eb94b23c13a76e763cc5b2290603e19a47c5d573978e79b804c6b7a945d",
+      "bytes": 2204238,
+      "saved_at": "2026-09-07T12:46:21.123616+00:00",
+      "png_integrity_verified": true,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "proposed_title_ja": "バス行っちゃった……",
+      "composition_note": "The distant bus faces the camera, so the title follows the finished waiting scene.",
+      "preview_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/previews/S09.webp"
+    },
+    {
+      "id": "S10",
+      "slug": "rain-shelter",
+      "title_ja": "急な雨に、ちょっとびっくり",
+      "expression_id": "P15",
+      "reference_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-19-laugh-surprise/P15-soft-surprise.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished standalone Akari v3.0 situation illustration, a new scene.\n\nReference roles:\nImage 1 (P1): PRIMARY facial identity, hair and drawing authority. Preserve this exact character's broad rounded GREY eyes with softly descending outer corners, recognizable iris structure and restrained highlights, eye spacing, full rounded cheeks, short lower face, small chin, tiny simple nose and fine diagonal cheek hatching. Preserve her rounded chin-length BLACK bob, separated blunt bang groups and fine cheek-framing strands. Do not copy the old background, head tilt, forward lean or pose.\nImage 2 (P6): body proportions and costume ONLY. Keep natural shoulders and body balance, healthy leg contours when visible. Exact opaque white short-sleeve open-collar button shirt with narrow blue-grey piping on collar edges and sleeve hems, blue-grey pleated skirt, navy ribbed socks ending BELOW knees and white low-top lace-up sneakers. Maintain comfortable opaque fabric and original cut. Its simplified small face is NOT the face authority.\nImage 3: approved supporting expression reference ONLY. Translate the expression to the new scene without copying its pose, background or framing. P1 remains the underlying facial authority. Expression can naturally coordinate brows, lids, cheeks and mouth.\n\nKeep the reference character and delicate anime illustration treatment consistent throughout. Clean fine contours, coherent soft cel shadows and restrained color transitions, background slightly softer than face. Keep facial details crisp even in a wider composition. Do not narrow the jaw, elongate the lower face, make generic almond eyes or change eye/hair colors. No age-label-driven redesign.\n\nSCENE:\nPortrait 2:3, waist-up. She has just stepped beneath the deep awning of a small closed shop to shelter from a sudden summer shower. Looking outward and then toward the viewer with mild surprise, small open mouth and raised brows, one open hand extended a little to feel a raindrop while remaining under cover. Dark wet pavement and rain beyond the awning; she and her opaque uniform are dry, with only a few beads on the ends of her hair. Soft cool rain light.\n\nFinish and constraints:\nStrong scene-specific gesture, gaze and emotional read. Avoid repeating the reference's static centered leaning portrait; honor the new camera and activity. Ordinary natural perspective, coherent anatomy, each hand has five fingers with credible contact and grips, no doubled limbs or detached objects. All clothing remains opaque and normally draped. No extra jewelry, hair accessories or unrequested bags. Only the props and creatures named in the scene. The friend remains offscreen, no companion body or hands. No collage, panels, inset faces, text, captions, readable logos, watermarks, floating hearts or comic symbols. Return one complete illustration.",
+      "filename": "S10-rain-shelter.png",
+      "status": "reviewed_candidate",
+      "user_approved": false,
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S10-rain-shelter.png",
+      "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-dd7b4b2a-f3c8-4742-8913-7aa948aadb76.png",
+      "generation_id": "exec-dd7b4b2a-f3c8-4742-8913-7aa948aadb76",
+      "elapsed_ms": 38700,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "0c95ebef94d30b7579ad3d098f7d75b955b6985ad09bd2e922e7fb6e4e6e4f1b",
+      "bytes": 2280188,
+      "saved_at": "2026-09-07T12:47:13.708374+00:00",
+      "png_integrity_verified": true,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "preview_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/previews/S10.webp"
+    },
+    {
+      "id": "S11",
+      "slug": "shared-umbrella",
+      "title_ja": "傘の中、少し近い距離",
+      "expression_id": "P10",
+      "reference_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/P10-2-shy-held-smile.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished standalone Akari v3.0 situation illustration, a new scene.\n\nReference roles:\nImage 1 (P1): PRIMARY facial identity, hair and drawing authority. Preserve this exact character's broad rounded GREY eyes with softly descending outer corners, recognizable iris structure and restrained highlights, eye spacing, full rounded cheeks, short lower face, small chin, tiny simple nose and fine diagonal cheek hatching. Preserve her rounded chin-length BLACK bob, separated blunt bang groups and fine cheek-framing strands. Do not copy the old background, head tilt, forward lean or pose.\nImage 2 (P6): body proportions and costume ONLY. Keep natural shoulders and body balance, healthy leg contours when visible. Exact opaque white short-sleeve open-collar button shirt with narrow blue-grey piping on collar edges and sleeve hems, blue-grey pleated skirt, navy ribbed socks ending BELOW knees and white low-top lace-up sneakers. Maintain comfortable opaque fabric and original cut. Its simplified small face is NOT the face authority.\nImage 3: approved supporting expression reference ONLY. Translate the expression to the new scene without copying its pose, background or framing. P1 remains the underlying facial authority. Expression can naturally coordinate brows, lids, cheeks and mouth.\n\nKeep the reference character and delicate anime illustration treatment consistent throughout. Clean fine contours, coherent soft cel shadows and restrained color transitions, background slightly softer than face. Keep facial details crisp even in a wider composition. Do not narrow the jaw, elongate the lower face, make generic almond eyes or change eye/hair colors. No age-label-driven redesign.\n\nSCENE:\nPortrait 2:3, close waist-up. Peer eye-level viewpoint of a childhood friend walking beside her under one plain translucent umbrella. She holds the umbrella shaft naturally near the center of her body with one hand, glances sideways at the viewer with a shy held smile and gentle cheek hatching. The translucent canopy and a few clean ribs arc above her head, droplets and rainy street beyond. No visible second person or companion hand. Warm familiar closeness, dry opaque shirt, natural modest distance and anatomy.\n\nFinish and constraints:\nStrong scene-specific gesture, gaze and emotional read. Avoid repeating the reference's static centered leaning portrait; honor the new camera and activity. Ordinary natural perspective, coherent anatomy, each hand has five fingers with credible contact and grips, no doubled limbs or detached objects. All clothing remains opaque and normally draped. No extra jewelry, hair accessories or unrequested bags. Only the props and creatures named in the scene. The friend remains offscreen, no companion body or hands. No collage, panels, inset faces, text, captions, readable logos, watermarks, floating hearts or comic symbols. Return one complete illustration.",
+      "filename": "S11-shared-umbrella.png",
+      "status": "reviewed_candidate",
+      "user_approved": false,
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S11-shared-umbrella.png",
+      "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-bdd725ff-a56a-4cc5-a71a-0fef8850a693.png",
+      "generation_id": "exec-bdd725ff-a56a-4cc5-a71a-0fef8850a693",
+      "elapsed_ms": 33088,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "a47f053a5ada3b754ef80d8e59cdcf37656c328b752ff1ed9cd77d5598e3377c",
+      "bytes": 2165958,
+      "saved_at": "2026-09-07T12:47:55.195101+00:00",
+      "png_integrity_verified": true,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "preview_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/previews/S11.webp"
+    },
+    {
+      "id": "S12",
+      "slug": "puddle-step",
+      "title_ja": "雨上がり、振り向いて",
+      "expression_id": "P2",
+      "reference_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished standalone Akari v3.0 situation illustration, a new scene.\n\nReference roles:\nImage 1 (P1): PRIMARY facial identity, hair and drawing authority. Preserve this exact character's broad rounded GREY eyes with softly descending outer corners, recognizable iris structure and restrained highlights, eye spacing, full rounded cheeks, short lower face, small chin, tiny simple nose and fine diagonal cheek hatching. Preserve her rounded chin-length BLACK bob, separated blunt bang groups and fine cheek-framing strands. Do not copy the old background, head tilt, forward lean or pose.\nImage 2 (P6): body proportions and costume ONLY. Keep natural shoulders and body balance, healthy leg contours when visible. Exact opaque white short-sleeve open-collar button shirt with narrow blue-grey piping on collar edges and sleeve hems, blue-grey pleated skirt, navy ribbed socks ending BELOW knees and white low-top lace-up sneakers. Maintain comfortable opaque fabric and original cut. Its simplified small face is NOT the face authority.\nImage 3: approved supporting expression reference ONLY. Translate the expression to the new scene without copying its pose, background or framing. P1 remains the underlying facial authority. Expression can naturally coordinate brows, lids, cheeks and mouth.\n\nKeep the reference character and delicate anime illustration treatment consistent throughout. Clean fine contours, coherent soft cel shadows and restrained color transitions, background slightly softer than face. Keep facial details crisp even in a wider composition. Do not narrow the jaw, elongate the lower face, make generic almond eyes or change eye/hair colors. No age-label-driven redesign.\n\nSCENE:\nPortrait 2:3, full figure head to sneaker soles with comfortable margins. After rain on a quiet park path, she carefully steps around a small puddle, glancing back toward the viewer with a playful closed smile. One foot planted and the other making a small believable step, arms slightly out for balance. Keep healthy natural legs, navy below-knee ribbed socks and white sneakers, skirt drapes normally with no upward flip. Eye-level camera, face still detailed, wet leaves and small reflections.\n\nFinish and constraints:\nStrong scene-specific gesture, gaze and emotional read. Avoid repeating the reference's static centered leaning portrait; honor the new camera and activity. Ordinary natural perspective, coherent anatomy, each hand has five fingers with credible contact and grips, no doubled limbs or detached objects. All clothing remains opaque and normally draped. No extra jewelry, hair accessories or unrequested bags. Only the props and creatures named in the scene. The friend remains offscreen, no companion body or hands. No collage, panels, inset faces, text, captions, readable logos, watermarks, floating hearts or comic symbols. Return one complete illustration.",
+      "filename": "S12-puddle-step.png",
+      "status": "reviewed_candidate",
+      "user_approved": false,
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S12-puddle-step.png",
+      "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-a10f4f79-2bf0-472d-9c98-34b89a28e79d.png",
+      "generation_id": "exec-a10f4f79-2bf0-472d-9c98-34b89a28e79d",
+      "elapsed_ms": 43393,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "062350edc3c78ed5ee0484499059babcc5bb0f7605303f59ccde3cbeef0f1ac2",
+      "bytes": 2503231,
+      "saved_at": "2026-09-07T12:48:47.916829+00:00",
+      "png_integrity_verified": true,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "proposed_title_ja": "水たまりをひょいっと",
+      "composition_note": "One shoe enters the puddle; the finished scene is a backward glance after rain.",
+      "preview_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/previews/S12.webp"
+    },
+    {
+      "id": "S13",
+      "slug": "street-cat",
+      "title_ja": "道ばたの猫にごあいさつ",
+      "expression_id": "P2",
+      "reference_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished standalone Akari v3.0 situation illustration, a new scene.\n\nReference roles:\nImage 1 (P1): PRIMARY facial identity, hair and drawing authority. Preserve this exact character's broad rounded GREY eyes with softly descending outer corners, recognizable iris structure and restrained highlights, eye spacing, full rounded cheeks, short lower face, small chin, tiny simple nose and fine diagonal cheek hatching. Preserve her rounded chin-length BLACK bob, separated blunt bang groups and fine cheek-framing strands. Do not copy the old background, head tilt, forward lean or pose.\nImage 2 (P6): body proportions and costume ONLY. Keep natural shoulders and body balance, healthy leg contours when visible. Exact opaque white short-sleeve open-collar button shirt with narrow blue-grey piping on collar edges and sleeve hems, blue-grey pleated skirt, navy ribbed socks ending BELOW knees and white low-top lace-up sneakers. Maintain comfortable opaque fabric and original cut. Its simplified small face is NOT the face authority.\nImage 3: approved supporting expression reference ONLY. Translate the expression to the new scene without copying its pose, background or framing. P1 remains the underlying facial authority. Expression can naturally coordinate brows, lids, cheeks and mouth.\n\nKeep the reference character and delicate anime illustration treatment consistent throughout. Clean fine contours, coherent soft cel shadows and restrained color transitions, background slightly softer than face. Keep facial details crisp even in a wider composition. Do not narrow the jaw, elongate the lower face, make generic almond eyes or change eye/hair colors. No age-label-driven redesign.\n\nSCENE:\nLandscape 3:2. On a shaded residential path, she kneels on one knee beside a calm sitting tabby cat, her skirt naturally covering her lap, and offers the back of a relaxed hand for the cat to sniff without touching its face. She looks at the cat with a gentle small smile. Friendly side three-quarter composition from a naturally lowered camera at her face height, no upskirt or low-angle view. Her face and the cat are both clear. Potted plants and a low wall, soft afternoon daylight.\n\nFinish and constraints:\nStrong scene-specific gesture, gaze and emotional read. Avoid repeating the reference's static centered leaning portrait; honor the new camera and activity. Ordinary natural perspective, coherent anatomy, each hand has five fingers with credible contact and grips, no doubled limbs or detached objects. All clothing remains opaque and normally draped. No extra jewelry, hair accessories or unrequested bags. Only the props and creatures named in the scene. The friend remains offscreen, no companion body or hands. No collage, panels, inset faces, text, captions, readable logos, watermarks, floating hearts or comic symbols. Return one complete illustration.",
+      "filename": "S13-street-cat.png",
+      "status": "reviewed_candidate",
+      "user_approved": false,
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S13-street-cat.png",
+      "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-c3fa72b2-2e6f-4564-a2c6-4cf094706aeb.png",
+      "generation_id": "exec-c3fa72b2-2e6f-4564-a2c6-4cf094706aeb",
+      "elapsed_ms": 34972,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "470d064edc3c54c141dfe0d3f02c6c6ca59c012ff67a7d621f96631309e00a97",
+      "bytes": 2621202,
+      "saved_at": "2026-09-07T12:49:35.863511+00:00",
+      "png_integrity_verified": true,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "preview_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/previews/S13.webp"
+    },
+    {
+      "id": "S14",
+      "slug": "flower-shop",
+      "title_ja": "花屋の軒先で",
+      "expression_id": "P2",
+      "reference_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished standalone Akari v3.0 situation illustration, a new scene.\n\nReference roles:\nImage 1 (P1): PRIMARY facial identity, hair and drawing authority. Preserve this exact character's broad rounded GREY eyes with softly descending outer corners, recognizable iris structure and restrained highlights, eye spacing, full rounded cheeks, short lower face, small chin, tiny simple nose and fine diagonal cheek hatching. Preserve her rounded chin-length BLACK bob, separated blunt bang groups and fine cheek-framing strands. Do not copy the old background, head tilt, forward lean or pose.\nImage 2 (P6): body proportions and costume ONLY. Keep natural shoulders and body balance, healthy leg contours when visible. Exact opaque white short-sleeve open-collar button shirt with narrow blue-grey piping on collar edges and sleeve hems, blue-grey pleated skirt, navy ribbed socks ending BELOW knees and white low-top lace-up sneakers. Maintain comfortable opaque fabric and original cut. Its simplified small face is NOT the face authority.\nImage 3: approved supporting expression reference ONLY. Translate the expression to the new scene without copying its pose, background or framing. P1 remains the underlying facial authority. Expression can naturally coordinate brows, lids, cheeks and mouth.\n\nKeep the reference character and delicate anime illustration treatment consistent throughout. Clean fine contours, coherent soft cel shadows and restrained color transitions, background slightly softer than face. Keep facial details crisp even in a wider composition. Do not narrow the jaw, elongate the lower face, make generic almond eyes or change eye/hair colors. No age-label-driven redesign.\n\nSCENE:\nPortrait 2:3, upper thighs up. Standing beside buckets of seasonal flowers outside a small flower shop, she bends forward just slightly to enjoy a small bunch of pale yellow flowers, held loosely at waist height, then looks up toward the viewer with a thoughtful pleased smile. Keep exact facial proportions and bob. Warm late-afternoon shopfront light, a little green and yellow color, no excessive bouquet blocking her body, no readable signs.\n\nFinish and constraints:\nStrong scene-specific gesture, gaze and emotional read. Avoid repeating the reference's static centered leaning portrait; honor the new camera and activity. Ordinary natural perspective, coherent anatomy, each hand has five fingers with credible contact and grips, no doubled limbs or detached objects. All clothing remains opaque and normally draped. No extra jewelry, hair accessories or unrequested bags. Only the props and creatures named in the scene. The friend remains offscreen, no companion body or hands. No collage, panels, inset faces, text, captions, readable logos, watermarks, floating hearts or comic symbols. Return one complete illustration.",
+      "filename": "S14-flower-shop.png",
+      "status": "reviewed_candidate",
+      "user_approved": false,
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S14-flower-shop.png",
+      "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-10dd5410-4289-4642-908a-db6f323f7d4c.png",
+      "generation_id": "exec-10dd5410-4289-4642-908a-db6f323f7d4c",
+      "elapsed_ms": 33682,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "cca2ebee085167abb71d98926933d296e80d4ad4c5f5c581ec6ef2244caff0d4",
+      "bytes": 2289364,
+      "saved_at": "2026-09-07T12:50:19.851092+00:00",
+      "png_integrity_verified": true,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "preview_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/previews/S14.webp"
+    },
+    {
+      "id": "S15",
+      "slug": "bookshop-find",
+      "title_ja": "この本、気になってたんだ",
+      "expression_id": "P14",
+      "reference_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-19-laugh-surprise/P14-spontaneous-laugh.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished standalone Akari v3.0 situation illustration, a new scene.\n\nReference roles:\nImage 1 (P1): PRIMARY facial identity, hair and drawing authority. Preserve this exact character's broad rounded GREY eyes with softly descending outer corners, recognizable iris structure and restrained highlights, eye spacing, full rounded cheeks, short lower face, small chin, tiny simple nose and fine diagonal cheek hatching. Preserve her rounded chin-length BLACK bob, separated blunt bang groups and fine cheek-framing strands. Do not copy the old background, head tilt, forward lean or pose.\nImage 2 (P6): body proportions and costume ONLY. Keep natural shoulders and body balance, healthy leg contours when visible. Exact opaque white short-sleeve open-collar button shirt with narrow blue-grey piping on collar edges and sleeve hems, blue-grey pleated skirt, navy ribbed socks ending BELOW knees and white low-top lace-up sneakers. Maintain comfortable opaque fabric and original cut. Its simplified small face is NOT the face authority.\nImage 3: approved supporting expression reference ONLY. Translate the expression to the new scene without copying its pose, background or framing. P1 remains the underlying facial authority. Expression can naturally coordinate brows, lids, cheeks and mouth.\n\nKeep the reference character and delicate anime illustration treatment consistent throughout. Clean fine contours, coherent soft cel shadows and restrained color transitions, background slightly softer than face. Keep facial details crisp even in a wider composition. Do not narrow the jaw, elongate the lower face, make generic almond eyes or change eye/hair colors. No age-label-driven redesign.\n\nSCENE:\nLandscape 3:2, waist-up. In a cozy secondhand bookshop, she turns from a shelf toward the friend and shows one interesting book held at chest height, one hand supporting its lower edge and the other along the spine. An open delighted smile and bright visible grey eyes. Book cover uses simple geometric artwork without letters. Warm wood shelves, soft ambient lamp light mixed with window daylight. Clear natural hand grips and relaxed posture.\n\nFinish and constraints:\nStrong scene-specific gesture, gaze and emotional read. Avoid repeating the reference's static centered leaning portrait; honor the new camera and activity. Ordinary natural perspective, coherent anatomy, each hand has five fingers with credible contact and grips, no doubled limbs or detached objects. All clothing remains opaque and normally draped. No extra jewelry, hair accessories or unrequested bags. Only the props and creatures named in the scene. The friend remains offscreen, no companion body or hands. No collage, panels, inset faces, text, captions, readable logos, watermarks, floating hearts or comic symbols. Return one complete illustration.",
+      "filename": "S15-bookshop-find.png",
+      "status": "reviewed_candidate",
+      "user_approved": false,
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S15-bookshop-find.png",
+      "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-3745d48a-ef88-4d56-aa80-96aac419cbfd.png",
+      "generation_id": "exec-3745d48a-ef88-4d56-aa80-96aac419cbfd",
+      "elapsed_ms": 37093,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "82ede2ba8d3228324f5571e8733ba04767f0821721eac22f95096e35979c14be",
+      "bytes": 2126078,
+      "saved_at": "2026-09-07T12:51:08.923230+00:00",
+      "png_integrity_verified": true,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "preview_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/previews/S15.webp"
+    },
+    {
+      "id": "S16",
+      "slug": "arcade-pout",
+      "title_ja": "あとちょっとだったのに",
+      "expression_id": "P11",
+      "reference_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/P11-gentle-pout.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished standalone Akari v3.0 situation illustration, a new scene.\n\nReference roles:\nImage 1 (P1): PRIMARY facial identity, hair and drawing authority. Preserve this exact character's broad rounded GREY eyes with softly descending outer corners, recognizable iris structure and restrained highlights, eye spacing, full rounded cheeks, short lower face, small chin, tiny simple nose and fine diagonal cheek hatching. Preserve her rounded chin-length BLACK bob, separated blunt bang groups and fine cheek-framing strands. Do not copy the old background, head tilt, forward lean or pose.\nImage 2 (P6): body proportions and costume ONLY. Keep natural shoulders and body balance, healthy leg contours when visible. Exact opaque white short-sleeve open-collar button shirt with narrow blue-grey piping on collar edges and sleeve hems, blue-grey pleated skirt, navy ribbed socks ending BELOW knees and white low-top lace-up sneakers. Maintain comfortable opaque fabric and original cut. Its simplified small face is NOT the face authority.\nImage 3: approved supporting expression reference ONLY. Translate the expression to the new scene without copying its pose, background or framing. P1 remains the underlying facial authority. Expression can naturally coordinate brows, lids, cheeks and mouth.\n\nKeep the reference character and delicate anime illustration treatment consistent throughout. Clean fine contours, coherent soft cel shadows and restrained color transitions, background slightly softer than face. Keep facial details crisp even in a wider composition. Do not narrow the jaw, elongate the lower face, make generic almond eyes or change eye/hair colors. No age-label-driven redesign.\n\nSCENE:\nPortrait 2:3, waist-up. Beside a claw-machine cabinet in a small arcade, she turns away from the controls toward the viewer, hands resting lightly on the control ledge, with a playful little pout after almost winning a plush toy. Small soft animal toys visible behind glass; tasteful colored reflections on background only, face retains neutral skin and grey eyes. Shoulders easy, no angry grimace, no logos or readable screens. Peer eye-level camera.\n\nFinish and constraints:\nStrong scene-specific gesture, gaze and emotional read. Avoid repeating the reference's static centered leaning portrait; honor the new camera and activity. Ordinary natural perspective, coherent anatomy, each hand has five fingers with credible contact and grips, no doubled limbs or detached objects. All clothing remains opaque and normally draped. No extra jewelry, hair accessories or unrequested bags. Only the props and creatures named in the scene. The friend remains offscreen, no companion body or hands. No collage, panels, inset faces, text, captions, readable logos, watermarks, floating hearts or comic symbols. Return one complete illustration.",
+      "filename": "S16-arcade-pout.png",
+      "status": "reviewed_candidate",
+      "user_approved": false,
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S16-arcade-pout.png",
+      "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-894a65e6-8f88-4d3d-9c7a-5c5ba50f106d.png",
+      "generation_id": "exec-894a65e6-8f88-4d3d-9c7a-5c5ba50f106d",
+      "elapsed_ms": 40387,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "98c5f4dda855017f275d5e039d61224ab247c922fc5ce5b051df46937d593b12",
+      "bytes": 1980457,
+      "saved_at": "2026-09-07T12:52:00.190816+00:00",
+      "png_integrity_verified": true,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "preview_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/previews/S16.webp"
+    },
+    {
+      "id": "S17",
+      "slug": "cafe-dessert",
+      "title_ja": "喫茶店のごほうびパフェ",
+      "expression_id": "P14",
+      "reference_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-19-laugh-surprise/P14-spontaneous-laugh.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished standalone Akari v3.0 situation illustration, a new scene.\n\nReference roles:\nImage 1 (P1): PRIMARY facial identity, hair and drawing authority. Preserve this exact character's broad rounded GREY eyes with softly descending outer corners, recognizable iris structure and restrained highlights, eye spacing, full rounded cheeks, short lower face, small chin, tiny simple nose and fine diagonal cheek hatching. Preserve her rounded chin-length BLACK bob, separated blunt bang groups and fine cheek-framing strands. Do not copy the old background, head tilt, forward lean or pose.\nImage 2 (P6): body proportions and costume ONLY. Keep natural shoulders and body balance, healthy leg contours when visible. Exact opaque white short-sleeve open-collar button shirt with narrow blue-grey piping on collar edges and sleeve hems, blue-grey pleated skirt, navy ribbed socks ending BELOW knees and white low-top lace-up sneakers. Maintain comfortable opaque fabric and original cut. Its simplified small face is NOT the face authority.\nImage 3: approved supporting expression reference ONLY. Translate the expression to the new scene without copying its pose, background or framing. P1 remains the underlying facial authority. Expression can naturally coordinate brows, lids, cheeks and mouth.\n\nKeep the reference character and delicate anime illustration treatment consistent throughout. Clean fine contours, coherent soft cel shadows and restrained color transitions, background slightly softer than face. Keep facial details crisp even in a wider composition. Do not narrow the jaw, elongate the lower face, make generic almond eyes or change eye/hair colors. No age-label-driven redesign.\n\nSCENE:\nLandscape 3:2, seated waist-up across a small cafe table. A modest fruit parfait in a clear glass sits before her; she holds a long spoon gently above it while sharing an unguarded happy laugh with the viewer. Other hand rests beside the dessert. Small glass of water, wood tabletop, softly lit cafe interior and window, warm natural skin colors. No spoon in mouth or eating closeup. Preserve her round cheeks, grey eyes and clean open smile.\n\nFinish and constraints:\nStrong scene-specific gesture, gaze and emotional read. Avoid repeating the reference's static centered leaning portrait; honor the new camera and activity. Ordinary natural perspective, coherent anatomy, each hand has five fingers with credible contact and grips, no doubled limbs or detached objects. All clothing remains opaque and normally draped. No extra jewelry, hair accessories or unrequested bags. Only the props and creatures named in the scene. The friend remains offscreen, no companion body or hands. No collage, panels, inset faces, text, captions, readable logos, watermarks, floating hearts or comic symbols. Return one complete illustration.",
+      "filename": "S17-cafe-dessert.png",
+      "status": "reviewed_candidate",
+      "user_approved": false,
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S17-cafe-dessert.png",
+      "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-387feedd-1a26-45dd-ab0a-941b964d6245.png",
+      "generation_id": "exec-387feedd-1a26-45dd-ab0a-941b964d6245",
+      "elapsed_ms": 40445,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "b26c57d7c1e7e859b1b6b490fdcc47a2c762a3c067bf7086a72cdd7d7c38ad77",
+      "bytes": 2064228,
+      "saved_at": "2026-09-07T12:52:50.200039+00:00",
+      "png_integrity_verified": true,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "preview_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/previews/S17.webp"
+    },
+    {
+      "id": "S18",
+      "slug": "sunset-crossing",
+      "title_ja": "踏切待ちの照れ隠し",
+      "expression_id": "P10",
+      "reference_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/P10-2-shy-held-smile.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished standalone Akari v3.0 situation illustration, a new scene.\n\nReference roles:\nImage 1 (P1): PRIMARY facial identity, hair and drawing authority. Preserve this exact character's broad rounded GREY eyes with softly descending outer corners, recognizable iris structure and restrained highlights, eye spacing, full rounded cheeks, short lower face, small chin, tiny simple nose and fine diagonal cheek hatching. Preserve her rounded chin-length BLACK bob, separated blunt bang groups and fine cheek-framing strands. Do not copy the old background, head tilt, forward lean or pose.\nImage 2 (P6): body proportions and costume ONLY. Keep natural shoulders and body balance, healthy leg contours when visible. Exact opaque white short-sleeve open-collar button shirt with narrow blue-grey piping on collar edges and sleeve hems, blue-grey pleated skirt, navy ribbed socks ending BELOW knees and white low-top lace-up sneakers. Maintain comfortable opaque fabric and original cut. Its simplified small face is NOT the face authority.\nImage 3: approved supporting expression reference ONLY. Translate the expression to the new scene without copying its pose, background or framing. P1 remains the underlying facial authority. Expression can naturally coordinate brows, lids, cheeks and mouth.\n\nKeep the reference character and delicate anime illustration treatment consistent throughout. Clean fine contours, coherent soft cel shadows and restrained color transitions, background slightly softer than face. Keep facial details crisp even in a wider composition. Do not narrow the jaw, elongate the lower face, make generic almond eyes or change eye/hair colors. No age-label-driven redesign.\n\nSCENE:\nPortrait 2:3, knee-up. Safely on the sidewalk behind a closed railway crossing gate at sunset, she stands next to her childhood friend, glancing away with a small held smile after a compliment. Hands loosely clasped behind her back, a mild shy tilt of her head. Distant commuter train sliding past beyond the barrier; unobtrusive striped gate in background, not crossing her face. Warm edge light, soft neutral fill, no orange shift to hair or eyes.\n\nFinish and constraints:\nStrong scene-specific gesture, gaze and emotional read. Avoid repeating the reference's static centered leaning portrait; honor the new camera and activity. Ordinary natural perspective, coherent anatomy, each hand has five fingers with credible contact and grips, no doubled limbs or detached objects. All clothing remains opaque and normally draped. No extra jewelry, hair accessories or unrequested bags. Only the props and creatures named in the scene. The friend remains offscreen, no companion body or hands. No collage, panels, inset faces, text, captions, readable logos, watermarks, floating hearts or comic symbols. Return one complete illustration.",
+      "filename": "S18-sunset-crossing.png",
+      "status": "reviewed_candidate",
+      "user_approved": false,
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S18-sunset-crossing.png",
+      "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-20896935-cf4f-40be-af5a-2a339f603ef6.png",
+      "generation_id": "exec-20896935-cf4f-40be-af5a-2a339f603ef6",
+      "elapsed_ms": 30890,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "3bd696f8b4d538f598a8cd6ae50d7f6dd06cd678a6d0f28020229d0cdf1add60",
+      "bytes": 2150389,
+      "saved_at": "2026-09-07T12:53:31.305204+00:00",
+      "png_integrity_verified": true,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "preview_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/previews/S18.webp"
+    },
+    {
+      "id": "S19",
+      "slug": "music-room",
+      "title_ja": "音楽室で一音だけ",
+      "expression_id": "P15",
+      "reference_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-19-laugh-surprise/P15-soft-surprise.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished standalone Akari v3.0 situation illustration, a new scene.\n\nReference roles:\nImage 1 (P1): PRIMARY facial identity, hair and drawing authority. Preserve this exact character's broad rounded GREY eyes with softly descending outer corners, recognizable iris structure and restrained highlights, eye spacing, full rounded cheeks, short lower face, small chin, tiny simple nose and fine diagonal cheek hatching. Preserve her rounded chin-length BLACK bob, separated blunt bang groups and fine cheek-framing strands. Do not copy the old background, head tilt, forward lean or pose.\nImage 2 (P6): body proportions and costume ONLY. Keep natural shoulders and body balance, healthy leg contours when visible. Exact opaque white short-sleeve open-collar button shirt with narrow blue-grey piping on collar edges and sleeve hems, blue-grey pleated skirt, navy ribbed socks ending BELOW knees and white low-top lace-up sneakers. Maintain comfortable opaque fabric and original cut. Its simplified small face is NOT the face authority.\nImage 3: approved supporting expression reference ONLY. Translate the expression to the new scene without copying its pose, background or framing. P1 remains the underlying facial authority. Expression can naturally coordinate brows, lids, cheeks and mouth.\n\nKeep the reference character and delicate anime illustration treatment consistent throughout. Clean fine contours, coherent soft cel shadows and restrained color transitions, background slightly softer than face. Keep facial details crisp even in a wider composition. Do not narrow the jaw, elongate the lower face, make generic almond eyes or change eye/hair colors. No age-label-driven redesign.\n\nSCENE:\nLandscape 3:2, seated waist-up at an upright piano in a quiet music room. She has cautiously pressed one piano key with one relaxed index finger and looks toward the viewer with a small delighted surprised expression. The other hand rests naturally on her lap. One coherent hand near the keyboard, no impossible hand spread, keys recede in correct perspective. Window daylight and a softly blurred music stand with no readable score. Simple curious everyday moment.\n\nFinish and constraints:\nStrong scene-specific gesture, gaze and emotional read. Avoid repeating the reference's static centered leaning portrait; honor the new camera and activity. Ordinary natural perspective, coherent anatomy, each hand has five fingers with credible contact and grips, no doubled limbs or detached objects. All clothing remains opaque and normally draped. No extra jewelry, hair accessories or unrequested bags. Only the props and creatures named in the scene. The friend remains offscreen, no companion body or hands. No collage, panels, inset faces, text, captions, readable logos, watermarks, floating hearts or comic symbols. Return one complete illustration.",
+      "filename": "S19-music-room.png",
+      "status": "reviewed_candidate",
+      "user_approved": false,
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S19-music-room.png",
+      "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-f13dcba1-f098-4b21-9cf7-e1de1db52dfa.png",
+      "generation_id": "exec-f13dcba1-f098-4b21-9cf7-e1de1db52dfa",
+      "elapsed_ms": 34945,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "2d0caef09ae9c5d4bea88be78ffd8bde5d687858655040d746794e3aeb1479d2",
+      "bytes": 1989322,
+      "saved_at": "2026-09-07T12:54:17.035712+00:00",
+      "png_integrity_verified": true,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "preview_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/previews/S19.webp"
+    },
+    {
+      "id": "S20",
+      "slug": "window-listen",
+      "title_ja": "教室の窓辺で話を聞く",
+      "expression_id": "P2",
+      "reference_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished standalone Akari v3.0 situation illustration, a new scene.\n\nReference roles:\nImage 1 (P1): PRIMARY facial identity, hair and drawing authority. Preserve this exact character's broad rounded GREY eyes with softly descending outer corners, recognizable iris structure and restrained highlights, eye spacing, full rounded cheeks, short lower face, small chin, tiny simple nose and fine diagonal cheek hatching. Preserve her rounded chin-length BLACK bob, separated blunt bang groups and fine cheek-framing strands. Do not copy the old background, head tilt, forward lean or pose.\nImage 2 (P6): body proportions and costume ONLY. Keep natural shoulders and body balance, healthy leg contours when visible. Exact opaque white short-sleeve open-collar button shirt with narrow blue-grey piping on collar edges and sleeve hems, blue-grey pleated skirt, navy ribbed socks ending BELOW knees and white low-top lace-up sneakers. Maintain comfortable opaque fabric and original cut. Its simplified small face is NOT the face authority.\nImage 3: approved supporting expression reference ONLY. Translate the expression to the new scene without copying its pose, background or framing. P1 remains the underlying facial authority. Expression can naturally coordinate brows, lids, cheeks and mouth.\n\nKeep the reference character and delicate anime illustration treatment consistent throughout. Clean fine contours, coherent soft cel shadows and restrained color transitions, background slightly softer than face. Keep facial details crisp even in a wider composition. Do not narrow the jaw, elongate the lower face, make generic almond eyes or change eye/hair colors. No age-label-driven redesign.\n\nSCENE:\nPortrait 2:3, waist-up. In an empty classroom at the end of the day, she stands by an open window, one hand resting lightly on the broad sill and the other at her side, listening carefully to the friend just beside the camera. Soft concerned-but-kind closed smile, attentive eyes, slightly lifted inner brows without sadness. A curtain moves gently, distant treetops and warm slanting light. Quiet intimate conversation; ordinary eye-level perspective, face large and detailed.\n\nFinish and constraints:\nStrong scene-specific gesture, gaze and emotional read. Avoid repeating the reference's static centered leaning portrait; honor the new camera and activity. Ordinary natural perspective, coherent anatomy, each hand has five fingers with credible contact and grips, no doubled limbs or detached objects. All clothing remains opaque and normally draped. No extra jewelry, hair accessories or unrequested bags. Only the props and creatures named in the scene. The friend remains offscreen, no companion body or hands. No collage, panels, inset faces, text, captions, readable logos, watermarks, floating hearts or comic symbols. Return one complete illustration.",
+      "filename": "S20-window-listen.png",
+      "status": "reviewed_candidate",
+      "user_approved": false,
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S20-window-listen.png",
+      "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-2f5ebbfc-0fd0-4a90-b335-8cb7d022ad38.png",
+      "generation_id": "exec-2f5ebbfc-0fd0-4a90-b335-8cb7d022ad38",
+      "elapsed_ms": 38921,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "33410b69ba5b4ef00556c012c71c4fea937f64fad255c455e7e11e863bfd3b43",
+      "bytes": 2002273,
+      "saved_at": "2026-09-07T12:55:05.504523+00:00",
+      "png_integrity_verified": true,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "preview_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/previews/S20.webp"
+    },
+    {
+      "id": "S21",
+      "slug": "seaside-laugh",
+      "title_ja": "海沿いで、声が弾む",
+      "expression_id": "P14",
+      "reference_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-19-laugh-surprise/P14-spontaneous-laugh.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished standalone Akari v3.0 situation illustration, a new scene.\n\nReference roles:\nImage 1 (P1): PRIMARY facial identity, hair and drawing authority. Preserve this exact character's broad rounded GREY eyes with softly descending outer corners, recognizable iris structure and restrained highlights, eye spacing, full rounded cheeks, short lower face, small chin, tiny simple nose and fine diagonal cheek hatching. Preserve her rounded chin-length BLACK bob, separated blunt bang groups and fine cheek-framing strands. Do not copy the old background, head tilt, forward lean or pose.\nImage 2 (P6): body proportions and costume ONLY. Keep natural shoulders and body balance, healthy leg contours when visible. Exact opaque white short-sleeve open-collar button shirt with narrow blue-grey piping on collar edges and sleeve hems, blue-grey pleated skirt, navy ribbed socks ending BELOW knees and white low-top lace-up sneakers. Maintain comfortable opaque fabric and original cut. Its simplified small face is NOT the face authority.\nImage 3: approved supporting expression reference ONLY. Translate the expression to the new scene without copying its pose, background or framing. P1 remains the underlying facial authority. Expression can naturally coordinate brows, lids, cheeks and mouth.\n\nKeep the reference character and delicate anime illustration treatment consistent throughout. Clean fine contours, coherent soft cel shadows and restrained color transitions, background slightly softer than face. Keep facial details crisp even in a wider composition. Do not narrow the jaw, elongate the lower face, make generic almond eyes or change eye/hair colors. No age-label-driven redesign.\n\nSCENE:\nLandscape 3:2, waist-up with breathing room around her. On a seaside promenade after class, she rests her forearms casually on the safe waist-high railing and turns toward the friend next to her, laughing freely. Sea and pale horizon behind, seabreeze moving only a few bob tips. Open laughing mouth, lifted cheeks, grey irises visible. Soft late-afternoon coastal light, relaxed real body weight on railing, all limbs coherent and no dramatic pose.\n\nFinish and constraints:\nStrong scene-specific gesture, gaze and emotional read. Avoid repeating the reference's static centered leaning portrait; honor the new camera and activity. Ordinary natural perspective, coherent anatomy, each hand has five fingers with credible contact and grips, no doubled limbs or detached objects. All clothing remains opaque and normally draped. No extra jewelry, hair accessories or unrequested bags. Only the props and creatures named in the scene. The friend remains offscreen, no companion body or hands. No collage, panels, inset faces, text, captions, readable logos, watermarks, floating hearts or comic symbols. Return one complete illustration.",
+      "filename": "S21-seaside-laugh.png",
+      "status": "reviewed_candidate",
+      "user_approved": false,
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S21-seaside-laugh.png",
+      "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-3db7b29f-eedf-4a62-adf0-adbd2aec2c29.png",
+      "generation_id": "exec-3db7b29f-eedf-4a62-adf0-adbd2aec2c29",
+      "elapsed_ms": 37128,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "9b254654dde2dd942fc130ab1f661424d0d1b051784518033943a0bc5c178e07",
+      "bytes": 2114852,
+      "saved_at": "2026-09-07T12:55:52.358838+00:00",
+      "png_integrity_verified": true,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "preview_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/previews/S21.webp"
+    },
+    {
+      "id": "S22",
+      "slug": "lantern-evening",
+      "title_ja": "夕祭りの綿あめ",
+      "expression_id": "P2",
+      "reference_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished standalone Akari v3.0 situation illustration, a new scene.\n\nReference roles:\nImage 1 (P1): PRIMARY facial identity, hair and drawing authority. Preserve this exact character's broad rounded GREY eyes with softly descending outer corners, recognizable iris structure and restrained highlights, eye spacing, full rounded cheeks, short lower face, small chin, tiny simple nose and fine diagonal cheek hatching. Preserve her rounded chin-length BLACK bob, separated blunt bang groups and fine cheek-framing strands. Do not copy the old background, head tilt, forward lean or pose.\nImage 2 (P6): body proportions and costume ONLY. Keep natural shoulders and body balance, healthy leg contours when visible. Exact opaque white short-sleeve open-collar button shirt with narrow blue-grey piping on collar edges and sleeve hems, blue-grey pleated skirt, navy ribbed socks ending BELOW knees and white low-top lace-up sneakers. Maintain comfortable opaque fabric and original cut. Its simplified small face is NOT the face authority.\nImage 3: approved supporting expression reference ONLY. Translate the expression to the new scene without copying its pose, background or framing. P1 remains the underlying facial authority. Expression can naturally coordinate brows, lids, cheeks and mouth.\n\nKeep the reference character and delicate anime illustration treatment consistent throughout. Clean fine contours, coherent soft cel shadows and restrained color transitions, background slightly softer than face. Keep facial details crisp even in a wider composition. Do not narrow the jaw, elongate the lower face, make generic almond eyes or change eye/hair colors. No age-label-driven redesign.\n\nSCENE:\nPortrait 2:3, waist-up. At a small neighborhood evening festival on her way home, still in the exact summer uniform, she holds a modest pale pink cotton candy on a paper stick in one hand and smiles softly toward the viewer, slightly amused by her small treat. Warm paper lanterns recede behind her; abstract stall colors, no readable signs and no other people in frame. Warm ambient light balanced with cool twilight, face remains clear, not neon. Cotton candy not near or inside her mouth.\n\nFinish and constraints:\nStrong scene-specific gesture, gaze and emotional read. Avoid repeating the reference's static centered leaning portrait; honor the new camera and activity. Ordinary natural perspective, coherent anatomy, each hand has five fingers with credible contact and grips, no doubled limbs or detached objects. All clothing remains opaque and normally draped. No extra jewelry, hair accessories or unrequested bags. Only the props and creatures named in the scene. The friend remains offscreen, no companion body or hands. No collage, panels, inset faces, text, captions, readable logos, watermarks, floating hearts or comic symbols. Return one complete illustration.",
+      "filename": "S22-lantern-evening.png",
+      "status": "reviewed_candidate",
+      "user_approved": false,
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S22-lantern-evening.png",
+      "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-75a70cd2-acc9-483d-9223-5d609206488b.png",
+      "generation_id": "exec-75a70cd2-acc9-483d-9223-5d609206488b",
+      "elapsed_ms": 39055,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "f261324c7f598240dd1292f6492c232b7d99d3002be24cda5e4dbe4c330be911",
+      "bytes": 2118071,
+      "saved_at": "2026-09-07T12:56:39.972946+00:00",
+      "png_integrity_verified": true,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "preview_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/previews/S22.webp"
+    },
+    {
+      "id": "S23",
+      "slug": "platform-goodbye",
+      "title_ja": "ホームで小さく手を振る",
+      "expression_id": "P2",
+      "reference_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished standalone Akari v3.0 situation illustration, a new scene.\n\nReference roles:\nImage 1 (P1): PRIMARY facial identity, hair and drawing authority. Preserve this exact character's broad rounded GREY eyes with softly descending outer corners, recognizable iris structure and restrained highlights, eye spacing, full rounded cheeks, short lower face, small chin, tiny simple nose and fine diagonal cheek hatching. Preserve her rounded chin-length BLACK bob, separated blunt bang groups and fine cheek-framing strands. Do not copy the old background, head tilt, forward lean or pose.\nImage 2 (P6): body proportions and costume ONLY. Keep natural shoulders and body balance, healthy leg contours when visible. Exact opaque white short-sleeve open-collar button shirt with narrow blue-grey piping on collar edges and sleeve hems, blue-grey pleated skirt, navy ribbed socks ending BELOW knees and white low-top lace-up sneakers. Maintain comfortable opaque fabric and original cut. Its simplified small face is NOT the face authority.\nImage 3: approved supporting expression reference ONLY. Translate the expression to the new scene without copying its pose, background or framing. P1 remains the underlying facial authority. Expression can naturally coordinate brows, lids, cheeks and mouth.\n\nKeep the reference character and delicate anime illustration treatment consistent throughout. Clean fine contours, coherent soft cel shadows and restrained color transitions, background slightly softer than face. Keep facial details crisp even in a wider composition. Do not narrow the jaw, elongate the lower face, make generic almond eyes or change eye/hair colors. No age-label-driven redesign.\n\nSCENE:\nPortrait 2:3, knee-up. Standing well behind the tactile paving at a quiet small station platform, she gives the viewer a small goodbye wave beside her cheek, soft closed smile with a hint of reluctance in the brows. Other arm rests naturally. A stopped train in the background with closed doors, long platform roof and evening sky. Safe level platform viewpoint, understated cool dusk with warm station lights, no readable route names or clocks.\n\nFinish and constraints:\nStrong scene-specific gesture, gaze and emotional read. Avoid repeating the reference's static centered leaning portrait; honor the new camera and activity. Ordinary natural perspective, coherent anatomy, each hand has five fingers with credible contact and grips, no doubled limbs or detached objects. All clothing remains opaque and normally draped. No extra jewelry, hair accessories or unrequested bags. Only the props and creatures named in the scene. The friend remains offscreen, no companion body or hands. No collage, panels, inset faces, text, captions, readable logos, watermarks, floating hearts or comic symbols. Return one complete illustration.",
+      "filename": "S23-platform-goodbye.png",
+      "status": "reviewed_candidate",
+      "user_approved": false,
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S23-platform-goodbye.png",
+      "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-cf8752be-43e0-4418-ae60-3c815d71c66d.png",
+      "generation_id": "exec-cf8752be-43e0-4418-ae60-3c815d71c66d",
+      "elapsed_ms": 62117,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "19595dc3f1c5270f83979274d955090695ea4395915b051cccc943035ddd91c7",
+      "bytes": 2290121,
+      "saved_at": "2026-09-07T12:57:53.223221+00:00",
+      "png_integrity_verified": true,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "preview_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/previews/S23.webp"
+    },
+    {
+      "id": "S24",
+      "slug": "doorway-thanks",
+      "title_ja": "別れ際の、ありがと",
+      "expression_id": "P10",
+      "reference_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/P10-2-shy-held-smile.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished standalone Akari v3.0 situation illustration, a new scene.\n\nReference roles:\nImage 1 (P1): PRIMARY facial identity, hair and drawing authority. Preserve this exact character's broad rounded GREY eyes with softly descending outer corners, recognizable iris structure and restrained highlights, eye spacing, full rounded cheeks, short lower face, small chin, tiny simple nose and fine diagonal cheek hatching. Preserve her rounded chin-length BLACK bob, separated blunt bang groups and fine cheek-framing strands. Do not copy the old background, head tilt, forward lean or pose.\nImage 2 (P6): body proportions and costume ONLY. Keep natural shoulders and body balance, healthy leg contours when visible. Exact opaque white short-sleeve open-collar button shirt with narrow blue-grey piping on collar edges and sleeve hems, blue-grey pleated skirt, navy ribbed socks ending BELOW knees and white low-top lace-up sneakers. Maintain comfortable opaque fabric and original cut. Its simplified small face is NOT the face authority.\nImage 3: approved supporting expression reference ONLY. Translate the expression to the new scene without copying its pose, background or framing. P1 remains the underlying facial authority. Expression can naturally coordinate brows, lids, cheeks and mouth.\n\nKeep the reference character and delicate anime illustration treatment consistent throughout. Clean fine contours, coherent soft cel shadows and restrained color transitions, background slightly softer than face. Keep facial details crisp even in a wider composition. Do not narrow the jaw, elongate the lower face, make generic almond eyes or change eye/hair colors. No age-label-driven redesign.\n\nSCENE:\nPortrait 2:3, close waist-up. At a modest residential front gate in early evening, warm porch light behind her and cool twilight along the quiet street. She faces the childhood friend with a shy almost-smile, glancing slightly aside then back, fingertips lightly touching together at waist height. A tiny nod of thanks after spending the day together; a quiet affectionate but understated ending. No hugging, no extra person, no new gifts or bags. Preserve exact P1 face geometry and P10 restrained expression.\n\nFinish and constraints:\nStrong scene-specific gesture, gaze and emotional read. Avoid repeating the reference's static centered leaning portrait; honor the new camera and activity. Ordinary natural perspective, coherent anatomy, each hand has five fingers with credible contact and grips, no doubled limbs or detached objects. All clothing remains opaque and normally draped. No extra jewelry, hair accessories or unrequested bags. Only the props and creatures named in the scene. The friend remains offscreen, no companion body or hands. No collage, panels, inset faces, text, captions, readable logos, watermarks, floating hearts or comic symbols. Return one complete illustration.",
+      "filename": "S24-doorway-thanks.png",
+      "status": "reviewed_candidate",
+      "user_approved": false,
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/S24-doorway-thanks.png",
+      "source_path": "/home/abe/.codex/generated_images/01a07bc6-a2d6-76a3-8345-19780e235451/exec-aa3cb55b-ca81-417b-a8d1-8e2997afb46c.png",
+      "generation_id": "exec-aa3cb55b-ca81-417b-a8d1-8e2997afb46c",
+      "elapsed_ms": 34048,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "74ae3697987dcdac5b9cf563a48dcfab33ec52388d776172cf469e5dd0212e49",
+      "bytes": 1998288,
+      "saved_at": "2026-09-07T12:58:39.657574+00:00",
+      "png_integrity_verified": true,
+      "visual_review": "Inspected the generated image for character continuity, expression, scene, visible anatomy and obvious artifacts; not a formal user acceptance.",
+      "preview_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/previews/S24.webp"
+    }
+  ],
+  "generated_count": 24,
+  "generation_elapsed_ms": 1025630,
+  "generation_calls": 25,
+  "completed_at": "2026-09-07T13:02:42.568643+00:00",
+  "artifacts": {
+    "gallery": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/index.html",
+    "contact_sheets": [
+      "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/contact-sheet-1.jpg",
+      "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/contact-sheet-2.jpg"
+    ],
+    "zip": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-22-situations-24/akari-v3.0-situations-24.zip"
+  },
+  "verification": {
+    "final_image_count": 24,
+    "distinct_final_hashes": 24,
+    "all_png_copies_match": true,
+    "source_reference_policy": "Original P1 and P6 supplied directly in every initial generation, plus one approved expression reference."
+  }
+}

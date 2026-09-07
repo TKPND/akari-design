@@ -1,0 +1,39 @@
+{
+  "project": "akari-v3.0",
+  "stage": "17-pro-base-expression-range",
+  "status": "generation_requested",
+  "user_request": "表情を広げる：照れ隠し・ちょっと拗ねる（おすすめ）",
+  "face_authority": "P1",
+  "everyday_expression": "P2",
+  "body_authority": "P6",
+  "reference_policy": "Each variant independently edits P2 with original P1 directly supplied; no derived candidate is promoted to a face authority.",
+  "variants": [
+    {
+      "id": "P10",
+      "name": "P10-shy-deflection.png",
+      "concept_ja": "照れ隠し",
+      "prompt": "Use case: identity-preserve.\nAsset type: Akari v3.0 expression exploration, one standalone illustration.\n\nInput images and roles:\n- Image 1 (P2) is the sole editing canvas: preserve its composition, crop, head position and tilt, body, clothes, background and rendering. Change the facial expression only.\n- Image 2 (P1) is the original facial identity, hair and drawing reference. Use it to preserve the specific facial geometry and rendering as expression changes; do not copy its open smile.\n\nExpression change — shy deflection (照れ隠し):\nShe has just been gently complimented by a familiar childhood friend and tries to act casual, but a restrained smile gives her away. Shift both irises together a little toward one side, so she briefly avoids direct eye contact without turning her head. Draw a small closed mouth holding back a smile, with a slight charming asymmetry and only one corner faintly lifted. Give the brows a softly self-conscious subtle lift, not a worried arch. Make the existing cheek blush a little warmer while preserving its fine diagonal hatching. The expression should read clearly as mildly flustered and quietly pleased, with natural warmth and familiarity. Avoid sadness, distress, tears, sweating symbols, a big embarrassed grin or a caricature. Keep the face relaxed and recognizable.\n\nIdentity and style invariants:\nPreserve this exact character's broad rounded grey eyes with softly descending outer corners, eye spacing, iris size and grey tonal structure, small highlights, full round cheeks, short lower face and small chin. Retain black rounded bob, separated blunt bang groups, fine cheek-framing strands, delicate lash/line treatment and diagonal pink cheek hatching. Let brows, gaze and mouth move to express the emotion naturally, without replacing the specific face with a generic anime face. Keep eyes open with round vertical volume rather than narrow sleepy slits. Preserve the cheek/jaw silhouette and existing facial feature positions.\n\nKeep Image 1's square waist-up framing and face size, slight forward lean, arms behind the body, white short-sleeve open-collar shirt with blue-grey piping, collar, buttons, fabric drape, pleated skirt, leafy wall/path backdrop and neutral soft daylight. Body and clothing remain unchanged. No accessories, hand gesture, camera shift, extra person, speech bubble, panel, text or watermark. Return one finished square illustration.\n",
+      "referenced_image_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png"
+      ]
+    },
+    {
+      "id": "P11",
+      "name": "P11-gentle-pout.png",
+      "concept_ja": "ちょっと拗ねる",
+      "prompt": "Use case: identity-preserve.\nAsset type: Akari v3.0 expression exploration, one standalone illustration.\n\nInput images and roles:\n- Image 1 (P2) is the sole editing canvas: preserve its composition, crop, head position and tilt, body, clothes, background and rendering. Change the facial expression only.\n- Image 2 (P1) is the original facial identity, hair and drawing reference. Use it to preserve the specific facial geometry and rendering as expression changes; do not copy its open smile.\n\nExpression change — gently pouting (ちょっと拗ねる):\nShe reacts to harmless teasing from a familiar childhood friend with a small, clearly readable \"hmph\" pout, still comfortable and affectionate. Keep her gaze toward the viewer. Lower the inner eyebrows a little into a soft mildly protesting shape, without sharp V-shaped angry brows; keep the same rounded open downturned eyes. Replace the smile with a small closed pouting mouth: a short shallow downturned curve with a subtly pursed centre, no rendered lips. Give the mouth enough shape to read as a mild pout at normal viewing size, but do not puff or inflate the cheeks. Keep the fine warm cheek hatching. The mood is a brief, charming, low-intensity sulk rather than anger, sadness or sleepiness. Do not add a smile or a broad frown, and do not reshape the face.\n\nIdentity and style invariants:\nPreserve this exact character's broad rounded grey eyes with softly descending outer corners, eye spacing, iris size and grey tonal structure, small highlights, full round cheeks, short lower face and small chin. Retain black rounded bob, separated blunt bang groups, fine cheek-framing strands, delicate lash/line treatment and diagonal pink cheek hatching. Let brows, gaze and mouth move to express the emotion naturally, without replacing the specific face with a generic anime face. Keep eyes open with round vertical volume rather than narrow sleepy slits. Preserve the cheek/jaw silhouette and existing facial feature positions.\n\nKeep Image 1's square waist-up framing and face size, slight forward lean, arms behind the body, white short-sleeve open-collar shirt with blue-grey piping, collar, buttons, fabric drape, pleated skirt, leafy wall/path backdrop and neutral soft daylight. Body and clothing remain unchanged. No accessories, hand gesture, camera shift, extra person, speech bubble, panel, text or watermark. Return one finished square illustration.\n",
+      "referenced_image_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png"
+      ]
+    }
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "mode": "built-in",
+    "backend_model": "not_exposed",
+    "calls_planned": 2
+  }
+}
+

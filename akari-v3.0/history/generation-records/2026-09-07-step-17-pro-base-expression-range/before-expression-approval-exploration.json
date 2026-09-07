@@ -1,0 +1,130 @@
+{
+  "project": "akari-v3.0",
+  "stage": "17-pro-base-expression-range",
+  "status": "ready_for_user_review",
+  "face_authority": "P1",
+  "everyday_expression": "P2",
+  "body_authority": "P6",
+  "selected": null,
+  "approved_set": [],
+  "pending_review": [
+    "P10-2",
+    "P11"
+  ],
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "mode": "built-in",
+    "backend_model": "not_exposed",
+    "seed": "not_exposed",
+    "calls_completed": 3,
+    "total_elapsed_ms": 110857
+  },
+  "variants": [
+    {
+      "id": "P10",
+      "name": "P10-shy-deflection.png",
+      "concept_ja": "照れ隠し",
+      "prompt": "Use case: identity-preserve.\nAsset type: Akari v3.0 expression exploration, one standalone illustration.\n\nInput images and roles:\n- Image 1 (P2) is the sole editing canvas: preserve its composition, crop, head position and tilt, body, clothes, background and rendering. Change the facial expression only.\n- Image 2 (P1) is the original facial identity, hair and drawing reference. Use it to preserve the specific facial geometry and rendering as expression changes; do not copy its open smile.\n\nExpression change — shy deflection (照れ隠し):\nShe has just been gently complimented by a familiar childhood friend and tries to act casual, but a restrained smile gives her away. Shift both irises together a little toward one side, so she briefly avoids direct eye contact without turning her head. Draw a small closed mouth holding back a smile, with a slight charming asymmetry and only one corner faintly lifted. Give the brows a softly self-conscious subtle lift, not a worried arch. Make the existing cheek blush a little warmer while preserving its fine diagonal hatching. The expression should read clearly as mildly flustered and quietly pleased, with natural warmth and familiarity. Avoid sadness, distress, tears, sweating symbols, a big embarrassed grin or a caricature. Keep the face relaxed and recognizable.\n\nIdentity and style invariants:\nPreserve this exact character's broad rounded grey eyes with softly descending outer corners, eye spacing, iris size and grey tonal structure, small highlights, full round cheeks, short lower face and small chin. Retain black rounded bob, separated blunt bang groups, fine cheek-framing strands, delicate lash/line treatment and diagonal pink cheek hatching. Let brows, gaze and mouth move to express the emotion naturally, without replacing the specific face with a generic anime face. Keep eyes open with round vertical volume rather than narrow sleepy slits. Preserve the cheek/jaw silhouette and existing facial feature positions.\n\nKeep Image 1's square waist-up framing and face size, slight forward lean, arms behind the body, white short-sleeve open-collar shirt with blue-grey piping, collar, buttons, fabric drape, pleated skirt, leafy wall/path backdrop and neutral soft daylight. Body and clothing remain unchanged. No accessories, hand gesture, camera shift, extra person, speech bubble, panel, text or watermark. Return one finished square illustration.\n",
+      "generated_original": "/home/abe/.codex/generated_images/01a07b97-db08-7801-b412-60ff0b6c71c6/exec-d72858d2-c325-4288-906b-f0d151e386e4.png",
+      "elapsed_ms": 35545,
+      "referenced_image_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png"
+      ],
+      "status": "draft_preserved",
+      "visual_review": {
+        "expression": "Clear side glance; mouth remains close to P2's easy smile, so shy restraint is weak.",
+        "identity": "Rounded grey eyes, cheek/chin balance and bob retained at normal display.",
+        "composition": "Same waist-up pose and setting broadly retained."
+      },
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/P10-shy-deflection.png",
+      "prompt_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/P10-prompt.txt",
+      "sha256": "28ddec10cf2bd3ab92fc5550d9e7cfba40c886496a99e865b75b9167326efc2f",
+      "bytes": 1886993,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "prompt_sha256": "bc5032058e48e05b90bc416086b281a221cc97473ba160d63402c18e552b61a9",
+      "input_sha256": [
+        "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+        "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc"
+      ]
+    },
+    {
+      "id": "P11",
+      "name": "P11-gentle-pout.png",
+      "concept_ja": "ちょっと拗ねる",
+      "prompt": "Use case: identity-preserve.\nAsset type: Akari v3.0 expression exploration, one standalone illustration.\n\nInput images and roles:\n- Image 1 (P2) is the sole editing canvas: preserve its composition, crop, head position and tilt, body, clothes, background and rendering. Change the facial expression only.\n- Image 2 (P1) is the original facial identity, hair and drawing reference. Use it to preserve the specific facial geometry and rendering as expression changes; do not copy its open smile.\n\nExpression change — gently pouting (ちょっと拗ねる):\nShe reacts to harmless teasing from a familiar childhood friend with a small, clearly readable \"hmph\" pout, still comfortable and affectionate. Keep her gaze toward the viewer. Lower the inner eyebrows a little into a soft mildly protesting shape, without sharp V-shaped angry brows; keep the same rounded open downturned eyes. Replace the smile with a small closed pouting mouth: a short shallow downturned curve with a subtly pursed centre, no rendered lips. Give the mouth enough shape to read as a mild pout at normal viewing size, but do not puff or inflate the cheeks. Keep the fine warm cheek hatching. The mood is a brief, charming, low-intensity sulk rather than anger, sadness or sleepiness. Do not add a smile or a broad frown, and do not reshape the face.\n\nIdentity and style invariants:\nPreserve this exact character's broad rounded grey eyes with softly descending outer corners, eye spacing, iris size and grey tonal structure, small highlights, full round cheeks, short lower face and small chin. Retain black rounded bob, separated blunt bang groups, fine cheek-framing strands, delicate lash/line treatment and diagonal pink cheek hatching. Let brows, gaze and mouth move to express the emotion naturally, without replacing the specific face with a generic anime face. Keep eyes open with round vertical volume rather than narrow sleepy slits. Preserve the cheek/jaw silhouette and existing facial feature positions.\n\nKeep Image 1's square waist-up framing and face size, slight forward lean, arms behind the body, white short-sleeve open-collar shirt with blue-grey piping, collar, buttons, fabric drape, pleated skirt, leafy wall/path backdrop and neutral soft daylight. Body and clothing remain unchanged. No accessories, hand gesture, camera shift, extra person, speech bubble, panel, text or watermark. Return one finished square illustration.\n",
+      "generated_original": "/home/abe/.codex/generated_images/01a07b97-db08-7801-b412-60ff0b6c71c6/exec-50b6fb45-180a-404b-9951-36bd2db236ed.png",
+      "elapsed_ms": 30997,
+      "referenced_image_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png"
+      ],
+      "status": "pending_user_review",
+      "visual_review": {
+        "expression": "Small downturned pursed mouth clearly reads as a pout; brows are somewhat plaintive, giving a mildly disappointed sulk.",
+        "identity": "P1/P2 rounded eyes, cheek shape and hair remain recognizable.",
+        "composition": "Pose, clothing and background broadly preserved."
+      },
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/P11-gentle-pout.png",
+      "prompt_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/P11-prompt.txt",
+      "sha256": "6640bb1d48b8ea48dc343be9e7b004d8954c70327da188483c9e788bcebadb72",
+      "bytes": 1871588,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "prompt_sha256": "bfd6d235ff5c3919f409e6d3034b67cce3cb6c821b85ea2548099884b6b0d34e",
+      "input_sha256": [
+        "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+        "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc"
+      ]
+    },
+    {
+      "id": "P10-2",
+      "name": "P10-2-shy-held-smile.png",
+      "concept_ja": "照れ隠し・口を結ぶ",
+      "prompt": "Use case: identity-preserve.\nAsset type: Akari v3.0 shy-deflection expression refinement.\n\nInput images and roles:\n- Image 1 (P10) is the sole editing target. Preserve its exact face, side glance, cheeks, hair, pose, costume, camera and background.\n- Image 2 (P1) is the original facial geometry, hair and rendering reference. It is identity support only; do not copy its open smile.\n- Image 3 (P2) is the selected everyday expression for comparison only. The target mouth must visibly differ from P2's easy upward smile.\n\nMake ONE localized change to Image 1: replace the relaxed curved smile with a small shy held-back smile. Reduce the mouth width by about one quarter at the same centre. Use a delicately compressed CLOSED mouth line, gently uneven and almost horizontal through its centre, with just one tiny corner trying to lift. It should look as if she is suppressing a smile after a compliment and trying to keep a straight face. The existing glance away and warm hatching already provide the embarrassment. No open mouth, teeth, visible lips, lip bite, big smirk, downward pout or sad frown. Make this mouth expression clearly distinguishable from the original relaxed smile while keeping it subtle and appealing.\n\nPreserve the existing grey eye openings, iris structure and coordinated sideward gaze, brows, nose, diagonal blush hatching, round cheek and small chin silhouette, black bob, bang groups and delicate line/shadow treatment. Do not change eyelids or make her sleepy. Preserve all non-mouth content as closely as possible, including head tilt, forward lean, hands behind body, same square waist-up composition, white short-sleeve shirt with blue-grey piping, skirt and leafy path background. No new gestures, camera movement, accessories, text or panels. Return one square illustration.",
+      "generated_original": "/home/abe/.codex/generated_images/01a07b97-db08-7801-b412-60ff0b6c71c6/exec-546a3f5e-33dd-4a19-84d1-4acc018437cd.png",
+      "elapsed_ms": 44315,
+      "referenced_image_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/P10-shy-deflection.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png"
+      ],
+      "status": "pending_user_review",
+      "visual_review": {
+        "expression": "Smaller nearly level closed mouth plus side glance distinguishes shy restraint from P2. Low-intensity embarrassment, not an exaggerated reaction.",
+        "identity": "Existing side glance, grey eye shape, hatching, cheeks and bob are retained at normal display.",
+        "composition": "Single localized mouth refinement; minor redraws elsewhere possible."
+      },
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/P10-2-shy-held-smile.png",
+      "prompt_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/P10-2-prompt.txt",
+      "sha256": "eebfb8bb0112adace66d8c5843cc84bf22648375fffd9770afb1197fb7095320",
+      "bytes": 1913657,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "prompt_sha256": "ba2ad2660962f0103403932f97ef3ce312421c14c39218b60737b9af00bdec21",
+      "input_sha256": [
+        "28ddec10cf2bd3ab92fc5550d9e7cfba40c886496a99e865b75b9167326efc2f",
+        "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+        "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f"
+      ]
+    }
+  ],
+  "reference_policy": "P10 and P11 independently use unchanged P2 as edit target and unchanged P1 as original facial reference. P10-2 edits P10 with original P1 and P2 supplied directly. P6 remains body/outfit authority; its design is already visible in P2. No candidate is automatically promoted to face or everyday-expression authority.",
+  "limits": "Only two expression concepts at the existing pose/camera. No cross-angle or full-body stability claim. Selection awaits user comparison.",
+  "verification": {
+    "outputs_match_generated_originals": true,
+    "png_headers_and_dimensions_valid": true,
+    "saved_prompts_match_calls": true,
+    "selected_reference_hashes_unchanged": true,
+    "selected_reference_policy_unchanged": true,
+    "previous_state_saved": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-17-pro-base-expression-range/previous-design-state.json",
+    "pending_review_only": true
+  }
+}

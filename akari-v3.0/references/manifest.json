@@ -1,0 +1,148 @@
+{
+  "project": "akari-v3.0",
+  "date": "2026-09-07",
+  "path_base": "Paths are relative to the akari-v3.0 directory.",
+  "status": "user_selected_working_references",
+  "authoritative_references": {
+    "face": "P1",
+    "everyday_expression": "P2",
+    "body_and_outfit": "P6"
+  },
+  "assets": [
+    {
+      "id": "P1",
+      "path": "references/P1-user-pro-portrait.png",
+      "title": "顔・髪の原本",
+      "role": "primary_face_and_hair",
+      "approval": "Proのやつ土台にしてみよう",
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "bytes": 1869375,
+      "generation_record": "history/generation-records/2026-09-07-step-12-user-pro-candidate/import.json"
+    },
+    {
+      "id": "P2",
+      "path": "references/P2-quiet-smile.png",
+      "title": "普段の微笑み",
+      "role": "primary_everyday_expression",
+      "approval": "P2で進めたい",
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "bytes": 1836424,
+      "generation_record": "history/generation-records/2026-09-07-step-13-pro-base-expressions/exploration.json"
+    },
+    {
+      "id": "P6",
+      "path": "references/P6-relaxed-full-body.png",
+      "title": "全身・夏制服",
+      "role": "primary_body_and_outfit",
+      "approval": "P6かな。",
+      "sha256": "018f45133acb2d9cd3625d27090b38084f6b795a92a726ff641785d889c0a823",
+      "bytes": 1664313,
+      "generation_record": "history/generation-records/2026-09-07-step-15-pro-face-full-body/exploration.json"
+    },
+    {
+      "id": "P4",
+      "path": "references/P4-front-bust.png",
+      "title": "正面・P2の微笑み",
+      "role": "angle_support",
+      "approval": "大丈夫そう。",
+      "sha256": "2496ce968332c8f081945eec49cf4461d982968a44812a1e081e08d91322bd88",
+      "bytes": 1882215,
+      "generation_record": "history/generation-records/2026-09-07-step-14-pro-base-angles/exploration.json"
+    },
+    {
+      "id": "P5",
+      "path": "references/P5-three-quarter-bust.png",
+      "title": "浅い斜め・P2の微笑み",
+      "role": "angle_support",
+      "approval": "大丈夫そう。",
+      "sha256": "e4f24cdb01287db7a6ff373762c2bde3ca64e16fb0c753b7c28c4cfccc322b85",
+      "bytes": 1864863,
+      "generation_record": "history/generation-records/2026-09-07-step-14-pro-base-angles/exploration.json"
+    },
+    {
+      "id": "P8",
+      "path": "references/P8-casual-greeting.png",
+      "title": "待ち合わせで小さく手を振る",
+      "role": "scene_support",
+      "approval": "だいじょぶそう",
+      "sha256": "3824973509e5587e83f3f257e8faf7822f0ff37a14d03e9157a4017ad070bd98",
+      "bytes": 2067723,
+      "generation_record": "history/generation-records/2026-09-07-step-16-pro-base-daily-scenes/exploration.json"
+    },
+    {
+      "id": "P9",
+      "path": "references/P9-2-bench-eye-level.png",
+      "title": "ベンチで隣の相手の話を聞く",
+      "role": "scene_support",
+      "approval": "だいじょぶそう",
+      "sha256": "689e3d1e4a792a7fc67ce004bfb8ebe249eacc311bf405d3a4d960c33d127069",
+      "bytes": 2081597,
+      "generation_record": "history/generation-records/2026-09-07-step-16-pro-base-daily-scenes/exploration.json"
+    },
+    {
+      "id": "P11",
+      "path": "references/P11-gentle-pout.png",
+      "title": "ちょっと拗ねる",
+      "role": "expression_support",
+      "approval": "良いと思う",
+      "sha256": "6640bb1d48b8ea48dc343be9e7b004d8954c70327da188483c9e788bcebadb72",
+      "bytes": 1871588,
+      "generation_record": "history/generation-records/2026-09-07-step-17-pro-base-expression-range/exploration.json"
+    },
+    {
+      "id": "P10-2",
+      "path": "references/P10-2-shy-held-smile.png",
+      "title": "照れ隠し・口を結ぶ",
+      "role": "expression_support",
+      "approval": "良いと思う",
+      "sha256": "eebfb8bb0112adace66d8c5843cc84bf22648375fffd9770afb1197fb7095320",
+      "bytes": 1913657,
+      "generation_record": "history/generation-records/2026-09-07-step-17-pro-base-expression-range/exploration.json"
+    },
+    {
+      "id": "P12",
+      "path": "references/P12-shy-cheek-gesture.png",
+      "title": "褒められて頬に手を添える",
+      "role": "gesture_support",
+      "approval": "ええと思う！採用して進めよう",
+      "sha256": "9885918ebc0f31a2202150e4e80f6e67303613d0c49c506c6cbfc21c669fb03f",
+      "bytes": 1941047,
+      "generation_record": "history/generation-records/2026-09-07-step-18-expression-gestures/exploration.json"
+    },
+    {
+      "id": "P13",
+      "path": "references/P13-pout-folded-arms.png",
+      "title": "軽く腕を組んで拗ねる",
+      "role": "gesture_support",
+      "approval": "ええと思う！採用して進めよう",
+      "sha256": "b7146b672f8668b9c760ecdef028580d47de7d9d076892aafc9381c7ea26ee5c",
+      "bytes": 1910284,
+      "generation_record": "history/generation-records/2026-09-07-step-18-expression-gestures/exploration.json"
+    },
+    {
+      "id": "P14",
+      "path": "references/P14-spontaneous-laugh.png",
+      "title": "思わず笑う",
+      "role": "expression_support",
+      "approval": "良いね〜採用して進めよう",
+      "sha256": "c93bf600fbcc94c5b4e1390de6d81cccb4d963dfba365dfb462ae064829b5dc1",
+      "bytes": 1864519,
+      "generation_record": "history/generation-records/2026-09-07-step-19-laugh-surprise/exploration.json"
+    },
+    {
+      "id": "P15",
+      "path": "references/P15-soft-surprise.png",
+      "title": "少し驚く",
+      "role": "expression_support",
+      "approval": "良いね〜採用して進めよう",
+      "sha256": "b119638fcc560a783ec254548bf796500593c74c1121c21f632b311e054ad193",
+      "bytes": 1868734,
+      "generation_record": "history/generation-records/2026-09-07-step-19-laugh-surprise/exploration.json"
+    }
+  ],
+  "limits": [
+    "Working reference, not a formal settings release.",
+    "P5 retains a head tilt; P9 retains a mildly high camera.",
+    "This package does not promote support examples to facial authority."
+  ]
+}

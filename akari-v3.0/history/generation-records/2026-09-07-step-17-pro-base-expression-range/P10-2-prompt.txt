@@ -1,0 +1,11 @@
+Use case: identity-preserve.
+Asset type: Akari v3.0 shy-deflection expression refinement.
+
+Input images and roles:
+- Image 1 (P10) is the sole editing target. Preserve its exact face, side glance, cheeks, hair, pose, costume, camera and background.
+- Image 2 (P1) is the original facial geometry, hair and rendering reference. It is identity support only; do not copy its open smile.
+- Image 3 (P2) is the selected everyday expression for comparison only. The target mouth must visibly differ from P2's easy upward smile.
+
+Make ONE localized change to Image 1: replace the relaxed curved smile with a small shy held-back smile. Reduce the mouth width by about one quarter at the same centre. Use a delicately compressed CLOSED mouth line, gently uneven and almost horizontal through its centre, with just one tiny corner trying to lift. It should look as if she is suppressing a smile after a compliment and trying to keep a straight face. The existing glance away and warm hatching already provide the embarrassment. No open mouth, teeth, visible lips, lip bite, big smirk, downward pout or sad frown. Make this mouth expression clearly distinguishable from the original relaxed smile while keeping it subtle and appealing.
+
+Preserve the existing grey eye openings, iris structure and coordinated sideward gaze, brows, nose, diagonal blush hatching, round cheek and small chin silhouette, black bob, bang groups and delicate line/shadow treatment. Do not change eyelids or make her sleepy. Preserve all non-mouth content as closely as possible, including head tilt, forward lean, hands behind body, same square waist-up composition, white short-sleeve shirt with blue-grey piping, skirt and leafy path background. No new gestures, camera movement, accessories, text or panels. Return one square illustration.

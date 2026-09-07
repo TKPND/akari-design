@@ -1,0 +1,19 @@
+Use case: identity-preserve.
+Produce ONE full-length anime character standing illustration, integrating the approved face and quiet smile with the supplied full-body design.
+
+INPUT ROLES
+Image 1 (P1): original facial-identity and drawing reference. Its broad rounded grey eyes with descending outer corners, full cheeks, short lower face, small chin, fine diagonal cheek hatching, black bob and separated blunt bangs define the character.
+Image 2 (P2): user-selected everyday expression reference. Use its small, relaxed CLOSED-MOUTH smile, open eyes and easygoing warmth. Do not reproduce its forward lean, close camera or green background.
+Image 3 (B7 with the old face hidden): primary FULL-BODY canvas, body proportions, costume, scale, stance and plain background. The grey rectangle is missing image content, not an object. Fully reconstruct the face and fringe there from Images 1 and 2, integrate naturally with the head and neck, and remove all grey rectangle edges.
+
+KEEP THE APPROVED FULL-BODY DESIGN
+Use Image 3 for shoulder width, head-to-body scale, natural clothed upper-body volume, torso length, waist, hips, arm thickness, hands, and leg length. Preserve its healthy full thigh and calf contours and knee shapes; these were deliberately chosen. White short-sleeve open-collar shirt with narrow blue-grey piping at collar edges and sleeve hems, opaque loosely draped fabric, blue-grey pleated skirt with the same waistband and hem length. Navy ribbed knee-high socks ending below the knees and white lace-up low sneakers. No extra accessories or costume changes.
+
+FACE AND RENDERING
+Translate the actual P1/P2 eye geometry and cheek/mouth balance at full-body scale. Keep rounded eye openings, softly falling outer eyelids and substantial grey irises; avoid generic narrow almond eyes. Preserve short cheek-to-mouth-to-chin spacing, warm cheek hatching and the small closed smile. The bob stays rounded and chin-length with wispy cheek strands. Do not simplify the eyes to dots, narrow the jaw, enlarge the head or change the body to match the close portrait. Blend line weight, shading and color coherently across head and body without seams. No age-label-driven redesign.
+
+STANCE
+Preserve Image 3's existing relaxed slight three-quarter standing pose as closely as possible: the same shoulder angle, arms naturally at the sides, hand positions, gentle weight shift and placement of both feet. Keep its head position and scale; use P2's quiet smile looking toward the viewer. Limit changes below the head to the natural rendering integration needed.
+
+FRAME AND SCENE
+Portrait 2:3, one complete figure from crown through both sneaker soles, comfortable small margins, matching Image 3 framing. Simple softly textured blue-grey background and grounded soft floor shadow, gentle diffuse light. The face remains crisply drawn and readable when viewed closely. Normal full-body perspective, no foreshortening or dramatic camera. No inset portrait, panels, text, logos, extra people, missing or merged fingers. Return one complete full-length illustration.

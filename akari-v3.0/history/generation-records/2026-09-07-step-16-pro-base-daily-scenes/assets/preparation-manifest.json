@@ -1,0 +1,15 @@
+{
+  "source": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-15-pro-face-full-body/P6-relaxed-full-body.png",
+  "source_sha256": "018f45133acb2d9cd3625d27090b38084f6b795a92a726ff641785d889c0a823",
+  "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-16-pro-base-daily-scenes/assets/P6-body-only.png",
+  "sha256": "aaed9f2b532699f36cec6f469d5d55a4173a1d2b00526259a20de63f5d09d7a1",
+  "crop_xywh": [
+    0,
+    340,
+    1024,
+    1196
+  ],
+  "operation": "Exact body-only crop; no resizing, redrawing, masking, warping or blending.",
+  "verified_exact_source_pixels": true,
+  "role": "Body/outfit support without the small full-body face; original P1 and selected P2 directly provide face details."
+}

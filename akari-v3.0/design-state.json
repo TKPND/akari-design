@@ -1,0 +1,82 @@
+{
+  "project": "akari-v3.0",
+  "updated": "2026-09-07",
+  "current_stage": "situation_favorites_selected",
+  "path_base": "Paths are relative to the akari-v3.0 directory.",
+  "workflow": "stepwise image-led exploration: face and hair, then body proportions, then outfits",
+  "constraints": {
+    "legacy_assets": "Do not use earlier repository versions",
+    "face_style": "Use user-selected P1 Pro image for current facial geometry, soft downturned grey eyes, cheek-mouth balance, black bob, segmented bangs and drawing treatment; no age-label-driven redesign.",
+    "relationship": "childhood friend",
+    "personality": "natural and easygoing",
+    "current_full_body_reference": "P6 selected full-body integration; B7 retained as original body-construction history.",
+    "leg_and_sock_design_intent": "Keep the healthy leg contours and navy ribbed below-knee socks in selected P6, inherited from user-refined B7.",
+    "facial_detail_reference_priority": "P1 is the original face/hair/drawing reference; P2 is the selected everyday smile. P4/P5 are approved bust-angle support. P6 is the selected body/outfit and whole-body appearance. Supply original face/expression references directly for future generation."
+  },
+  "primary_references": {
+    "face": {
+      "id": "P1",
+      "path": "references/P1-user-pro-portrait.png",
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "role": "primary_face_and_hair",
+      "approval": "Proのやつ土台にしてみよう"
+    },
+    "everyday_expression": {
+      "id": "P2",
+      "path": "references/P2-quiet-smile.png",
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "role": "primary_everyday_expression",
+      "approval": "P2で進めたい"
+    },
+    "body_and_outfit": {
+      "id": "P6",
+      "path": "references/P6-relaxed-full-body.png",
+      "sha256": "018f45133acb2d9cd3625d27090b38084f6b795a92a726ff641785d889c0a823",
+      "role": "primary_body_and_outfit",
+      "approval": "P6かな。"
+    }
+  },
+  "approved_reference_ids": [
+    "P1",
+    "P2",
+    "P6",
+    "P4",
+    "P5",
+    "P8",
+    "P9",
+    "P11",
+    "P10-2",
+    "P12",
+    "P13",
+    "P14",
+    "P15"
+  ],
+  "reference_manifest": "references/manifest.json",
+  "situation_manifest": "situations/manifest.json",
+  "favorite_ids": [
+    "S01",
+    "S09",
+    "S18",
+    "S21",
+    "S24"
+  ],
+  "favorites_manifest": "favorites.json",
+  "gallery": "situations/index.html",
+  "favorites_gallery": "situations/favorites.html",
+  "working_reference": {
+    "html": "working-reference/akari-v3.0-working-reference.html",
+    "pdf": "working-reference/akari-v3.0-working-reference.pdf",
+    "page_count": 4,
+    "unique_approved_images": 13,
+    "status": "working_reference_not_formal_release"
+  },
+  "generation_rules": [
+    "Open the edit target and relevant original references with view_image before generation.",
+    "P1 is the primary face/hair/drawing authority; P2 is the everyday smile; P6 is body/outfit only.",
+    "Give every input reference an explicit role; use the relevant approved expression as support.",
+    "New scene selection never automatically replaces a primary reference.",
+    "Do not import older repository versions or the August style-research checkpoint into this design."
+  ],
+  "provenance_snapshot": "history/2026-09-07-design-state.local.json",
+  "history_scope": "Original local records contain historical absolute paths. They are provenance, not portable input dependencies. Earlier rejected images are not included; current references and all 25 selected situation outputs are included."
+}

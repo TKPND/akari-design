@@ -1,0 +1,124 @@
+{
+  "project": "akari-v3.0",
+  "stage": "13-pro-base-expressions",
+  "status": "P2_selected_everyday_expression",
+  "selection_user_quote": "Proのやつ土台にしてみよう",
+  "face_authority": "P1",
+  "body_authority": "B7",
+  "source": {
+    "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png",
+    "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc"
+  },
+  "generation": {
+    "tool": "image_gen.imagegen",
+    "mode": "built-in",
+    "backend_model": "not_exposed",
+    "seed": "not_exposed",
+    "calls_planned": 2,
+    "calls_completed": 2,
+    "total_elapsed_ms": 48553
+  },
+  "variants": [
+    {
+      "id": "P2",
+      "concept_ja": "口を閉じた普段の微笑み",
+      "prompt": "Use case: identity-preserve. Edit the supplied anime illustration into ONE expression variant.\n\nThe supplied P1 portrait is both the editing canvas and the sole authority for this character's face, hair and drawing style. Preserve its specific facial proportions, full cheeks, small chin, broad rounded grey eyes with softly descending outer corners, iris-to-white balance, direct gaze, segmented bangs, rounded black bob and wispy cheek-framing strands.\n\nEXPRESSION CHANGE\nChange the open smile to a small, relaxed CLOSED-MOUTH smile, as if quietly listening to a familiar person. Use a delicate gently curved mouth line at the existing mouth centre, with slightly lifted corners. Keep the lips softly closed, with no visible mouth interior or teeth. Preserve the current open grey eyes and relaxed brow; do not make the eyelids sleepy or change the cheek/jaw silhouette to accompany the closed mouth.\n\nKeep the same eye spacing, head size and position, near-frontal head tilt, slight forward lean, body proportions, shoulders and arms held behind the body. Preserve the fine diagonal cheek hatching and existing skin/iris/hair rendering. Let only the small natural facial movement required by the new expression occur. Keep the character's face recognizable as this exact portrait.\n\nKeep the original square waist-up crop, camera, white short-sleeve open-collar shirt, blue-grey piping and pleated skirt, buttons and fabric drape, trees, wall and neutral soft daylight. No clothing redesign, camera change, new accessories, added text or panels. Return one standalone square image with the same character and composition.",
+      "prompt_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-prompt.txt",
+      "referenced_image_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png"
+      ],
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P2-quiet-smile.png",
+      "status": "user_selected_everyday_expression",
+      "generated_original": "/home/abe/.codex/generated_images/01a07aac-bb77-7420-886e-f3f0daecfe49/exec-ef2b5cc5-e4d2-44ff-a4ec-5bdb1e883fd9.png",
+      "elapsed_ms": 24028,
+      "tool_call": {
+        "tool": "image_gen.imagegen",
+        "arguments": {
+          "prompt": "Use case: identity-preserve. Edit the supplied anime illustration into ONE expression variant.\n\nThe supplied P1 portrait is both the editing canvas and the sole authority for this character's face, hair and drawing style. Preserve its specific facial proportions, full cheeks, small chin, broad rounded grey eyes with softly descending outer corners, iris-to-white balance, direct gaze, segmented bangs, rounded black bob and wispy cheek-framing strands.\n\nEXPRESSION CHANGE\nChange the open smile to a small, relaxed CLOSED-MOUTH smile, as if quietly listening to a familiar person. Use a delicate gently curved mouth line at the existing mouth centre, with slightly lifted corners. Keep the lips softly closed, with no visible mouth interior or teeth. Preserve the current open grey eyes and relaxed brow; do not make the eyelids sleepy or change the cheek/jaw silhouette to accompany the closed mouth.\n\nKeep the same eye spacing, head size and position, near-frontal head tilt, slight forward lean, body proportions, shoulders and arms held behind the body. Preserve the fine diagonal cheek hatching and existing skin/iris/hair rendering. Let only the small natural facial movement required by the new expression occur. Keep the character's face recognizable as this exact portrait.\n\nKeep the original square waist-up crop, camera, white short-sleeve open-collar shirt, blue-grey piping and pleated skirt, buttons and fabric drape, trees, wall and neutral soft daylight. No clothing redesign, camera change, new accessories, added text or panels. Return one standalone square image with the same character and composition.",
+          "referenced_image_paths": [
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png"
+          ]
+        }
+      },
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "bytes": 1836424,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "prompt_sha256": "19ac2dbc1c5f2d5019f4575a97cbd1c26ddd2910348a25ee93876f9843a58fbd",
+      "input_sha256": [
+        "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc"
+      ],
+      "visual_review": {
+        "expression": "Clearly closed small relaxed smile; calm familiarity.",
+        "identity": "P1 eye openings/iris balance, cheek and small chin, hatching and hair appear well retained; no major face-shape change from closing mouth.",
+        "scene": "Head tilt, forward lean, hands-behind pose and uniform broadly retained; fine line and fold redraws.",
+        "assessment": "Suitable for user expression review; recommended everyday-expression candidate, not a new face master."
+      }
+    },
+    {
+      "id": "P3",
+      "concept_ja": "少し嬉しそうな笑顔",
+      "prompt": "Use case: identity-preserve. Edit the supplied anime illustration into ONE expression variant.\n\nThe supplied P1 portrait is both the editing canvas and the sole authority for this character's face, hair and drawing style. Preserve its specific facial proportions, full cheeks, small chin, broad rounded grey eyes with softly descending outer corners, iris-to-white balance, direct gaze, segmented bangs, rounded black bob and wispy cheek-framing strands.\n\nEXPRESSION CHANGE\nChange the smile to a gently delighted OPEN-MOUTH smile. Make the opening clearly a little broader and taller than the original, with the mouth corners lifted and a slight natural lift in the cheeks. Keep a simple soft pink mouth interior without adding a teeth-heavy grin. The grey eyes stay open and readable with the same soft outer droop; any lower-lid movement must be small. Convey a modest increase in happiness, keeping the same easygoing expression and facial proportions.\n\nKeep the same eye spacing, head size and position, near-frontal head tilt, slight forward lean, body proportions, shoulders and arms held behind the body. Preserve the fine diagonal cheek hatching and existing skin/iris/hair rendering. Let only the small natural facial movement required by the new expression occur. Keep the character's face recognizable as this exact portrait.\n\nKeep the original square waist-up crop, camera, white short-sleeve open-collar shirt, blue-grey piping and pleated skirt, buttons and fabric drape, trees, wall and neutral soft daylight. No clothing redesign, camera change, new accessories, added text or panels. Return one standalone square image with the same character and composition.",
+      "prompt_path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P3-prompt.txt",
+      "referenced_image_paths": [
+        "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png"
+      ],
+      "path": "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-13-pro-base-expressions/P3-pleased-smile.png",
+      "status": "not_selected",
+      "generated_original": "/home/abe/.codex/generated_images/01a07aac-bb77-7420-886e-f3f0daecfe49/exec-377c454c-50b4-4866-bdbe-8b4e09112e2d.png",
+      "elapsed_ms": 24525,
+      "tool_call": {
+        "tool": "image_gen.imagegen",
+        "arguments": {
+          "prompt": "Use case: identity-preserve. Edit the supplied anime illustration into ONE expression variant.\n\nThe supplied P1 portrait is both the editing canvas and the sole authority for this character's face, hair and drawing style. Preserve its specific facial proportions, full cheeks, small chin, broad rounded grey eyes with softly descending outer corners, iris-to-white balance, direct gaze, segmented bangs, rounded black bob and wispy cheek-framing strands.\n\nEXPRESSION CHANGE\nChange the smile to a gently delighted OPEN-MOUTH smile. Make the opening clearly a little broader and taller than the original, with the mouth corners lifted and a slight natural lift in the cheeks. Keep a simple soft pink mouth interior without adding a teeth-heavy grin. The grey eyes stay open and readable with the same soft outer droop; any lower-lid movement must be small. Convey a modest increase in happiness, keeping the same easygoing expression and facial proportions.\n\nKeep the same eye spacing, head size and position, near-frontal head tilt, slight forward lean, body proportions, shoulders and arms held behind the body. Preserve the fine diagonal cheek hatching and existing skin/iris/hair rendering. Let only the small natural facial movement required by the new expression occur. Keep the character's face recognizable as this exact portrait.\n\nKeep the original square waist-up crop, camera, white short-sleeve open-collar shirt, blue-grey piping and pleated skirt, buttons and fabric drape, trees, wall and neutral soft daylight. No clothing redesign, camera change, new accessories, added text or panels. Return one standalone square image with the same character and composition.",
+          "referenced_image_paths": [
+            "/home/abe/workspace/akari-design/tmp/akari-v3.0/2026-09-07-step-12-user-pro-candidate/P1-user-pro-portrait.png"
+          ]
+        }
+      },
+      "sha256": "99ba879fc98980e1d027031ade20a5538623ea4900637b0216bce6bf802f005f",
+      "bytes": 1869664,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "prompt_sha256": "6700a1ff91bf0b2d8148bf75b2ca2e43987f86018718e89ecee39be27f00995b",
+      "input_sha256": [
+        "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc"
+      ],
+      "visual_review": {
+        "expression": "Larger open mouth reads a little happier; eye/brow changes remain restrained.",
+        "identity": "P1 eyes, cheek/jaw balance and bob remain recognizable; no major facial drift observed at normal display.",
+        "scene": "Pose, garment structure and setting broadly retained with fine redraws.",
+        "assessment": "Suitable happy-expression candidate for user review."
+      }
+    }
+  ],
+  "reference_policy": "Each variant independently uses unchanged P1 only. A2/R0 and older generated faces are audit/history, not inputs. P1 remains face baseline after this comparison.",
+  "evaluation": [
+    "Requested mouth expression readable",
+    "P1 eye openings, iris relationships, cheek/chin proportions and hair retained",
+    "No unwanted pose, body, garment or background change",
+    "No automatic identity-master promotion"
+  ],
+  "selected": "P2",
+  "approved_set": [
+    "P2"
+  ],
+  "verification": {
+    "outputs_match_generated_originals": true,
+    "png_dimensions_valid": true,
+    "sole_P1_input": true,
+    "P1_unchanged": true,
+    "prompts_match_saved_text": true,
+    "active_face_policy_consistent": true,
+    "B7_body_and_outfit_unchanged": true,
+    "previous_face_and_expressions_preserved_in_history": true
+  },
+  "assistant_recommended_everyday_expression": "P2",
+  "independent_review": "Second read-only visual check agreed both expressions are legible with no major identity or composition drift at normal display.",
+  "limits": "Same pose/camera only; this does not establish stability across other angles or full-body shots.",
+  "expression_selection_user_quote": "P2で進めたい"
+}
