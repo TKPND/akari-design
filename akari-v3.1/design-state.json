@@ -1,0 +1,80 @@
+{
+  "project": "akari-v3.1",
+  "updated": "2026-09-08T01:04:03.831Z",
+  "current_stage": "full_body_base_selected",
+  "status": "user_selected_working_design",
+  "base_version": "akari-v3.0",
+  "path_base": "All active paths are relative to the akari-v3.1 directory.",
+  "base_design_state": "../akari-v3.0/design-state.json",
+  "scope": "Akari v3.0 with the selected S1 bright silver slim hairpin and G2 medium-grey ribbed socks integrated into the full-body base.",
+  "primary_references": {
+    "face": {
+      "id": "P1",
+      "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "role": "primary_face_and_hair",
+      "approval": "Proのやつ土台にしてみよう"
+    },
+    "everyday_expression": {
+      "id": "P2",
+      "path": "../akari-v3.0/references/P2-quiet-smile.png",
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "role": "primary_everyday_expression",
+      "approval": "P2で進めたい"
+    },
+    "body_and_outfit": {
+      "id": "G2",
+      "title": "全身ベース・シルバー細ピンとミディアムグレー靴下",
+      "path": "references/G2-silver-pin-gray-socks-full-body.png",
+      "role": "primary_body_and_outfit",
+      "sha256": "950b800a86ba138d3e8d20ab902069f56298d726f5f763cad497982d70bb798c",
+      "width": 1024,
+      "height": 1536,
+      "approval": "G2にしよう",
+      "approved_at": "2026-09-08T01:04:03.831Z",
+      "derived_from": "P6",
+      "generation_record": "history/G2-generation.json"
+    }
+  },
+  "hair_accessory_reference": {
+    "id": "S1",
+    "title": "明るいシルバーの細ピン",
+    "path": "references/S1-silver-slim-pin.png",
+    "role": "primary_hair_accessory_only",
+    "sha256": "6e35a9f51a68d203d8252dc71d7182fe313d8b66a2c2cb0bf099c83b773cb85f",
+    "width": 1254,
+    "height": 1254,
+    "approval": "S1がいいね。",
+    "approved_at": "2026-09-08T00:45:00.781Z"
+  },
+  "body_construction_reference": {
+    "id": "P6",
+    "path": "../akari-v3.0/references/P6-relaxed-full-body.png",
+    "sha256": "018f45133acb2d9cd3625d27090b38084f6b795a92a726ff641785d889c0a823",
+    "role": "inherited_body_and_outfit_construction",
+    "approval": "P6かな。"
+  },
+  "sock_design": {
+    "reference_id": "G2",
+    "color": "medium neutral grey",
+    "material": "opaque ribbed knit",
+    "length": "below knee, preserving the original P6 top edges and fit"
+  },
+  "selection_record": "selection.json",
+  "generation_records": {
+    "hair_accessory": "history/S1-generation.json",
+    "full_body": "history/G2-generation.json"
+  },
+  "generation_rules": [
+    "Open the edit target and relevant original references with view_image before generation, and assign every input an explicit role.",
+    "Use G2 as the current v3.1 full-body and outfit reference, including the medium-grey ribbed socks and integrated silver pin.",
+    "Use S1 for the exact one-pin design: bright silver tone, slender straight bar, rounded tips, scale, tilt and character-left placement just above the ear.",
+    "P1 remains the original face, black-bob structure and drawing authority; P2 supplies the everyday closed-mouth smile. The small face in G2 does not replace these original face references.",
+    "P6 remains the inherited body-construction reference. Its navy sock color and absence of the pin are superseded by G2 and S1 for v3.1.",
+    "Preserve the healthy leg contours, original sock height and ribbed fit, blue-grey skirt, white shirt with blue-grey piping, and white sneakers shown in G2.",
+    "Later situation selections do not automatically change the primary reference roles.",
+    "Use the current black-bob v3.0 lineage; do not mix v1/v2 or the August v3.0 research design into this version."
+  ],
+  "asset_inventory": "asset-inventory.json",
+  "validation": "validation.json"
+}

@@ -1,0 +1,87 @@
+{
+  "project": "akari-v3.1",
+  "path_base": "All paths in this record are relative to the akari-v3.1 directory.",
+  "tool": "image_gen",
+  "model": null,
+  "model_note": "The built-in tool did not expose a model name.",
+  "selected_generation": {
+    "id": "exec-585abf6d-b640-48b3-a106-27994c612a82",
+    "candidate_id": "G2",
+    "elapsed_seconds": 52.844,
+    "output": "references/G2-silver-pin-gray-socks-full-body.png",
+    "sha256": "950b800a86ba138d3e8d20ab902069f56298d726f5f763cad497982d70bb798c",
+    "prompt": "Use case: precise-object-edit with identity preservation.\nAsset type: Akari v3.1 full-body sock-color comparison.\nPrimary request: Recolor only BOTH existing navy socks in Image 1 to the specified grey. This is one individual color candidate.\n\nInput roles:\n- Image 1 is the SOLE EDIT TARGET: the complete standing P6-S1 full-body image with the approved silver slim hairpin. It is authoritative for framing, pose, proportions, face, expression, hair, clothing construction, hands, legs, shoes, lighting, background and ground shadow.\n- Image 2 is approved S1, supporting reference ONLY for preserving the existing single silver hairpin. Do not copy portrait crop, pose or outdoor background.\n- Image 3 is original P1, supporting face/hair/drawing reference ONLY. Preserve Image 1's existing grey downturned eyes, cheeks, black bob and closed-mouth smile; do not copy P1's open mouth or portrait composition.\n- Image 4 is original P6, supporting reference ONLY for the existing body, uniform and sock construction: preserve the rib-knit texture, exact sock height below the knees, top cuffs, contours around calves/ankles, and the boundary where the socks enter each sneaker. Its old navy sock color is specifically superseded.\n\nChange ONLY the color of both socks, treating them as the same pair in the same material and lighting. Preserve the exact visible sock areas and both top edges. Keep their opaque ribbed knit, vertical ribs, subtle folds, elastic cuffs, shading, texture density, and original fit. Match the selected grey on both legs while retaining the lighting difference between them.\n\nKeep EVERYTHING else from Image 1 unchanged: one silver hairpin on the viewer-right temple, face and eye details, closed-mouth smile, head angle, black bob and bangs, skin, healthy leg contours, stance, complete hands/fingers, white short-sleeve open-collar shirt, blue-grey piping, buttons and folds, blue-grey pleated skirt and hem, white sneakers including laces and soles, blue-grey studio background and ground shadow. Keep the skirt and its blue color exactly as they are. Do not globally desaturate, tint, relight, slim the legs, lengthen the socks, make them sheer, or add patterns, stripes or accessories.\nOutput one full-body image, same original 1024x1536 portrait canvas and framing, both complete shoes visible, original drawing style. No crop, grid, labels, text, watermark or border.\nSock color for this candidate: Medium neutral grey, visibly lighter than charcoal and clearly separate from the blue-grey skirt. Use an approximate midtone of #7D8084, with natural knit shadows around #5E6267 and softly lit ribs around #999CA0. Neutral to very slightly cool grey, no navy/blue cast and no brown/beige tint. This should be an unmistakable middle-grey pair of ribbed socks.",
+    "inputs": [
+      {
+        "id": "P6-S1",
+        "path": "history/P6-S1-navy-socks-parent.png",
+        "sha256": "765078737f1fcb204890d18875cc264061bc4023b75f804d1baec39bff059e5e",
+        "role": "sole_edit_target_full_body_with_silver_pin"
+      },
+      {
+        "id": "S1",
+        "path": "references/S1-silver-slim-pin.png",
+        "sha256": "6e35a9f51a68d203d8252dc71d7182fe313d8b66a2c2cb0bf099c83b773cb85f",
+        "role": "silver_hairpin_preservation"
+      },
+      {
+        "id": "P1",
+        "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+        "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+        "role": "original_face_hair_drawing_support",
+        "approval": "Proのやつ土台にしてみよう"
+      },
+      {
+        "id": "P6",
+        "path": "../akari-v3.0/references/P6-relaxed-full-body.png",
+        "sha256": "018f45133acb2d9cd3625d27090b38084f6b795a92a726ff641785d889c0a823",
+        "role": "body_uniform_sock_structure_only_ignore_navy_color",
+        "approval": "P6かな。"
+      }
+    ],
+    "user_selection": "selection.json"
+  },
+  "parent_generation": {
+    "id": "exec-9cc40abb-b52a-4180-ac8e-c86baa6838cd",
+    "candidate_id": "P6-S1",
+    "elapsed_seconds": 48.896,
+    "output": "history/P6-S1-navy-socks-parent.png",
+    "sha256": "765078737f1fcb204890d18875cc264061bc4023b75f804d1baec39bff059e5e",
+    "status": "historical_navy_sock_parent_of_selected_G2",
+    "prompt": "Use case: precise-object-edit with identity preservation.\nAsset type: Akari v3.1 full-body working reference.\nPrimary request: Edit Image 1 (P6) by adding the one approved silver slim hairpin shown in Image 2 (S1). This is a small accessory update to the existing full-body base.\n\nInput roles:\n- Image 1, P6: the SOLE EDIT TARGET and exact authority for full-body proportions, head-to-body size, shoulder width, healthy leg contours, relaxed standing pose, both arms and hands, every finger, both legs, socks, sneakers, uniform, blue-grey studio background, ground shadow, camera, framing, and lighting.\n- Image 2, S1: authority ONLY for the silver hairpin's slim straight shape, rounded tips, light metallic silver tone, restrained highlight, relative size, tilt, and placement on the character's left temple. Do not copy its portrait framing, body pose, or outdoor background.\n- Image 3, P1: supporting original face/hair/drawing authority. Keep the recognizable soft rounded grey downturned eyes, cheeks, black bob, segmented fringe, and fine cheek hatching already represented in Image 1. Do not copy P1's open mouth.\n- Image 4, P2: supporting authority for the small closed-mouth everyday smile already present in Image 1.\n\nChange only the tiny accessory area in the hair. Add exactly ONE very slim straight silver bar with softly rounded ends, matching S1. Attach it naturally just above the character's LEFT ear, on the VIEWER'S RIGHT in P6. Keep the same relative placement and upward-outward tilt as S1, adapted to P6's head angle. Scale its length to about 12-13 percent of the visible head width and keep the thinness of S1; it should be roughly 30-35 pixels long on this 1024x1536 full-body canvas, not portrait-sized. A restrained narrow highlight should make the silver visible against the black hair without glitter, white glow, or exaggerated shine.\n\nStrict invariants: preserve P6's original entire image as closely as possible apart from the added pin. Keep the exact full head and both complete shoes inside the same canvas with the same margins. Retain all original face geometry and expression, black bob silhouette and fringe, neck, body proportions, skin tones and shading, shirt seams/buttons/folds, blue-grey collar and sleeve piping, blue-grey pleated skirt silhouette and hem, navy ribbed below-knee socks at the same heights, white sneakers and laces, hands and fingers, stance, background and ground shadow. Do not slim or reshape the legs, lengthen the body, redraw the outfit, re-pose the hands, or change the face. No age-driven redesign.\nThe output must be one complete full-body illustration in the exact original 1024x1536 portrait framing and existing drawing style. No crop, labels, grid, text, border, watermark, extra hair ornaments, jewelry, or props. The pin is the only intended change.",
+    "inputs": [
+      {
+        "id": "P6",
+        "path": "../akari-v3.0/references/P6-relaxed-full-body.png",
+        "sha256": "018f45133acb2d9cd3625d27090b38084f6b795a92a726ff641785d889c0a823",
+        "role": "sole_edit_target_full_body_and_scene",
+        "approval": "P6かな。"
+      },
+      {
+        "id": "S1",
+        "path": "references/S1-silver-slim-pin.png",
+        "sha256": "6e35a9f51a68d203d8252dc71d7182fe313d8b66a2c2cb0bf099c83b773cb85f",
+        "role": "approved_hair_accessory_only"
+      },
+      {
+        "id": "P1",
+        "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+        "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+        "role": "original_face_hair_drawing_support",
+        "approval": "Proのやつ土台にしてみよう"
+      },
+      {
+        "id": "P2",
+        "path": "../akari-v3.0/references/P2-quiet-smile.png",
+        "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+        "role": "everyday_expression_support",
+        "approval": "P2で進めたい"
+      }
+    ]
+  },
+  "visual_review": {
+    "method": "Direct visual inspection of G2 against P6-S1, original P6 and approved S1; user then selected G2.",
+    "observed": "One slim silver pin on the character-left temple, medium-neutral-grey opaque ribbed socks on both legs, preserved below-knee sock height and fit, recognizable P6 proportions, closed-mouth smile, complete hands, uniform, both legs and complete white sneakers.",
+    "limitations": "Image generation causes small redraws. The chosen G2 pixels are preserved byte-for-byte during promotion; there is no claim that only sock-region pixels differ from the earlier generated parent."
+  }
+}

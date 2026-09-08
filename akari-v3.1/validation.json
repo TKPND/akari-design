@@ -1,0 +1,100 @@
+{
+  "project": "akari-v3.1",
+  "status": "passed",
+  "verified_at": "2026-09-08T01:09:10.199530+00:00",
+  "scope": "User selections, reference roles, complete generation-input chains, relative active paths, README links, SHA-256, PNG signatures/chunk CRCs and original dimensions.",
+  "method": "Python standard-library assertions against the saved package and the two selected exploration outputs; each PNG chunk CRC checked through IEND.",
+  "selected_ids": [
+    "S1",
+    "G2"
+  ],
+  "selected_images_unchanged": true,
+  "inherited_authorities_verified": [
+    "P1",
+    "P2",
+    "P6"
+  ],
+  "generation_records_checked": [
+    "history/S1-generation.json",
+    "history/G2-generation.json"
+  ],
+  "generation_input_chains_complete": true,
+  "active_paths_relative_and_resolved": true,
+  "active_path_count": 14,
+  "readme_links_checked": 13,
+  "checked_images": [
+    {
+      "id": "P1",
+      "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+      "role": "primary_face_and_hair",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1869375,
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "png_crc_passed": true
+    },
+    {
+      "id": "P2",
+      "path": "../akari-v3.0/references/P2-quiet-smile.png",
+      "role": "primary_everyday_expression",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1836424,
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "png_crc_passed": true
+    },
+    {
+      "id": "P6",
+      "path": "../akari-v3.0/references/P6-relaxed-full-body.png",
+      "role": "inherited_body_and_outfit_construction",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1664313,
+      "sha256": "018f45133acb2d9cd3625d27090b38084f6b795a92a726ff641785d889c0a823",
+      "png_crc_passed": true
+    },
+    {
+      "id": "S1",
+      "path": "references/S1-silver-slim-pin.png",
+      "role": "primary_hair_accessory_only",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1925688,
+      "sha256": "6e35a9f51a68d203d8252dc71d7182fe313d8b66a2c2cb0bf099c83b773cb85f",
+      "png_crc_passed": true
+    },
+    {
+      "id": "G2",
+      "path": "references/G2-silver-pin-gray-socks-full-body.png",
+      "role": "primary_body_and_outfit",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1888426,
+      "sha256": "950b800a86ba138d3e8d20ab902069f56298d726f5f763cad497982d70bb798c",
+      "png_crc_passed": true
+    },
+    {
+      "id": "A",
+      "path": "history/A-blue-slim-pin-parent.png",
+      "role": "preserved_generation_parent",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1863125,
+      "sha256": "90fe0866a670dcf3d19c2873384976679e89fafab3a3c0f58814398654deb649",
+      "png_crc_passed": true
+    },
+    {
+      "id": "P6-S1",
+      "path": "history/P6-S1-navy-socks-parent.png",
+      "role": "preserved_generation_parent",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1838676,
+      "sha256": "765078737f1fcb204890d18875cc264061bc4023b75f804d1baec39bff059e5e",
+      "png_crc_passed": true
+    }
+  ],
+  "exploration_records_required_for_continuation": false,
+  "historical_path_note": "S1 source_records point to the original ignored exploration logs. All generation inputs and prompts required for continuation are preserved in akari-v3.1 and inherited akari-v3.0.",
+  "visual_review_record": "history/G2-generation.json"
+}

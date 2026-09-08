@@ -1,0 +1,80 @@
+{
+  "project": "akari-v3.1",
+  "base_version": "akari-v3.0",
+  "updated": "2026-09-08T01:04:03.831Z",
+  "approved_ids": [
+    "S1",
+    "G2"
+  ],
+  "selections": [
+    {
+      "id": "S1",
+      "user_quote": "S1がいいね。",
+      "approved_at": "2026-09-08T00:45:00.781Z",
+      "approval_scope": "Select S1 as the v3.1 hair accessory.",
+      "reference": {
+        "id": "S1",
+        "title": "明るいシルバーの細ピン",
+        "path": "references/S1-silver-slim-pin.png",
+        "role": "primary_hair_accessory_only",
+        "sha256": "6e35a9f51a68d203d8252dc71d7182fe313d8b66a2c2cb0bf099c83b773cb85f",
+        "width": 1254,
+        "height": 1254,
+        "approval": "S1がいいね。",
+        "approved_at": "2026-09-08T00:45:00.781Z"
+      }
+    },
+    {
+      "id": "G2",
+      "user_quote": "G2にしよう",
+      "approved_at": "2026-09-08T01:04:03.831Z",
+      "approval_scope": "Select G2 medium-grey socks in the displayed silver-pin full-body image as the v3.1 full-body base.",
+      "reference": {
+        "id": "G2",
+        "title": "全身ベース・シルバー細ピンとミディアムグレー靴下",
+        "path": "references/G2-silver-pin-gray-socks-full-body.png",
+        "role": "primary_body_and_outfit",
+        "sha256": "950b800a86ba138d3e8d20ab902069f56298d726f5f763cad497982d70bb798c",
+        "width": 1024,
+        "height": 1536,
+        "approval": "G2にしよう",
+        "approved_at": "2026-09-08T01:04:03.831Z",
+        "derived_from": "P6",
+        "generation_record": "history/G2-generation.json"
+      }
+    }
+  ],
+  "design": {
+    "hair_accessory": {
+      "count": 1,
+      "color": "bright silver",
+      "finish": "restrained polished-metal reflection",
+      "shape": "one very slim straight bar with rounded ends",
+      "placement": "character-left temple, just above the ear; viewer-right in the approved S1 portrait",
+      "scale_and_tilt": "Match the approved S1 image."
+    },
+    "socks": {
+      "reference_id": "G2",
+      "color": "medium neutral grey",
+      "material": "opaque ribbed knit",
+      "height_and_fit": "Preserve P6 below-knee heights, rib pattern and calf/ankle fit, as shown in G2."
+    }
+  },
+  "reference_authorities": {
+    "face": "P1",
+    "everyday_expression": "P2",
+    "body_and_outfit": "G2",
+    "hair_accessory": "S1",
+    "body_construction": "P6"
+  },
+  "commit_request": {
+    "initial": "全身側ベースも修正してcommitしたい",
+    "refinement": "あ、ごめん靴下もちょっと調整したいわ。(グレー寄りにしたい) (何案か出してもらえると) それに変えてからcommitしたい",
+    "condition_fulfilled_by": "G2 user selection and subsequent package verification."
+  },
+  "state": "design-state.json",
+  "generation_records": {
+    "hair_accessory": "history/S1-generation.json",
+    "full_body": "history/G2-generation.json"
+  }
+}

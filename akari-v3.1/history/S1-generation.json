@@ -1,0 +1,71 @@
+{
+  "project": "akari-v3.1",
+  "path_base": "All paths in this record are relative to the akari-v3.1 directory.",
+  "tool": "image_gen",
+  "model": null,
+  "model_note": "The built-in tool did not expose a model name.",
+  "selected_generation": {
+    "id": "exec-ea5e23c9-137e-45c1-bb91-a73fc374c897",
+    "elapsed_seconds": 70.115,
+    "output": "references/S1-silver-slim-pin.png",
+    "sha256": "6e35a9f51a68d203d8252dc71d7182fe313d8b66a2c2cb0bf099c83b773cb85f",
+    "prompt": "Use case: precise-object-edit with identity preservation.\nAsset type: Akari v3.1 slim-hairpin color/material exploration.\nPrimary request: Recolor ONLY the existing blue hairpin in Image 1 to the silver-family finish specified below.\n\nInput roles:\nImage 1 is candidate A, the sole edit target. Preserve its exact composition, existing slim pin geometry, rounded ends, length, thickness, tilt, attachment, and position on the viewer-right temple above the visible ear. It is the authority for every non-pin part of the image.\nImage 2 is P1, supporting reference only for the already established original facial identity, rounded grey downturned eyes, cheeks, black bob, segmented bangs and drawing treatment. Do not copy its open mouth.\nImage 3 is P2, supporting reference only for the existing closed-mouth everyday smile, shirt and leafy setting. It does not authorize removing the pin.\n\nKeep the face, both eye shapes and iris highlights, brow lines, nose, closed-mouth smile, fine cheek hatching, skin shading, round black bob silhouette, all bangs and hair highlights, neck, white short-sleeve open-collar shirt with blue-grey piping, pose, skirt, leafy outdoor background, lighting, square 1254x1254 framing and drawing style unchanged. No character redesign or age-based change. The single pin remains the same plain, very slim, straight bar. Do not enlarge or thicken it, bend it, move it, turn it into a loop or triangle, or add a second pin. No text, label, grid, border, watermark, jewelry or other ornament.\nEdit only the blue color and surface reflectance of that existing hairpin. Fit the metal shading to the original soft daylight and illustrated rendering, keeping highlights within the current pin silhouette.\nTarget finish: Bright neutral-cool polished silver. A light silver-grey metallic body, one restrained narrow near-white daylight reflection, and a thin soft darker-grey edge to describe the metal. Clearly brighter than the hair and legible at normal viewing size, but no glowing white, glitter, lens flare or jewel-like sparkle. Remove the former periwinkle-blue enamel hue completely.",
+    "inputs": [
+      {
+        "path": "history/A-blue-slim-pin-parent.png",
+        "role": "sole_edit_target_pin_geometry_and_scene",
+        "sha256": "90fe0866a670dcf3d19c2873384976679e89fafab3a3c0f58814398654deb649"
+      },
+      {
+        "id": "P1",
+        "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+        "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+        "role": "face_hair_drawing_support",
+        "approval": "Proのやつ土台にしてみよう"
+      },
+      {
+        "id": "P2",
+        "path": "../akari-v3.0/references/P2-quiet-smile.png",
+        "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+        "role": "everyday_expression_outfit_background_support",
+        "approval": "P2で進めたい"
+      }
+    ]
+  },
+  "parent_generation": {
+    "id": "exec-1f323d30-2ed4-43a6-9500-7c8eac688f6f",
+    "elapsed_seconds": 32.98,
+    "output": "history/A-blue-slim-pin-parent.png",
+    "sha256": "90fe0866a670dcf3d19c2873384976679e89fafab3a3c0f58814398654deb649",
+    "prompt": "Use case: identity-preserve.\nAsset type: Akari v3.1 hair-accessory exploration, one individual try-on candidate.\nPrimary request: Edit Image 1 by adding the single hair accessory described below. This is a proposed accessory addition to the existing Akari v3.0 design.\n\nInput roles:\n- Image 1, P2 quiet smile: the sole edit target and exact authority for composition, head angle, facial expression, body pose, clothing, lighting and leafy outdoor background.\n- Image 2, P1 original portrait: supporting authority only for the existing face geometry, rounded grey downturned eyes, soft cheeks, short lower face, segmented bangs, round black bob, fine cheek hatching and drawing treatment. Do not copy its open mouth; keep P2's closed-mouth smile.\n- Image 3, P6 full body: supporting clothing and palette reference only. Never derive the face, proportions or framing from the small face in this full-body image.\n\nStrict preservation: keep Image 1's recognizable face, grey eye color, eye shapes and highlights, brows, nose, mouth, blush hatching, black bob silhouette and length, bang segmentation, hair highlights, skin, exact white short-sleeve open-collar shirt with blue-grey piping, relaxed pose, leafy background, crop and square composition. Match its existing illustrated linework and shading. Do not make an age-driven redesign. No new accessories anywhere else, no text, letters, border, captions, logo or watermark. Make one image of one character, not a grid.\nPlacement: the character's LEFT temple, which is on the VIEWER'S RIGHT in Image 1, just above the visible ear, attached naturally to the dark outer side-hair section. Keep the accessory clear of the eye, eyebrow and face outline. Preserve the fringe and bob; only a tiny local hair adjustment where the clip fastens is allowed. This side is a consistent comparison position, not a permanent design decision.\nOutput: preserve the square canvas and original framing. Add only the requested accessory.\nAccessory design: Add exactly one slim straight enamel hairpin in a muted dusty periwinkle-blue, echoing the shirt's blue-grey trim. Rounded ends, a very narrow flat bar, restrained low-sheen finish, no stones, no symbols. Its length is about 13 percent of the visible head width and its thickness about 1.2 percent; practical and clearly visible against the black hair. Set it with a very slight downward slope toward the outer edge of the hair.",
+    "status": "historical_blue_parent_of_selected_S1",
+    "inputs": [
+      {
+        "id": "P2",
+        "path": "../akari-v3.0/references/P2-quiet-smile.png",
+        "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+        "role": "sole_edit_target_and_expression",
+        "approval": "P2で進めたい"
+      },
+      {
+        "id": "P1",
+        "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+        "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+        "role": "face_hair_drawing_support",
+        "approval": "Proのやつ土台にしてみよう"
+      },
+      {
+        "id": "P6",
+        "path": "../akari-v3.0/references/P6-relaxed-full-body.png",
+        "sha256": "018f45133acb2d9cd3625d27090b38084f6b795a92a726ff641785d889c0a823",
+        "role": "outfit_palette_support",
+        "approval": "P6かな。"
+      }
+    ]
+  },
+  "source_records": {
+    "first_round": "../build/akari-v3.1/hair-accessories/2026-09-08-r01/generation-results.json",
+    "silver_round": "../build/akari-v3.1/hair-accessories/2026-09-08-r02-silver/generation-results.json",
+    "role": "original exploration history only; continuation depends on the preserved images and prompts above"
+  }
+}
