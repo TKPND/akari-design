@@ -1,0 +1,12 @@
+Use case: precise-object-edit. Correct only the two small sock toe caps in IMAGE 1, the full-body ivory cardigan/dusty blue skirt illustration. Preserve exactly its face, hair, silver pin, expression, hands, clothes, pose, legs, framing, lighting and room.
+
+REFERENCE ROLES:
+Image 1: sole edit target and authority for everything about this scene.
+Image 2 L1: grey sock color, rib knit and length only.
+Image 3 F07: opaque rounded cloth silhouette reference ONLY. Do not copy its pose or outfit.
+Image 4 F09 detail: sparse shallow cloth wrinkles and soft fabric reference ONLY, NOT individual anatomical contours.
+Image 5 P1: face/eye/black bob identity support, no face changes.
+
+The problem in image 1 is that both front sock caps are currently split into visible individual toe-shaped lobes with a central cleft and little scalloped bumps. Replace these local toe-cap regions decisively. Enclose each whole forefoot in a SINGLE broad smooth round-ended textile volume. One continuous unbroken rounded outline around each front tip; fill in the notches/cleft and remove every toe-shaped lobe. Connect the grey shading across the WHOLE toe box. No separate big toe, no split toe shape, no five-toe pockets, no short grooves radiating toward the front edge, no visible toenail or toe-joint anatomy.
+
+Retain softness through a FEW very shallow sideways oblique CLOTH folds just behind the toe-cap seam and the existing soft ankle folds. Keep the FRONT HALF of each toe cap mostly smooth with gently continuous grey shading and no central V-shaped indentation. Folds must not divide the front edge into anatomical lobes. Not rigid: a supple ordinary sock with a continuous rounded silhouette and slight shallow fabric creasing. Keep original foot size, position, standing contact, rug and all pixels outside these small toe regions as close as possible. No shoes. Return one complete vertical image, same composition as image 1.

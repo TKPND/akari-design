@@ -1,0 +1,37 @@
+{
+  "id": "F11",
+  "title_ja": "ここ、座る？",
+  "path_base": "akari-v3.1",
+  "status": "user_selected",
+  "user_selected": true,
+  "approval_quote": "commitしていいよ。さっきの含め",
+  "selection_recorded_at": "2026-09-08T11:01:28.343547+00:00",
+  "selection_record": "situations/favorites-continuation/selection.json",
+  "tool": "image_gen",
+  "tool_mode": "built-in-imagegen",
+  "model": null,
+  "model_note": "Model name not exposed by tool response",
+  "output": {
+    "path": "situations/favorites-continuation/images/F11-sofa-invitation.png",
+    "bytes": 2333149,
+    "sha256": "f8a55fbca16017a01e71ed0e4df0d52cfe9a8b5e1ddae97ded1ecb19a048ce93",
+    "width": 1536,
+    "height": 1024
+  },
+  "prompt": {
+    "path": "situations/favorites-continuation/prompts/F11.txt",
+    "bytes": 1728,
+    "sha256": "7455c846772b56f550e4e9361e0734af2870c8c9de224b3a265d7f0fade738ce"
+  },
+  "generation_chain": "situations/favorites-continuation/history/F11/generation-chain.json",
+  "visual_review": {
+    "composition": "Warm sofa invitation with empty adjacent seat, closed mouth smile, full seated body.",
+    "identity": "P1/P2 face lineage and silver hairpin retained visually.",
+    "wardrobe": "Round collar, navy long sleeves and plaid skirt. Bolero includes small buttons differing from F10.",
+    "sock_detail": "r2 has continuous rounded opaque outer toe contours with no individual toe lines or nails. Shallow central cloth dents remain; reviewed against F09. Candidate does not replace the F09 material authority.",
+    "approval": "User selected the final r2 image in this session."
+  },
+  "face_authority_promoted": false,
+  "sock_material_authority_promoted": false,
+  "output_transformation": "Byte-for-byte copy of built-in image_gen r2 output; no compositing or retouching."
+}

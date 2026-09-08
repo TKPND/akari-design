@@ -1,0 +1,20 @@
+{
+  "project": "akari-v3.1",
+  "status": "pass",
+  "checked_at": "2026-09-08T11:02:07.683951+00:00",
+  "scope": "F11/F12 adoption, complete two-step input chains, copied PNGs/prompts, updated selection/manifest and README links.",
+  "checks": {
+    "asset_records": 54,
+    "paths": 54,
+    "pngs": 19,
+    "markdown_links": 94
+  },
+  "selected_ids": [
+    "F11",
+    "F12"
+  ],
+  "source_copies_identical": true,
+  "active_paths_relative_and_resolved": true,
+  "face_authority_promoted": false,
+  "preferred_sock_material_id": "F09"
+}

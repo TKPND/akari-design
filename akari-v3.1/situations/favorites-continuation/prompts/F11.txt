@@ -1,0 +1,8 @@
+Use case: precise-object-edit. Edit image 1, the sofa invitation scene, with a strictly local sock-toe correction.
+Image 1 is the sole scene, pose, camera, expression, wardrobe, lighting and composition source. Keep the entire picture unchanged except the small toe-cap surfaces and outlines on BOTH grey socks at the bottom.
+Image 2 native L1: sock grey color, below-knee fit and leg construction only.
+Image 3 F09 sock-detail: required material authority ONLY: one continuous softly rounded opaque cloth envelope with sparse shallow NATURAL CLOTH wrinkles.
+Image 4 P1: original face/eye/black-bob identity, preserve the existing face unchanged.
+Image 5 native U1: hair/pin and upper-body detail, preserve the existing long sleeve wardrobe unchanged.
+
+Correction: BOTH existing toe caps have a central V-shaped indentation and rounded bulges that read as separated toes or a separate big toe. REMOVE that V-shaped groove, toe-like lobes, and scalloped outline. Each foot must end in ONE continuous smooth broadly rounded asymmetric oval cloth envelope enclosing every toe together, no big-toe bulge, no separate toe pockets. Shade the toe cap as connected supple opaque fabric. Retain only one or two very shallow oblique CLOTH compression creases near the forefoot/toe seam, as restrained as image 3. These should not radiate from, separate, or outline hidden toes. Keep the ordinary size and orientation of both feet, natural ankle folds, ribbing, grey color, contact shadows and rug unchanged. Rounded means the outer silhouette, not a rigid perfectly blank cap. Do not alter hands, face, sofa, skirt, legs, socks above the toe caps, framing, background or exposure. Return one full landscape image at the same composition.

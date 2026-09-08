@@ -1,0 +1,117 @@
+{
+  "id": "F12",
+  "path_base": "akari-v3.1",
+  "steps": [
+    {
+      "step": "initial_generation",
+      "output": {
+        "path": "situations/favorites-continuation/history/F12/F12-initial.png",
+        "bytes": 2114826,
+        "sha256": "1de60d2e72ff4942e4e8f4e0eb67432be3b4c095a094fb9ab7167954b90f9d2e",
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/favorites-continuation/history/F12/F12-initial-prompt.txt",
+        "bytes": 4669,
+        "sha256": "738c51ba950daef717f1fa4a1b78adb66464d61d1e23a8a552cf4dd31b53d544"
+      },
+      "inputs": [
+        {
+          "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "path": "../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "path": "references/U1-upper-reference.png",
+          "bytes": 1852161,
+          "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "path": "references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "path": "references/materials/F09-rounded-wrinkled-sock-detail.png",
+          "bytes": 71786,
+          "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+          "width": 280,
+          "height": 210
+        }
+      ],
+      "inspected_support_only": [],
+      "elapsed_seconds": 73.5,
+      "tool_output_filename": "exec-0342fcb2-c44a-47d6-a382-7abe4b736a30.png"
+    },
+    {
+      "step": "sock_toe_correction",
+      "output": {
+        "path": "situations/favorites-continuation/images/F12-cute-cardigan.png",
+        "bytes": 2073265,
+        "sha256": "61b045b359c39a7053a5804016053f278defd94ef9f5f13a5d38772be0e88506",
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/favorites-continuation/prompts/F12.txt",
+        "bytes": 1927,
+        "sha256": "c0dda64824e724b0e6af71536323f7870847a4e70f2c3314fbddbb1c71fc8439"
+      },
+      "inputs": [
+        {
+          "path": "situations/favorites-continuation/history/F12/F12-initial.png",
+          "bytes": 2114826,
+          "sha256": "1de60d2e72ff4942e4e8f4e0eb67432be3b4c095a094fb9ab7167954b90f9d2e",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "path": "references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "path": "references/materials/F07-rounded-opaque-sock-toes.png",
+          "bytes": 2586140,
+          "sha256": "b8ecb57533a4ca3faa96542167e3eb1c6a2647fa90c925245f112d4b8b6a7a0d",
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "path": "references/materials/F09-rounded-wrinkled-sock-detail.png",
+          "bytes": 71786,
+          "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+          "width": 280,
+          "height": 210
+        },
+        {
+          "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254
+        }
+      ],
+      "elapsed_seconds": 50.4,
+      "tool_output_filename": "exec-d86dd9c1-7be5-4bf9-bd0b-08ece846a3aa.png"
+    }
+  ],
+  "model": null,
+  "selected_step": "sock_toe_correction"
+}

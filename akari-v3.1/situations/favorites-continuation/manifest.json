@@ -3,7 +3,7 @@
   "path_base": "akari-v3.1",
   "title_ja": "好み6枚からの続き",
   "status": "user_selected",
-  "selected_count": 8,
+  "selected_count": 10,
   "selected_ids": [
     "F01",
     "F02",
@@ -12,7 +12,9 @@
     "F06",
     "F08",
     "F09",
-    "F10"
+    "F10",
+    "F11",
+    "F12"
   ],
   "selection": "situations/favorites-continuation/selection.json",
   "preferences": "situations/favorites-continuation/preferences.json",
@@ -174,7 +176,47 @@
       "record": "situations/favorites-continuation/records/F10.json",
       "user_selected": true,
       "face_authority_promoted": false
+    },
+    {
+      "id": "F11",
+      "title_ja": "ここ、座る？",
+      "output": {
+        "path": "situations/favorites-continuation/images/F11-sofa-invitation.png",
+        "bytes": 2333149,
+        "sha256": "f8a55fbca16017a01e71ed0e4df0d52cfe9a8b5e1ddae97ded1ecb19a048ce93",
+        "width": 1536,
+        "height": 1024
+      },
+      "prompt": {
+        "path": "situations/favorites-continuation/prompts/F11.txt",
+        "bytes": 1728,
+        "sha256": "7455c846772b56f550e4e9361e0734af2870c8c9de224b3a265d7f0fade738ce"
+      },
+      "record": "situations/favorites-continuation/records/F11.json",
+      "generation_chain": "situations/favorites-continuation/history/F11/generation-chain.json",
+      "user_selected": true,
+      "face_authority_promoted": false
+    },
+    {
+      "id": "F12",
+      "title_ja": "この服、どうかな？",
+      "output": {
+        "path": "situations/favorites-continuation/images/F12-cute-cardigan.png",
+        "bytes": 2073265,
+        "sha256": "61b045b359c39a7053a5804016053f278defd94ef9f5f13a5d38772be0e88506",
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/favorites-continuation/prompts/F12.txt",
+        "bytes": 1927,
+        "sha256": "c0dda64824e724b0e6af71536323f7870847a4e70f2c3314fbddbb1c71fc8439"
+      },
+      "record": "situations/favorites-continuation/records/F12.json",
+      "generation_chain": "situations/favorites-continuation/history/F12/generation-chain.json",
+      "user_selected": true,
+      "face_authority_promoted": false
     }
   ],
-  "updated_at": "2026-09-08T10:33:12.082562+00:00"
+  "updated_at": "2026-09-08T11:01:28.343547+00:00"
 }

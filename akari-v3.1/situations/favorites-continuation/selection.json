@@ -10,11 +10,13 @@
     "F06",
     "F08",
     "F09",
-    "F10"
+    "F10",
+    "F11",
+    "F12"
   ],
-  "recorded_at": "2026-09-08T10:33:12.082562+00:00",
-  "user_quote": "良いね。commitは可能？",
-  "scope": "Selected F01/F02/F04/F05/F06/F08/F09/F10 scenes. F09 remains the preferred restrained sock wrinkle standard; F10 adds the photo-album home scene and does not promote a new face or material authority.",
+  "recorded_at": "2026-09-08T11:01:28.343547+00:00",
+  "user_quote": "commitしていいよ。さっきの含め",
+  "scope": "Selected F01/F02/F04/F05/F06/F08/F09/F10/F11/F12 scenes. F12 adds the cute ivory cardigan and dusty blue skirt casual outfit. P1/P2 remain face/expression authorities and F09 remains the preferred sock material reference.",
   "scene_references_only": false,
   "face_authority_promoted": false,
   "approval_history": [
@@ -62,6 +64,15 @@
       "recorded_at": "2026-09-08T10:33:12.082562+00:00",
       "user_quote": "良いね。commitは可能？",
       "record": "situations/favorites-continuation/records/F10.json"
+    },
+    {
+      "selected_ids": [
+        "F11",
+        "F12"
+      ],
+      "recorded_at": "2026-09-08T11:01:28.343547+00:00",
+      "user_quote": "commitしていいよ。さっきの含め",
+      "scope": "Final r2 outputs from both scenes in the current session."
     }
   ],
   "scene_and_sock_material_support_only": true,

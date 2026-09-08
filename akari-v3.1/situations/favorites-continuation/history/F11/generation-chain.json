@@ -1,0 +1,132 @@
+{
+  "id": "F11",
+  "path_base": "akari-v3.1",
+  "steps": [
+    {
+      "step": "initial_generation",
+      "output": {
+        "path": "situations/favorites-continuation/history/F11/F11-initial.png",
+        "bytes": 2447678,
+        "sha256": "90f1198f2ad7d670cf1b3fefef47724300edbc0f55a1f217aacfdc1cbf95b698",
+        "width": 1536,
+        "height": 1024
+      },
+      "prompt": {
+        "path": "situations/favorites-continuation/history/F11/F11-initial-prompt.txt",
+        "bytes": 4134,
+        "sha256": "72fe31a69fbf9acb79d1680f986c0f650d60963f3927ceac58be90b26f9f3e2d"
+      },
+      "inputs": [
+        {
+          "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "path": "../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "path": "references/U1-upper-reference.png",
+          "bytes": 1852161,
+          "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "path": "references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "path": "references/materials/F09-rounded-wrinkled-sock-detail.png",
+          "bytes": 71786,
+          "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+          "width": 280,
+          "height": 210
+        }
+      ],
+      "inspected_support_only": [
+        {
+          "path": "situations/favorites-continuation/images/F10-showing-a-photo.png",
+          "bytes": 2315609,
+          "sha256": "5a08a99cec9e29bed8cdfdbcb9023db844a3fadaf46034969ce5ebac2b2b9d06",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "path": "situations/abc-exploration/images/A16-E1-1.png",
+          "bytes": 2032915,
+          "sha256": "4bbd4b898b8f65b302edbee459c25b81f37f99e5295775a57eda8e7f4b88bb71",
+          "width": 1024,
+          "height": 1536
+        }
+      ],
+      "elapsed_seconds": 56.3,
+      "tool_output_filename": "exec-5924e7e2-2db0-4296-a2ff-abfb712f815d.png"
+    },
+    {
+      "step": "sock_toe_correction",
+      "output": {
+        "path": "situations/favorites-continuation/images/F11-sofa-invitation.png",
+        "bytes": 2333149,
+        "sha256": "f8a55fbca16017a01e71ed0e4df0d52cfe9a8b5e1ddae97ded1ecb19a048ce93",
+        "width": 1536,
+        "height": 1024
+      },
+      "prompt": {
+        "path": "situations/favorites-continuation/prompts/F11.txt",
+        "bytes": 1728,
+        "sha256": "7455c846772b56f550e4e9361e0734af2870c8c9de224b3a265d7f0fade738ce"
+      },
+      "inputs": [
+        {
+          "path": "situations/favorites-continuation/history/F11/F11-initial.png",
+          "bytes": 2447678,
+          "sha256": "90f1198f2ad7d670cf1b3fefef47724300edbc0f55a1f217aacfdc1cbf95b698",
+          "width": 1536,
+          "height": 1024
+        },
+        {
+          "path": "references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "path": "references/materials/F09-rounded-wrinkled-sock-detail.png",
+          "bytes": 71786,
+          "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+          "width": 280,
+          "height": 210
+        },
+        {
+          "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254
+        },
+        {
+          "path": "references/U1-upper-reference.png",
+          "bytes": 1852161,
+          "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+          "width": 1024,
+          "height": 1536
+        }
+      ],
+      "elapsed_seconds": 49.3,
+      "tool_output_filename": "exec-53d15f0a-9b14-4e2b-aa22-32cb107eb304.png"
+    }
+  ],
+  "model": null,
+  "selected_step": "sock_toe_correction"
+}

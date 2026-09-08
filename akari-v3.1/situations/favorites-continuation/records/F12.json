@@ -1,0 +1,37 @@
+{
+  "id": "F12",
+  "title_ja": "この服、どうかな？",
+  "path_base": "akari-v3.1",
+  "status": "user_selected",
+  "user_selected": true,
+  "approval_quote": "commitしていいよ。さっきの含め",
+  "selection_recorded_at": "2026-09-08T11:01:28.343547+00:00",
+  "selection_record": "situations/favorites-continuation/selection.json",
+  "tool": "image_gen",
+  "tool_mode": "built-in-imagegen",
+  "model": null,
+  "model_note": "Model name not exposed by tool response",
+  "output": {
+    "path": "situations/favorites-continuation/images/F12-cute-cardigan.png",
+    "bytes": 2073265,
+    "sha256": "61b045b359c39a7053a5804016053f278defd94ef9f5f13a5d38772be0e88506",
+    "width": 1024,
+    "height": 1536
+  },
+  "prompt": {
+    "path": "situations/favorites-continuation/prompts/F12.txt",
+    "bytes": 1927,
+    "sha256": "c0dda64824e724b0e6af71536323f7870847a4e70f2c3314fbddbb1c71fc8439"
+  },
+  "generation_chain": "situations/favorites-continuation/history/F12/generation-chain.json",
+  "visual_review": {
+    "identity": "P1/P2 face, grey eyes, black bob and single silver pin retained visually.",
+    "outfit": "Ivory soft cardigan, small lace-edged round collar, dusty blue flared knee-length skirt; cute casual direction.",
+    "anatomy": "Coherent standing pose, two hands at cuff and two legs/feet.",
+    "socks": "r2 enlarged review: continuous rounded opaque toe contours, individual toe lobes removed; restrained shallow transverse forefoot fabric folds and soft ankle folds retained.",
+    "approval": "User selected the final r2 image in this session."
+  },
+  "face_authority_promoted": false,
+  "sock_material_authority_promoted": false,
+  "output_transformation": "Byte-for-byte copy of built-in image_gen r2 output; no compositing or retouching."
+}
