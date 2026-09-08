@@ -38,7 +38,8 @@
     "situations/abc-exploration/records/A09.json",
     "situations/abc-exploration/records/A13.json",
     "situations/abc-exploration/records/A15.json",
-    "situations/abc-exploration/records/A16.json",
+    "situations/abc-exploration/history/A16-original.json",
+    "situations/abc-exploration/records/A16-E1-1.json",
     "situations/abc-exploration/records/B01.json",
     "situations/abc-exploration/records/B03.json",
     "situations/abc-exploration/records/B07.json",
@@ -233,36 +234,38 @@
       "id": "A16",
       "title_ja": "今日のことを思い返す",
       "theme": "A",
-      "artifact_id": "A16",
-      "status": "user_selected_original",
+      "artifact_id": "A16-E1-1",
+      "status": "user_selected_finish_revision",
       "output": {
-        "path": "situations/abc-exploration/images/A16.png",
-        "sha256": "7319eeda8b49998da5c054cd1add2d6776cc4e291982a7ab77a00f7d7f985951",
-        "bytes": 2267949,
+        "path": "situations/abc-exploration/images/A16-E1-1.png",
+        "sha256": "4bbd4b898b8f65b302edbee459c25b81f37f99e5295775a57eda8e7f4b88bb71",
+        "bytes": 2032915,
         "width": 1024,
         "height": 1536
       },
       "prompt": {
-        "path": "situations/abc-exploration/prompts/A16.txt",
-        "sha256": "8bfb4da20cdc0551692c72cc515f0dfac48696ca58d56ea6fcc55c8d82681d7e",
-        "bytes": 3707
+        "path": "situations/abc-exploration/prompts/A16-E1-1.txt",
+        "sha256": "01756d83df6600fc1b2b045a3d843eb68c9cee3b4837b350ef254c2392dccc51",
+        "bytes": 3645
       },
-      "record": "situations/abc-exploration/records/A16.json",
+      "record": "situations/abc-exploration/records/A16-E1-1.json",
       "visual_review": {
         "verdict": "pass",
-        "recommendation": "strong",
-        "identity": 5,
-        "scene": 4,
-        "naturalness": 5,
-        "quality": 5,
-        "note": "頬杖と緩い肩、近い目線で帰宅後の会話が自然。顔のディテールと制服が安定した有力候補。"
+        "reviewer": "assistant",
+        "method": "Full source and selected PNG inspected; prior comparison also included native clothing, hand and face crops.",
+        "note": "頬杖と目線、顔・目・黒髪ボブ・銀ピンを保ち、服の細かな影面を整理。肘の主要なしわと布の立体感が残る。",
+        "limitations": [
+          "生成による微細な再描画差はある。厳密な領域マスクによる編集ではない。",
+          "今回の確認対象はA16。別構図への適用と他条件の組み合わせは未実施。"
+        ]
       },
       "face_authority_promoted": false,
       "original_direction": {
         "scene": "ダイニングの椅子に座り、片手で頬を軽く支えながら、今日の出来事を思い返すような緩い表情。こちらが目の前にいる前提の距離感。",
         "gaze": "direct",
         "framing": "portrait 2:3, waist-up across dining table"
-      }
+      },
+      "finish_selection": "situations/abc-exploration/history/A16-style-selection.json"
     },
     {
       "id": "B01",
@@ -684,5 +687,7 @@
         "framing": "portrait 2:3, knees-up dining corner side three-quarter view"
       }
     }
-  ]
+  ],
+  "A16_finish_selection": "situations/abc-exploration/history/A16-style-selection.json",
+  "updated": "2026-09-08T07:23:15.083472+00:00"
 }

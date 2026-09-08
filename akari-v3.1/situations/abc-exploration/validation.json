@@ -1,13 +1,13 @@
 {
   "status": "pass",
-  "checked_at": "2026-09-08T05:44:17.582163+00:00",
+  "checked_at": "2026-09-08T07:24:01.199504+00:00",
   "selected_count": 18,
-  "generation_records": 21,
-  "package_file_count_excluding_reports": 95,
+  "generation_records": 22,
+  "package_file_count_excluding_reports": 101,
   "checks": {
-    "hashes": 197,
-    "pngs": 27,
-    "links": 92
+    "hashes": 204,
+    "pngs": 28,
+    "links": 101
   },
   "A04_selected_revision": "A04-r4",
   "native_png_validation": "signature, dimensions, CRC, zlib and SHA-256 passed",

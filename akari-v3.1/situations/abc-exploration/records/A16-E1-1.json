@@ -1,0 +1,79 @@
+{
+  "id": "A16-E1-1",
+  "experiment_candidate_id": "E1-1",
+  "tool": "image_gen",
+  "tool_mode": "built-in-imagegen",
+  "model": null,
+  "model_note": "The built-in tool did not expose the model name.",
+  "started_at": "2026-09-08T06:51:05.003Z",
+  "completed_at": "2026-09-08T06:51:39.061Z",
+  "elapsed_seconds": 34.058,
+  "tool_output_filename": "exec-d3aa1543-8b70-4e3a-9d91-963676583c27.png",
+  "source_run_id": "01a07fbb-ed62-78f3-a301-a161215ff196",
+  "path_base": "akari-v3.1",
+  "output": {
+    "path": "situations/abc-exploration/images/A16-E1-1.png",
+    "sha256": "4bbd4b898b8f65b302edbee459c25b81f37f99e5295775a57eda8e7f4b88bb71",
+    "bytes": 2032915,
+    "width": 1024,
+    "height": 1536
+  },
+  "prompt": {
+    "path": "situations/abc-exploration/prompts/A16-E1-1.txt",
+    "sha256": "01756d83df6600fc1b2b045a3d843eb68c9cee3b4837b350ef254c2392dccc51",
+    "bytes": 3645
+  },
+  "inputs": [
+    {
+      "id": "A16",
+      "path": "situations/abc-exploration/history/A16-original.png",
+      "sha256": "7319eeda8b49998da5c054cd1add2d6776cc4e291982a7ab77a00f7d7f985951",
+      "role": "sole edit target, scene, camera, pose, expression, outfit and lighting"
+    },
+    {
+      "id": "P1",
+      "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "role": "original facial and eye design, black bob and baseline fine linework; no pose, clothing or lighting transfer"
+    },
+    {
+      "id": "P2",
+      "path": "../akari-v3.0/references/P2-quiet-smile.png",
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "role": "original everyday closed-mouth smile identity; preserve the target expression"
+    },
+    {
+      "id": "U1",
+      "path": "references/U1-upper-reference.png",
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "role": "native eye structure, hair and single silver pin detail; summer outfit superseded"
+    },
+    {
+      "id": "V31-06",
+      "path": "situations/abc-exploration/references/V31-06.png",
+      "sha256": "0240b29590c60ba5ccd6e475e15288535a03a3795158e37ad95c3bf194204c9a",
+      "role": "rounded collar, long sleeve bolero, ribbon and plaid skirt construction only"
+    }
+  ],
+  "input_ids": [
+    "A16",
+    "P1",
+    "P2",
+    "U1",
+    "V31-06"
+  ],
+  "parent": "A16",
+  "input_note": "The original request used byte-identical frozen copies of these five inputs. A16 is waist-up; L1 was not applicable. The first input alone supplies scene, pose and camera.",
+  "intervention": "Group small internal garment shadows while retaining major folds, seams, plaid and clothing structure.",
+  "postprocessing": "None. Native generated PNG copied byte-for-byte.",
+  "review": {
+    "verdict": "pass",
+    "reviewer": "assistant",
+    "method": "Full source and selected PNG inspected; prior comparison also included native clothing, hand and face crops.",
+    "note": "頬杖と目線、顔・目・黒髪ボブ・銀ピンを保ち、服の細かな影面を整理。肘の主要なしわと布の立体感が残る。",
+    "limitations": [
+      "生成による微細な再描画差はある。厳密な領域マスクによる編集ではない。",
+      "今回の確認対象はA16。別構図への適用と他条件の組み合わせは未実施。"
+    ]
+  }
+}

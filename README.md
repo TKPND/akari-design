@@ -23,6 +23,7 @@ The public repository is maintained as `TKPND/akari-design`.
   lower-body references, an M2 assembled overview, a silver pin and grey socks.
   Its [selected A/B/C scenes](akari-v3.1/situations/abc-exploration/README.md)
   preserve 18 everyday illustrations in the user-selected long-sleeve uniform.
+  A16 uses the selected E1-1 finish, which subtly groups small clothing shadows.
 - `tools/pdf/` contains the Node/Playwright PDF rendering code.
 - `scripts/` contains Python build and audit scripts.
 - `dist/` contains prebuilt PDF deliverables and public contact sheets.

@@ -1,12 +1,12 @@
 {
   "project": "akari-v3.1",
-  "updated": "2026-09-08T02:10:18.208614+00:00",
-  "current_stage": "split_references_selected",
+  "updated": "2026-09-08T07:23:15.083472+00:00",
+  "current_stage": "split_references_and_clothing_finish_selected",
   "status": "user_selected_working_design",
   "base_version": "akari-v3.0",
   "path_base": "All active paths are relative to the akari-v3.1 directory.",
   "base_design_state": "../akari-v3.0/design-state.json",
-  "scope": "Akari v3.1 uses the selected U1 upper and L1 lower references directly, with M2 as an assembled whole-body overview; the S1 silver pin and G2 grey sock design are retained.",
+  "scope": "Akari v3.1 uses the selected U1 upper and L1 lower references directly, with M2 as an assembled whole-body overview; the S1 silver pin and G2 grey sock design are retained. The selected A16-E1-1 supplies subtle clothing-shadow grouping guidance.",
   "primary_references": {
     "face": {
       "id": "P1",
@@ -97,7 +97,8 @@
     "When assembling parts, keep complete arms and hands from one input and put transitions within clothing/background. Prefer anatomical and object continuity; do not force geometric warps or cut across limbs to minimize pixel changes.",
     "Use S1 for one bright silver slim straight pin with rounded tips, at the character-left temple just above the ear; viewer-right in these approved references.",
     "L1 carries the G2 medium-neutral-grey opaque ribbed below-knee socks, healthy leg contours, blue-grey pleated skirt and white sneakers. G2 remains the approved source layout and sock-color origin; P6 is inherited construction support whose navy socks and absent pin are superseded.",
-    "Later situation or expression selections do not automatically change these roles. Use the current black-bob v3.0 lineage; do not mix v1/v2 or the August v3.0 research design into this version."
+    "Later situation or expression selections do not automatically change these roles. Use the current black-bob v3.0 lineage; do not mix v1/v2 or the August v3.0 research design into this version.",
+    "Use selected A16-E1-1 as the clothing-finish guide: group small internal shadows subtly while retaining major folds, dimensionality, seams and plaid. Treat it as clothing-finish support only; keep P1/P2 original face and expression authority, native U1/L1 detail roles and the current target scene, pose, camera and outfit. E2/E3 are not selected; transfer beyond A16 still needs visual review."
   ],
   "asset_inventory": "asset-inventory.json",
   "validation": "validation.json",
@@ -133,5 +134,25 @@
   },
   "reference_set": "reference-set.json",
   "usage_guide": "README.md",
-  "assembly_record": "history/split-references/M2-assembly.json"
+  "assembly_record": "history/split-references/M2-assembly.json",
+  "clothing_finish_reference": {
+    "id": "A16-E1-1",
+    "experiment_candidate_id": "E1-1",
+    "path": "situations/abc-exploration/images/A16-E1-1.png",
+    "sha256": "4bbd4b898b8f65b302edbee459c25b81f37f99e5295775a57eda8e7f4b88bb71",
+    "bytes": 2032915,
+    "width": 1024,
+    "height": 1536,
+    "role": "selected_clothing_shadow_grouping_only",
+    "approval": "E1-1でいいかな。さりげない感じなので。これでreadmeも更新してcommitしよう",
+    "selection_recorded_at": "2026-09-08T07:23:15.083472+00:00",
+    "selection_record": "situations/abc-exploration/history/A16-style-selection.json",
+    "generation_record": "situations/abc-exploration/records/A16-E1-1.json",
+    "scope": "Subtle grouping of small internal garment shadows while retaining major folds and dimensionality. P1/P2 remain original authorities; native U1/L1 remain detail references.",
+    "validated_scene_ids": [
+      "A16"
+    ],
+    "other_scene_transfer_validated": false,
+    "face_authority_promoted": false
+  }
 }

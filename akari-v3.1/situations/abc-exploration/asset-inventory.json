@@ -3,8 +3,8 @@
   "files": [
     {
       "path": "situations/abc-exploration/README.md",
-      "sha256": "77f3fb7c547a32160fb2cac99202eb02aedbe4b6f020b6ae68849ab5ed48bf8b",
-      "bytes": 5233
+      "sha256": "62649389b3cfaff534d0f3697d869ad463a2c42aa221b948a02c61c29c691105",
+      "bytes": 7414
     },
     {
       "path": "situations/abc-exploration/history/A04-correction.json",
@@ -63,6 +63,33 @@
       "bytes": 2771
     },
     {
+      "path": "situations/abc-exploration/history/A16-external-style-review.md.txt",
+      "sha256": "39026c18b17dd850b206b8c21e522107295d40ffca8806518bbf51f99a0438c1",
+      "bytes": 24082
+    },
+    {
+      "path": "situations/abc-exploration/history/A16-original.json",
+      "sha256": "e3ae338b582edafcf45a0b8204eed4706428b7fabc300aa9f090d1a415473326",
+      "bytes": 1716
+    },
+    {
+      "path": "situations/abc-exploration/history/A16-original.png",
+      "sha256": "7319eeda8b49998da5c054cd1add2d6776cc4e291982a7ab77a00f7d7f985951",
+      "bytes": 2267949,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "situations/abc-exploration/history/A16-original.txt",
+      "sha256": "8bfb4da20cdc0551692c72cc515f0dfac48696ca58d56ea6fcc55c8d82681d7e",
+      "bytes": 3707
+    },
+    {
+      "path": "situations/abc-exploration/history/A16-style-selection.json",
+      "sha256": "5c4737d412cfa1fa3e369a5a8812a2b7b5028a06e0c52f938ab06a05bc948dea",
+      "bytes": 8512
+    },
+    {
       "path": "situations/abc-exploration/history/common-generation-prompt.txt",
       "sha256": "637ee48f53f4d869634af25d0e481c4996279cb00896bf27e758087bd6af47e9",
       "bytes": 3126
@@ -113,9 +140,9 @@
       "height": 1024
     },
     {
-      "path": "situations/abc-exploration/images/A16.png",
-      "sha256": "7319eeda8b49998da5c054cd1add2d6776cc4e291982a7ab77a00f7d7f985951",
-      "bytes": 2267949,
+      "path": "situations/abc-exploration/images/A16-E1-1.png",
+      "sha256": "4bbd4b898b8f65b302edbee459c25b81f37f99e5295775a57eda8e7f4b88bb71",
+      "bytes": 2032915,
       "width": 1024,
       "height": 1536
     },
@@ -205,18 +232,18 @@
     },
     {
       "path": "situations/abc-exploration/index.html",
-      "sha256": "ccf653fd00f5bccebfc163e901120bebea0d0a3692e9317a16075decff20cb87",
-      "bytes": 12579
+      "sha256": "6666854c4c01d59cc0800491cab426f0a4c10f348b6b901f1c9bb88008af3b86",
+      "bytes": 12686
     },
     {
       "path": "situations/abc-exploration/manifest.json",
-      "sha256": "017e5729df3855572fc8e28a7be63e668774abb9e48127c6902e3cfa2450b183",
-      "bytes": 27385
+      "sha256": "6d4c0956ae6239509345c8d9f51666381e56050486f9786a9b502ef923c3a640",
+      "bytes": 28025
     },
     {
       "path": "situations/abc-exploration/previews/A.jpg",
-      "sha256": "9ee302141206dfbed39520c3e659bb6419be6010fb55f617f2f112354d9280ca",
-      "bytes": 366572
+      "sha256": "6d5699d6a8563c2dc3df0bf4c5c76bc775220597a8c259bec36905cd42589cb1",
+      "bytes": 284691
     },
     {
       "path": "situations/abc-exploration/previews/A04.jpg",
@@ -244,9 +271,14 @@
       "bytes": 87350
     },
     {
+      "path": "situations/abc-exploration/previews/A16-finish-comparison.jpg",
+      "sha256": "a007374fb38b366376177a1cc91d1be6f8a488a687d9928350b2a6bf2888c6e4",
+      "bytes": 152984
+    },
+    {
       "path": "situations/abc-exploration/previews/A16.jpg",
-      "sha256": "eff8b9475cb3b10872bb020e779bda861c4bb8fbaa05281be985bbf927e40b53",
-      "bytes": 75003
+      "sha256": "dde95b62de11b92bd0534e361694673704caf8ac0b8c42329b2f9388844ea433",
+      "bytes": 68818
     },
     {
       "path": "situations/abc-exploration/previews/B.jpg",
@@ -344,9 +376,9 @@
       "bytes": 3732
     },
     {
-      "path": "situations/abc-exploration/prompts/A16.txt",
-      "sha256": "8bfb4da20cdc0551692c72cc515f0dfac48696ca58d56ea6fcc55c8d82681d7e",
-      "bytes": 3707
+      "path": "situations/abc-exploration/prompts/A16-E1-1.txt",
+      "sha256": "01756d83df6600fc1b2b045a3d843eb68c9cee3b4837b350ef254c2392dccc51",
+      "bytes": 3645
     },
     {
       "path": "situations/abc-exploration/prompts/B01.txt",
@@ -434,9 +466,9 @@
       "bytes": 1697
     },
     {
-      "path": "situations/abc-exploration/records/A16.json",
-      "sha256": "90c36f92d501926afb891cfc1c736ff8287cf54d0f048f319c974e6ca8afc434",
-      "bytes": 1697
+      "path": "situations/abc-exploration/records/A16-E1-1.json",
+      "sha256": "6aec82e62f48a746556b40fa61b357cd2119957261d9f8d49b99747150018e22",
+      "bytes": 3389
     },
     {
       "path": "situations/abc-exploration/records/B01.json",
@@ -512,8 +544,8 @@
     },
     {
       "path": "situations/abc-exploration/selection.json",
-      "sha256": "afe29fd03a7771e621154b573fb949fbf1b07d1105d38f9d15c4595a6ba3f225",
-      "bytes": 1109
+      "sha256": "bcb3386498d349a1a090b2298fc230e0b364b3697d0e99cf15ca5e3a98547309",
+      "bytes": 1643
     },
     {
       "path": "situations/abc-exploration/validate.py",

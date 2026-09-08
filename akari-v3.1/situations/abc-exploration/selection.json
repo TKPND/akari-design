@@ -55,5 +55,16 @@
     "user_selected_scene": true,
     "user_explicitly_selected_this_revision": false
   },
-  "scope": "Selected situation illustrations and batch wardrobe; no change to original face authorities."
+  "scope": "Selected situation illustrations and batch wardrobe; no change to original face authorities.",
+  "updated": "2026-09-08T07:23:15.083472+00:00",
+  "A16": {
+    "revision": "A16-E1-1",
+    "experiment_candidate_id": "E1-1",
+    "user_quote": "E1-1でいいかな。さりげない感じなので。これでreadmeも更新してcommitしよう",
+    "selection_recorded_at": "2026-09-08T07:23:15.083472+00:00",
+    "reason_ja": "さりげない感じなので。",
+    "user_selected_scene": true,
+    "user_explicitly_selected_this_revision": true,
+    "record": "situations/abc-exploration/history/A16-style-selection.json"
+  }
 }

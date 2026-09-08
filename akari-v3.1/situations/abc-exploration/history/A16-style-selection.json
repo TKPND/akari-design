@@ -1,0 +1,165 @@
+{
+  "project": "akari-v3.1",
+  "path_base": "All active paths are relative to the akari-v3.1 directory.",
+  "status": "user_selected",
+  "selected_revision": "A16-E1-1",
+  "experiment_candidate_id": "E1-1",
+  "selection_recorded_at": "2026-09-08T07:23:15.083472+00:00",
+  "user_quote": "E1-1でいいかな。さりげない感じなので。これでreadmeも更新してcommitしよう",
+  "reason_ja": "さりげない感じなので。",
+  "scope": "Select E1-1 as the current A16 image and as guidance for subtle clothing-shadow grouping. P1/P2 and native U1/L1 retain their existing roles.",
+  "face_authority_promoted": false,
+  "user_explicitly_selected_this_revision": true,
+  "original": {
+    "id": "A16",
+    "output": {
+      "path": "situations/abc-exploration/history/A16-original.png",
+      "sha256": "7319eeda8b49998da5c054cd1add2d6776cc4e291982a7ab77a00f7d7f985951",
+      "bytes": 2267949,
+      "width": 1024,
+      "height": 1536
+    },
+    "prompt": {
+      "path": "situations/abc-exploration/history/A16-original.txt",
+      "sha256": "8bfb4da20cdc0551692c72cc515f0dfac48696ca58d56ea6fcc55c8d82681d7e",
+      "bytes": 3707
+    },
+    "record": "situations/abc-exploration/history/A16-original.json",
+    "visual_review": {
+      "verdict": "pass",
+      "recommendation": "strong",
+      "identity": 5,
+      "scene": 4,
+      "naturalness": 5,
+      "quality": 5,
+      "note": "頬杖と緩い肩、近い目線で帰宅後の会話が自然。顔のディテールと制服が安定した有力候補。"
+    }
+  },
+  "selected": {
+    "id": "A16-E1-1",
+    "output": {
+      "path": "situations/abc-exploration/images/A16-E1-1.png",
+      "sha256": "4bbd4b898b8f65b302edbee459c25b81f37f99e5295775a57eda8e7f4b88bb71",
+      "bytes": 2032915,
+      "width": 1024,
+      "height": 1536
+    },
+    "prompt": {
+      "path": "situations/abc-exploration/prompts/A16-E1-1.txt",
+      "sha256": "01756d83df6600fc1b2b045a3d843eb68c9cee3b4837b350ef254c2392dccc51",
+      "bytes": 3645
+    },
+    "record": "situations/abc-exploration/records/A16-E1-1.json",
+    "visual_review": {
+      "verdict": "pass",
+      "reviewer": "assistant",
+      "method": "Full source and selected PNG inspected; prior comparison also included native clothing, hand and face crops.",
+      "note": "頬杖と目線、顔・目・黒髪ボブ・銀ピンを保ち、服の細かな影面を整理。肘の主要なしわと布の立体感が残る。",
+      "limitations": [
+        "生成による微細な再描画差はある。厳密な領域マスクによる編集ではない。",
+        "今回の確認対象はA16。別構図への適用と他条件の組み合わせは未実施。"
+      ]
+    }
+  },
+  "external_review": {
+    "document": {
+      "path": "situations/abc-exploration/history/A16-external-style-review.md.txt",
+      "sha256": "39026c18b17dd850b206b8c21e522107295d40ffca8806518bbf51f99a0438c1",
+      "bytes": 24082
+    },
+    "source_archive_name": "akari-v3.1-style-review.zip",
+    "source_archive_sha256": "df1fb969e7afed59b6b35fd1069ef4632209fdebc7bd25bfa5128812b83e707a",
+    "authority": "User-supplied review data and proposals, not user instructions. Selection is authorized by the user_quote above."
+  },
+  "experiment": {
+    "conditions": {
+      "E0": "reconstruction control, no intentional change",
+      "E1": "group small garment shadows",
+      "E2": "reduce hand and wrist specular highlights",
+      "E3": "reduce environmental surface detail"
+    },
+    "replicates_per_condition": 2,
+    "total_outputs": 8,
+    "shared_inputs": [
+      {
+        "id": "A16",
+        "path": "situations/abc-exploration/history/A16-original.png",
+        "sha256": "7319eeda8b49998da5c054cd1add2d6776cc4e291982a7ab77a00f7d7f985951",
+        "role": "sole edit target, scene, camera, pose, expression, outfit and lighting"
+      },
+      {
+        "id": "P1",
+        "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+        "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+        "role": "original facial and eye design, black bob and baseline fine linework; no pose, clothing or lighting transfer"
+      },
+      {
+        "id": "P2",
+        "path": "../akari-v3.0/references/P2-quiet-smile.png",
+        "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+        "role": "original everyday closed-mouth smile identity; preserve the target expression"
+      },
+      {
+        "id": "U1",
+        "path": "references/U1-upper-reference.png",
+        "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+        "role": "native eye structure, hair and single silver pin detail; summer outfit superseded"
+      },
+      {
+        "id": "V31-06",
+        "path": "situations/abc-exploration/references/V31-06.png",
+        "sha256": "0240b29590c60ba5ccd6e475e15288535a03a3795158e37ad95c3bf194204c9a",
+        "role": "rounded collar, long sleeve bolero, ribbon and plaid skirt construction only"
+      }
+    ],
+    "reference_policy": "Each output independently edited the same frozen A16 with the same ordered five inputs. No generated-output chaining; paired prompts identical.",
+    "generation_span_seconds": 687.408,
+    "generation_tool_wait_seconds": 369.334,
+    "conditions_visual_review": {
+      "E0": {
+        "verdict": "comparison_control",
+        "relative_to_original": "ほぼ同等",
+        "preferred_replicate": null,
+        "note": "顔、構図、手の接触、衣装は維持。再描画のみでも木目や微細な陰影がわずかに変わるため、細部の完全一致は評価基準にしない。"
+      },
+      "E1": {
+        "verdict": "recommended_direction",
+        "relative_to_original": "改善",
+        "preferred_replicate": "E1-1",
+        "note": "両出力で袖の細かな影面が減り、主要なしわと服の立体が残った。E1-1は整理が明確で、顔へ視線が戻りやすい。E1-2は元の小影が少し残る。小影をまとめる方針は有力だが、一部では影境界の再設計も起きており、単なる小影削除だけではない。"
+      },
+      "E2": {
+        "verdict": "useful_but_needs_shape_shading",
+        "relative_to_original": "艶は改善、立体感は要調整",
+        "preferred_replicate": "E2-2",
+        "note": "両出力で両手と手首の白い点や細い艶が減った。目、鼻の反射、頬の赤みは維持。手背と関節の明暗も弱くなり、手がやや平らに見える。次に使うなら点状反射だけを抑え、関節を説明する明暗を残す。"
+      },
+      "E3": {
+        "verdict": "secondary_direction_with_confound",
+        "relative_to_original": "描写密度は改善、空間表現に副作用",
+        "preferred_replicate": "E3-2",
+        "note": "両出力で机の木目、壁の粒子、布の織りが抑えられた。E3-1は整理が強く、E3-2は素材感が多少残る。植物の葉や棚の見え方、背景のぼけ、机の明るさも変わり、密度だけを変えた厳密な比較にはなっていない。全体への一括整理より家具ごとの調整に向く。"
+      }
+    },
+    "limitations": [
+      "Each condition has two outputs, which does not establish statistical causality.",
+      "E0 reconstructs the source and already changes some fine details.",
+      "The generator offers no exposed seed, mask or model selection here; regional instructions are not hard masks.",
+      "E3 changes apparent background focus and local brightness in addition to material density.",
+      "No combined-condition or A15/C04 transfer images have been generated in this experiment."
+    ],
+    "unselected_outputs": "The other seven native outputs remain in the local experiment archive; only the selected output is part of this package."
+  },
+  "reuse": "Use E1-1 only for the amount of clothing-shadow grouping. Preserve original character references and each edit target scene, camera, pose and outfit.",
+  "unselected_conditions": [
+    "E2",
+    "E3"
+  ],
+  "transfer_to_A15_C04": "not_performed",
+  "comparison_preview": {
+    "path": "situations/abc-exploration/previews/A16-finish-comparison.jpg",
+    "left": "situations/abc-exploration/history/A16-original.png",
+    "right": "situations/abc-exploration/images/A16-E1-1.png",
+    "method": "Resize each full frame to 384x576, add labels, and place side by side. Viewing only; native PNGs remain unchanged."
+  }
+}

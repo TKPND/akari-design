@@ -9,14 +9,14 @@
   "tool_output_filename": "exec-31cee4da-bf93-4347-8448-ba0bbdc340d4.png",
   "path_base": "akari-v3.1",
   "output": {
-    "path": "situations/abc-exploration/images/A16.png",
+    "path": "situations/abc-exploration/history/A16-original.png",
     "sha256": "7319eeda8b49998da5c054cd1add2d6776cc4e291982a7ab77a00f7d7f985951",
     "bytes": 2267949,
     "width": 1024,
     "height": 1536
   },
   "prompt": {
-    "path": "situations/abc-exploration/prompts/A16.txt",
+    "path": "situations/abc-exploration/history/A16-original.txt",
     "sha256": "8bfb4da20cdc0551692c72cc515f0dfac48696ca58d56ea6fcc55c8d82681d7e",
     "bytes": 3707
   },
