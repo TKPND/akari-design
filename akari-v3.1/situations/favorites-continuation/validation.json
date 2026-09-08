@@ -1,0 +1,135 @@
+{
+  "project": "akari-v3.1",
+  "status": "pass",
+  "checked_at": "2026-09-08T07:55:19.926223+00:00",
+  "scope": "Selected F01 package and v3.1 README links",
+  "method": "Python standard-library checks of relative paths, SHA-256, byte counts, PNG signature/CRC/zlib, selections, source copy equality and Markdown link targets.",
+  "checks": {
+    "asset_records": 31,
+    "pngs": 14,
+    "document_links": 38
+  },
+  "selected_ids": [
+    "F01"
+  ],
+  "native_png_and_prompt_unchanged": true,
+  "all_active_paths_relative_and_resolved": true,
+  "reference_roles_preserved": true,
+  "original_face_authority_promoted": false,
+  "assets": [
+    {
+      "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+      "bytes": 1869375,
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "path": "../akari-v3.0/references/P2-quiet-smile.png",
+      "bytes": 1836424,
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "path": "references/L1-lower-reference.png",
+      "bytes": 1815855,
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "references/S1-silver-slim-pin.png",
+      "bytes": 1925688,
+      "sha256": "6e35a9f51a68d203d8252dc71d7182fe313d8b66a2c2cb0bf099c83b773cb85f",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "path": "references/U1-upper-reference.png",
+      "bytes": 1852161,
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "situations/abc-exploration/images/A08.png",
+      "bytes": 2241931,
+      "sha256": "6d81908e89ccddb73fdbc58ac8dc16bbd5c142843245126a831571abd105e0d6",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "situations/abc-exploration/images/A13.png",
+      "bytes": 2308949,
+      "sha256": "e090b707738c50c482dc6c3234060c4d24eb16b619a504c705797bf490aa4d73",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "situations/abc-exploration/images/A15.png",
+      "bytes": 2676681,
+      "sha256": "398cbd0ffebf5dfc8da0b86e33cd47e4db976ec1e8ae8e6be4a69653d51f62d4",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "path": "situations/abc-exploration/images/A16-E1-1.png",
+      "bytes": 2032915,
+      "sha256": "4bbd4b898b8f65b302edbee459c25b81f37f99e5295775a57eda8e7f4b88bb71",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "situations/abc-exploration/images/B16.png",
+      "bytes": 2188177,
+      "sha256": "9f687158c3c708b66738d2798f7ac1e40a099aadefef4ac8d96b7394a33cd773",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "path": "situations/abc-exploration/images/C13.png",
+      "bytes": 2524627,
+      "sha256": "58bcdc7d5023695a004237cee31e6c354f2b044ac93b711c000146961bf56715",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "situations/abc-exploration/images/C15.png",
+      "bytes": 2126144,
+      "sha256": "e9e8e573add80bec80cba9228828f4364872fbc3bb5c0d3ec32efdea46a42c87",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "situations/abc-exploration/references/V31-06.png",
+      "bytes": 2600228,
+      "sha256": "0240b29590c60ba5ccd6e475e15288535a03a3795158e37ad95c3bf194204c9a",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "situations/favorites-continuation/images/F01-cushion-listening.png",
+      "bytes": 2572126,
+      "sha256": "6a07e44c0025d7b63820a008f7a1d1c59ece6ceb3a998d3a057b0b2c38c7e0c1",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "situations/favorites-continuation/preferences.json",
+      "bytes": 3390,
+      "sha256": "147026ddb6b73f1fc012681d67f3a67af572bbdf19f4d56dbddb7cc05c352a8c"
+    },
+    {
+      "path": "situations/favorites-continuation/prompts/F01.txt",
+      "bytes": 4730,
+      "sha256": "4ce6fd73c25bf51839077a17bd532dcdbffc25d2fee96b8997deb877fd37a4ac"
+    }
+  ],
+  "markdown_lint": {
+    "command": "npm run lint:md",
+    "exit_code": 0,
+    "files": 209,
+    "issues": 0
+  }
+}

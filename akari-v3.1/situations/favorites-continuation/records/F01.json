@@ -1,0 +1,115 @@
+{
+  "id": "F01",
+  "title_ja": "クッションを抱えて、話を聞く",
+  "status": "user_selected",
+  "user_selected": true,
+  "tool": "image_gen",
+  "tool_mode": "built-in-imagegen",
+  "model": null,
+  "model_note": "The built-in tool did not expose the model name.",
+  "started_at": "2026-09-08T07:39:28.196Z",
+  "elapsed_seconds": 59.326,
+  "tool_output_filename": "exec-5f4dce39-af22-4818-b5ae-6557db441731.png",
+  "output_transformation": "Byte-for-byte copy of generated PNG; no image editing.",
+  "path_base": "akari-v3.1",
+  "output": {
+    "path": "situations/favorites-continuation/images/F01-cushion-listening.png",
+    "sha256": "6a07e44c0025d7b63820a008f7a1d1c59ece6ceb3a998d3a057b0b2c38c7e0c1",
+    "bytes": 2572126,
+    "width": 1024,
+    "height": 1536
+  },
+  "prompt": {
+    "path": "situations/favorites-continuation/prompts/F01.txt",
+    "sha256": "4ce6fd73c25bf51839077a17bd532dcdbffc25d2fee96b8997deb877fd37a4ac",
+    "bytes": 4730
+  },
+  "preferences": {
+    "path": "situations/favorites-continuation/preferences.json"
+  },
+  "inputs": [
+    {
+      "id": "P1",
+      "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+      "role": "original_face_hair_eye_drawing_authority",
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "bytes": 1869375
+    },
+    {
+      "id": "P2",
+      "path": "../akari-v3.0/references/P2-quiet-smile.png",
+      "role": "original_everyday_closed_mouth_smile_authority",
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "bytes": 1836424
+    },
+    {
+      "id": "U1",
+      "path": "references/U1-upper-reference.png",
+      "role": "native_upper_detail_hair_eyes_pin_body_construction",
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "bytes": 1852161
+    },
+    {
+      "id": "L1",
+      "path": "references/L1-lower-reference.png",
+      "role": "native_lower_detail_legs_grey_ribbed_socks",
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "bytes": 1815855
+    },
+    {
+      "id": "V31-06",
+      "path": "situations/abc-exploration/references/V31-06.png",
+      "role": "scene_wardrobe_and_bag_authority",
+      "sha256": "0240b29590c60ba5ccd6e475e15288535a03a3795158e37ad95c3bf194204c9a",
+      "bytes": 2600228
+    }
+  ],
+  "inspected_support_only": [
+    "A08",
+    "A13",
+    "A15",
+    "B16",
+    "C13",
+    "C15",
+    "S1",
+    "A16-E1-1"
+  ],
+  "input_note": "Five native files were passed directly to imagegen. Favorites, S1 and E1-1 were visually inspected to shape the written direction; they were not included in the five-file payload.",
+  "scene_authority": "New scene direction written for F01; no existing image designated as an edit target.",
+  "file_validation": {
+    "png_signature": true,
+    "all_chunk_crcs_valid": true,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "source_copy_hash_match": true,
+    "input_files_exist": true,
+    "chunk_count": 4
+  },
+  "visual_review": {
+    "reviewer": "assistant",
+    "method": "Generated image and saved PNG inspected at original 1024x1536 resolution.",
+    "identity": "P1/P2 lineage reads consistently: black bob, soft downturned grey eyes and small closed-mouth smile.",
+    "hairpin": "One silver straight pin at character-left temple.",
+    "wardrobe": "Rounded collar, dark ribbon, long-sleeve bolero and blue-grey plaid skirt retained.",
+    "anatomy": "Two connected arms and separately readable hands embrace the cushion; two continuous legs and grey socked feet are visible. No obvious limb duplication or discontinuity observed.",
+    "scene": "Floor seating, cushion embrace, sofa, mug/book and bag read coherently.",
+    "finish": "Clothing shadows are grouped while elbow folds and plaid remain legible. This is a visual transfer check, not a controlled A/B validation.",
+    "interpretation_limit": "The result is slightly more cheerful and directly camera-engaged than the quiet off-axis listening direction.",
+    "selection_state_when_reviewed": "Candidate had not yet been user-selected at the time of the assistant review."
+  },
+  "selection_record": "situations/favorites-continuation/selection.json",
+  "input_ids": [
+    "P1",
+    "P2",
+    "U1",
+    "L1",
+    "V31-06"
+  ],
+  "approval": {
+    "user_quote": "これええやん。commitして派生作ろう",
+    "recorded_at": "2026-09-08T07:54:09.362522+00:00",
+    "scope": "F01 scene approval and permission to commit it and create derivatives."
+  }
+}

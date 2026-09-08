@@ -1,0 +1,101 @@
+{
+  "project": "akari-v3.1",
+  "recorded_at": "2026-09-08T07:38:54.630Z",
+  "user_message": "v3.1で画像作りたい 直近の akari-v3.1/situations/abc-exploration/images/ の好みは以下 A08, A13, A15, B16, C13, C15",
+  "favorite_ids": [
+    "A08",
+    "A13",
+    "A15",
+    "B16",
+    "C13",
+    "C15"
+  ],
+  "scope": "User-stated recent scene preferences; original face and expression reference roles remain in force.",
+  "assistant_interpretation_ja": [
+    "家でふっと力が抜けた仕草",
+    "何かしている途中の自然さ",
+    "やわらかい目元と生活感"
+  ],
+  "interpretation_status": "assistant_inference_not_user_confirmed",
+  "first_candidate": {
+    "id": "F01",
+    "title_ja": "クッションを抱えて、話を聞く",
+    "basis": [
+      "A13:近い距離感と低い顎からの視線",
+      "A15:床でくつろぐ姿",
+      "B16:床座りと会話のつながり"
+    ],
+    "status": "user_selected",
+    "output": "situations/favorites-continuation/images/F01-cushion-listening.png",
+    "approval_quote": "これええやん。commitして派生作ろう",
+    "selected_at": "2026-09-08T07:54:09.362522+00:00"
+  },
+  "path_base": "akari-v3.1",
+  "inspected_favorites": [
+    {
+      "id": "A08",
+      "path": "situations/abc-exploration/images/A08.png",
+      "role": "scene_preference_only_not_face_authority",
+      "sha256": "6d81908e89ccddb73fdbc58ac8dc16bbd5c142843245126a831571abd105e0d6",
+      "bytes": 2241931
+    },
+    {
+      "id": "A13",
+      "path": "situations/abc-exploration/images/A13.png",
+      "role": "scene_preference_only_not_face_authority",
+      "sha256": "e090b707738c50c482dc6c3234060c4d24eb16b619a504c705797bf490aa4d73",
+      "bytes": 2308949
+    },
+    {
+      "id": "A15",
+      "path": "situations/abc-exploration/images/A15.png",
+      "role": "scene_preference_only_not_face_authority",
+      "sha256": "398cbd0ffebf5dfc8da0b86e33cd47e4db976ec1e8ae8e6be4a69653d51f62d4",
+      "bytes": 2676681
+    },
+    {
+      "id": "B16",
+      "path": "situations/abc-exploration/images/B16.png",
+      "role": "scene_preference_only_not_face_authority",
+      "sha256": "9f687158c3c708b66738d2798f7ac1e40a099aadefef4ac8d96b7394a33cd773",
+      "bytes": 2188177
+    },
+    {
+      "id": "C13",
+      "path": "situations/abc-exploration/images/C13.png",
+      "role": "scene_preference_only_not_face_authority",
+      "sha256": "58bcdc7d5023695a004237cee31e6c354f2b044ac93b711c000146961bf56715",
+      "bytes": 2524627
+    },
+    {
+      "id": "C15",
+      "path": "situations/abc-exploration/images/C15.png",
+      "role": "scene_preference_only_not_face_authority",
+      "sha256": "e9e8e573add80bec80cba9228828f4364872fbc3bb5c0d3ec32efdea46a42c87",
+      "bytes": 2126144
+    }
+  ],
+  "inspected_additional_guides": [
+    {
+      "id": "S1",
+      "path": "references/S1-silver-slim-pin.png",
+      "role": "pin_design_visual_check",
+      "sha256": "6e35a9f51a68d203d8252dc71d7182fe313d8b66a2c2cb0bf099c83b773cb85f",
+      "bytes": 1925688
+    },
+    {
+      "id": "A16-E1-1",
+      "path": "situations/abc-exploration/images/A16-E1-1.png",
+      "role": "clothing_shadow_grouping_visual_check",
+      "sha256": "4bbd4b898b8f65b302edbee459c25b81f37f99e5295775a57eda8e7f4b88bb71",
+      "bytes": 2032915
+    }
+  ],
+  "generation_input_ids": [
+    "P1",
+    "P2",
+    "U1",
+    "L1",
+    "V31-06"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "project": "akari-v3.1",
+  "path_base": "akari-v3.1",
+  "status": "user_selected",
+  "selected_ids": [
+    "F01"
+  ],
+  "recorded_at": "2026-09-08T07:54:09.362522+00:00",
+  "user_quote": "これええやん。commitして派生作ろう",
+  "scope": "F01 daily-life scene; original face/eye/expression authorities retain their roles.",
+  "scene_references_only": true,
+  "face_authority_promoted": false
+}

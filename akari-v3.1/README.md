@@ -17,6 +17,10 @@ A04は靴の取り違えを修正済み。顔の原本や、この参照セッ�
 A16は服の影をさりげなく整理した[E1-1](situations/abc-exploration/images/A16-E1-1.png)を採用。
 今後の服の仕上げは、下記の「採用した服の仕上げ」を参照する。
 
+直近の好みA08・A13・A15・B16・C13・C15から作った
+[F01「クッションを抱えて、話を聞く」](situations/favorites-continuation/README.md)も採用済み。
+派生にはF01の場面とくつろいだ仕草を使い、顔と表情の原本はP1/P2を継続する。
+
 まず [design-state.json](design-state.json) と
 [reference-set.json](reference-set.json) を読む。
 同じリポジトリ内の `akari-v3.0/` と一緒に使う。

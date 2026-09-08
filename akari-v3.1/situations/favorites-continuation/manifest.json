@@ -1,0 +1,34 @@
+{
+  "project": "akari-v3.1",
+  "path_base": "akari-v3.1",
+  "title_ja": "好み6枚からの続き",
+  "status": "user_selected",
+  "selected_count": 1,
+  "selected_ids": [
+    "F01"
+  ],
+  "selection": "situations/favorites-continuation/selection.json",
+  "preferences": "situations/favorites-continuation/preferences.json",
+  "references": "situations/favorites-continuation/references.json",
+  "entries": [
+    {
+      "id": "F01",
+      "title_ja": "クッションを抱えて、話を聞く",
+      "output": {
+        "path": "situations/favorites-continuation/images/F01-cushion-listening.png",
+        "sha256": "6a07e44c0025d7b63820a008f7a1d1c59ece6ceb3a998d3a057b0b2c38c7e0c1",
+        "bytes": 2572126,
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/favorites-continuation/prompts/F01.txt",
+        "sha256": "4ce6fd73c25bf51839077a17bd532dcdbffc25d2fee96b8997deb877fd37a4ac",
+        "bytes": 4730
+      },
+      "record": "situations/favorites-continuation/records/F01.json",
+      "user_selected": true,
+      "face_authority_promoted": false
+    }
+  ]
+}
