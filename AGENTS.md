@@ -30,11 +30,16 @@ This repository builds and audits Akari visual-reference materials.
   construction. P6's navy socks and missing pin are superseded for v3.1.
 - Soft sock material is a MUST wherever sock fabric is visible. Follow
   `akari-v3.1/sock-material-requirement.json` and the reusable
-  `akari-v3.1/prompts/sock-material-must.txt`, using selected F01/F02/F04/F05/F06
-  for material only. Keep rounded fabric-covered toes when visible and natural
-  ankle/contact folds. Shoes may cover the toes; do not force hidden details
-  into view. New poses and cameras remain free, with P1/P2 and native U1/L1
-  retaining their original roles.
+  `akari-v3.1/prompts/sock-material-must.txt`. Use the selected F09 sock-detail
+  crop as the default combined material input: one opaque, softly rounded toe
+  envelope with sparse, shallow natural cloth wrinkles around the forefoot,
+  toe seam and ankle. Match F09's restrained wrinkle strength; placement follows
+  the new pose and contact. F01/F07 remain rounded-toe comparisons. No individual
+  toes, toe-separation lines, nails or toe-shaped bumps may show through shading
+  or silhouette. Wrinkles describe fabric, not the hidden toes. These examples
+  supply material only and do not replace the face, pose or wardrobe sources.
+  Shoes may cover the toes; do not force hidden details into view. New poses
+  and cameras remain free, with P1/P2 and native U1/L1 retaining their roles.
 - For corrections, keep the edit target as the scene, pose and camera source.
   For split generation, establish a shared layout and waist/skirt overlap;
   during assembly, preserve complete arms/hands and inspect clothing seams.

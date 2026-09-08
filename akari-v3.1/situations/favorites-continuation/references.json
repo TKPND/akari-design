@@ -132,6 +132,20 @@
       "U1",
       "L1",
       "F01"
+    ],
+    "F08": [
+      "F08-remake2-socks3",
+      "F07-toe-detail",
+      "F01-toe-detail",
+      "L1",
+      "P1"
+    ],
+    "F09": [
+      "F09-remake1-socks1",
+      "F07-toe-detail",
+      "F01-toe-detail",
+      "L1",
+      "P1"
     ]
   },
   "selected_scene_support": [
@@ -179,7 +193,49 @@
       "width": 1024,
       "height": 1536,
       "role": "approved_scene_and_mandatory_soft_sock_material_support_not_face_authority"
+    },
+    {
+      "id": "F08",
+      "path": "situations/favorites-continuation/images/F08-rain-at-window.png",
+      "bytes": 2167659,
+      "sha256": "a0c7763b9429ca429254a147bc28421397e13ba73146d3539e6fd0a25de28e75",
+      "width": 1024,
+      "height": 1536,
+      "role": "approved_scene_support_not_face_authority"
+    },
+    {
+      "id": "F09",
+      "path": "situations/favorites-continuation/images/F09-drying-mug-listening.png",
+      "bytes": 1908983,
+      "sha256": "6ebb67e3afc8c43a66352bf66102ac20f369c0ba7cc548871ae9b71ee40ad2a2",
+      "width": 1024,
+      "height": 1536,
+      "role": "preferred_rounded_opaque_sock_material_and_cloth_wrinkle_strength_only"
     }
   ],
-  "sock_material_requirement": "sock-material-requirement.json"
+  "sock_material_requirement": "sock-material-requirement.json",
+  "preferred_sock_material_input": {
+    "id": "F09-sock-detail",
+    "path": "references/materials/F09-rounded-wrinkled-sock-detail.png",
+    "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+    "bytes": 71786,
+    "width": 280,
+    "height": 210,
+    "role": "preferred_opaque_rounded_sock_toe_and_restrained_cloth_wrinkle_material_only",
+    "source": {
+      "path": "situations/favorites-continuation/images/F09-drying-mug-listening.png",
+      "sha256": "6ebb67e3afc8c43a66352bf66102ac20f369c0ba7cc548871ae9b71ee40ad2a2",
+      "bytes": 1908983,
+      "width": 1024,
+      "height": 1536
+    },
+    "source_region_xywh": [
+      335,
+      1300,
+      280,
+      210
+    ],
+    "transformation": "Unmodified pixel crop; no resize, retouch or generative alteration.",
+    "face_authority_promoted": false
+  }
 }

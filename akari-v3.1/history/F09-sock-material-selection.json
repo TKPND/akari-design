@@ -1,0 +1,43 @@
+{
+  "project": "akari-v3.1",
+  "path_base": "akari-v3.1",
+  "status": "user_required",
+  "recorded_at": "2026-09-08T10:06:37.523446+00:00",
+  "user_quote": "F09ぐらいがええな。\n今後の生成でも適用できるように、生成条件もアップデートしてコミット頼む。\n後F08,F09もコミットしてええよ。",
+  "preferred_example_id": "F09",
+  "full_image": {
+    "path": "situations/favorites-continuation/images/F09-drying-mug-listening.png",
+    "sha256": "6ebb67e3afc8c43a66352bf66102ac20f369c0ba7cc548871ae9b71ee40ad2a2",
+    "bytes": 1908983,
+    "width": 1024,
+    "height": 1536
+  },
+  "detail_input": {
+    "id": "F09-sock-detail",
+    "path": "references/materials/F09-rounded-wrinkled-sock-detail.png",
+    "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+    "bytes": 71786,
+    "width": 280,
+    "height": 210,
+    "role": "preferred_opaque_rounded_sock_toe_and_restrained_cloth_wrinkle_material_only",
+    "source": {
+      "path": "situations/favorites-continuation/images/F09-drying-mug-listening.png",
+      "sha256": "6ebb67e3afc8c43a66352bf66102ac20f369c0ba7cc548871ae9b71ee40ad2a2",
+      "bytes": 1908983,
+      "width": 1024,
+      "height": 1536
+    },
+    "source_region_xywh": [
+      335,
+      1300,
+      280,
+      210
+    ],
+    "transformation": "Unmodified pixel crop; no resize, retouch or generative alteration.",
+    "face_authority_promoted": false
+  },
+  "generation_record": "situations/favorites-continuation/records/F09.json",
+  "scene_selection": "situations/favorites-continuation/selection.json",
+  "scope": "Preferred rounded opaque sock toes with sparse shallow natural cloth wrinkles. No individual toe anatomy; exact pose, wrinkle placement and face are not transferred.",
+  "face_authority_promoted": false
+}

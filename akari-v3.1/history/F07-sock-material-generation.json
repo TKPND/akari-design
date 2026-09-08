@@ -1,0 +1,119 @@
+{
+  "id": "F07",
+  "title_ja": "隣、空けたよ",
+  "project": "akari-v3.1",
+  "status": "preserved_generation_for_material_selection",
+  "user_selected": false,
+  "path_base": "akari-v3.1",
+  "tool": "image_gen",
+  "tool_mode": "built-in-imagegen",
+  "model": null,
+  "model_note": "The built-in tool response exposed image_url and output_hint, but did not expose a model name.",
+  "started_at": "2026-09-08T08:57:34.995Z",
+  "finished_at": "2026-09-08T08:58:13.825Z",
+  "elapsed_seconds": 38.83,
+  "elapsed_scope": "Wall-clock duration of this image tool request, including tool-side queueing.",
+  "output": {
+    "path": "references/materials/F07-rounded-opaque-sock-toes.png",
+    "bytes": 2586140,
+    "sha256": "b8ecb57533a4ca3faa96542167e3eb1c6a2647fa90c925245f112d4b8b6a7a0d",
+    "width": 1536,
+    "height": 1024,
+    "png_crc_passed": true
+  },
+  "prompt": {
+    "path": "prompts/F07-material-source.txt",
+    "bytes": 4663,
+    "sha256": "8acc2ceb9a679d09c941e5246aaec4c83b585a820e5b4db3e53c4578ba796b0a"
+  },
+  "input_ids": [
+    "P1",
+    "P2",
+    "U1",
+    "L1",
+    "F01"
+  ],
+  "inputs": [
+    {
+      "id": "P1",
+      "role": "original_face_eyes_black_bob_drawing_authority",
+      "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+      "bytes": 1869375,
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "id": "P2",
+      "role": "original_everyday_closed_mouth_smile_authority",
+      "path": "../akari-v3.0/references/P2-quiet-smile.png",
+      "bytes": 1836424,
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "id": "U1",
+      "role": "native_upper_eye_hair_pin_detail",
+      "path": "references/U1-upper-reference.png",
+      "bytes": 1852161,
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "L1",
+      "role": "native_leg_construction_grey_ribbed_below_knee_sock_design",
+      "path": "references/L1-lower-reference.png",
+      "bytes": 1815855,
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "F01",
+      "role": "selected_long_sleeve_outfit_and_soft_sock_material_only",
+      "path": "situations/favorites-continuation/images/F01-cushion-listening.png",
+      "bytes": 2572126,
+      "sha256": "6a07e44c0025d7b63820a008f7a1d1c59ece6ceb3a998d3a057b0b2c38c7e0c1",
+      "width": 1024,
+      "height": 1536
+    }
+  ],
+  "inspected_support_only": [
+    {
+      "id": "S1",
+      "role": "pin_visual_check_only_not_direct_input",
+      "path": "references/S1-silver-slim-pin.png",
+      "bytes": 1925688,
+      "sha256": "6e35a9f51a68d203d8252dc71d7182fe313d8b66a2c2cb0bf099c83b773cb85f",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "id": "A16-E1-1",
+      "role": "clothing_shadow_grouping_visual_check_only_not_direct_input",
+      "path": "situations/abc-exploration/images/A16-E1-1.png",
+      "bytes": 2032915,
+      "sha256": "4bbd4b898b8f65b302edbee459c25b81f37f99e5295775a57eda8e7f4b88bb71",
+      "width": 1024,
+      "height": 1536
+    }
+  ],
+  "tool_output_filename": "exec-39d7d20f-4c5a-4515-a3b4-c0c8b80af4f4.png",
+  "source_copy_bytes_identical": true,
+  "output_transformation": "Byte-for-byte copy of native tool PNG; no compositing, warping or pixel edits applied to deliverable.",
+  "visual_review": {
+    "id": "F07",
+    "verdict": "pass_as_candidate",
+    "identity": "P1/P2 face lineage, closed-mouth smile, black bob and single silver pin retained.",
+    "scene": "Empty adjacent sofa seat and open hand touching its cushion clearly communicate the invitation.",
+    "anatomy": "Both arms, hands, knees and feet connect naturally; seat-hand and foot contacts checked in crops.",
+    "material": "Rounded sock-covered toes, supple shading and visible ankle folds retained.",
+    "limitations": "The still image shows the hand resting on the seat; it cannot establish a repeated patting motion. Camera is slightly above seated eye level."
+  },
+  "face_authority_promoted": false,
+  "original_scene_review_status": "assistant_reviewed_candidate",
+  "material_only_user_selected": true,
+  "material_selection_record": "history/F07-sock-material-selection.json"
+}

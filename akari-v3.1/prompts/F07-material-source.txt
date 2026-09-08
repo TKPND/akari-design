@@ -1,0 +1,27 @@
+Use case: illustration-story.
+Create a NEW Akari v3.1 slice-of-life illustration, LANDSCAPE 3:2.
+
+SCENE — "I saved you a seat":
+Akari has just shifted a little to one side of a comfortable beige sofa to make room for the unseen viewer. She sits on the right half of the picture, with a clearly empty seat immediately to her left in the picture. One relaxed open hand is caught softly patting that empty cushion, fingers touching and very slightly compressing the fabric. Her other hand rests loosely on her own lap. Her body is at a slight three-quarter angle; her shoulders are lowered and her head tilts a little toward the viewer. Her gentle eye contact and small closed-mouth smile convey an unforced invitation to sit next to her.
+Her knees are comfortably together, lower legs angled a little to one side, both ordinary sock-covered feet resting on the rug. Her skirt settles naturally over her seated thighs. All limbs are continuous and naturally supported; the hand indicating the empty seat is clear and easy to read.
+
+COMPOSITION AND LIGHT:
+View from a comfortable conversational distance and approximately her seated eye height, never a low angle. Show her complete seated figure from full hair to feet, plus the empty sofa seat as an important part of the composition. Keep her face large enough to preserve its eye detail. Warm diffuse late-afternoon light, soft beige upholstery and rug, a simple cushion moved toward the sofa end, and a quiet small section of the living room. The empty seat is welcoming, not filled with props. No second character or viewer's limbs. The important story is the small inviting hand gesture and her relaxed smile.
+
+REFERENCE ROLES (five separate native reference images, exact order):
+1. P1: ORIGINAL authority for Akari's face proportions, rounded downturned grey eyes, black bob, bangs, age impression and drawing style.
+2. P2: ORIGINAL authority for her ordinary small closed-mouth smile. Use this relaxed smile unless this scene describes a gentle variation.
+3. Native U1: full-resolution eye, hair, single silver hairpin and upper-body construction details. Retain these details while following the long-sleeve wardrobe specified below.
+4. Native L1: full-resolution leg construction, medium-neutral-grey opaque ribbed below-knee sock color, length and fit. This indoor scene has socks and no shoes; keep any off-frame details off frame.
+5. F01: ONLY the selected long-sleeve bolero and plaid outfit, plus supple cloth and soft sock material rendering. F01 is not a scene, pose, camera, furniture arrangement or facial-authority input. Construct the new scene described above.
+
+IDENTITY AND WARDROBE:
+Preserve P1's approachable rounded, gently downturned eyes, small distinct dark oval pupils, darker neutral-grey upper irises, lighter grey lower irises and rounded pale lower-iris reflections. Do not enlarge the eyes or replace their structure with oversized white highlights. Keep the natural black bob, straight bangs, restrained fine hair highlights and one slender bright-silver straight pin above her left ear, on viewer-right in a frontal view.
+Use the outfit shown in F01: slate/navy cropped open long-sleeve bolero with pale piping, white buttoned blouse with a rounded Peter Pan collar, dark navy ribbon, blue-grey fine-plaid pleated skirt, and medium-neutral-grey opaque ribbed below-knee socks. The short-sleeve open-collar shirt and plain skirt in U1/L1 are construction references; the selected long-sleeve outfit is the wardrobe for this scene.
+
+SOFT SOCK MATERIAL — MUST WHERE VISIBLE:
+Use F01's supple opaque rib knit with softly connected shading and small natural folds at bending ankles and compressed contact areas. If fabric-covered toes are visible, preserve a softly rounded fabric envelope at normal anatomical scale. Socks are ordinary fitted below-knee socks, not rigid shoe-shaped shells or bulky leg warmers. Let the folds follow this new pose. Apply this to visible fabric only; do not change the camera or expose hidden details to demonstrate the material.
+
+FINISH:
+Polished gentle anime illustration matching P1/P2 and native U1 detail, softly modeled skin, coherent light and clear but delicate linework. Follow the selected A16-E1-1 clothing-finish direction: subtly group small internal garment shadows into coherent shapes while retaining major folds, cloth volume, seams, pale piping, collar, ribbon and plaid structure. Keep the expression alive and the body naturally supported.
+One coherent finished illustration, one Akari, exactly two anatomically connected arms and hands; normal fingers and object contact. No panels, text, speech bubbles, logos or watermarks.

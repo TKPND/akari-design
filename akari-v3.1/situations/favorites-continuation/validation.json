@@ -1,94 +1,40 @@
 {
   "project": "akari-v3.1",
   "status": "pass",
-  "checked_at": "2026-09-08T08:38:46.423141+00:00",
-  "scope": "Selected F01/F02/F04/F05/F06 package, mandatory sock material guidance and active v3.1 base references.",
-  "method": "Python standard-library checks of relative paths, hashes, byte counts, PNG signature/CRC/zlib, selections, source PNG/prompt copy equality, native authority roles and Markdown link targets.",
+  "checked_at": "2026-09-08T10:15:11.349510+00:00",
+  "scope": "Selected F01/F02/F04/F05/F06/F08/F09 package, F08/F09 generation ancestry, F07 material preservation and F09 default rounded opaque sock material with restrained cloth wrinkles.",
+  "method": "Relative paths, SHA-256/bytes, PNG signature/CRC/zlib, native source/prompt equality, cropped pixel equality, scene selections, authority roles and Markdown links.",
   "checks": {
-    "json_files": 14,
-    "asset_records": 118,
-    "unique_pngs": 26,
-    "active_path_occurrences": 185,
-    "document_links": 90
+    "asset_records": 224,
+    "active_path_occurrences": 308,
+    "json_files": 26,
+    "unique_assets": 52,
+    "unique_pngs": 38,
+    "document_links": 77,
+    "source_file_copies_compared": 47,
+    "reference_crops_compared": 4
   },
   "selected_ids": [
     "F01",
     "F02",
     "F04",
     "F05",
-    "F06"
+    "F06",
+    "F08",
+    "F09"
   ],
-  "native_png_and_prompt_unchanged": true,
+  "preferred_sock_material_id": "F09",
+  "preferred_material_detail_id": "F09-sock-detail",
   "all_active_paths_relative_and_resolved": true,
+  "native_png_and_prompt_unchanged": true,
   "reference_roles_preserved": true,
   "original_face_authority_promoted": false,
   "sock_material_must_consistent": true,
   "pose_is_fixed": false,
+  "wrinkle_count_or_placement_fixed": false,
   "footwear_occlusion_allowed": true,
+  "generation_ancestry_complete": true,
   "assets": [
-    {
-      "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
-      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
-      "bytes": 1869375,
-      "width": 1254,
-      "height": 1254
-    },
-    {
-      "path": "../akari-v3.0/references/P2-quiet-smile.png",
-      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
-      "bytes": 1836424,
-      "width": 1254,
-      "height": 1254
-    },
-    {
-      "path": "references/U1-upper-reference.png",
-      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
-      "bytes": 1852161,
-      "width": 1024,
-      "height": 1536
-    },
-    {
-      "path": "references/L1-lower-reference.png",
-      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
-      "bytes": 1815855,
-      "width": 1024,
-      "height": 1536
-    },
-    {
-      "path": "references/S1-silver-slim-pin.png",
-      "sha256": "6e35a9f51a68d203d8252dc71d7182fe313d8b66a2c2cb0bf099c83b773cb85f",
-      "bytes": 1925688,
-      "width": 1254,
-      "height": 1254
-    },
-    {
-      "path": "../akari-v3.0/references/P6-relaxed-full-body.png",
-      "sha256": "018f45133acb2d9cd3625d27090b38084f6b795a92a726ff641785d889c0a823",
-      "bytes": 1664313,
-      "width": 1024,
-      "height": 1536
-    },
-    {
-      "path": "references/M2-full-body-montage.png",
-      "sha256": "73b3f5d351072612480d0d70687a9fef6d745da8fc3e4a0fd47577b9c76bf74e",
-      "bytes": 5447479,
-      "width": 2048,
-      "height": 3072
-    },
-    {
-      "path": "references/G2-silver-pin-gray-socks-full-body.png",
-      "sha256": "950b800a86ba138d3e8d20ab902069f56298d726f5f763cad497982d70bb798c",
-      "bytes": 1888426,
-      "width": 1024,
-      "height": 1536
-    },
-    {
-      "path": "situations/abc-exploration/images/A16-E1-1.png",
-      "sha256": "4bbd4b898b8f65b302edbee459c25b81f37f99e5295775a57eda8e7f4b88bb71",
-      "bytes": 2032915,
-      "width": 1024,
-      "height": 1536
-    },
     {
       "path": "situations/favorites-continuation/images/F01-cushion-listening.png",
       "sha256": "6a07e44c0025d7b63820a008f7a1d1c59ece6ceb3a998d3a057b0b2c38c7e0c1",
@@ -125,9 +71,93 @@
       "height": 1536
     },
     {
+      "path": "references/materials/F07-rounded-opaque-sock-toes.png",
+      "sha256": "b8ecb57533a4ca3faa96542167e3eb1c6a2647fa90c925245f112d4b8b6a7a0d",
+      "bytes": 2586140,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "path": "situations/favorites-continuation/images/F09-drying-mug-listening.png",
+      "sha256": "6ebb67e3afc8c43a66352bf66102ac20f369c0ba7cc548871ae9b71ee40ad2a2",
+      "bytes": 1908983,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+      "bytes": 71786,
+      "width": 280,
+      "height": 210
+    },
+    {
       "path": "prompts/sock-material-must.txt",
-      "sha256": "e865f392990c92b1b20698079a61b902584c475ba0e003940b64050bd5dc088f",
-      "bytes": 2088
+      "sha256": "ce47a311cf394964c56acfc76b0c50d5b26099fab52bf06fa4b38a1f155ee2c0",
+      "bytes": 4201
+    },
+    {
+      "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "bytes": 1869375,
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "path": "../akari-v3.0/references/P2-quiet-smile.png",
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "bytes": 1836424,
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "path": "references/U1-upper-reference.png",
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "bytes": 1852161,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "references/L1-lower-reference.png",
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "bytes": 1815855,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "references/S1-silver-slim-pin.png",
+      "sha256": "6e35a9f51a68d203d8252dc71d7182fe313d8b66a2c2cb0bf099c83b773cb85f",
+      "bytes": 1925688,
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "path": "references/M2-full-body-montage.png",
+      "sha256": "73b3f5d351072612480d0d70687a9fef6d745da8fc3e4a0fd47577b9c76bf74e",
+      "bytes": 5447479,
+      "width": 2048,
+      "height": 3072
+    },
+    {
+      "path": "references/G2-silver-pin-gray-socks-full-body.png",
+      "sha256": "950b800a86ba138d3e8d20ab902069f56298d726f5f763cad497982d70bb798c",
+      "bytes": 1888426,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "../akari-v3.0/references/P6-relaxed-full-body.png",
+      "sha256": "018f45133acb2d9cd3625d27090b38084f6b795a92a726ff641785d889c0a823",
+      "bytes": 1664313,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "situations/abc-exploration/images/A16-E1-1.png",
+      "sha256": "4bbd4b898b8f65b302edbee459c25b81f37f99e5295775a57eda8e7f4b88bb71",
+      "bytes": 2032915,
+      "width": 1024,
+      "height": 1536
     },
     {
       "path": "history/A-blue-slim-pin-parent.png",
@@ -165,29 +195,9 @@
       "height": 612
     },
     {
-      "path": "situations/favorites-continuation/prompts/F01.txt",
-      "sha256": "4ce6fd73c25bf51839077a17bd532dcdbffc25d2fee96b8997deb877fd37a4ac",
-      "bytes": 4730
-    },
-    {
-      "path": "situations/favorites-continuation/prompts/F02.txt",
-      "sha256": "eeda47ca69c7561012f0e41b69c40cebda0f9ec7cd79a457800d7d2d4c4af307",
-      "bytes": 3765
-    },
-    {
-      "path": "situations/favorites-continuation/prompts/F04.txt",
-      "sha256": "293848e5121041da44c921bfe6e117a32c0b7f531f033ea2193544638af4c723",
-      "bytes": 4120
-    },
-    {
-      "path": "situations/favorites-continuation/prompts/F05.txt",
-      "sha256": "8029c52ea8d68c921591e62b3f07b4e9280dbd268a2c0d9d5a84f8cfdb7527a1",
-      "bytes": 4322
-    },
-    {
-      "path": "situations/favorites-continuation/prompts/F06.txt",
-      "sha256": "649a8b222a09d92f9dbaac4c6af09f1c5dc49e869130243241c6621cd1caa22a",
-      "bytes": 4270
+      "path": "prompts/F07-material-source.txt",
+      "sha256": "8acc2ceb9a679d09c941e5246aaec4c83b585a820e5b4db3e53c4578ba796b0a",
+      "bytes": 4663
     },
     {
       "path": "situations/abc-exploration/images/A08.png",
@@ -237,6 +247,129 @@
       "bytes": 2600228,
       "width": 1024,
       "height": 1536
+    },
+    {
+      "path": "situations/favorites-continuation/images/F08-rain-at-window.png",
+      "sha256": "a0c7763b9429ca429254a147bc28421397e13ba73146d3539e6fd0a25de28e75",
+      "bytes": 2167659,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "situations/favorites-continuation/prompts/F01.txt",
+      "sha256": "4ce6fd73c25bf51839077a17bd532dcdbffc25d2fee96b8997deb877fd37a4ac",
+      "bytes": 4730
+    },
+    {
+      "path": "situations/favorites-continuation/prompts/F02.txt",
+      "sha256": "eeda47ca69c7561012f0e41b69c40cebda0f9ec7cd79a457800d7d2d4c4af307",
+      "bytes": 3765
+    },
+    {
+      "path": "situations/favorites-continuation/prompts/F04.txt",
+      "sha256": "293848e5121041da44c921bfe6e117a32c0b7f531f033ea2193544638af4c723",
+      "bytes": 4120
+    },
+    {
+      "path": "situations/favorites-continuation/prompts/F05.txt",
+      "sha256": "8029c52ea8d68c921591e62b3f07b4e9280dbd268a2c0d9d5a84f8cfdb7527a1",
+      "bytes": 4322
+    },
+    {
+      "path": "situations/favorites-continuation/prompts/F06.txt",
+      "sha256": "649a8b222a09d92f9dbaac4c6af09f1c5dc49e869130243241c6621cd1caa22a",
+      "bytes": 4270
+    },
+    {
+      "path": "situations/favorites-continuation/prompts/F08.txt",
+      "sha256": "9857af9a9f01d8375c63a9a6f5149d6a65e9a37ac6d0289ab14991fad41f755e",
+      "bytes": 2078
+    },
+    {
+      "path": "situations/favorites-continuation/prompts/F09.txt",
+      "sha256": "3b85a5243cd252c0ea0df8e392f972934ac9799bbfa7b7c9a84933b8e8123b95",
+      "bytes": 2080
+    },
+    {
+      "path": "situations/favorites-continuation/history/F08-F09/images/F08-rain-at-window-remake2-socks3.png",
+      "sha256": "46acc67f2433f04fae242169900334b2238a767313abc227900b30c373a885f8",
+      "bytes": 2251994,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "situations/favorites-continuation/history/F08-F09/references/F07-toe-material-reference.png",
+      "sha256": "595ddb4c391f45429c5cf27f421757b4a60add050e8cde465c10ca8431f1e0a3",
+      "bytes": 79227,
+      "width": 260,
+      "height": 185
+    },
+    {
+      "path": "situations/favorites-continuation/history/F08-F09/references/F01-toe-material-reference.png",
+      "sha256": "16387b16854aba0809c03736162577ae446f933b6527c0e6b1960bcc8198e31d",
+      "bytes": 184515,
+      "width": 385,
+      "height": 305
+    },
+    {
+      "path": "situations/favorites-continuation/history/F08-F09/images/F09-drying-mug-listening-remake1-socks1.png",
+      "sha256": "2825203ceb21b4e28188c0ed0fa4514a47eaea2d8a8c19f3e2a26b48c3dbf6bb",
+      "bytes": 1948420,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "situations/favorites-continuation/history/F08-F09/references/F08-foot-edit-target.png",
+      "sha256": "75166218e614565475dd34998df3a01de8aa5f81395f8f0a5e89801d8f28a38c",
+      "bytes": 111297,
+      "width": 300,
+      "height": 280
+    },
+    {
+      "path": "situations/favorites-continuation/history/F08-F09/images/F08-rain-at-window-remake2.png",
+      "sha256": "7073b772adb5a0725808e7b56ba640fccfbee440f0aa6d33aba47a7d397f1bed",
+      "bytes": 2391155,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "situations/favorites-continuation/history/F08-F09/prompts/F08-remake2.txt",
+      "sha256": "770a11bdef1f323ea7c48082b4d1708fa7a8fc727f6cdb79b7cf40aabb7515e2",
+      "bytes": 4342
+    },
+    {
+      "path": "situations/favorites-continuation/history/F08-F09/images/F09-drying-mug-listening-remake1.png",
+      "sha256": "c273000834ba747b8383ead4ae63e65b2f8a0690a533c2596d0dde308c27ed2c",
+      "bytes": 2012767,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "situations/favorites-continuation/history/F08-F09/prompts/F09-remake1.txt",
+      "sha256": "46b038e1ff6447a904b80d8aa19bbbf438c1f7a8b3a6514dfc246c1afccd911a",
+      "bytes": 4133
+    },
+    {
+      "path": "situations/favorites-continuation/history/F08-F09/images/F08-toe-detail1.png",
+      "sha256": "4caf2e3a23e60b6fc4d68f0ae6b459c8ef42d1814d229c9d40c5250f1b499798",
+      "bytes": 1802126,
+      "width": 1298,
+      "height": 1212
+    },
+    {
+      "path": "situations/favorites-continuation/history/F08-F09/prompts/F08-toe-detail1.txt",
+      "sha256": "df51ba25af8bba3f68fd203ad1eaac459fe62ffce95fba53752f23bdc70e84f5",
+      "bytes": 1226
+    },
+    {
+      "path": "situations/favorites-continuation/history/F08-F09/prompts/F08-remake2-socks3.txt",
+      "sha256": "30ad558864704a6f3cd6a92ad36a142da0e098613aeb531f26ed730a1598d00f",
+      "bytes": 1997
+    },
+    {
+      "path": "situations/favorites-continuation/history/F08-F09/prompts/F09-remake1-socks1.txt",
+      "sha256": "7a8745a6bfabeee2ae450797b3ac06a899a00d75ad6f76d67db52f8ccbd26c73",
+      "bytes": 2028
     }
   ],
   "markdown_lint": {
@@ -244,6 +377,6 @@
     "exit_code": 0,
     "files": 209,
     "issues": 0,
-    "checked_at": "2026-09-08T08:40:29.835873+00:00"
+    "checked_at": "2026-09-08T10:15:11.349510+00:00"
   }
 }

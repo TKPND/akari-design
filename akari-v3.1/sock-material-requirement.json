@@ -59,21 +59,140 @@
       "width": 1024,
       "height": 1536,
       "role": "required_soft_sock_material_example_only"
+    },
+    {
+      "id": "F07",
+      "role": "user_selected_rounded_opaque_sock_material_only",
+      "path": "references/materials/F07-rounded-opaque-sock-toes.png",
+      "bytes": 2586140,
+      "sha256": "b8ecb57533a4ca3faa96542167e3eb1c6a2647fa90c925245f112d4b8b6a7a0d",
+      "width": 1536,
+      "height": 1024,
+      "png_crc_passed": true
+    },
+    {
+      "id": "F09",
+      "path": "situations/favorites-continuation/images/F09-drying-mug-listening.png",
+      "sha256": "6ebb67e3afc8c43a66352bf66102ac20f369c0ba7cc548871ae9b71ee40ad2a2",
+      "bytes": 1908983,
+      "width": 1024,
+      "height": 1536,
+      "role": "preferred_opaque_rounded_sock_material_with_restrained_cloth_wrinkles_only",
+      "detail_input": {
+        "id": "F09-sock-detail",
+        "path": "references/materials/F09-rounded-wrinkled-sock-detail.png",
+        "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+        "bytes": 71786,
+        "width": 280,
+        "height": 210,
+        "role": "preferred_opaque_rounded_sock_toe_and_restrained_cloth_wrinkle_material_only",
+        "source": {
+          "path": "situations/favorites-continuation/images/F09-drying-mug-listening.png",
+          "sha256": "6ebb67e3afc8c43a66352bf66102ac20f369c0ba7cc548871ae9b71ee40ad2a2",
+          "bytes": 1908983,
+          "width": 1024,
+          "height": 1536
+        },
+        "source_region_xywh": [
+          335,
+          1300,
+          280,
+          210
+        ],
+        "transformation": "Unmodified pixel crop; no resize, retouch or generative alteration.",
+        "face_authority_promoted": false
+      },
+      "selection_record": "history/F09-sock-material-selection.json"
     }
   ],
   "requirements_ja": [
     "ミディアムグレー、不透明なリブ編み、膝下丈とフィットはL1/G2を使う。",
-    "見えるつま先は、丸みのある柔らかな布の輪郭として描く。",
+    "見えるつま先は、F01・F07のように不透明な布が足指全体をまとめて包む、ひと続きの柔らかな丸みにする。",
+    "指の分かれ目・爪・指ごとの凹凸を、線・陰影・外形のいずれにも描かない。肌色が見えなくても一本ずつの指の形を拾う描写は不合格。",
     "足首の曲げ、荷重、接地に応じて小さなたるみと圧縮を描き、リブの陰影をやわらかくつなぐ。",
+    "見えるつま先の付け根・縫い目付近にはF09程度の浅くまばらな布じわを残す。位置・方向・数は姿勢と荷重に合わせ、外形の丸みと指を透かさない条件を保つ。",
     "姿勢・動作・画角は新しく選べる。材質の参照からポーズや顔を固定しない。",
     "靴が覆うつま先を描き足したり、靴を脱がせて見せたりする必要はない。"
   ],
   "visual_translation_status": "Operational interpretation of the user-required appearance, anchored by the approved images.",
   "prompt_fragment": {
     "path": "prompts/sock-material-must.txt",
-    "sha256": "e865f392990c92b1b20698079a61b902584c475ba0e003940b64050bd5dc088f",
-    "bytes": 2088
+    "bytes": 4201,
+    "sha256": "ce47a311cf394964c56acfc76b0c50d5b26099fab52bf06fa4b38a1f155ee2c0"
   },
   "scene_selection": "situations/favorites-continuation/selection.json",
-  "face_authority_promoted": false
+  "face_authority_promoted": false,
+  "updated_at": "2026-09-08T10:10:09.253353+00:00",
+  "toe_finish": {
+    "strength": "MUST",
+    "required": true,
+    "recorded_at": "2026-09-08T09:40:46.894910+00:00",
+    "user_quote": "F08, F09共に靴下のつま先の足の指が透けちゃってるんだよなぁ。\nF07,F01とかは透けてない丸みのある感じなのでそっちの方が好み(これは制約で固定したい)",
+    "preferred_example_ids": [
+      "F09",
+      "F01",
+      "F07"
+    ],
+    "selection_record": "history/F07-sock-material-selection.json",
+    "shape": "One continuous, softly rounded, fully opaque fabric envelope enclosing all toes together.",
+    "individual_toe_anatomy_visible": false,
+    "prohibited": [
+      "toe-separation grooves or lines",
+      "nails or toe knuckles visible through fabric",
+      "individual toe-shaped bumps in shading or silhouette",
+      "scalloped tips or a separate big-toe bulge",
+      "five-toe pockets or split-toe socks",
+      "transparent fabric or skin showing through"
+    ],
+    "allowed": "Soft ribs, cloth seams, connected shading, natural ankle/contact folds and sparse shallow forefoot/toe-cap compression creases like F09, without tracing individual toes.",
+    "review": "Inspect both visible toe areas enlarged against F09: opaque fabric, no individual toe anatomy, continuous rounded outer contour, and restrained natural cloth wrinkles. F01/F07 remain rounded-shape comparisons.",
+    "pose_is_fixed": false,
+    "face_authority_promoted": false
+  },
+  "preferred_material_example_id": "F09",
+  "preferred_detail_input": {
+    "id": "F09-sock-detail",
+    "path": "references/materials/F09-rounded-wrinkled-sock-detail.png",
+    "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+    "bytes": 71786,
+    "width": 280,
+    "height": 210,
+    "role": "preferred_opaque_rounded_sock_toe_and_restrained_cloth_wrinkle_material_only",
+    "source": {
+      "path": "situations/favorites-continuation/images/F09-drying-mug-listening.png",
+      "sha256": "6ebb67e3afc8c43a66352bf66102ac20f369c0ba7cc548871ae9b71ee40ad2a2",
+      "bytes": 1908983,
+      "width": 1024,
+      "height": 1536
+    },
+    "source_region_xywh": [
+      335,
+      1300,
+      280,
+      210
+    ],
+    "transformation": "Unmodified pixel crop; no resize, retouch or generative alteration.",
+    "face_authority_promoted": false
+  },
+  "cloth_wrinkles": {
+    "strength": "MUST",
+    "required": true,
+    "recorded_at": "2026-09-08T10:10:09.253353+00:00",
+    "user_quote": "F09ぐらいがええな。\n今後の生成でも適用できるように、生成条件もアップデートしてコミット頼む。\n後F08,F09もコミットしてええよ。",
+    "preferred_example_id": "F09",
+    "preferred_detail_input_id": "F09-sock-detail",
+    "selection_record": "history/F09-sock-material-selection.json",
+    "applies_when": "Forefoot/toe fabric is visible; ankle, heel and contact folds apply to the visible sock areas.",
+    "amount": "Sparse shallow softly shaded compression creases, with broad smooth fabric areas between them; match selected F09 strength.",
+    "placement": "Forefoot/toe seam, ankle, heel and contact areas as appropriate to the current bend, load and surface.",
+    "wrinkle_count_or_placement_fixed": false,
+    "must_preserve": "Continuous rounded opaque toe envelope with all individual toes concealed. Rounded means the silhouette, not a featureless rigid surface.",
+    "avoid": [
+      "individual toe anatomy or separation",
+      "deep dark grooves",
+      "repeated thick padded rolls",
+      "rigid featureless toe caps"
+    ],
+    "face_authority_promoted": false
+  }
 }

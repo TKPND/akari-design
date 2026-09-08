@@ -7,11 +7,13 @@
     "F02",
     "F04",
     "F05",
-    "F06"
+    "F06",
+    "F08",
+    "F09"
   ],
-  "recorded_at": "2026-09-08T08:33:56.908104+00:00",
-  "user_quote": "いいね。この靴下の感じは今後もMUSTで引き継ぎたいな。(靴履いたら見えないけどさ)F04-06commitするのと、READMEおよびベースの文言があれば反映させたいな。(これもcommit)",
-  "scope": "Selected F01/F02/F04/F05/F06 daily-life scenes. Their soft sock material is a MUST for future visible-sock scenes; pose and camera may vary. Original identity authorities retain their roles.",
+  "recorded_at": "2026-09-08T10:06:37.523446+00:00",
+  "user_quote": "F09ぐらいがええな。\n今後の生成でも適用できるように、生成条件もアップデートしてコミット頼む。\n後F08,F09もコミットしてええよ。",
+  "scope": "Selected F01/F02/F04/F05/F06/F08/F09 scenes. F09 sets the preferred restrained sock wrinkle strength together with the mandatory opaque rounded toe envelope. Scene poses and original face authorities retain their roles.",
   "scene_references_only": false,
   "face_authority_promoted": false,
   "approval_history": [
@@ -41,8 +43,19 @@
       "recorded_at": "2026-09-08T08:33:56.908104+00:00",
       "user_quote": "いいね。この靴下の感じは今後もMUSTで引き継ぎたいな。(靴履いたら見えないけどさ)F04-06commitするのと、READMEおよびベースの文言があれば反映させたいな。(これもcommit)",
       "material_requirement": "MUST retain the selected soft sock material whenever visible."
+    },
+    {
+      "selected_ids": [
+        "F08",
+        "F09"
+      ],
+      "recorded_at": "2026-09-08T10:06:37.523446+00:00",
+      "user_quote": "F09ぐらいがええな。\n今後の生成でも適用できるように、生成条件もアップデートしてコミット頼む。\n後F08,F09もコミットしてええよ。",
+      "preferred_sock_material_id": "F09",
+      "generation_chain": "situations/favorites-continuation/history/F08-F09/generation-chain.json"
     }
   ],
   "scene_and_sock_material_support_only": true,
-  "sock_material_requirement": "sock-material-requirement.json"
+  "sock_material_requirement": "sock-material-requirement.json",
+  "preferred_sock_material_id": "F09"
 }

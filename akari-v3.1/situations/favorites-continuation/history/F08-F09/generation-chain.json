@@ -1,0 +1,186 @@
+{
+  "project": "akari-v3.1",
+  "path_base": "akari-v3.1",
+  "preserved_at": "2026-09-08T10:06:37.523446+00:00",
+  "scope": "Selected final F08/F09 and only the native images, exact prompts, crops and generation records used in their input ancestry.",
+  "entries": [
+    {
+      "id": "F08-remake2",
+      "selected_scene_id": null,
+      "record": "situations/favorites-continuation/history/F08-F09/records/F08-remake2.json",
+      "output": {
+        "path": "situations/favorites-continuation/history/F08-F09/images/F08-rain-at-window-remake2.png",
+        "bytes": 2391155,
+        "sha256": "7073b772adb5a0725808e7b56ba640fccfbee440f0aa6d33aba47a7d397f1bed",
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/favorites-continuation/history/F08-F09/prompts/F08-remake2.txt",
+        "bytes": 4342,
+        "sha256": "770a11bdef1f323ea7c48082b4d1708fa7a8fc727f6cdb79b7cf40aabb7515e2"
+      },
+      "input_ids": [
+        "P1",
+        "P2",
+        "U1",
+        "L1",
+        "F01"
+      ],
+      "user_selected": false
+    },
+    {
+      "id": "F09-remake1",
+      "selected_scene_id": null,
+      "record": "situations/favorites-continuation/history/F08-F09/records/F09-remake1.json",
+      "output": {
+        "path": "situations/favorites-continuation/history/F08-F09/images/F09-drying-mug-listening-remake1.png",
+        "bytes": 2012767,
+        "sha256": "c273000834ba747b8383ead4ae63e65b2f8a0690a533c2596d0dde308c27ed2c",
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/favorites-continuation/history/F08-F09/prompts/F09-remake1.txt",
+        "bytes": 4133,
+        "sha256": "46b038e1ff6447a904b80d8aa19bbbf438c1f7a8b3a6514dfc246c1afccd911a"
+      },
+      "input_ids": [
+        "P1",
+        "P2",
+        "U1",
+        "L1",
+        "F01"
+      ],
+      "user_selected": false
+    },
+    {
+      "id": "F08-toe-detail1",
+      "selected_scene_id": null,
+      "record": "situations/favorites-continuation/history/F08-F09/records/F08-toe-detail1.json",
+      "output": {
+        "path": "situations/favorites-continuation/history/F08-F09/images/F08-toe-detail1.png",
+        "bytes": 1802126,
+        "sha256": "4caf2e3a23e60b6fc4d68f0ae6b459c8ef42d1814d229c9d40c5250f1b499798",
+        "width": 1298,
+        "height": 1212
+      },
+      "prompt": {
+        "path": "situations/favorites-continuation/history/F08-F09/prompts/F08-toe-detail1.txt",
+        "bytes": 1226,
+        "sha256": "df51ba25af8bba3f68fd203ad1eaac459fe62ffce95fba53752f23bdc70e84f5"
+      },
+      "input_ids": [
+        "F08-foot-edit-target",
+        "F01-toe-detail",
+        "F07-toe-detail"
+      ],
+      "user_selected": false
+    },
+    {
+      "id": "F08-remake2-socks3",
+      "selected_scene_id": null,
+      "record": "situations/favorites-continuation/history/F08-F09/records/F08-remake2-socks3.json",
+      "output": {
+        "path": "situations/favorites-continuation/history/F08-F09/images/F08-rain-at-window-remake2-socks3.png",
+        "bytes": 2251994,
+        "sha256": "46acc67f2433f04fae242169900334b2238a767313abc227900b30c373a885f8",
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/favorites-continuation/history/F08-F09/prompts/F08-remake2-socks3.txt",
+        "bytes": 1997,
+        "sha256": "30ad558864704a6f3cd6a92ad36a142da0e098613aeb531f26ed730a1598d00f"
+      },
+      "input_ids": [
+        "F08-remake2",
+        "F08-toe-detail1",
+        "F01-toe-detail",
+        "L1",
+        "P1"
+      ],
+      "user_selected": false
+    },
+    {
+      "id": "F09-remake1-socks1",
+      "selected_scene_id": null,
+      "record": "situations/favorites-continuation/history/F08-F09/records/F09-remake1-socks1.json",
+      "output": {
+        "path": "situations/favorites-continuation/history/F08-F09/images/F09-drying-mug-listening-remake1-socks1.png",
+        "bytes": 1948420,
+        "sha256": "2825203ceb21b4e28188c0ed0fa4514a47eaea2d8a8c19f3e2a26b48c3dbf6bb",
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/favorites-continuation/history/F08-F09/prompts/F09-remake1-socks1.txt",
+        "bytes": 2028,
+        "sha256": "7a8745a6bfabeee2ae450797b3ac06a899a00d75ad6f76d67db52f8ccbd26c73"
+      },
+      "input_ids": [
+        "F09-remake1",
+        "F08-toe-detail1",
+        "F01-toe-detail",
+        "L1",
+        "P1"
+      ],
+      "user_selected": false
+    },
+    {
+      "id": "F08-remake2-socks3-wrinkles1",
+      "selected_scene_id": "F08",
+      "record": "situations/favorites-continuation/records/F08.json",
+      "output": {
+        "path": "situations/favorites-continuation/images/F08-rain-at-window.png",
+        "bytes": 2167659,
+        "sha256": "a0c7763b9429ca429254a147bc28421397e13ba73146d3539e6fd0a25de28e75",
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/favorites-continuation/prompts/F08.txt",
+        "bytes": 2078,
+        "sha256": "9857af9a9f01d8375c63a9a6f5149d6a65e9a37ac6d0289ab14991fad41f755e"
+      },
+      "input_ids": [
+        "F08-remake2-socks3",
+        "F07-toe-detail",
+        "F01-toe-detail",
+        "L1",
+        "P1"
+      ],
+      "user_selected": true
+    },
+    {
+      "id": "F09-remake1-socks1-wrinkles1",
+      "selected_scene_id": "F09",
+      "record": "situations/favorites-continuation/records/F09.json",
+      "output": {
+        "path": "situations/favorites-continuation/images/F09-drying-mug-listening.png",
+        "bytes": 1908983,
+        "sha256": "6ebb67e3afc8c43a66352bf66102ac20f369c0ba7cc548871ae9b71ee40ad2a2",
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/favorites-continuation/prompts/F09.txt",
+        "bytes": 2080,
+        "sha256": "3b85a5243cd252c0ea0df8e392f972934ac9799bbfa7b7c9a84933b8e8123b95"
+      },
+      "input_ids": [
+        "F09-remake1-socks1",
+        "F07-toe-detail",
+        "F01-toe-detail",
+        "L1",
+        "P1"
+      ],
+      "user_selected": true
+    }
+  ],
+  "crop_derivations": "situations/favorites-continuation/history/F08-F09/reference-crops.json",
+  "user_feedback": "situations/favorites-continuation/history/F08-F09/user-feedback.json",
+  "original_native_output_bytes_preserved": true,
+  "prompts_preserved_verbatim": true,
+  "face_authority_promoted": false
+}

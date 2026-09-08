@@ -1,0 +1,107 @@
+{
+  "id": "F09-remake1",
+  "title_ja": "話の続き、聞いてる",
+  "project": "akari-v3.1",
+  "status": "preserved_generation_input",
+  "user_selected": false,
+  "path_base": "akari-v3.1",
+  "derivation_type": "new_scene_from_original_anchors",
+  "edit_target": null,
+  "previous_flawed_candidates_used_as_inputs": false,
+  "tool": "image_gen",
+  "tool_mode": "built-in-imagegen",
+  "model": null,
+  "model_note": "Model name was not exposed by the built-in tool.",
+  "started_at": "2026-09-08T09:27:35.143Z",
+  "finished_at": "2026-09-08T09:28:15.838Z",
+  "elapsed_seconds": 40.695,
+  "elapsed_scope": "Wall-clock image tool request duration including tool-side queueing.",
+  "output": {
+    "path": "situations/favorites-continuation/history/F08-F09/images/F09-drying-mug-listening-remake1.png",
+    "bytes": 2012767,
+    "sha256": "c273000834ba747b8383ead4ae63e65b2f8a0690a533c2596d0dde308c27ed2c",
+    "width": 1024,
+    "height": 1536
+  },
+  "prompt": {
+    "path": "situations/favorites-continuation/history/F08-F09/prompts/F09-remake1.txt",
+    "bytes": 4133,
+    "sha256": "46b038e1ff6447a904b80d8aa19bbbf438c1f7a8b3a6514dfc246c1afccd911a"
+  },
+  "input_ids": [
+    "P1",
+    "P2",
+    "U1",
+    "L1",
+    "F01"
+  ],
+  "inputs": [
+    {
+      "id": "P1",
+      "role": "original_face_eyes_black_bob_drawing_authority",
+      "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+      "bytes": 1869375,
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "id": "P2",
+      "role": "original_everyday_closed_mouth_smile_authority",
+      "path": "../akari-v3.0/references/P2-quiet-smile.png",
+      "bytes": 1836424,
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "id": "U1",
+      "role": "native_upper_body_anatomy_eye_hair_pin_details",
+      "path": "references/U1-upper-reference.png",
+      "bytes": 1852161,
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "L1",
+      "role": "native_leg_knee_and_below_knee_sock_design_authority",
+      "path": "references/L1-lower-reference.png",
+      "bytes": 1815855,
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "F01",
+      "role": "selected_long_sleeve_wardrobe_and_soft_sock_material_only",
+      "path": "situations/favorites-continuation/images/F01-cushion-listening.png",
+      "bytes": 2572126,
+      "sha256": "6a07e44c0025d7b63820a008f7a1d1c59ece6ceb3a998d3a057b0b2c38c7e0c1",
+      "width": 1024,
+      "height": 1536
+    }
+  ],
+  "tool_output_filename": "exec-8c327fe4-afd6-452e-b3cd-58679c24f7ac.png",
+  "source_copy_bytes_identical": true,
+  "output_transformation": "Byte-for-byte copy of native generated PNG; no final-image compositing or pixel edits.",
+  "visual_review": {
+    "id": "F09-remake1",
+    "verdict": "fail_user_reported_toe_material",
+    "user_selected": false,
+    "body": "The new near-frontal full-body camera aligns torso, pelvis, knees and feet in one coherent stance. Front patella shading and calf contours were checked from skirt/hip region through complete feet.",
+    "sock_length": "Both kneecaps and the lower-knee area are bare above the grey cuffs, which sit on the upper calves below the knees.",
+    "hands": "Two separate arms hold a single mug and wiping cloth; mug handle and grip checked in a crop.",
+    "identity_and_material": "Original face/expression, silver pin, long-sleeve outfit and soft opaque rib-knit socks retained.",
+    "limitations": "The new composition is a full-body view rather than the original tight kitchen crop, so the face occupies fewer pixels. This deliberate reframing supports review of the whole leg chain.",
+    "previous_verdict": "assistant_reviewed_fresh_candidate",
+    "review_correction": "The assistant missed individually sculpted toe contours; the earlier material pass is retracted. Require the continuous opaque F01/F07 toe envelope."
+  },
+  "user_feedback": "situations/favorites-continuation/history/F08-F09/user-feedback.json",
+  "face_authority_promoted": false,
+  "generated_candidate_id": "F09-remake1",
+  "requirement_record": "sock-material-requirement.json",
+  "preservation_recorded_at": "2026-09-08T10:06:37.523446+00:00",
+  "scene_selection": "situations/favorites-continuation/selection.json",
+  "preserved_input_status": "fail_user_reported_toe_material"
+}

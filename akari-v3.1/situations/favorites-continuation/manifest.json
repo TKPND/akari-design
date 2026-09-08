@@ -3,13 +3,15 @@
   "path_base": "akari-v3.1",
   "title_ja": "好み6枚からの続き",
   "status": "user_selected",
-  "selected_count": 5,
+  "selected_count": 7,
   "selected_ids": [
     "F01",
     "F02",
     "F04",
     "F05",
-    "F06"
+    "F06",
+    "F08",
+    "F09"
   ],
   "selection": "situations/favorites-continuation/selection.json",
   "preferences": "situations/favorites-continuation/preferences.json",
@@ -110,6 +112,49 @@
       "record": "situations/favorites-continuation/records/F06.json",
       "user_selected": true,
       "face_authority_promoted": false
+    },
+    {
+      "id": "F08",
+      "title_ja": "雨、まだ止まないね",
+      "output": {
+        "path": "situations/favorites-continuation/images/F08-rain-at-window.png",
+        "bytes": 2167659,
+        "sha256": "a0c7763b9429ca429254a147bc28421397e13ba73146d3539e6fd0a25de28e75",
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/favorites-continuation/prompts/F08.txt",
+        "bytes": 2078,
+        "sha256": "9857af9a9f01d8375c63a9a6f5149d6a65e9a37ac6d0289ab14991fad41f755e"
+      },
+      "record": "situations/favorites-continuation/records/F08.json",
+      "generated_candidate_id": "F08-remake2-socks3-wrinkles1",
+      "user_selected": true,
+      "face_authority_promoted": false,
+      "generation_chain": "situations/favorites-continuation/history/F08-F09/generation-chain.json"
+    },
+    {
+      "id": "F09",
+      "title_ja": "話の続き、聞いてる",
+      "output": {
+        "path": "situations/favorites-continuation/images/F09-drying-mug-listening.png",
+        "bytes": 1908983,
+        "sha256": "6ebb67e3afc8c43a66352bf66102ac20f369c0ba7cc548871ae9b71ee40ad2a2",
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/favorites-continuation/prompts/F09.txt",
+        "bytes": 2080,
+        "sha256": "3b85a5243cd252c0ea0df8e392f972934ac9799bbfa7b7c9a84933b8e8123b95"
+      },
+      "record": "situations/favorites-continuation/records/F09.json",
+      "generated_candidate_id": "F09-remake1-socks1-wrinkles1",
+      "user_selected": true,
+      "face_authority_promoted": false,
+      "generation_chain": "situations/favorites-continuation/history/F08-F09/generation-chain.json"
     }
-  ]
+  ],
+  "updated_at": "2026-09-08T10:06:37.523446+00:00"
 }

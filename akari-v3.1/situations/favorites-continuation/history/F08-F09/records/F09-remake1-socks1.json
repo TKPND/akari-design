@@ -1,0 +1,111 @@
+{
+  "id": "F09-remake1-socks1",
+  "project": "akari-v3.1",
+  "status": "preserved_generation_input",
+  "user_selected": false,
+  "path_base": "akari-v3.1",
+  "derivation_type": "targeted_sock_material_edit",
+  "edit_target": {
+    "path": "situations/favorites-continuation/history/F08-F09/images/F09-drying-mug-listening-remake1.png",
+    "bytes": 2012767,
+    "sha256": "c273000834ba747b8383ead4ae63e65b2f8a0690a533c2596d0dde308c27ed2c",
+    "width": 1024,
+    "height": 1536
+  },
+  "parent_id": "F09-remake1",
+  "tool": "image_gen",
+  "tool_mode": "built-in-imagegen",
+  "model": null,
+  "model_note": "The built-in tool did not expose a model name.",
+  "started_at": "2026-09-08T09:49:32.235Z",
+  "finished_at": "2026-09-08T09:50:27.177Z",
+  "elapsed_seconds": 54.942,
+  "elapsed_scope": "Wall-clock duration of the image-tool request, including tool-side queueing.",
+  "output": {
+    "path": "situations/favorites-continuation/history/F08-F09/images/F09-drying-mug-listening-remake1-socks1.png",
+    "bytes": 1948420,
+    "sha256": "2825203ceb21b4e28188c0ed0fa4514a47eaea2d8a8c19f3e2a26b48c3dbf6bb",
+    "width": 1024,
+    "height": 1536
+  },
+  "prompt": {
+    "path": "situations/favorites-continuation/history/F08-F09/prompts/F09-remake1-socks1.txt",
+    "bytes": 2028,
+    "sha256": "7a8745a6bfabeee2ae450797b3ac06a899a00d75ad6f76d67db52f8ccbd26c73"
+  },
+  "input_ids": [
+    "F09-remake1",
+    "F08-toe-detail1",
+    "F01-toe-detail",
+    "L1",
+    "P1"
+  ],
+  "inputs": [
+    {
+      "id": "F09-remake1",
+      "role": "edit_target_sole_scene_pose_camera_and_existing_identity_source",
+      "path": "situations/favorites-continuation/history/F08-F09/images/F09-drying-mug-listening-remake1.png",
+      "bytes": 2012767,
+      "sha256": "c273000834ba747b8383ead4ae63e65b2f8a0690a533c2596d0dde308c27ed2c",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "F08-toe-detail1",
+      "role": "corrected_round_opaque_sock_toe_material_only_do_not_copy_stance",
+      "path": "situations/favorites-continuation/history/F08-F09/images/F08-toe-detail1.png",
+      "bytes": 1802126,
+      "sha256": "4caf2e3a23e60b6fc4d68f0ae6b459c8ef42d1814d229c9d40c5250f1b499798",
+      "width": 1298,
+      "height": 1212
+    },
+    {
+      "id": "F01-toe-detail",
+      "role": "preferred_F01_opaque_round_sock_material_only",
+      "path": "situations/favorites-continuation/history/F08-F09/references/F01-toe-material-reference.png",
+      "bytes": 184515,
+      "sha256": "16387b16854aba0809c03736162577ae446f933b6527c0e6b1960bcc8198e31d",
+      "width": 385,
+      "height": 305
+    },
+    {
+      "id": "L1",
+      "role": "native_leg_construction_grey_ribbed_below_knee_sock_design_only",
+      "path": "references/L1-lower-reference.png",
+      "bytes": 1815855,
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "P1",
+      "role": "original_face_eyes_black_bob_drawing_authority_preservation_only",
+      "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+      "bytes": 1869375,
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "width": 1254,
+      "height": 1254
+    }
+  ],
+  "tool_output_filename": "exec-61ad3f2e-6312-401b-b0ca-ed8d60a188fb.png",
+  "source_copy_bytes_identical": true,
+  "output_transformation": "Byte-for-byte native image-tool PNG copy. Final integration was performed by image_gen; no external image patching, warping or pixel edits.",
+  "visual_review": {
+    "id": "F09-remake1-socks1",
+    "user_selected": false,
+    "verdict": "assistant_reviewed_toe_correction_candidate",
+    "material": "Both enlarged toe caps have smooth uninterrupted rounded outlines and opaque knit with no individually readable toes. A small cloth crease descending from the transverse seam on the viewer-right cap does not partition or model individual toes.",
+    "scene_and_anatomy": "Full-scene comparison retains the kitchen, face and silver pin, mug/cloth action and two hands, coherent hip-knee-foot alignment, bare knees and below-knee cuffs.",
+    "review_crop": "situations/favorites-continuation/history/F08-F09/review-crops/F09-remake1-socks1-toes.png",
+    "limitations": "Generative editing can redraw fine details outside the sock region. Visual preservation was reviewed; pixel identity and user approval are not claimed."
+  },
+  "user_feedback": "situations/favorites-continuation/history/F08-F09/user-feedback.json",
+  "requirement_record": "sock-material-requirement.json",
+  "face_authority_promoted": false,
+  "user_round_shape_feedback": "丸いのは良くなった。",
+  "full_scene_user_selected": false,
+  "generated_candidate_id": "F09-remake1-socks1",
+  "preservation_recorded_at": "2026-09-08T10:06:37.523446+00:00",
+  "scene_selection": "situations/favorites-continuation/selection.json",
+  "preserved_input_status": "assistant_reviewed_toe_correction_candidate"
+}

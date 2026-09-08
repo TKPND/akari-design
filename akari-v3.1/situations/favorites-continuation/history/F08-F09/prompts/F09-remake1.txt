@@ -1,0 +1,26 @@
+Use case: illustration-story. A completely NEW Akari v3.1 kitchen slice-of-life illustration, portrait 2:3.
+
+COMPOSITION:
+Natural eye-level near-frontal three-quarter FULL-BODY view from the kitchen entrance. Akari stands beside a counter running along the right side of the image. Frame her whole hair, body, both bare knees, below-knee sock cuffs and complete sock-covered feet with comfortable margins. Keep her face legible and the background simple.
+Her chest and pelvis face the same gentle three-quarter diagonal toward the camera. She has paused beside the counter to listen, so no strong torso twist is needed. Build the legs coherently from the pelvis: natural-length thighs, FRONT-facing kneecaps, shins and feet all follow the same mild diagonal. Weight is comfortably balanced between two feet flat on the floor, with a small natural gap. The knees are relaxed and point the same way as the toes. Use L1's ordinary leg construction; calf fullness is behind the shins and the subtle kneecap shapes are on the front. The legs are not crossed, hyperextended or rotated backward. Skirt pleats hang naturally from the pelvis and end above the knees.
+
+ACTION:
+She is drying a plain ceramic mug with a linen dishcloth at comfortable lower-chest height. One hand securely supports the mug, while the other hand wraps a section of the cloth around its outer wall to wipe it. Use a small ordinary mug with one clear rim and one handle; show two believable hands with correct finger contact. Both elbows sit naturally in front of their own sides of the torso.
+She turns her face only slightly toward the viewer while keeping the hands in the middle of their task. Warm attentive grey eyes and a small closed-mouth smile suggest she is following the conversation.
+
+ATMOSPHERE:
+Soft warm daylight, pale kitchen cabinets, wooden counter, a simple sink and drying rack to one side. A quiet lived-in kitchen with broad gentle shadows. Focus on her attentive expression and ordinary task, with correct whole-body support and easily readable knee/cuff placement.
+
+REFERENCE INPUTS — use these five images in this order:
+1 P1: original Akari face, rounded gentle downturned grey eyes, black bob, bangs, age impression and drawing style.
+2 P2: original small ordinary closed-mouth smile.
+3 Native U1: full-resolution upper-body anatomy, eye detail, hair and single silver pin.
+4 Native L1: full-resolution leg proportions, knees, and medium-grey opaque ribbed BELOW-KNEE sock length and fit.
+5 F01: ONLY the selected long-sleeve outfit and soft sock-fabric finish. Its seated pose and room layout are not this new composition.
+Create a fresh image from these anchors. The scene and body arrangement are defined here, independently of earlier generated scene attempts.
+
+CHARACTER AND OUTFIT:
+Preserve P1's face proportions and soft rounded downturned eyes, small distinct dark oval pupils, darker neutral-grey upper irises, lighter lower irises and rounded pale lower reflections; use P2's quiet closed-mouth smile. Black bob, straight bangs, one slim bright-silver straight hairpin above her LEFT ear, viewer-right in a frontal view.
+Use F01's slate/navy cropped open long-sleeve bolero with pale piping, white buttoned blouse with rounded Peter Pan collar, navy ribbon and blue-grey fine-plaid pleated skirt. Native U1/L1 supply body construction rather than their summer uniform.
+Use L1's ordinary medium-neutral-grey opaque ribbed socks ending BELOW THE KNEES. Entire kneecaps and a short strip of upper calf remain bare above the cuffs. Use F01's supple knit, rounded fabric-covered toes, softly connected shading and small natural folds at bent ankles and floor contact. Feet have ordinary human proportions, indoors without shoes or slippers. Do not force hidden sock detail into view.
+Polished gentle anime illustration, coherent soft light, delicate clear linework and natural skin. Clothing shadows are subtly grouped, with major folds, dimensionality, seams, collar, ribbon, piping and plaid retained. Exactly one character, two naturally connected arms and hands, two coherent legs and feet, no panels, lettering or watermark.

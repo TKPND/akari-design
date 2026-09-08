@@ -1,0 +1,14 @@
+Edit IMAGE 1, the full rainy-window illustration. IMAGE 2 shows the required corrected grey sock feet with SMOOTH ROUND OPAQUE TOE CAPS. Bring this corrected toe-cap design into BOTH feet at the bottom of IMAGE 1.
+
+Image 2 is a corrected enlarged detail of these same feet, with the same stance. Integrate its smooth closed sock toe ends into the original full image at their natural scale.
+
+The front of each sock must be a single plain grey knit cap with an uninterrupted smoothly curved silhouette and one broad soft field of cloth shading. A fine transverse seam connects the plain toe cap to the ribbed instep. The cap is smooth knit without vertical ribbing. Follow IMAGE 2's result closely. Eliminate the old toe-shaped segmentation entirely: no scalloped edge, individual toe outlines, grooves, toe highlights, toenails or separate toe bulges. All toes are hidden together inside one soft closed textile cap per foot.
+
+Preserve the current full-body portrait framing, face and closed-mouth smile, grey eyes, black bob, silver pin, curtain pinch and both arms, outfit, bare knees, below-knee sock cuffs, ankle folds, foot length/direction and floor contact. Preserve the background, light and composition. The corrected cap must join the existing feet naturally without patch boundaries, shoes, soles or oversized padded volume. Output one complete full illustration at the same portrait framing as IMAGE 1.
+
+INPUT ROLES:
+Image 1: sole full scene, camera, body pose and current-expression source; edit only the requested sock feet.
+Image 2: the corrected enlarged foot region for integration into the same scene.
+Image 3: F01 unmodified detail crop, user-preferred soft opaque continuous sock-fabric shape only.
+Image 4: native L1, lower-body construction, grey rib-knit sock color and below-knee length only.
+Image 5: original P1, face/eyes/black-bob/drawing preservation authority only. Keep the existing closed-mouth expression and silver pin; established P2 and U1 roles are unchanged.

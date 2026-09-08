@@ -1,8 +1,8 @@
 {
   "project": "akari-v3.1",
   "path_base": "Paths are relative to the akari-v3.1 directory.",
-  "asset_count": 13,
-  "package_image_count": 10,
+  "asset_count": 15,
+  "package_image_count": 12,
   "inherited_image_count": 3,
   "assets": [
     {
@@ -134,6 +134,41 @@
       "bytes": 3394635,
       "sha256": "e0d33d4dfcb00a1aff885456cc01f06a9b8c739fb7c76c2a8c9439036d1f1de2",
       "png_crc_passed": true
+    },
+    {
+      "id": "F07",
+      "role": "user_selected_rounded_opaque_sock_material_only",
+      "path": "references/materials/F07-rounded-opaque-sock-toes.png",
+      "bytes": 2586140,
+      "sha256": "b8ecb57533a4ca3faa96542167e3eb1c6a2647fa90c925245f112d4b8b6a7a0d",
+      "width": 1536,
+      "height": 1024,
+      "png_crc_passed": true
+    },
+    {
+      "id": "F09-sock-detail",
+      "path": "references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+      "bytes": 71786,
+      "width": 280,
+      "height": 210,
+      "role": "preferred_opaque_rounded_sock_toe_and_restrained_cloth_wrinkle_material_only",
+      "source": {
+        "path": "situations/favorites-continuation/images/F09-drying-mug-listening.png",
+        "sha256": "6ebb67e3afc8c43a66352bf66102ac20f369c0ba7cc548871ae9b71ee40ad2a2",
+        "bytes": 1908983,
+        "width": 1024,
+        "height": 1536
+      },
+      "source_region_xywh": [
+        335,
+        1300,
+        280,
+        210
+      ],
+      "transformation": "Unmodified pixel crop; no resize, retouch or generative alteration.",
+      "face_authority_promoted": false
     }
-  ]
+  ],
+  "updated_at": "2026-09-08T10:06:37.523446+00:00"
 }

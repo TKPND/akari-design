@@ -164,5 +164,13 @@
     "recorded_at": "2026-09-08T08:33:56.908104+00:00",
     "applies_when": "any sock fabric is visible",
     "pose_is_fixed": false
+  },
+  "latest_sock_material_selection": {
+    "reference_id": "F09",
+    "detail_input_id": "F09-sock-detail",
+    "user_quote": "F09ぐらいがええな。\n今後の生成でも適用できるように、生成条件もアップデートしてコミット頼む。\n後F08,F09もコミットしてええよ。",
+    "selection_record": "history/F09-sock-material-selection.json",
+    "scope": "Rounded opaque toe envelope plus restrained natural cloth wrinkles only.",
+    "face_authority_promoted": false
   }
 }

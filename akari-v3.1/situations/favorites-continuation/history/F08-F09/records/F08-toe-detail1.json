@@ -1,0 +1,87 @@
+{
+  "id": "F08-toe-detail1",
+  "project": "akari-v3.1",
+  "status": "preserved_generation_input",
+  "user_selected": false,
+  "path_base": "akari-v3.1",
+  "derivation_type": "image_tool_detail_edit",
+  "edit_target": {
+    "path": "situations/favorites-continuation/history/F08-F09/references/F08-foot-edit-target.png",
+    "bytes": 111297,
+    "sha256": "75166218e614565475dd34998df3a01de8aa5f81395f8f0a5e89801d8f28a38c",
+    "width": 300,
+    "height": 280
+  },
+  "parent_id": "F08-remake2",
+  "tool": "image_gen",
+  "tool_mode": "built-in-imagegen",
+  "model": null,
+  "model_note": "The built-in tool did not expose a model name.",
+  "started_at": "2026-09-08T09:46:24.968Z",
+  "finished_at": "2026-09-08T09:46:58.578Z",
+  "elapsed_seconds": 33.61,
+  "elapsed_scope": "Wall-clock duration of the image-tool request, including tool-side queueing.",
+  "output": {
+    "path": "situations/favorites-continuation/history/F08-F09/images/F08-toe-detail1.png",
+    "bytes": 1802126,
+    "sha256": "4caf2e3a23e60b6fc4d68f0ae6b459c8ef42d1814d229c9d40c5250f1b499798",
+    "width": 1298,
+    "height": 1212
+  },
+  "prompt": {
+    "path": "situations/favorites-continuation/history/F08-F09/prompts/F08-toe-detail1.txt",
+    "bytes": 1226,
+    "sha256": "df51ba25af8bba3f68fd203ad1eaac459fe62ffce95fba53752f23bdc70e84f5"
+  },
+  "input_ids": [
+    "F08-foot-edit-target",
+    "F01-toe-detail",
+    "F07-toe-detail"
+  ],
+  "inputs": [
+    {
+      "id": "F08-foot-edit-target",
+      "role": "unaltered_F08_foot_crop_edit_target",
+      "path": "situations/favorites-continuation/history/F08-F09/references/F08-foot-edit-target.png",
+      "bytes": 111297,
+      "sha256": "75166218e614565475dd34998df3a01de8aa5f81395f8f0a5e89801d8f28a38c",
+      "width": 300,
+      "height": 280
+    },
+    {
+      "id": "F01-toe-detail",
+      "role": "preferred_F01_rounded_opaque_toe_material",
+      "path": "situations/favorites-continuation/history/F08-F09/references/F01-toe-material-reference.png",
+      "bytes": 184515,
+      "sha256": "16387b16854aba0809c03736162577ae446f933b6527c0e6b1960bcc8198e31d",
+      "width": 385,
+      "height": 305
+    },
+    {
+      "id": "F07-toe-detail",
+      "role": "preferred_F07_rounded_opaque_toe_material",
+      "path": "situations/favorites-continuation/history/F08-F09/references/F07-toe-material-reference.png",
+      "bytes": 79227,
+      "sha256": "595ddb4c391f45429c5cf27f421757b4a60add050e8cde465c10ca8431f1e0a3",
+      "width": 260,
+      "height": 185
+    }
+  ],
+  "tool_output_filename": "exec-a20857a9-28a7-4d73-aa50-d68f144327e6.png",
+  "source_copy_bytes_identical": true,
+  "output_transformation": "Byte-for-byte native image-tool PNG copy. Final integration was performed by image_gen; no external image patching, warping or pixel edits.",
+  "visual_review": {
+    "id": "F08-toe-detail1",
+    "user_selected": false,
+    "verdict": "assistant_reviewed_intermediate_material_detail",
+    "material": "Both feet have a single smooth rounded opaque knit cap with one transverse cloth seam. No individual toes are distinguishable through color, shading, linework or outer contour.",
+    "scope": "Intermediate detail only, for image-tool integration; not a full scene or a user-selected material authority."
+  },
+  "user_feedback": "situations/favorites-continuation/history/F08-F09/user-feedback.json",
+  "requirement_record": "sock-material-requirement.json",
+  "face_authority_promoted": false,
+  "generated_candidate_id": "F08-toe-detail1",
+  "preservation_recorded_at": "2026-09-08T10:06:37.523446+00:00",
+  "scene_selection": "situations/favorites-continuation/selection.json",
+  "preserved_input_status": "assistant_reviewed_intermediate_material_detail"
+}

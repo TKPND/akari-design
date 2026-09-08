@@ -1,0 +1,75 @@
+{
+  "path_base": "akari-v3.1",
+  "transformation": "ImageMagick crop only, without resizing, warping, painting or retouching.",
+  "entries": [
+    {
+      "id": "F01-toe-detail",
+      "output": {
+        "path": "situations/favorites-continuation/history/F08-F09/references/F01-toe-material-reference.png",
+        "bytes": 184515,
+        "sha256": "16387b16854aba0809c03736162577ae446f933b6527c0e6b1960bcc8198e31d",
+        "width": 385,
+        "height": 305
+      },
+      "source": {
+        "path": "situations/favorites-continuation/images/F01-cushion-listening.png",
+        "bytes": 2572126,
+        "sha256": "6a07e44c0025d7b63820a008f7a1d1c59ece6ceb3a998d3a057b0b2c38c7e0c1",
+        "width": 1024,
+        "height": 1536
+      },
+      "source_region_xywh": [
+        465,
+        1220,
+        385,
+        305
+      ]
+    },
+    {
+      "id": "F07-toe-detail",
+      "output": {
+        "path": "situations/favorites-continuation/history/F08-F09/references/F07-toe-material-reference.png",
+        "bytes": 79227,
+        "sha256": "595ddb4c391f45429c5cf27f421757b4a60add050e8cde465c10ca8431f1e0a3",
+        "width": 260,
+        "height": 185
+      },
+      "source": {
+        "path": "references/materials/F07-rounded-opaque-sock-toes.png",
+        "bytes": 2586140,
+        "sha256": "b8ecb57533a4ca3faa96542167e3eb1c6a2647fa90c925245f112d4b8b6a7a0d",
+        "width": 1536,
+        "height": 1024
+      },
+      "source_region_xywh": [
+        1025,
+        830,
+        260,
+        185
+      ]
+    },
+    {
+      "id": "F08-foot-edit-target",
+      "output": {
+        "path": "situations/favorites-continuation/history/F08-F09/references/F08-foot-edit-target.png",
+        "bytes": 111297,
+        "sha256": "75166218e614565475dd34998df3a01de8aa5f81395f8f0a5e89801d8f28a38c",
+        "width": 300,
+        "height": 280
+      },
+      "source": {
+        "path": "situations/favorites-continuation/history/F08-F09/images/F08-rain-at-window-remake2.png",
+        "bytes": 2391155,
+        "sha256": "7073b772adb5a0725808e7b56ba640fccfbee440f0aa6d33aba47a7d397f1bed",
+        "width": 1024,
+        "height": 1536
+      },
+      "source_region_xywh": [
+        240,
+        1250,
+        300,
+        280
+      ]
+    }
+  ]
+}

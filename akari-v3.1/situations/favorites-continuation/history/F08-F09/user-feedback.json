@@ -1,0 +1,42 @@
+{
+  "project": "akari-v3.1",
+  "path_base": "akari-v3.1",
+  "status": "F08_F09_user_selected",
+  "messages": [
+    {
+      "recorded_at": "2026-09-08T09:12:12.491687+00:00",
+      "user_message": "F08(r2含め): 手が片方から2本生えている\nF09: オーバーニーになってる"
+    },
+    {
+      "recorded_at": "2026-09-08T09:22:35.228032+00:00",
+      "user_message": "まだ問題あり。修正じゃなくて作り直した方が良さそう。F08 左手で左側のカーテンを持っているはずなのに手の甲側が見える。F09 脚のラインが変。後ろ側に膝が来ているように見える。",
+      "action": "Regenerate F08/F09 from original character/detail/wardrobe anchors with new coherent compositions; do not edit the flawed candidates."
+    },
+    {
+      "recorded_at": "2026-09-08T09:40:46.894910+00:00",
+      "user_message": "F08, F09共に靴下のつま先の足の指が透けちゃってるんだよなぁ。\nF07,F01とかは透けてない丸みのある感じなのでそっちの方が好み(これは制約で固定したい)",
+      "affected_ids": [
+        "F08-remake2",
+        "F09-remake1"
+      ],
+      "action": "Fix the permanent v3.1 material requirement and make targeted sock-toe edits to the current remade scenes."
+    },
+    {
+      "recorded_at": "2026-09-08T09:58:44.323873+00:00",
+      "user_message": "丸いのは良くなった。布のシワはちょっとぐらいないと不自然かも(ちょっとやってみて)",
+      "positive_feedback_scope": "Rounded toe silhouette of F08-remake2-socks3 and F09-remake1-socks1 only.",
+      "action": "Trial a few shallow cloth wrinkles on both scenes without exposing individual toe anatomy."
+    },
+    {
+      "recorded_at": "2026-09-08T10:06:37.523446+00:00",
+      "user_message": "F09ぐらいがええな。\n今後の生成でも適用できるように、生成条件もアップデートしてコミット頼む。\n後F08,F09もコミットしてええよ。",
+      "selected_ids": [
+        "F08",
+        "F09"
+      ],
+      "preferred_sock_material_id": "F09"
+    }
+  ],
+  "scope": "Review messages preserved for context. Rejected candidate IDs in these messages are historical identifiers, not active generation references.",
+  "face_authority_promoted": false
+}

@@ -1,0 +1,7 @@
+Image 1 is the EDIT TARGET: a cropped detail of grey socks standing on a wooden floor. Images 2 and 3 are references only for the sock toe-cap fabric shape.
+
+Redraw the front half of BOTH sock-covered feet. Replace the five separate toe-shaped lobes with ONE SINGLE SMOOTH ROUND TEXTILE CAP per foot, exactly like the reference socks. Make the toe caps plain smooth opaque grey cotton knit. The entire front edge of each foot must be ONE uninterrupted broad convex arc; underneath the cap, all toes are hidden together. Use one broad soft highlight and a continuous soft shadow on each whole fabric cap. A single curved transverse seam may join this plain toe cap to the ribbed instep.
+
+The plain toe cap has NO rib lines, NO individual toe lines, NO dark divisions, NO nail shapes, NO scallops, NO indentations. Remove ALL anatomical toe details and lobes from the original. The front should read like the soft closed round end of an ordinary sock, never like bare toes colored grey. The caps have natural foot-sized volume, not shoes and no soles.
+
+Keep the ankle ribbing and folds, foot positions, foot length, neutral grey color, and wooden floor. Output only the corrected foot-detail composition matching image 1's view.

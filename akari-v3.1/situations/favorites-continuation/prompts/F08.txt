@@ -1,0 +1,15 @@
+Use case: precise-object-edit.
+Make a very subtle SOCK-FABRIC WRINKLE variation of image 1, the rainy-window illustration.
+
+The user likes the current continuous rounded opaque sock-toe shape, so keep that rounded silhouette exactly. The small smooth toe caps need a little cloth life. Add just a few short, shallow, low-contrast fabric compression creases around the forefoot and the toe-cap seam of BOTH socks, including a tiny irregular crease or two entering the rounded toe cap. They should look like supple knit gently gathering under foot pressure: softly shaded, slightly oblique, asymmetric, sparse and not repetitive. Give each foot a natural slight variation rather than matching wrinkles. Use the small fabric folds in images 2 and 3 as material guidance. Keep broad smooth cloth areas between the creases; this is a restrained refinement.
+
+CRITICAL: the cap still encloses all toes together as one continuous opaque fabric volume. The wrinkles describe CLOTH only. They must not indicate individual toes, nails, toe joints, toe separations or separate bulges, and must not scallop the outer edge. Keep the existing foot size, footprint, angle and floor contact. Do not add thick padded rolls, shoe soles or deep dark grooves.
+
+Input roles:
+Image 1 is the sole edit target, scene/pose/camera/expression source and the already accepted ROUND TOE SHAPE source.
+Image 2 is the unmodified F07 sock crop, soft cloth folds and material only.
+Image 3 is the unmodified F01 sock crop, soft cloth folds and material only.
+Image 4 is native L1, grey rib-knit sock color and below-knee design only.
+Image 5 is P1, original face/eyes/black-bob/drawing identity preservation only. Keep the existing closed-mouth smile and silver pin; established P2 and U1 roles remain unchanged.
+
+Preserve image 1's entire illustration: face, eyes, hair, pin, two arms and hands, curtain pinch, clothes, bare knees, cuff heights, stance, ankle folds, lighting and background. Change only this tiny sock-surface detail. Output one complete portrait illustration with no comparison panels or text.

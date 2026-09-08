@@ -1,0 +1,27 @@
+Use case: illustration-story. A completely NEW Akari v3.1 rainy-window illustration, portrait 2:3.
+
+COMPOSITION:
+A fresh near-frontal three-quarter view from inside a cozy room, camera at natural standing eye level. Akari stands to the left of the picture; a rain-speckled closed window is to HER LEFT, on the RIGHT of the image. Show her complete standing body. Her chest and both shoulders remain largely visible to the camera, with only a gentle turn toward the window. Her hips, legs and feet follow this small turn without twisting. Her face turns gently toward the viewer, with warm, calm eye contact and a tiny smile.
+
+ACTION AND HAND ORIENTATION:
+Use an easy, unambiguous LEFT-HANDED pinch of the curtain's vertical hem at chest height. Her left arm is the arm on the RIGHT SIDE OF THE IMAGE. Show its separate shoulder, one upper arm, bent elbow, forearm and relaxed wrist.
+The LEFT PALM faces toward the camera, with the fingertips generally pointing upward. In this palmar view the LEFT THUMB is on the VIEWER-RIGHT/outside edge of the hand, toward the window; the four fingers are on the VIEWER-LEFT/body side. Keep that left-hand anatomy. The thumb and index fingertip softly meet around a narrow fold of the curtain edge, while the other three fingers curl naturally toward the visible palm. Show the thenar/thumb pad and a little palm crease, not the back of a right hand.
+Use a light opaque off-white linen curtain, so the cloth hides fingers placed behind it instead of showing ghosted fingers through the fabric. Keep the pinch simple, gentle and ordinary, with one thumb and four fingers. Do not show the thumb on the viewer-left side of a forward-facing palm.
+Her RIGHT arm on the LEFT SIDE OF THE IMAGE hangs easily beside her hip from its own shoulder. Show two separate natural arm routes. She stands comfortably with both feet planted, normal leg proportions and fully bare knees above the below-knee socks.
+
+ATMOSPHERE:
+Cool blue-grey rainy daylight passes through the glass and curtain, balanced by warm diffuse room light. Soft wet greenery and rooftops beyond the glass, a simple shelf and lamp farther inside. The feeling is quietly waiting together, not posing for a fashion photo. The face and the simple curtain gesture are the story.
+
+REFERENCE INPUTS — use these five images in this order:
+1 P1: original Akari face, rounded gentle downturned grey eyes, black bob, bangs, age impression and drawing style.
+2 P2: original small ordinary closed-mouth smile.
+3 Native U1: full-resolution upper-body anatomy, eye detail, hair and single silver pin.
+4 Native L1: full-resolution leg proportions, knees, and medium-grey opaque ribbed BELOW-KNEE sock length and fit.
+5 F01: ONLY the selected long-sleeve outfit and soft sock-fabric finish. Its seated pose and room layout are not this new composition.
+Create a fresh image from these anchors. The scene and body arrangement are defined here, independently of earlier generated scene attempts.
+
+CHARACTER AND OUTFIT:
+Preserve P1's face proportions and soft rounded downturned eyes, small distinct dark oval pupils, darker neutral-grey upper irises, lighter lower irises and rounded pale lower reflections; use P2's quiet closed-mouth smile. Black bob, straight bangs, one slim bright-silver straight hairpin above her LEFT ear, viewer-right in a frontal view.
+Use F01's slate/navy cropped open long-sleeve bolero with pale piping, white buttoned blouse with rounded Peter Pan collar, navy ribbon and blue-grey fine-plaid pleated skirt. Native U1/L1 supply body construction rather than their summer uniform.
+Use L1's ordinary medium-neutral-grey opaque ribbed socks ending BELOW THE KNEES. Entire kneecaps and a short strip of upper calf remain bare above the cuffs. Use F01's supple knit, rounded fabric-covered toes, softly connected shading and small natural folds at bent ankles and floor contact. Feet have ordinary human proportions, indoors without shoes or slippers. Do not force hidden sock detail into view.
+Polished gentle anime illustration, coherent soft light, delicate clear linework and natural skin. Clothing shadows are subtly grouped, with major folds, dimensionality, seams, collar, ribbon, piping and plaid retained. Exactly one character, two naturally connected arms and hands, two coherent legs and feet, no panels, lettering or watermark.

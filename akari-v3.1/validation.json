@@ -226,5 +226,67 @@
       "issues": 0,
       "checked_at": "2026-09-08T08:40:29.835873+00:00"
     }
+  },
+  "rounded_toe_requirement_validation": {
+    "status": "pass",
+    "verified_at": "2026-09-08T10:00:31.478515+00:00",
+    "scope": "Permanent opaque continuous rounded toe requirement, F01/F07 material-only roles, portable F07 image and generation provenance. Wrinkle-strength trials remain in the local run and are not promoted into new base authorities.",
+    "unique_referenced_files_checked": 22,
+    "declared_hashes_checked": 50,
+    "readme_links_checked": 32,
+    "native_F07_and_original_prompt_bytes_unchanged": true,
+    "reference_roles_preserved": true,
+    "required_no_individual_toe_anatomy": true,
+    "pose_is_fixed": false,
+    "footwear_occlusion_allowed": true,
+    "markdown_lint": {
+      "command": "npm run lint:md",
+      "exit_code": 0,
+      "files": 209,
+      "issues": 0
+    }
+  },
+  "rounded_toe_and_wrinkle_validation": {
+    "status": "pass",
+    "checked_at": "2026-09-08T10:15:11.349510+00:00",
+    "scope": "Selected F01/F02/F04/F05/F06/F08/F09 package, F08/F09 generation ancestry, F07 material preservation and F09 default rounded opaque sock material with restrained cloth wrinkles.",
+    "checks": {
+      "asset_records": 224,
+      "active_path_occurrences": 308,
+      "json_files": 26,
+      "unique_assets": 52,
+      "unique_pngs": 38,
+      "document_links": 77,
+      "source_file_copies_compared": 47,
+      "reference_crops_compared": 4
+    },
+    "selected_ids": [
+      "F01",
+      "F02",
+      "F04",
+      "F05",
+      "F06",
+      "F08",
+      "F09"
+    ],
+    "preferred_sock_material_id": "F09",
+    "preferred_material_detail_id": "F09-sock-detail",
+    "all_active_paths_relative_and_resolved": true,
+    "native_png_and_prompt_unchanged": true,
+    "reference_roles_preserved": true,
+    "original_face_authority_promoted": false,
+    "sock_material_must_consistent": true,
+    "pose_is_fixed": false,
+    "wrinkle_count_or_placement_fixed": false,
+    "footwear_occlusion_allowed": true,
+    "generation_ancestry_complete": true,
+    "markdown_lint": {
+      "command": "npm run lint:md",
+      "exit_code": 0,
+      "files": 209,
+      "issues": 0,
+      "checked_at": "2026-09-08T10:15:11.349510+00:00"
+    },
+    "record": "situations/favorites-continuation/validation.json"
   }
 }

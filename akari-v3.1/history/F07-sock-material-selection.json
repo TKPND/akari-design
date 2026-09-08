@@ -1,0 +1,31 @@
+{
+  "project": "akari-v3.1",
+  "path_base": "akari-v3.1",
+  "recorded_at": "2026-09-08T09:40:46.894910+00:00",
+  "status": "user_required_material_only",
+  "user_quote": "F08, F09共に靴下のつま先の足の指が透けちゃってるんだよなぁ。\nF07,F01とかは透けてない丸みのある感じなのでそっちの方が好み(これは制約で固定したい)",
+  "preferred_toe_example_ids": [
+    "F01",
+    "F07"
+  ],
+  "scope": "Sock opacity and one continuous rounded fabric toe envelope only. F07 scene, pose, facial design and whole-image approval are not implied.",
+  "material": {
+    "id": "F07",
+    "role": "user_selected_rounded_opaque_sock_material_only",
+    "path": "references/materials/F07-rounded-opaque-sock-toes.png",
+    "bytes": 2586140,
+    "sha256": "b8ecb57533a4ca3faa96542167e3eb1c6a2647fa90c925245f112d4b8b6a7a0d",
+    "width": 1536,
+    "height": 1024,
+    "png_crc_passed": true
+  },
+  "generation_record": "history/F07-sock-material-generation.json",
+  "prompt": {
+    "path": "prompts/F07-material-source.txt",
+    "bytes": 4663,
+    "sha256": "8acc2ceb9a679d09c941e5246aaec4c83b585a820e5b4db3e53c4578ba796b0a"
+  },
+  "source_output_preserved_byte_for_byte": true,
+  "scene_user_selected": false,
+  "face_authority_promoted": false
+}
