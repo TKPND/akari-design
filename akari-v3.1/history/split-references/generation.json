@@ -1,0 +1,90 @@
+{
+  "project": "akari-v3.1",
+  "path_base": "All asset and record paths are relative to the akari-v3.1 directory.",
+  "tool": "image_gen",
+  "model": null,
+  "model_note": "The built-in tool does not expose a model name.",
+  "user_request": "もう上半身と下半身のリファレンスは生成分けた方が早くねえかって思ったw(作ってからモンタージュしてもいいかもしれん)",
+  "adoption_request": "じゃあそれを使うように説明も書いてcommitしてもらえる？",
+  "selection_recorded_at": "2026-09-08T02:10:18.208614+00:00",
+  "source_layout": "history/split-references/layout.json",
+  "selected_generations": [
+    {
+      "id": "exec-f40057c5-9c09-4fdd-bb67-14ead08bf8b0",
+      "candidate_id": "U1",
+      "title": "上半身・顔と目を優先",
+      "output": "references/U1-upper-reference.png",
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1852161,
+      "elapsed_seconds": 30.673,
+      "status": "user_selected",
+      "prompt": "Use case: identity-preserve.\nAsset type: Akari v3.1 separate UPPER-BODY reference for a split-reference workflow.\nRender a refined high-quality 1024x1536 upper-body reference matching Image 1's exact crop and composition. This includes the complete head, torso, arms and hands, waist and skirt as a generous overlap for assembly with a separately rendered lower body. Do not add the lower legs or zoom out to a full-body shot.\n\nInput roles:\nImage 1 is a precise upper crop of G2. It defines the camera, exact head/body placement, relative scale, pose, head angle, face outline, shoulders, complete arms and hands, waist, skirt, blue-grey background and lighting. Keep those positions and boundaries exactly in the same normalized canvas locations; it is an assembly layout, not the authority for the simplified eyes.\nImage 2 original P1 is the definitive authority for facial identity and ORIGINAL EYE DESIGN. Restore its broad rounded gently downturned eye openings, softly weighted arched upper lids, fine outer lashes, detailed neutral grey irises, small dark oval pupils with a visible fine grey ring, shaded upper iris and characteristic rounded pale reflections at the lower iris.\nImage 3 original P2 specifies the gentle ordinary closed-mouth smile. Do not copy P1's open mouth.\nImage 4 S1 specifies the single bright silver slim hairpin only: character-left, viewer-right, just above the ear. Preserve its scale and tilt.\n\nUse this larger upper-body framing to DRAW the eye details faithfully from P1. Keep the dark pupil distinct from the charcoal upper iris and the silver-grey lower iris; retain the small white side catchlight and softly rounded pale lower reflections. Match the original eye shape and its relative size in the head, with the relaxed expression of P2. Avoid flat black iris blobs, large blank white reflections, giant eyes, new star/sparkle patterns or heavy makeup.\n\nPreserve G2's head scale, black bob and segmented bangs, face outline, gaze, posture, healthy proportions, shirt seams and folds, blue-grey piping, single pin, visible hands/fingers, waist width, skirt silhouette and pleat positions. The waist and skirt must remain in the exact Image 1 locations because this region overlaps the lower reference. Render clean native detail without globally changing the paint style or contrast.\nSame 2:3 portrait crop as Image 1, original blue-grey studio backdrop, no camera/perspective/pose change, no border, label, grid, watermark or inset.",
+      "inputs": [
+        {
+          "id": "U-guide",
+          "path": "history/split-references/U-guide.png",
+          "sha256": "f83b0cf7bc671ebb3827984e413042217b4eded016295425fec00f7f98ad3953",
+          "role": "sole_upper_crop_layout_camera_pose_and_overlap"
+        },
+        {
+          "id": "P1",
+          "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "role": "original_face_hair_and_eye_authority"
+        },
+        {
+          "id": "P2",
+          "path": "../akari-v3.0/references/P2-quiet-smile.png",
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "role": "ordinary_closed_mouth_smile"
+        },
+        {
+          "id": "S1",
+          "path": "references/S1-silver-slim-pin.png",
+          "sha256": "6e35a9f51a68d203d8252dc71d7182fe313d8b66a2c2cb0bf099c83b773cb85f",
+          "role": "silver_hairpin_only"
+        }
+      ]
+    },
+    {
+      "id": "exec-80ad3a73-0f27-4864-8c10-00a163ea171d",
+      "candidate_id": "L1",
+      "title": "下半身・体型と靴下と靴",
+      "output": "references/L1-lower-reference.png",
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1815855,
+      "elapsed_seconds": 57.06,
+      "status": "user_selected",
+      "prompt": "Use case: identity-preserve.\nAsset type: Akari v3.1 separate LOWER-BODY reference for a split-reference workflow.\nRender a clean, detailed 1024x1536 lower-body reference matching Image 1's exact crop and composition: the lower shirt and waist at the top, both arms/hands, blue-grey pleated skirt, healthy bare legs, medium-grey ribbed below-knee socks, both complete white sneakers and ground shadow. There is no face in this lower-body crop; do not add a head or zoom out.\n\nInput roles:\nImage 1 is a precise lower crop of selected G2 and is the SOLE scene/layout target. Keep its camera, pose, perspective, every silhouette position and proportional size exactly in the same normalized canvas locations. This crop will be assembled with a separately rendered upper-body crop.\nImage 2 is complete G2, supporting authority for established body proportions, clothing construction, sock grey, sneakers, standing balance, material and lighting. Do not copy its full-body framing.\n\nThe subject and outfit are already chosen. Refine the drawing at the larger reference scale while preserving the original shapes: exact waist and skirt width, waistband height, pleat arrangement and hem, thighs and healthy calf contours, knee positions, natural stance, original below-knee sock top edges, opaque vertical ribbing and ankle fit, neutral medium-grey sock color on both legs, white sneaker laces, toe shapes, soles and visible separation between shoes. Preserve both complete hands and every visible finger.\nThe lower shirt, arms, waist and skirt form an intentional overlap with the upper reference; retain their exact positions and outlines and avoid inventing new folds or changing the pleat layout. No slimming, changed leg length, rep posing, navy socks, sheer fabric, patterns or shoe redesign.\n\nKeep the soft illustrated linework, original blue-grey studio background, light direction, skin values and ground shadow. Same 2:3 portrait composition as Image 1, both shoes fully inside the canvas with the same bottom margin. No labels, grid, border, watermark or inset.",
+      "inputs": [
+        {
+          "id": "L-guide",
+          "path": "history/split-references/L-guide.png",
+          "sha256": "4bda8b015a54aaa9118383402111605473a402d8f8b3e88fac4f611c64c4a258",
+          "role": "sole_lower_crop_layout_camera_pose_and_overlap"
+        },
+        {
+          "id": "G2",
+          "path": "references/G2-silver-pin-gray-socks-full-body.png",
+          "sha256": "950b800a86ba138d3e8d20ab902069f56298d726f5f763cad497982d70bb798c",
+          "role": "body_outfit_sock_color_and_stance_support"
+        }
+      ]
+    }
+  ],
+  "selection_record": "selection.json",
+  "visual_review": {
+    "method": "Direct inspection of the generated upper/lower images, M2 full frame and enlarged waist/hands/skirt overlap before user adoption.",
+    "upper": "U1 makes the distinct dark oval pupils, neutral grey iris zones and pale rounded lower reflections readable at upper-body scale. P1 remains the original eye authority.",
+    "lower": "L1 preserves the selected G2 stance, healthy leg contours, medium-grey ribbed below-knee socks and complete white sneakers.",
+    "limitations": [
+      "The two generated pieces have small differences in skirt folds and shading.",
+      "One shared standing pose has been reviewed; other poses need their own layout and seam review.",
+      "A reduced full-body display still reduces visible eye detail; supply the native U1 image directly."
+    ]
+  }
+}

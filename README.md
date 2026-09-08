@@ -17,14 +17,18 @@ The public repository is maintained as `TKPND/akari-design`.
   and user-selected G–J authority chain.
 - `akari-v1.5/` contains the first v1.5 body-balance checkpoint, with the
   user-selected B3 baseline and its labeled comparison sheet.
+- `akari-v3.0/` preserves the original black-bob P1/P2/P6 references and
+  selected situations.
+- [Akari v3.1](akari-v3.1/README.md) uses separate U1 upper-body and L1
+  lower-body references, an M2 assembled overview, a silver pin and grey socks.
 - `tools/pdf/` contains the Node/Playwright PDF rendering code.
 - `scripts/` contains Python build and audit scripts.
 - `dist/` contains prebuilt PDF deliverables and public contact sheets.
 - `evidence/` contains review evidence used during the finishing pass.
 
-The raster image assets in this public snapshot are WebP derivatives encoded
-with high-quality lossy `cwebp` settings. Private working originals are not
-included in this repository history.
+The older settings-release raster assets are WebP derivatives encoded with
+high-quality lossy `cwebp` settings. Their private working originals are not
+included. Selected v3.0/v3.1 working references are preserved as native PNGs.
 
 ## Common Commands
 

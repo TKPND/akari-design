@@ -14,6 +14,24 @@ This repository builds and audits Akari visual-reference materials.
 - The preserved v1.1 settings PDF is `dist/akari-v1.1-settings.pdf`; use it for
   inheritance, history, recovery, or an explicitly requested v1.1 audit.
 
+## Akari v3.1
+
+- For the current black-bob v3.1 design, start with
+  [the usage guide](akari-v3.1/README.md), `akari-v3.1/design-state.json`, and
+  `akari-v3.1/reference-set.json`.
+- Use the native U1 upper-body and L1 lower-body images as separate detail
+  inputs. P1 remains the original face, eyes, hair and drawing authority;
+  P2 remains the everyday closed-mouth smile authority. Assign these roles
+  explicitly in generation prompts.
+- M2 is the assembled whole-body proportion overview. Do not use its small
+  face or the overview contact sheet instead of P1/P2 and native U1.
+- S1 defines the silver pin. L1 carries the selected G2 grey socks; G2 remains
+  the source layout and sock-color reference, and P6 supplies inherited body
+  construction. P6's navy socks and missing pin are superseded for v3.1.
+- For corrections, keep the edit target as the scene, pose and camera source.
+  For split generation, establish a shared layout and waist/skirt overlap;
+  during assembly, preserve complete arms/hands and inspect clothing seams.
+
 ## Akari v1.2
 
 - Unqualified `v1.2` means the Natural Form package under `akari-v1.2/`.

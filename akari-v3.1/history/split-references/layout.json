@@ -1,0 +1,76 @@
+{
+  "project": "akari-v3.1",
+  "status": "user_selected_split_layout",
+  "source": "references/G2-silver-pin-gray-socks-full-body.png",
+  "source_sha256": "950b800a86ba138d3e8d20ab902069f56298d726f5f763cad497982d70bb798c",
+  "source_size": [
+    1024,
+    1536
+  ],
+  "guides": {
+    "U-guide": {
+      "path": "history/split-references/U-guide.png",
+      "crop_xywh": [
+        220,
+        20,
+        600,
+        900
+      ],
+      "sha256": "f83b0cf7bc671ebb3827984e413042217b4eded016295425fec00f7f98ad3953",
+      "operation": "ImageMagick crop with +repage; no generative editing."
+    },
+    "L-guide": {
+      "path": "history/split-references/L-guide.png",
+      "crop_xywh": [
+        152,
+        456,
+        720,
+        1080
+      ],
+      "sha256": "4bda8b015a54aaa9118383402111605473a402d8f8b3e88fac4f611c64c4a258",
+      "operation": "ImageMagick crop with +repage; no generative editing."
+    }
+  },
+  "overlap_y_in_source": [
+    456,
+    920
+  ],
+  "intended_montage_size": [
+    2048,
+    3072
+  ],
+  "assembly_intent": "Scale and place each generated region using the crop coordinate frame. Prefer seamless anatomy and object continuity. Do not force warps; preserve separate references if assembly is unsatisfactory.",
+  "path_base": "All asset and record paths are relative to the akari-v3.1 directory.",
+  "candidates": {
+    "U1": {
+      "path": "references/U1-upper-reference.png",
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f"
+    },
+    "L1": {
+      "path": "references/L1-lower-reference.png",
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40"
+    }
+  },
+  "assembly_parameters": {
+    "scale": 2,
+    "waist_transition_y": [
+      1170,
+      1210
+    ],
+    "outer_transition_y": [
+      1760,
+      1784
+    ],
+    "center_x_in_source": [
+      380,
+      625
+    ],
+    "center_ramp_width_in_source": 45,
+    "edge_fade_in_output_pixels": {
+      "horizontal": 64,
+      "top": 32,
+      "bottom": 40
+    }
+  },
+  "reuse_scope": "Exact selected standing pose and crop coordinates only; choose a new shared layout and inspect seams for another pose."
+}

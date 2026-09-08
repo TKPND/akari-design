@@ -1,12 +1,15 @@
 {
   "project": "akari-v3.1",
   "status": "passed",
-  "verified_at": "2026-09-08T01:09:10.199530+00:00",
-  "scope": "User selections, reference roles, complete generation-input chains, relative active paths, README links, SHA-256, PNG signatures/chunk CRCs and original dimensions.",
-  "method": "Python standard-library assertions against the saved package and the two selected exploration outputs; each PNG chunk CRC checked through IEND.",
+  "verified_at": "2026-09-08T02:19:49.303377+00:00",
+  "scope": "Selected U1/L1/M2 adoption, P1/P2 original authorities, portable generation input chains and prompts, image integrity, document links and M2 assembly reproduction.",
+  "method": "Python standard-library assertions for paths, hashes, PNG signatures/chunk CRCs through IEND, dimensions and byte preservation. ImageMagick decoded 16-bit channel comparisons for guide crops, full montage reproduction and U1 face preservation.",
   "selected_ids": [
     "S1",
-    "G2"
+    "G2",
+    "U1",
+    "L1",
+    "M2"
   ],
   "selected_images_unchanged": true,
   "inherited_authorities_verified": [
@@ -14,19 +17,23 @@
     "P2",
     "P6"
   ],
+  "reference_roles_consistent": true,
   "generation_records_checked": [
     "history/S1-generation.json",
-    "history/G2-generation.json"
+    "history/G2-generation.json",
+    "history/split-references/generation.json"
   ],
   "generation_input_chains_complete": true,
+  "split_generation_prompts_preserved_verbatim": true,
   "active_paths_relative_and_resolved": true,
-  "active_path_count": 14,
-  "readme_links_checked": 13,
+  "active_path_count": 26,
+  "declared_hashes_checked": 55,
+  "document_links_checked": 22,
   "checked_images": [
     {
       "id": "P1",
       "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
-      "role": "primary_face_and_hair",
+      "role": "original_face_hair_and_eye_authority",
       "width": 1254,
       "height": 1254,
       "bytes": 1869375,
@@ -36,7 +43,7 @@
     {
       "id": "P2",
       "path": "../akari-v3.0/references/P2-quiet-smile.png",
-      "role": "primary_everyday_expression",
+      "role": "original_everyday_expression_authority",
       "width": 1254,
       "height": 1254,
       "bytes": 1836424,
@@ -44,13 +51,23 @@
       "png_crc_passed": true
     },
     {
-      "id": "P6",
-      "path": "../akari-v3.0/references/P6-relaxed-full-body.png",
-      "role": "inherited_body_and_outfit_construction",
+      "id": "U1",
+      "path": "references/U1-upper-reference.png",
+      "role": "working_upper_body_eye_hair_clothing_detail",
       "width": 1024,
       "height": 1536,
-      "bytes": 1664313,
-      "sha256": "018f45133acb2d9cd3625d27090b38084f6b795a92a726ff641785d889c0a823",
+      "bytes": 1852161,
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "png_crc_passed": true
+    },
+    {
+      "id": "L1",
+      "path": "references/L1-lower-reference.png",
+      "role": "working_lower_body_skirt_legs_socks_sneakers_detail",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1815855,
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
       "png_crc_passed": true
     },
     {
@@ -64,13 +81,33 @@
       "png_crc_passed": true
     },
     {
+      "id": "M2",
+      "path": "references/M2-full-body-montage.png",
+      "role": "assembled_whole_body_proportion_overview",
+      "width": 2048,
+      "height": 3072,
+      "bytes": 5447479,
+      "sha256": "73b3f5d351072612480d0d70687a9fef6d745da8fc3e4a0fd47577b9c76bf74e",
+      "png_crc_passed": true
+    },
+    {
       "id": "G2",
       "path": "references/G2-silver-pin-gray-socks-full-body.png",
-      "role": "primary_body_and_outfit",
+      "role": "approved_source_layout_and_body_design",
       "width": 1024,
       "height": 1536,
       "bytes": 1888426,
       "sha256": "950b800a86ba138d3e8d20ab902069f56298d726f5f763cad497982d70bb798c",
+      "png_crc_passed": true
+    },
+    {
+      "id": "P6",
+      "path": "../akari-v3.0/references/P6-relaxed-full-body.png",
+      "role": "inherited_body_and_outfit_construction",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 1664313,
+      "sha256": "018f45133acb2d9cd3625d27090b38084f6b795a92a726ff641785d889c0a823",
       "png_crc_passed": true
     },
     {
@@ -92,9 +129,77 @@
       "bytes": 1838676,
       "sha256": "765078737f1fcb204890d18875cc264061bc4023b75f804d1baec39bff059e5e",
       "png_crc_passed": true
+    },
+    {
+      "id": "U-guide",
+      "path": "history/split-references/U-guide.png",
+      "role": "preserved_generation_crop_input",
+      "width": 600,
+      "height": 900,
+      "bytes": 633979,
+      "sha256": "f83b0cf7bc671ebb3827984e413042217b4eded016295425fec00f7f98ad3953",
+      "png_crc_passed": true
+    },
+    {
+      "id": "L-guide",
+      "path": "history/split-references/L-guide.png",
+      "role": "preserved_generation_crop_input",
+      "width": 720,
+      "height": 1080,
+      "bytes": 836102,
+      "sha256": "4bda8b015a54aaa9118383402111605473a402d8f8b3e88fac4f611c64c4a258",
+      "png_crc_passed": true
+    },
+    {
+      "id": "split-overview",
+      "path": "previews/split-reference-overview.png",
+      "role": "display_contact_sheet_not_generation_input",
+      "width": 1152,
+      "height": 612,
+      "bytes": 3394635,
+      "sha256": "e0d33d4dfcb00a1aff885456cc01f06a9b8c739fb7c76c2a8c9439036d1f1de2",
+      "png_crc_passed": true
     }
   ],
+  "guide_crops_match_G2_decoded_pixels": true,
+  "montage_reproduction": {
+    "command": "python3 akari-v3.1/history/split-references/assemble.py --output-dir build/akari-v3.1/montage-rebuild",
+    "exit_code": 0,
+    "decoded_16bit_RGBA_pixels_identical": true,
+    "decoded_16bit_RGBA_sha256": "dd995c03a09aff9218025171d56c005b00ec4061a151fb45d9a452c345f634fd",
+    "approved_png_sha256": "73b3f5d351072612480d0d70687a9fef6d745da8fc3e4a0fd47577b9c76bf74e",
+    "reproduced_png_sha256": "fd7d083eb28d6dd764b0aaa7c86f697e15e54eb27b2b16c6e126c22b18eea96a",
+    "note": "PNG container metadata can differ; the decoded 16-bit RGBA pixels match exactly.",
+    "imagemagick_version": "Version: ImageMagick 7.1.2-18 Q16 x86_64 23822 https://imagemagick.org",
+    "face_region_matches_resampled_U1": true,
+    "face_comparison": {
+      "M2_crop_xywh": [
+        820,
+        360,
+        350,
+        280
+      ],
+      "resampled_U1_crop_xywh": [
+        380,
+        320,
+        350,
+        280
+      ],
+      "resampled_U1_size": [
+        1200,
+        1800
+      ],
+      "comparison": "Decoded 16-bit RGB equality"
+    }
+  },
+  "markdown_lint": {
+    "command": "npm run lint:md",
+    "exit_code": 0,
+    "issues": 0
+  },
   "exploration_records_required_for_continuation": false,
-  "historical_path_note": "S1 source_records point to the original ignored exploration logs. All generation inputs and prompts required for continuation are preserved in akari-v3.1 and inherited akari-v3.0.",
-  "visual_review_record": "history/G2-generation.json"
+  "historical_path_exceptions": [
+    "history/S1-generation.json: source_records (history only)"
+  ],
+  "visual_review_record": "history/split-references/generation.json"
 }

@@ -1,28 +1,25 @@
 {
   "project": "akari-v3.1",
   "updated": "2026-09-08T02:10:18.208614+00:00",
-  "current_stage": "split_references_selected",
-  "status": "user_selected_working_design",
-  "base_version": "akari-v3.0",
-  "path_base": "All active paths are relative to the akari-v3.1 directory.",
-  "base_design_state": "../akari-v3.0/design-state.json",
-  "scope": "Akari v3.1 uses the selected U1 upper and L1 lower references directly, with M2 as an assembled whole-body overview; the S1 silver pin and G2 grey sock design are retained.",
-  "primary_references": {
-    "face": {
+  "status": "user_selected_split_reference_set",
+  "path_base": "All asset and record paths are relative to the akari-v3.1 directory.",
+  "selection_record": "selection.json",
+  "references": [
+    {
       "id": "P1",
       "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
       "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
       "role": "original_face_hair_and_eye_authority",
       "approval": "Proのやつ土台にしてみよう"
     },
-    "everyday_expression": {
+    {
       "id": "P2",
       "path": "../akari-v3.0/references/P2-quiet-smile.png",
       "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
       "role": "original_everyday_expression_authority",
       "approval": "P2で進めたい"
     },
-    "upper_body": {
+    {
       "id": "U1",
       "title": "上半身・目元と髪と制服の作業参照",
       "path": "references/U1-upper-reference.png",
@@ -40,7 +37,7 @@
       ],
       "record": "history/split-references/generation.json"
     },
-    "lower_body": {
+    {
       "id": "L1",
       "title": "下半身・スカートと脚とグレー靴下と白スニーカー",
       "path": "references/L1-lower-reference.png",
@@ -54,40 +51,96 @@
         "G2"
       ],
       "record": "history/split-references/generation.json"
+    },
+    {
+      "id": "S1",
+      "title": "明るいシルバーの細ピン",
+      "path": "references/S1-silver-slim-pin.png",
+      "role": "primary_hair_accessory_only",
+      "sha256": "6e35a9f51a68d203d8252dc71d7182fe313d8b66a2c2cb0bf099c83b773cb85f",
+      "width": 1254,
+      "height": 1254,
+      "approval": "S1がいいね。",
+      "approved_at": "2026-09-08T00:45:00.781Z"
+    },
+    {
+      "id": "M2",
+      "title": "上下を合成した全身・バランス確認用",
+      "path": "references/M2-full-body-montage.png",
+      "role": "assembled_whole_body_proportion_overview",
+      "sha256": "73b3f5d351072612480d0d70687a9fef6d745da8fc3e4a0fd47577b9c76bf74e",
+      "width": 2048,
+      "height": 3072,
+      "approval": "じゃあそれを使うように説明も書いてcommitしてもらえる？",
+      "selection_recorded_at": "2026-09-08T02:10:18.208614+00:00",
+      "derived_from": [
+        "U1",
+        "L1",
+        "G2"
+      ],
+      "record": "history/split-references/M2-assembly.json"
+    },
+    {
+      "id": "G2",
+      "title": "上下分割前の承認済み全身・G2靴下色の原本",
+      "path": "references/G2-silver-pin-gray-socks-full-body.png",
+      "role": "approved_source_layout_and_body_design",
+      "sha256": "950b800a86ba138d3e8d20ab902069f56298d726f5f763cad497982d70bb798c",
+      "width": 1024,
+      "height": 1536,
+      "approval": "G2にしよう",
+      "approved_at": "2026-09-08T01:04:03.831Z",
+      "derived_from": "P6",
+      "generation_record": "history/G2-generation.json"
+    },
+    {
+      "id": "P6",
+      "path": "../akari-v3.0/references/P6-relaxed-full-body.png",
+      "sha256": "018f45133acb2d9cd3625d27090b38084f6b795a92a726ff641785d889c0a823",
+      "role": "inherited_body_and_outfit_construction",
+      "approval": "P6かな。"
+    }
+  ],
+  "input_profiles": {
+    "new_full_body_scene": {
+      "default_ids": [
+        "P1",
+        "P2",
+        "U1",
+        "L1"
+      ],
+      "optional_ids": [
+        "S1",
+        "M2"
+      ],
+      "note": "M2 is a proportion overview; its small face is not the face authority."
+    },
+    "upper_body_scene": {
+      "default_ids": [
+        "P1",
+        "P2",
+        "U1"
+      ],
+      "optional_ids": [
+        "S1"
+      ]
+    },
+    "lower_body_detail": {
+      "default_ids": [
+        "L1"
+      ],
+      "optional_ids": [
+        "G2",
+        "P6"
+      ],
+      "note": "G2/P6 support construction only; keep the current grey socks from L1/G2."
+    },
+    "existing_image_edit": {
+      "first_input": "the current edit target",
+      "support": "Choose relevant IDs from the profiles above; preserve the target scene, pose and camera."
     }
   },
-  "hair_accessory_reference": {
-    "id": "S1",
-    "title": "明るいシルバーの細ピン",
-    "path": "references/S1-silver-slim-pin.png",
-    "role": "primary_hair_accessory_only",
-    "sha256": "6e35a9f51a68d203d8252dc71d7182fe313d8b66a2c2cb0bf099c83b773cb85f",
-    "width": 1254,
-    "height": 1254,
-    "approval": "S1がいいね。",
-    "approved_at": "2026-09-08T00:45:00.781Z"
-  },
-  "body_construction_reference": {
-    "id": "P6",
-    "path": "../akari-v3.0/references/P6-relaxed-full-body.png",
-    "sha256": "018f45133acb2d9cd3625d27090b38084f6b795a92a726ff641785d889c0a823",
-    "role": "inherited_body_and_outfit_construction",
-    "approval": "P6かな。"
-  },
-  "sock_design": {
-    "reference_id": "L1",
-    "color": "medium neutral grey",
-    "material": "opaque ribbed knit",
-    "length": "below knee, retaining the selected G2 ribbed heights and fit shown in L1",
-    "color_origin_reference_id": "G2"
-  },
-  "selection_record": "selection.json",
-  "generation_records": {
-    "hair_accessory": "history/S1-generation.json",
-    "full_body": "history/G2-generation.json",
-    "split_references": "history/split-references/generation.json"
-  },
-  "generation_rules": [
+  "usage_rules": [
     "Before generation, read README.md and reference-set.json, open the edit target and relevant native reference images with view_image, and assign each input an explicit role.",
     "For a new full-body scene, use P1 for original face, eye design, black bob and drawing; P2 for the ordinary closed-mouth smile; native U1 for upper-body detail; and native L1 for lower-body detail. Add S1 for exact pin design and M2 for whole-body balance when needed.",
     "P1 and P2 remain the original face/eye and expression authorities. Derived U1, G2 and M2 images do not replace them. Preserve the small distinct dark oval pupil, neutral grey iris zones and rounded pale lower-iris reflections from P1; do not enlarge the eyes to substitute for detail.",
@@ -99,39 +152,10 @@
     "L1 carries the G2 medium-neutral-grey opaque ribbed below-knee socks, healthy leg contours, blue-grey pleated skirt and white sneakers. G2 remains the approved source layout and sock-color origin; P6 is inherited construction support whose navy socks and absent pin are superseded.",
     "Later situation or expression selections do not automatically change these roles. Use the current black-bob v3.0 lineage; do not mix v1/v2 or the August v3.0 research design into this version."
   ],
-  "asset_inventory": "asset-inventory.json",
-  "validation": "validation.json",
-  "whole_body_overview_reference": {
-    "id": "M2",
-    "title": "上下を合成した全身・バランス確認用",
-    "path": "references/M2-full-body-montage.png",
-    "role": "assembled_whole_body_proportion_overview",
-    "sha256": "73b3f5d351072612480d0d70687a9fef6d745da8fc3e4a0fd47577b9c76bf74e",
-    "width": 2048,
-    "height": 3072,
-    "approval": "じゃあそれを使うように説明も書いてcommitしてもらえる？",
-    "selection_recorded_at": "2026-09-08T02:10:18.208614+00:00",
-    "derived_from": [
-      "U1",
-      "L1",
-      "G2"
-    ],
-    "record": "history/split-references/M2-assembly.json"
-  },
-  "source_body_reference": {
-    "id": "G2",
-    "title": "上下分割前の承認済み全身・G2靴下色の原本",
-    "path": "references/G2-silver-pin-gray-socks-full-body.png",
-    "role": "approved_source_layout_and_body_design",
-    "sha256": "950b800a86ba138d3e8d20ab902069f56298d726f5f763cad497982d70bb798c",
-    "width": 1024,
-    "height": 1536,
-    "approval": "G2にしよう",
-    "approved_at": "2026-09-08T01:04:03.831Z",
-    "derived_from": "P6",
-    "generation_record": "history/G2-generation.json"
-  },
-  "reference_set": "reference-set.json",
-  "usage_guide": "README.md",
-  "assembly_record": "history/split-references/M2-assembly.json"
+  "generation_record": "history/split-references/generation.json",
+  "layout": "history/split-references/layout.json",
+  "assembly_recipe": "history/split-references/assemble.py",
+  "assembly_record": "history/split-references/M2-assembly.json",
+  "overview": "previews/split-reference-overview.png",
+  "validation": "validation.json"
 }

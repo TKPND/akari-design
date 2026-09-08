@@ -1,0 +1,49 @@
+{
+  "output": "references/M2-full-body-montage.png",
+  "sha256": "73b3f5d351072612480d0d70687a9fef6d745da8fc3e4a0fd47577b9c76bf74e",
+  "canvas": [
+    2048,
+    3072
+  ],
+  "upper": "references/U1-upper-reference.png",
+  "lower": "references/L1-lower-reference.png",
+  "background": "references/G2-silver-pin-gray-socks-full-body.png",
+  "waist_transition_y": [
+    1170,
+    1210
+  ],
+  "outer_transition_y": [
+    1760,
+    1784
+  ],
+  "method": "Uniform scaling and placement from layout.json; lower layer first, then upper. The transition crosses the central waistband and curves down through the skirt, keeping both complete arms and hands from the upper image. No limb is split at the waistband. Outer edge fades stay in the surrounding background.",
+  "generative_postprocessing": false,
+  "geometric_warping": false,
+  "original_reference_files_overwritten": false,
+  "status": "user_selected_assembly",
+  "review": "history/split-references/generation.json",
+  "face_region_matches_resampled_upper": true,
+  "project": "akari-v3.1",
+  "path_base": "All asset and record paths are relative to the akari-v3.1 directory.",
+  "selection_record": "selection.json",
+  "layout": "history/split-references/layout.json",
+  "recipe": "history/split-references/assemble.py",
+  "selection_recorded_at": "2026-09-08T02:10:18.208614+00:00",
+  "input_hashes": [
+    {
+      "id": "U1",
+      "path": "references/U1-upper-reference.png",
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f"
+    },
+    {
+      "id": "L1",
+      "path": "references/L1-lower-reference.png",
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40"
+    },
+    {
+      "id": "G2",
+      "path": "references/G2-silver-pin-gray-socks-full-body.png",
+      "sha256": "950b800a86ba138d3e8d20ab902069f56298d726f5f763cad497982d70bb798c"
+    }
+  ]
+}

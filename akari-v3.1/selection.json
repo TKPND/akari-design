@@ -1,10 +1,13 @@
 {
   "project": "akari-v3.1",
   "base_version": "akari-v3.0",
-  "updated": "2026-09-08T01:04:03.831Z",
+  "updated": "2026-09-08T02:10:18.208614+00:00",
   "approved_ids": [
     "S1",
-    "G2"
+    "G2",
+    "U1",
+    "L1",
+    "M2"
   ],
   "selections": [
     {
@@ -42,6 +45,74 @@
         "derived_from": "P6",
         "generation_record": "history/G2-generation.json"
       }
+    },
+    {
+      "id": "U1",
+      "user_quote": "じゃあそれを使うように説明も書いてcommitしてもらえる？",
+      "selection_recorded_at": "2026-09-08T02:10:18.208614+00:00",
+      "approval_scope": "Use the displayed U1 native upper-body image for future upper-body detail references, with P1/P2 retaining original face/expression authority.",
+      "reference": {
+        "id": "U1",
+        "title": "上半身・目元と髪と制服の作業参照",
+        "path": "references/U1-upper-reference.png",
+        "role": "working_upper_body_eye_hair_clothing_detail",
+        "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+        "width": 1024,
+        "height": 1536,
+        "approval": "じゃあそれを使うように説明も書いてcommitしてもらえる？",
+        "selection_recorded_at": "2026-09-08T02:10:18.208614+00:00",
+        "derived_from": [
+          "G2",
+          "P1",
+          "P2",
+          "S1"
+        ],
+        "record": "history/split-references/generation.json"
+      }
+    },
+    {
+      "id": "L1",
+      "user_quote": "じゃあそれを使うように説明も書いてcommitしてもらえる？",
+      "selection_recorded_at": "2026-09-08T02:10:18.208614+00:00",
+      "approval_scope": "Use the displayed L1 native lower-body image for future skirt, body, leg, grey sock and sneaker details.",
+      "reference": {
+        "id": "L1",
+        "title": "下半身・スカートと脚とグレー靴下と白スニーカー",
+        "path": "references/L1-lower-reference.png",
+        "role": "working_lower_body_skirt_legs_socks_sneakers_detail",
+        "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+        "width": 1024,
+        "height": 1536,
+        "approval": "じゃあそれを使うように説明も書いてcommitしてもらえる？",
+        "selection_recorded_at": "2026-09-08T02:10:18.208614+00:00",
+        "derived_from": [
+          "G2"
+        ],
+        "record": "history/split-references/generation.json"
+      }
+    },
+    {
+      "id": "M2",
+      "user_quote": "じゃあそれを使うように説明も書いてcommitしてもらえる？",
+      "selection_recorded_at": "2026-09-08T02:10:18.208614+00:00",
+      "approval_scope": "Use the displayed M2 assembled full body for proportion and continuity checks; keep native U1/L1 as detail inputs.",
+      "reference": {
+        "id": "M2",
+        "title": "上下を合成した全身・バランス確認用",
+        "path": "references/M2-full-body-montage.png",
+        "role": "assembled_whole_body_proportion_overview",
+        "sha256": "73b3f5d351072612480d0d70687a9fef6d745da8fc3e4a0fd47577b9c76bf74e",
+        "width": 2048,
+        "height": 3072,
+        "approval": "じゃあそれを使うように説明も書いてcommitしてもらえる？",
+        "selection_recorded_at": "2026-09-08T02:10:18.208614+00:00",
+        "derived_from": [
+          "U1",
+          "L1",
+          "G2"
+        ],
+        "record": "history/split-references/M2-assembly.json"
+      }
     }
   ],
   "design": {
@@ -57,14 +128,18 @@
       "reference_id": "G2",
       "color": "medium neutral grey",
       "material": "opaque ribbed knit",
-      "height_and_fit": "Preserve P6 below-knee heights, rib pattern and calf/ankle fit, as shown in G2."
+      "height_and_fit": "Preserve P6 below-knee heights, rib pattern and calf/ankle fit, as shown in G2.",
+      "working_reference_id": "L1"
     }
   },
   "reference_authorities": {
-    "face": "P1",
+    "face_and_eyes": "P1",
     "everyday_expression": "P2",
-    "body_and_outfit": "G2",
+    "upper_body_detail": "U1",
+    "lower_body_detail": "L1",
+    "whole_body_overview": "M2",
     "hair_accessory": "S1",
+    "source_layout_and_sock_color": "G2",
     "body_construction": "P6"
   },
   "commit_request": {
@@ -75,6 +150,15 @@
   "state": "design-state.json",
   "generation_records": {
     "hair_accessory": "history/S1-generation.json",
-    "full_body": "history/G2-generation.json"
-  }
+    "full_body": "history/G2-generation.json",
+    "split_references": "history/split-references/generation.json"
+  },
+  "split_reference_adoption": {
+    "user_proposal": "もう上半身と下半身のリファレンスは生成分けた方が早くねえかって思ったw(作ってからモンタージュしてもいいかもしれん)",
+    "user_adoption_and_commit_request": "じゃあそれを使うように説明も書いてcommitしてもらえる？",
+    "selection_recorded_at": "2026-09-08T02:10:18.208614+00:00",
+    "scope": "Adopt the previously displayed U1/L1/M2 set and document its use. Preserve P1/P2 as original face/eye and expression authorities."
+  },
+  "assembly_record": "history/split-references/M2-assembly.json",
+  "reference_set": "reference-set.json"
 }
