@@ -1,0 +1,23 @@
+Use case: illustration-story.
+Create ONE finished standalone Akari v3.1 daily-life illustration. No collage, panels, captions, speech balloons, signatures or printed image IDs.
+Reference roles, in input order:
+1 P1: sole original authority for face shape, soft rounded slightly downturned eyes, short black bob and straight bangs, identity, age impression, delicate anime linework and painting. Do not copy its open mouth or background.
+2 P2: ordinary small closed-mouth smile authority and baseline for subtle expressions. Follow the scene's expression; do not mechanically repeat a smile.
+3 native U1: upper-body construction, crisp eye rendering, hair detail and silver pin location. Its short-sleeve summer blouse is superseded by input 5.
+4 native L1: healthy natural leg contours, medium neutral grey opaque ribbed below-knee socks and white low-top sneakers. Its plain skirt is superseded by input 5.
+5 V31-06: USER-SELECTED WARDROBE AUTHORITY for this entire batch. Copy the navy/slate-blue LONG-SLEEVE cropped open-front bolero, narrow pale cuff piping, WHITE ROUNDED PETER PAN COLLAR blouse with buttons, DARK NAVY RIBBON BOW, and BLUE-GREY PLAID PLEATED SKIRT with fine light and muted warm grid lines. Where a school bag is required, use its plain dark navy/black soft rectangular shoulder school bag. Do not copy its railway setting, walking pose, expression or camera. This is a clothing reference, not a new face authority.
+Hairpin as visible in U1 and V31-06: exactly ONE bright silver slender straight pin with rounded tips at HER LEFT temple just above the ear (viewer-right in front view), never crossed or doubled.
+Priority: P1 identity, P2 subtle expression baseline, U1/L1 construction and pin detail, V31-06 clothing. ALL scenes keep the V31-06 long-sleeve bolero outfit; no short sleeves, pointed open collar, plain skirt or different costume.
+Preserve P1 eye design: small distinct dark oval pupil, neutral grey iris with darker upper and lighter lower zones and rounded pale lower reflections. Keep normal eye size, current black-bob lineage, reference age impression and physique without exaggeration. Warm natural subtle blush.
+Look: polished delicate anime illustration matching P1/P2/U1, fine lines, soft luminous natural light, believable fabric, a modest lived-in Japanese home. One character only; viewer is an unseen familiar person. Warm candid wholesome daily life. Avoid exaggerated comedy faces or theatrical acting.
+Depict the middle of an action or reaction, with props giving a visible reason for her expression and hands. Respect gravity, connected arms/hands/legs and coherent grips and contacts. No duplicated limbs, fingers or objects. Keep her face crisp within the composition.
+Indoors ABOVE the entry step: NO SHOES, keep both medium grey ribbed socks including their feet. No bare feet or slippers. White sneakers are permitted only on the recessed tiled entry floor or outside. Feet may be out of frame when appropriate. Use an ordinary respectful camera that cannot see under the skirt.
+Scene-specific direction below overrides the reference pose, setting, camera and smile.
+
+Scene B09: 少しだけ目をそらす
+Original scene brief: おやつを隠すほどではないが、少しだけ視線をそらしてごまかす。手元には大きい方のお菓子。笑いすぎず、控えめな誤魔化し方。
+Composition: portrait 2:3, waist-up from dining side.
+Action and expression: Holds visibly larger pastry piece near herself; matching small piece on viewer-side plate. Face turns just slightly away with a restrained evasive closed mouth; no furtive hiding or villainous smirk.
+Produce one complete image only, with no title printed in the image.
+Expression emphasis: keep a composed nearly neutral closed mouth, perhaps only one corner very faintly raised, with a subtly aware or evasive eye expression. This is a small caught-in-the-act reaction, not the ordinary friendly smiling portrait. Make the unfair snack allocation visually unmistakable. No extra bitten pastry unless the original scene specifically requests eating.
+Gaze requirement: no eye contact at all. Her head turns slightly toward image-left, and both pupils look farther toward image-left, away from the unseen viewer. A tiny evasive neutral mouth; no broad smile.

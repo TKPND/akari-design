@@ -1,0 +1,59 @@
+{
+  "status": "user_selected",
+  "date": "2026-09-08",
+  "selected_ids": [
+    "A04",
+    "A08",
+    "A09",
+    "A13",
+    "A15",
+    "A16",
+    "B01",
+    "B03",
+    "B07",
+    "B09",
+    "B14",
+    "B16",
+    "C02",
+    "C04",
+    "C11",
+    "C12",
+    "C13",
+    "C15"
+  ],
+  "selected_by_theme": {
+    "A": [
+      "A04",
+      "A08",
+      "A09",
+      "A13",
+      "A15",
+      "A16"
+    ],
+    "B": [
+      "B01",
+      "B03",
+      "B07",
+      "B09",
+      "B14",
+      "B16"
+    ],
+    "C": [
+      "C02",
+      "C04",
+      "C11",
+      "C12",
+      "C13",
+      "C15"
+    ]
+  },
+  "evidence": "推奨18マイでいいんだけど、A04の靴履こうとしてるやつ、右足で左の靴履こうとしてるんよね.意図的なボケならいいんだけど",
+  "A04": {
+    "revision": "A04-r4",
+    "reviewer": "assistant",
+    "reason": "Correct user-reported shoe mismatch before commit.",
+    "user_selected_scene": true,
+    "user_explicitly_selected_this_revision": false
+  },
+  "scope": "Selected situation illustrations and batch wardrobe; no change to original face authorities."
+}

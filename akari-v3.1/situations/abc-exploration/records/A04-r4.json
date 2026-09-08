@@ -1,0 +1,68 @@
+{
+  "id": "A04-r4",
+  "tool": "image_gen",
+  "tool_mode": "built-in-imagegen",
+  "model": null,
+  "model_note": "The built-in tool did not expose the model name.",
+  "started_at": "2026-09-08T05:34:51.552Z",
+  "elapsed_seconds": 32.586,
+  "tool_output_filename": "exec-7840b0b0-9cbb-453f-b374-6f84132f3f72.png",
+  "path_base": "akari-v3.1",
+  "output": {
+    "path": "situations/abc-exploration/images/A04-r4.png",
+    "sha256": "63bc47dc6de0121531ebcff8462f0df233051be97dbcd0c3dabc246ac73ce177",
+    "bytes": 2104985,
+    "width": 1024,
+    "height": 1536
+  },
+  "prompt": {
+    "path": "situations/abc-exploration/prompts/A04-r4.txt",
+    "sha256": "49352a486f67d6540633b7ab7623c641cbb5070dea56b9f798b802a72564678e",
+    "bytes": 2211
+  },
+  "inputs": [
+    {
+      "path": "situations/abc-exploration/history/A04-r3.png",
+      "sha256": "1c628f0018ab994869f7f02c445b6527dc482fb3b8652b091b462d6020c5e0eb",
+      "id": "A04-r3"
+    },
+    {
+      "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "id": "P1"
+    },
+    {
+      "path": "../akari-v3.0/references/P2-quiet-smile.png",
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "id": "P2"
+    },
+    {
+      "path": "references/U1-upper-reference.png",
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "id": "U1"
+    },
+    {
+      "path": "references/L1-lower-reference.png",
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "id": "L1"
+    }
+  ],
+  "input_ids": [
+    "A04-r3",
+    "P1",
+    "P2",
+    "U1",
+    "L1"
+  ],
+  "parent": "A04-r3",
+  "review": {
+    "verdict": "pass",
+    "reviewer": "assistant",
+    "method": "Full image and enlarged footwork crop inspected",
+    "note": "左足全体を木床へ置き、右足は土間と靴から完全に離れた状態へ修正。空の白スニーカー2足は土間に残り、足と靴の取り違えは解消。顔・目線・髪・ピン・丸襟ボレロの見た目も継続。",
+    "limitations": [
+      "元の脱ぎかけから、脱ぎ終えて上がる瞬間へ場面を少し進めた。",
+      "この修正版そのものへのユーザー個別承認ではなく、18場面の採用と不具合指摘を受けて修正し、助手が検証した。"
+    ]
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "path_base": "akari-v3.1",
+  "scene_id": "A04",
+  "selected_revision": "A04-r4",
+  "reason": "User found the original right-foot/left-shoe mismatch.",
+  "scene_adjustment": "Advance from half-removed sneaker to both shoes removed and stepping onto the wooden floor.",
+  "selection_basis": "User selected the 18 scene IDs; assistant verified the correction under that selection.",
+  "history": [
+    {
+      "id": "A04",
+      "output": {
+        "path": "situations/abc-exploration/history/A04-original.png",
+        "sha256": "1299c256e3d26c254b31b3bc3e50200d437c51ff6f9a2b8e234b78c90579de88",
+        "bytes": 2163875,
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/abc-exploration/history/A04-original.txt",
+        "sha256": "6842b4f06b8fe90b65a355c6d716d98f6f8ded45008ce541d0cf68fd05fcd5cd",
+        "bytes": 3731
+      },
+      "record": "situations/abc-exploration/history/A04-original.json",
+      "review": {
+        "verdict": "needs_correction",
+        "reviewer": "user",
+        "note": "右足で左の靴を履こうとして見える。意図的なボケではなく生成ミス。"
+      }
+    },
+    {
+      "id": "A04-r2",
+      "output": {
+        "path": "situations/abc-exploration/history/A04-r2.png",
+        "sha256": "42adfcd9409b9bdf27ec6920550d5bae75040f886e71fa975485554947056ec9",
+        "bytes": 2275809,
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/abc-exploration/history/A04-r2.txt",
+        "sha256": "77af893419ba1c2656a84017a7f4b8498687eda55032d3a9add753289ec4c934",
+        "bytes": 3325
+      },
+      "record": "situations/abc-exploration/history/A04-r2.json",
+      "review": {
+        "verdict": "needs_correction",
+        "note": "Both shoes are empty, but the trailing socked toe touches the tile; supporting heel remains raised. Repair balance and clear foot-floor gap."
+      }
+    },
+    {
+      "id": "A04-r3",
+      "output": {
+        "path": "situations/abc-exploration/history/A04-r3.png",
+        "sha256": "1c628f0018ab994869f7f02c445b6527dc482fb3b8652b091b462d6020c5e0eb",
+        "bytes": 2326885,
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/abc-exploration/history/A04-r3.txt",
+        "sha256": "57c7aeeeba5a42065d838c498ce02b8a68a13cc9d9613e4c5e07bae7ed15c776",
+        "bytes": 2771
+      },
+      "record": "situations/abc-exploration/history/A04-r3.json",
+      "review": {
+        "verdict": "needs_correction",
+        "note": "Both shoes empty, trailing foot clear of tile; supporting foot still overhangs step edge. Move the entire supporting foot farther onto wood."
+      }
+    },
+    {
+      "id": "A04-r4",
+      "output": {
+        "path": "situations/abc-exploration/images/A04-r4.png",
+        "sha256": "63bc47dc6de0121531ebcff8462f0df233051be97dbcd0c3dabc246ac73ce177",
+        "bytes": 2104985,
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/abc-exploration/prompts/A04-r4.txt",
+        "sha256": "49352a486f67d6540633b7ab7623c641cbb5070dea56b9f798b802a72564678e",
+        "bytes": 2211
+      },
+      "record": "situations/abc-exploration/records/A04-r4.json",
+      "review": {
+        "verdict": "pass",
+        "reviewer": "assistant",
+        "method": "Full image and enlarged footwork crop inspected",
+        "note": "左足全体を木床へ置き、右足は土間と靴から完全に離れた状態へ修正。空の白スニーカー2足は土間に残り、足と靴の取り違えは解消。顔・目線・髪・ピン・丸襟ボレロの見た目も継続。",
+        "limitations": [
+          "元の脱ぎかけから、脱ぎ終えて上がる瞬間へ場面を少し進めた。",
+          "この修正版そのものへのユーザー個別承認ではなく、18場面の採用と不具合指摘を受けて修正し、助手が検証した。"
+        ]
+      }
+    }
+  ]
+}

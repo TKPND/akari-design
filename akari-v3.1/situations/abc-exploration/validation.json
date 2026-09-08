@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "checked_at": "2026-09-08T05:44:17.582163+00:00",
+  "selected_count": 18,
+  "generation_records": 21,
+  "package_file_count_excluding_reports": 95,
+  "checks": {
+    "hashes": 197,
+    "pngs": 27,
+    "links": 92
+  },
+  "A04_selected_revision": "A04-r4",
+  "native_png_validation": "signature, dimensions, CRC, zlib and SHA-256 passed",
+  "references_and_edit_inputs": "All current and historical inputs resolve within the repository and match their recorded hashes.",
+  "visual_review": "18 selected scenes reviewed; A04-r4 additionally inspected in a footwork enlargement.",
+  "browser_render_check": "Not performed: no browser backend was available.",
+  "preview_check": "Static thumbnails/contact sheets and their source links checked.",
+  "approval_scope": "User selected 18 scene IDs; assistant verified A04 correction."
+}

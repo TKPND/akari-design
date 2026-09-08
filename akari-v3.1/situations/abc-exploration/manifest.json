@@ -1,0 +1,688 @@
+{
+  "schema_version": 1,
+  "project": "akari-v3.1",
+  "package": "ABC exploration selected scenes",
+  "date": "2026-09-08",
+  "path_base": "All paths are relative to the akari-v3.1 directory.",
+  "selected_count": 18,
+  "exploration_count": 48,
+  "selected_ids": [
+    "A04",
+    "A08",
+    "A09",
+    "A13",
+    "A15",
+    "A16",
+    "B01",
+    "B03",
+    "B07",
+    "B09",
+    "B14",
+    "B16",
+    "C02",
+    "C04",
+    "C11",
+    "C12",
+    "C13",
+    "C15"
+  ],
+  "references": "situations/abc-exploration/references.json",
+  "selection": "situations/abc-exploration/selection.json",
+  "A04_correction": "situations/abc-exploration/history/A04-correction.json",
+  "generation_records": [
+    "situations/abc-exploration/history/A04-original.json",
+    "situations/abc-exploration/history/A04-r2.json",
+    "situations/abc-exploration/history/A04-r3.json",
+    "situations/abc-exploration/records/A04-r4.json",
+    "situations/abc-exploration/records/A08.json",
+    "situations/abc-exploration/records/A09.json",
+    "situations/abc-exploration/records/A13.json",
+    "situations/abc-exploration/records/A15.json",
+    "situations/abc-exploration/records/A16.json",
+    "situations/abc-exploration/records/B01.json",
+    "situations/abc-exploration/records/B03.json",
+    "situations/abc-exploration/records/B07.json",
+    "situations/abc-exploration/records/B09.json",
+    "situations/abc-exploration/records/B14.json",
+    "situations/abc-exploration/records/B16.json",
+    "situations/abc-exploration/records/C02.json",
+    "situations/abc-exploration/records/C04.json",
+    "situations/abc-exploration/records/C11.json",
+    "situations/abc-exploration/records/C12.json",
+    "situations/abc-exploration/records/C13.json",
+    "situations/abc-exploration/records/C15.json"
+  ],
+  "entries": [
+    {
+      "id": "A04",
+      "title_ja": "上がり框を越える",
+      "theme": "A",
+      "artifact_id": "A04-r4",
+      "status": "user_selected_scene_with_assistant_verified_correction",
+      "output": {
+        "path": "situations/abc-exploration/images/A04-r4.png",
+        "sha256": "63bc47dc6de0121531ebcff8462f0df233051be97dbcd0c3dabc246ac73ce177",
+        "bytes": 2104985,
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/abc-exploration/prompts/A04-r4.txt",
+        "sha256": "49352a486f67d6540633b7ab7623c641cbb5070dea56b9f798b802a72564678e",
+        "bytes": 2211
+      },
+      "record": "situations/abc-exploration/records/A04-r4.json",
+      "visual_review": {
+        "verdict": "pass",
+        "reviewer": "assistant",
+        "method": "Full image and enlarged footwork crop inspected",
+        "note": "左足全体を木床へ置き、右足は土間と靴から完全に離れた状態へ修正。空の白スニーカー2足は土間に残り、足と靴の取り違えは解消。顔・目線・髪・ピン・丸襟ボレロの見た目も継続。",
+        "limitations": [
+          "元の脱ぎかけから、脱ぎ終えて上がる瞬間へ場面を少し進めた。",
+          "この修正版そのものへのユーザー個別承認ではなく、18場面の採用と不具合指摘を受けて修正し、助手が検証した。"
+        ]
+      },
+      "face_authority_promoted": false,
+      "original_direction": {
+        "scene": "玄関上がり框の近くで、靴を脱いで家に上がるところ。スニーカーは脱ぎかけ、グレー靴下が見えている。生活感のある自然な動作。",
+        "gaze": "props",
+        "framing": "portrait 2:3, full body side three-quarter entry view"
+      }
+    },
+    {
+      "id": "A08",
+      "title_ja": "伸びをする手前",
+      "theme": "A",
+      "artifact_id": "A08",
+      "status": "user_selected_original",
+      "output": {
+        "path": "situations/abc-exploration/images/A08.png",
+        "sha256": "6d81908e89ccddb73fdbc58ac8dc16bbd5c142843245126a831571abd105e0d6",
+        "bytes": 2241931,
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/abc-exploration/prompts/A08.txt",
+        "sha256": "f5e5267309be87c61e538b7d9526f44b0e92f1260792b676b2ea631deb0f1178",
+        "bytes": 3698
+      },
+      "record": "situations/abc-exploration/records/A08.json",
+      "visual_review": {
+        "verdict": "pass",
+        "recommendation": "candidate",
+        "identity": 4,
+        "scene": 4,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "横へ視線を外して伸びを始める小さな動作。口が少し緩み、通常の笑顔から表情幅が出る。"
+      },
+      "face_authority_promoted": false,
+      "original_direction": {
+        "scene": "ソファに座って軽く伸びをしようとする直前。腕を上げきる前の途中の仕草。口元は少しゆるんでいて、完全なポーズ感を避ける。",
+        "gaze": "away",
+        "framing": "portrait 2:3, seated knees-up from sofa side"
+      }
+    },
+    {
+      "id": "A09",
+      "title_ja": "鞄からノート",
+      "theme": "A",
+      "artifact_id": "A09",
+      "status": "user_selected_original",
+      "output": {
+        "path": "situations/abc-exploration/images/A09.png",
+        "sha256": "f8c3c364587fd4766392b710ac4fde1f51c7606333a946d789cee7a3ca7bdf8d",
+        "bytes": 2137155,
+        "width": 1536,
+        "height": 1024
+      },
+      "prompt": {
+        "path": "situations/abc-exploration/prompts/A09.txt",
+        "sha256": "952bcc19767f4554bcb9ed888c638eb9e6601e00fc15f73aee59f80b4d98175c",
+        "bytes": 3697
+      },
+      "record": "situations/abc-exploration/records/A09.json",
+      "visual_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 4,
+        "scene": 5,
+        "naturalness": 5,
+        "quality": 5,
+        "note": "鞄からノートを出す自然な途中動作。手元を見る顔と両手の役割が明確で、生活感のある有力候補。"
+      },
+      "face_authority_promoted": false,
+      "original_direction": {
+        "scene": "リビングで鞄からノートや小物を出している最中。机の上を見ていて、こちらを見ていない時間を切り取る。自然な日常感を優先。",
+        "gaze": "props",
+        "framing": "landscape 3:2, waist-up from diagonal above dining table"
+      }
+    },
+    {
+      "id": "A13",
+      "title_ja": "ちょっと休ませて",
+      "theme": "A",
+      "artifact_id": "A13",
+      "status": "user_selected_original",
+      "output": {
+        "path": "situations/abc-exploration/images/A13.png",
+        "sha256": "e090b707738c50c482dc6c3234060c4d24eb16b619a504c705797bf490aa4d73",
+        "bytes": 2308949,
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/abc-exploration/prompts/A13.txt",
+        "sha256": "f2afa587d2dd96d2bb93c147f17d64ee93689f51bb39ac1eb76ccbe3d6ce4937",
+        "bytes": 3707
+      },
+      "record": "situations/abc-exploration/records/A13.json",
+      "visual_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 5,
+        "scene": 5,
+        "naturalness": 5,
+        "quality": 5,
+        "note": "頬を腕に預け、顔を上げすぎずこちらを見る。帰宅後の安心と少し休みたい気分が一目で伝わる有力候補。"
+      },
+      "face_authority_promoted": false,
+      "original_direction": {
+        "scene": "ソファの肘掛けや背に頬を軽く預け、顔をあまり上げずにこちらへ目だけ向ける。少し「ちょっと休ませて」の雰囲気。",
+        "gaze": "eyes",
+        "framing": "portrait 2:3, intimate waist-up across sofa arm"
+      }
+    },
+    {
+      "id": "A15",
+      "title_ja": "床で力が抜ける",
+      "theme": "A",
+      "artifact_id": "A15",
+      "status": "user_selected_original",
+      "output": {
+        "path": "situations/abc-exploration/images/A15.png",
+        "sha256": "398cbd0ffebf5dfc8da0b86e33cd47e4db976ec1e8ae8e6be4a69653d51f62d4",
+        "bytes": 2676681,
+        "width": 1536,
+        "height": 1024
+      },
+      "prompt": {
+        "path": "situations/abc-exploration/prompts/A15.txt",
+        "sha256": "3042ce341dd55c4f523425b165de137dd0cbdf082633a95ef9398293ea4e5d1a",
+        "bytes": 3732
+      },
+      "record": "situations/abc-exploration/records/A15.json",
+      "visual_review": {
+        "verdict": "pass",
+        "recommendation": "candidate",
+        "identity": 4,
+        "scene": 4,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "床でクッションにもたれ、窓の方を見る全身。体重の預け方と室内の灰色靴下が自然で、表情以外の脱力が伝わる。"
+      },
+      "face_authority_promoted": false,
+      "original_direction": {
+        "scene": "床に座ってクッションにもたれ、帰宅後に少し力が抜けた様子。近くに通学鞄が置かれている。無防備だが上品さは保つ。",
+        "gaze": "away",
+        "framing": "landscape 3:2, full seated figure from slightly elevated living room corner"
+      }
+    },
+    {
+      "id": "A16",
+      "title_ja": "今日のことを思い返す",
+      "theme": "A",
+      "artifact_id": "A16",
+      "status": "user_selected_original",
+      "output": {
+        "path": "situations/abc-exploration/images/A16.png",
+        "sha256": "7319eeda8b49998da5c054cd1add2d6776cc4e291982a7ab77a00f7d7f985951",
+        "bytes": 2267949,
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/abc-exploration/prompts/A16.txt",
+        "sha256": "8bfb4da20cdc0551692c72cc515f0dfac48696ca58d56ea6fcc55c8d82681d7e",
+        "bytes": 3707
+      },
+      "record": "situations/abc-exploration/records/A16.json",
+      "visual_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 5,
+        "scene": 4,
+        "naturalness": 5,
+        "quality": 5,
+        "note": "頬杖と緩い肩、近い目線で帰宅後の会話が自然。顔のディテールと制服が安定した有力候補。"
+      },
+      "face_authority_promoted": false,
+      "original_direction": {
+        "scene": "ダイニングの椅子に座り、片手で頬を軽く支えながら、今日の出来事を思い返すような緩い表情。こちらが目の前にいる前提の距離感。",
+        "gaze": "direct",
+        "framing": "portrait 2:3, waist-up across dining table"
+      }
+    },
+    {
+      "id": "B01",
+      "title_ja": "大きい方はこっち",
+      "theme": "B",
+      "artifact_id": "B01",
+      "status": "user_selected_original",
+      "output": {
+        "path": "situations/abc-exploration/images/B01.png",
+        "sha256": "65f63b9f9ef731a7bf003324e45c1eaf1cb9a1a3917a57b181cecb0a0ef02662",
+        "bytes": 2102296,
+        "width": 1536,
+        "height": 1024
+      },
+      "prompt": {
+        "path": "situations/abc-exploration/prompts/B01.txt",
+        "sha256": "aa2bc2631cafd014c29d994d1aaee759b6c8bb0b5bb2c9be6542970dc87a0ab3",
+        "bytes": 4098
+      },
+      "record": "situations/abc-exploration/records/B01.json",
+      "visual_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 5,
+        "scene": 5,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "不均等なマドレーヌと止まった手、微笑みではない反応で小さなずるさが明瞭。顔と衣装も良好。"
+      },
+      "face_authority_promoted": false,
+      "original_direction": {
+        "scene": "テーブルの上でマドレーヌを二つに分けているが、少し大きい方を自分側へ寄せている。こちらの視線に気づいて手が止まり、すました顔になる。",
+        "gaze": "eyes",
+        "framing": "landscape 3:2, waist-up across table with clear tabletop foreground"
+      }
+    },
+    {
+      "id": "B03",
+      "title_ja": "数、合ってるよ？",
+      "theme": "B",
+      "artifact_id": "B03",
+      "status": "user_selected_original",
+      "output": {
+        "path": "situations/abc-exploration/images/B03.png",
+        "sha256": "c04d3d694e1f05699dd86ba47c1c1e0ff80abaf50aae5b7b1534a3788795b7aa",
+        "bytes": 2133708,
+        "width": 1536,
+        "height": 1024
+      },
+      "prompt": {
+        "path": "situations/abc-exploration/prompts/B03.txt",
+        "sha256": "eb6a1d2866c0d3075509b60cff5b36cf0d753a5762464f5382d18073fb1d916c",
+        "bytes": 4108
+      },
+      "record": "situations/abc-exploration/records/B03.json",
+      "visual_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 5,
+        "scene": 5,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "自分側3個と相手側1個の差が明瞭。すました小さな笑みとの組み合わせでちゃっかり感が伝わる。"
+      },
+      "face_authority_promoted": false,
+      "original_direction": {
+        "scene": "皿を二つ用意しているが、自分の皿にだけ数が多い。表情は悪びれすぎず、「別に変じゃないよ？」くらいの自然なすまし顔。",
+        "gaze": "direct",
+        "framing": "landscape 3:2, waist-up table view from a little above"
+      }
+    },
+    {
+      "id": "B07",
+      "title_ja": "まあ、いいよね",
+      "theme": "B",
+      "artifact_id": "B07",
+      "status": "user_selected_original",
+      "output": {
+        "path": "situations/abc-exploration/images/B07.png",
+        "sha256": "810ce4ec5b4eb39abd87d6cc3db397ca8dd3c7de23d9eca8effd8b965a214969",
+        "bytes": 2165769,
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/abc-exploration/prompts/B07.txt",
+        "sha256": "eb909bfb518dd41cce5154a6fbccd13f00be328ace9aab5e0ca589b278a52a41",
+        "bytes": 3702
+      },
+      "record": "situations/abc-exploration/records/B07.json",
+      "visual_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 5,
+        "scene": 5,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "一口食べたマドレーヌとわずかに開き直る口元が噛み合う。顔・丸襟・リボン・手元が安定した有力候補。"
+      },
+      "face_authority_promoted": false,
+      "original_direction": {
+        "scene": "マドレーヌを袋から出して一口食べたところで、こちらと目が合う。口元や目に「まあいいよね」という軽い開き直りを入れる。",
+        "gaze": "direct",
+        "framing": "portrait 2:3, waist-up dining view"
+      }
+    },
+    {
+      "id": "B09",
+      "title_ja": "少しだけ目をそらす",
+      "theme": "B",
+      "artifact_id": "B09",
+      "status": "user_selected_original",
+      "output": {
+        "path": "situations/abc-exploration/images/B09.png",
+        "sha256": "d39c5801e4c62302e78f3eb900562fb8aa879db00d831f6e0f40139a3b28425c",
+        "bytes": 2074314,
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/abc-exploration/prompts/B09.txt",
+        "sha256": "fda653bcf681bb9b1b58b9245c1f6dd27c5a515f6048cb215535222921f363d7",
+        "bytes": 4300
+      },
+      "record": "situations/abc-exploration/records/B09.json",
+      "visual_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 5,
+        "scene": 5,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "大きい菓子を手元に確保しつつ明確に視線をそらす。ごまかしが控えめで、表情幅を作る有力候補。"
+      },
+      "face_authority_promoted": false,
+      "original_direction": {
+        "scene": "おやつを隠すほどではないが、少しだけ視線をそらしてごまかす。手元には大きい方のお菓子。笑いすぎず、控えめな誤魔化し方。",
+        "gaze": "away",
+        "framing": "portrait 2:3, waist-up from dining side"
+      }
+    },
+    {
+      "id": "B14",
+      "title_ja": "ちゃんとあるよ",
+      "theme": "B",
+      "artifact_id": "B14",
+      "status": "user_selected_original",
+      "output": {
+        "path": "situations/abc-exploration/images/B14.png",
+        "sha256": "143a95da88e99d83917d164515d86959e748a46780f54ad0a321c34aaec5eb78",
+        "bytes": 2236966,
+        "width": 1536,
+        "height": 1024
+      },
+      "prompt": {
+        "path": "situations/abc-exploration/prompts/B14.txt",
+        "sha256": "8dc488473d3654c6cc40aab9e9191ba6e461c4c778d9b7a884d1f53690b81374",
+        "bytes": 3904
+      },
+      "record": "situations/abc-exploration/records/B14.json",
+      "visual_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 5,
+        "scene": 5,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "自分の菓子を保ちつつ小さい方を差し出す手で、機嫌取りとちゃっかり感が明瞭。前景の手が構図の幅を作る。"
+      },
+      "face_authority_promoted": false,
+      "original_direction": {
+        "scene": "自分が選んだお菓子を手にしつつ、もう一つをこちらへ差し出して機嫌取りしている。ちゃっかりしているが、ちゃんと分けてはいる。",
+        "gaze": "direct",
+        "framing": "landscape 3:2, waist-up across table with offering hand in foreground"
+      }
+    },
+    {
+      "id": "B16",
+      "title_ja": "見つかっても平気",
+      "theme": "B",
+      "artifact_id": "B16",
+      "status": "user_selected_original",
+      "output": {
+        "path": "situations/abc-exploration/images/B16.png",
+        "sha256": "9f687158c3c708b66738d2798f7ac1e40a099aadefef4ac8d96b7394a33cd773",
+        "bytes": 2188177,
+        "width": 1536,
+        "height": 1024
+      },
+      "prompt": {
+        "path": "situations/abc-exploration/prompts/B16.txt",
+        "sha256": "014ea57c2e8d4b2dafed26165e2a82defd19582e02b2923cf499aff6ee24a387",
+        "bytes": 3880
+      },
+      "record": "situations/abc-exploration/records/B16.json",
+      "visual_review": {
+        "verdict": "pass",
+        "recommendation": "candidate",
+        "identity": 4,
+        "scene": 4,
+        "naturalness": 5,
+        "quality": 5,
+        "note": "床で気楽に座ったままおやつを続ける空気が自然。小さな勝利感は穏やかで、室内全身の構図幅に役立つ。"
+      },
+      "face_authority_promoted": false,
+      "original_direction": {
+        "scene": "おやつタイムの途中で、こちらに見つかったあともあまり動じず、そのまま座っている。小さな勝利感のある可愛い開き直り。",
+        "gaze": "direct",
+        "framing": "landscape 3:2, seated full figure at sofa and low table"
+      }
+    },
+    {
+      "id": "C02",
+      "title_ja": "トレイの行き先",
+      "theme": "C",
+      "artifact_id": "C02",
+      "status": "user_selected_original",
+      "output": {
+        "path": "situations/abc-exploration/images/C02.png",
+        "sha256": "900f3998b7ec952aea902f4a36341cb77a883838fab00544e35b2f409cba5466",
+        "bytes": 2116584,
+        "width": 1536,
+        "height": 1024
+      },
+      "prompt": {
+        "path": "situations/abc-exploration/prompts/C02.txt",
+        "sha256": "cab8a30bb1d662f510ffa927b5fea4b8f00b7d6ec4b3e07a1231ddeb6a6ca150",
+        "bytes": 4106
+      },
+      "record": "situations/abc-exploration/records/C02.json",
+      "visual_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 4,
+        "scene": 5,
+        "naturalness": 5,
+        "quality": 5,
+        "note": "机を見下ろしてトレイを置けず止まる反応が明瞭。二つのカップと両手の支持も自然で、視線の幅がある。"
+      },
+      "face_authority_promoted": false,
+      "original_direction": {
+        "scene": "トレイに飲み物を載せて持ってきたが、机の上が散らかっていて一瞬止まる。「どこに置けばいいの？」という静かな表情。",
+        "gaze": "props",
+        "framing": "landscape 3:2, waist-up diagonal view across cluttered dining table"
+      }
+    },
+    {
+      "id": "C04",
+      "title_ja": "ここに……置けない",
+      "theme": "C",
+      "artifact_id": "C04",
+      "status": "user_selected_original",
+      "output": {
+        "path": "situations/abc-exploration/images/C04.png",
+        "sha256": "35880358966bd3bd751663981c83c26d5e028e98fa66d836dcbd692801dc7435",
+        "bytes": 2225798,
+        "width": 1536,
+        "height": 1024
+      },
+      "prompt": {
+        "path": "situations/abc-exploration/prompts/C04.txt",
+        "sha256": "fa3f9b945fc8d8e44fd1fb97608d40154251fe13f156fbb179fdc40ab00e3633",
+        "bytes": 4110
+      },
+      "record": "situations/abc-exploration/records/C04.json",
+      "visual_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 4,
+        "scene": 5,
+        "naturalness": 5,
+        "quality": 5,
+        "note": "ノート上でカップを浮かせて止まる途中動作と困り顔が明瞭。机・両手・カップの位置関係が自然で有力。"
+      },
+      "face_authority_promoted": false,
+      "original_direction": {
+        "scene": "リビングでカップを差し出しかけているが、机のスペース不足で途中で止まった状態。優しさと都合の悪さが両立するシーン。",
+        "gaze": "props",
+        "framing": "landscape 3:2, waist-up diagonal across low table"
+      }
+    },
+    {
+      "id": "C11",
+      "title_ja": "受け取って、ほら",
+      "theme": "C",
+      "artifact_id": "C11",
+      "status": "user_selected_original",
+      "output": {
+        "path": "situations/abc-exploration/images/C11.png",
+        "sha256": "546162e73e26b53f4e0a0ffaaf757e1143a7fa9beb004dc74dce67eebd610ac4",
+        "bytes": 2009079,
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/abc-exploration/prompts/C11.txt",
+        "sha256": "d3c95bb2478fba164e607d2b6e02baf88a6fd1ebf828c79303b138c92fa51f50",
+        "bytes": 4007
+      },
+      "record": "situations/abc-exploration/records/C11.json",
+      "visual_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 5,
+        "scene": 5,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "ティッシュを差し出して待つ手と少し困った顔で、受け取ってほしい距離感が明瞭。笑顔以外の近景として有力。"
+      },
+      "face_authority_promoted": false,
+      "original_direction": {
+        "scene": "ティッシュや小物を持ってきて渡そうとしているが、こちらが受け取らず少し待ちぼうけ。優しさと小さな呆れを描く。",
+        "gaze": "direct",
+        "framing": "portrait 2:3, waist-up at familiar conversational distance"
+      }
+    },
+    {
+      "id": "C12",
+      "title_ja": "置けたけどね",
+      "theme": "C",
+      "artifact_id": "C12",
+      "status": "user_selected_original",
+      "output": {
+        "path": "situations/abc-exploration/images/C12.png",
+        "sha256": "8b8dca6c4c6fc3b0a8578bbe848bcee89b09acb1e97438bf77c8734d497ad93f",
+        "bytes": 2064300,
+        "width": 1536,
+        "height": 1024
+      },
+      "prompt": {
+        "path": "situations/abc-exploration/prompts/C12.txt",
+        "sha256": "3a6b94853b1c114b422a91cf3d23e21a499e28c8772b6386119d55103b8f3dc0",
+        "bytes": 3818
+      },
+      "record": "situations/abc-exploration/records/C12.json",
+      "visual_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 4,
+        "scene": 5,
+        "naturalness": 5,
+        "quality": 5,
+        "note": "机へ視線を落とし、カップを置きながら小さく困り笑いする日常の動作。C04と対になる自然な有力候補。"
+      },
+      "face_authority_promoted": false,
+      "original_direction": {
+        "scene": "飲み物を置きつつ、散らかった机を見て肩をすくめたような困り笑い。室内での自然なやりとりとして描く。",
+        "gaze": "props",
+        "framing": "landscape 3:2, waist-up from side of low table"
+      }
+    },
+    {
+      "id": "C13",
+      "title_ja": "座る場所を作る",
+      "theme": "C",
+      "artifact_id": "C13",
+      "status": "user_selected_original",
+      "output": {
+        "path": "situations/abc-exploration/images/C13.png",
+        "sha256": "58bcdc7d5023695a004237cee31e6c354f2b044ac93b711c000146961bf56715",
+        "bytes": 2524627,
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/abc-exploration/prompts/C13.txt",
+        "sha256": "22443474842a9beda9a52ed0fdc9821085417824306273063d70c38fd9232e3e",
+        "bytes": 3834
+      },
+      "record": "situations/abc-exploration/records/C13.json",
+      "visual_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 4,
+        "scene": 5,
+        "naturalness": 5,
+        "quality": 5,
+        "note": "クッションを整えつつ膝掛けを抱える全身の動作が自然。横顔、ピンの左右、灰色靴下と足元が整い、家庭内実務の幅を作る。"
+      },
+      "face_authority_promoted": false,
+      "original_direction": {
+        "scene": "クッションや膝掛けを持ってきて、こちらの座る場所を整えようとしている。世話焼きだが、少し忙しそうな雰囲気。",
+        "gaze": "away",
+        "framing": "portrait 2:3, full body beside sofa from gentle elevated diagonal"
+      }
+    },
+    {
+      "id": "C15",
+      "title_ja": "段取りが詰まった",
+      "theme": "C",
+      "artifact_id": "C15",
+      "status": "user_selected_original",
+      "output": {
+        "path": "situations/abc-exploration/images/C15.png",
+        "sha256": "e9e8e573add80bec80cba9228828f4364872fbc3bb5c0d3ec32efdea46a42c87",
+        "bytes": 2126144,
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/abc-exploration/prompts/C15.txt",
+        "sha256": "810cdcf7a3a829d44b4621a8d70d36df0108b84c5ea5d20d39897dca0f86a6b1",
+        "bytes": 4127
+      },
+      "record": "situations/abc-exploration/records/C15.json",
+      "visual_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 4,
+        "scene": 5,
+        "naturalness": 5,
+        "quality": 5,
+        "note": "片腕の本・筆箱・菓子と反対手のマグが自然。置き場所を探す横目と少し開いた口で段取りの都合が伝わる。ピンは正しい遠側。"
+      },
+      "face_authority_promoted": false,
+      "original_direction": {
+        "scene": "ダイニングやローテーブル周りで、必要なものをいくつかまとめて運んできたところ。気が利くが、段取りの都合で少し困る場面。",
+        "gaze": "away",
+        "framing": "portrait 2:3, knees-up dining corner side three-quarter view"
+      }
+    }
+  ]
+}

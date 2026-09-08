@@ -1,0 +1,56 @@
+{
+  "project": "akari-v3.1",
+  "path_base": "akari-v3.1",
+  "scope": "ABC selected scenes only",
+  "reference_set_unchanged": true,
+  "rules": [
+    "P1 is the original face, hair, eye and drawing authority; P2 is the ordinary expression authority.",
+    "Use native U1 and L1 separately for body details. V31-06 overrides their summer blouse and plain skirt for this batch only.",
+    "S1 defines the silver pin. The five-image generation limit means S1 was inspected but not supplied separately.",
+    "For edits, the target is the sole scene/camera/pose source; its selected outfit is preserved.",
+    "Selected scenes do not replace original identity references."
+  ],
+  "references": [
+    {
+      "id": "P1",
+      "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "role": "original_face_hair_and_eye_authority"
+    },
+    {
+      "id": "P2",
+      "path": "../akari-v3.0/references/P2-quiet-smile.png",
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "role": "original_everyday_expression_authority"
+    },
+    {
+      "id": "U1",
+      "path": "references/U1-upper-reference.png",
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "role": "working_upper_body_eye_hair_clothing_detail"
+    },
+    {
+      "id": "L1",
+      "path": "references/L1-lower-reference.png",
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "role": "working_lower_body_skirt_legs_socks_sneakers_detail"
+    },
+    {
+      "id": "S1",
+      "path": "references/S1-silver-slim-pin.png",
+      "sha256": "6e35a9f51a68d203d8252dc71d7182fe313d8b66a2c2cb0bf099c83b773cb85f",
+      "role": "primary_hair_accessory_only"
+    },
+    {
+      "path": "situations/abc-exploration/references/V31-06.png",
+      "sha256": "0240b29590c60ba5ccd6e475e15288535a03a3795158e37ad95c3bf194204c9a",
+      "bytes": 2600228,
+      "width": 1024,
+      "height": 1536,
+      "id": "V31-06",
+      "role": "user_selected_wardrobe_and_bag_only",
+      "scope": "this_ABC_scene_package",
+      "approval": "制服指定してなかったけどこれにしたいな"
+    }
+  ]
+}

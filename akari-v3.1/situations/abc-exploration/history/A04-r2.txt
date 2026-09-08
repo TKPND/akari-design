@@ -1,0 +1,17 @@
+Use case: precise-object-edit / identity-preserve.
+Edit ONE existing Akari illustration, input image 1. Return one complete finished portrait illustration at 1024x1536. No comparison layout, writing, labels or watermark.
+
+Input roles, in order:
+1. A04 original: the sole EDIT TARGET and scene, camera, pose, background, lighting, facial expression and selected wardrobe authority. Preserve the original image as closely as possible above the knees. Keep the same face, slight downward gaze, hair, one silver pin at HER LEFT temple, relaxed arms and complete hands touching the frame / hanging down, white rounded collar, navy bow, long-sleeve blue bolero with pale cuff edging, and fine blue-grey plaid pleated skirt. This outfit is the user-selected V31-06 outfit already present in A04.
+2. P1: original face, grey eye design, black-bob hair, age impression and drawing authority; identity safeguard only. Do not copy its pose, open mouth, short sleeves or background.
+3. P2: original small closed-mouth everyday expression authority. Preserve A04's existing expression.
+4. Native U1: upper-body/hair/eye and left-temple silver-pin detail safeguard only. Do not import its superseded summer blouse.
+5. Native L1: natural leg and ankle construction, MEDIUM GREY ribbed opaque ordinary socks and white low-top sneaker design only. Do not copy its skirt or standing pose.
+
+REPAIR ONLY THE FOOTWORK AND TWO SHOES:
+This is an ordinary homecoming, not a deliberate wrong-shoe comedy gag. The original confuses which foot belongs to which shoe. Advance the action by a small natural instant: she has JUST FINISHED removing BOTH sneakers and is stepping up from the lower tiled genkan to the raised wooden interior.
+- Her anatomical LEFT grey-socked foot is securely planted with a natural flat sole on the raised wooden floor at image-right, supporting her weight. Keep the knee and ankle connected normally.
+- Her anatomical RIGHT leg is the trailing leg nearer image-left. Its foot is now COMPLETELY OUT of the sneaker, lifted clear of BOTH shoes and the tile, heel gently rising as she brings the trailing foot toward the wooden step. Keep a CLEAR VISIBLE GAP between the entire grey-socked foot and any shoe. This foot must not appear to enter, wear, step on, or share a shoe. Adjust only this lower-leg/ankle bend modestly as needed for a balanced realistic motion.
+- Exactly TWO EMPTY white low-top lace-up sneakers remain on the recessed tile. Show both heel openings visibly empty and separate from her socked feet. Arrange them next to each other as a believable mirrored right/left pair, toes toward the entry / lower-left of the picture, with correct foot-shaped shoe geometry. Both shoes must be fully visible, grounded on tile with coherent contact shadows. No shoe on the wooden floor. No extra shoe.
+- Both socks include the entire foot and have ordinary smooth ROUND CLOSED TOE CAPS, not five-toe socks, individual toes, bare feet or slippers. Preserve their medium grey colour, ribbed legs and below-knee height.
+Keep the same perspective, wooden step, lower tiled floor, home interior, warm light and body proportions. Retain complete believable legs, hands and limbs; no spliced or fused ankles. Avoid changing the face or any upper-body detail. No collage or titles. One complete natural everyday illustration.

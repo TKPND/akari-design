@@ -1,0 +1,57 @@
+{
+  "id": "A09",
+  "tool": "image_gen",
+  "tool_mode": "built-in-imagegen",
+  "model": null,
+  "model_note": "The built-in tool did not expose the model name.",
+  "started_at": "2026-09-08T04:20:24.051Z",
+  "elapsed_seconds": 86.168,
+  "tool_output_filename": "exec-18ee4e80-00de-4000-8aa2-02d021e44126.png",
+  "path_base": "akari-v3.1",
+  "output": {
+    "path": "situations/abc-exploration/images/A09.png",
+    "sha256": "f8c3c364587fd4766392b710ac4fde1f51c7606333a946d789cee7a3ca7bdf8d",
+    "bytes": 2137155,
+    "width": 1536,
+    "height": 1024
+  },
+  "prompt": {
+    "path": "situations/abc-exploration/prompts/A09.txt",
+    "sha256": "952bcc19767f4554bcb9ed888c638eb9e6601e00fc15f73aee59f80b4d98175c",
+    "bytes": 3697
+  },
+  "inputs": [
+    {
+      "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "id": "P1"
+    },
+    {
+      "path": "../akari-v3.0/references/P2-quiet-smile.png",
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "id": "P2"
+    },
+    {
+      "path": "references/U1-upper-reference.png",
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "id": "U1"
+    },
+    {
+      "path": "references/L1-lower-reference.png",
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "id": "L1"
+    },
+    {
+      "path": "situations/abc-exploration/references/V31-06.png",
+      "sha256": "0240b29590c60ba5ccd6e475e15288535a03a3795158e37ad95c3bf194204c9a",
+      "id": "V31-06"
+    }
+  ],
+  "input_ids": [
+    "P1",
+    "P2",
+    "U1",
+    "L1",
+    "V31-06"
+  ]
+}

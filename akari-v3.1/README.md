@@ -11,6 +11,10 @@ S1のシルバー細ピンと、G2で選んだミディアムグレー靴下を�
 
 ## 作業を再開する
 
+採用済みの生活シーンは[A/B/Cの18枚](situations/abc-exploration/README.md)に保存。
+このシーン群ではユーザー指定の丸襟・長袖ボレロ・チェック柄制服を使用している。
+A04は靴の取り違えを修正済み。顔の原本や、この参照セット自体の衣装指定は変わらない。
+
 まず [design-state.json](design-state.json) と
 [reference-set.json](reference-set.json) を読む。
 同じリポジトリ内の `akari-v3.0/` と一緒に使う。

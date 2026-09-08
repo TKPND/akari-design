@@ -1,0 +1,730 @@
+{
+  "date": "2026-09-08",
+  "exploration_count": 48,
+  "selected_count": 18,
+  "unselected_images": "Retained locally in the ignored exploration run, not included in this selected package.",
+  "reviews": [
+    {
+      "id": "A01",
+      "title_ja": "ただいまの前に",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "candidate",
+        "identity": 4,
+        "scene": 4,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "丸襟・ボレロ・チェック柄、ピン、靴下は良好。帰宅直後の静かな柔らかさ。手をドアへ添える動きは少しポーズ寄り。"
+      },
+      "selected": false,
+      "initial_output_sha256": "2723e785473b682d0a390659216f54ef495e7ef3623dd624c8f319503d9a3209"
+    },
+    {
+      "id": "A02",
+      "title_ja": "靴を脱ぐ途中",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "candidate",
+        "identity": 4,
+        "scene": 5,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "壁で支えながら靴を脱ぐ動作が明瞭。衣装・ピン・靴下も良好。片足のつま先は靴に残る途中として読める。"
+      },
+      "selected": false,
+      "initial_output_sha256": "4799aef7eee7aad4d376a362929e33f0bd4718586342c8e97ce617862d9e5f69"
+    },
+    {
+      "id": "A03",
+      "title_ja": "鞄を下ろして",
+      "initial_assistant_review": {
+        "verdict": "pass_with_caveat",
+        "recommendation": "reserve",
+        "identity": 5,
+        "scene": 3,
+        "naturalness": 3,
+        "quality": 5,
+        "note": "顔と衣装の完成度は高いが、鞄の底が画面外で着地が不明。両手で持つポーズに寄り、目線も正面寄り。"
+      },
+      "selected": false,
+      "initial_output_sha256": "df3fdc8024149848cf73ca033f0159f17d5be6d794889fe3491748783e9767c6"
+    },
+    {
+      "id": "A04",
+      "title_ja": "上がり框を越える",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "candidate",
+        "identity": 4,
+        "scene": 5,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "上がり框の段差、脱ぎかけの靴、壁での支持が明瞭。足元へ向く視線で動作の途中らしさがある。"
+      },
+      "selected": true,
+      "initial_output_sha256": "1299c256e3d26c254b31b3bc3e50200d437c51ff6f9a2b8e234b78c90579de88",
+      "initial_review_overturned_by_user": true,
+      "correction_record": "situations/abc-exploration/history/A04-correction.json"
+    },
+    {
+      "id": "A05",
+      "title_ja": "背もたれでひと息",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "reserve",
+        "identity": 5,
+        "scene": 3,
+        "naturalness": 3,
+        "quality": 5,
+        "note": "顔と衣装は良好。両手で背もたれを掴む左右対称の立ち姿で、脱力よりややポーズ寄り。"
+      },
+      "selected": false,
+      "initial_output_sha256": "e73fd383f645324c6e15dac0b4fe1f9086d361a76c2c3795477a9d94525fdd78"
+    },
+    {
+      "id": "A06",
+      "title_ja": "クッションを抱えて",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "candidate",
+        "identity": 4,
+        "scene": 4,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "クッションを抱えた室内全身。灰色靴下と鞄が帰宅後を示し、安心感がある。表情は通常の小さな笑み寄り。"
+      },
+      "selected": false,
+      "initial_output_sha256": "b10e10ae96a11566ef62aa9d65b45bfe077965cbc0845eb853b9167e132a4cdd"
+    },
+    {
+      "id": "A07",
+      "title_ja": "呼ばれて、少し遅れて",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "candidate",
+        "identity": 5,
+        "scene": 4,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "床とローテーブルで近い距離感。顔の原本系統は良好、腕と座り姿が自然。視線の遅れは静止画ではやや弱い。"
+      },
+      "selected": false,
+      "initial_output_sha256": "6a68105c2f8cadbfdffb95ae4fc54412d30d4d598d035324986f45f49949f4b3"
+    },
+    {
+      "id": "A08",
+      "title_ja": "伸びをする手前",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "candidate",
+        "identity": 4,
+        "scene": 4,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "横へ視線を外して伸びを始める小さな動作。口が少し緩み、通常の笑顔から表情幅が出る。"
+      },
+      "selected": true,
+      "initial_output_sha256": "6d81908e89ccddb73fdbc58ac8dc16bbd5c142843245126a831571abd105e0d6"
+    },
+    {
+      "id": "A09",
+      "title_ja": "鞄からノート",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 4,
+        "scene": 5,
+        "naturalness": 5,
+        "quality": 5,
+        "note": "鞄からノートを出す自然な途中動作。手元を見る顔と両手の役割が明確で、生活感のある有力候補。"
+      },
+      "selected": true,
+      "initial_output_sha256": "f8c3c364587fd4766392b710ac4fde1f51c7606333a946d789cee7a3ca7bdf8d"
+    },
+    {
+      "id": "A10",
+      "title_ja": "買ってきたよ、の途中",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "candidate",
+        "identity": 5,
+        "scene": 4,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "紙袋を鞄から出す場面が明瞭で衣装と顔も安定。見せるポーズ寄りだが、親しい相手への報告として自然。"
+      },
+      "selected": false,
+      "initial_output_sha256": "0c4a12bbe66c7639eec4045c8d5339a12bc43c4f940ea0c754061dea13a7d8dc"
+    },
+    {
+      "id": "A11",
+      "title_ja": "ボレロを整える",
+      "initial_assistant_review": {
+        "verdict": "pass_with_caveat",
+        "recommendation": "candidate",
+        "identity": 4,
+        "scene": 5,
+        "naturalness": 5,
+        "quality": 4,
+        "note": "袖口を整える手元と伏し目が自然。画面左端で上げた手の一部が切れるため構図に小さな留保。"
+      },
+      "selected": false,
+      "initial_output_sha256": "3826f5803cb41b201b0991d44f58120989f5c898f0d5ebe2b60398610b4ab203"
+    },
+    {
+      "id": "A12",
+      "title_ja": "飲み物を取りに",
+      "initial_assistant_review": {
+        "verdict": "pass_with_caveat",
+        "recommendation": "reserve",
+        "identity": 4,
+        "scene": 3,
+        "naturalness": 3,
+        "quality": 5,
+        "note": "振り返る全身と靴なしは良好。ただし飲み物を取りに行く前なのに既にボトルを手に持つ。"
+      },
+      "selected": false,
+      "initial_output_sha256": "99c7a82b36d8098bc019735125615fb3164c6ea49db9d56b1202f4d67fcd2fb1"
+    },
+    {
+      "id": "A13",
+      "title_ja": "ちょっと休ませて",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 5,
+        "scene": 5,
+        "naturalness": 5,
+        "quality": 5,
+        "note": "頬を腕に預け、顔を上げすぎずこちらを見る。帰宅後の安心と少し休みたい気分が一目で伝わる有力候補。"
+      },
+      "selected": true,
+      "initial_output_sha256": "e090b707738c50c482dc6c3234060c4d24eb16b619a504c705797bf490aa4d73"
+    },
+    {
+      "id": "A14",
+      "title_ja": "ぼんやり聞いてる",
+      "initial_assistant_review": {
+        "verdict": "pass_with_caveat",
+        "recommendation": "reserve",
+        "identity": 5,
+        "scene": 2,
+        "naturalness": 3,
+        "quality": 5,
+        "note": "顔と衣装は美しいが、通常の正面微笑みに寄っており、ぼんやりした脱力感と固有の出来事が弱い。"
+      },
+      "selected": false,
+      "initial_output_sha256": "39b00955eec927b127f8cb48b80ac463b2e80bad42755412da150bd40d14b04d"
+    },
+    {
+      "id": "A15",
+      "title_ja": "床で力が抜ける",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "candidate",
+        "identity": 4,
+        "scene": 4,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "床でクッションにもたれ、窓の方を見る全身。体重の預け方と室内の灰色靴下が自然で、表情以外の脱力が伝わる。"
+      },
+      "selected": true,
+      "initial_output_sha256": "398cbd0ffebf5dfc8da0b86e33cd47e4db976ec1e8ae8e6be4a69653d51f62d4"
+    },
+    {
+      "id": "A16",
+      "title_ja": "今日のことを思い返す",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 5,
+        "scene": 4,
+        "naturalness": 5,
+        "quality": 5,
+        "note": "頬杖と緩い肩、近い目線で帰宅後の会話が自然。顔のディテールと制服が安定した有力候補。"
+      },
+      "selected": true,
+      "initial_output_sha256": "7319eeda8b49998da5c054cd1add2d6776cc4e291982a7ab77a00f7d7f985951"
+    },
+    {
+      "id": "B01",
+      "title_ja": "大きい方はこっち",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 5,
+        "scene": 5,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "不均等なマドレーヌと止まった手、微笑みではない反応で小さなずるさが明瞭。顔と衣装も良好。"
+      },
+      "selected": true,
+      "initial_output_sha256": "65f63b9f9ef731a7bf003324e45c1eaf1cb9a1a3917a57b181cecb0a0ef02662"
+    },
+    {
+      "id": "B02",
+      "title_ja": "いい方を確保",
+      "initial_assistant_review": {
+        "verdict": "pass_with_caveat",
+        "recommendation": "reserve",
+        "identity": 5,
+        "scene": 3,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "伏し目気味の表情と焼き菓子を並べる動作は良好。手前に食べかけが追加され、良い方を確保する意図が少し曖昧。"
+      },
+      "selected": false,
+      "initial_output_sha256": "b1b275878b74a55e62daf9b8c6c3167e624c24853463dcbd3e323bbda81b61c6"
+    },
+    {
+      "id": "B03",
+      "title_ja": "数、合ってるよ？",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 5,
+        "scene": 5,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "自分側3個と相手側1個の差が明瞭。すました小さな笑みとの組み合わせでちゃっかり感が伝わる。"
+      },
+      "selected": true,
+      "initial_output_sha256": "c04d3d694e1f05699dd86ba47c1c1e0ff80abaf50aae5b7b1534a3788795b7aa"
+    },
+    {
+      "id": "B04",
+      "title_ja": "分けてる途中だから",
+      "initial_assistant_review": {
+        "verdict": "pass_with_caveat",
+        "recommendation": "reserve",
+        "identity": 5,
+        "scene": 2,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "トングで取り分ける動作と描画は良好。自分用というより共有の大皿から配膳するように見え、小ずるさは弱い。"
+      },
+      "selected": false,
+      "initial_output_sha256": "2af400a8cf1b36a5c8ee2add02de80dc3e163f5f632766b097beb3a75ab86b69"
+    },
+    {
+      "id": "B05",
+      "title_ja": "もう開いてた",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "candidate",
+        "identity": 5,
+        "scene": 4,
+        "naturalness": 3,
+        "quality": 5,
+        "note": "食べかけと紙袋の残りで先に食べていた状況は明瞭。表情と立ち姿は通常の微笑み・提示ポーズ寄り。"
+      },
+      "selected": false,
+      "initial_output_sha256": "a6f79b098f47a3179a8cd0fede2937433033fdb1fc9035ebe8db9409dd1491e5"
+    },
+    {
+      "id": "B06",
+      "title_ja": "ソファで先に一口",
+      "initial_assistant_review": {
+        "verdict": "pass_with_caveat",
+        "recommendation": "candidate",
+        "identity": 4,
+        "scene": 4,
+        "naturalness": 5,
+        "quality": 4,
+        "note": "ソファで先に食べていた自然な場面。座り姿と視線が良いが、菓子袋の生成文字に小さな崩れがある。"
+      },
+      "selected": false,
+      "initial_output_sha256": "e50907040288700642851ebac7b976380092be03851b9241be45c07430a08412"
+    },
+    {
+      "id": "B07",
+      "title_ja": "まあ、いいよね",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 5,
+        "scene": 5,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "一口食べたマドレーヌとわずかに開き直る口元が噛み合う。顔・丸襟・リボン・手元が安定した有力候補。"
+      },
+      "selected": true,
+      "initial_output_sha256": "810ce4ec5b4eb39abd87d6cc3db397ca8dd3c7de23d9eca8effd8b965a214969"
+    },
+    {
+      "id": "B08",
+      "title_ja": "味見は先に",
+      "initial_assistant_review": {
+        "verdict": "pass_with_caveat",
+        "recommendation": "candidate",
+        "identity": 4,
+        "scene": 4,
+        "naturalness": 3,
+        "quality": 5,
+        "note": "空の皿と食べかけで配膳前の味見が明瞭。指定した手元への視線は外れ、こちらへの微笑みになった。"
+      },
+      "selected": false,
+      "initial_output_sha256": "a82f70ea305be91c2502a3d9cbaa21ced926e07a2297b13ae3a555cde5c9c9f0"
+    },
+    {
+      "id": "B09",
+      "title_ja": "少しだけ目をそらす",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 5,
+        "scene": 5,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "大きい菓子を手元に確保しつつ明確に視線をそらす。ごまかしが控えめで、表情幅を作る有力候補。"
+      },
+      "selected": true,
+      "initial_output_sha256": "d39c5801e4c62302e78f3eb900562fb8aa879db00d831f6e0f40139a3b28425c"
+    },
+    {
+      "id": "B10",
+      "title_ja": "分けようとしてたよ",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "candidate",
+        "identity": 5,
+        "scene": 4,
+        "naturalness": 3,
+        "quality": 5,
+        "note": "正座に近い床座りで構図に変化。菓子の大小は明瞭だが、怪しさより通常の可愛い提示に寄る。"
+      },
+      "selected": false,
+      "initial_output_sha256": "0df066ca45792c486fded292708511b03bb9165bb48d551c45f340d19dc5b335"
+    },
+    {
+      "id": "B11",
+      "title_ja": "笑って流す",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "reserve",
+        "identity": 5,
+        "scene": 4,
+        "naturalness": 3,
+        "quality": 5,
+        "note": "大小の菓子と笑顔で話を流す意図は読める。顔の品質は高いが、B03とテーブル正面構図・笑顔が重複する。"
+      },
+      "selected": false,
+      "initial_output_sha256": "5349e3705a81346bd7c2d16758e3233e4c952db0722c0ff6c47a2f76c4d5f37e"
+    },
+    {
+      "id": "B12",
+      "title_ja": "認めてないけど",
+      "initial_assistant_review": {
+        "verdict": "needs_correction",
+        "recommendation": "hold",
+        "identity": 4,
+        "scene": 4,
+        "naturalness": 4,
+        "quality": 4,
+        "note": "菓子を引き寄せる控えめな反応は良い。右下の足先が白く靴のように見え、灰色靴下・室内靴なしの条件に疑義。採用には足元の確認と修正が必要。"
+      },
+      "selected": false,
+      "initial_output_sha256": "026ca73862d3c9918d0e3e624d039435ab6e58f38540a83583a18dd53ad081ce"
+    },
+    {
+      "id": "B13",
+      "title_ja": "こっちが好き",
+      "initial_assistant_review": {
+        "verdict": "pass_with_caveat",
+        "recommendation": "candidate",
+        "identity": 5,
+        "scene": 4,
+        "naturalness": 3,
+        "quality": 5,
+        "note": "得意げな小さな笑みは良好。菓子の大小が大きく誇張され、日常の小さなずるさより提示ポーズに寄る。"
+      },
+      "selected": false,
+      "initial_output_sha256": "21f36249597c1c65496618a479a1bec91bfc983505becaabb9c88bb7f4a7a4b8"
+    },
+    {
+      "id": "B14",
+      "title_ja": "ちゃんとあるよ",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 5,
+        "scene": 5,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "自分の菓子を保ちつつ小さい方を差し出す手で、機嫌取りとちゃっかり感が明瞭。前景の手が構図の幅を作る。"
+      },
+      "selected": true,
+      "initial_output_sha256": "143a95da88e99d83917d164515d86959e748a46780f54ad0a321c34aaec5eb78"
+    },
+    {
+      "id": "B15",
+      "title_ja": "自分の分は確保済み",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "reserve",
+        "identity": 5,
+        "scene": 4,
+        "naturalness": 3,
+        "quality": 5,
+        "note": "自分の分を確保済みの大小は分かる。通常の正面微笑みでB03との重複が強いため予備。"
+      },
+      "selected": false,
+      "initial_output_sha256": "3f994ce0d98d326e2a3d41973f620c60b2288d890c6e36af0a45ad6adf2367af"
+    },
+    {
+      "id": "B16",
+      "title_ja": "見つかっても平気",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "candidate",
+        "identity": 4,
+        "scene": 4,
+        "naturalness": 5,
+        "quality": 5,
+        "note": "床で気楽に座ったままおやつを続ける空気が自然。小さな勝利感は穏やかで、室内全身の構図幅に役立つ。"
+      },
+      "selected": true,
+      "initial_output_sha256": "9f687158c3c708b66738d2798f7ac1e40a099aadefef4ac8d96b7394a33cd773"
+    },
+    {
+      "id": "C01",
+      "title_ja": "置くところ、ある？",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 4,
+        "scene": 5,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "両手のマグと机を覆うノート、わずかに困った口元で置き場所の問題が明瞭。姿勢と衣装も安定。"
+      },
+      "selected": false,
+      "initial_output_sha256": "c4332d42c222655e0b5311f9e78429c750d137286d0e4979bee43fc8e405342b"
+    },
+    {
+      "id": "C02",
+      "title_ja": "トレイの行き先",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 4,
+        "scene": 5,
+        "naturalness": 5,
+        "quality": 5,
+        "note": "机を見下ろしてトレイを置けず止まる反応が明瞭。二つのカップと両手の支持も自然で、視線の幅がある。"
+      },
+      "selected": true,
+      "initial_output_sha256": "900f3998b7ec952aea902f4a36341cb77a883838fab00544e35b2f409cba5466"
+    },
+    {
+      "id": "C03",
+      "title_ja": "片付くまで待ってる",
+      "initial_assistant_review": {
+        "verdict": "pass_with_caveat",
+        "recommendation": "candidate",
+        "identity": 4,
+        "scene": 5,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "少し呆れて飲み物を持ったまま待つ表情が明瞭。食器や紙屑まで散らかりが強く、視線も指定よりこちら寄り。"
+      },
+      "selected": false,
+      "initial_output_sha256": "dbf9dad08e0e4105400b7bcc65783033d6b9d7066ad6cffa43c271ecc3f2ddfb"
+    },
+    {
+      "id": "C04",
+      "title_ja": "ここに……置けない",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 4,
+        "scene": 5,
+        "naturalness": 5,
+        "quality": 5,
+        "note": "ノート上でカップを浮かせて止まる途中動作と困り顔が明瞭。机・両手・カップの位置関係が自然で有力。"
+      },
+      "selected": true,
+      "initial_output_sha256": "35880358966bd3bd751663981c83c26d5e028e98fa66d836dcbd692801dc7435"
+    },
+    {
+      "id": "C05",
+      "title_ja": "どっちか持って",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "candidate",
+        "identity": 5,
+        "scene": 4,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "マグと紙袋で両手が塞がり、助けを求める柔らかい困り顔。手と荷物の持ち方、制服が安定。"
+      },
+      "selected": false,
+      "initial_output_sha256": "204c0e40d0f0fabee7ef6c3cd3d3976b40c26c62e684aca84ff49b3619c928ea"
+    },
+    {
+      "id": "C06",
+      "title_ja": "抱えすぎた",
+      "initial_assistant_review": {
+        "verdict": "pass_with_caveat",
+        "recommendation": "reserve",
+        "identity": 4,
+        "scene": 3,
+        "naturalness": 4,
+        "quality": 4,
+        "note": "荷物を抱える腕は自然で全身の参照が保たれる。手が足りない切迫感は弱く、玄関土間に靴下で立つ配置と菓子袋の文字に留保。"
+      },
+      "selected": false,
+      "initial_output_sha256": "150bc1b17acfd8b5b36a09b0732bc72621f943ebdda757c5c835faa6ae5a0054"
+    },
+    {
+      "id": "C07",
+      "title_ja": "ノートもあるんだけど",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "candidate",
+        "identity": 5,
+        "scene": 4,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "片手のトレイと反対側のノートの支えが自然。小さく困った口元は良いが、動作と視線は正面の立ち姿寄り。"
+      },
+      "selected": false,
+      "initial_output_sha256": "c8d2cd7f198a00babd8bf9442ecd90baee90bdc567cd29118fa4153ae9c10176"
+    },
+    {
+      "id": "C08",
+      "title_ja": "こぼさないように",
+      "initial_assistant_review": {
+        "verdict": "needs_correction",
+        "recommendation": "hold",
+        "identity": 4,
+        "scene": 5,
+        "naturalness": 5,
+        "quality": 5,
+        "note": "カップへ視線を落として慎重に運ぶ動作は強い。横向きで細ピンが本人の右側のこめかみに移っており、採用には左右の修正が必要。"
+      },
+      "selected": false,
+      "initial_output_sha256": "63365dbc8bee0b3b4e7849c88d0ae44e18fb5e4026710fa6e13c185571902b5a"
+    },
+    {
+      "id": "C09",
+      "title_ja": "ペンは貸すけど",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "candidate",
+        "identity": 5,
+        "scene": 4,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "ペンを前へ差し出す手と散らかった勉強机で親しいやりとりが明瞭。苦笑いと横目は通常の笑顔より弱いが構図が良い。"
+      },
+      "selected": false,
+      "initial_output_sha256": "e532d547a44c3a4399edc19fdd6dc796c7c8a17d640513b786ce771feffa8a9c"
+    },
+    {
+      "id": "C10",
+      "title_ja": "座る前に片付けて",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "candidate",
+        "identity": 4,
+        "scene": 4,
+        "naturalness": 5,
+        "quality": 5,
+        "note": "ノートを抱えて椅子を引く前に止まる動作が自然。散らかった机と控えめな口元で軽い注意が読める。"
+      },
+      "selected": false,
+      "initial_output_sha256": "c044d1f9dcb93a11d52990e14f6f275678de45280406e97e2aa99ff73d6d1e4f"
+    },
+    {
+      "id": "C11",
+      "title_ja": "受け取って、ほら",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 5,
+        "scene": 5,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "ティッシュを差し出して待つ手と少し困った顔で、受け取ってほしい距離感が明瞭。笑顔以外の近景として有力。"
+      },
+      "selected": true,
+      "initial_output_sha256": "546162e73e26b53f4e0a0ffaaf757e1143a7fa9beb004dc74dce67eebd610ac4"
+    },
+    {
+      "id": "C12",
+      "title_ja": "置けたけどね",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 4,
+        "scene": 5,
+        "naturalness": 5,
+        "quality": 5,
+        "note": "机へ視線を落とし、カップを置きながら小さく困り笑いする日常の動作。C04と対になる自然な有力候補。"
+      },
+      "selected": true,
+      "initial_output_sha256": "8b8dca6c4c6fc3b0a8578bbe848bcee89b09acb1e97438bf77c8734d497ad93f"
+    },
+    {
+      "id": "C13",
+      "title_ja": "座る場所を作る",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 4,
+        "scene": 5,
+        "naturalness": 5,
+        "quality": 5,
+        "note": "クッションを整えつつ膝掛けを抱える全身の動作が自然。横顔、ピンの左右、灰色靴下と足元が整い、家庭内実務の幅を作る。"
+      },
+      "selected": true,
+      "initial_output_sha256": "58bcdc7d5023695a004237cee31e6c354f2b044ac93b711c000146961bf56715"
+    },
+    {
+      "id": "C14",
+      "title_ja": "その前に片付け",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "reserve",
+        "identity": 4,
+        "scene": 4,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "トレイの飲み物とおやつ、散らかった机で停止理由は分かる。C02と構図・反応が近いため予備。"
+      },
+      "selected": false,
+      "initial_output_sha256": "b53b12500063052a105ca05ea5b0b7ffd75e4830b87d8debc9bed368f3e5a5f8"
+    },
+    {
+      "id": "C15",
+      "title_ja": "段取りが詰まった",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "strong",
+        "identity": 4,
+        "scene": 5,
+        "naturalness": 5,
+        "quality": 5,
+        "note": "片腕の本・筆箱・菓子と反対手のマグが自然。置き場所を探す横目と少し開いた口で段取りの都合が伝わる。ピンは正しい遠側。"
+      },
+      "selected": true,
+      "initial_output_sha256": "e9e8e573add80bec80cba9228828f4364872fbc3bb5c0d3ec32efdea46a42c87"
+    },
+    {
+      "id": "C16",
+      "title_ja": "ようやく、ひと息",
+      "initial_assistant_review": {
+        "verdict": "pass",
+        "recommendation": "candidate",
+        "identity": 5,
+        "scene": 4,
+        "naturalness": 4,
+        "quality": 5,
+        "note": "飲み物とおやつを用意し終え、落ち着いて一息つく場面。顔と手は良好だが、疲れは薄く通常の優しい微笑み寄り。"
+      },
+      "selected": false,
+      "initial_output_sha256": "7ff2213c33aeef0fc401f571f7b1c79b84d1c258af13a019f91b718efaca39ba"
+    }
+  ]
+}
