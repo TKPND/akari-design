@@ -3,7 +3,7 @@
   "path_base": "akari-v3.1",
   "title_ja": "好み6枚からの続き",
   "status": "user_selected",
-  "selected_count": 7,
+  "selected_count": 8,
   "selected_ids": [
     "F01",
     "F02",
@@ -11,7 +11,8 @@
     "F05",
     "F06",
     "F08",
-    "F09"
+    "F09",
+    "F10"
   ],
   "selection": "situations/favorites-continuation/selection.json",
   "preferences": "situations/favorites-continuation/preferences.json",
@@ -154,7 +155,26 @@
       "user_selected": true,
       "face_authority_promoted": false,
       "generation_chain": "situations/favorites-continuation/history/F08-F09/generation-chain.json"
+    },
+    {
+      "id": "F10",
+      "title_ja": "この写真、見て",
+      "output": {
+        "path": "situations/favorites-continuation/images/F10-showing-a-photo.png",
+        "sha256": "5a08a99cec9e29bed8cdfdbcb9023db844a3fadaf46034969ce5ebac2b2b9d06",
+        "bytes": 2315609,
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/favorites-continuation/prompts/F10.txt",
+        "sha256": "ab904acd179ca1f262695e0e9990c9a5882fc93d0fff4219d8d45ec1158c00ce",
+        "bytes": 3843
+      },
+      "record": "situations/favorites-continuation/records/F10.json",
+      "user_selected": true,
+      "face_authority_promoted": false
     }
   ],
-  "updated_at": "2026-09-08T10:06:37.523446+00:00"
+  "updated_at": "2026-09-08T10:33:12.082562+00:00"
 }

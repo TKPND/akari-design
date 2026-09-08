@@ -1,0 +1,42 @@
+{
+  "project": "akari-v3.1",
+  "id": "F10",
+  "status": "pass",
+  "checked_at": "2026-09-08T10:33:12.082562+00:00",
+  "scope": "F10 selected photo-album home scene, prompt, record, references and selection metadata.",
+  "output": {
+    "path": "situations/favorites-continuation/images/F10-showing-a-photo.png",
+    "sha256": "5a08a99cec9e29bed8cdfdbcb9023db844a3fadaf46034969ce5ebac2b2b9d06",
+    "bytes": 2315609,
+    "width": 1024,
+    "height": 1536
+  },
+  "prompt": {
+    "path": "situations/favorites-continuation/prompts/F10.txt",
+    "sha256": "ab904acd179ca1f262695e0e9990c9a5882fc93d0fff4219d8d45ec1158c00ce",
+    "bytes": 3843
+  },
+  "record": "situations/favorites-continuation/records/F10.json",
+  "checks": {
+    "png_signature": true,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "source_copy_bytes_identical": true,
+    "all_direct_inputs_exist": true,
+    "all_support_inputs_exist": true,
+    "selected_id_recorded": true,
+    "face_authority_promoted": false
+  },
+  "visual_review": {
+    "scene_and_action": "Clear at-home photo-album scene; one hand naturally presents a landscape print and the other rests on the album.",
+    "identity_and_expression": "Black bob, silver pin, grey eyes and closed-mouth smile remain consistent with P1/P2 and U1.",
+    "wardrobe": "Selected rounded-collar long-sleeve bolero and plaid skirt are retained; no indoor footwear is present.",
+    "sock_material": "Both grey rib-knit socks read as opaque cloth with continuous rounded toe silhouettes and no individually articulated toes.",
+    "limitations": "Ankle and forefoot folds are somewhat stronger and more numerous than the preferred restrained F09 example.",
+    "reviewer": "assistant",
+    "method": "Original-resolution PNG compared with viewed P1/P2/U1/L1/F09 detail and inspected F09/A16-E1-1 support.",
+    "verdict": "pass_selected_with_minor_material_deviation"
+  }
+}

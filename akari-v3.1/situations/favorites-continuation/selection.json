@@ -9,11 +9,12 @@
     "F05",
     "F06",
     "F08",
-    "F09"
+    "F09",
+    "F10"
   ],
-  "recorded_at": "2026-09-08T10:06:37.523446+00:00",
-  "user_quote": "F09ぐらいがええな。\n今後の生成でも適用できるように、生成条件もアップデートしてコミット頼む。\n後F08,F09もコミットしてええよ。",
-  "scope": "Selected F01/F02/F04/F05/F06/F08/F09 scenes. F09 sets the preferred restrained sock wrinkle strength together with the mandatory opaque rounded toe envelope. Scene poses and original face authorities retain their roles.",
+  "recorded_at": "2026-09-08T10:33:12.082562+00:00",
+  "user_quote": "良いね。commitは可能？",
+  "scope": "Selected F01/F02/F04/F05/F06/F08/F09/F10 scenes. F09 remains the preferred restrained sock wrinkle standard; F10 adds the photo-album home scene and does not promote a new face or material authority.",
   "scene_references_only": false,
   "face_authority_promoted": false,
   "approval_history": [
@@ -53,6 +54,14 @@
       "user_quote": "F09ぐらいがええな。\n今後の生成でも適用できるように、生成条件もアップデートしてコミット頼む。\n後F08,F09もコミットしてええよ。",
       "preferred_sock_material_id": "F09",
       "generation_chain": "situations/favorites-continuation/history/F08-F09/generation-chain.json"
+    },
+    {
+      "selected_ids": [
+        "F10"
+      ],
+      "recorded_at": "2026-09-08T10:33:12.082562+00:00",
+      "user_quote": "良いね。commitは可能？",
+      "record": "situations/favorites-continuation/records/F10.json"
     }
   ],
   "scene_and_sock_material_support_only": true,

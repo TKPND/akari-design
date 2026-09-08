@@ -20,7 +20,7 @@ A16は服の影をさりげなく整理した[E1-1](situations/abc-exploration/i
 今後の服の仕上げは、下記の「採用した服の仕上げ」を参照する。
 
 直近の好みA08・A13・A15・B16・C13・C15から作った
-[F01・F02・F04〜F06・F08・F09の7枚](situations/favorites-continuation/README.md)も採用済み。
+[F01・F02・F04〜F06・F08〜F10の8枚](situations/favorites-continuation/README.md)も採用済み。
 共通する靴下の柔らかい描写は、今後も引き継ぐ**必須条件**として採用した。
 F09の控えめな布じわを優先基準とし、F07はつま先の質感用に原寸を保存している。
 新しい場面では姿勢・動作・画角を変え、顔と表情の原本はP1/P2を継続する。

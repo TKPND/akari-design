@@ -1,0 +1,120 @@
+{
+  "id": "F10",
+  "title_ja": "この写真、見て",
+  "status": "user_selected",
+  "user_selected": true,
+  "tool": "image_gen",
+  "tool_mode": "built-in-imagegen",
+  "model": null,
+  "model_note": "The built-in tool did not expose the model name.",
+  "recorded_at": "2026-09-08T10:33:12.082562+00:00",
+  "elapsed_seconds": 93.4,
+  "elapsed_scope": "Wall-clock duration reported by the tool request, including tool-side queueing.",
+  "tool_output_filename": "exec-0773b49d-b2de-44e5-80b1-ef7280811cef.png",
+  "path_base": "akari-v3.1",
+  "derivation_type": "new_home_scene_using_original_identity_and_material_support",
+  "related_approved_ids": [
+    "F01",
+    "F02",
+    "F04",
+    "F05",
+    "F06",
+    "F08",
+    "F09"
+  ],
+  "user_request": "@GitHub TKPND/akari-designを確認してv3.1で画像生成をやりたい",
+  "requested_scene": "At home after school, Akari sits beside a low table arranging photographs in an album and lifts one landscape print toward the viewer with a small pleased closed-mouth smile.",
+  "requested_aspect": "portrait_2_3",
+  "output": {
+    "path": "situations/favorites-continuation/images/F10-showing-a-photo.png",
+    "sha256": "5a08a99cec9e29bed8cdfdbcb9023db844a3fadaf46034969ce5ebac2b2b9d06",
+    "bytes": 2315609,
+    "width": 1024,
+    "height": 1536
+  },
+  "prompt": {
+    "path": "situations/favorites-continuation/prompts/F10.txt",
+    "sha256": "ab904acd179ca1f262695e0e9990c9a5882fc93d0fff4219d8d45ec1158c00ce",
+    "bytes": 3843
+  },
+  "input_ids": [
+    "P1",
+    "P2",
+    "U1",
+    "L1",
+    "F09-sock-detail"
+  ],
+  "inputs": [
+    {
+      "id": "P1",
+      "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+      "role": "original_face_eyes_black_bob_drawing_authority",
+      "bytes": 1869375,
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc"
+    },
+    {
+      "id": "P2",
+      "path": "../akari-v3.0/references/P2-quiet-smile.png",
+      "role": "original_everyday_closed_mouth_smile_authority",
+      "bytes": 1836424,
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f"
+    },
+    {
+      "id": "U1",
+      "path": "references/U1-upper-reference.png",
+      "role": "native_upper_eye_hair_silver_pin_detail",
+      "bytes": 1852161,
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f"
+    },
+    {
+      "id": "L1",
+      "path": "references/L1-lower-reference.png",
+      "role": "native_leg_construction_grey_ribbed_below_knee_sock_design",
+      "bytes": 1815855,
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40"
+    },
+    {
+      "id": "F09-sock-detail",
+      "path": "references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "role": "preferred_opaque_rounded_sock_toe_and_restrained_cloth_wrinkle_material_only",
+      "bytes": 71786,
+      "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385"
+    }
+  ],
+  "inspected_support_only": [
+    {
+      "id": "F09",
+      "path": "situations/favorites-continuation/images/F09-drying-mug-listening.png",
+      "role": "selected_long_sleeve_wardrobe_and_sock_material_visual_check_not_direct_input",
+      "bytes": 1908983,
+      "sha256": "6ebb67e3afc8c43a66352bf66102ac20f369c0ba7cc548871ae9b71ee40ad2a2"
+    },
+    {
+      "id": "A16-E1-1",
+      "path": "situations/abc-exploration/images/A16-E1-1.png",
+      "role": "selected_subtle_clothing_shadow_finish_visual_check_not_direct_input",
+      "bytes": 2032915,
+      "sha256": "4bbd4b898b8f65b302edbee459c25b81f37f99e5295775a57eda8e7f4b88bb71"
+    }
+  ],
+  "output_transformation": "Byte-for-byte copy of generated PNG; no compositing or pixel editing.",
+  "file_validation": {
+    "png_signature_crc_zlib": true,
+    "source_copy_bytes_identical": true,
+    "all_inputs_exist_and_hashed": true
+  },
+  "visual_review": {
+    "scene_and_action": "Clear at-home photo-album scene; one hand naturally presents a landscape print and the other rests on the album.",
+    "identity_and_expression": "Black bob, silver pin, grey eyes and closed-mouth smile remain consistent with P1/P2 and U1.",
+    "wardrobe": "Selected rounded-collar long-sleeve bolero and plaid skirt are retained; no indoor footwear is present.",
+    "sock_material": "Both grey rib-knit socks read as opaque cloth with continuous rounded toe silhouettes and no individually articulated toes.",
+    "limitations": "Ankle and forefoot folds are somewhat stronger and more numerous than the preferred restrained F09 example.",
+    "reviewer": "assistant",
+    "method": "Original-resolution PNG compared with viewed P1/P2/U1/L1/F09 detail and inspected F09/A16-E1-1 support.",
+    "verdict": "pass_selected_with_minor_material_deviation"
+  },
+  "face_authority_promoted": false,
+  "approval_quote": "良いね。commitは可能？",
+  "selection_recorded_at": "2026-09-08T10:33:12.082562+00:00",
+  "selection_record": "situations/favorites-continuation/selection.json"
+}

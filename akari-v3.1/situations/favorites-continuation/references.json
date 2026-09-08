@@ -146,6 +146,13 @@
       "F01-toe-detail",
       "L1",
       "P1"
+    ],
+    "F10": [
+      "P1",
+      "P2",
+      "U1",
+      "L1",
+      "F09-sock-detail"
     ]
   },
   "selected_scene_support": [
@@ -211,6 +218,15 @@
       "width": 1024,
       "height": 1536,
       "role": "preferred_rounded_opaque_sock_material_and_cloth_wrinkle_strength_only"
+    },
+    {
+      "id": "F10",
+      "path": "situations/favorites-continuation/images/F10-showing-a-photo.png",
+      "sha256": "5a08a99cec9e29bed8cdfdbcb9023db844a3fadaf46034969ce5ebac2b2b9d06",
+      "bytes": 2315609,
+      "width": 1024,
+      "height": 1536,
+      "role": "approved_photo_album_home_scene_support_not_face_or_material_authority"
     }
   ],
   "sock_material_requirement": "sock-material-requirement.json",
