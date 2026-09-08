@@ -1,0 +1,108 @@
+{
+  "id": "F06",
+  "title_ja": "窓辺で、ひとつ背伸び",
+  "status": "user_selected",
+  "user_selected": true,
+  "tool": "image_gen",
+  "tool_mode": "built-in-imagegen",
+  "model": null,
+  "model_note": "The built-in tool did not expose the model name.",
+  "started_at": "2026-09-08T08:21:11.940Z",
+  "elapsed_seconds": 139.585,
+  "elapsed_scope": "Wall-clock duration of this tool request, including any tool-side queueing.",
+  "tool_output_filename": "exec-d3dd26c7-fabb-4aaf-b41e-439e9bd5478a.png",
+  "path_base": "akari-v3.1",
+  "derivation_type": "new_pose_scene_using_original_identity_and_material_support",
+  "related_approved_ids": [
+    "F01",
+    "F02"
+  ],
+  "user_request": "この調子でいろいろ作ろう。(靴下とかの質感は保ちたいけど、さすがに姿勢は変えてもいいw)",
+  "requested_scene": "Create a NEW Akari v3.1 slice-of-life illustration. PORTRAIT 2:3 full-body composition: she is STANDING beside a bright window and taking an easy stretch. Use a tall open silhouette from raised hands to socked feet.\n\nAkari has stood up after relaxing and stretches both arms overhead, one hand gently holding the opposite wrist, with both elbows slightly bent. Show exactly two naturally connected arms and two complete hands. Her shoulders lift and her torso lengthens gently. Her head tips a little toward the window light, her grey eyes softly open and her small smile pleasantly relieved. Keep the effortless feeling of a short everyday stretch, not an athletic pose.\nShe stands on the cream rug near the sheer curtain. Her feet are naturally offset by a small step, with her weight on one relaxed flat foot while the other heel lifts just slightly, its sock-covered forefoot still resting on the rug. The stance is stable and casual, and the ankles are relaxed. Both complete feet remain visible with normal proportions. The grey knit lightly compresses at the contact areas and folds softly at the bending ankle; avoid any rigid shoe-like toe shape.\n\nUse a natural standing eye-level three-quarter view from a few steps away, with the entire body large enough to retain her face and outfit detail. Plenty of room above the raised hands and below both feet. Compose the figure beside a window and softly glowing curtain, with a leafy plant and a small chair off to the side. Warm daylight gives the hair a quiet rim and falls in broad soft shapes across the rug. The bolero sleeves follow the raised arms, the blouse stays comfortably tucked, and the plaid skirt hangs vertically in believable pleats. This standing pose, tall framing and window setting should be unmistakably different from the seated reference.",
+  "requested_aspect": "portrait_2_3",
+  "output": {
+    "path": "situations/favorites-continuation/images/F06-standing-window-stretch.png",
+    "bytes": 2104638,
+    "sha256": "eb44b4948ec54086694e41ed87c146dd55ed47186f4ef6a2286237dcd637821a",
+    "width": 1024,
+    "height": 1536
+  },
+  "prompt": {
+    "path": "situations/favorites-continuation/prompts/F06.txt",
+    "bytes": 4270,
+    "sha256": "649a8b222a09d92f9dbaac4c6af09f1c5dc49e869130243241c6621cd1caa22a"
+  },
+  "input_ids": [
+    "P1",
+    "P2",
+    "U1",
+    "L1",
+    "F01"
+  ],
+  "inputs": [
+    {
+      "id": "P1",
+      "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+      "role": "original_face_eyes_black_bob_drawing_authority",
+      "bytes": 1869375,
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc"
+    },
+    {
+      "id": "P2",
+      "path": "../akari-v3.0/references/P2-quiet-smile.png",
+      "role": "original_everyday_closed_mouth_smile_authority",
+      "bytes": 1836424,
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f"
+    },
+    {
+      "id": "U1",
+      "path": "references/U1-upper-reference.png",
+      "role": "native_upper_eyes_hair_pin_detail",
+      "bytes": 1852161,
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f"
+    },
+    {
+      "id": "L1",
+      "path": "references/L1-lower-reference.png",
+      "role": "native_leg_construction_and_grey_ribbed_below_knee_sock_design",
+      "bytes": 1815855,
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40"
+    },
+    {
+      "id": "F01",
+      "path": "situations/favorites-continuation/images/F01-cushion-listening.png",
+      "role": "selected_long_sleeve_outfit_and_soft_sock_material_only_not_pose_camera_or_face_authority",
+      "bytes": 2572126,
+      "sha256": "6a07e44c0025d7b63820a008f7a1d1c59ece6ceb3a998d3a057b0b2c38c7e0c1"
+    }
+  ],
+  "inspected_support_only": [
+    {
+      "id": "F02",
+      "path": "situations/favorites-continuation/images/F02-cushion-hidden-smile.png",
+      "role": "visual_comparison_for_shared_soft_sock_material_not_in_direct_payload",
+      "bytes": 2494433,
+      "sha256": "93eebf87262e75f378731fcb653b542984dc7c3e718195bdcb2128dfba74fe66"
+    }
+  ],
+  "output_transformation": "Byte-for-byte copy of generated PNG; no compositing or pixel editing.",
+  "file_validation": {
+    "png_signature_crc_zlib": true,
+    "source_copy_bytes_identical": true,
+    "all_inputs_exist_and_hashed": true
+  },
+  "visual_review": {
+    "pose": "Distinct full standing silhouette with two arms raised overhead, offset feet, one flat foot and one raised heel. Limbs and hands remain connected.",
+    "expression_and_action": "Relaxed stretch with a small smile; head and eyes keep the current character design.",
+    "materials": "Both grey socks retain softly shaded rib knit, rounded fabric-covered toes and ankle folds that follow the standing stance.",
+    "limitations": "Raised hands are close to the top border but remain in frame. Lifted heel is more pronounced than the subtle lift requested.",
+    "reviewer": "assistant",
+    "method": "Original-resolution saved PNG compared with the viewed P1/P2/U1/L1/F01 inputs and F02 material example.",
+    "verdict": "pass_as_pose_variety_candidate",
+    "selection_status_at_review": "Candidate at the time of assistant review; subsequently selected by the user."
+  },
+  "face_authority_promoted": false,
+  "approval_quote": "いいね。この靴下の感じは今後もMUSTで引き継ぎたいな。(靴履いたら見えないけどさ)F04-06commitするのと、READMEおよびベースの文言があれば反映させたいな。(これもcommit)",
+  "selection_recorded_at": "2026-09-08T08:33:56.908104+00:00",
+  "selection_record": "situations/favorites-continuation/selection.json"
+}

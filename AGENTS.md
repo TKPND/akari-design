@@ -28,6 +28,13 @@ This repository builds and audits Akari visual-reference materials.
 - S1 defines the silver pin. L1 carries the selected G2 grey socks; G2 remains
   the source layout and sock-color reference, and P6 supplies inherited body
   construction. P6's navy socks and missing pin are superseded for v3.1.
+- Soft sock material is a MUST wherever sock fabric is visible. Follow
+  `akari-v3.1/sock-material-requirement.json` and the reusable
+  `akari-v3.1/prompts/sock-material-must.txt`, using selected F01/F02/F04/F05/F06
+  for material only. Keep rounded fabric-covered toes when visible and natural
+  ankle/contact folds. Shoes may cover the toes; do not force hidden details
+  into view. New poses and cameras remain free, with P1/P2 and native U1/L1
+  retaining their original roles.
 - For corrections, keep the edit target as the scene, pose and camera source.
   For split generation, establish a shared layout and waist/skirt overlap;
   during assembly, preserve complete arms/hands and inspect clothing seams.

@@ -201,5 +201,30 @@
   "historical_path_exceptions": [
     "history/S1-generation.json: source_records (history only)"
   ],
-  "visual_review_record": "history/split-references/generation.json"
+  "visual_review_record": "history/split-references/generation.json",
+  "sock_material_requirement_validation": {
+    "status": "pass",
+    "verified_at": "2026-09-08T08:38:46.423141+00:00",
+    "scope": "Selected F01/F02/F04/F05/F06 package, mandatory sock material guidance and active v3.1 base references.",
+    "record": "situations/favorites-continuation/validation.json",
+    "selected_scene_ids": [
+      "F01",
+      "F02",
+      "F04",
+      "F05",
+      "F06"
+    ],
+    "native_png_and_prompt_unchanged": true,
+    "reference_roles_preserved": true,
+    "sock_material_must_consistent": true,
+    "pose_is_fixed": false,
+    "footwear_occlusion_allowed": true,
+    "markdown_lint": {
+      "command": "npm run lint:md",
+      "exit_code": 0,
+      "files": 209,
+      "issues": 0,
+      "checked_at": "2026-09-08T08:40:29.835873+00:00"
+    }
+  }
 }

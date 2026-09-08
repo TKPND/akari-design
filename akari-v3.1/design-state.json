@@ -1,12 +1,12 @@
 {
   "project": "akari-v3.1",
-  "updated": "2026-09-08T07:23:15.083472+00:00",
-  "current_stage": "split_references_and_clothing_finish_selected",
+  "updated": "2026-09-08T08:33:56.908104+00:00",
+  "current_stage": "split_references_clothing_finish_and_sock_material_required",
   "status": "user_selected_working_design",
   "base_version": "akari-v3.0",
   "path_base": "All active paths are relative to the akari-v3.1 directory.",
   "base_design_state": "../akari-v3.0/design-state.json",
-  "scope": "Akari v3.1 uses the selected U1 upper and L1 lower references directly, with M2 as an assembled whole-body overview; the S1 silver pin and G2 grey sock design are retained. The selected A16-E1-1 supplies subtle clothing-shadow grouping guidance.",
+  "scope": "Akari v3.1 uses the selected U1 upper and L1 lower references directly, with M2 as an assembled whole-body overview; the S1 silver pin and G2 grey sock design are retained. The selected A16-E1-1 supplies subtle clothing-shadow grouping guidance. Selected F01/F02/F04/F05/F06 soft sock material rendering is a MUST whenever socks are visible, with pose and composition free to vary.",
   "primary_references": {
     "face": {
       "id": "P1",
@@ -79,7 +79,9 @@
     "color": "medium neutral grey",
     "material": "opaque ribbed knit",
     "length": "below knee, retaining the selected G2 ribbed heights and fit shown in L1",
-    "color_origin_reference_id": "G2"
+    "color_origin_reference_id": "G2",
+    "rendering_strength": "MUST",
+    "rendering_requirement": "sock-material-requirement.json"
   },
   "selection_record": "selection.json",
   "generation_records": {
@@ -98,7 +100,8 @@
     "Use S1 for one bright silver slim straight pin with rounded tips, at the character-left temple just above the ear; viewer-right in these approved references.",
     "L1 carries the G2 medium-neutral-grey opaque ribbed below-knee socks, healthy leg contours, blue-grey pleated skirt and white sneakers. G2 remains the approved source layout and sock-color origin; P6 is inherited construction support whose navy socks and absent pin are superseded.",
     "Later situation or expression selections do not automatically change these roles. Use the current black-bob v3.0 lineage; do not mix v1/v2 or the August v3.0 research design into this version.",
-    "Use selected A16-E1-1 as the clothing-finish guide: group small internal shadows subtly while retaining major folds, dimensionality, seams and plaid. Treat it as clothing-finish support only; keep P1/P2 original face and expression authority, native U1/L1 detail roles and the current target scene, pose, camera and outfit. E2/E3 are not selected; transfer beyond A16 still needs visual review."
+    "Use selected A16-E1-1 as the clothing-finish guide: group small internal shadows subtly while retaining major folds, dimensionality, seams and plaid. Treat it as clothing-finish support only; keep P1/P2 original face and expression authority, native U1/L1 detail roles and the current target scene, pose, camera and outfit. E2/E3 are not selected; transfer beyond A16 still needs visual review.",
+    "MUST preserve the selected soft opaque rib-knit sock material from F01/F02/F04/F05/F06 wherever sock fabric is visible: rounded fabric-covered toes when visible, soft connected shading, and natural posture-dependent ankle/contact folds. Use sock-material-requirement.json and prompts/sock-material-must.txt. Footwear may hide toes; do not force hidden details into view. New poses, actions and cameras are free to vary; these material examples do not replace P1/P2 or native U1/L1."
   ],
   "asset_inventory": "asset-inventory.json",
   "validation": "validation.json",
@@ -153,6 +156,23 @@
       "A16"
     ],
     "other_scene_transfer_validated": false,
+    "face_authority_promoted": false
+  },
+  "sock_material_requirement": {
+    "id": "soft-ribbed-sock-material",
+    "strength": "MUST",
+    "required": true,
+    "record": "sock-material-requirement.json",
+    "prompt_fragment": "prompts/sock-material-must.txt",
+    "applies_when": "Any sock fabric is visible in the composition. Toe-shape requirements apply when sock-covered toes are visible.",
+    "pose_is_fixed": false,
+    "material_example_ids": [
+      "F01",
+      "F02",
+      "F04",
+      "F05",
+      "F06"
+    ],
     "face_authority_promoted": false
   }
 }

@@ -1,0 +1,95 @@
+{
+  "id": "F02",
+  "title_ja": "クッションで笑いを隠す",
+  "status": "user_selected",
+  "user_selected": true,
+  "tool": "image_gen",
+  "tool_mode": "built-in-imagegen",
+  "model": null,
+  "model_note": "The built-in tool did not expose the model name.",
+  "started_at": "2026-09-08T07:59:16.229Z",
+  "elapsed_seconds": 39.646,
+  "tool_output_filename": "exec-c3be6d88-aae6-4545-8302-f121320de204.png",
+  "path_base": "akari-v3.1",
+  "parent_commit": "7fb63c1",
+  "parent_id": "F01",
+  "parent_approval": "これええやん。commitして派生作ろう",
+  "requested_change": "Hide most of the small smile behind the cushion, preserving the F01 seated scene and expressing a quiet laugh through the eyes.",
+  "output": {
+    "path": "situations/favorites-continuation/images/F02-cushion-hidden-smile.png",
+    "bytes": 2494433,
+    "sha256": "93eebf87262e75f378731fcb653b542984dc7c3e718195bdcb2128dfba74fe66",
+    "width": 1024,
+    "height": 1536
+  },
+  "prompt": {
+    "path": "situations/favorites-continuation/prompts/F02.txt",
+    "bytes": 3765,
+    "sha256": "eeda47ca69c7561012f0e41b69c40cebda0f9ec7cd79a457800d7d2d4c4af307"
+  },
+  "inputs": [
+    {
+      "id": "F01",
+      "path": "situations/favorites-continuation/images/F01-cushion-listening.png",
+      "role": "edit_target_and_sole_scene_pose_camera_outfit_authority",
+      "bytes": 2572126,
+      "sha256": "6a07e44c0025d7b63820a008f7a1d1c59ece6ceb3a998d3a057b0b2c38c7e0c1"
+    },
+    {
+      "id": "P1",
+      "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+      "role": "original_face_eyes_bob_drawing_authority",
+      "bytes": 1869375,
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc"
+    },
+    {
+      "id": "P2",
+      "path": "../akari-v3.0/references/P2-quiet-smile.png",
+      "role": "original_everyday_smile_baseline",
+      "bytes": 1836424,
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f"
+    },
+    {
+      "id": "U1",
+      "path": "references/U1-upper-reference.png",
+      "role": "native_upper_eyes_hair_pin_detail",
+      "bytes": 1852161,
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f"
+    },
+    {
+      "id": "L1",
+      "path": "references/L1-lower-reference.png",
+      "role": "native_leg_and_grey_sock_detail",
+      "bytes": 1815855,
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40"
+    }
+  ],
+  "input_ids": [
+    "F01",
+    "P1",
+    "P2",
+    "U1",
+    "L1"
+  ],
+  "output_transformation": "Byte-for-byte copy of generated PNG; no compositing or pixel editing.",
+  "file_validation": {
+    "png_signature_crc_zlib": true,
+    "source_copy_bytes_identical": true,
+    "all_inputs_exist_and_hashed": true
+  },
+  "visual_review": {
+    "reviewer": "assistant",
+    "method": "Original-resolution saved output visually compared with the approved F01 target and native references.",
+    "identity": "Black bob, soft grey eyes, reference age impression and silver pin read consistently with F01.",
+    "requested_change": "Cushion raised to cover most of the mouth and chin; a tiny smile corner remains visible. More bashful and softly amused than F01.",
+    "hands_and_cushion": "Two connected hands embrace the compressed cushion, with coherent wrists and grips.",
+    "lower_body": "Paired seated knees, two connected legs and grey socked feet remain visually consistent with F01.",
+    "scene_and_wardrobe": "Same framing, furniture, props, daylight and long-sleeve plaid outfit retained.",
+    "limitations": "Eyes read as both relaxed and bashful; the subdued laugh is interpretive. Minor redraw differences remain, and no pixel-exact preservation is claimed.",
+    "verdict": "pass_as_derivative_candidate",
+    "selection_status_at_review": "Candidate at the time of the assistant review; subsequently selected by the user."
+  },
+  "approval_quote": "良いね。採用。\nF01,F02共通でつま先の柔らかい感じがとても良い。\n他にも作りたいぜ。",
+  "selection_recorded_at": "2026-09-08T08:09:46.136225+00:00",
+  "selection_record": "situations/favorites-continuation/selection.json"
+}

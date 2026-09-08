@@ -21,6 +21,8 @@ The public repository is maintained as `TKPND/akari-design`.
   selected situations.
 - [Akari v3.1](akari-v3.1/README.md) uses separate U1 upper-body and L1
   lower-body references, an M2 assembled overview, a silver pin and grey socks.
+  Its [soft sock material](akari-v3.1/sock-material-requirement.json) is a MUST
+  wherever socks are visible; poses and actions can vary.
   Its [selected A/B/C scenes](akari-v3.1/situations/abc-exploration/README.md)
   preserve 18 everyday illustrations in the user-selected long-sleeve uniform.
   A16 uses the selected E1-1 finish, which subtly groups small clothing shadows.

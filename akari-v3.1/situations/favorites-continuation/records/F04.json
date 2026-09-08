@@ -1,0 +1,108 @@
+{
+  "id": "F04",
+  "title_ja": "ソファで横座り、マグでひと息",
+  "status": "user_selected",
+  "user_selected": true,
+  "tool": "image_gen",
+  "tool_mode": "built-in-imagegen",
+  "model": null,
+  "model_note": "The built-in tool did not expose the model name.",
+  "started_at": "2026-09-08T08:21:11.940Z",
+  "elapsed_seconds": 39.571,
+  "elapsed_scope": "Wall-clock duration of this tool request, including any tool-side queueing.",
+  "tool_output_filename": "exec-240bc6d4-77ee-4aa0-ae84-4fea838c63a1.png",
+  "path_base": "akari-v3.1",
+  "derivation_type": "new_pose_scene_using_original_identity_and_material_support",
+  "related_approved_ids": [
+    "F01",
+    "F02"
+  ],
+  "user_request": "この調子でいろいろ作ろう。(靴下とかの質感は保ちたいけど、さすがに姿勢は変えてもいいw)",
+  "requested_scene": "Create a NEW Akari v3.1 slice-of-life illustration. LANDSCAPE 3:2 composition, full seated figure ON TOP OF a sofa. This is a distinctly sideways, folded-leg silhouette.\n\nAkari has curled up sideways on the beige sofa seat, with her hips fully supported by a cushion and her upper back lightly resting against the padded sofa arm. Both knees are bent together; both lower legs are folded comfortably to one side of her hips, lying along the sofa seat. The two grey-socked feet rest sideways on the seat cushion, following the folded shins naturally. The legs are compact and arranged across the horizontal cushion plane, with no legs dangling toward the floor and no straight legs projecting toward the viewer.\nHer torso is softly turned back toward a nearby companion. She holds a small blue-and-white ceramic mug low near her lap in both relaxed hands, one at the handle and one cradling the opposite side. Her shoulders are at ease. She glances just to the left of the viewer, a quiet small smile as she listens to the end of a story. Her chin is free; no cushion is hugged.\n\nView the sofa from a fresh oblique three-quarter angle at seated-person height, showing its padded arm and the depth of the seat. Give Akari enough scale for the face and fingers to stay detailed, with comfortable space around her entire folded pose. The figure is the main subject, not a distant room study. A small wooden side table with a closed book sits near the sofa arm; warm window light crosses the sofa upholstery, and a trailing plant and sheer curtain softly frame the background. Calm, natural home atmosphere. Keep the folded feet small and integrated into the complete pose.",
+  "requested_aspect": "landscape_3_2",
+  "output": {
+    "path": "situations/favorites-continuation/images/F04-sofa-side-sit-mug.png",
+    "bytes": 2642049,
+    "sha256": "b04a1cdc711006c8a3175c565084eaabc4a341ed258576e9f62c484703b09d6a",
+    "width": 1536,
+    "height": 1024
+  },
+  "prompt": {
+    "path": "situations/favorites-continuation/prompts/F04.txt",
+    "bytes": 4120,
+    "sha256": "293848e5121041da44c921bfe6e117a32c0b7f531f033ea2193544638af4c723"
+  },
+  "input_ids": [
+    "P1",
+    "P2",
+    "U1",
+    "L1",
+    "F01"
+  ],
+  "inputs": [
+    {
+      "id": "P1",
+      "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+      "role": "original_face_eyes_black_bob_drawing_authority",
+      "bytes": 1869375,
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc"
+    },
+    {
+      "id": "P2",
+      "path": "../akari-v3.0/references/P2-quiet-smile.png",
+      "role": "original_everyday_closed_mouth_smile_authority",
+      "bytes": 1836424,
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f"
+    },
+    {
+      "id": "U1",
+      "path": "references/U1-upper-reference.png",
+      "role": "native_upper_eyes_hair_pin_detail",
+      "bytes": 1852161,
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f"
+    },
+    {
+      "id": "L1",
+      "path": "references/L1-lower-reference.png",
+      "role": "native_leg_construction_and_grey_ribbed_below_knee_sock_design",
+      "bytes": 1815855,
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40"
+    },
+    {
+      "id": "F01",
+      "path": "situations/favorites-continuation/images/F01-cushion-listening.png",
+      "role": "selected_long_sleeve_outfit_and_soft_sock_material_only_not_pose_camera_or_face_authority",
+      "bytes": 2572126,
+      "sha256": "6a07e44c0025d7b63820a008f7a1d1c59ece6ceb3a998d3a057b0b2c38c7e0c1"
+    }
+  ],
+  "inspected_support_only": [
+    {
+      "id": "F02",
+      "path": "situations/favorites-continuation/images/F02-cushion-hidden-smile.png",
+      "role": "visual_comparison_for_shared_soft_sock_material_not_in_direct_payload",
+      "bytes": 2494433,
+      "sha256": "93eebf87262e75f378731fcb653b542984dc7c3e718195bdcb2128dfba74fe66"
+    }
+  ],
+  "output_transformation": "Byte-for-byte copy of generated PNG; no compositing or pixel editing.",
+  "file_validation": {
+    "png_signature_crc_zlib": true,
+    "source_copy_bytes_identical": true,
+    "all_inputs_exist_and_hashed": true
+  },
+  "visual_review": {
+    "pose": "Compact sideways sofa sit, bent legs arranged across the seat, body resting against the padded arm; visibly different from F01/F03.",
+    "expression_and_action": "Small direct smile and two connected hands holding a coherent mug.",
+    "materials": "Grey opaque rib knit stays soft, with rounded side-on toe shapes and small ankle folds; fabric responds to the folded pose.",
+    "limitations": "Gaze is nearer the viewer than the requested off-center glance. Toe contours are a little more articulated than F01.",
+    "reviewer": "assistant",
+    "method": "Original-resolution saved PNG compared with the viewed P1/P2/U1/L1/F01 inputs and F02 material example.",
+    "verdict": "pass_as_pose_variety_candidate",
+    "selection_status_at_review": "Candidate at the time of assistant review; subsequently selected by the user."
+  },
+  "face_authority_promoted": false,
+  "approval_quote": "いいね。この靴下の感じは今後もMUSTで引き継ぎたいな。(靴履いたら見えないけどさ)F04-06commitするのと、READMEおよびベースの文言があれば反映させたいな。(これもcommit)",
+  "selection_recorded_at": "2026-09-08T08:33:56.908104+00:00",
+  "selection_record": "situations/favorites-continuation/selection.json"
+}

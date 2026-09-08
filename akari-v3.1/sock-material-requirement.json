@@ -1,0 +1,79 @@
+{
+  "project": "akari-v3.1",
+  "id": "soft-ribbed-sock-material",
+  "path_base": "akari-v3.1",
+  "status": "user_required",
+  "strength": "MUST",
+  "required": true,
+  "recorded_at": "2026-09-08T08:33:56.908104+00:00",
+  "user_quote": "いいね。この靴下の感じは今後もMUSTで引き継ぎたいな。(靴履いたら見えないけどさ)F04-06commitするのと、READMEおよびベースの文言があれば反映させたいな。(これもcommit)",
+  "scope": "Material rendering only; scene, pose, camera, wardrobe and original face authorities retain their assigned roles.",
+  "applies_when": "Any sock fabric is visible in the composition. Toe-shape requirements apply when sock-covered toes are visible.",
+  "footwear_rule": "Apply to visible calf/ankle knit when shoes cover the foot. Do not expose hidden toes or remove footwear to satisfy this requirement. Fully hidden socks need not be rendered or brought into frame.",
+  "pose_is_fixed": false,
+  "pose_authorization_quote": "この調子でいろいろ作ろう。(靴下とかの質感は保ちたいけど、さすがに姿勢は変えてもいいw)",
+  "native_detail_reference_id": "L1",
+  "sock_color_origin_id": "G2",
+  "material_examples": [
+    {
+      "id": "F01",
+      "path": "situations/favorites-continuation/images/F01-cushion-listening.png",
+      "sha256": "6a07e44c0025d7b63820a008f7a1d1c59ece6ceb3a998d3a057b0b2c38c7e0c1",
+      "bytes": 2572126,
+      "width": 1024,
+      "height": 1536,
+      "role": "required_soft_sock_material_example_only"
+    },
+    {
+      "id": "F02",
+      "path": "situations/favorites-continuation/images/F02-cushion-hidden-smile.png",
+      "bytes": 2494433,
+      "sha256": "93eebf87262e75f378731fcb653b542984dc7c3e718195bdcb2128dfba74fe66",
+      "width": 1024,
+      "height": 1536,
+      "role": "required_soft_sock_material_example_only"
+    },
+    {
+      "id": "F04",
+      "path": "situations/favorites-continuation/images/F04-sofa-side-sit-mug.png",
+      "bytes": 2642049,
+      "sha256": "b04a1cdc711006c8a3175c565084eaabc4a341ed258576e9f62c484703b09d6a",
+      "width": 1536,
+      "height": 1024,
+      "role": "required_soft_sock_material_example_only"
+    },
+    {
+      "id": "F05",
+      "path": "situations/favorites-continuation/images/F05-kneeling-bookshelf.png",
+      "bytes": 2416126,
+      "sha256": "8b804796635d0489b1e1bb3e27a91e7baa38a9a965516fbf9be78809981fe137",
+      "width": 1024,
+      "height": 1536,
+      "role": "required_soft_sock_material_example_only"
+    },
+    {
+      "id": "F06",
+      "path": "situations/favorites-continuation/images/F06-standing-window-stretch.png",
+      "bytes": 2104638,
+      "sha256": "eb44b4948ec54086694e41ed87c146dd55ed47186f4ef6a2286237dcd637821a",
+      "width": 1024,
+      "height": 1536,
+      "role": "required_soft_sock_material_example_only"
+    }
+  ],
+  "requirements_ja": [
+    "ミディアムグレー、不透明なリブ編み、膝下丈とフィットはL1/G2を使う。",
+    "見えるつま先は、丸みのある柔らかな布の輪郭として描く。",
+    "足首の曲げ、荷重、接地に応じて小さなたるみと圧縮を描き、リブの陰影をやわらかくつなぐ。",
+    "姿勢・動作・画角は新しく選べる。材質の参照からポーズや顔を固定しない。",
+    "靴が覆うつま先を描き足したり、靴を脱がせて見せたりする必要はない。"
+  ],
+  "visual_translation_status": "Operational interpretation of the user-required appearance, anchored by the approved images.",
+  "prompt_fragment": {
+    "path": "prompts/sock-material-must.txt",
+    "sha256": "e865f392990c92b1b20698079a61b902584c475ba0e003940b64050bd5dc088f",
+    "bytes": 2088
+  },
+  "scene_selection": "situations/favorites-continuation/selection.json",
+  "face_authority_promoted": false
+}

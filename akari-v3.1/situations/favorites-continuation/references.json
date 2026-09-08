@@ -95,5 +95,91 @@
       "sha256": "4bbd4b898b8f65b302edbee459c25b81f37f99e5295775a57eda8e7f4b88bb71",
       "bytes": 2032915
     }
-  ]
+  ],
+  "generation_inputs_scope": "The generation_inputs list below is the actual F01 payload. Each later image has its own complete inputs in its generation record.",
+  "generation_input_ids_by_output": {
+    "F01": [
+      "P1",
+      "P2",
+      "U1",
+      "L1",
+      "V31-06"
+    ],
+    "F02": [
+      "F01",
+      "P1",
+      "P2",
+      "U1",
+      "L1"
+    ],
+    "F04": [
+      "P1",
+      "P2",
+      "U1",
+      "L1",
+      "F01"
+    ],
+    "F05": [
+      "P1",
+      "P2",
+      "U1",
+      "L1",
+      "F01"
+    ],
+    "F06": [
+      "P1",
+      "P2",
+      "U1",
+      "L1",
+      "F01"
+    ]
+  },
+  "selected_scene_support": [
+    {
+      "id": "F01",
+      "path": "situations/favorites-continuation/images/F01-cushion-listening.png",
+      "sha256": "6a07e44c0025d7b63820a008f7a1d1c59ece6ceb3a998d3a057b0b2c38c7e0c1",
+      "bytes": 2572126,
+      "width": 1024,
+      "height": 1536,
+      "role": "approved_scene_and_mandatory_soft_sock_material_support_not_face_authority"
+    },
+    {
+      "id": "F02",
+      "path": "situations/favorites-continuation/images/F02-cushion-hidden-smile.png",
+      "bytes": 2494433,
+      "sha256": "93eebf87262e75f378731fcb653b542984dc7c3e718195bdcb2128dfba74fe66",
+      "width": 1024,
+      "height": 1536,
+      "role": "approved_scene_and_mandatory_soft_sock_material_support_not_face_authority"
+    },
+    {
+      "id": "F04",
+      "path": "situations/favorites-continuation/images/F04-sofa-side-sit-mug.png",
+      "bytes": 2642049,
+      "sha256": "b04a1cdc711006c8a3175c565084eaabc4a341ed258576e9f62c484703b09d6a",
+      "width": 1536,
+      "height": 1024,
+      "role": "approved_scene_and_mandatory_soft_sock_material_support_not_face_authority"
+    },
+    {
+      "id": "F05",
+      "path": "situations/favorites-continuation/images/F05-kneeling-bookshelf.png",
+      "bytes": 2416126,
+      "sha256": "8b804796635d0489b1e1bb3e27a91e7baa38a9a965516fbf9be78809981fe137",
+      "width": 1024,
+      "height": 1536,
+      "role": "approved_scene_and_mandatory_soft_sock_material_support_not_face_authority"
+    },
+    {
+      "id": "F06",
+      "path": "situations/favorites-continuation/images/F06-standing-window-stretch.png",
+      "bytes": 2104638,
+      "sha256": "eb44b4948ec54086694e41ed87c146dd55ed47186f4ef6a2286237dcd637821a",
+      "width": 1024,
+      "height": 1536,
+      "role": "approved_scene_and_mandatory_soft_sock_material_support_not_face_authority"
+    }
+  ],
+  "sock_material_requirement": "sock-material-requirement.json"
 }

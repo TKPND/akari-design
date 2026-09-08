@@ -1,135 +1,249 @@
 {
   "project": "akari-v3.1",
   "status": "pass",
-  "checked_at": "2026-09-08T07:55:19.926223+00:00",
-  "scope": "Selected F01 package and v3.1 README links",
-  "method": "Python standard-library checks of relative paths, SHA-256, byte counts, PNG signature/CRC/zlib, selections, source copy equality and Markdown link targets.",
+  "checked_at": "2026-09-08T08:38:46.423141+00:00",
+  "scope": "Selected F01/F02/F04/F05/F06 package, mandatory sock material guidance and active v3.1 base references.",
+  "method": "Python standard-library checks of relative paths, hashes, byte counts, PNG signature/CRC/zlib, selections, source PNG/prompt copy equality, native authority roles and Markdown link targets.",
   "checks": {
-    "asset_records": 31,
-    "pngs": 14,
-    "document_links": 38
+    "json_files": 14,
+    "asset_records": 118,
+    "unique_pngs": 26,
+    "active_path_occurrences": 185,
+    "document_links": 90
   },
   "selected_ids": [
-    "F01"
+    "F01",
+    "F02",
+    "F04",
+    "F05",
+    "F06"
   ],
   "native_png_and_prompt_unchanged": true,
   "all_active_paths_relative_and_resolved": true,
   "reference_roles_preserved": true,
   "original_face_authority_promoted": false,
+  "sock_material_must_consistent": true,
+  "pose_is_fixed": false,
+  "footwear_occlusion_allowed": true,
   "assets": [
     {
       "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
-      "bytes": 1869375,
       "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "bytes": 1869375,
       "width": 1254,
       "height": 1254
     },
     {
       "path": "../akari-v3.0/references/P2-quiet-smile.png",
-      "bytes": 1836424,
       "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
-      "width": 1254,
-      "height": 1254
-    },
-    {
-      "path": "references/L1-lower-reference.png",
-      "bytes": 1815855,
-      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
-      "width": 1024,
-      "height": 1536
-    },
-    {
-      "path": "references/S1-silver-slim-pin.png",
-      "bytes": 1925688,
-      "sha256": "6e35a9f51a68d203d8252dc71d7182fe313d8b66a2c2cb0bf099c83b773cb85f",
+      "bytes": 1836424,
       "width": 1254,
       "height": 1254
     },
     {
       "path": "references/U1-upper-reference.png",
-      "bytes": 1852161,
       "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "bytes": 1852161,
       "width": 1024,
       "height": 1536
     },
     {
-      "path": "situations/abc-exploration/images/A08.png",
-      "bytes": 2241931,
-      "sha256": "6d81908e89ccddb73fdbc58ac8dc16bbd5c142843245126a831571abd105e0d6",
+      "path": "references/L1-lower-reference.png",
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "bytes": 1815855,
       "width": 1024,
       "height": 1536
     },
     {
-      "path": "situations/abc-exploration/images/A13.png",
-      "bytes": 2308949,
-      "sha256": "e090b707738c50c482dc6c3234060c4d24eb16b619a504c705797bf490aa4d73",
+      "path": "references/S1-silver-slim-pin.png",
+      "sha256": "6e35a9f51a68d203d8252dc71d7182fe313d8b66a2c2cb0bf099c83b773cb85f",
+      "bytes": 1925688,
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "path": "../akari-v3.0/references/P6-relaxed-full-body.png",
+      "sha256": "018f45133acb2d9cd3625d27090b38084f6b795a92a726ff641785d889c0a823",
+      "bytes": 1664313,
       "width": 1024,
       "height": 1536
     },
     {
-      "path": "situations/abc-exploration/images/A15.png",
-      "bytes": 2676681,
-      "sha256": "398cbd0ffebf5dfc8da0b86e33cd47e4db976ec1e8ae8e6be4a69653d51f62d4",
-      "width": 1536,
-      "height": 1024
+      "path": "references/M2-full-body-montage.png",
+      "sha256": "73b3f5d351072612480d0d70687a9fef6d745da8fc3e4a0fd47577b9c76bf74e",
+      "bytes": 5447479,
+      "width": 2048,
+      "height": 3072
+    },
+    {
+      "path": "references/G2-silver-pin-gray-socks-full-body.png",
+      "sha256": "950b800a86ba138d3e8d20ab902069f56298d726f5f763cad497982d70bb798c",
+      "bytes": 1888426,
+      "width": 1024,
+      "height": 1536
     },
     {
       "path": "situations/abc-exploration/images/A16-E1-1.png",
-      "bytes": 2032915,
       "sha256": "4bbd4b898b8f65b302edbee459c25b81f37f99e5295775a57eda8e7f4b88bb71",
-      "width": 1024,
-      "height": 1536
-    },
-    {
-      "path": "situations/abc-exploration/images/B16.png",
-      "bytes": 2188177,
-      "sha256": "9f687158c3c708b66738d2798f7ac1e40a099aadefef4ac8d96b7394a33cd773",
-      "width": 1536,
-      "height": 1024
-    },
-    {
-      "path": "situations/abc-exploration/images/C13.png",
-      "bytes": 2524627,
-      "sha256": "58bcdc7d5023695a004237cee31e6c354f2b044ac93b711c000146961bf56715",
-      "width": 1024,
-      "height": 1536
-    },
-    {
-      "path": "situations/abc-exploration/images/C15.png",
-      "bytes": 2126144,
-      "sha256": "e9e8e573add80bec80cba9228828f4364872fbc3bb5c0d3ec32efdea46a42c87",
-      "width": 1024,
-      "height": 1536
-    },
-    {
-      "path": "situations/abc-exploration/references/V31-06.png",
-      "bytes": 2600228,
-      "sha256": "0240b29590c60ba5ccd6e475e15288535a03a3795158e37ad95c3bf194204c9a",
+      "bytes": 2032915,
       "width": 1024,
       "height": 1536
     },
     {
       "path": "situations/favorites-continuation/images/F01-cushion-listening.png",
-      "bytes": 2572126,
       "sha256": "6a07e44c0025d7b63820a008f7a1d1c59ece6ceb3a998d3a057b0b2c38c7e0c1",
+      "bytes": 2572126,
       "width": 1024,
       "height": 1536
     },
     {
-      "path": "situations/favorites-continuation/preferences.json",
-      "bytes": 3390,
-      "sha256": "147026ddb6b73f1fc012681d67f3a67af572bbdf19f4d56dbddb7cc05c352a8c"
+      "path": "situations/favorites-continuation/images/F02-cushion-hidden-smile.png",
+      "sha256": "93eebf87262e75f378731fcb653b542984dc7c3e718195bdcb2128dfba74fe66",
+      "bytes": 2494433,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "situations/favorites-continuation/images/F04-sofa-side-sit-mug.png",
+      "sha256": "b04a1cdc711006c8a3175c565084eaabc4a341ed258576e9f62c484703b09d6a",
+      "bytes": 2642049,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "path": "situations/favorites-continuation/images/F05-kneeling-bookshelf.png",
+      "sha256": "8b804796635d0489b1e1bb3e27a91e7baa38a9a965516fbf9be78809981fe137",
+      "bytes": 2416126,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "situations/favorites-continuation/images/F06-standing-window-stretch.png",
+      "sha256": "eb44b4948ec54086694e41ed87c146dd55ed47186f4ef6a2286237dcd637821a",
+      "bytes": 2104638,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "prompts/sock-material-must.txt",
+      "sha256": "e865f392990c92b1b20698079a61b902584c475ba0e003940b64050bd5dc088f",
+      "bytes": 2088
+    },
+    {
+      "path": "history/A-blue-slim-pin-parent.png",
+      "sha256": "90fe0866a670dcf3d19c2873384976679e89fafab3a3c0f58814398654deb649",
+      "bytes": 1863125,
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "path": "history/P6-S1-navy-socks-parent.png",
+      "sha256": "765078737f1fcb204890d18875cc264061bc4023b75f804d1baec39bff059e5e",
+      "bytes": 1838676,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "history/split-references/U-guide.png",
+      "sha256": "f83b0cf7bc671ebb3827984e413042217b4eded016295425fec00f7f98ad3953",
+      "bytes": 633979,
+      "width": 600,
+      "height": 900
+    },
+    {
+      "path": "history/split-references/L-guide.png",
+      "sha256": "4bda8b015a54aaa9118383402111605473a402d8f8b3e88fac4f611c64c4a258",
+      "bytes": 836102,
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "path": "previews/split-reference-overview.png",
+      "sha256": "e0d33d4dfcb00a1aff885456cc01f06a9b8c739fb7c76c2a8c9439036d1f1de2",
+      "bytes": 3394635,
+      "width": 1152,
+      "height": 612
     },
     {
       "path": "situations/favorites-continuation/prompts/F01.txt",
-      "bytes": 4730,
-      "sha256": "4ce6fd73c25bf51839077a17bd532dcdbffc25d2fee96b8997deb877fd37a4ac"
+      "sha256": "4ce6fd73c25bf51839077a17bd532dcdbffc25d2fee96b8997deb877fd37a4ac",
+      "bytes": 4730
+    },
+    {
+      "path": "situations/favorites-continuation/prompts/F02.txt",
+      "sha256": "eeda47ca69c7561012f0e41b69c40cebda0f9ec7cd79a457800d7d2d4c4af307",
+      "bytes": 3765
+    },
+    {
+      "path": "situations/favorites-continuation/prompts/F04.txt",
+      "sha256": "293848e5121041da44c921bfe6e117a32c0b7f531f033ea2193544638af4c723",
+      "bytes": 4120
+    },
+    {
+      "path": "situations/favorites-continuation/prompts/F05.txt",
+      "sha256": "8029c52ea8d68c921591e62b3f07b4e9280dbd268a2c0d9d5a84f8cfdb7527a1",
+      "bytes": 4322
+    },
+    {
+      "path": "situations/favorites-continuation/prompts/F06.txt",
+      "sha256": "649a8b222a09d92f9dbaac4c6af09f1c5dc49e869130243241c6621cd1caa22a",
+      "bytes": 4270
+    },
+    {
+      "path": "situations/abc-exploration/images/A08.png",
+      "sha256": "6d81908e89ccddb73fdbc58ac8dc16bbd5c142843245126a831571abd105e0d6",
+      "bytes": 2241931,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "situations/abc-exploration/images/A13.png",
+      "sha256": "e090b707738c50c482dc6c3234060c4d24eb16b619a504c705797bf490aa4d73",
+      "bytes": 2308949,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "situations/abc-exploration/images/A15.png",
+      "sha256": "398cbd0ffebf5dfc8da0b86e33cd47e4db976ec1e8ae8e6be4a69653d51f62d4",
+      "bytes": 2676681,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "path": "situations/abc-exploration/images/B16.png",
+      "sha256": "9f687158c3c708b66738d2798f7ac1e40a099aadefef4ac8d96b7394a33cd773",
+      "bytes": 2188177,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "path": "situations/abc-exploration/images/C13.png",
+      "sha256": "58bcdc7d5023695a004237cee31e6c354f2b044ac93b711c000146961bf56715",
+      "bytes": 2524627,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "situations/abc-exploration/images/C15.png",
+      "sha256": "e9e8e573add80bec80cba9228828f4364872fbc3bb5c0d3ec32efdea46a42c87",
+      "bytes": 2126144,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "situations/abc-exploration/references/V31-06.png",
+      "sha256": "0240b29590c60ba5ccd6e475e15288535a03a3795158e37ad95c3bf194204c9a",
+      "bytes": 2600228,
+      "width": 1024,
+      "height": 1536
     }
   ],
   "markdown_lint": {
     "command": "npm run lint:md",
     "exit_code": 0,
     "files": 209,
-    "issues": 0
+    "issues": 0,
+    "checked_at": "2026-09-08T08:40:29.835873+00:00"
   }
 }

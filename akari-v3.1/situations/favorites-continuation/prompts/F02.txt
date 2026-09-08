@@ -1,0 +1,19 @@
+Use case: identity-preserve.
+Create ONE direct expression derivative of the FIRST input image, the user-approved Akari v3.1 F01. Keep the finished portrait 2:3 composition.
+
+REQUESTED CHANGE
+Change the small conversational reaction: Akari has just found something quietly funny and instinctively nestles her mouth and chin into the soft upper corner of the cushion to hide her smile. Lower her chin slightly and bring that cushion corner only a little closer so it naturally covers her mouth and chin, while her nose and both eyes remain clearly visible. Retain the gentle head tilt. Her eyes stay open and look warmly toward the familiar unseen person near the camera; lift the lower eyelids very subtly so the eyes convey a small suppressed laugh. Keep the natural rounded slightly downturned eye design, visible grey irises and distinct pupils. The emotion is relaxed fond amusement with a hint of bashfulness, as if she cannot quite hide that she is smiling. It must be a readable change from the original uncovered smile. Preserve a soft natural blush.
+The two hands continue embracing the same cushion with comfortable connected wrists and coherent fingers. Allow only the small local hand/cushion adjustments needed for this face-to-cushion contact. The cushion is ordinary soft linen and compresses gently at the face and hands. The mouth is naturally hidden behind the cushion edge, never printed or drawn on the cushion. No tears, anger, pout, startled expression, exaggerated embarrassment, closed-eye grin or oversized sparkling eyes.
+
+PRESERVE FROM F01
+Keep the same character, age impression, black bob silhouette, one silver straight hairpin, long-sleeve navy/slate-blue bolero, white rounded collar, dark navy ribbon and finely plaid blue-grey skirt. Keep the same complete seated pose from waist down, the natural paired knees, the two continuous legs, and both grey ribbed socked feet. Preserve the original camera height, angle, framing, proportions and room arrangement. Keep the sofa, rug, bag at the right, mug and closed book at the left, shelves and plants, warm diffuse window daylight and original color balance.
+Retain the finely drawn face and hair and the subtle grouped garment shadows, major elbow folds, seams and plaid. Preserve the continuity and quality of the whole image; do not create crop seams or detached limbs.
+
+REFERENCE ROLES IN INPUT ORDER
+1. F01: EDIT TARGET and sole authority for scene, seated pose, camera, composition, current wardrobe, cushion, room, props, lighting and finish. Apply only the requested small reaction change above.
+2. P1: original face, eye, black-bob and drawing authority. Keep the original small dark oval pupils, neutral grey iris zones and rounded pale lower reflections. Do not transfer its open mouth, head pose, summer clothes or outdoor background.
+3. P2: original everyday closed-mouth-smile baseline. Use it to preserve gentle character expression; in this derivative the mouth itself is covered by the cushion.
+4. Native U1: upper-body eye detail, hair and the one silver slim straight pin at her left temple just above the ear. Its short-sleeve blouse does not replace F01's long-sleeve outfit.
+5. Native L1: natural leg construction and medium neutral grey opaque ribbed below-knee sock details only. Keep F01's seated legs and feet. Do not transfer the standing pose, plain skirt or white shoes.
+
+Maintain P1/P2 original identity and expression roles while editing the F01 target. Indoors, both feet remain fully socked, with no shoes or bare feet. Anatomically continuous arms, hands and legs. Polished delicate anime illustration matching the target. No extra characters or objects, text, caption, speech balloon, signature, panel or collage. Return one complete finished image.
