@@ -1,0 +1,162 @@
+{
+  "id": "N06",
+  "title_ja": "夜の音楽に、少し目を閉じて",
+  "status": "user_selected_and_adopted",
+  "selected_stage": "initial",
+  "user_selected": true,
+  "face_authority_promoted": false,
+  "path_base": "akari-v3.1/",
+  "final_image": {
+    "path": "situations/a2-home/history/runs/2026-09-09-a2-home-continuation/N06-evening-music/image.png",
+    "bytes": 2450447,
+    "sha256": "e14c3c1cffac444448554ba64276120e6f41c4c94e8a388e243aa48c6118dcd8",
+    "width": 1536,
+    "height": 1024,
+    "png_crc_passed": true
+  },
+  "final_transformation": "Exact native image_gen output copy; no raster artwork edits or compositing",
+  "source_direction": "D04",
+  "calls": [
+    {
+      "stage": "initial",
+      "tool": "image_gen",
+      "model": null,
+      "started_at": "2026-09-09T00:41:57.680Z",
+      "elapsed_ms": 60843,
+      "inputs": [
+        {
+          "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "png_crc_passed": true,
+          "role": "P1：顔・目・黒髪ボブ・描き方の原本"
+        },
+        {
+          "path": "../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254,
+          "png_crc_passed": true,
+          "role": "P2：普段の閉じ口の微笑み"
+        },
+        {
+          "path": "references/U1-upper-reference.png",
+          "bytes": 1852161,
+          "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+          "width": 1024,
+          "height": 1536,
+          "png_crc_passed": true,
+          "role": "Native U1 upper-body construction, eye/hair detail and silver pin only; uniform clothing is superseded by A-2."
+        },
+        {
+          "path": "references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536,
+          "png_crc_passed": true,
+          "role": "Native L1 healthy lower-body construction and below-knee sock height only; grey sock color, shoes and uniform skirt are superseded by A-2 ivory socks and pinafore."
+        },
+        {
+          "path": "situations/a2-home/history/runs/2026-09-08-a2-day-at-home/D04-evening-sofa/image.png",
+          "bytes": 2217804,
+          "sha256": "da4c703dc5318d5d792ea4eaf27fbf58709f685a603e6c37825f36bf01943bc4",
+          "width": 1536,
+          "height": 1024,
+          "png_crc_passed": true,
+          "role": "User-liked D04: A-2 wardrobe, ivory sock color, soft opaque material and atmosphere only; new prompt controls pose and camera; no face authority."
+        }
+      ],
+      "prompt": {
+        "path": "situations/a2-home/history/runs/2026-09-09-a2-home-continuation/N06-evening-music/prompt.txt",
+        "bytes": 5069,
+        "sha256": "6bcb707fc57249ab4f3adf519e70f9dcde529a899edc6d87f664b3c2bfbbfc06"
+      },
+      "output": {
+        "path": "situations/a2-home/history/runs/2026-09-09-a2-home-continuation/N06-evening-music/initial.png",
+        "bytes": 2450447,
+        "sha256": "e14c3c1cffac444448554ba64276120e6f41c4c94e8a388e243aa48c6118dcd8",
+        "width": 1536,
+        "height": 1024,
+        "png_crc_passed": true
+      },
+      "native_filename": "exec-88d8cbe6-cd3c-4075-9131-13dc6098aa70.png",
+      "exact_native_bytes_verified": true,
+      "exact_prompt_payload_verified": true
+    }
+  ],
+  "review_crops": [
+    {
+      "path": "situations/a2-home/history/runs/2026-09-09-a2-home-continuation/N06-evening-music/face-review.png",
+      "bytes": 225732,
+      "sha256": "cb35571ca7c13853bc4f9a7f6f0129f7d921e540c626fed4590d55a7206fe9be",
+      "width": 430,
+      "height": 350,
+      "png_crc_passed": true,
+      "subject": "face",
+      "crop_xywh": [
+        140,
+        10,
+        430,
+        350
+      ],
+      "transformation": "Unaltered native-resolution rectangular crop for review only"
+    },
+    {
+      "path": "situations/a2-home/history/runs/2026-09-09-a2-home-continuation/N06-evening-music/clothing-review.png",
+      "bytes": 1134526,
+      "sha256": "c122b809d49861dbcfdc278e16a262e98fd505cf780a3f887e406e115685c56e",
+      "width": 1120,
+      "height": 620,
+      "png_crc_passed": true,
+      "subject": "clothing",
+      "crop_xywh": [
+        80,
+        290,
+        1120,
+        620
+      ],
+      "transformation": "Unaltered native-resolution rectangular crop for review only"
+    },
+    {
+      "path": "situations/a2-home/history/runs/2026-09-09-a2-home-continuation/N06-evening-music/sock-review.png",
+      "bytes": 125562,
+      "sha256": "2002da416de9407768897efce08311e1a05d9434cec97be43774a4044d5cbb77",
+      "width": 390,
+      "height": 225,
+      "png_crc_passed": true,
+      "subject": "sock",
+      "crop_xywh": [
+        1100,
+        740,
+        390,
+        225
+      ],
+      "transformation": "Unaltered native-resolution rectangular crop for review only"
+    }
+  ],
+  "visual_review": {
+    "selected_stage": "initial",
+    "result": "pass",
+    "note_ja": "目を閉じて音楽を楽しむ夜。暖かいランプと青い窓で、昼とは違う落ち着き。",
+    "notes": "Closed eyes are intentional. Headphones, hand contact, silver pin, other hand, dress folds and two distinct socked feet inspected. Soft ankle compression, pale forefoot folds and continuous rounded cloth caps; no separate toe anatomy.",
+    "reviewer": "assistant",
+    "full_image_reviewed": true,
+    "face_and_clothing_reviewed": true,
+    "sock_regions_reviewed": true,
+    "review_method": "Native generated full image and unaltered native-resolution detail crops",
+    "selection_state_at_review": false
+  },
+  "preservation": {
+    "date": "2026-09-09",
+    "source_run": "2026-09-09-a2-home-continuation",
+    "source_scene": "N06-evening-music",
+    "original_status": "assistant_reviewed_candidate_awaiting_user_selection",
+    "purpose": "user_selected_deliverable",
+    "historical_context_note": "Source direction and visual review describe the generation-time state; selection.json and top-level adoption status record current adoption."
+  },
+  "adopted_id": "N06"
+}

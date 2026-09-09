@@ -1,0 +1,165 @@
+{
+  "id": "N08",
+  "title_ja": "窓辺でひとこと",
+  "status": "user_selected_and_adopted",
+  "path_base": "akari-v3.1/",
+  "source_favorite_id": "N01",
+  "selected_stage": "initial",
+  "user_selected": true,
+  "face_authority_promoted": false,
+  "final_image": {
+    "path": "situations/a2-home/history/runs/2026-09-09-a2-favorites-expansion/N08-window-letter/image.png",
+    "bytes": 2428776,
+    "sha256": "4be5272b81bbcf95fb0287dbb64f24225bee9677733c3cebe2939e59bb3fd8a6",
+    "width": 1536,
+    "height": 1024,
+    "png_crc_passed": true
+  },
+  "final_transformation": "Exact native image_gen output copy; no external raster retouching or compositing",
+  "calls": [
+    {
+      "id": "N08",
+      "stage": "initial",
+      "tool": "image_gen",
+      "model": null,
+      "started_at": "2026-09-09T01:36:03.845Z",
+      "elapsed_ms": 59398,
+      "inputs": [
+        {
+          "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "png_crc_passed": true,
+          "role": "P1 original face, eyes, bob, drawing"
+        },
+        {
+          "path": "../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254,
+          "png_crc_passed": true,
+          "role": "P2 ordinary closed-mouth smile"
+        },
+        {
+          "path": "references/U1-upper-reference.png",
+          "bytes": 1852161,
+          "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+          "width": 1024,
+          "height": 1536,
+          "png_crc_passed": true,
+          "role": "U1 native upper-body detail and single silver pin"
+        },
+        {
+          "path": "references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536,
+          "png_crc_passed": true,
+          "role": "L1 native legs and below-knee sock construction; wardrobe superseded"
+        },
+        {
+          "path": "situations/a2-home/history/runs/2026-09-09-a2-home-continuation/N01-origami/image.png",
+          "bytes": 2482793,
+          "sha256": "2ed3da6ed2dcb318e478d3b5e79e5384335c70567b01a35312b28daa7e7d976a",
+          "width": 1536,
+          "height": 1024,
+          "png_crc_passed": true,
+          "role": "User-selected N01; A-2 wardrobe, home direction, finish and existing ivory sock material only; no face authority or pose/camera lock"
+        }
+      ],
+      "prompt": {
+        "path": "situations/a2-home/history/runs/2026-09-09-a2-favorites-expansion/N08-window-letter/prompt.txt",
+        "bytes": 4090,
+        "sha256": "3fe784f905cfeb95142966fdbaa988dcca55b163f08bab6b5238afea1dc78a8d"
+      },
+      "output": {
+        "path": "situations/a2-home/history/runs/2026-09-09-a2-favorites-expansion/N08-window-letter/initial.png",
+        "bytes": 2428776,
+        "sha256": "4be5272b81bbcf95fb0287dbb64f24225bee9677733c3cebe2939e59bb3fd8a6",
+        "width": 1536,
+        "height": 1024,
+        "png_crc_passed": true
+      },
+      "native_filename": "exec-e1c6b905-c35f-4a94-871d-04762182bf41.png",
+      "exact_native_bytes_verified": true,
+      "exact_prompt_payload_verified": true,
+      "reference_order_and_roles_verified": true
+    }
+  ],
+  "review_crops": [
+    {
+      "path": "situations/a2-home/history/runs/2026-09-09-a2-favorites-expansion/N08-window-letter/face-review.png",
+      "bytes": 185768,
+      "sha256": "ec5940b8a05fd3e1f85a85d8d828e711c13dd74ab69a7733045349b3a9d7f265",
+      "width": 370,
+      "height": 340,
+      "png_crc_passed": true,
+      "subject": "face",
+      "crop_xywh": [
+        565,
+        0,
+        370,
+        340
+      ],
+      "transformation": "Unaltered native-resolution rectangular review crop"
+    },
+    {
+      "path": "situations/a2-home/history/runs/2026-09-09-a2-favorites-expansion/N08-window-letter/clothing-review.png",
+      "bytes": 884972,
+      "sha256": "eb39671118d4228e59a41598da44c92f3eefd7da57c979fde9ce3a8092e978c5",
+      "width": 850,
+      "height": 675,
+      "png_crc_passed": true,
+      "subject": "clothing",
+      "crop_xywh": [
+        410,
+        325,
+        850,
+        675
+      ],
+      "transformation": "Unaltered native-resolution rectangular review crop"
+    },
+    {
+      "path": "situations/a2-home/history/runs/2026-09-09-a2-favorites-expansion/N08-window-letter/sock-review.png",
+      "bytes": 148299,
+      "sha256": "d75e881ff14029154129786b10e0e1ea6ccaac0e423d8eafb6d34076df6857ad",
+      "width": 345,
+      "height": 270,
+      "png_crc_passed": true,
+      "subject": "sock",
+      "crop_xywh": [
+        990,
+        720,
+        345,
+        270
+      ],
+      "transformation": "Unaltered native-resolution rectangular review crop"
+    }
+  ],
+  "visual_review": {
+    "selected_stage": "initial",
+    "note_ja": "手紙を書く途中に振り向く一枚。背中から腰へのチェック布の流れ。",
+    "notes": "Native face crop confirms complete crown with a small top margin. Pen grip and supporting hand are coherent; frontal buttons are naturally hidden by angle. Both ivory sock envelopes are rounded and opaque, with light forefoot/seam creases and ankle compression.",
+    "sock_visibility": "both_feet_visible",
+    "result": "pass",
+    "reviewer": "assistant",
+    "full_image_reviewed": true,
+    "face_clothing_hands_reviewed": true,
+    "sock_regions_reviewed": true,
+    "review_method": "Native full image plus unaltered native-resolution detail crops; visual judgment distinct from file integrity checks.",
+    "selection_state_at_review": false
+  },
+  "preservation": {
+    "date": "2026-09-09",
+    "source_run": "2026-09-09-a2-favorites-expansion",
+    "source_scene": "N08-window-letter",
+    "original_status": "assistant_reviewed_candidate_awaiting_user_selection",
+    "purpose": "user_selected_deliverable",
+    "historical_context_note": "Source direction and visual review describe the generation-time state; selection.json and top-level adoption status record current adoption."
+  },
+  "adopted_id": "N08"
+}

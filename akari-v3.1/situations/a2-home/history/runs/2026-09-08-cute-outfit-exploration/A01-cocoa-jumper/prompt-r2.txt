@@ -1,0 +1,13 @@
+Use case: precise-object-edit
+Edit only the toe fabric of both ivory knee-high socks in image 1. Return the entire portrait image with the original scene intact.
+
+Input roles:
+Image 1: EDIT TARGET and the SOLE source for pose, camera, composition, room, lighting, cocoa pinafore, cream blouse, ivory sock COLOR, face expression, hands and body. Preserve all these.
+Image 2: native L1, leg construction and below-knee sock length only. Do not copy its shoes, grey color or uniform.
+Image 3: F07, broad continuous opaque rounded textile toe shape only; no pose or outfit transfer.
+Image 4: F09 crop, restrained shallow fabric folds and soft ankle material only. Do not transfer grey color.
+Image 5: P1, original facial identity and drawing authority only. Keep the target's closed-mouth smile, silver pin and black bob unchanged.
+
+Correction: The target currently shows separate toe-shaped bulges and vertical dividing lines at each front edge. Remove all those segmented toe pockets completely. Replace each front toe area with ONE unsegmented broad round-ended envelope of opaque ivory knitted fabric, one clean gently convex outer contour. Smooth plain-knit toe caps should bridge over all toes without depicting any of their anatomy. Let the fine ribs fade out BEFORE a single shallow transverse toe seam; do not run ribs down the rounded front edge. Keep just one or two very shallow sideways cloth creases behind the plain toe cap on the forefoot, and preserve the existing soft ankle folds. Ordinary slender sock-covered foot proportions, supple cotton rather than a rigid shoe. No central split, scallops, separately rounded lobes, hidden-toe contours, grooves or nail shapes. Preserve warm ivory white.
+
+Everything above the forefoot remains unchanged: especially both high-sock cuffs at just below the knees, all leg and foot positions, clothing and colors, both complete hands, face, body proportions, interior and framing. This is a local sock-toe repair only, with no other redesign.

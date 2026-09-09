@@ -1,0 +1,120 @@
+{
+  "id": "J02",
+  "display_label": "A-2",
+  "title_ja": "ミルクティーの細チェック",
+  "path_base": "akari-v3.1/",
+  "status": "user_selected_and_adopted",
+  "user_selected": true,
+  "source_direction": {
+    "user_quote": "Aの感じいいね。これから広げてみようかな。",
+    "status": "user_liked_direction_for_further_exploration",
+    "source": {
+      "path": "situations/a2-home/history/runs/2026-09-08-cute-outfit-exploration/A01-cocoa-jumper/image.png",
+      "bytes": 2066588,
+      "sha256": "7ca6d7a7282087e83ddd9813b30b51cf878899bbf6f9318c8a21dbc97f1b457b",
+      "width": 1024,
+      "height": 1536,
+      "role": "A edit target: sole scene/pose/camera/standing-body source and liked wardrobe direction; also supplies already-corrected ivory sock material; not a face authority"
+    },
+    "scope": "Wardrobe direction and continuation source only; no commit or canonical authority adoption implied."
+  },
+  "face_authority_promoted": false,
+  "sock_material_authority_promoted": false,
+  "tool": "image_gen",
+  "tool_mode": "built-in-imagegen",
+  "model": null,
+  "model_note": "Not exposed by tool response",
+  "generation_kind": "clothing_variation_edit",
+  "timing": {
+    "started_at": "2026-09-08T11:36:54.338Z",
+    "elapsed_seconds": 58.128
+  },
+  "tool_output_filename": "exec-cb8226d9-08a9-435f-b84c-3429b813ef1d.png",
+  "output": {
+    "path": "situations/a2-home/history/runs/2026-09-08-cocoa-jumper-variations/J02-milktea-check/image.png",
+    "bytes": 2046655,
+    "sha256": "281da5ca10992c7ba38bb62c9a5b2884ddfe90fe0cdb2a1a2ebedb766b8682fa",
+    "width": 1024,
+    "height": 1536
+  },
+  "prompt": {
+    "path": "situations/a2-home/history/runs/2026-09-08-cocoa-jumper-variations/J02-milktea-check/prompt.txt",
+    "bytes": 3531,
+    "sha256": "babafad582dd95f4f1c6adf75074d1d4c21a48b2147526ec6e794b5dcc36bb5a"
+  },
+  "inputs": [
+    {
+      "path": "situations/a2-home/history/runs/2026-09-08-cute-outfit-exploration/A01-cocoa-jumper/image.png",
+      "bytes": 2066588,
+      "sha256": "7ca6d7a7282087e83ddd9813b30b51cf878899bbf6f9318c8a21dbc97f1b457b",
+      "width": 1024,
+      "height": 1536,
+      "role": "A edit target: sole scene/pose/camera/standing-body source and liked wardrobe direction; also supplies already-corrected ivory sock material; not a face authority"
+    },
+    {
+      "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+      "bytes": 1869375,
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "width": 1254,
+      "height": 1254,
+      "role": "P1 original face/eyes/black-bob/drawing authority"
+    },
+    {
+      "path": "../akari-v3.0/references/P2-quiet-smile.png",
+      "bytes": 1836424,
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "width": 1254,
+      "height": 1254,
+      "role": "P2 original everyday closed-mouth expression authority"
+    },
+    {
+      "path": "references/U1-upper-reference.png",
+      "bytes": 1852161,
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "width": 1024,
+      "height": 1536,
+      "role": "Native U1 eye/hair/silver-pin/upper-body detail; old outfit superseded"
+    },
+    {
+      "path": "references/L1-lower-reference.png",
+      "bytes": 1815855,
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "width": 1024,
+      "height": 1536,
+      "role": "Native L1 leg construction and below-knee sock height only; target determines sock color, pose and clothing"
+    }
+  ],
+  "viewed_material_support": {
+    "path": "references/materials/F09-rounded-wrinkled-sock-detail.png",
+    "bytes": 71786,
+    "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+    "width": 280,
+    "height": 210,
+    "role": "F09 preferred material authority, viewed for comparison. The edit target already supplies its corrected soft opaque rounded material as a direct input, so a sixth image was unnecessary."
+  },
+  "visual_review": {
+    "wardrobe": "Milk-tea beige pinafore with thin cocoa checks and one small cocoa ribbon at the cream rounded collar. Pattern reads slightly more layered than a minimal windowpane; retained as a coherent fine-check variation.",
+    "identity": "P1/P2 identity, soft grey eyes, black bob, closed-mouth smile and single silver pin retained visually.",
+    "anatomy": "Standing body, complete arms and two hands, two legs and feet coherent; source pose and proportions retained visually.",
+    "scene": "Source bright living room and full-body framing retained; no footwear.",
+    "socks": "Both enlarged toe details reviewed: continuous opaque rounded caps, restrained shallow forefoot seams/folds, soft ankle folds and below-knee height retained. No individual toe anatomy or scalloped tips."
+  },
+  "review_crop": {
+    "path": "situations/a2-home/history/runs/2026-09-08-cocoa-jumper-variations/J02-milktea-check/sock-review.png",
+    "bytes": 116308,
+    "sha256": "fa81e666cb34d10136c1770411c6e3df6d234195a02cdab04c2d9b75a1c811db",
+    "width": 320,
+    "height": 240,
+    "transformation": "Unmodified pixel crop for review only."
+  },
+  "output_transformation": "Byte-for-byte copy of native built-in image_gen output; no artwork retouching or compositing.",
+  "preservation": {
+    "date": "2026-09-09",
+    "source_run": "2026-09-08-cocoa-jumper-variations",
+    "source_scene": "J02-milktea-check",
+    "original_status": "assistant_reviewed_candidate",
+    "purpose": "user_selected_deliverable",
+    "historical_context_note": "Source direction and visual review describe the generation-time state; selection.json and top-level adoption status record current adoption."
+  },
+  "adopted_id": "A-2"
+}

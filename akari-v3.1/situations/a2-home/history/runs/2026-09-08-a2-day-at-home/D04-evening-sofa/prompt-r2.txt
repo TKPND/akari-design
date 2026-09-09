@@ -1,0 +1,15 @@
+Use case: precise local sock-material edit.
+Edit IMAGE 1 and return the complete illustration in its same composition and dimensions. Preserve its adult Akari face/expression, black bob, single silver pin, all hands/limbs, exact A-2 check pinafore/blouse/bow, body pose, camera, room, objects and lighting. Only improve BOTH SOCK FOREFOOT/TOE-CAP regions below the existing ankle folds.
+
+Reference roles:
+1. EDIT TARGET, sole authority for this specific scene, camera, pose, feet placement and lighting.
+2. A-2 unmodified ivory-sock detail, a local material/color repair aid: copy the continuous ROUND PLAIN-KNIT CAP and restrained soft cloth finish in this image, adapted to the target's foot angles. This crop does not supply a pose or a new authority.
+3. F09 material-only authority: sparse shallow natural forefoot/toe-seam wrinkles and opaque rounded cloth body. Its grey color and standing pose do not transfer.
+4. Native L1, lower-leg anatomy and below-knee high-sock fit only. Keep the target's ivory color and pose; no shoes.
+5. P1 original face identity authority. Leave the target's face unchanged.
+
+Finish each sock as a normal opaque soft ivory knitted sock with ONE broad, smooth, rounded toe cap, exactly the cloth appearance shown in image 2. The fabric bridges over all hidden toes together with enough body/ease. Draw a single unbroken softly convex front silhouette first, then shade it as ONE cloth surface. Fine ribs stop behind the plain-knit cap at a subtle curved toe seam. Retain a few SPARSE VERY SHALLOW natural fabric compression creases near/behind that seam, like F09; broad smooth quiet cloth between the creases. Keep soft ankle folds, gentle floor/cushion contact flattening, and normal proportional feet.
+
+The two toe caps at lower right have several toe-like lobes along their lower outlines. Smooth the complete outline and surface of BOTH caps into single broad rounded ivory fabric shapes. Keep the slight cushion flattening as broad cloth contact, not small toe-by-toe scallops. Preserve the parallel reclined legs and foot positions.
+
+Conceal all individual toes completely in both linework and shading: no toe division, separate big-toe lobe, nail, scalloped tip, central cleft, five toe pockets or vacuum-wrapped anatomical toe bumps. Creases describe fabric, never hidden toe anatomy. Soft warm ivory knit, not a rigid shoe cap, slipper, rubber sole or blank plastic shell. Keep all other pixels/artwork as consistent as possible. One complete image only, no crop, collage or text.

@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-09",
+  "current_user_quote": "N08, N10, N12,N15 かな。commitしよう。(直近commit忘れてたやつも含めてやりたい)",
+  "current_selection": [
+    "N08",
+    "N10",
+    "N12",
+    "N15"
+  ],
+  "previous_selections_included": [
+    "A-2",
+    "D03",
+    "D04",
+    "N01",
+    "N04",
+    "N06"
+  ],
+  "earlier_user_quotes": [
+    "Aの感じいいね。これから広げてみようかな。",
+    "A-2がよさげ。\nこれであかりの1日(家の中)を作りたい(いろんなポーズ・構図で質感を確かめたい)",
+    "03,04好き。ここから12枚ぐらい広げたい",
+    "N01,04,06かな〜 ここから広げていきたい"
+  ],
+  "selection_scope": "Current four plus previously user-selected wardrobe and home scenes; additional ancestors are provenance only. Unselected R/S twelve-image candidates are not adopted.",
+  "face_authority_promoted": false,
+  "canonical_sock_color_changed": false,
+  "commit_authorized": true
+}

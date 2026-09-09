@@ -1,0 +1,6 @@
+Use case: precise-object-edit.
+Image 1 is the complete edit target, and it currently has only TWO round covered buttons on the plaid front bib (near x504,y680 and x499,y737). Add ONE matching round covered button centered at approximately x501,y792, above the waistband. This creates exactly THREE buttons in the vertical row. Keep the two existing buttons unchanged. Do not add a fourth partial button near the waistband.
+
+Reference roles: image 1 alone defines all scene, pose, camera, cheerful open-mouth smile, hands, towel and lighting. Image 2 shows the original A-2 wardrobe with exactly three buttons. P1 in image 3 preserves original face, eyes and bob; P2 in image 4 is identity support without changing the target smile. U1 in image 5 preserves hair detail and the single silver pin, not its uniform.
+
+Change only that tiny plaid-bodice spot to add the one missing button, matching the existing button's cloth color, size, soft shadow and perspective. Preserve ALL other visible content, including the blouse, waistband, towel and grips, skirt folds, two ivory socks and room. Return the complete portrait illustration, same framing and dimensions.

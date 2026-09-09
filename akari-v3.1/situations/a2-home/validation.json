@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "selected_images": 10,
+  "generation_records": 11,
+  "record_paths_sizes_hashes_checked": 160,
+  "source_byte_comparisons": 79,
+  "source_comparisons_note": "Optional comparisons against original ignored working files when present.",
+  "png_full_decodes": 62,
+  "markdown_links_checked": 49,
+  "active_paths_portable": true,
+  "visual_review": "Preserved generation-time reviews; no artwork changes during adoption.",
+  "command": "python3 akari-v3.1/situations/a2-home/verify.py"
+}

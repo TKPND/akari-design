@@ -1,0 +1,162 @@
+{
+  "id": "N01",
+  "title_ja": "折り紙をひとつ、見せて",
+  "status": "user_selected_and_adopted",
+  "selected_stage": "initial",
+  "user_selected": true,
+  "face_authority_promoted": false,
+  "path_base": "akari-v3.1/",
+  "final_image": {
+    "path": "situations/a2-home/history/runs/2026-09-09-a2-home-continuation/N01-origami/image.png",
+    "bytes": 2482793,
+    "sha256": "2ed3da6ed2dcb318e478d3b5e79e5384335c70567b01a35312b28daa7e7d976a",
+    "width": 1536,
+    "height": 1024,
+    "png_crc_passed": true
+  },
+  "final_transformation": "Exact native image_gen output copy; no raster artwork edits or compositing",
+  "source_direction": "D03",
+  "calls": [
+    {
+      "stage": "initial",
+      "tool": "image_gen",
+      "model": null,
+      "started_at": "2026-09-09T00:30:37.353Z",
+      "elapsed_ms": 61510,
+      "inputs": [
+        {
+          "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "png_crc_passed": true,
+          "role": "P1：顔・目・黒髪ボブ・描き方の原本"
+        },
+        {
+          "path": "../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254,
+          "png_crc_passed": true,
+          "role": "P2：普段の閉じ口の微笑み"
+        },
+        {
+          "path": "references/U1-upper-reference.png",
+          "bytes": 1852161,
+          "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+          "width": 1024,
+          "height": 1536,
+          "png_crc_passed": true,
+          "role": "Native U1 upper-body construction, eye/hair detail and silver pin only; uniform clothing is superseded by A-2."
+        },
+        {
+          "path": "references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536,
+          "png_crc_passed": true,
+          "role": "Native L1 healthy lower-body construction and below-knee sock height only; grey sock color, shoes and uniform skirt are superseded by A-2 ivory socks and pinafore."
+        },
+        {
+          "path": "situations/a2-home/history/runs/2026-09-08-a2-day-at-home/D03-afternoon-floor/image.png",
+          "bytes": 2397493,
+          "sha256": "d6a7ef585f5cc01c42200c2f59113bd9aa438920f142feab3b02303ca701ded8",
+          "width": 1536,
+          "height": 1024,
+          "png_crc_passed": true,
+          "role": "User-liked D03: A-2 wardrobe, ivory sock color, soft opaque material and atmosphere only; new prompt controls pose and camera; no face authority."
+        }
+      ],
+      "prompt": {
+        "path": "situations/a2-home/history/runs/2026-09-09-a2-home-continuation/N01-origami/prompt.txt",
+        "bytes": 4866,
+        "sha256": "c291c353bce92c5296d90fd13677391d2a272cb50329f5fc763dd8cdd8f5fde2"
+      },
+      "output": {
+        "path": "situations/a2-home/history/runs/2026-09-09-a2-home-continuation/N01-origami/initial.png",
+        "bytes": 2482793,
+        "sha256": "2ed3da6ed2dcb318e478d3b5e79e5384335c70567b01a35312b28daa7e7d976a",
+        "width": 1536,
+        "height": 1024,
+        "png_crc_passed": true
+      },
+      "native_filename": "exec-9fe9ad72-6df8-4496-a000-8c1cdd206e52.png",
+      "exact_native_bytes_verified": true,
+      "exact_prompt_payload_verified": true
+    }
+  ],
+  "review_crops": [
+    {
+      "path": "situations/a2-home/history/runs/2026-09-09-a2-home-continuation/N01-origami/face-review.png",
+      "bytes": 297603,
+      "sha256": "7ac29d8b04d7cac17d1c0640d5e8cdfcf9f91b976f39b1175ccf46f488866202",
+      "width": 490,
+      "height": 420,
+      "png_crc_passed": true,
+      "subject": "face",
+      "crop_xywh": [
+        550,
+        10,
+        490,
+        420
+      ],
+      "transformation": "Unaltered native-resolution rectangular crop for review only"
+    },
+    {
+      "path": "situations/a2-home/history/runs/2026-09-09-a2-home-continuation/N01-origami/clothing-review.png",
+      "bytes": 1037392,
+      "sha256": "4bbfb906187cc9979306ec06a286d40221829171b3213ff46be847d7210d0067",
+      "width": 1040,
+      "height": 630,
+      "png_crc_passed": true,
+      "subject": "clothing",
+      "crop_xywh": [
+        340,
+        320,
+        1040,
+        630
+      ],
+      "transformation": "Unaltered native-resolution rectangular crop for review only"
+    },
+    {
+      "path": "situations/a2-home/history/runs/2026-09-09-a2-home-continuation/N01-origami/sock-review.png",
+      "bytes": 222309,
+      "sha256": "c8f211d16e17cd547acaa079cf43f8c104f3287c96b6a1c0be0109e7919d096c",
+      "width": 460,
+      "height": 300,
+      "png_crc_passed": true,
+      "subject": "sock",
+      "crop_xywh": [
+        890,
+        700,
+        460,
+        300
+      ],
+      "transformation": "Unaltered native-resolution rectangular crop for review only"
+    }
+  ],
+  "visual_review": {
+    "selected_stage": "initial",
+    "result": "pass",
+    "note_ja": "見上げる表情と折り紙をのせた手。袖とスカートの柔らかな重なり。",
+    "notes": "Face, hairpin, both hands, paper bird, pinafore front construction and both sock regions inspected. Rounded opaque caps; restrained ankle/forefoot fabric folds. Pose and camera follow the new scene.",
+    "reviewer": "assistant",
+    "full_image_reviewed": true,
+    "face_and_clothing_reviewed": true,
+    "sock_regions_reviewed": true,
+    "review_method": "Native generated full image and unaltered native-resolution detail crops",
+    "selection_state_at_review": false
+  },
+  "preservation": {
+    "date": "2026-09-09",
+    "source_run": "2026-09-09-a2-home-continuation",
+    "source_scene": "N01-origami",
+    "original_status": "assistant_reviewed_candidate_awaiting_user_selection",
+    "purpose": "user_selected_deliverable",
+    "historical_context_note": "Source direction and visual review describe the generation-time state; selection.json and top-level adoption status record current adoption."
+  },
+  "adopted_id": "N01"
+}

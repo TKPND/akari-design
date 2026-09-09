@@ -27,6 +27,9 @@ F12の衣装を引き継ぐ場合も、顔と表情の原本はP1/P2を使う。
 F09の控えめな布じわを優先基準とし、F07はつま先の質感用に原寸を保存している。
 新しい場面では姿勢・動作・画角を変え、顔と表情の原本はP1/P2を継続する。
 
+[A-2の私服と家で過ごすシーン10枚](situations/a2-home/README.md)も採用済み。
+N08・N10・N12・N15と、先に選んだ衣装・生活シーンを保存している。
+
 まず [design-state.json](design-state.json) と
 [reference-set.json](reference-set.json) を読む。
 同じリポジトリ内の `akari-v3.0/` と一緒に使う。

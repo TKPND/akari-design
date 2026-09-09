@@ -1,0 +1,241 @@
+{
+  "id": "N15",
+  "title_ja": "もう少しだけ、このまま",
+  "status": "user_selected_and_adopted",
+  "path_base": "akari-v3.1/",
+  "source_favorite_id": "N06",
+  "selected_stage": "r1",
+  "user_selected": true,
+  "face_authority_promoted": false,
+  "final_image": {
+    "path": "situations/a2-home/history/runs/2026-09-09-a2-favorites-expansion/N15-sleepy-evening/image.png",
+    "bytes": 2678454,
+    "sha256": "ec27b53e5a9a0585af40784383b44de8c9e81ace9f7dc01c17edc65625608cbf",
+    "width": 1536,
+    "height": 1024,
+    "png_crc_passed": true
+  },
+  "final_transformation": "Exact native image_gen output copy; no external raster retouching or compositing",
+  "calls": [
+    {
+      "id": "N15",
+      "stage": "initial",
+      "tool": "image_gen",
+      "model": null,
+      "started_at": "2026-09-09T01:45:52.050Z",
+      "elapsed_ms": 64673,
+      "inputs": [
+        {
+          "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "png_crc_passed": true,
+          "role": "P1 original face, eyes, bob, drawing"
+        },
+        {
+          "path": "../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254,
+          "png_crc_passed": true,
+          "role": "P2 ordinary closed-mouth smile"
+        },
+        {
+          "path": "references/U1-upper-reference.png",
+          "bytes": 1852161,
+          "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+          "width": 1024,
+          "height": 1536,
+          "png_crc_passed": true,
+          "role": "U1 native upper-body detail and single silver pin"
+        },
+        {
+          "path": "references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536,
+          "png_crc_passed": true,
+          "role": "L1 native legs and below-knee sock construction; wardrobe superseded"
+        },
+        {
+          "path": "situations/a2-home/history/runs/2026-09-09-a2-home-continuation/N06-evening-music/image.png",
+          "bytes": 2450447,
+          "sha256": "e14c3c1cffac444448554ba64276120e6f41c4c94e8a388e243aa48c6118dcd8",
+          "width": 1536,
+          "height": 1024,
+          "png_crc_passed": true,
+          "role": "User-selected N06; A-2 wardrobe, home direction, finish and existing ivory sock material only; no face authority or pose/camera lock"
+        }
+      ],
+      "prompt": {
+        "path": "situations/a2-home/history/runs/2026-09-09-a2-favorites-expansion/N15-sleepy-evening/prompt.txt",
+        "bytes": 4123,
+        "sha256": "16a84e8d188604e1b1d4735bd015b10a5e9060cfe934c663bb572a8c6a53726d"
+      },
+      "output": {
+        "path": "situations/a2-home/history/runs/2026-09-09-a2-favorites-expansion/N15-sleepy-evening/initial.png",
+        "bytes": 2723617,
+        "sha256": "d880eb1cddbd73250d814e75b619f61e796a706581f672b364af23d47982b7a2",
+        "width": 1536,
+        "height": 1024,
+        "png_crc_passed": true
+      },
+      "native_filename": "exec-0c12b416-27ad-4f1b-9d07-61b041f392e7.png",
+      "exact_native_bytes_verified": true,
+      "exact_prompt_payload_verified": true,
+      "reference_order_and_roles_verified": true
+    },
+    {
+      "id": "N15",
+      "stage": "r1",
+      "tool": "image_gen",
+      "model": null,
+      "started_at": "2026-09-09T01:58:58.337Z",
+      "elapsed_ms": 44554,
+      "inputs": [
+        {
+          "path": "situations/a2-home/history/runs/2026-09-09-a2-favorites-expansion/N15-sleepy-evening/initial.png",
+          "bytes": 2723617,
+          "sha256": "d880eb1cddbd73250d814e75b619f61e796a706581f672b364af23d47982b7a2",
+          "width": 1536,
+          "height": 1024,
+          "png_crc_passed": true,
+          "role": "Edit target; sole scene, pose, camera, lighting and current expression source"
+        },
+        {
+          "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "png_crc_passed": true,
+          "role": "P1 original face, eyes, black bob and drawing authority; preserve identity"
+        },
+        {
+          "path": "../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254,
+          "png_crc_passed": true,
+          "role": "P2 ordinary expression authority; preserve target's exact current expression, including closed eyes"
+        },
+        {
+          "path": "references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536,
+          "png_crc_passed": true,
+          "role": "Native L1 leg construction and below-knee sock fit only; grey color and shoes are superseded by target"
+        },
+        {
+          "path": "references/materials/F09-rounded-wrinkled-sock-detail.png",
+          "bytes": 71786,
+          "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+          "width": 280,
+          "height": 210,
+          "png_crc_passed": true,
+          "role": "F09 opaque rounded sock envelope and sparse shallow natural cloth wrinkles only; translate grey to target warm ivory"
+        }
+      ],
+      "prompt": {
+        "path": "situations/a2-home/history/runs/2026-09-09-a2-favorites-expansion/N15-sleepy-evening/prompt-r1.txt",
+        "bytes": 2725,
+        "sha256": "157ffcc0231b9fd8a4c2994236fbabe84f90edf3955000c30f96c3a5ac77b287"
+      },
+      "output": {
+        "path": "situations/a2-home/history/runs/2026-09-09-a2-favorites-expansion/N15-sleepy-evening/r1.png",
+        "bytes": 2678454,
+        "sha256": "ec27b53e5a9a0585af40784383b44de8c9e81ace9f7dc01c17edc65625608cbf",
+        "width": 1536,
+        "height": 1024,
+        "png_crc_passed": true
+      },
+      "native_filename": "exec-befc756c-6597-4c80-9b65-8b61492d74e4.png",
+      "exact_native_bytes_verified": true,
+      "exact_prompt_payload_verified": true,
+      "reference_order_and_roles_verified": true
+    }
+  ],
+  "review_crops": [
+    {
+      "path": "situations/a2-home/history/runs/2026-09-09-a2-favorites-expansion/N15-sleepy-evening/face-review.png",
+      "bytes": 174960,
+      "sha256": "e51b0ab0d712e198ec12ad7ed9e79573e5e1bcc3727272be85a2205f0dfec726",
+      "width": 340,
+      "height": 310,
+      "png_crc_passed": true,
+      "subject": "face",
+      "crop_xywh": [
+        222,
+        58,
+        340,
+        310
+      ],
+      "transformation": "Unaltered native-resolution rectangular review crop"
+    },
+    {
+      "path": "situations/a2-home/history/runs/2026-09-09-a2-favorites-expansion/N15-sleepy-evening/clothing-review.png",
+      "bytes": 969957,
+      "sha256": "6bd4ae674103e7e68c35b48a981ab336db2c022c274a04278180e65f2aae9d42",
+      "width": 900,
+      "height": 610,
+      "png_crc_passed": true,
+      "subject": "clothing",
+      "crop_xywh": [
+        225,
+        264,
+        900,
+        610
+      ],
+      "transformation": "Unaltered native-resolution rectangular review crop"
+    },
+    {
+      "path": "situations/a2-home/history/runs/2026-09-09-a2-favorites-expansion/N15-sleepy-evening/sock-review.png",
+      "bytes": 246632,
+      "sha256": "9497e034cbbd28dde5cb0beb0e9b58729293f8ef9352c69ac71047b23a864176",
+      "width": 550,
+      "height": 300,
+      "png_crc_passed": true,
+      "subject": "sock",
+      "crop_xywh": [
+        960,
+        655,
+        550,
+        300
+      ],
+      "transformation": "Unaltered native-resolution rectangular review crop"
+    }
+  ],
+  "visual_review": {
+    "selected_stage": "r1",
+    "note_ja": "毛布をかけて、うとうと。N06の静けさを引き継ぐ夜。",
+    "notes": "Closed eyes are intentional. Cushion-supported head, cheek-side hand and loose hand over throw inspected. r1 preserves rounded opaque caps with subtle forefoot/seam cloth life; soft ankle compression retained. No hidden body parts forced into view.",
+    "sock_visibility": "both_lower_sock_regions",
+    "revision_findings": {
+      "initial": "Rounded opaque toe caps but overly uniform forefoot surface.",
+      "r1": "Subtle material adjustment preserves smooth caps and introduces restrained shallow cloth detail."
+    },
+    "result": "pass",
+    "reviewer": "assistant",
+    "full_image_reviewed": true,
+    "face_clothing_hands_reviewed": true,
+    "sock_regions_reviewed": true,
+    "review_method": "Native full image plus unaltered native-resolution detail crops; visual judgment distinct from file integrity checks.",
+    "selection_state_at_review": false
+  },
+  "preservation": {
+    "date": "2026-09-09",
+    "source_run": "2026-09-09-a2-favorites-expansion",
+    "source_scene": "N15-sleepy-evening",
+    "original_status": "assistant_reviewed_candidate_awaiting_user_selection",
+    "purpose": "user_selected_deliverable",
+    "historical_context_note": "Source direction and visual review describe the generation-time state; selection.json and top-level adoption status record current adoption."
+  },
+  "adopted_id": "N15"
+}

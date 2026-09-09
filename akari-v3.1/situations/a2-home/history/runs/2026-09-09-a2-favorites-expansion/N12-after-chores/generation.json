@@ -1,0 +1,149 @@
+{
+  "id": "N12",
+  "title_ja": "ひと休み、つきあって",
+  "status": "user_selected_and_adopted",
+  "path_base": "akari-v3.1/",
+  "source_favorite_id": "N04",
+  "selected_stage": "initial",
+  "user_selected": true,
+  "face_authority_promoted": false,
+  "final_image": {
+    "path": "situations/a2-home/history/runs/2026-09-09-a2-favorites-expansion/N12-after-chores/image.png",
+    "bytes": 2114677,
+    "sha256": "df8471a070982d88ce8d36e416ced08aa925a9314ef03e4e7fece24fd1d391ee",
+    "width": 1536,
+    "height": 1024,
+    "png_crc_passed": true
+  },
+  "final_transformation": "Exact native image_gen output copy; no external raster retouching or compositing",
+  "calls": [
+    {
+      "id": "N12",
+      "stage": "initial",
+      "tool": "image_gen",
+      "model": null,
+      "started_at": "2026-09-09T01:41:52.040Z",
+      "elapsed_ms": 57292,
+      "inputs": [
+        {
+          "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "png_crc_passed": true,
+          "role": "P1 original face, eyes, bob, drawing"
+        },
+        {
+          "path": "../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254,
+          "png_crc_passed": true,
+          "role": "P2 ordinary closed-mouth smile"
+        },
+        {
+          "path": "references/U1-upper-reference.png",
+          "bytes": 1852161,
+          "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+          "width": 1024,
+          "height": 1536,
+          "png_crc_passed": true,
+          "role": "U1 native upper-body detail and single silver pin"
+        },
+        {
+          "path": "references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536,
+          "png_crc_passed": true,
+          "role": "L1 native legs and below-knee sock construction; wardrobe superseded"
+        },
+        {
+          "path": "situations/a2-home/history/runs/2026-09-09-a2-home-continuation/N04-folding-laundry/image.png",
+          "bytes": 2616066,
+          "sha256": "5bab3bd17b2aef9c39eb267c2d5c98f3853f8fa5ebf96be6125912873ecfefdf",
+          "width": 1536,
+          "height": 1024,
+          "png_crc_passed": true,
+          "role": "User-selected N04; A-2 wardrobe, home direction, finish and existing ivory sock material only; no face authority or pose/camera lock"
+        }
+      ],
+      "prompt": {
+        "path": "situations/a2-home/history/runs/2026-09-09-a2-favorites-expansion/N12-after-chores/prompt.txt",
+        "bytes": 4090,
+        "sha256": "b386529e0b1f801ef4c1ca432af6ad5a526e3a49fc0f35ddd221f1b949c52a34"
+      },
+      "output": {
+        "path": "situations/a2-home/history/runs/2026-09-09-a2-favorites-expansion/N12-after-chores/initial.png",
+        "bytes": 2114677,
+        "sha256": "df8471a070982d88ce8d36e416ced08aa925a9314ef03e4e7fece24fd1d391ee",
+        "width": 1536,
+        "height": 1024,
+        "png_crc_passed": true
+      },
+      "native_filename": "exec-b85fbb70-9215-4429-ad9e-030578ea6e19.png",
+      "exact_native_bytes_verified": true,
+      "exact_prompt_payload_verified": true,
+      "reference_order_and_roles_verified": true
+    }
+  ],
+  "review_crops": [
+    {
+      "path": "situations/a2-home/history/runs/2026-09-09-a2-favorites-expansion/N12-after-chores/face-review.png",
+      "bytes": 422053,
+      "sha256": "c7a0e88ef4ccfdac97a2532b30415d5d3908090488e449e99d6d7a5c5be93a95",
+      "width": 555,
+      "height": 535,
+      "png_crc_passed": true,
+      "subject": "face",
+      "crop_xywh": [
+        420,
+        0,
+        555,
+        535
+      ],
+      "transformation": "Unaltered native-resolution rectangular review crop"
+    },
+    {
+      "path": "situations/a2-home/history/runs/2026-09-09-a2-favorites-expansion/N12-after-chores/clothing-review.png",
+      "bytes": 521228,
+      "sha256": "43fba9ce998cbdcf175c711aeaa3233e16192ce17be0e97d40c608f3cfb6a119",
+      "width": 800,
+      "height": 520,
+      "png_crc_passed": true,
+      "subject": "clothing",
+      "crop_xywh": [
+        360,
+        490,
+        800,
+        520
+      ],
+      "transformation": "Unaltered native-resolution rectangular review crop"
+    }
+  ],
+  "visual_review": {
+    "selected_stage": "initial",
+    "note_ja": "頬づえでのんびり目が合う。近い距離感ならこの一枚。",
+    "notes": "Original grey iris zones and distinct pupils, cheek-hand contact, resting curled hand, collar, pin and sleeve compression inspected. Third bib button is naturally hidden by forearm/table; socks outside frame.",
+    "sock_visibility": "outside_frame",
+    "result": "pass",
+    "reviewer": "assistant",
+    "full_image_reviewed": true,
+    "face_clothing_hands_reviewed": true,
+    "sock_regions_reviewed": false,
+    "review_method": "Native full image plus unaltered native-resolution detail crops; visual judgment distinct from file integrity checks.",
+    "selection_state_at_review": false
+  },
+  "preservation": {
+    "date": "2026-09-09",
+    "source_run": "2026-09-09-a2-favorites-expansion",
+    "source_scene": "N12-after-chores",
+    "original_status": "assistant_reviewed_candidate_awaiting_user_selection",
+    "purpose": "user_selected_deliverable",
+    "historical_context_note": "Source direction and visual review describe the generation-time state; selection.json and top-level adoption status record current adoption."
+  },
+  "adopted_id": "N12"
+}

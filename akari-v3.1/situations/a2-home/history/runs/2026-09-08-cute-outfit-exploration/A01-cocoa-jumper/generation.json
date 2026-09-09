@@ -1,0 +1,182 @@
+{
+  "id": "A01",
+  "display_label": "A",
+  "title_ja": "ココアのジャンスカ",
+  "path_base": "akari-v3.1/",
+  "status": "preserved_generation_ancestor",
+  "user_selected": false,
+  "face_authority_promoted": false,
+  "sock_material_authority_promoted": false,
+  "tool": "image_gen",
+  "tool_mode": "built-in-imagegen",
+  "model": null,
+  "model_note": "Not exposed by tool response",
+  "outfit_description": "Cream long-sleeve cotton blouse with a modest small rounded collar, very fine lace edging and lightly gathered sleeves ending in neat cuffs. Over it, a warm cocoa-brown pinafore dress with broad straps, a softly square neckline, two small covered buttons near the bodice, a natural waist and an elegant gently flared skirt ending just above the knees. Soft brushed woven fabric, not stiff overalls and not an apron. Ivory / warm off-white knee-high rib-knit socks with simple neat ribbed cuffs. The cream blouse and socks harmonize against the cocoa dress. Gentle relaxed standing pose with shoulders easy, head tilted only slightly, hands loosely resting together at the natural waist so the dress shape and both sleeves remain visible. Both feet grounded, one slightly forward. Charming and softly classic, like trying a new outfit at home.",
+  "sock_color_requested": "warm ivory",
+  "final_output": {
+    "path": "situations/a2-home/history/runs/2026-09-08-cute-outfit-exploration/A01-cocoa-jumper/image.png",
+    "bytes": 2066588,
+    "sha256": "7ca6d7a7282087e83ddd9813b30b51cf878899bbf6f9318c8a21dbc97f1b457b",
+    "width": 1024,
+    "height": 1536
+  },
+  "final_prompt": {
+    "path": "situations/a2-home/history/runs/2026-09-08-cute-outfit-exploration/A01-cocoa-jumper/prompt-r2.txt",
+    "bytes": 1994,
+    "sha256": "1429a8c5aae5b1935bad8006703c26bbc30141c181439af3512a93fb4f775f51"
+  },
+  "total_generation_seconds": 105.528,
+  "generation_chain": [
+    {
+      "id": "initial",
+      "kind": "initial_generation",
+      "tool_output_filename": "exec-2a2b0364-876f-46a1-896e-f0a9db00bd5a.png",
+      "timing": {
+        "started_at": "2026-09-08T11:12:14.883Z",
+        "elapsed_seconds": 41.816
+      },
+      "output": {
+        "path": "situations/a2-home/history/runs/2026-09-08-cute-outfit-exploration/A01-cocoa-jumper/initial.png",
+        "bytes": 2243715,
+        "sha256": "2aaebde8a570e553a6fb863c36e5859d89bcc195c7076724664429f2014e5904",
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/a2-home/history/runs/2026-09-08-cute-outfit-exploration/A01-cocoa-jumper/prompt.txt",
+        "bytes": 4428,
+        "sha256": "14039a7f3c6f79dafaefd020ac145caa88e562e049f5eb9e08f3f09cedccb877"
+      },
+      "inputs": [
+        {
+          "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "role": "P1 original face, eyes, black bob and drawing authority"
+        },
+        {
+          "path": "../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254,
+          "role": "P2 original everyday closed-mouth smile authority"
+        },
+        {
+          "path": "references/U1-upper-reference.png",
+          "bytes": 1852161,
+          "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+          "width": 1024,
+          "height": 1536,
+          "role": "U1 native upper-body anatomy, eye/hair/silver pin detail; old uniform superseded"
+        },
+        {
+          "path": "references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536,
+          "role": "L1 native leg construction and below-knee high-sock length; outfit, shoes and color superseded by this exploration"
+        },
+        {
+          "path": "references/materials/F09-rounded-wrinkled-sock-detail.png",
+          "bytes": 71786,
+          "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+          "width": 280,
+          "height": 210,
+          "role": "F09 preferred soft opaque rounded sock material and restrained shallow cloth folds only"
+        }
+      ],
+      "output_transformation": "Byte-for-byte copy of built-in image_gen output; no artwork retouching or compositing."
+    },
+    {
+      "id": "r2",
+      "kind": "sock_toe_correction",
+      "tool_output_filename": "exec-a29b89ae-dacd-485d-a528-cc233d9f9f65.png",
+      "timing": {
+        "started_at": "2026-09-08T11:14:29.070Z",
+        "elapsed_seconds": 63.712
+      },
+      "output": {
+        "path": "situations/a2-home/history/runs/2026-09-08-cute-outfit-exploration/A01-cocoa-jumper/image.png",
+        "bytes": 2066588,
+        "sha256": "7ca6d7a7282087e83ddd9813b30b51cf878899bbf6f9318c8a21dbc97f1b457b",
+        "width": 1024,
+        "height": 1536
+      },
+      "prompt": {
+        "path": "situations/a2-home/history/runs/2026-09-08-cute-outfit-exploration/A01-cocoa-jumper/prompt-r2.txt",
+        "bytes": 1994,
+        "sha256": "1429a8c5aae5b1935bad8006703c26bbc30141c181439af3512a93fb4f775f51"
+      },
+      "inputs": [
+        {
+          "path": "situations/a2-home/history/runs/2026-09-08-cute-outfit-exploration/A01-cocoa-jumper/initial.png",
+          "bytes": 2243715,
+          "sha256": "2aaebde8a570e553a6fb863c36e5859d89bcc195c7076724664429f2014e5904",
+          "width": 1024,
+          "height": 1536,
+          "role": "Edit target and sole scene, pose, camera, outfit, color and expression source"
+        },
+        {
+          "path": "references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536,
+          "role": "L1 native leg anatomy and below-knee length only"
+        },
+        {
+          "path": "references/materials/F07-rounded-opaque-sock-toes.png",
+          "bytes": 2586140,
+          "sha256": "b8ecb57533a4ca3faa96542167e3eb1c6a2647fa90c925245f112d4b8b6a7a0d",
+          "width": 1536,
+          "height": 1024,
+          "role": "F07 rounded opaque sock shape comparison only"
+        },
+        {
+          "path": "references/materials/F09-rounded-wrinkled-sock-detail.png",
+          "bytes": 71786,
+          "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+          "width": 280,
+          "height": 210,
+          "role": "F09 preferred restrained cloth-fold and soft material standard only"
+        },
+        {
+          "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "role": "P1 original face identity only; preserve target expression"
+        }
+      ],
+      "output_transformation": "Byte-for-byte copy of built-in image_gen output; no artwork retouching or compositing."
+    }
+  ],
+  "visual_review": {
+    "outfit": "Cream rounded-collar blouse with cocoa pinafore and warm ivory high socks. The generated bodice has three covered buttons rather than the suggested two; retained as a minor design variation.",
+    "socks": "r2 enlarged review: both tips are smooth continuous opaque cloth envelopes, with very shallow forefoot seams/folds and soft ankle folds. Cuffs end below the knees.",
+    "identity": "P1/P2 face, grey eyes, black bob, one silver hairpin and gentle closed-mouth smile retained visually.",
+    "anatomy": "Complete standing adult figure with coherent arms, two hands, two legs and two sock-covered feet; no extra person.",
+    "scene": "Entirely in a living room; no footwear."
+  },
+  "review_crop": {
+    "path": "situations/a2-home/history/runs/2026-09-08-cute-outfit-exploration/A01-cocoa-jumper/sock-review.png",
+    "bytes": 121335,
+    "sha256": "ee9188f141d16eb57ca41d2865cfeb8cb0b6837cb5cabb18c4a2be38db4ce7fd",
+    "width": 320,
+    "height": 240,
+    "transformation": "Unmodified pixel crop for visual review only, not a deliverable artwork edit."
+  },
+  "preservation": {
+    "date": "2026-09-09",
+    "source_run": "2026-09-08-cute-outfit-exploration",
+    "source_scene": "A01-cocoa-jumper",
+    "original_status": "assistant_reviewed_candidate",
+    "purpose": "generation_ancestry_only",
+    "historical_context_note": "Source direction and visual review describe the generation-time state; selection.json and top-level adoption status record current adoption."
+  }
+}

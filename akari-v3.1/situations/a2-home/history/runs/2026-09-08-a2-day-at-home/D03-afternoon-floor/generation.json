@@ -1,0 +1,211 @@
+{
+  "id": "D03",
+  "title_ja": "午後・ラグでアルバム整理",
+  "story_time": "15:30",
+  "path_base": "akari-v3.1/",
+  "status": "user_selected_and_adopted",
+  "user_selected": true,
+  "tool": "image_gen",
+  "tool_mode": "built-in-imagegen",
+  "model": null,
+  "model_note": "Not exposed by the tool response.",
+  "face_authority_promoted": false,
+  "sock_material_authority_promoted": false,
+  "output": {
+    "path": "situations/a2-home/history/runs/2026-09-08-a2-day-at-home/D03-afternoon-floor/image.png",
+    "bytes": 2397493,
+    "sha256": "d6a7ef585f5cc01c42200c2f59113bd9aa438920f142feab3b02303ca701ded8",
+    "width": 1536,
+    "height": 1024
+  },
+  "calls": [
+    {
+      "stage": "initial",
+      "kind": "new_scene_from_selected_outfit",
+      "tool_output_filename": "exec-2e6420f3-ea49-45bd-8df9-4ec1989bc463.png",
+      "timing": {
+        "started_at": "2026-09-08T11:55:31.075Z",
+        "elapsed_seconds": 41.22
+      },
+      "inputs": [
+        {
+          "path": "situations/a2-home/history/runs/2026-09-08-cocoa-jumper-variations/J02-milktea-check/image.png",
+          "bytes": 2046655,
+          "sha256": "281da5ca10992c7ba38bb62c9a5b2884ddfe90fe0cdb2a1a2ebedb766b8682fa",
+          "width": 1024,
+          "height": 1536,
+          "role": "A-2 user-selected wardrobe and color, plus already-corrected ivory sock material; room palette only, no face or pose authority."
+        },
+        {
+          "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "role": "P1 original facial identity, eyes, black bob and drawing authority."
+        },
+        {
+          "path": "../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254,
+          "role": "P2 original everyday closed-mouth smile authority."
+        },
+        {
+          "path": "references/U1-upper-reference.png",
+          "bytes": 1852161,
+          "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native U1 separate upper-body, eye, hair and silver-pin detail; old uniform superseded."
+        },
+        {
+          "path": "references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native L1 separate lower-body anatomy and below-knee sock fit; old color, shoes, uniform and stance superseded."
+        }
+      ],
+      "prompt": {
+        "path": "situations/a2-home/history/runs/2026-09-08-a2-day-at-home/D03-afternoon-floor/prompt.txt",
+        "bytes": 6565,
+        "sha256": "05fd260e5f708ce0e5df147c659b2d832f80e3fee4e26e24787b8d9addb1592d"
+      },
+      "output": {
+        "path": "situations/a2-home/history/runs/2026-09-08-a2-day-at-home/D03-afternoon-floor/initial.png",
+        "bytes": 2503810,
+        "sha256": "b8f0388de79a935579e4c1f6fafe068132f03ed5125daa820b534e13de715de4",
+        "width": 1536,
+        "height": 1024
+      },
+      "review_result": "material_correction_required",
+      "review_note": "Initial side-view ribs and edges read as toe-like ridges. One correction rounded both caps and reduced tip ridges."
+    },
+    {
+      "stage": "r2",
+      "kind": "local_sock_material_correction",
+      "tool_output_filename": "exec-05fa67e2-622b-42b4-9f8a-b29d1e2d4bed.png",
+      "timing": {
+        "started_at": "2026-09-08T12:00:53.727Z",
+        "elapsed_seconds": 56.707
+      },
+      "inputs": [
+        {
+          "path": "situations/a2-home/history/runs/2026-09-08-a2-day-at-home/D03-afternoon-floor/initial.png",
+          "bytes": 2503810,
+          "sha256": "b8f0388de79a935579e4c1f6fafe068132f03ed5125daa820b534e13de715de4",
+          "width": 1536,
+          "height": 1024,
+          "role": "Edit target; sole scene/pose/camera and feet-placement source."
+        },
+        {
+          "path": "situations/a2-home/history/runs/2026-09-08-cocoa-jumper-variations/J02-milktea-check/sock-review.png",
+          "bytes": 116308,
+          "sha256": "fa81e666cb34d10136c1770411c6e3df6d234195a02cdab04c2d9b75a1c811db",
+          "width": 320,
+          "height": 240,
+          "role": "Unmodified A-2 sock crop, local ivory material/color repair aid only."
+        },
+        {
+          "path": "references/materials/F09-rounded-wrinkled-sock-detail.png",
+          "bytes": 71786,
+          "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+          "width": 280,
+          "height": 210,
+          "role": "F09 preferred material authority; no color or pose transfer."
+        },
+        {
+          "path": "references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native L1 lower-leg anatomy and below-knee sock fit; no shoes or grey color."
+        },
+        {
+          "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "role": "P1 original facial identity authority; preserve target face."
+        }
+      ],
+      "prompt": {
+        "path": "situations/a2-home/history/runs/2026-09-08-a2-day-at-home/D03-afternoon-floor/prompt-r2.txt",
+        "bytes": 2548,
+        "sha256": "0a16f9433b834df1184f3039c7772d6d63bb1a006f794596aa140de8850c3505"
+      },
+      "output": {
+        "path": "situations/a2-home/history/runs/2026-09-08-a2-day-at-home/D03-afternoon-floor/image.png",
+        "bytes": 2397493,
+        "sha256": "d6a7ef585f5cc01c42200c2f59113bd9aa438920f142feab3b02303ca701ded8",
+        "width": 1536,
+        "height": 1024
+      },
+      "review_result": "assistant_reviewed_candidate",
+      "review_note": "Enlarged both feet: side-view toe contours are smoothly rounded and opaque. Ribs bend with the ankles and end near the forefoot; modest shallow fabric lines remain without toe anatomy."
+    }
+  ],
+  "generation_elapsed_seconds": 97.927,
+  "output_transformation": "Byte-for-byte copy of native image_gen output. No artwork retouching or compositing.",
+  "visual_review": {
+    "composition_and_anatomy": "Landscape, moderately high oblique view; side-sitting with two knees/legs visibly connected, one hand on the album and one on the rug. Face looks up naturally.",
+    "clothing": "A-2 print and bodice structure retained. Broad curved skirt folds spread across the lap; gathered sleeves and cuffs show bend/contact. Complete hands remain coherent.",
+    "socks": "Enlarged both feet: side-view toe contours are smoothly rounded and opaque. Ribs bend with the ankles and end near the forefoot; modest shallow fabric lines remain without toe anatomy.",
+    "identity": "P1/P2 identity, soft grey eyes, black bob, closed-mouth smile and one silver pin retained visually.",
+    "scope": "Indoor-only, A-2 outfit, ivory below-knee high socks and no footwear.",
+    "limits": "Illustration comparison under changed pose and lighting. Wrinkle and check placement vary naturally per pose."
+  },
+  "review_crops": [
+    {
+      "path": "situations/a2-home/history/runs/2026-09-08-a2-day-at-home/D03-afternoon-floor/clothing-review.png",
+      "bytes": 690431,
+      "sha256": "7159dd8d5da565eef53a7b47a813fbe7d13db42b8c2ad043113776c58d25d317",
+      "width": 650,
+      "height": 700,
+      "region_xywh": [
+        490,
+        260,
+        650,
+        700
+      ],
+      "transformation": "Unmodified pixel crop, no resizing or retouching.",
+      "visually_reviewed": true
+    },
+    {
+      "path": "situations/a2-home/history/runs/2026-09-08-a2-day-at-home/D03-afternoon-floor/sock-review.png",
+      "bytes": 191150,
+      "sha256": "4ddb627c671020bc6f25a2a538707ce8327e38ffff181d9fef5a634c981683ab",
+      "width": 420,
+      "height": 300,
+      "region_xywh": [
+        960,
+        665,
+        420,
+        300
+      ],
+      "transformation": "Unmodified pixel crop, no resizing or retouching.",
+      "visually_reviewed": true
+    }
+  ],
+  "initial_review_crop": {
+    "path": "situations/a2-home/history/runs/2026-09-08-a2-day-at-home/D03-afternoon-floor/sock-review-initial.png",
+    "bytes": 202294,
+    "sha256": "aa6851115bf6c5dcf6ad3219313ac30f5d655c44da3619d2031e99505666e49f",
+    "width": 420,
+    "height": 300
+  },
+  "preservation": {
+    "date": "2026-09-09",
+    "source_run": "2026-09-08-a2-day-at-home",
+    "source_scene": "D03-afternoon-floor",
+    "original_status": "assistant_reviewed_candidate",
+    "purpose": "user_selected_deliverable",
+    "historical_context_note": "Source direction and visual review describe the generation-time state; selection.json and top-level adoption status record current adoption."
+  },
+  "adopted_id": "D03"
+}

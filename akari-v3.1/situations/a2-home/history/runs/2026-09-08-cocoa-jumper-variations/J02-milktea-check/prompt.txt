@@ -1,0 +1,19 @@
+Use case: identity-preserve
+Asset type: Akari v3.1, one cute indoor classic pinafore outfit variation.
+Edit IMAGE 1 as the base. Preserve its entire living-room scene, full-body standing pose, camera, expression, anatomy, lighting and composition. Change only the specified clothing details below.
+
+Input image roles:
+1. A, the cocoa pinafore portrait liked by the user: EDIT TARGET and SOLE scene/pose/camera source. It establishes the cream rounded-collar blouse, charming classic pinafore silhouette, natural waist, just-above-knee flared hem, and warm ivory high socks. The correctly repaired socks in this target already supply the required soft opaque rounded fabric material. Use this image's face placement and closed-mouth expression, with identity fidelity checked against P1/P2.
+2. P1: original facial identity, grey eyes, black bob and drawing authority. No scene or uniform transfer.
+3. P2: original everyday closed-mouth gentle smile authority. Preserve the target's friendly expression.
+4. Native U1: upper-body detail, eye/hair rendering and the single straight slim SILVER hairpin at her own left temple / viewer-right. The old uniform is superseded.
+5. Native L1: leg construction and the below-knee high-sock length only. Do not copy its shoes, grey sock color, navy skirt or leg stance.
+
+VARIATION:
+Change the pinafore fabric to warm MILK-TEA beige with a restrained fine cocoa-brown windowpane CHECK. The check has thin woven lines and small-to-medium cells, roughly 2-3 cm, with no giant contrast grid. Retain the broad straps, softly square neckline, covered front buttons, defined natural waist and gently flared just-above-knee skirt. Use a soft lightly brushed woven texture. Add ONE small narrow cocoa-brown ribbon bow at the center of the existing cream rounded blouse collar, tied neatly and modestly; the collar and its fine lace stay visible. Keep the cream softly gathered blouse sleeves and ivory knee-high socks unchanged. Charming, tidy and softly classic rather than formal or costume-like.
+
+Preserve Akari as the same adult woman, age 25, with natural established adult proportions, reassuring softly downturned grey eyes, tiny distinct dark oval pupils and subtle light reflections in the lower iris, black bob, one silver pin, and small closed-mouth smile. Retain both complete hands gently together near the waist exactly as in image 1; do not hide, redraw or reposition the hands because of a clothing detail.
+
+Keep the long cream blouse sleeves softly gathered, its tasteful small rounded collar and restrained fine lace, and the original practical cute silhouette. Soft woven/knit fabric shading with a few clear connected shadow masses, major folds preserved. Pattern follows seams, drape, perspective and folds naturally. Polished original anime illustration quality.
+
+The scene stays entirely INDOORS in the SAME warm bright living room. Preserve the original camera and full-body framing, including both feet. Preserve the existing ivory KNEE-HIGH socks with cuffs just below the kneecaps, fine ribs and soft ankle folds. Legs, sock shapes, sock color, toe shapes, material and foot positions are already correct and must remain unchanged. Each sock tip remains one smooth broad continuous rounded opaque cloth envelope, with tiny shallow cloth creases near the forefoot. No toe anatomy or scalloped tip. No shoes, slippers, new props, additional people, captions or logos. Return ONE complete portrait at the same 1024 x 1536 composition as image 1, not a collage or cropped detail.
