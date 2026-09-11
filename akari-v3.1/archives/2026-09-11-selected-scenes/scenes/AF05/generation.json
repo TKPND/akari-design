@@ -1,0 +1,80 @@
+{
+  "id": "AF05",
+  "title_ja": "今日は、ちょっと疲れた",
+  "created_at": "2026-09-10T05:33:03.769056+00:00",
+  "tool": "built-in image_gen",
+  "model_identity": "not exposed",
+  "generation_id": "exec-68a77e99-73a7-4d49-a2d1-9ec7dae93814",
+  "generation_calls": 1,
+  "status": "candidate_pending_user_selection",
+  "image": "AF05-a-little-tired-r3.png",
+  "prompt": "prompt-r3.txt",
+  "prompt_sha256": "abd048d703fae1a5aaf6f470bb2c261a310088ad67e997d7979eefac6e6bb756",
+  "feedback_snapshot": "../feedback-snapshot.json",
+  "feedback_snapshot_sha256": "11ec41a845008d06c2f4e7ff0b84a3a5a37460b72a0606c2924eae8d482a65f8",
+  "input_path_base": "workspace_root",
+  "inputs": [
+    {
+      "order": 1,
+      "path": "tmp/akari-v3.1/2026-09-10-album-feedback/AF05-a-little-tired/AF05-a-little-tired-r2.png",
+      "role": "edit target scene pose camera character",
+      "sha256": "df40c20b912b42e07de4d26070d2852bff87b8a80076ddc5a4390c39f6d74189"
+    },
+    {
+      "order": 2,
+      "path": "tmp/akari-v3.1/2026-09-10-album-feedback/AF05-a-little-tired/inputs/AF04-r2-sock-material.png",
+      "role": "rounded opaque sock envelope material only; unaltered crop from AF04 r2",
+      "sha256": "2c069e5ebbdba0f08c65e7f258ce8571ef25ca39b4db2afdb19506a58cb3ba70"
+    }
+  ],
+  "feedback_rationale": "F04 continuation incorporates requests for relaxed gestures, mild tiredness and soft natural leg contours, while placing the mug safely on table.",
+  "preflight_validation_failure": null,
+  "inspected_context_not_attached": [
+    {
+      "id": "F04",
+      "path": "akari-v3.1/situations/favorites-continuation/images/F04-sofa-side-sit-mug.png",
+      "role": "sofa side-sit scene navy bolero round-collar blouse ribbon plaid skirt and mug design only",
+      "sha256": "b04a1cdc711006c8a3175c565084eaabc4a341ed258576e9f62c484703b09d6a",
+      "opened_with_view_image": true
+    }
+  ],
+  "provenance": {
+    "native_tool_output": "/home/abe/.codex/generated_images/01a089c1-cccd-7cc2-a6ca-49a051ee5b50/exec-10a342c3-bfe9-41c8-b90c-8c127f2e27a9.png",
+    "authority_docs_read": [
+      "akari-v3.1/README.md",
+      "akari-v3.1/design-state.json",
+      "akari-v3.1/reference-set.json"
+    ]
+  },
+  "output": {
+    "sha256": "9cc7b9b87474d6ae342abf88533b068ed5aa87e936df6d845282e7e340dde097",
+    "bytes": 2127775,
+    "width": 1536,
+    "height": 1024,
+    "native_output_unmodified": true
+  },
+  "validation_record": "validation-r3.json",
+  "face_authority_promoted": false,
+  "committed": false,
+  "site_imported": true,
+  "initial_generation_record": "generation-initial.json",
+  "correction_history": [
+    {
+      "revision": "r2",
+      "generation_id": "exec-2a9258cd-e641-459a-8bdd-a618a0ea8a59",
+      "prompt": "prompt-r2.txt",
+      "image": "AF05-a-little-tired-r2.png",
+      "result": "individual toe shapes remained"
+    },
+    {
+      "revision": "r3",
+      "result": "two smooth rounded opaque envelopes, fine ribbing, mild ankle cloth folds; no individual toe contours"
+    }
+  ],
+  "album_inclusion": {
+    "version_number": 3,
+    "series": "アルバムからのつづき",
+    "url": "https://akari-album-takahiro.tkpnd.chatgpt.site",
+    "user_authorized_batch": true
+  }
+}

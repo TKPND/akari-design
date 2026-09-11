@@ -1,0 +1,216 @@
+{
+  "project": "akari-v3.1",
+  "updated": "2026-09-08T10:10:09.253353+00:00",
+  "current_stage": "split_references_clothing_finish_and_sock_material_required",
+  "status": "user_selected_working_design",
+  "base_version": "akari-v3.0",
+  "path_base": "All active paths are relative to the akari-v3.1 directory.",
+  "base_design_state": "../akari-v3.0/design-state.json",
+  "scope": "Akari v3.1 uses the selected U1 upper and L1 lower references directly, with M2 as an assembled whole-body overview; the S1 silver pin and G2 grey sock design are retained. The selected A16-E1-1 supplies subtle clothing-shadow grouping guidance. Selected F01/F02/F04/F05/F06 soft sock material rendering is a MUST whenever socks are visible, with pose and composition free to vary.",
+  "primary_references": {
+    "face": {
+      "id": "P1",
+      "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "role": "original_face_hair_and_eye_authority",
+      "approval": "Proのやつ土台にしてみよう"
+    },
+    "everyday_expression": {
+      "id": "P2",
+      "path": "../akari-v3.0/references/P2-quiet-smile.png",
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "role": "original_everyday_expression_authority",
+      "approval": "P2で進めたい"
+    },
+    "upper_body": {
+      "id": "U1",
+      "title": "上半身・目元と髪と制服の作業参照",
+      "path": "references/U1-upper-reference.png",
+      "role": "working_upper_body_eye_hair_clothing_detail",
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "width": 1024,
+      "height": 1536,
+      "approval": "じゃあそれを使うように説明も書いてcommitしてもらえる？",
+      "selection_recorded_at": "2026-09-08T02:10:18.208614+00:00",
+      "derived_from": [
+        "G2",
+        "P1",
+        "P2",
+        "S1"
+      ],
+      "record": "history/split-references/generation.json"
+    },
+    "lower_body": {
+      "id": "L1",
+      "title": "下半身・スカートと脚とグレー靴下と白スニーカー",
+      "path": "references/L1-lower-reference.png",
+      "role": "working_lower_body_skirt_legs_socks_sneakers_detail",
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "width": 1024,
+      "height": 1536,
+      "approval": "じゃあそれを使うように説明も書いてcommitしてもらえる？",
+      "selection_recorded_at": "2026-09-08T02:10:18.208614+00:00",
+      "derived_from": [
+        "G2"
+      ],
+      "record": "history/split-references/generation.json"
+    }
+  },
+  "hair_accessory_reference": {
+    "id": "S1",
+    "title": "明るいシルバーの細ピン",
+    "path": "references/S1-silver-slim-pin.png",
+    "role": "primary_hair_accessory_only",
+    "sha256": "6e35a9f51a68d203d8252dc71d7182fe313d8b66a2c2cb0bf099c83b773cb85f",
+    "width": 1254,
+    "height": 1254,
+    "approval": "S1がいいね。",
+    "approved_at": "2026-09-08T00:45:00.781Z"
+  },
+  "body_construction_reference": {
+    "id": "P6",
+    "path": "../akari-v3.0/references/P6-relaxed-full-body.png",
+    "sha256": "018f45133acb2d9cd3625d27090b38084f6b795a92a726ff641785d889c0a823",
+    "role": "inherited_body_and_outfit_construction",
+    "approval": "P6かな。"
+  },
+  "sock_design": {
+    "reference_id": "L1",
+    "color": "medium neutral grey",
+    "material": "opaque ribbed knit",
+    "length": "below knee, retaining the selected G2 ribbed heights and fit shown in L1",
+    "color_origin_reference_id": "G2",
+    "rendering_strength": "MUST",
+    "rendering_requirement": "sock-material-requirement.json",
+    "toe_finish": "Continuous rounded opaque cloth envelope; no individual toe anatomy in linework, shading or silhouette.",
+    "cloth_wrinkles": "Sparse shallow natural cloth wrinkles matching F09; placement follows pose and contact."
+  },
+  "selection_record": "selection.json",
+  "generation_records": {
+    "hair_accessory": "history/S1-generation.json",
+    "full_body": "history/G2-generation.json",
+    "split_references": "history/split-references/generation.json"
+  },
+  "generation_rules": [
+    "Before generation, read README.md and reference-set.json, open the edit target and relevant native reference images with view_image, and assign each input an explicit role.",
+    "For a new full-body scene, use P1 for original face, eye design, black bob and drawing; P2 for the ordinary closed-mouth smile; native U1 for upper-body detail; and native L1 for lower-body detail. Add S1 for exact pin design and M2 for whole-body balance when needed.",
+    "P1 and P2 remain the original face/eye and expression authorities. Derived U1, G2 and M2 images do not replace them. Preserve the small distinct dark oval pupil, neutral grey iris zones and rounded pale lower-iris reflections from P1; do not enlarge the eyes to substitute for detail.",
+    "Use U1 and L1 as separate full-resolution inputs, not only a thumbnail, contact sheet or M2 montage. Small full-body display size still reduces visible eye pixels.",
+    "For an existing-image correction, the edit target remains the sole scene, camera and pose source; supporting references supply only their assigned character details.",
+    "For new split renders, establish one shared camera, pose, proportions and lighting first. Keep a generous overlapping waist/skirt region in both crops. The saved layout and masks reproduce this selected standing pose only.",
+    "When assembling parts, keep complete arms and hands from one input and put transitions within clothing/background. Prefer anatomical and object continuity; do not force geometric warps or cut across limbs to minimize pixel changes.",
+    "Use S1 for one bright silver slim straight pin with rounded tips, at the character-left temple just above the ear; viewer-right in these approved references.",
+    "L1 carries the G2 medium-neutral-grey opaque ribbed below-knee socks, healthy leg contours, blue-grey pleated skirt and white sneakers. G2 remains the approved source layout and sock-color origin; P6 is inherited construction support whose navy socks and absent pin are superseded.",
+    "Later situation or expression selections do not automatically change these roles. Use the current black-bob v3.0 lineage; do not mix v1/v2 or the August v3.0 research design into this version.",
+    "Use selected A16-E1-1 as the clothing-finish guide: group small internal shadows subtly while retaining major folds, dimensionality, seams and plaid. Treat it as clothing-finish support only; keep P1/P2 original face and expression authority, native U1/L1 detail roles and the current target scene, pose, camera and outfit. E2/E3 are not selected; transfer beyond A16 still needs visual review.",
+    "MUST preserve soft opaque grey rib-knit socks wherever visible. Use the F09 sock-detail crop as the default material input for one continuous rounded toe envelope and sparse shallow natural cloth wrinkles, especially near the forefoot/toe seam and ankle. Match selected F09 wrinkle strength while adapting crease placement to pose, bend and contact. F01/F07 remain rounded-toe comparisons. No individual toes, toe-separation lines, nails, toe-shaped bumps or scalloped silhouettes may show through linework or shading. Avoid rigid featureless caps and exaggerated repeated folds. Follow sock-material-requirement.json and prompts/sock-material-must.txt. Shoes may hide toes; poses and cameras remain free. Material examples never replace P1/P2 or native U1/L1."
+  ],
+  "asset_inventory": "asset-inventory.json",
+  "validation": "validation.json",
+  "whole_body_overview_reference": {
+    "id": "M2",
+    "title": "上下を合成した全身・バランス確認用",
+    "path": "references/M2-full-body-montage.png",
+    "role": "assembled_whole_body_proportion_overview",
+    "sha256": "73b3f5d351072612480d0d70687a9fef6d745da8fc3e4a0fd47577b9c76bf74e",
+    "width": 2048,
+    "height": 3072,
+    "approval": "じゃあそれを使うように説明も書いてcommitしてもらえる？",
+    "selection_recorded_at": "2026-09-08T02:10:18.208614+00:00",
+    "derived_from": [
+      "U1",
+      "L1",
+      "G2"
+    ],
+    "record": "history/split-references/M2-assembly.json"
+  },
+  "source_body_reference": {
+    "id": "G2",
+    "title": "上下分割前の承認済み全身・G2靴下色の原本",
+    "path": "references/G2-silver-pin-gray-socks-full-body.png",
+    "role": "approved_source_layout_and_body_design",
+    "sha256": "950b800a86ba138d3e8d20ab902069f56298d726f5f763cad497982d70bb798c",
+    "width": 1024,
+    "height": 1536,
+    "approval": "G2にしよう",
+    "approved_at": "2026-09-08T01:04:03.831Z",
+    "derived_from": "P6",
+    "generation_record": "history/G2-generation.json"
+  },
+  "reference_set": "reference-set.json",
+  "usage_guide": "README.md",
+  "assembly_record": "history/split-references/M2-assembly.json",
+  "clothing_finish_reference": {
+    "id": "A16-E1-1",
+    "experiment_candidate_id": "E1-1",
+    "path": "situations/abc-exploration/images/A16-E1-1.png",
+    "sha256": "4bbd4b898b8f65b302edbee459c25b81f37f99e5295775a57eda8e7f4b88bb71",
+    "bytes": 2032915,
+    "width": 1024,
+    "height": 1536,
+    "role": "selected_clothing_shadow_grouping_only",
+    "approval": "E1-1でいいかな。さりげない感じなので。これでreadmeも更新してcommitしよう",
+    "selection_recorded_at": "2026-09-08T07:23:15.083472+00:00",
+    "selection_record": "situations/abc-exploration/history/A16-style-selection.json",
+    "generation_record": "situations/abc-exploration/records/A16-E1-1.json",
+    "scope": "Subtle grouping of small internal garment shadows while retaining major folds and dimensionality. P1/P2 remain original authorities; native U1/L1 remain detail references.",
+    "validated_scene_ids": [
+      "A16"
+    ],
+    "other_scene_transfer_validated": false,
+    "face_authority_promoted": false
+  },
+  "sock_material_requirement": {
+    "id": "soft-ribbed-sock-material",
+    "strength": "MUST",
+    "required": true,
+    "record": "sock-material-requirement.json",
+    "prompt_fragment": "prompts/sock-material-must.txt",
+    "applies_when": "Any sock fabric is visible in the composition. Toe-shape requirements apply when sock-covered toes are visible.",
+    "pose_is_fixed": false,
+    "material_example_ids": [
+      "F01",
+      "F02",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F09"
+    ],
+    "face_authority_promoted": false,
+    "preferred_toe_example_ids": [
+      "F09",
+      "F01",
+      "F07"
+    ],
+    "toe_finish": "Continuous rounded opaque cloth envelope; no individual toe anatomy in linework, shading or silhouette.",
+    "preferred_material_example_id": "F09",
+    "preferred_detail_input": {
+      "id": "F09-sock-detail",
+      "path": "references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+      "bytes": 71786,
+      "width": 280,
+      "height": 210,
+      "role": "preferred_opaque_rounded_sock_toe_and_restrained_cloth_wrinkle_material_only",
+      "source": {
+        "path": "situations/favorites-continuation/images/F09-drying-mug-listening.png",
+        "sha256": "6ebb67e3afc8c43a66352bf66102ac20f369c0ba7cc548871ae9b71ee40ad2a2",
+        "bytes": 1908983,
+        "width": 1024,
+        "height": 1536
+      },
+      "source_region_xywh": [
+        335,
+        1300,
+        280,
+        210
+      ],
+      "transformation": "Unmodified pixel crop; no resize, retouch or generative alteration.",
+      "face_authority_promoted": false
+    },
+    "wrinkle_reference_id": "F09",
+    "cloth_wrinkles_required": true,
+    "wrinkle_count_or_placement_fixed": false
+  }
+}

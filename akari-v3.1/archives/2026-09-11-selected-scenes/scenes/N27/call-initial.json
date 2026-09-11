@@ -1,0 +1,66 @@
+{
+  "id": "N27",
+  "stage": "initial",
+  "tool": "image_gen",
+  "model": null,
+  "started_at": "2026-09-09T03:41:45.250Z",
+  "elapsed_ms": 55682,
+  "inputs": [
+    {
+      "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "bytes": 1869375,
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "width": 1254,
+      "height": 1254,
+      "role": "Original face, eyes, black bob, drawing and adult character identity authority."
+    },
+    {
+      "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "bytes": 1836424,
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "width": 1254,
+      "height": 1254,
+      "role": "Original everyday closed-mouth smile authority; only the explicitly requested new emotion may change the mouth/eyelids."
+    },
+    {
+      "path": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "bytes": 1852161,
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "width": 1024,
+      "height": 1536,
+      "role": "Native upper-body detail and one silver straight hairpin; canonical uniform is replaced by A-2 home outfit."
+    },
+    {
+      "path": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "bytes": 1815855,
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "width": 1024,
+      "height": 1536,
+      "role": "Native healthy adult leg construction and below-knee ribbed sock fit; blue skirt, grey sock color and shoes are superseded by the selected A-2 taupe dress and ivory indoor socks."
+    },
+    {
+      "path": "../2026-09-09-a2-next-eight/N20-tea-laugh/image.png",
+      "bytes": 2136915,
+      "sha256": "0395fb9fcc1711a904dbe0b40b057e42a88054e4d0981e12cf8211a73721f6bb",
+      "width": 1536,
+      "height": 1024,
+      "role": "User-selected A-2 home outfit, atmosphere and fabric finish only; no face, camera or pose authority."
+    }
+  ],
+  "prompt": {
+    "path": "N27-trying-not-to-laugh/prompt.txt",
+    "bytes": 3674,
+    "sha256": "0e2adee3843cc25e69caec91efa5f67b6d61e09d2c583e982fb87372c463e4ba"
+  },
+  "output": {
+    "path": "N27-trying-not-to-laugh/initial.png",
+    "bytes": 2210876,
+    "sha256": "e2f705453c63d5f114a8d25c47ab05359b926b260384a25a92673829a85c5e30",
+    "width": 1024,
+    "height": 1536
+  },
+  "native_filename": "exec-b04b0e70-492f-4b25-8052-429e42e3c085.png",
+  "native_sha256": "e2f705453c63d5f114a8d25c47ab05359b926b260384a25a92673829a85c5e30",
+  "exact_native_copy": true,
+  "exact_prompt_payload": true
+}

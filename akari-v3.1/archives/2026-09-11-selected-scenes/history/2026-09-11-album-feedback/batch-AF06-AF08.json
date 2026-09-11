@@ -1,0 +1,21 @@
+{
+  "status": "published",
+  "ids": [
+    "AF06",
+    "AF07",
+    "AF08"
+  ],
+  "selected_source_codes": [
+    "AF04",
+    "AF05"
+  ],
+  "feedback_snapshot": "feedback-snapshot.json",
+  "version_number": 4,
+  "album_count": 180,
+  "validation": {
+    "existing_177_entries_unchanged": true,
+    "six_new_webps_decoded": true,
+    "production_build": "pass",
+    "deployment": "succeeded"
+  }
+}

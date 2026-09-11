@@ -1,0 +1,3842 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-11",
+  "path_base": "archive root",
+  "authorization": {
+    "user_quote": "じゃあそれをコミットして。",
+    "scope": "Previously recommended high-priority 25 images, prompts, generation and selection history"
+  },
+  "preservation_only": true,
+  "authority_promoted": false,
+  "historical_record_policy": "Source records retain original bytes and generation-time status. Old paths, committed:false and pending-selection fields are historical, not the current archive state. Use scenes and path-resolutions.json for portable access.",
+  "feedback_policy": "Saved generation-time snapshots only; no live review refresh or authority change.",
+  "scenes": [
+    {
+      "id": "AF01",
+      "title_ja": "隣に座った、そのあと",
+      "preservation_status": "album_published_artwork",
+      "authority_promoted": false,
+      "final_image": {
+        "path": "scenes/AF01/AF01-beside-you.png",
+        "sha256": "50517641d84d0155a0be0964c135b739e35863c12e4bf8b69a9fa37db3455ee9",
+        "bytes": 2269615
+      },
+      "generation_record": "scenes/AF01/generation.json",
+      "selected_stage": "album_catalog_final",
+      "calls": [
+        {
+          "historical_record": "scenes/AF01/generation.json",
+          "generation_id_as_recorded": "exec-8bd985c7-ba1e-4bc9-9e91-862bc61c11f3",
+          "model_identity": "not exposed",
+          "inputs": [
+            {
+              "path": "dependencies/b50d03be676bab28/r2.png",
+              "sha256": "b50d03be676bab28e6e211d9898185a2d6436b617db86fc39e9d2449e1b9a9d3",
+              "bytes": 2321866,
+              "role": "casual outfit, living room and gentle atmosphere only"
+            },
+            {
+              "path": "dependencies/e090b707738c50c4/A13.png",
+              "sha256": "e090b707738c50c482dc6c3234060c4d24eb16b619a504c705797bf490aa4d73",
+              "bytes": 2308949,
+              "role": "relaxed expression and mood only"
+            },
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "original face eyes hair drawing authority"
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "original closed-mouth smile authority"
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "native upper detail and silver pin, not outfit"
+            }
+          ],
+          "prompt": {
+            "path": "scenes/AF01/prompt.txt",
+            "sha256": "ccc520d0fef27b0ac2497afa94943e81b07c45aef01d3121d17d80ccc1550039",
+            "bytes": 3420
+          },
+          "output": {
+            "path": "scenes/AF01/AF01-beside-you.png",
+            "sha256": "50517641d84d0155a0be0964c135b739e35863c12e4bf8b69a9fa37db3455ee9",
+            "bytes": 2269615
+          }
+        }
+      ],
+      "album_entry_at_preservation": {
+        "id": "50517641d84d0155a0be0964c135b739e35863c12e4bf8b69a9fa37db3455ee9",
+        "sha256": "50517641d84d0155a0be0964c135b739e35863c12e4bf8b69a9fa37db3455ee9",
+        "title": "隣に座った、そのあと",
+        "code": "AF01",
+        "series": "アルバムからのつづき",
+        "width": 1536,
+        "height": 1024,
+        "sourcePath": "tmp/akari-v3.1/2026-09-10-album-feedback/AF01-beside-you/AF01-beside-you.png"
+      }
+    },
+    {
+      "id": "AF02",
+      "title_ja": "静かに、隣で",
+      "preservation_status": "album_published_artwork",
+      "authority_promoted": false,
+      "final_image": {
+        "path": "scenes/AF02/AF02-quiet-beside-you.png",
+        "sha256": "f5e22e307587a0c1be5ad92578815c49bfc85582284de7e3f589a39da5b034ab",
+        "bytes": 2349291
+      },
+      "generation_record": "scenes/AF02/generation.json",
+      "selected_stage": "album_catalog_final",
+      "calls": [
+        {
+          "historical_record": "scenes/AF02/generation.json",
+          "generation_id_as_recorded": "exec-326c881c-530c-46f3-a0fb-d3a2ae8b06aa",
+          "model_identity": "not exposed",
+          "inputs": [
+            {
+              "path": "scenes/AF01/AF01-beside-you.png",
+              "sha256": "50517641d84d0155a0be0964c135b739e35863c12e4bf8b69a9fa37db3455ee9",
+              "bytes": 2269615,
+              "role": "scene outfit camera and pose starting point only"
+            },
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "original face eyes hair drawing authority"
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "original everyday closed-mouth smile authority"
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "native upper-body detail eyes hair and silver pin, not outfit"
+            },
+            {
+              "path": "dependencies/e090b707738c50c4/A13.png",
+              "sha256": "e090b707738c50c482dc6c3234060c4d24eb16b619a504c705797bf490aa4d73",
+              "bytes": 2308949,
+              "role": "languid mood only"
+            }
+          ],
+          "prompt": {
+            "path": "scenes/AF02/prompt.txt",
+            "sha256": "4aa90331f02c8551d80a7104cc4ea6dbb1b1d619951f114e9368ee7b26b21743",
+            "bytes": 4130
+          },
+          "output": {
+            "path": "scenes/AF02/AF02-quiet-beside-you.png",
+            "sha256": "f5e22e307587a0c1be5ad92578815c49bfc85582284de7e3f589a39da5b034ab",
+            "bytes": 2349291
+          }
+        }
+      ],
+      "album_entry_at_preservation": {
+        "id": "f5e22e307587a0c1be5ad92578815c49bfc85582284de7e3f589a39da5b034ab",
+        "sha256": "f5e22e307587a0c1be5ad92578815c49bfc85582284de7e3f589a39da5b034ab",
+        "title": "静かに、隣で",
+        "code": "AF02",
+        "series": "アルバムからのつづき",
+        "width": 1536,
+        "height": 1024,
+        "sourcePath": "tmp/akari-v3.1/2026-09-10-album-feedback/AF02-quiet-beside-you/AF02-quiet-beside-you.png"
+      }
+    },
+    {
+      "id": "AF03",
+      "title_ja": "隣で、肩の力を抜いて",
+      "preservation_status": "album_published_artwork",
+      "authority_promoted": false,
+      "final_image": {
+        "path": "scenes/AF03/AF03-relaxed-beside-you.png",
+        "sha256": "5daf5021aaa03bd5c2a95619af4cebb5310d4815a64654599b72a8ac4dcd4c75",
+        "bytes": 2366761
+      },
+      "generation_record": "scenes/AF03/generation.json",
+      "selected_stage": "album_catalog_final",
+      "calls": [
+        {
+          "historical_record": "scenes/AF03/generation.json",
+          "generation_id_as_recorded": "exec-dc2e7350-6501-4e55-aca1-a3d41067a9f4",
+          "model_identity": "not exposed",
+          "inputs": [
+            {
+              "path": "dependencies/b50d03be676bab28/r2.png",
+              "sha256": "b50d03be676bab28e6e211d9898185a2d6436b617db86fc39e9d2449e1b9a9d3",
+              "bytes": 2321866,
+              "role": "brown plaid pinafore ivory long-sleeve outfit beige sofa green cushion and room only"
+            },
+            {
+              "path": "dependencies/e090b707738c50c4/A13.png",
+              "sha256": "e090b707738c50c482dc6c3234060c4d24eb16b619a504c705797bf490aa4d73",
+              "bytes": 2308949,
+              "role": "languid mood only, not face outfit pose or camera"
+            },
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "original face eyes hair drawing authority"
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "original everyday closed-mouth smile authority"
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "native upper construction eyes hair and silver pin only"
+            }
+          ],
+          "prompt": {
+            "path": "scenes/AF03/prompt.txt",
+            "sha256": "7a36858cbf284102fbad043ad7301f008f08493ef93c71471b596dbd1d50760b",
+            "bytes": 2601
+          },
+          "output": {
+            "path": "scenes/AF03/AF03-relaxed-beside-you.png",
+            "sha256": "5daf5021aaa03bd5c2a95619af4cebb5310d4815a64654599b72a8ac4dcd4c75",
+            "bytes": 2366761
+          }
+        }
+      ],
+      "album_entry_at_preservation": {
+        "id": "5daf5021aaa03bd5c2a95619af4cebb5310d4815a64654599b72a8ac4dcd4c75",
+        "sha256": "5daf5021aaa03bd5c2a95619af4cebb5310d4815a64654599b72a8ac4dcd4c75",
+        "title": "隣で、肩の力を抜いて",
+        "code": "AF03",
+        "series": "アルバムからのつづき",
+        "width": 1536,
+        "height": 1024,
+        "sourcePath": "tmp/akari-v3.1/2026-09-10-album-feedback/AF03-relaxed-beside-you/AF03-relaxed-beside-you.png"
+      }
+    },
+    {
+      "id": "AF04",
+      "title_ja": "話の途中で、うとうと",
+      "preservation_status": "album_published_artwork",
+      "authority_promoted": false,
+      "final_image": {
+        "path": "scenes/AF04/AF04-dozing-mid-conversation-r2.png",
+        "sha256": "36e2099b459e45b8e6fc95439edcc822d7ab9593b35010e4acf69a36788e620d",
+        "bytes": 2332861
+      },
+      "generation_record": "scenes/AF04/generation.json",
+      "selected_stage": "album_catalog_final",
+      "calls": [
+        {
+          "historical_record": "scenes/AF04/generation-initial.json",
+          "generation_id_as_recorded": "exec-dca03430-28cb-443d-8ca6-e0193fdf3643",
+          "model_identity": "not exposed",
+          "inputs": [
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "original face eyes hair drawing authority"
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "original everyday closed-mouth smile authority"
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "native upper construction eyes hair and silver pin only"
+            },
+            {
+              "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+              "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+              "bytes": 1815855,
+              "role": "native healthy leg construction and grey below-knee sock fit only"
+            },
+            {
+              "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png",
+              "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+              "bytes": 71786,
+              "role": "opaque rounded sock material and restrained shallow cloth wrinkles only"
+            }
+          ],
+          "prompt": {
+            "path": "scenes/AF04/prompt.txt",
+            "sha256": "da05e00d2f74e98d804a0ce8c967ed30207e663a74c3ead39faa94f55960f04d",
+            "bytes": 3774
+          },
+          "output": {
+            "path": "scenes/AF04/AF04-dozing-mid-conversation.png",
+            "sha256": "df7729e1d15425056503939ed0b7f785a50a8f8b734c70186afd0bf92bb36893",
+            "bytes": 2575170
+          }
+        },
+        {
+          "historical_record": "scenes/AF04/generation.json",
+          "generation_id_as_recorded": "exec-4e3b3dfe-3eb8-4d8f-9bb1-6bfd8497bcbb",
+          "model_identity": "not exposed",
+          "inputs": [
+            {
+              "path": "scenes/AF04/AF04-dozing-mid-conversation.png",
+              "sha256": "df7729e1d15425056503939ed0b7f785a50a8f8b734c70186afd0bf92bb36893",
+              "bytes": 2575170,
+              "role": "edit target: scene pose camera character"
+            },
+            {
+              "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+              "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+              "bytes": 1815855,
+              "role": "native lower body and sock color only"
+            },
+            {
+              "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png",
+              "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+              "bytes": 71786,
+              "role": "opaque rounded sock material only"
+            }
+          ],
+          "prompt": {
+            "path": "scenes/AF04/prompt-r2.txt",
+            "sha256": "96a9a0e301b54943da87e622490089df7c8a74355e267bf1158d059cd45d15d6",
+            "bytes": 1399
+          },
+          "output": {
+            "path": "scenes/AF04/AF04-dozing-mid-conversation-r2.png",
+            "sha256": "36e2099b459e45b8e6fc95439edcc822d7ab9593b35010e4acf69a36788e620d",
+            "bytes": 2332861
+          }
+        }
+      ],
+      "album_entry_at_preservation": {
+        "id": "36e2099b459e45b8e6fc95439edcc822d7ab9593b35010e4acf69a36788e620d",
+        "sha256": "36e2099b459e45b8e6fc95439edcc822d7ab9593b35010e4acf69a36788e620d",
+        "title": "話の途中で、うとうと",
+        "code": "AF04",
+        "series": "アルバムからのつづき",
+        "width": 1024,
+        "height": 1536,
+        "sourcePath": "tmp/akari-v3.1/2026-09-10-album-feedback/AF04-dozing-mid-conversation/AF04-dozing-mid-conversation-r2.png"
+      }
+    },
+    {
+      "id": "AF05",
+      "title_ja": "今日は、ちょっと疲れた",
+      "preservation_status": "album_published_artwork",
+      "authority_promoted": false,
+      "final_image": {
+        "path": "scenes/AF05/AF05-a-little-tired-r3.png",
+        "sha256": "9cc7b9b87474d6ae342abf88533b068ed5aa87e936df6d845282e7e340dde097",
+        "bytes": 2127775
+      },
+      "generation_record": "scenes/AF05/generation.json",
+      "selected_stage": "album_catalog_final",
+      "calls": [
+        {
+          "historical_record": "scenes/AF05/generation-initial.json",
+          "generation_id_as_recorded": "exec-10a342c3-bfe9-41c8-b90c-8c127f2e27a9",
+          "model_identity": "not exposed",
+          "inputs": [
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "original face eyes hair drawing authority"
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "original everyday closed-mouth smile authority"
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "native upper construction eyes hair and silver pin only"
+            },
+            {
+              "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+              "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+              "bytes": 1815855,
+              "role": "native healthy leg construction and grey below-knee sock fit only"
+            },
+            {
+              "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png",
+              "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+              "bytes": 71786,
+              "role": "opaque rounded sock material and restrained shallow cloth wrinkles only"
+            }
+          ],
+          "prompt": {
+            "path": "scenes/AF05/prompt.txt",
+            "sha256": "a6bb196eb923684e7b5fd5166ce8f805a44b35c7ffa0779fb9c6fe3ebda07128",
+            "bytes": 3787
+          },
+          "output": {
+            "path": "scenes/AF05/AF05-a-little-tired.png",
+            "sha256": "31c7b0965cb030bff4fe02fa61713a50996b86f8083296c87923576a3439990f",
+            "bytes": 2232076
+          }
+        },
+        {
+          "historical_record": "scenes/AF05/generation.json",
+          "generation_id_as_recorded": "exec-68a77e99-73a7-4d49-a2d1-9ec7dae93814",
+          "model_identity": "not exposed",
+          "inputs": [
+            {
+              "path": "scenes/AF05/AF05-a-little-tired-r2.png",
+              "sha256": "df40c20b912b42e07de4d26070d2852bff87b8a80076ddc5a4390c39f6d74189",
+              "bytes": 2174686,
+              "role": "edit target scene pose camera character"
+            },
+            {
+              "path": "scenes/AF05/inputs/AF04-r2-sock-material.png",
+              "sha256": "2c069e5ebbdba0f08c65e7f258ce8571ef25ca39b4db2afdb19506a58cb3ba70",
+              "bytes": 101049,
+              "role": "rounded opaque sock envelope material only; unaltered crop from AF04 r2"
+            }
+          ],
+          "prompt": {
+            "path": "scenes/AF05/prompt-r3.txt",
+            "sha256": "abd048d703fae1a5aaf6f470bb2c261a310088ad67e997d7979eefac6e6bb756",
+            "bytes": 1449
+          },
+          "output": {
+            "path": "scenes/AF05/AF05-a-little-tired-r3.png",
+            "sha256": "9cc7b9b87474d6ae342abf88533b068ed5aa87e936df6d845282e7e340dde097",
+            "bytes": 2127775
+          }
+        }
+      ],
+      "album_entry_at_preservation": {
+        "id": "9cc7b9b87474d6ae342abf88533b068ed5aa87e936df6d845282e7e340dde097",
+        "sha256": "9cc7b9b87474d6ae342abf88533b068ed5aa87e936df6d845282e7e340dde097",
+        "title": "今日は、ちょっと疲れた",
+        "code": "AF05",
+        "series": "アルバムからのつづき",
+        "width": 1536,
+        "height": 1024,
+        "sourcePath": "tmp/akari-v3.1/2026-09-10-album-feedback/AF05-a-little-tired/AF05-a-little-tired-r3.png"
+      }
+    },
+    {
+      "id": "AF06",
+      "title_ja": "クッションに頬を預けて",
+      "preservation_status": "album_published_artwork",
+      "authority_promoted": false,
+      "final_image": {
+        "path": "scenes/AF06/AF06-cheek-on-cushion.png",
+        "sha256": "c9499157fd4e138ecee8a46eb53284136516629cd5704b072359d0a6c222cbab",
+        "bytes": 2270752
+      },
+      "generation_record": "scenes/AF06/generation.json",
+      "selected_stage": "album_catalog_final",
+      "calls": [
+        {
+          "historical_record": "scenes/AF06/generation.json",
+          "generation_id_as_recorded": "exec-635156e9-31c8-44fc-bbcc-54d01309a2ce",
+          "model_identity": "not exposed",
+          "inputs": [
+            {
+              "path": "scenes/AF04/AF04-dozing-mid-conversation-r2.png",
+              "sha256": "36e2099b459e45b8e6fc95439edcc822d7ab9593b35010e4acf69a36788e620d",
+              "bytes": 2332861,
+              "role": "selected scene, modest outfit, cozy dozing mood and corrected continuous rounded opaque sock material"
+            },
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "original face, grey-eye design, black bob and delicate anime drawing authority"
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "original everyday closed-mouth smile authority; expression may be closed-eye sleep as specified"
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "native upper-body construction, detailed hair and single silver pin, not its short-sleeve outfit"
+            },
+            {
+              "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+              "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+              "bytes": 1815855,
+              "role": "native healthy ordinary leg construction, medium-grey below-knee sock length and fit, not its standing pose or sneakers"
+            }
+          ],
+          "prompt": {
+            "path": "scenes/AF06/prompt.txt",
+            "sha256": "aaec6746c615ac42d55869c5c6b46fc86a4e02f9042c17389d4181a5d9b4d59b",
+            "bytes": 3892
+          },
+          "output": {
+            "path": "scenes/AF06/AF06-cheek-on-cushion.png",
+            "sha256": "c9499157fd4e138ecee8a46eb53284136516629cd5704b072359d0a6c222cbab",
+            "bytes": 2270752
+          }
+        }
+      ],
+      "album_entry_at_preservation": {
+        "id": "c9499157fd4e138ecee8a46eb53284136516629cd5704b072359d0a6c222cbab",
+        "sha256": "c9499157fd4e138ecee8a46eb53284136516629cd5704b072359d0a6c222cbab",
+        "title": "クッションに頬を預けて",
+        "code": "AF06",
+        "series": "アルバムからのつづき",
+        "width": 1024,
+        "height": 1536,
+        "sourcePath": "tmp/akari-v3.1/2026-09-11-album-feedback/AF06-cheek-on-cushion/AF06-cheek-on-cushion.png"
+      }
+    },
+    {
+      "id": "AF07",
+      "title_ja": "少し休んで、目が合う",
+      "preservation_status": "album_published_artwork",
+      "authority_promoted": false,
+      "final_image": {
+        "path": "scenes/AF07/AF07-eye-contact-after-rest.png",
+        "sha256": "484c8ed6972386d9e15a166326e58eedba03addd0ac5000cd8eb92bd29bdc911",
+        "bytes": 2115364
+      },
+      "generation_record": "scenes/AF07/generation.json",
+      "selected_stage": "album_catalog_final",
+      "calls": [
+        {
+          "historical_record": "scenes/AF07/generation.json",
+          "generation_id_as_recorded": "exec-a9fd38c5-6766-42eb-88ad-524c0ddffe06",
+          "model_identity": "not exposed",
+          "inputs": [
+            {
+              "path": "scenes/AF05/AF05-a-little-tired-r3.png",
+              "sha256": "9cc7b9b87474d6ae342abf88533b068ed5aa87e936df6d845282e7e340dde097",
+              "bytes": 2127775,
+              "role": "selected side-sitting sofa scene, modest outfit and corrected broad rounded opaque sock material"
+            },
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "original face, grey-eye design, black bob and delicate anime drawing authority"
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "original everyday closed-mouth smile authority; expression may be closed-eye sleep as specified"
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "native upper-body construction, detailed hair and single silver pin, not its short-sleeve outfit"
+            },
+            {
+              "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+              "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+              "bytes": 1815855,
+              "role": "native healthy ordinary leg construction, medium-grey below-knee sock length and fit, not its standing pose or sneakers"
+            }
+          ],
+          "prompt": {
+            "path": "scenes/AF07/prompt.txt",
+            "sha256": "a9cd213c3eb3b6a79575a0fec4e895ada3b0c577c5299c80ea37b1406517a763",
+            "bytes": 3933
+          },
+          "output": {
+            "path": "scenes/AF07/AF07-eye-contact-after-rest.png",
+            "sha256": "484c8ed6972386d9e15a166326e58eedba03addd0ac5000cd8eb92bd29bdc911",
+            "bytes": 2115364
+          }
+        }
+      ],
+      "album_entry_at_preservation": {
+        "id": "484c8ed6972386d9e15a166326e58eedba03addd0ac5000cd8eb92bd29bdc911",
+        "sha256": "484c8ed6972386d9e15a166326e58eedba03addd0ac5000cd8eb92bd29bdc911",
+        "title": "少し休んで、目が合う",
+        "code": "AF07",
+        "series": "アルバムからのつづき",
+        "width": 1536,
+        "height": 1024,
+        "sourcePath": "tmp/akari-v3.1/2026-09-11-album-feedback/AF07-eye-contact-after-rest/AF07-eye-contact-after-rest.png"
+      }
+    },
+    {
+      "id": "AF08",
+      "title_ja": "ベッドでひと眠り",
+      "preservation_status": "album_published_artwork",
+      "authority_promoted": false,
+      "final_image": {
+        "path": "scenes/AF08/AF08-peaceful-bed-nap.png",
+        "sha256": "ec553e9b54406ab421685f882ce7f9f565012d5f51fb61228d7a201708cc72cc",
+        "bytes": 2177224
+      },
+      "generation_record": "scenes/AF08/generation.json",
+      "selected_stage": "album_catalog_final",
+      "calls": [
+        {
+          "historical_record": "scenes/AF08/generation.json",
+          "generation_id_as_recorded": "exec-4b72f322-9030-466c-bceb-38fb3f0a84c6",
+          "model_identity": "not exposed",
+          "inputs": [
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "original face, grey-eye design, black bob and delicate anime drawing authority"
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "original everyday closed-mouth smile authority; expression may be closed-eye sleep as specified"
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "native upper-body construction, detailed hair and single silver pin, not its short-sleeve outfit"
+            },
+            {
+              "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+              "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+              "bytes": 1815855,
+              "role": "native healthy ordinary leg construction, medium-grey below-knee sock length and fit, not its standing pose or sneakers"
+            },
+            {
+              "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png",
+              "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+              "bytes": 71786,
+              "role": "soft opaque rounded sock material and restrained shallow cloth wrinkles only, not pose or room"
+            }
+          ],
+          "prompt": {
+            "path": "scenes/AF08/prompt.txt",
+            "sha256": "786779a071fd6c9856673b4854a62b2fb57c5d8ec4e9e75d037d6bc589defcd7",
+            "bytes": 4358
+          },
+          "output": {
+            "path": "scenes/AF08/AF08-peaceful-bed-nap.png",
+            "sha256": "ec553e9b54406ab421685f882ce7f9f565012d5f51fb61228d7a201708cc72cc",
+            "bytes": 2177224
+          }
+        }
+      ],
+      "album_entry_at_preservation": {
+        "id": "ec553e9b54406ab421685f882ce7f9f565012d5f51fb61228d7a201708cc72cc",
+        "sha256": "ec553e9b54406ab421685f882ce7f9f565012d5f51fb61228d7a201708cc72cc",
+        "title": "ベッドでひと眠り",
+        "code": "AF08",
+        "series": "アルバムからのつづき",
+        "width": 1536,
+        "height": 1024,
+        "sourcePath": "tmp/akari-v3.1/2026-09-11-album-feedback/AF08-peaceful-bed-nap/AF08-peaceful-bed-nap.png"
+      }
+    },
+    {
+      "id": "AF09",
+      "title_ja": "横座り、自然な足先",
+      "preservation_status": "album_published_artwork",
+      "authority_promoted": false,
+      "final_image": {
+        "path": "scenes/AF09/AF09-natural-side-sit-feet.png",
+        "sha256": "08b2bd1994a0fe72a9535fd12257ab26af9bc04e324a5e741d0e45154082ed15",
+        "bytes": 2070539
+      },
+      "generation_record": "scenes/AF09/generation.json",
+      "selected_stage": "album_catalog_final",
+      "calls": [
+        {
+          "historical_record": "scenes/AF09/generation.json",
+          "generation_id_as_recorded": "exec-147c1336-0501-4d70-90a5-3662e743218f",
+          "model_identity": "not exposed",
+          "inputs": [
+            {
+              "path": "scenes/AF07/AF07-eye-contact-after-rest.png",
+              "sha256": "484c8ed6972386d9e15a166326e58eedba03addd0ac5000cd8eb92bd29bdc911",
+              "bytes": 2115364,
+              "role": "selected scene, pose, outfit and camera; its overly rounded bulbous sock cap is specifically to be corrected"
+            },
+            {
+              "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+              "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+              "bytes": 1815855,
+              "role": "native healthy leg construction, medium-grey below-knee sock color length and fit; not standing pose or sneakers"
+            },
+            {
+              "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png",
+              "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+              "bytes": 71786,
+              "role": "opaque supple rib-knit fabric and restrained shallow cloth folds only; do not copy or exaggerate its toe silhouette"
+            },
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "original face, grey eyes, black bob and drawing authority"
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "original everyday closed-mouth smile authority"
+            }
+          ],
+          "prompt": {
+            "path": "scenes/AF09/prompt.txt",
+            "sha256": "37155b3151d9d048de5f6807f8721ddc5b5e11206d19fd6a37d07c500e686b8d",
+            "bytes": 3608
+          },
+          "output": {
+            "path": "scenes/AF09/AF09-natural-side-sit-feet.png",
+            "sha256": "08b2bd1994a0fe72a9535fd12257ab26af9bc04e324a5e741d0e45154082ed15",
+            "bytes": 2070539
+          }
+        }
+      ],
+      "album_entry_at_preservation": {
+        "id": "08b2bd1994a0fe72a9535fd12257ab26af9bc04e324a5e741d0e45154082ed15",
+        "sha256": "08b2bd1994a0fe72a9535fd12257ab26af9bc04e324a5e741d0e45154082ed15",
+        "title": "横座り、自然な足先",
+        "code": "AF09",
+        "series": "アルバムからのつづき",
+        "width": 1536,
+        "height": 1024,
+        "sourcePath": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/AF09-natural-side-sit-feet/AF09-natural-side-sit-feet.png"
+      }
+    },
+    {
+      "id": "AF10",
+      "title_ja": "足を下ろして、ひと息",
+      "preservation_status": "album_published_artwork",
+      "authority_promoted": false,
+      "final_image": {
+        "path": "scenes/AF10/AF10-feet-down-rest-r2.png",
+        "sha256": "54acaa40655093f69403f61bfc3821907ff3f22b29a780a79e75e3e98fdb663d",
+        "bytes": 2086995
+      },
+      "generation_record": "scenes/AF10/generation.json",
+      "selected_stage": "album_catalog_final",
+      "calls": [
+        {
+          "historical_record": "scenes/AF10/generation-initial.json",
+          "generation_id_as_recorded": "exec-c02ef5d6-3455-48a2-91bd-86e120499f70",
+          "model_identity": "not exposed",
+          "inputs": [
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "original face, grey eyes, black bob and drawing authority"
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "original everyday closed-mouth smile authority"
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "native upper-body eye and hair detail and single silver pin; not its short-sleeve outfit"
+            },
+            {
+              "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+              "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+              "bytes": 1815855,
+              "role": "native healthy leg construction, medium-grey below-knee sock color length and fit; not standing pose or sneakers"
+            },
+            {
+              "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png",
+              "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+              "bytes": 71786,
+              "role": "opaque supple rib-knit fabric and restrained shallow cloth folds only; do not copy or exaggerate its toe silhouette"
+            }
+          ],
+          "prompt": {
+            "path": "scenes/AF10/prompt.txt",
+            "sha256": "6ba25acd7c7efb8a73b474d21a69ce76eae9034d5517c8d7c01c7cffd34f3e4e",
+            "bytes": 3772
+          },
+          "output": {
+            "path": "scenes/AF10/AF10-feet-down-rest.png",
+            "sha256": "0d1d7b77e91cb0d73ca65e5e28ffffbd667f8cebbf2e50d11f1a1f36e836fa9e",
+            "bytes": 2192197
+          }
+        },
+        {
+          "historical_record": "scenes/AF10/generation.json",
+          "generation_id_as_recorded": "exec-2f3fa3f6-7693-4b6b-bc41-d81793c3dc17",
+          "model_identity": "not exposed",
+          "inputs": [
+            {
+              "path": "scenes/AF10/AF10-feet-down-rest.png",
+              "sha256": "0d1d7b77e91cb0d73ca65e5e28ffffbd667f8cebbf2e50d11f1a1f36e836fa9e",
+              "bytes": 2192197,
+              "role": "edit target: scene pose camera identity and natural foot proportions"
+            },
+            {
+              "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png",
+              "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+              "bytes": 71786,
+              "role": "soft opaque cloth and sparse wrinkle material only, not roundness"
+            }
+          ],
+          "prompt": {
+            "path": "scenes/AF10/prompt-r2.txt",
+            "sha256": "39819e316e8fcf7694d65d6f50c324e58a8fe51e16a28d47bd13329881c722eb",
+            "bytes": 1504
+          },
+          "output": {
+            "path": "scenes/AF10/AF10-feet-down-rest-r2.png",
+            "sha256": "54acaa40655093f69403f61bfc3821907ff3f22b29a780a79e75e3e98fdb663d",
+            "bytes": 2086995
+          }
+        }
+      ],
+      "album_entry_at_preservation": {
+        "id": "54acaa40655093f69403f61bfc3821907ff3f22b29a780a79e75e3e98fdb663d",
+        "sha256": "54acaa40655093f69403f61bfc3821907ff3f22b29a780a79e75e3e98fdb663d",
+        "title": "足を下ろして、ひと息",
+        "code": "AF10",
+        "series": "アルバムからのつづき",
+        "width": 1024,
+        "height": 1536,
+        "sourcePath": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/AF10-feet-down-rest/AF10-feet-down-rest-r2.png"
+      }
+    },
+    {
+      "id": "AF11",
+      "title_ja": "少し丸まって、話のつづき",
+      "preservation_status": "album_published_artwork",
+      "authority_promoted": false,
+      "final_image": {
+        "path": "scenes/AF11/AF11-cozy-conversation.png",
+        "sha256": "1158c646f3666bd26d1cc4304f93ca03f2ffe6624f89cd467f229b3e6e7a8723",
+        "bytes": 2310088
+      },
+      "generation_record": "scenes/AF11/generation.json",
+      "selected_stage": "album_catalog_final",
+      "calls": [
+        {
+          "historical_record": "scenes/AF11/generation.json",
+          "generation_id_as_recorded": "exec-89391ad4-6e17-42a6-be98-de99d154cfce",
+          "model_identity": "not exposed",
+          "inputs": [
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "original face, grey eyes, black bob and drawing authority"
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "original everyday closed-mouth smile authority"
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "native upper-body eye and hair detail and single silver pin; not its short-sleeve outfit"
+            },
+            {
+              "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+              "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+              "bytes": 1815855,
+              "role": "native healthy leg construction, medium-grey below-knee sock color length and fit; not standing pose or sneakers"
+            },
+            {
+              "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png",
+              "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+              "bytes": 71786,
+              "role": "opaque supple rib-knit fabric and restrained shallow cloth folds only; do not copy or exaggerate its toe silhouette"
+            }
+          ],
+          "prompt": {
+            "path": "scenes/AF11/prompt.txt",
+            "sha256": "f31e897531057f784a3bb03335e4c85ad682a4ec16074a4215261d35f8f6566f",
+            "bytes": 3933
+          },
+          "output": {
+            "path": "scenes/AF11/AF11-cozy-conversation.png",
+            "sha256": "1158c646f3666bd26d1cc4304f93ca03f2ffe6624f89cd467f229b3e6e7a8723",
+            "bytes": 2310088
+          }
+        }
+      ],
+      "album_entry_at_preservation": {
+        "id": "1158c646f3666bd26d1cc4304f93ca03f2ffe6624f89cd467f229b3e6e7a8723",
+        "sha256": "1158c646f3666bd26d1cc4304f93ca03f2ffe6624f89cd467f229b3e6e7a8723",
+        "title": "少し丸まって、話のつづき",
+        "code": "AF11",
+        "series": "アルバムからのつづき",
+        "width": 1536,
+        "height": 1024,
+        "sourcePath": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/AF11-cozy-conversation/AF11-cozy-conversation.png"
+      }
+    },
+    {
+      "id": "N16",
+      "title_ja": "リボン、結べたよ",
+      "preservation_status": "user_selected_scene_or_wardrobe_direction",
+      "authority_promoted": false,
+      "final_image": {
+        "path": "scenes/N16/image.png",
+        "sha256": "ed396eb7322ad2ef5c53db4ea46dca3b28abf9939ff1743f94cd77336c5bb425",
+        "bytes": 2174338
+      },
+      "generation_record": "scenes/N16/generation.json",
+      "selected_stage": "initial",
+      "calls": [
+        {
+          "stage": "initial",
+          "model": null,
+          "native_filename": "exec-2bacdaf0-c04d-4239-9dd7-f45e1dcecddb.png",
+          "inputs": [
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "Original face, eyes, bob and drawing"
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "Original ordinary closed smile"
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "Native upper details and single silver pin; uniform superseded"
+            },
+            {
+              "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+              "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+              "bytes": 1815855,
+              "role": "Native leg and below-knee sock fit; wardrobe superseded"
+            },
+            {
+              "path": "dependencies/4be5272b81bbcf95/N08.png",
+              "sha256": "4be5272b81bbcf95fb0287dbb64f24225bee9677733c3cebe2939e59bb3fd8a6",
+              "bytes": 2428776,
+              "role": "N08 selected wardrobe, home direction and material only; no face or pose authority"
+            }
+          ],
+          "prompt": {
+            "path": "scenes/N16/prompt.txt",
+            "sha256": "f566b6669556cc8b3830c43d58d171645b3151d213e1b24d3914c04c6e416e17",
+            "bytes": 3208
+          },
+          "output": {
+            "path": "scenes/N16/initial.png",
+            "sha256": "ed396eb7322ad2ef5c53db4ea46dca3b28abf9939ff1743f94cd77336c5bb425",
+            "bytes": 2174338
+          }
+        }
+      ],
+      "album_entry_at_preservation": {
+        "id": "ed396eb7322ad2ef5c53db4ea46dca3b28abf9939ff1743f94cd77336c5bb425",
+        "sha256": "ed396eb7322ad2ef5c53db4ea46dca3b28abf9939ff1743f94cd77336c5bb425",
+        "title": "リボン、結べたよ",
+        "code": "N16",
+        "series": "おうちの8場面",
+        "width": 1024,
+        "height": 1536,
+        "sourcePath": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N16-ribbon-gift/image.png"
+      }
+    },
+    {
+      "id": "N20",
+      "title_ja": "それ、ちょっとずるい",
+      "preservation_status": "user_selected_scene_or_wardrobe_direction",
+      "authority_promoted": false,
+      "final_image": {
+        "path": "scenes/N20/image.png",
+        "sha256": "0395fb9fcc1711a904dbe0b40b057e42a88054e4d0981e12cf8211a73721f6bb",
+        "bytes": 2136915
+      },
+      "generation_record": "scenes/N20/generation.json",
+      "selected_stage": "r2",
+      "calls": [
+        {
+          "stage": "initial",
+          "model": null,
+          "native_filename": "exec-1ff1ff7b-ca06-4c8f-8aa3-311459fe518f.png",
+          "inputs": [
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "Original face, eyes, bob and drawing"
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "Original ordinary closed smile"
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "Native upper details and single silver pin; uniform superseded"
+            },
+            {
+              "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+              "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+              "bytes": 1815855,
+              "role": "Native leg and below-knee sock fit; wardrobe superseded"
+            },
+            {
+              "path": "dependencies/df8471a070982d88/N12.png",
+              "sha256": "df8471a070982d88ce8d36e416ced08aa925a9314ef03e4e7fece24fd1d391ee",
+              "bytes": 2114677,
+              "role": "N12 selected wardrobe, home direction and material only; no face or pose authority"
+            }
+          ],
+          "prompt": {
+            "path": "scenes/N20/prompt.txt",
+            "sha256": "1c44783cefd37b279ce9865e20295b72018519830009a29dfba173fea1f0aa9e",
+            "bytes": 3360
+          },
+          "output": {
+            "path": "scenes/N20/initial.png",
+            "sha256": "c16c78db634fade1f17774221afa7294eb70cb3b1543ef92f8a17c6f7e158f08",
+            "bytes": 2161963
+          }
+        },
+        {
+          "stage": "r1",
+          "model": null,
+          "native_filename": "exec-9dabf475-2752-4c23-af70-538d6b760ca8.png",
+          "inputs": [
+            {
+              "path": "scenes/N20/initial.png",
+              "sha256": "c16c78db634fade1f17774221afa7294eb70cb3b1543ef92f8a17c6f7e158f08",
+              "bytes": 2161963,
+              "role": "Edit target; sole scene, framing, expression and pose source"
+            },
+            {
+              "path": "dependencies/281da5ca10992c7b/A-2.png",
+              "sha256": "281da5ca10992c7ba38bb62c9a5b2884ddfe90fe0cdb2a1a2ebedb766b8682fa",
+              "bytes": 2046655,
+              "role": "Original selected A-2 outfit: exactly three front bib buttons only"
+            },
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "Original face and open smile preservation"
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "Original identity support; preserve target laugh"
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "Native hair and silver pin detail only"
+            }
+          ],
+          "prompt": {
+            "path": "scenes/N20/prompt-r1.txt",
+            "sha256": "054b29f6937767740aa667ca627d24887cfb5efaf249661c93f52915dfaf12ba",
+            "bytes": 1018
+          },
+          "output": {
+            "path": "scenes/N20/r1.png",
+            "sha256": "99522823c1d76c8139b4df4bb8f4ebe1e86b5b8f0263297a588c1e1b64acc0fe",
+            "bytes": 2138156
+          }
+        },
+        {
+          "stage": "r2",
+          "model": null,
+          "native_filename": "exec-31932941-0693-491e-b50c-84ab3070d739.png",
+          "inputs": [
+            {
+              "path": "scenes/N20/r1.png",
+              "sha256": "99522823c1d76c8139b4df4bb8f4ebe1e86b5b8f0263297a588c1e1b64acc0fe",
+              "bytes": 2138156,
+              "role": "Edit target; sole scene, framing, expression and pose source"
+            },
+            {
+              "path": "dependencies/281da5ca10992c7b/A-2.png",
+              "sha256": "281da5ca10992c7ba38bb62c9a5b2884ddfe90fe0cdb2a1a2ebedb766b8682fa",
+              "bytes": 2046655,
+              "role": "Original selected A-2 outfit: exactly three front bib buttons only"
+            },
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "Original face and open smile preservation"
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "Original identity support; preserve target laugh"
+            },
+            {
+              "path": "scenes/N20/buttons-r1-review.png",
+              "sha256": "ff16b679ac0d77df46f3ea18e0863246c382d389d6e2367963ae237cb65200d0",
+              "bytes": 45885,
+              "role": "Unmodified zoom of the target's four-button defect; location guide only, not separate composition"
+            }
+          ],
+          "prompt": {
+            "path": "scenes/N20/prompt-r2.txt",
+            "sha256": "ed714ebb7ac92955dc22dc37210ab02694c4296f50d57740822736d7b29cb557",
+            "bytes": 1146
+          },
+          "output": {
+            "path": "scenes/N20/r2.png",
+            "sha256": "0395fb9fcc1711a904dbe0b40b057e42a88054e4d0981e12cf8211a73721f6bb",
+            "bytes": 2136915
+          }
+        }
+      ],
+      "album_entry_at_preservation": {
+        "id": "0395fb9fcc1711a904dbe0b40b057e42a88054e4d0981e12cf8211a73721f6bb",
+        "sha256": "0395fb9fcc1711a904dbe0b40b057e42a88054e4d0981e12cf8211a73721f6bb",
+        "title": "それ、ちょっとずるい",
+        "code": "N20",
+        "series": "おうちの8場面",
+        "width": 1536,
+        "height": 1024,
+        "sourcePath": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N20-tea-laugh/image.png"
+      }
+    },
+    {
+      "id": "N21",
+      "title_ja": "うん、聞いてる",
+      "preservation_status": "user_selected_scene_or_wardrobe_direction",
+      "authority_promoted": false,
+      "final_image": {
+        "path": "scenes/N21/image.png",
+        "sha256": "22d421647534e42f966c35167cbe8858032df4dcb942af9e0a8ce4ad883d9862",
+        "bytes": 2451223
+      },
+      "generation_record": "scenes/N21/generation.json",
+      "selected_stage": "initial",
+      "calls": [
+        {
+          "stage": "initial",
+          "model": null,
+          "native_filename": "exec-1911e47d-c600-4bf9-9fc4-2c152ba0e2c3.png",
+          "inputs": [
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "Original face, eyes, bob and drawing"
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "Original ordinary closed smile"
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "Native upper details and single silver pin; uniform superseded"
+            },
+            {
+              "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+              "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+              "bytes": 1815855,
+              "role": "Native leg and below-knee sock fit; wardrobe superseded"
+            },
+            {
+              "path": "dependencies/df8471a070982d88/N12.png",
+              "sha256": "df8471a070982d88ce8d36e416ced08aa925a9314ef03e4e7fece24fd1d391ee",
+              "bytes": 2114677,
+              "role": "N12 selected wardrobe, home direction and material only; no face or pose authority"
+            }
+          ],
+          "prompt": {
+            "path": "scenes/N21/prompt.txt",
+            "sha256": "27f141a2fbbc1c95ef3d6324491e602cb6471e12b05821809a897efa8c8b8b44",
+            "bytes": 3373
+          },
+          "output": {
+            "path": "scenes/N21/initial.png",
+            "sha256": "22d421647534e42f966c35167cbe8858032df4dcb942af9e0a8ce4ad883d9862",
+            "bytes": 2451223
+          }
+        }
+      ],
+      "album_entry_at_preservation": {
+        "id": "22d421647534e42f966c35167cbe8858032df4dcb942af9e0a8ce4ad883d9862",
+        "sha256": "22d421647534e42f966c35167cbe8858032df4dcb942af9e0a8ce4ad883d9862",
+        "title": "うん、聞いてる",
+        "code": "N21",
+        "series": "おうちの8場面",
+        "width": 1024,
+        "height": 1536,
+        "sourcePath": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N21-cushion-listen/image.png"
+      }
+    },
+    {
+      "id": "N22",
+      "title_ja": "まだ起きてるよ",
+      "preservation_status": "user_selected_scene_or_wardrobe_direction",
+      "authority_promoted": false,
+      "final_image": {
+        "path": "scenes/N22/image.png",
+        "sha256": "74d944dab19b8f67245d789e001c78e7e7930da6ea001089d1f853b92eee21c6",
+        "bytes": 2526985
+      },
+      "generation_record": "scenes/N22/generation.json",
+      "selected_stage": "r1",
+      "calls": [
+        {
+          "stage": "initial",
+          "model": null,
+          "native_filename": "exec-4968828a-5fec-42c2-b14e-b50fff912561.png",
+          "inputs": [
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "Original face, eyes, bob and drawing"
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "Original ordinary closed smile"
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "Native upper details and single silver pin; uniform superseded"
+            },
+            {
+              "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+              "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+              "bytes": 1815855,
+              "role": "Native leg and below-knee sock fit; wardrobe superseded"
+            },
+            {
+              "path": "dependencies/ec27b53e5a9a0585/N15.png",
+              "sha256": "ec27b53e5a9a0585af40784383b44de8c9e81ace9f7dc01c17edc65625608cbf",
+              "bytes": 2678454,
+              "role": "N15 selected wardrobe, home direction and material only; no face or pose authority"
+            }
+          ],
+          "prompt": {
+            "path": "scenes/N22/prompt.txt",
+            "sha256": "da88f2c4f9f6de718b9edfe6d3566ef0167cd75e183402d0d2343aefb3f439c7",
+            "bytes": 3420
+          },
+          "output": {
+            "path": "scenes/N22/initial.png",
+            "sha256": "bb32bf2eeeb741a100a43a77cd258fea77c9478fe07a09c24d95e5154365859c",
+            "bytes": 2555886
+          }
+        },
+        {
+          "stage": "r1",
+          "model": null,
+          "native_filename": "exec-5308c0b5-1911-4f60-b9d3-bec1382cda64.png",
+          "inputs": [
+            {
+              "path": "scenes/N22/initial.png",
+              "sha256": "bb32bf2eeeb741a100a43a77cd258fea77c9478fe07a09c24d95e5154365859c",
+              "bytes": 2555886,
+              "role": "Edit target, sole scene, camera, pose, face expression, clothing and foot-placement source"
+            },
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "Original facial identity preservation only"
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "Original expression support; preserve target expression"
+            },
+            {
+              "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+              "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+              "bytes": 1815855,
+              "role": "Native lower-leg and sock fit detail; target determines ivory color and pose"
+            },
+            {
+              "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png",
+              "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+              "bytes": 71786,
+              "role": "F09 material only: opaque rounded toe cap and sparse shallow cloth wrinkles"
+            }
+          ],
+          "prompt": {
+            "path": "scenes/N22/prompt-r1.txt",
+            "sha256": "f2489a116784dd7fb4b359d4043f6adc8bec02f97014b71fea8ad0b4e01e4792",
+            "bytes": 1320
+          },
+          "output": {
+            "path": "scenes/N22/r1.png",
+            "sha256": "74d944dab19b8f67245d789e001c78e7e7930da6ea001089d1f853b92eee21c6",
+            "bytes": 2526985
+          }
+        }
+      ],
+      "album_entry_at_preservation": {
+        "id": "74d944dab19b8f67245d789e001c78e7e7930da6ea001089d1f853b92eee21c6",
+        "sha256": "74d944dab19b8f67245d789e001c78e7e7930da6ea001089d1f853b92eee21c6",
+        "title": "まだ起きてるよ",
+        "code": "N22",
+        "series": "おうちの8場面",
+        "width": 1024,
+        "height": 1536,
+        "sourcePath": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N22-blanket-wrap/image.png"
+      }
+    },
+    {
+      "id": "N24",
+      "title_ja": "これ、しおりにしたよ",
+      "preservation_status": "user_selected_scene_or_wardrobe_direction",
+      "authority_promoted": false,
+      "final_image": {
+        "path": "scenes/N24/image.png",
+        "sha256": "85084c857aa51fbbb28882b394100f114e6e9ae0ff3e8a7b1eba77ec166b540a",
+        "bytes": 2240234
+      },
+      "generation_record": "scenes/N24/generation.json",
+      "selected_stage": "initial",
+      "calls": [
+        {
+          "stage": "initial",
+          "model": null,
+          "native_filename": "exec-35e5e35c-1251-4444-ac42-d77c3eb7c409.png",
+          "inputs": [
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "Original face, eyes, black bob, drawing and adult character identity authority."
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "Original everyday closed-mouth smile authority; only the explicitly requested new emotion may change the mouth/eyelids."
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "Native upper-body detail and one silver straight hairpin; canonical uniform is replaced by A-2 home outfit."
+            },
+            {
+              "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+              "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+              "bytes": 1815855,
+              "role": "Native healthy adult leg construction and below-knee ribbed sock fit; blue skirt, grey sock color and shoes are superseded by the selected A-2 taupe dress and ivory indoor socks."
+            },
+            {
+              "path": "scenes/N16/image.png",
+              "sha256": "ed396eb7322ad2ef5c53db4ea46dca3b28abf9939ff1743f94cd77336c5bb425",
+              "bytes": 2174338,
+              "role": "User-selected A-2 home outfit, atmosphere and fabric finish only; no face, camera or pose authority."
+            }
+          ],
+          "prompt": {
+            "path": "scenes/N24/prompt.txt",
+            "sha256": "c64c617d9192387ec47e5ae6501e13bf51074c71d8b2cc9a75ac7f577856a1dc",
+            "bytes": 3680
+          },
+          "output": {
+            "path": "scenes/N24/initial.png",
+            "sha256": "85084c857aa51fbbb28882b394100f114e6e9ae0ff3e8a7b1eba77ec166b540a",
+            "bytes": 2240234
+          }
+        }
+      ],
+      "album_entry_at_preservation": {
+        "id": "85084c857aa51fbbb28882b394100f114e6e9ae0ff3e8a7b1eba77ec166b540a",
+        "sha256": "85084c857aa51fbbb28882b394100f114e6e9ae0ff3e8a7b1eba77ec166b540a",
+        "title": "これ、しおりにしたよ",
+        "code": "N24",
+        "series": "近くで過ごす時間",
+        "width": 1024,
+        "height": 1536,
+        "sourcePath": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N24-ribbon-bookmark/image.png"
+      }
+    },
+    {
+      "id": "N27",
+      "title_ja": "も、笑わせないで",
+      "preservation_status": "user_selected_scene_or_wardrobe_direction",
+      "authority_promoted": false,
+      "final_image": {
+        "path": "scenes/N27/image.png",
+        "sha256": "e2f705453c63d5f114a8d25c47ab05359b926b260384a25a92673829a85c5e30",
+        "bytes": 2210876
+      },
+      "generation_record": "scenes/N27/generation.json",
+      "selected_stage": "initial",
+      "calls": [
+        {
+          "stage": "initial",
+          "model": null,
+          "native_filename": "exec-b04b0e70-492f-4b25-8052-429e42e3c085.png",
+          "inputs": [
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "Original face, eyes, black bob, drawing and adult character identity authority."
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "Original everyday closed-mouth smile authority; only the explicitly requested new emotion may change the mouth/eyelids."
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "Native upper-body detail and one silver straight hairpin; canonical uniform is replaced by A-2 home outfit."
+            },
+            {
+              "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+              "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+              "bytes": 1815855,
+              "role": "Native healthy adult leg construction and below-knee ribbed sock fit; blue skirt, grey sock color and shoes are superseded by the selected A-2 taupe dress and ivory indoor socks."
+            },
+            {
+              "path": "scenes/N20/image.png",
+              "sha256": "0395fb9fcc1711a904dbe0b40b057e42a88054e4d0981e12cf8211a73721f6bb",
+              "bytes": 2136915,
+              "role": "User-selected A-2 home outfit, atmosphere and fabric finish only; no face, camera or pose authority."
+            }
+          ],
+          "prompt": {
+            "path": "scenes/N27/prompt.txt",
+            "sha256": "0e2adee3843cc25e69caec91efa5f67b6d61e09d2c583e982fb87372c463e4ba",
+            "bytes": 3674
+          },
+          "output": {
+            "path": "scenes/N27/initial.png",
+            "sha256": "e2f705453c63d5f114a8d25c47ab05359b926b260384a25a92673829a85c5e30",
+            "bytes": 2210876
+          }
+        }
+      ],
+      "album_entry_at_preservation": {
+        "id": "e2f705453c63d5f114a8d25c47ab05359b926b260384a25a92673829a85c5e30",
+        "sha256": "e2f705453c63d5f114a8d25c47ab05359b926b260384a25a92673829a85c5e30",
+        "title": "も、笑わせないで",
+        "code": "N27",
+        "series": "近くで過ごす時間",
+        "width": 1024,
+        "height": 1536,
+        "sourcePath": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N27-trying-not-to-laugh/image.png"
+      }
+    },
+    {
+      "id": "N28",
+      "title_ja": "それで、どうなったの？",
+      "preservation_status": "user_selected_scene_or_wardrobe_direction",
+      "authority_promoted": false,
+      "final_image": {
+        "path": "scenes/N28/image.png",
+        "sha256": "c77430291ca30e75ff44954d63ea534d7317bf8dd3745a97a6ef2115f604ebf3",
+        "bytes": 2085120
+      },
+      "generation_record": "scenes/N28/generation.json",
+      "selected_stage": "r1",
+      "calls": [
+        {
+          "stage": "initial",
+          "model": null,
+          "native_filename": "exec-133b9c7d-b89b-4100-9c3e-c1d49d13e9c1.png",
+          "inputs": [
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "Original face, eyes, black bob, drawing and adult character identity authority."
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "Original everyday closed-mouth smile authority; only the explicitly requested new emotion may change the mouth/eyelids."
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "Native upper-body detail and one silver straight hairpin; canonical uniform is replaced by A-2 home outfit."
+            },
+            {
+              "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+              "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+              "bytes": 1815855,
+              "role": "Native healthy adult leg construction and below-knee ribbed sock fit; blue skirt, grey sock color and shoes are superseded by the selected A-2 taupe dress and ivory indoor socks."
+            },
+            {
+              "path": "scenes/N21/image.png",
+              "sha256": "22d421647534e42f966c35167cbe8858032df4dcb942af9e0a8ce4ad883d9862",
+              "bytes": 2451223,
+              "role": "User-selected A-2 home outfit, atmosphere and fabric finish only; no face, camera or pose authority."
+            }
+          ],
+          "prompt": {
+            "path": "scenes/N28/prompt.txt",
+            "sha256": "22cb3f5025cf89dfd1773f416f9510e0c350f4e1e23eecd96e2b452d8f57d36c",
+            "bytes": 3780
+          },
+          "output": {
+            "path": "scenes/N28/initial.png",
+            "sha256": "708d8985749c3953b63df52dc1e65d17df6205836dfb5abc85165ccf370059cb",
+            "bytes": 2155333
+          }
+        },
+        {
+          "stage": "r1",
+          "model": null,
+          "native_filename": "exec-9490da67-f90e-4435-b2f2-ce073639b3e4.png",
+          "inputs": [
+            {
+              "path": "scenes/N28/initial.png",
+              "sha256": "708d8985749c3953b63df52dc1e65d17df6205836dfb5abc85165ccf370059cb",
+              "bytes": 2155333,
+              "role": "Sole edit target; complete scene, camera, pose, expression and all unchanged areas."
+            },
+            {
+              "path": "dependencies/281da5ca10992c7b/A-2.png",
+              "sha256": "281da5ca10992c7ba38bb62c9a5b2884ddfe90fe0cdb2a1a2ebedb766b8682fa",
+              "bytes": 2046655,
+              "role": "Selected A-2 outfit construction and ivory indoor sock color only."
+            },
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "Original face, eyes, black bob and drawing identity authority."
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "Original everyday expression authority; preserve target emotion."
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "Native upper detail and single silver pin only; uniform superseded."
+            }
+          ],
+          "prompt": {
+            "path": "scenes/N28/prompt-r1.txt",
+            "sha256": "72b6d8297044fd9257cb23d16dfa22582050bc20b01db4d13165e45649087d24",
+            "bytes": 1216
+          },
+          "output": {
+            "path": "scenes/N28/r1.png",
+            "sha256": "c77430291ca30e75ff44954d63ea534d7317bf8dd3745a97a6ef2115f604ebf3",
+            "bytes": 2085120
+          }
+        }
+      ],
+      "album_entry_at_preservation": {
+        "id": "c77430291ca30e75ff44954d63ea534d7317bf8dd3745a97a6ef2115f604ebf3",
+        "sha256": "c77430291ca30e75ff44954d63ea534d7317bf8dd3745a97a6ef2115f604ebf3",
+        "title": "それで、どうなったの？",
+        "code": "N28",
+        "series": "近くで過ごす時間",
+        "width": 1536,
+        "height": 1024,
+        "sourcePath": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N28-sofa-arm-listen/image.png"
+      }
+    },
+    {
+      "id": "N30",
+      "title_ja": "もう少し、ここにいて",
+      "preservation_status": "user_selected_scene_or_wardrobe_direction",
+      "authority_promoted": false,
+      "final_image": {
+        "path": "scenes/N30/image.png",
+        "sha256": "9efb7e1d1a6cca20ff715db7110c040249c4a612bc0aee17302652600ced0cd8",
+        "bytes": 2402351
+      },
+      "generation_record": "scenes/N30/generation.json",
+      "selected_stage": "initial",
+      "calls": [
+        {
+          "stage": "initial",
+          "model": null,
+          "native_filename": "exec-f85ebe0e-df98-417f-bc82-9ef8c12faf02.png",
+          "inputs": [
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "Original face, eyes, black bob, drawing and adult character identity authority."
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "Original everyday closed-mouth smile authority; only the explicitly requested new emotion may change the mouth/eyelids."
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "Native upper-body detail and one silver straight hairpin; canonical uniform is replaced by A-2 home outfit."
+            },
+            {
+              "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+              "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+              "bytes": 1815855,
+              "role": "Native healthy adult leg construction and below-knee ribbed sock fit; blue skirt, grey sock color and shoes are superseded by the selected A-2 taupe dress and ivory indoor socks."
+            },
+            {
+              "path": "scenes/N22/image.png",
+              "sha256": "74d944dab19b8f67245d789e001c78e7e7930da6ea001089d1f853b92eee21c6",
+              "bytes": 2526985,
+              "role": "User-selected A-2 home outfit, atmosphere and fabric finish only; no face, camera or pose authority."
+            }
+          ],
+          "prompt": {
+            "path": "scenes/N30/prompt.txt",
+            "sha256": "e59d79abe0d2303e03b80f996dd27c888632239f55faf708ef8f7f15ee26abfa",
+            "bytes": 3806
+          },
+          "output": {
+            "path": "scenes/N30/initial.png",
+            "sha256": "9efb7e1d1a6cca20ff715db7110c040249c4a612bc0aee17302652600ced0cd8",
+            "bytes": 2402351
+          }
+        }
+      ],
+      "album_entry_at_preservation": {
+        "id": "9efb7e1d1a6cca20ff715db7110c040249c4a612bc0aee17302652600ced0cd8",
+        "sha256": "9efb7e1d1a6cca20ff715db7110c040249c4a612bc0aee17302652600ced0cd8",
+        "title": "もう少し、ここにいて",
+        "code": "N30",
+        "series": "近くで過ごす時間",
+        "width": 1024,
+        "height": 1536,
+        "sourcePath": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N30-blanket-cheek/image.png"
+      }
+    },
+    {
+      "id": "SU03",
+      "title_ja": "深緑ベスト × タータン",
+      "preservation_status": "user_selected_scene_or_wardrobe_direction",
+      "authority_promoted": false,
+      "final_image": {
+        "path": "scenes/SU03/image.png",
+        "sha256": "8876298ceae7df8bbc4d08705abb7e4e52ad6aed4a7cf3476c9dd27a76abdad6",
+        "bytes": 1790692
+      },
+      "generation_record": "scenes/SU03/generation.json",
+      "selected_stage": "initial",
+      "calls": [
+        {
+          "stage": "initial",
+          "model": null,
+          "native_filename": "exec-cfbb40d0-7296-4570-9db3-fdd085099559.png",
+          "inputs": [
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "Original face, grey eyes, black bob, drawing and established adult character identity authority."
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "Original familiar gentle closed-mouth smile authority."
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "Native upper-body detail and single straight silver hairpin; existing blouse design is superseded by this proposed uniform."
+            },
+            {
+              "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+              "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+              "bytes": 1815855,
+              "role": "Native adult leg construction and medium-grey opaque ribbed below-knee sock fit; existing skirt and white sneakers are superseded by this proposed uniform."
+            },
+            {
+              "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png",
+              "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+              "bytes": 71786,
+              "role": "Soft opaque sock material with sparse shallow natural wrinkles only; not face, pose, camera or wardrobe authority. Footwear hides the toes in this batch."
+            }
+          ],
+          "prompt": {
+            "path": "scenes/SU03/prompt.txt",
+            "sha256": "44f81329570c366c0c8a9e88b55f099745433bc8a17852981d6816af1d2253a9",
+            "bytes": 2989
+          },
+          "output": {
+            "path": "scenes/SU03/initial.png",
+            "sha256": "8876298ceae7df8bbc4d08705abb7e4e52ad6aed4a7cf3476c9dd27a76abdad6",
+            "bytes": 1790692
+          }
+        }
+      ],
+      "album_entry_at_preservation": {
+        "id": "8876298ceae7df8bbc4d08705abb7e4e52ad6aed4a7cf3476c9dd27a76abdad6",
+        "sha256": "8876298ceae7df8bbc4d08705abb7e4e52ad6aed4a7cf3476c9dd27a76abdad6",
+        "title": "深緑ベスト × タータン",
+        "code": "SU03",
+        "series": "制服の試作",
+        "width": 1024,
+        "height": 1536,
+        "sourcePath": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU03-forest-vest/image.png"
+      }
+    },
+    {
+      "id": "SU05",
+      "title_ja": "グレーボレロ × くすみローズ",
+      "preservation_status": "user_selected_scene_or_wardrobe_direction",
+      "authority_promoted": false,
+      "final_image": {
+        "path": "scenes/SU05/image.png",
+        "sha256": "4aa5ddd0de916db32004b48617388a63c8077ca8550e6550dd54b5e4ae244d88",
+        "bytes": 1848990
+      },
+      "generation_record": "scenes/SU05/generation.json",
+      "selected_stage": "r1",
+      "calls": [
+        {
+          "stage": "initial",
+          "model": null,
+          "native_filename": "exec-9eaad72e-ac13-413d-aa40-a1736a7125fe.png",
+          "inputs": [
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "Original face, grey eyes, black bob, drawing and established adult character identity authority."
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "Original familiar gentle closed-mouth smile authority."
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "Native upper-body detail and single straight silver hairpin; existing blouse design is superseded by this proposed uniform."
+            },
+            {
+              "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+              "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+              "bytes": 1815855,
+              "role": "Native adult leg construction and medium-grey opaque ribbed below-knee sock fit; existing skirt and white sneakers are superseded by this proposed uniform."
+            },
+            {
+              "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png",
+              "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+              "bytes": 71786,
+              "role": "Soft opaque sock material with sparse shallow natural wrinkles only; not face, pose, camera or wardrobe authority. Footwear hides the toes in this batch."
+            }
+          ],
+          "prompt": {
+            "path": "scenes/SU05/prompt.txt",
+            "sha256": "07d77b42792d58c2a09093bda577d7e7c07edf315c40bdc810a700add239c7c0",
+            "bytes": 3112
+          },
+          "output": {
+            "path": "scenes/SU05/initial.png",
+            "sha256": "7ef000bc77e333b8070ae692f2eb3ea8709db1672c65209b84e47c54d4289930",
+            "bytes": 1890168
+          }
+        },
+        {
+          "stage": "r1",
+          "model": null,
+          "native_filename": "exec-1f0248c1-8ab5-44dc-bdf2-c55017404a09.png",
+          "inputs": [
+            {
+              "path": "scenes/SU05/initial.png",
+              "sha256": "7ef000bc77e333b8070ae692f2eb3ea8709db1672c65209b84e47c54d4289930",
+              "bytes": 1890168,
+              "role": "Edit target; sole scene, pose, camera, expression and wardrobe source."
+            },
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "Original face, grey eyes, black bob, drawing and established adult character identity authority."
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "Original familiar gentle closed-mouth smile authority."
+            },
+            {
+              "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+              "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+              "bytes": 1815855,
+              "role": "Native leg and grey sock fit only, outfit and sneakers superseded by target."
+            },
+            {
+              "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png",
+              "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+              "bytes": 71786,
+              "role": "Soft opaque sock material with sparse shallow natural wrinkles only; not face, pose, camera or wardrobe authority. Footwear hides the toes in this batch."
+            }
+          ],
+          "prompt": {
+            "path": "scenes/SU05/prompt-r1.txt",
+            "sha256": "535fd5a6978ec1b30037d68f7309ad25073f86119c82cbda62044367f4cef318",
+            "bytes": 1750
+          },
+          "output": {
+            "path": "scenes/SU05/r1.png",
+            "sha256": "4aa5ddd0de916db32004b48617388a63c8077ca8550e6550dd54b5e4ae244d88",
+            "bytes": 1848990
+          }
+        }
+      ],
+      "album_entry_at_preservation": {
+        "id": "4aa5ddd0de916db32004b48617388a63c8077ca8550e6550dd54b5e4ae244d88",
+        "sha256": "4aa5ddd0de916db32004b48617388a63c8077ca8550e6550dd54b5e4ae244d88",
+        "title": "グレーボレロ × くすみローズ",
+        "code": "SU05",
+        "series": "制服の試作",
+        "width": 1024,
+        "height": 1536,
+        "sourcePath": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU05-grey-bolero/image.png"
+      }
+    },
+    {
+      "id": "SU06",
+      "title_ja": "淡ブルーの夏ワンピース制服",
+      "preservation_status": "user_selected_scene_or_wardrobe_direction",
+      "authority_promoted": false,
+      "final_image": {
+        "path": "scenes/SU06/image.png",
+        "sha256": "2e319b17b6e5d5b8cace795c6fd6c065aae1ac1d0c89127dfd1ef0741d6525ce",
+        "bytes": 1721326
+      },
+      "generation_record": "scenes/SU06/generation.json",
+      "selected_stage": "initial",
+      "calls": [
+        {
+          "stage": "initial",
+          "model": null,
+          "native_filename": "exec-de20a073-0cb5-4485-9fbe-252541f041f4.png",
+          "inputs": [
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "Original face, grey eyes, black bob, drawing and established adult character identity authority."
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "Original familiar gentle closed-mouth smile authority."
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "Native upper-body detail and single straight silver hairpin; existing blouse design is superseded by this proposed uniform."
+            },
+            {
+              "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+              "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+              "bytes": 1815855,
+              "role": "Native adult leg construction and medium-grey opaque ribbed below-knee sock fit; existing skirt and white sneakers are superseded by this proposed uniform."
+            },
+            {
+              "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png",
+              "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+              "bytes": 71786,
+              "role": "Soft opaque sock material with sparse shallow natural wrinkles only; not face, pose, camera or wardrobe authority. Footwear hides the toes in this batch."
+            }
+          ],
+          "prompt": {
+            "path": "scenes/SU06/prompt.txt",
+            "sha256": "139553636d46280fbffae9c7525ab03ef3d015696b1657d4f897157dd1148b8d",
+            "bytes": 3081
+          },
+          "output": {
+            "path": "scenes/SU06/initial.png",
+            "sha256": "2e319b17b6e5d5b8cace795c6fd6c065aae1ac1d0c89127dfd1ef0741d6525ce",
+            "bytes": 1721326
+          }
+        }
+      ],
+      "album_entry_at_preservation": {
+        "id": "2e319b17b6e5d5b8cace795c6fd6c065aae1ac1d0c89127dfd1ef0741d6525ce",
+        "sha256": "2e319b17b6e5d5b8cace795c6fd6c065aae1ac1d0c89127dfd1ef0741d6525ce",
+        "title": "淡ブルーの夏ワンピース制服",
+        "code": "SU06",
+        "series": "制服の試作",
+        "width": 1024,
+        "height": 1536,
+        "sourcePath": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU06-blue-summer/image.png"
+      }
+    },
+    {
+      "id": "SU08",
+      "title_ja": "アイボリーベスト × 深緑リボン",
+      "preservation_status": "user_selected_scene_or_wardrobe_direction",
+      "authority_promoted": false,
+      "final_image": {
+        "path": "scenes/SU08/image.png",
+        "sha256": "e8a152bf54e80c44405870d4c32c10714e924d81330b9cf483b4f21143788271",
+        "bytes": 1740754
+      },
+      "generation_record": "scenes/SU08/generation.json",
+      "selected_stage": "initial",
+      "calls": [
+        {
+          "stage": "initial",
+          "model": null,
+          "native_filename": "exec-436f4a1c-9899-4cf3-a19f-d6e1ccd8ba6a.png",
+          "inputs": [
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "Original face, grey eyes, black bob, drawing and established adult character identity authority."
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "Original familiar gentle closed-mouth smile authority."
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "Native upper-body detail and single straight silver hairpin; existing blouse design is superseded by this proposed uniform."
+            },
+            {
+              "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+              "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+              "bytes": 1815855,
+              "role": "Native adult leg construction and medium-grey opaque ribbed below-knee sock fit; existing skirt and white sneakers are superseded by this proposed uniform."
+            },
+            {
+              "path": "scenes/SU03/image.png",
+              "sha256": "8876298ceae7df8bbc4d08705abb7e4e52ad6aed4a7cf3476c9dd27a76abdad6",
+              "bytes": 1790692,
+              "role": "User-selected school-uniform wardrobe family and catalog presentation only; face authority remains original P1/P2, and new outfit differences are explicitly specified."
+            }
+          ],
+          "prompt": {
+            "path": "scenes/SU08/prompt.txt",
+            "sha256": "0952dc39233cb6ef7d7a56cfdfc6e685ffe5df190f0222d5e8dae6bca732af6c",
+            "bytes": 3035
+          },
+          "output": {
+            "path": "scenes/SU08/initial.png",
+            "sha256": "e8a152bf54e80c44405870d4c32c10714e924d81330b9cf483b4f21143788271",
+            "bytes": 1740754
+          }
+        }
+      ],
+      "album_entry_at_preservation": {
+        "id": "e8a152bf54e80c44405870d4c32c10714e924d81330b9cf483b4f21143788271",
+        "sha256": "e8a152bf54e80c44405870d4c32c10714e924d81330b9cf483b4f21143788271",
+        "title": "アイボリーベスト × 深緑リボン",
+        "code": "SU08",
+        "series": "制服のバリエーション",
+        "width": 1024,
+        "height": 1536,
+        "sourcePath": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU08-ivory-vest/image.png"
+      }
+    },
+    {
+      "id": "SU11",
+      "title_ja": "グレージュ × ココアチェック",
+      "preservation_status": "user_selected_scene_or_wardrobe_direction",
+      "authority_promoted": false,
+      "final_image": {
+        "path": "scenes/SU11/image.png",
+        "sha256": "02de80ef6ad2254e34219c2ad2dfe156d8a678524242ed3f1f3cc6f0820fe2d2",
+        "bytes": 1806694
+      },
+      "generation_record": "scenes/SU11/generation.json",
+      "selected_stage": "initial",
+      "calls": [
+        {
+          "stage": "initial",
+          "model": null,
+          "native_filename": "exec-57202525-643f-4c2b-b573-74626bdbf1cf.png",
+          "inputs": [
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "Original face, grey eyes, black bob, drawing and established adult character identity authority."
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "Original familiar gentle closed-mouth smile authority."
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "Native upper-body detail and single straight silver hairpin; existing blouse design is superseded by this proposed uniform."
+            },
+            {
+              "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+              "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+              "bytes": 1815855,
+              "role": "Native adult leg construction and medium-grey opaque ribbed below-knee sock fit; existing skirt and white sneakers are superseded by this proposed uniform."
+            },
+            {
+              "path": "scenes/SU05/image.png",
+              "sha256": "4aa5ddd0de916db32004b48617388a63c8077ca8550e6550dd54b5e4ae244d88",
+              "bytes": 1848990,
+              "role": "User-selected school-uniform wardrobe family and catalog presentation only; face authority remains original P1/P2, and new outfit differences are explicitly specified."
+            }
+          ],
+          "prompt": {
+            "path": "scenes/SU11/prompt.txt",
+            "sha256": "00f76761e77feac8e8a99871873281b50ccd1f57694a6c572d7483cdb3a811eb",
+            "bytes": 3118
+          },
+          "output": {
+            "path": "scenes/SU11/initial.png",
+            "sha256": "02de80ef6ad2254e34219c2ad2dfe156d8a678524242ed3f1f3cc6f0820fe2d2",
+            "bytes": 1806694
+          }
+        }
+      ],
+      "album_entry_at_preservation": {
+        "id": "02de80ef6ad2254e34219c2ad2dfe156d8a678524242ed3f1f3cc6f0820fe2d2",
+        "sha256": "02de80ef6ad2254e34219c2ad2dfe156d8a678524242ed3f1f3cc6f0820fe2d2",
+        "title": "グレージュ × ココアチェック",
+        "code": "SU11",
+        "series": "制服のバリエーション",
+        "width": 1024,
+        "height": 1536,
+        "sourcePath": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU11-greige-bolero/image.png"
+      }
+    },
+    {
+      "id": "SU14",
+      "title_ja": "白セーラー × 水色チェック",
+      "preservation_status": "user_selected_scene_or_wardrobe_direction",
+      "authority_promoted": false,
+      "final_image": {
+        "path": "scenes/SU14/image.png",
+        "sha256": "770686d300151d88f5b6e4c92ec1194bea4eed5dc055f314d863e63346e348a3",
+        "bytes": 1710526
+      },
+      "generation_record": "scenes/SU14/generation.json",
+      "selected_stage": "initial",
+      "calls": [
+        {
+          "stage": "initial",
+          "model": null,
+          "native_filename": "exec-996ecd6f-ed3f-4bfc-ade7-59c3859d1be3.png",
+          "inputs": [
+            {
+              "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+              "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+              "bytes": 1869375,
+              "role": "Original face, grey eyes, black bob, drawing and established adult character identity authority."
+            },
+            {
+              "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+              "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+              "bytes": 1836424,
+              "role": "Original familiar gentle closed-mouth smile authority."
+            },
+            {
+              "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+              "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+              "bytes": 1852161,
+              "role": "Native upper-body detail and single straight silver hairpin; existing blouse design is superseded by this proposed uniform."
+            },
+            {
+              "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+              "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+              "bytes": 1815855,
+              "role": "Native adult leg construction and medium-grey opaque ribbed below-knee sock fit; existing skirt and white sneakers are superseded by this proposed uniform."
+            },
+            {
+              "path": "scenes/SU06/image.png",
+              "sha256": "2e319b17b6e5d5b8cace795c6fd6c065aae1ac1d0c89127dfd1ef0741d6525ce",
+              "bytes": 1721326,
+              "role": "User-selected school-uniform wardrobe family and catalog presentation only; face authority remains original P1/P2, and new outfit differences are explicitly specified."
+            }
+          ],
+          "prompt": {
+            "path": "scenes/SU14/prompt.txt",
+            "sha256": "aa3dd2dc096b0ac1ceaf0897e2abeec841c737c773ffe1f378760368d6042974",
+            "bytes": 3034
+          },
+          "output": {
+            "path": "scenes/SU14/initial.png",
+            "sha256": "770686d300151d88f5b6e4c92ec1194bea4eed5dc055f314d863e63346e348a3",
+            "bytes": 1710526
+          }
+        }
+      ],
+      "album_entry_at_preservation": {
+        "id": "770686d300151d88f5b6e4c92ec1194bea4eed5dc055f314d863e63346e348a3",
+        "sha256": "770686d300151d88f5b6e4c92ec1194bea4eed5dc055f314d863e63346e348a3",
+        "title": "白セーラー × 水色チェック",
+        "code": "SU14",
+        "series": "制服のバリエーション",
+        "width": 1024,
+        "height": 1536,
+        "sourcePath": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU14-white-sailor-blue-check/image.png"
+      }
+    }
+  ],
+  "selection_and_feedback_evidence": [
+    "history/2026-09-09-a2-close-moments/selection-before-uniform-exploration.json",
+    "history/2026-09-09-a2-next-eight/continuation-selection.json",
+    "history/2026-09-09-school-uniform-expansion/selection.json",
+    "history/2026-09-09-school-uniform-six/continuation-selection.json",
+    "history/2026-09-10-album-feedback/batch-AF02-AF05.json",
+    "history/2026-09-10-album-feedback/feedback-snapshot.json",
+    "history/2026-09-11-album-feedback/batch-AF06-AF08.json",
+    "history/2026-09-11-album-feedback/feedback-snapshot.json",
+    "history/2026-09-11-natural-sock-fit/batch-AF09-AF11.json",
+    "history/2026-09-11-natural-sock-fit/feedback-snapshot.json"
+  ],
+  "files": [
+    {
+      "path": "dependencies/131cb2ac57be9592/design-state.json",
+      "source_path_at_preservation": "akari-v3.1/design-state.json",
+      "sha256": "131cb2ac57be9592bc1014c3b542dcc272abe930cf166587dbdc050ca083809f",
+      "bytes": 11848,
+      "role": "historical_source"
+    },
+    {
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png",
+      "source_path_at_preservation": "akari-v3.1/references/L1-lower-reference.png",
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "bytes": 1815855,
+      "role": "generation_dependency"
+    },
+    {
+      "path": "dependencies/281da5ca10992c7b/A-2.png",
+      "source_path_at_preservation": "akari-v3.1/situations/a2-home/images/A-2.png",
+      "sha256": "281da5ca10992c7ba38bb62c9a5b2884ddfe90fe0cdb2a1a2ebedb766b8682fa",
+      "bytes": 2046655,
+      "role": "generation_dependency"
+    },
+    {
+      "path": "dependencies/4be5272b81bbcf95/N08.png",
+      "source_path_at_preservation": "akari-v3.1/situations/a2-home/images/N08.png",
+      "sha256": "4be5272b81bbcf95fb0287dbb64f24225bee9677733c3cebe2939e59bb3fd8a6",
+      "bytes": 2428776,
+      "role": "generation_dependency"
+    },
+    {
+      "path": "dependencies/55c3ea0a4e2df0a4/README.md",
+      "source_path_at_preservation": "akari-v3.1/README.md",
+      "sha256": "55c3ea0a4e2df0a4d95c1c0156ee7b48eae845e07d8ea1cc02bb98cbef963b94",
+      "bytes": 15129,
+      "role": "historical_source"
+    },
+    {
+      "path": "dependencies/6a07e44c0025d7b6/F01-cushion-listening.png",
+      "source_path_at_preservation": "akari-v3.1/situations/favorites-continuation/images/F01-cushion-listening.png",
+      "sha256": "6a07e44c0025d7b63820a008f7a1d1c59ece6ceb3a998d3a057b0b2c38c7e0c1",
+      "bytes": 2572126,
+      "role": "historical_source"
+    },
+    {
+      "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png",
+      "source_path_at_preservation": "akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+      "bytes": 71786,
+      "role": "generation_dependency"
+    },
+    {
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png",
+      "source_path_at_preservation": "akari-v3.1/references/U1-upper-reference.png",
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "bytes": 1852161,
+      "role": "generation_dependency"
+    },
+    {
+      "path": "dependencies/a2b31b7247e2ab45/reference-set.json",
+      "source_path_at_preservation": "akari-v3.1/reference-set.json",
+      "sha256": "a2b31b7247e2ab45fe7deac4534631b0526b513d1b05735a118c79de981ab12d",
+      "bytes": 14590,
+      "role": "historical_source"
+    },
+    {
+      "path": "dependencies/b04a1cdc711006c8/F04-sofa-side-sit-mug.png",
+      "source_path_at_preservation": "akari-v3.1/situations/favorites-continuation/images/F04-sofa-side-sit-mug.png",
+      "sha256": "b04a1cdc711006c8a3175c565084eaabc4a341ed258576e9f62c484703b09d6a",
+      "bytes": 2642049,
+      "role": "historical_source"
+    },
+    {
+      "path": "dependencies/b50d03be676bab28/r2.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N29-seat-beside-me/r2.png",
+      "sha256": "b50d03be676bab28e6e211d9898185a2d6436b617db86fc39e9d2449e1b9a9d3",
+      "bytes": 2321866,
+      "role": "generation_dependency"
+    },
+    {
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png",
+      "source_path_at_preservation": "akari-v3.0/references/P1-user-pro-portrait.png",
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "bytes": 1869375,
+      "role": "generation_dependency"
+    },
+    {
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png",
+      "source_path_at_preservation": "akari-v3.0/references/P2-quiet-smile.png",
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "bytes": 1836424,
+      "role": "generation_dependency"
+    },
+    {
+      "path": "dependencies/ce47a311cf394964/sock-material-must.txt",
+      "source_path_at_preservation": "akari-v3.1/prompts/sock-material-must.txt",
+      "sha256": "ce47a311cf394964c56acfc76b0c50d5b26099fab52bf06fa4b38a1f155ee2c0",
+      "bytes": 4201,
+      "role": "historical_source"
+    },
+    {
+      "path": "dependencies/df8471a070982d88/N12.png",
+      "source_path_at_preservation": "akari-v3.1/situations/a2-home/images/N12.png",
+      "sha256": "df8471a070982d88ce8d36e416ced08aa925a9314ef03e4e7fece24fd1d391ee",
+      "bytes": 2114677,
+      "role": "generation_dependency"
+    },
+    {
+      "path": "dependencies/e090b707738c50c4/A13.png",
+      "source_path_at_preservation": "akari-v3.1/situations/abc-exploration/images/A13.png",
+      "sha256": "e090b707738c50c482dc6c3234060c4d24eb16b619a504c705797bf490aa4d73",
+      "bytes": 2308949,
+      "role": "generation_dependency"
+    },
+    {
+      "path": "dependencies/ec27b53e5a9a0585/N15.png",
+      "source_path_at_preservation": "akari-v3.1/situations/a2-home/images/N15.png",
+      "sha256": "ec27b53e5a9a0585af40784383b44de8c9e81ace9f7dc01c17edc65625608cbf",
+      "bytes": 2678454,
+      "role": "generation_dependency"
+    },
+    {
+      "path": "history/2026-09-09-a2-close-moments/selection-before-uniform-exploration.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/selection-before-uniform-exploration.json",
+      "sha256": "34722ffb7c87d59b6a685df48e81e3a7b7c9ed87b6f179ff161f832f806fb113",
+      "bytes": 1243,
+      "role": "selection_or_feedback_snapshot"
+    },
+    {
+      "path": "history/2026-09-09-a2-next-eight/continuation-selection.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/continuation-selection.json",
+      "sha256": "d9073b6aaacecaed689b1d7cd91d5909796d899dc130bf9bdbfe1d8cceea7285",
+      "bytes": 273,
+      "role": "selection_or_feedback_snapshot"
+    },
+    {
+      "path": "history/2026-09-09-school-uniform-expansion/selection.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/selection.json",
+      "sha256": "6c9c118a2bda5c38c1a14cd5420f885349a23129bdcb676ae714eff20951762b",
+      "bytes": 2931,
+      "role": "selection_or_feedback_snapshot"
+    },
+    {
+      "path": "history/2026-09-09-school-uniform-six/continuation-selection.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/continuation-selection.json",
+      "sha256": "63cd65f7836c3ef1c3032c7c0aecfb3ffc8be30504c61e74fa4db824ebb6f849",
+      "bytes": 919,
+      "role": "selection_or_feedback_snapshot"
+    },
+    {
+      "path": "history/2026-09-10-album-feedback/batch-AF02-AF05.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/batch-AF02-AF05.json",
+      "sha256": "1994817694613c79040f4b299df13b39665f1bae043db75cd9183235acf2472e",
+      "bytes": 4154,
+      "role": "selection_or_feedback_snapshot"
+    },
+    {
+      "path": "history/2026-09-10-album-feedback/feedback-snapshot.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/feedback-snapshot.json",
+      "sha256": "11ec41a845008d06c2f4e7ff0b84a3a5a37460b72a0606c2924eae8d482a65f8",
+      "bytes": 3897,
+      "role": "selection_or_feedback_snapshot"
+    },
+    {
+      "path": "history/2026-09-11-album-feedback/batch-AF06-AF08.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-album-feedback/batch-AF06-AF08.json",
+      "sha256": "7bb96f78b64e99b3076239d989f9536d97bf0eda32d582bea94b92fc27917ba2",
+      "bytes": 394,
+      "role": "selection_or_feedback_snapshot"
+    },
+    {
+      "path": "history/2026-09-11-album-feedback/feedback-snapshot.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-album-feedback/feedback-snapshot.json",
+      "sha256": "62cb268a81931502ea1a353b642d161686a3fc27fcaac5a88a278cb095278b64",
+      "bytes": 4293,
+      "role": "selection_or_feedback_snapshot"
+    },
+    {
+      "path": "history/2026-09-11-natural-sock-fit/batch-AF09-AF11.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/batch-AF09-AF11.json",
+      "sha256": "38fd55981bcc9e9eb59a20e593119b7aba13c0f1f279d2e0e7049ac3329d0c29",
+      "bytes": 747,
+      "role": "selection_or_feedback_snapshot"
+    },
+    {
+      "path": "history/2026-09-11-natural-sock-fit/feedback-snapshot.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/feedback-snapshot.json",
+      "sha256": "b5d615baff8d50718b2642127c3f20e45f877a91b950a0dfb67b97054cf32964",
+      "bytes": 5371,
+      "role": "selection_or_feedback_snapshot"
+    },
+    {
+      "path": "scenes/AF01/AF01-beside-you.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF01-beside-you/AF01-beside-you.png",
+      "sha256": "50517641d84d0155a0be0964c135b739e35863c12e4bf8b69a9fa37db3455ee9",
+      "bytes": 2269615,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF01/generation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF01-beside-you/generation.json",
+      "sha256": "fffc24120b63de2116fcb5d46d5c179125888178c9e90110889c1f0867629ab6",
+      "bytes": 2815,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF01/prompt.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF01-beside-you/prompt.txt",
+      "sha256": "ccc520d0fef27b0ac2497afa94943e81b07c45aef01d3121d17d80ccc1550039",
+      "bytes": 3420,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF02/AF02-quiet-beside-you.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF02-quiet-beside-you/AF02-quiet-beside-you.png",
+      "sha256": "f5e22e307587a0c1be5ad92578815c49bfc85582284de7e3f589a39da5b034ab",
+      "bytes": 2349291,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF02/generation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF02-quiet-beside-you/generation.json",
+      "sha256": "fdb3d8d7028a68ce67a7ee1fc64eb3613be56c3bbe77451143250d6eca5757b4",
+      "bytes": 3428,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF02/prompt.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF02-quiet-beside-you/prompt.txt",
+      "sha256": "4aa90331f02c8551d80a7104cc4ea6dbb1b1d619951f114e9368ee7b26b21743",
+      "bytes": 4130,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF02/validation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF02-quiet-beside-you/validation.json",
+      "sha256": "acc221aa6250afe994ca593ab89941b78cf51849304809104a8a829f935d8011",
+      "bytes": 1651,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF03/AF03-relaxed-beside-you.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF03-relaxed-beside-you/AF03-relaxed-beside-you.png",
+      "sha256": "5daf5021aaa03bd5c2a95619af4cebb5310d4815a64654599b72a8ac4dcd4c75",
+      "bytes": 2366761,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF03/generation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF03-relaxed-beside-you/generation.json",
+      "sha256": "abdee8300252ebd3884199e2a4566948d49c99db0c705219d145ca1752fdd8cb",
+      "bytes": 3235,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF03/prompt.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF03-relaxed-beside-you/prompt.txt",
+      "sha256": "7a36858cbf284102fbad043ad7301f008f08493ef93c71471b596dbd1d50760b",
+      "bytes": 2601,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF03/validation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF03-relaxed-beside-you/validation.json",
+      "sha256": "14966c71f59c19c8051014bbf07e42920b3da63c0be859a982c28ddd40f41a57",
+      "bytes": 1045,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF04/AF04-dozing-mid-conversation-r2.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF04-dozing-mid-conversation/AF04-dozing-mid-conversation-r2.png",
+      "sha256": "36e2099b459e45b8e6fc95439edcc822d7ab9593b35010e4acf69a36788e620d",
+      "bytes": 2332861,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF04/AF04-dozing-mid-conversation.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF04-dozing-mid-conversation/AF04-dozing-mid-conversation.png",
+      "sha256": "df7729e1d15425056503939ed0b7f785a50a8f8b734c70186afd0bf92bb36893",
+      "bytes": 2575170,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF04/generation-initial.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF04-dozing-mid-conversation/generation-initial.json",
+      "sha256": "0b9202acf2be62caeeee23320d053cf40cf3a316a001208751e9db6639d06bfa",
+      "bytes": 3666,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF04/generation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF04-dozing-mid-conversation/generation.json",
+      "sha256": "ce1803a8f92e76d9337e9151c50794493c613556c3c9390e59e99dda79234b4e",
+      "bytes": 3610,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF04/prompt-r2.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF04-dozing-mid-conversation/prompt-r2.txt",
+      "sha256": "96a9a0e301b54943da87e622490089df7c8a74355e267bf1158d059cd45d15d6",
+      "bytes": 1399,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF04/prompt.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF04-dozing-mid-conversation/prompt.txt",
+      "sha256": "da05e00d2f74e98d804a0ce8c967ed30207e663a74c3ead39faa94f55960f04d",
+      "bytes": 3774,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF04/sock-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF04-dozing-mid-conversation/sock-review.png",
+      "sha256": "75ba1207f89d84f398142305f18cb55889f0bc7830eb2e2d7550bd0d2c552bfc",
+      "bytes": 118030,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF04/validation-initial.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF04-dozing-mid-conversation/validation-initial.json",
+      "sha256": "798c352feb445232f56154f63a4bbfd3e826f4fb2ded3c4a05fb85f7d01c58f2",
+      "bytes": 1573,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF04/validation-r2.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF04-dozing-mid-conversation/validation-r2.json",
+      "sha256": "b9ae16b606df23f93bfe39994b43b0ec13c60321257574eb6a406a32058d9916",
+      "bytes": 357,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF04/validation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF04-dozing-mid-conversation/validation.json",
+      "sha256": "798c352feb445232f56154f63a4bbfd3e826f4fb2ded3c4a05fb85f7d01c58f2",
+      "bytes": 1573,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF05/AF05-a-little-tired-r2.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF05-a-little-tired/AF05-a-little-tired-r2.png",
+      "sha256": "df40c20b912b42e07de4d26070d2852bff87b8a80076ddc5a4390c39f6d74189",
+      "bytes": 2174686,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF05/AF05-a-little-tired-r3.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF05-a-little-tired/AF05-a-little-tired-r3.png",
+      "sha256": "9cc7b9b87474d6ae342abf88533b068ed5aa87e936df6d845282e7e340dde097",
+      "bytes": 2127775,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF05/AF05-a-little-tired.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF05-a-little-tired/AF05-a-little-tired.png",
+      "sha256": "31c7b0965cb030bff4fe02fa61713a50996b86f8083296c87923576a3439990f",
+      "bytes": 2232076,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF05/generation-initial.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF05-a-little-tired/generation-initial.json",
+      "sha256": "1f096156306b379d4bd372209d2c87351dc64f1313174cae54689bab25794924",
+      "bytes": 3488,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF05/generation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF05-a-little-tired/generation.json",
+      "sha256": "d3b10f9f05d8e7afac19925252452f0e7da2194bc4686f77e9b9bb98088e1f7c",
+      "bytes": 3202,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF05/inputs/AF04-r2-sock-material.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF05-a-little-tired/inputs/AF04-r2-sock-material.png",
+      "sha256": "2c069e5ebbdba0f08c65e7f258ce8571ef25ca39b4db2afdb19506a58cb3ba70",
+      "bytes": 101049,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF05/prompt-r2.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF05-a-little-tired/prompt-r2.txt",
+      "sha256": "cced8f47df11d7bfd8b8c264f972759013e98b53bed2399f9ff0425fd39810c3",
+      "bytes": 1441,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF05/prompt-r3.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF05-a-little-tired/prompt-r3.txt",
+      "sha256": "abd048d703fae1a5aaf6f470bb2c261a310088ad67e997d7979eefac6e6bb756",
+      "bytes": 1449,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF05/prompt.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF05-a-little-tired/prompt.txt",
+      "sha256": "a6bb196eb923684e7b5fd5166ce8f805a44b35c7ffa0779fb9c6fe3ebda07128",
+      "bytes": 3787,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF05/sock-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF05-a-little-tired/sock-review.png",
+      "sha256": "ad53d55a55f748e279f7d0e3281919702c5d60def2e6cb0be8c3ae5e5cc50170",
+      "bytes": 102531,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF05/validation-initial.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF05-a-little-tired/validation-initial.json",
+      "sha256": "35e450795b3fdba005df37becb440fb262dd26d240de51b88fc7dd140ca734ee",
+      "bytes": 1568,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF05/validation-r3.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF05-a-little-tired/validation-r3.json",
+      "sha256": "906a97d70204f048e41cdcd75cf56a44fcb0e93b4e94c92c6793989acce54a07",
+      "bytes": 292,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF05/validation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-10-album-feedback/AF05-a-little-tired/validation.json",
+      "sha256": "35e450795b3fdba005df37becb440fb262dd26d240de51b88fc7dd140ca734ee",
+      "bytes": 1568,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF06/AF06-cheek-on-cushion.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-album-feedback/AF06-cheek-on-cushion/AF06-cheek-on-cushion.png",
+      "sha256": "c9499157fd4e138ecee8a46eb53284136516629cd5704b072359d0a6c222cbab",
+      "bytes": 2270752,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF06/generation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-album-feedback/AF06-cheek-on-cushion/generation.json",
+      "sha256": "a414192e6e1b0651167bd1b1b2297c115078779376aa2f8f5856884701ae2c29",
+      "bytes": 3607,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF06/prompt.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-album-feedback/AF06-cheek-on-cushion/prompt.txt",
+      "sha256": "aaec6746c615ac42d55869c5c6b46fc86a4e02f9042c17389d4181a5d9b4d59b",
+      "bytes": 3892,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF06/sock-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-album-feedback/AF06-cheek-on-cushion/sock-review.png",
+      "sha256": "88fdc504b9ca809e96fcce712d33f98227b597567bfedba0fe945aa7a266f5e1",
+      "bytes": 103246,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF06/validation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-album-feedback/AF06-cheek-on-cushion/validation.json",
+      "sha256": "5ce2b272820e55f30ddc8919b97664999312c988706050fa39429dfc327554cd",
+      "bytes": 1503,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF07/AF07-eye-contact-after-rest.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-album-feedback/AF07-eye-contact-after-rest/AF07-eye-contact-after-rest.png",
+      "sha256": "484c8ed6972386d9e15a166326e58eedba03addd0ac5000cd8eb92bd29bdc911",
+      "bytes": 2115364,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF07/generation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-album-feedback/AF07-eye-contact-after-rest/generation.json",
+      "sha256": "6079fe6d43de02e5926723efb97829702d465f4223f54cdb21851e0883225d9f",
+      "bytes": 3587,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF07/prompt.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-album-feedback/AF07-eye-contact-after-rest/prompt.txt",
+      "sha256": "a9cd213c3eb3b6a79575a0fec4e895ada3b0c577c5299c80ea37b1406517a763",
+      "bytes": 3933,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF07/sock-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-album-feedback/AF07-eye-contact-after-rest/sock-review.png",
+      "sha256": "dccdce9308c90dad9eff6e66736419735353d88e7704c366bd88d8773876a58a",
+      "bytes": 107486,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF07/validation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-album-feedback/AF07-eye-contact-after-rest/validation.json",
+      "sha256": "ecf623028a666787019b6d7f945b6bd96f482da4f385e43fd65af21cccee1f09",
+      "bytes": 1525,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF08/AF08-peaceful-bed-nap.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-album-feedback/AF08-peaceful-bed-nap/AF08-peaceful-bed-nap.png",
+      "sha256": "ec553e9b54406ab421685f882ce7f9f565012d5f51fb61228d7a201708cc72cc",
+      "bytes": 2177224,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF08/generation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-album-feedback/AF08-peaceful-bed-nap/generation.json",
+      "sha256": "0e8bd52477ae3c81c36d0dff0da0e30172e6468af76d210416d083cbcefee415",
+      "bytes": 3987,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF08/prompt.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-album-feedback/AF08-peaceful-bed-nap/prompt.txt",
+      "sha256": "786779a071fd6c9856673b4854a62b2fb57c5d8ec4e9e75d037d6bc589defcd7",
+      "bytes": 4358,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF08/validation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-album-feedback/AF08-peaceful-bed-nap/validation.json",
+      "sha256": "fc922899e8727bcfc2135a85b0765e511250a03c8e7acdcaae9b46b1fb72b339",
+      "bytes": 1370,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF09/AF09-natural-side-sit-feet.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/AF09-natural-side-sit-feet/AF09-natural-side-sit-feet.png",
+      "sha256": "08b2bd1994a0fe72a9535fd12257ab26af9bc04e324a5e741d0e45154082ed15",
+      "bytes": 2070539,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF09/generation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/AF09-natural-side-sit-feet/generation.json",
+      "sha256": "0224667f67eb155876ba22f9dc42a118b5ec70f39ed1044d10cccab858c388d7",
+      "bytes": 3611,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF09/prompt.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/AF09-natural-side-sit-feet/prompt.txt",
+      "sha256": "37155b3151d9d048de5f6807f8721ddc5b5e11206d19fd6a37d07c500e686b8d",
+      "bytes": 3608,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF09/sock-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/AF09-natural-side-sit-feet/sock-review.png",
+      "sha256": "f17f9d989d9edd72f8cf4fc2729e608dfcc748c13f2b06a56bd1fc7d6b756d0c",
+      "bytes": 105977,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF09/validation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/AF09-natural-side-sit-feet/validation.json",
+      "sha256": "328be85652ba27e1efb60dd68b8dd9af1a83dd2a58df692964b149d4ccd75b74",
+      "bytes": 1569,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF10/AF10-feet-down-rest-r2.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/AF10-feet-down-rest/AF10-feet-down-rest-r2.png",
+      "sha256": "54acaa40655093f69403f61bfc3821907ff3f22b29a780a79e75e3e98fdb663d",
+      "bytes": 2086995,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF10/AF10-feet-down-rest.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/AF10-feet-down-rest/AF10-feet-down-rest.png",
+      "sha256": "0d1d7b77e91cb0d73ca65e5e28ffffbd667f8cebbf2e50d11f1a1f36e836fa9e",
+      "bytes": 2192197,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF10/generation-initial.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/AF10-feet-down-rest/generation-initial.json",
+      "sha256": "fe505ff83bc14ab39de72a32711917106953336df00bc9e1ea8f7d0ec4748eae",
+      "bytes": 3679,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF10/generation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/AF10-feet-down-rest/generation.json",
+      "sha256": "18722e43b51428330fc0d089dc929a5c7379e2565dbbcad09e6376d5c9c10ce9",
+      "bytes": 2973,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF10/prompt-r2.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/AF10-feet-down-rest/prompt-r2.txt",
+      "sha256": "39819e316e8fcf7694d65d6f50c324e58a8fe51e16a28d47bd13329881c722eb",
+      "bytes": 1504,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF10/prompt.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/AF10-feet-down-rest/prompt.txt",
+      "sha256": "6ba25acd7c7efb8a73b474d21a69ce76eae9034d5517c8d7c01c7cffd34f3e4e",
+      "bytes": 3772,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF10/sock-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/AF10-feet-down-rest/sock-review.png",
+      "sha256": "3d2ee7804e89a6b538e4d796d8d8951d890535ab4e964e4d5cbc4c94f49c2e25",
+      "bytes": 144424,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF10/validation-r2.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/AF10-feet-down-rest/validation-r2.json",
+      "sha256": "d41835cac7e18760e85dd7160a7fb5fd0e7c44b0bb8f6e916e1e7d5be7a85838",
+      "bytes": 240,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF10/validation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/AF10-feet-down-rest/validation.json",
+      "sha256": "4fe8fe4a7eb0c9b93c6b3de178f15bcc1b8fdf5500802a1ffacc73edadff4910",
+      "bytes": 1678,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF11/AF11-cozy-conversation.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/AF11-cozy-conversation/AF11-cozy-conversation.png",
+      "sha256": "1158c646f3666bd26d1cc4304f93ca03f2ffe6624f89cd467f229b3e6e7a8723",
+      "bytes": 2310088,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF11/generation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/AF11-cozy-conversation/generation.json",
+      "sha256": "aebe78db1a9a56e0e58dd7dcbe5f789ca43e87be9666aa7ab1c8e253ed440aa7",
+      "bytes": 3899,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF11/prompt.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/AF11-cozy-conversation/prompt.txt",
+      "sha256": "f31e897531057f784a3bb03335e4c85ad682a4ec16074a4215261d35f8f6566f",
+      "bytes": 3933,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF11/sock-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/AF11-cozy-conversation/sock-review.png",
+      "sha256": "38fd88e9f2d477271597a7086532d068c358ce3812e40da66d37fa22e1eeac13",
+      "bytes": 104810,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/AF11/validation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/AF11-cozy-conversation/validation.json",
+      "sha256": "3d5ce49cea1a546700c9aa6b3e9cbbd9095c8d5eea9b69ee4f9c5ccd655d4740",
+      "bytes": 1874,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N16/call-initial.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N16-ribbon-gift/call-initial.json",
+      "sha256": "96bf73836812c0ef87427935f367598f0ef9c84012e75f8e0c4c5f692884659c",
+      "bytes": 2271,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N16/clothing-initial-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N16-ribbon-gift/clothing-initial-review.png",
+      "sha256": "6e45615fc1a20f41172627bbda240e54a7211b94054e2f9c188c424cd7e55b48",
+      "bytes": 663483,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N16/clothing-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N16-ribbon-gift/clothing-review.png",
+      "sha256": "04942cb393f7dae98ad3b935340c72c60cdcf60591ea8b706896eb7ef930f068",
+      "bytes": 663483,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N16/face-initial-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N16-ribbon-gift/face-initial-review.png",
+      "sha256": "e9bcb5a6cc225f5cc7961989361cb156d5910ed758378971aa7aece922afd1ce",
+      "bytes": 541860,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N16/face-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N16-ribbon-gift/face-review.png",
+      "sha256": "c028befc65f4b7819a381cb3672cef42e991df8dbd0cc1a01dbb0e01ee8b7143",
+      "bytes": 541860,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N16/generation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N16-ribbon-gift/generation.json",
+      "sha256": "484583199fccd3744c9d12f455c0e7842f5db49fbc731e9191b50839e666b9fe",
+      "bytes": 4888,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N16/image.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N16-ribbon-gift/image.png",
+      "sha256": "ed396eb7322ad2ef5c53db4ea46dca3b28abf9939ff1743f94cd77336c5bb425",
+      "bytes": 2174338,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N16/initial.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N16-ribbon-gift/initial.png",
+      "sha256": "ed396eb7322ad2ef5c53db4ea46dca3b28abf9939ff1743f94cd77336c5bb425",
+      "bytes": 2174338,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N16/prompt.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N16-ribbon-gift/prompt.txt",
+      "sha256": "f566b6669556cc8b3830c43d58d171645b3151d213e1b24d3914c04c6e416e17",
+      "bytes": 3208,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N20/buttons-r1-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N20-tea-laugh/buttons-r1-review.png",
+      "sha256": "ff16b679ac0d77df46f3ea18e0863246c382d389d6e2367963ae237cb65200d0",
+      "bytes": 45885,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N20/call-initial.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N20-tea-laugh/call-initial.json",
+      "sha256": "b5ea00a390f43092f8ff01c1eef0f4fdc2801c3fb5234445528070b85596d6e2",
+      "bytes": 2267,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N20/call-r1.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N20-tea-laugh/call-r1.json",
+      "sha256": "84c2ba6adcd2146f8090c146218fda06d1dcbfc8f961506ad4b039aab971dfce",
+      "bytes": 2220,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N20/call-r2.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N20-tea-laugh/call-r2.json",
+      "sha256": "c8fc3ac38769e0ac05c11049964eba7a07d9ba0fecd17bdc1d59bcd6ed918da8",
+      "bytes": 2252,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N20/clothing-initial-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N20-tea-laugh/clothing-initial-review.png",
+      "sha256": "f92c1897fcbdaec8ba9aa1c615eb8a3b71f2816eb5f8a4433b26d7ba7784555a",
+      "bytes": 322489,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N20/clothing-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N20-tea-laugh/clothing-review.png",
+      "sha256": "661c751f7e8f6cbfbcd45bd74098c485a3fe5e51640f4db541a8cb8f6693c96f",
+      "bytes": 315553,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N20/face-initial-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N20-tea-laugh/face-initial-review.png",
+      "sha256": "ecb6ae4d4f4b549ddb452730ad53f5da65661003ed3310f1bbf7572df203f6db",
+      "bytes": 577939,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N20/face-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N20-tea-laugh/face-review.png",
+      "sha256": "b1b5941d53d163a0f826b7c72bd878ff65c4055c517a2df08c0d0a1f9d68cbc2",
+      "bytes": 563734,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N20/generation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N20-tea-laugh/generation.json",
+      "sha256": "bb23d176752b599987711d1833b49a03e0daeaaaa98b59911854d89cb8ac4127",
+      "bytes": 10171,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N20/image.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N20-tea-laugh/image.png",
+      "sha256": "0395fb9fcc1711a904dbe0b40b057e42a88054e4d0981e12cf8211a73721f6bb",
+      "bytes": 2136915,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N20/initial.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N20-tea-laugh/initial.png",
+      "sha256": "c16c78db634fade1f17774221afa7294eb70cb3b1543ef92f8a17c6f7e158f08",
+      "bytes": 2161963,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N20/prompt-r1.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N20-tea-laugh/prompt-r1.txt",
+      "sha256": "054b29f6937767740aa667ca627d24887cfb5efaf249661c93f52915dfaf12ba",
+      "bytes": 1018,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N20/prompt-r2.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N20-tea-laugh/prompt-r2.txt",
+      "sha256": "ed714ebb7ac92955dc22dc37210ab02694c4296f50d57740822736d7b29cb557",
+      "bytes": 1146,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N20/prompt.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N20-tea-laugh/prompt.txt",
+      "sha256": "1c44783cefd37b279ce9865e20295b72018519830009a29dfba173fea1f0aa9e",
+      "bytes": 3360,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N20/r1.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N20-tea-laugh/r1.png",
+      "sha256": "99522823c1d76c8139b4df4bb8f4ebe1e86b5b8f0263297a588c1e1b64acc0fe",
+      "bytes": 2138156,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N20/r2.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N20-tea-laugh/r2.png",
+      "sha256": "0395fb9fcc1711a904dbe0b40b057e42a88054e4d0981e12cf8211a73721f6bb",
+      "bytes": 2136915,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N21/call-initial.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N21-cushion-listen/call-initial.json",
+      "sha256": "931f989938520c91d97fd35afbf335a2206b7a4a159555b75bd9a71bd6d55709",
+      "bytes": 2277,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N21/clothing-initial-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N21-cushion-listen/clothing-initial-review.png",
+      "sha256": "baaa484973a2c48acb95f027867b92d9d138fd72d06c0bb44de4cbfd526b89c8",
+      "bytes": 829385,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N21/clothing-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N21-cushion-listen/clothing-review.png",
+      "sha256": "82c0a23e5fdce8feaa32c1f70dca25dff56dbac251a266cc3f567f05b7ea538f",
+      "bytes": 829385,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N21/face-initial-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N21-cushion-listen/face-initial-review.png",
+      "sha256": "10f73834aac733d6ec47340dbe3c6fdfb13fd7f5a4d3585b0b8b54cbfce9341a",
+      "bytes": 582353,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N21/face-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N21-cushion-listen/face-review.png",
+      "sha256": "cd1802e9e9ea70c19db4f7e105fb0768bda589037878218790134bef6ee7d655",
+      "bytes": 582353,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N21/generation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N21-cushion-listen/generation.json",
+      "sha256": "22b6f22721e9ca2bbab4baea18340a2650e8f297ad7a3536e89c759ee0a0d32d",
+      "bytes": 4884,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N21/image.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N21-cushion-listen/image.png",
+      "sha256": "22d421647534e42f966c35167cbe8858032df4dcb942af9e0a8ce4ad883d9862",
+      "bytes": 2451223,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N21/initial.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N21-cushion-listen/initial.png",
+      "sha256": "22d421647534e42f966c35167cbe8858032df4dcb942af9e0a8ce4ad883d9862",
+      "bytes": 2451223,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N21/prompt.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N21-cushion-listen/prompt.txt",
+      "sha256": "27f141a2fbbc1c95ef3d6324491e602cb6471e12b05821809a897efa8c8b8b44",
+      "bytes": 3373,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N22/call-initial.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N22-blanket-wrap/call-initial.json",
+      "sha256": "26f7fde1754743b4ccca1cbc4aecc41d133098b3a7ce67922da70495690fe5ea",
+      "bytes": 2273,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N22/call-r1.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N22-blanket-wrap/call-r1.json",
+      "sha256": "8446240106c7dc36c18277824df7e2060b369a1e6422987c465321d79bc2f5a3",
+      "bytes": 2334,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N22/clothing-initial-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N22-blanket-wrap/clothing-initial-review.png",
+      "sha256": "eaaae17a430287f80547f16db68a2a198806b468c5f434ec2988517331c0c2b1",
+      "bytes": 232762,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N22/clothing-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N22-blanket-wrap/clothing-review.png",
+      "sha256": "4b6b9a5e9b0f504c454e1196b2657266d132847f9b9df742da00d025ab35aeec",
+      "bytes": 229604,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N22/face-initial-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N22-blanket-wrap/face-initial-review.png",
+      "sha256": "1f9481dd7756bf86a5a189ccf427c71c7bb0868d8eef0bc37a8dd2341573e42c",
+      "bytes": 188845,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N22/face-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N22-blanket-wrap/face-review.png",
+      "sha256": "23bdbc38515b0552e6befe9aaf322739ed702e337594aceb34edaf71e6de5ce3",
+      "bytes": 185152,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N22/generation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N22-blanket-wrap/generation.json",
+      "sha256": "e268065407f164509c6fc4fecf21a4830f67ec9dd59cb8def6b9e292e3bcd8c8",
+      "bytes": 8046,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N22/image.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N22-blanket-wrap/image.png",
+      "sha256": "74d944dab19b8f67245d789e001c78e7e7930da6ea001089d1f853b92eee21c6",
+      "bytes": 2526985,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N22/initial.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N22-blanket-wrap/initial.png",
+      "sha256": "bb32bf2eeeb741a100a43a77cd258fea77c9478fe07a09c24d95e5154365859c",
+      "bytes": 2555886,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N22/prompt-r1.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N22-blanket-wrap/prompt-r1.txt",
+      "sha256": "f2489a116784dd7fb4b359d4043f6adc8bec02f97014b71fea8ad0b4e01e4792",
+      "bytes": 1320,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N22/prompt.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N22-blanket-wrap/prompt.txt",
+      "sha256": "da88f2c4f9f6de718b9edfe6d3566ef0167cd75e183402d0d2343aefb3f439c7",
+      "bytes": 3420,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N22/r1.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N22-blanket-wrap/r1.png",
+      "sha256": "74d944dab19b8f67245d789e001c78e7e7930da6ea001089d1f853b92eee21c6",
+      "bytes": 2526985,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N22/sock-initial-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N22-blanket-wrap/sock-initial-review.png",
+      "sha256": "bc5cd84764dd4b295ca0b7b5ce23955136e0605177accfc7a2ec3202c4ae513b",
+      "bytes": 111484,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N22/sock-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-next-eight/N22-blanket-wrap/sock-review.png",
+      "sha256": "520c1495907368e1fcef3cb34bba9d9090e326023397a661cd446c66e2ba0755",
+      "bytes": 111358,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N24/call-initial.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N24-ribbon-bookmark/call-initial.json",
+      "sha256": "e1a9a41d75f2f31f44d862dffc8ab2faa49a7fc3c8cd3611ec0ee88e07e3bc5a",
+      "bytes": 2597,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N24/clothing-initial-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N24-ribbon-bookmark/clothing-initial-review.png",
+      "sha256": "555230fcef9960bbac17efbf4f198cad6077a60e4c586ab3740c7e745975fdbc",
+      "bytes": 1088277,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N24/clothing-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N24-ribbon-bookmark/clothing-review.png",
+      "sha256": "555230fcef9960bbac17efbf4f198cad6077a60e4c586ab3740c7e745975fdbc",
+      "bytes": 1088277,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N24/face-initial-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N24-ribbon-bookmark/face-initial-review.png",
+      "sha256": "8d3f21df6b74cad26fc3eb5912d87fa0c95b73f46fab883fd52380be90676c29",
+      "bytes": 464160,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N24/face-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N24-ribbon-bookmark/face-review.png",
+      "sha256": "8d3f21df6b74cad26fc3eb5912d87fa0c95b73f46fab883fd52380be90676c29",
+      "bytes": 464160,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N24/generation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N24-ribbon-bookmark/generation.json",
+      "sha256": "b6512cf99722532792ce6012f5c2906df0d61b5a7edc2f45dc06c698335a8a2a",
+      "bytes": 5283,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N24/image.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N24-ribbon-bookmark/image.png",
+      "sha256": "85084c857aa51fbbb28882b394100f114e6e9ae0ff3e8a7b1eba77ec166b540a",
+      "bytes": 2240234,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N24/initial.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N24-ribbon-bookmark/initial.png",
+      "sha256": "85084c857aa51fbbb28882b394100f114e6e9ae0ff3e8a7b1eba77ec166b540a",
+      "bytes": 2240234,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N24/prompt.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N24-ribbon-bookmark/prompt.txt",
+      "sha256": "c64c617d9192387ec47e5ae6501e13bf51074c71d8b2cc9a75ac7f577856a1dc",
+      "bytes": 3680,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N27/call-initial.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N27-trying-not-to-laugh/call-initial.json",
+      "sha256": "6bf701d040a4a1b314f5cfbc2c7acc20a9b833cb1ccac08ce7f978ef477b9c84",
+      "bytes": 2603,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N27/clothing-initial-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N27-trying-not-to-laugh/clothing-initial-review.png",
+      "sha256": "de3229003090a09b410bca62c0fda5a6d12de43b0cc6fb43a76db522f2c21fa2",
+      "bytes": 118363,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N27/clothing-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N27-trying-not-to-laugh/clothing-review.png",
+      "sha256": "4e3c053c15d6f4a4c4ad4cadbd9075aabd88492d374e64ad882ab979facbfcbf",
+      "bytes": 678713,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N27/face-initial-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N27-trying-not-to-laugh/face-initial-review.png",
+      "sha256": "163d8408fd27147e8638848266f5ede659500fcdd0ffc31079adc1716265ad2b",
+      "bytes": 552714,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N27/face-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N27-trying-not-to-laugh/face-review.png",
+      "sha256": "163d8408fd27147e8638848266f5ede659500fcdd0ffc31079adc1716265ad2b",
+      "bytes": 552714,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N27/generation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N27-trying-not-to-laugh/generation.json",
+      "sha256": "3816a3b201d3ff15c01c8740ab01dd8ee8b536bf2896d2091d22e56922e19a0d",
+      "bytes": 6321,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N27/hand-initial-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N27-trying-not-to-laugh/hand-initial-review.png",
+      "sha256": "cb813254425f7a13ff6d7d7330bc3f8d5682e39bfd3e222588492c818eb57161",
+      "bytes": 70359,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N27/hand-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N27-trying-not-to-laugh/hand-review.png",
+      "sha256": "cb813254425f7a13ff6d7d7330bc3f8d5682e39bfd3e222588492c818eb57161",
+      "bytes": 70359,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N27/image.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N27-trying-not-to-laugh/image.png",
+      "sha256": "e2f705453c63d5f114a8d25c47ab05359b926b260384a25a92673829a85c5e30",
+      "bytes": 2210876,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N27/initial.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N27-trying-not-to-laugh/initial.png",
+      "sha256": "e2f705453c63d5f114a8d25c47ab05359b926b260384a25a92673829a85c5e30",
+      "bytes": 2210876,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N27/mouth_hand-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N27-trying-not-to-laugh/mouth_hand-review.png",
+      "sha256": "a0ad3673f9085fe0a9656766c6486fb32db139a163b04016854605f3b1a3117a",
+      "bytes": 118363,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N27/prompt.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N27-trying-not-to-laugh/prompt.txt",
+      "sha256": "0e2adee3843cc25e69caec91efa5f67b6d61e09d2c583e982fb87372c463e4ba",
+      "bytes": 3674,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N28/call-initial.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N28-sofa-arm-listen/call-initial.json",
+      "sha256": "76d4e078131636a30b072b2f7bbd8eb47869691f65cb841a91df9e5db0613254",
+      "bytes": 2600,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N28/call-r1.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N28-sofa-arm-listen/call-r1.json",
+      "sha256": "70fbdb786fa7df776ee5055575c00c3d8d3abf8ca19c41fc457aea828086bebd",
+      "bytes": 2327,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N28/clothing-initial-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N28-sofa-arm-listen/clothing-initial-review.png",
+      "sha256": "e9564822fe66fec93e3a91cfcd12819a6539508ea81c723af9e96f58c2a18093",
+      "bytes": 557949,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N28/clothing-r1-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N28-sofa-arm-listen/clothing-r1-review.png",
+      "sha256": "a36af12ada498dc5c1b17bfc910f343e3055eff552cb9ab446ff6a1e596eef37",
+      "bytes": 539579,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N28/clothing-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N28-sofa-arm-listen/clothing-review.png",
+      "sha256": "a36af12ada498dc5c1b17bfc910f343e3055eff552cb9ab446ff6a1e596eef37",
+      "bytes": 539579,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N28/face-initial-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N28-sofa-arm-listen/face-initial-review.png",
+      "sha256": "2d787b8548d5db1db294b8123ad31dcf8cbafafd0cc1f9513c657c60a41ed5c1",
+      "bytes": 556141,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N28/face-r1-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N28-sofa-arm-listen/face-r1-review.png",
+      "sha256": "927925f168be2973f4401148083867a9ce26b2e9b6fca4c281da36c76ffbabc1",
+      "bytes": 536360,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N28/face-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N28-sofa-arm-listen/face-review.png",
+      "sha256": "927925f168be2973f4401148083867a9ce26b2e9b6fca4c281da36c76ffbabc1",
+      "bytes": 536360,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N28/generation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N28-sofa-arm-listen/generation.json",
+      "sha256": "68b56371b3c3c464a241faea60086ba8ac9a2e4304e395dffb5c4829982e53fc",
+      "bytes": 8521,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N28/image.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N28-sofa-arm-listen/image.png",
+      "sha256": "c77430291ca30e75ff44954d63ea534d7317bf8dd3745a97a6ef2115f604ebf3",
+      "bytes": 2085120,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N28/initial.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N28-sofa-arm-listen/initial.png",
+      "sha256": "708d8985749c3953b63df52dc1e65d17df6205836dfb5abc85165ccf370059cb",
+      "bytes": 2155333,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N28/prompt-r1.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N28-sofa-arm-listen/prompt-r1.txt",
+      "sha256": "72b6d8297044fd9257cb23d16dfa22582050bc20b01db4d13165e45649087d24",
+      "bytes": 1216,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N28/prompt.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N28-sofa-arm-listen/prompt.txt",
+      "sha256": "22cb3f5025cf89dfd1773f416f9510e0c350f4e1e23eecd96e2b452d8f57d36c",
+      "bytes": 3780,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N28/r1.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N28-sofa-arm-listen/r1.png",
+      "sha256": "c77430291ca30e75ff44954d63ea534d7317bf8dd3745a97a6ef2115f604ebf3",
+      "bytes": 2085120,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N30/call-initial.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N30-blanket-cheek/call-initial.json",
+      "sha256": "48030a4735a366429e7e1ee00fb9b0e5cb7b1c22616f026251923d19a1cca17e",
+      "bytes": 2594,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N30/clothing-initial-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N30-blanket-cheek/clothing-initial-review.png",
+      "sha256": "e51c9ea2843b3871c1159411f809285f808fe9b35becb6ee52b8685ae8d05dea",
+      "bytes": 738128,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N30/clothing-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N30-blanket-cheek/clothing-review.png",
+      "sha256": "e51c9ea2843b3871c1159411f809285f808fe9b35becb6ee52b8685ae8d05dea",
+      "bytes": 738128,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N30/face-initial-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N30-blanket-cheek/face-initial-review.png",
+      "sha256": "bf953db1f2277b71f00fcedd0a84378990c85a94a48e3880f5c6d333e0664f62",
+      "bytes": 474621,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N30/face-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N30-blanket-cheek/face-review.png",
+      "sha256": "bf953db1f2277b71f00fcedd0a84378990c85a94a48e3880f5c6d333e0664f62",
+      "bytes": 474621,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N30/generation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N30-blanket-cheek/generation.json",
+      "sha256": "800ee1a76535708763a6c5bef28764dca97917f9aac0314099c249aac446de42",
+      "bytes": 5269,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N30/image.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N30-blanket-cheek/image.png",
+      "sha256": "9efb7e1d1a6cca20ff715db7110c040249c4a612bc0aee17302652600ced0cd8",
+      "bytes": 2402351,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N30/initial.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N30-blanket-cheek/initial.png",
+      "sha256": "9efb7e1d1a6cca20ff715db7110c040249c4a612bc0aee17302652600ced0cd8",
+      "bytes": 2402351,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/N30/prompt.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N30-blanket-cheek/prompt.txt",
+      "sha256": "e59d79abe0d2303e03b80f996dd27c888632239f55faf708ef8f7f15ee26abfa",
+      "bytes": 3806,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU03/call-initial.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU03-forest-vest/call-initial.json",
+      "sha256": "99ccb089b486f2cdf5d16c927e861c10a1327edcc0cf4725487aff7c2ab0b6b9",
+      "bytes": 2610,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU03/clothing_hands-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU03-forest-vest/clothing_hands-review.png",
+      "sha256": "d6b258c8926a0fb044497ceca19d4ed9f62d7c55aeaae9c68bbf8124aa1b4160",
+      "bytes": 461032,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU03/face-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU03-forest-vest/face-review.png",
+      "sha256": "488885ffc4e4734ac1ab7676498df2dd54382638495a3e1061def7e538161889",
+      "bytes": 164775,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU03/generation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU03-forest-vest/generation.json",
+      "sha256": "2077934da5130be125eda48532e1ac63d4d5795e12995b949e04df979353e142",
+      "bytes": 5300,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU03/image.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU03-forest-vest/image.png",
+      "sha256": "8876298ceae7df8bbc4d08705abb7e4e52ad6aed4a7cf3476c9dd27a76abdad6",
+      "bytes": 1790692,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU03/initial.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU03-forest-vest/initial.png",
+      "sha256": "8876298ceae7df8bbc4d08705abb7e4e52ad6aed4a7cf3476c9dd27a76abdad6",
+      "bytes": 1790692,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU03/prompt.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU03-forest-vest/prompt.txt",
+      "sha256": "44f81329570c366c0c8a9e88b55f099745433bc8a17852981d6816af1d2253a9",
+      "bytes": 2989,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU03/socks_shoes-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU03-forest-vest/socks_shoes-review.png",
+      "sha256": "0a1ad39d2b2864633275d6f304a055dbfc6b5eec2764f657cd52d5e9c00d1c30",
+      "bytes": 195071,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU05/call-initial.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU05-grey-bolero/call-initial.json",
+      "sha256": "48a39d3e43d743bbbff397a83c411f8cffcf1a995e2695e8a0264397f4875a6d",
+      "bytes": 2610,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU05/call-r1.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU05-grey-bolero/call-r1.json",
+      "sha256": "c893a780b5a9cad3e83594fe67c6526a87ad6221616135c45c83ce5bf1e6ea69",
+      "bytes": 2446,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU05/clothing_hands-initial-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU05-grey-bolero/clothing_hands-initial-review.png",
+      "sha256": "7562bb05768ee997b1428e187fc08f897ad52d6dff96a6b3db297ab210ed172f",
+      "bytes": 555030,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU05/clothing_hands-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU05-grey-bolero/clothing_hands-review.png",
+      "sha256": "283479fae2ff6768aae46110e537316dcd6584031b6d2924ec7577f75c415d64",
+      "bytes": 537279,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU05/face-initial-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU05-grey-bolero/face-initial-review.png",
+      "sha256": "110359565f63b2ad31314c6f744c24e6c48bc1ca25c843299158dd6d4c071799",
+      "bytes": 158164,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU05/face-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU05-grey-bolero/face-review.png",
+      "sha256": "624474db0124246d94ac496be92da3f6cb28a64303caa5a070f6bf4c5e8627ff",
+      "bytes": 155394,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU05/generation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU05-grey-bolero/generation.json",
+      "sha256": "b1ef0af40c6a54a9d6d08b1addd63e77945be6bef490910582385c0fc1327bbe",
+      "bytes": 8797,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU05/image.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU05-grey-bolero/image.png",
+      "sha256": "4aa5ddd0de916db32004b48617388a63c8077ca8550e6550dd54b5e4ae244d88",
+      "bytes": 1848990,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU05/initial.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU05-grey-bolero/initial.png",
+      "sha256": "7ef000bc77e333b8070ae692f2eb3ea8709db1672c65209b84e47c54d4289930",
+      "bytes": 1890168,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU05/prompt-r1.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU05-grey-bolero/prompt-r1.txt",
+      "sha256": "535fd5a6978ec1b30037d68f7309ad25073f86119c82cbda62044367f4cef318",
+      "bytes": 1750,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU05/prompt.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU05-grey-bolero/prompt.txt",
+      "sha256": "07d77b42792d58c2a09093bda577d7e7c07edf315c40bdc810a700add239c7c0",
+      "bytes": 3112,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU05/r1.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU05-grey-bolero/r1.png",
+      "sha256": "4aa5ddd0de916db32004b48617388a63c8077ca8550e6550dd54b5e4ae244d88",
+      "bytes": 1848990,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU05/socks_shoes-initial-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU05-grey-bolero/socks_shoes-initial-review.png",
+      "sha256": "6bfcc65389f33c27251dc6a2a44a4c6376f72c5ed0ddab95b3f191f131902b30",
+      "bytes": 182266,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU05/socks_shoes-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU05-grey-bolero/socks_shoes-review.png",
+      "sha256": "6650a0627550a4c88e63ef6272fe0c0d77603385a314ce8788186879fcd2e049",
+      "bytes": 176666,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU06/call-initial.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU06-blue-summer/call-initial.json",
+      "sha256": "464e2b87939fe6f5ad378d69feac8b2ff025de1eab5f6f16dfeb2baa1ffc6b82",
+      "bytes": 2610,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU06/clothing_hands-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU06-blue-summer/clothing_hands-review.png",
+      "sha256": "2d4ac9040256c1050e04a87e08e0ed2ba83cc435c4bb790910749d4312c54e0a",
+      "bytes": 392219,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU06/face-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU06-blue-summer/face-review.png",
+      "sha256": "ebcc752590ba0835e23c063255e11f1b0059c39ea15d5377a6c43f9e12237a93",
+      "bytes": 158351,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU06/generation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU06-blue-summer/generation.json",
+      "sha256": "a863d687ce8b63001c9b0a65aa9545b22b59a205b59cf733c8076e3b67440875",
+      "bytes": 5227,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU06/image.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU06-blue-summer/image.png",
+      "sha256": "2e319b17b6e5d5b8cace795c6fd6c065aae1ac1d0c89127dfd1ef0741d6525ce",
+      "bytes": 1721326,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU06/initial.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU06-blue-summer/initial.png",
+      "sha256": "2e319b17b6e5d5b8cace795c6fd6c065aae1ac1d0c89127dfd1ef0741d6525ce",
+      "bytes": 1721326,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU06/prompt.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU06-blue-summer/prompt.txt",
+      "sha256": "139553636d46280fbffae9c7525ab03ef3d015696b1657d4f897157dd1148b8d",
+      "bytes": 3081,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU06/socks_shoes-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-six/SU06-blue-summer/socks_shoes-review.png",
+      "sha256": "6cf6d31e1ec4f1824af9717a0315755fb472fb9beac7258a0a2d82362863c559",
+      "bytes": 187503,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU08/call-initial.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU08-ivory-vest/call-initial.json",
+      "sha256": "37da03bcd3c0a8cb24215604db424b5354244f6d00c314485ffe861540457796",
+      "bytes": 2608,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU08/clothing_hands-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU08-ivory-vest/clothing_hands-review.png",
+      "sha256": "6aa1b79acf65f5c9357db7a00b17cdf10e2e4f21be4debd25cdda48408771894",
+      "bytes": 444852,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU08/face-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU08-ivory-vest/face-review.png",
+      "sha256": "2a55330ab9cdd49c7dbb2c73b6c8bde66dd1718f94d54e0c026550e2b357f55c",
+      "bytes": 160243,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU08/generation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU08-ivory-vest/generation.json",
+      "sha256": "bfd0a1ddbb89e4f624b595e5eccac60ddd2181d01c618238dbe19ad888cff2f9",
+      "bytes": 5247,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU08/image.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU08-ivory-vest/image.png",
+      "sha256": "e8a152bf54e80c44405870d4c32c10714e924d81330b9cf483b4f21143788271",
+      "bytes": 1740754,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU08/initial.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU08-ivory-vest/initial.png",
+      "sha256": "e8a152bf54e80c44405870d4c32c10714e924d81330b9cf483b4f21143788271",
+      "bytes": 1740754,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU08/prompt.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU08-ivory-vest/prompt.txt",
+      "sha256": "0952dc39233cb6ef7d7a56cfdfc6e685ffe5df190f0222d5e8dae6bca732af6c",
+      "bytes": 3035,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU08/socks_shoes-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU08-ivory-vest/socks_shoes-review.png",
+      "sha256": "6fa46b1002a9bc74588af670ef7cfa028db6d621b162f4e023041597f9c4b58a",
+      "bytes": 186951,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU11/call-initial.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU11-greige-bolero/call-initial.json",
+      "sha256": "030577ce053abbfa53905d519026ac02135e56e06e7ba46412f161a519f0cf94",
+      "bytes": 2614,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU11/clothing_hands-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU11-greige-bolero/clothing_hands-review.png",
+      "sha256": "ade2f967c00b4c3d0264a56a7503e4594132f64fa5432fd475d9324504ddc345",
+      "bytes": 510098,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU11/face-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU11-greige-bolero/face-review.png",
+      "sha256": "09290e67e6fc180c8a559f6d917bd604716f096b9039d504773ccdb363ba4e0c",
+      "bytes": 154541,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU11/generation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU11-greige-bolero/generation.json",
+      "sha256": "830ec320c0b5ee0a26999a888b57aa8e3885de488aaa96865dc40834bc6a4de8",
+      "bytes": 5298,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU11/image.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU11-greige-bolero/image.png",
+      "sha256": "02de80ef6ad2254e34219c2ad2dfe156d8a678524242ed3f1f3cc6f0820fe2d2",
+      "bytes": 1806694,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU11/initial.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU11-greige-bolero/initial.png",
+      "sha256": "02de80ef6ad2254e34219c2ad2dfe156d8a678524242ed3f1f3cc6f0820fe2d2",
+      "bytes": 1806694,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU11/prompt.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU11-greige-bolero/prompt.txt",
+      "sha256": "00f76761e77feac8e8a99871873281b50ccd1f57694a6c572d7483cdb3a811eb",
+      "bytes": 3118,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU11/socks_shoes-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU11-greige-bolero/socks_shoes-review.png",
+      "sha256": "c100ba702c2f55d8f0daad02b05af03cdc698b8e5cd319053f0e4a07743bf62b",
+      "bytes": 181696,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU14/call-initial.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU14-white-sailor-blue-check/call-initial.json",
+      "sha256": "a74832fcae2c2d1bbfedf70b78cbc915f3192a5accd9cd59b1a9c353a417c63e",
+      "bytes": 2634,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU14/clothing_hands-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU14-white-sailor-blue-check/clothing_hands-review.png",
+      "sha256": "f3d7fac239fd7d381010de0a111a9f64a9c29716288ca181f553bf3c3c463064",
+      "bytes": 420002,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU14/face-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU14-white-sailor-blue-check/face-review.png",
+      "sha256": "aecee00c9bbfccd3b2cfb2569bff74fec7c65018290b45f9e770bddf6fcadc8f",
+      "bytes": 155633,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU14/generation.json",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU14-white-sailor-blue-check/generation.json",
+      "sha256": "693ecad5dc01af911931e1b17cc2636786adbb36a86bc06d4d58fc631fd93246",
+      "bytes": 5404,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU14/image.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU14-white-sailor-blue-check/image.png",
+      "sha256": "770686d300151d88f5b6e4c92ec1194bea4eed5dc055f314d863e63346e348a3",
+      "bytes": 1710526,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU14/initial.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU14-white-sailor-blue-check/initial.png",
+      "sha256": "770686d300151d88f5b6e4c92ec1194bea4eed5dc055f314d863e63346e348a3",
+      "bytes": 1710526,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU14/prompt.txt",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU14-white-sailor-blue-check/prompt.txt",
+      "sha256": "aa3dd2dc096b0ac1ceaf0897e2abeec841c737c773ffe1f378760368d6042974",
+      "bytes": 3034,
+      "role": "historical_source"
+    },
+    {
+      "path": "scenes/SU14/socks_shoes-review.png",
+      "source_path_at_preservation": "tmp/akari-v3.1/2026-09-09-school-uniform-expansion/SU14-white-sailor-blue-check/socks_shoes-review.png",
+      "sha256": "4a792c4c3beee8ced2d0912c06a0075070777175ae8836d98ceb4ad4e8382f90",
+      "bytes": 180741,
+      "role": "historical_source"
+    }
+  ],
+  "limitations": [
+    "Image quality is not newly adjudicated by this preservation operation; existing visual reviews are retained.",
+    "Model identities and native tool cache paths are historical claims, not newly verified model provenance.",
+    "Batch selection snapshots may refer to other candidates or next batches outside this preservation scope."
+  ]
+}

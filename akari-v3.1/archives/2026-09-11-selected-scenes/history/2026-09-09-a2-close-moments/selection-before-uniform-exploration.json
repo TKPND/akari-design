@@ -1,0 +1,39 @@
+{
+  "recorded_at": "2026-09-09T07:15:49.400526+00:00",
+  "user_quote": "**N24・N27・N28・N30かな〜 そろそろ服装を変えてみたい (制服の案をいくつか出してもらってそこから選びたい)**",
+  "favorite_ids": [
+    "N24",
+    "N27",
+    "N28",
+    "N30"
+  ],
+  "purpose": "User-finalized favorite home scenes before a new school-uniform exploration.",
+  "next_batch": "../2026-09-09-school-uniform-six",
+  "commit_requested": false,
+  "selected_images": [
+    {
+      "id": "N24",
+      "path": "N24-ribbon-bookmark/image.png",
+      "stage": "initial",
+      "sha256": "85084c857aa51fbbb28882b394100f114e6e9ae0ff3e8a7b1eba77ec166b540a"
+    },
+    {
+      "id": "N27",
+      "path": "N27-trying-not-to-laugh/image.png",
+      "stage": "initial",
+      "sha256": "e2f705453c63d5f114a8d25c47ab05359b926b260384a25a92673829a85c5e30"
+    },
+    {
+      "id": "N28",
+      "path": "N28-sofa-arm-listen/image.png",
+      "stage": "r1",
+      "sha256": "c77430291ca30e75ff44954d63ea534d7317bf8dd3745a97a6ef2115f604ebf3"
+    },
+    {
+      "id": "N30",
+      "path": "N30-blanket-cheek/image.png",
+      "stage": "initial",
+      "sha256": "9efb7e1d1a6cca20ff715db7110c040249c4a612bc0aee17302652600ced0cd8"
+    }
+  ]
+}

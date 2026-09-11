@@ -1,0 +1,66 @@
+{
+  "id": "N22",
+  "stage": "r1",
+  "tool": "image_gen",
+  "model": null,
+  "started_at": "2026-09-09T02:44:52.432Z",
+  "elapsed_ms": 39275,
+  "inputs": [
+    {
+      "path": "N22-blanket-wrap/initial.png",
+      "bytes": 2555886,
+      "sha256": "bb32bf2eeeb741a100a43a77cd258fea77c9478fe07a09c24d95e5154365859c",
+      "width": 1024,
+      "height": 1536,
+      "role": "Edit target, sole scene, camera, pose, face expression, clothing and foot-placement source"
+    },
+    {
+      "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "bytes": 1869375,
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "width": 1254,
+      "height": 1254,
+      "role": "Original facial identity preservation only"
+    },
+    {
+      "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "bytes": 1836424,
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "width": 1254,
+      "height": 1254,
+      "role": "Original expression support; preserve target expression"
+    },
+    {
+      "path": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "bytes": 1815855,
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "width": 1024,
+      "height": 1536,
+      "role": "Native lower-leg and sock fit detail; target determines ivory color and pose"
+    },
+    {
+      "path": "../../../akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "bytes": 71786,
+      "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+      "width": 280,
+      "height": 210,
+      "role": "F09 material only: opaque rounded toe cap and sparse shallow cloth wrinkles"
+    }
+  ],
+  "prompt": {
+    "path": "N22-blanket-wrap/prompt-r1.txt",
+    "bytes": 1320,
+    "sha256": "f2489a116784dd7fb4b359d4043f6adc8bec02f97014b71fea8ad0b4e01e4792"
+  },
+  "output": {
+    "path": "N22-blanket-wrap/r1.png",
+    "bytes": 2526985,
+    "sha256": "74d944dab19b8f67245d789e001c78e7e7930da6ea001089d1f853b92eee21c6",
+    "width": 1024,
+    "height": 1536
+  },
+  "native_filename": "exec-5308c0b5-1911-4f60-b9d3-bec1382cda64.png",
+  "native_sha256": "74d944dab19b8f67245d789e001c78e7e7930da6ea001089d1f853b92eee21c6",
+  "exact_native_copy": true,
+  "exact_prompt_payload": true
+}

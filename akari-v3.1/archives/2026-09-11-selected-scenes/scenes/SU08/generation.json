@@ -1,0 +1,140 @@
+{
+  "id": "SU08",
+  "title_ja": "アイボリーベスト × 深緑リボン",
+  "path_base": "This batch root",
+  "source_favorite_id": "SU03",
+  "user_selected": false,
+  "face_authority_promoted": false,
+  "calls": [
+    {
+      "id": "SU08",
+      "stage": "initial",
+      "tool": "image_gen",
+      "model": null,
+      "started_at": "2026-09-09T07:35:41.186Z",
+      "elapsed_ms": 56830,
+      "inputs": [
+        {
+          "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original face, grey eyes, black bob, drawing and established adult character identity authority."
+        },
+        {
+          "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original familiar gentle closed-mouth smile authority."
+        },
+        {
+          "path": "../../../akari-v3.1/references/U1-upper-reference.png",
+          "bytes": 1852161,
+          "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native upper-body detail and single straight silver hairpin; existing blouse design is superseded by this proposed uniform."
+        },
+        {
+          "path": "../../../akari-v3.1/references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native adult leg construction and medium-grey opaque ribbed below-knee sock fit; existing skirt and white sneakers are superseded by this proposed uniform."
+        },
+        {
+          "path": "../2026-09-09-school-uniform-six/SU03-forest-vest/image.png",
+          "bytes": 1790692,
+          "sha256": "8876298ceae7df8bbc4d08705abb7e4e52ad6aed4a7cf3476c9dd27a76abdad6",
+          "width": 1024,
+          "height": 1536,
+          "role": "User-selected school-uniform wardrobe family and catalog presentation only; face authority remains original P1/P2, and new outfit differences are explicitly specified."
+        }
+      ],
+      "prompt": {
+        "path": "SU08-ivory-vest/prompt.txt",
+        "bytes": 3035,
+        "sha256": "0952dc39233cb6ef7d7a56cfdfc6e685ffe5df190f0222d5e8dae6bca732af6c"
+      },
+      "output": {
+        "path": "SU08-ivory-vest/initial.png",
+        "bytes": 1740754,
+        "sha256": "e8a152bf54e80c44405870d4c32c10714e924d81330b9cf483b4f21143788271",
+        "width": 1024,
+        "height": 1536
+      },
+      "native_filename": "exec-436f4a1c-9899-4cf3-a19f-d6e1ccd8ba6a.png",
+      "native_sha256": "e8a152bf54e80c44405870d4c32c10714e924d81330b9cf483b4f21143788271",
+      "exact_native_copy": true,
+      "exact_prompt_payload": true
+    }
+  ],
+  "status": "assistant_reviewed_candidate_awaiting_user_selection",
+  "selected_stage": "initial",
+  "final_image": {
+    "path": "SU08-ivory-vest/image.png",
+    "bytes": 1740754,
+    "sha256": "e8a152bf54e80c44405870d4c32c10714e924d81330b9cf483b4f21143788271",
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review": {
+    "stage": "initial",
+    "summary_ja": "アイボリーのニットと深緑のリボンで顔まわりを明るく。",
+    "notes": "白ブラウスとアイボリーニットが色と質感で区別できる。緑の細いV縁取り、丸襟、濃いタータン、両手を確認。足首の浅い布じわと茶ローファーを維持。",
+    "limits": "全身画の顔は原本ポートレートより小さい。裾は指定の膝上数cmより高め。"
+  },
+  "final_transformation": "Exact native image_gen output copy; no artwork retouch outside image_gen.",
+  "review_crops": [
+    {
+      "path": "SU08-ivory-vest/face-review.png",
+      "bytes": 160243,
+      "sha256": "2a55330ab9cdd49c7dbb2c73b6c8bde66dd1718f94d54e0c026550e2b357f55c",
+      "width": 355,
+      "height": 325,
+      "subject": "face",
+      "crop_xywh": [
+        330,
+        10,
+        355,
+        325
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    },
+    {
+      "path": "SU08-ivory-vest/clothing_hands-review.png",
+      "bytes": 444852,
+      "sha256": "6aa1b79acf65f5c9357db7a00b17cdf10e2e4f21be4debd25cdda48408771894",
+      "width": 510,
+      "height": 700,
+      "subject": "clothing_hands",
+      "crop_xywh": [
+        250,
+        280,
+        510,
+        700
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    },
+    {
+      "path": "SU08-ivory-vest/socks_shoes-review.png",
+      "bytes": 186951,
+      "sha256": "6fa46b1002a9bc74588af670ef7cfa028db6d621b162f4e023041597f9c4b58a",
+      "width": 390,
+      "height": 440,
+      "subject": "socks_shoes",
+      "crop_xywh": [
+        345,
+        1090,
+        390,
+        440
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    }
+  ],
+  "auxiliary_crops": []
+}

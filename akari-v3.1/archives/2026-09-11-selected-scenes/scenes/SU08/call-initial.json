@@ -1,0 +1,66 @@
+{
+  "id": "SU08",
+  "stage": "initial",
+  "tool": "image_gen",
+  "model": null,
+  "started_at": "2026-09-09T07:35:41.186Z",
+  "elapsed_ms": 56830,
+  "inputs": [
+    {
+      "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "bytes": 1869375,
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "width": 1254,
+      "height": 1254,
+      "role": "Original face, grey eyes, black bob, drawing and established adult character identity authority."
+    },
+    {
+      "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "bytes": 1836424,
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "width": 1254,
+      "height": 1254,
+      "role": "Original familiar gentle closed-mouth smile authority."
+    },
+    {
+      "path": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "bytes": 1852161,
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "width": 1024,
+      "height": 1536,
+      "role": "Native upper-body detail and single straight silver hairpin; existing blouse design is superseded by this proposed uniform."
+    },
+    {
+      "path": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "bytes": 1815855,
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "width": 1024,
+      "height": 1536,
+      "role": "Native adult leg construction and medium-grey opaque ribbed below-knee sock fit; existing skirt and white sneakers are superseded by this proposed uniform."
+    },
+    {
+      "path": "../2026-09-09-school-uniform-six/SU03-forest-vest/image.png",
+      "bytes": 1790692,
+      "sha256": "8876298ceae7df8bbc4d08705abb7e4e52ad6aed4a7cf3476c9dd27a76abdad6",
+      "width": 1024,
+      "height": 1536,
+      "role": "User-selected school-uniform wardrobe family and catalog presentation only; face authority remains original P1/P2, and new outfit differences are explicitly specified."
+    }
+  ],
+  "prompt": {
+    "path": "SU08-ivory-vest/prompt.txt",
+    "bytes": 3035,
+    "sha256": "0952dc39233cb6ef7d7a56cfdfc6e685ffe5df190f0222d5e8dae6bca732af6c"
+  },
+  "output": {
+    "path": "SU08-ivory-vest/initial.png",
+    "bytes": 1740754,
+    "sha256": "e8a152bf54e80c44405870d4c32c10714e924d81330b9cf483b4f21143788271",
+    "width": 1024,
+    "height": 1536
+  },
+  "native_filename": "exec-436f4a1c-9899-4cf3-a19f-d6e1ccd8ba6a.png",
+  "native_sha256": "e8a152bf54e80c44405870d4c32c10714e924d81330b9cf483b4f21143788271",
+  "exact_native_copy": true,
+  "exact_prompt_payload": true
+}

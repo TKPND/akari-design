@@ -1,0 +1,228 @@
+{
+  "id": "SU05",
+  "title_ja": "グレーボレロ × くすみローズ",
+  "path_base": "This batch root",
+  "source_favorite_id": null,
+  "user_selected": false,
+  "face_authority_promoted": false,
+  "calls": [
+    {
+      "id": "SU05",
+      "stage": "initial",
+      "tool": "image_gen",
+      "model": null,
+      "started_at": "2026-09-09T07:20:16.528Z",
+      "elapsed_ms": 53086,
+      "inputs": [
+        {
+          "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original face, grey eyes, black bob, drawing and established adult character identity authority."
+        },
+        {
+          "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original familiar gentle closed-mouth smile authority."
+        },
+        {
+          "path": "../../../akari-v3.1/references/U1-upper-reference.png",
+          "bytes": 1852161,
+          "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native upper-body detail and single straight silver hairpin; existing blouse design is superseded by this proposed uniform."
+        },
+        {
+          "path": "../../../akari-v3.1/references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native adult leg construction and medium-grey opaque ribbed below-knee sock fit; existing skirt and white sneakers are superseded by this proposed uniform."
+        },
+        {
+          "path": "../../../akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+          "bytes": 71786,
+          "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+          "width": 280,
+          "height": 210,
+          "role": "Soft opaque sock material with sparse shallow natural wrinkles only; not face, pose, camera or wardrobe authority. Footwear hides the toes in this batch."
+        }
+      ],
+      "prompt": {
+        "path": "SU05-grey-bolero/prompt.txt",
+        "bytes": 3112,
+        "sha256": "07d77b42792d58c2a09093bda577d7e7c07edf315c40bdc810a700add239c7c0"
+      },
+      "output": {
+        "path": "SU05-grey-bolero/initial.png",
+        "bytes": 1890168,
+        "sha256": "7ef000bc77e333b8070ae692f2eb3ea8709db1672c65209b84e47c54d4289930",
+        "width": 1024,
+        "height": 1536
+      },
+      "native_filename": "exec-9eaad72e-ac13-413d-aa40-a1736a7125fe.png",
+      "native_sha256": "7ef000bc77e333b8070ae692f2eb3ea8709db1672c65209b84e47c54d4289930",
+      "exact_native_copy": true,
+      "exact_prompt_payload": true
+    },
+    {
+      "id": "SU05",
+      "stage": "r1",
+      "tool": "image_gen",
+      "model": null,
+      "started_at": "2026-09-09T07:24:30.844Z",
+      "elapsed_ms": 36270,
+      "inputs": [
+        {
+          "path": "SU05-grey-bolero/initial.png",
+          "bytes": 1890168,
+          "sha256": "7ef000bc77e333b8070ae692f2eb3ea8709db1672c65209b84e47c54d4289930",
+          "width": 1024,
+          "height": 1536,
+          "role": "Edit target; sole scene, pose, camera, expression and wardrobe source."
+        },
+        {
+          "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original face, grey eyes, black bob, drawing and established adult character identity authority."
+        },
+        {
+          "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original familiar gentle closed-mouth smile authority."
+        },
+        {
+          "path": "../../../akari-v3.1/references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native leg and grey sock fit only, outfit and sneakers superseded by target."
+        },
+        {
+          "path": "../../../akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+          "bytes": 71786,
+          "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+          "width": 280,
+          "height": 210,
+          "role": "Soft opaque sock material with sparse shallow natural wrinkles only; not face, pose, camera or wardrobe authority. Footwear hides the toes in this batch."
+        }
+      ],
+      "prompt": {
+        "path": "SU05-grey-bolero/prompt-r1.txt",
+        "bytes": 1750,
+        "sha256": "535fd5a6978ec1b30037d68f7309ad25073f86119c82cbda62044367f4cef318"
+      },
+      "output": {
+        "path": "SU05-grey-bolero/r1.png",
+        "bytes": 1848990,
+        "sha256": "4aa5ddd0de916db32004b48617388a63c8077ca8550e6550dd54b5e4ae244d88",
+        "width": 1024,
+        "height": 1536
+      },
+      "native_filename": "exec-1f0248c1-8ab5-44dc-bdf2-c55017404a09.png",
+      "native_sha256": "4aa5ddd0de916db32004b48617388a63c8077ca8550e6550dd54b5e4ae244d88",
+      "exact_native_copy": true,
+      "exact_prompt_payload": true
+    }
+  ],
+  "status": "assistant_reviewed_candidate_awaiting_user_selection",
+  "selected_stage": "r1",
+  "final_image": {
+    "path": "SU05-grey-bolero/image.png",
+    "bytes": 1848990,
+    "sha256": "4aa5ddd0de916db32004b48617388a63c8077ca8550e6550dd54b5e4ae244d88",
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review": {
+    "stage": "r1",
+    "summary_ja": "丸襟とくすみローズのリボンを合わせたグレーボレロ。",
+    "notes": "initialは靴下の足首が張りすぎていたためr1で左右に控えめな布じわを追加。最終全身、顔、服と手、左右の足首と靴を拡大確認。ボレロの丸い開き、胸元にボタンのないジャンパースカート、銀ピン1本を維持。",
+    "limits": "靴の甲の開口部では靴下が見えるが、つま先は靴の中。全画像を生成し直す修正なので、指定外が完全に同一ピクセルではない。裾は膝直上より高め。"
+  },
+  "final_transformation": "Exact native image_gen output copy; no artwork retouch outside image_gen.",
+  "review_crops": [
+    {
+      "path": "SU05-grey-bolero/face-review.png",
+      "bytes": 155394,
+      "sha256": "624474db0124246d94ac496be92da3f6cb28a64303caa5a070f6bf4c5e8627ff",
+      "width": 355,
+      "height": 325,
+      "subject": "face",
+      "crop_xywh": [
+        330,
+        10,
+        355,
+        325
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    },
+    {
+      "path": "SU05-grey-bolero/clothing_hands-review.png",
+      "bytes": 537279,
+      "sha256": "283479fae2ff6768aae46110e537316dcd6584031b6d2924ec7577f75c415d64",
+      "width": 510,
+      "height": 700,
+      "subject": "clothing_hands",
+      "crop_xywh": [
+        250,
+        280,
+        510,
+        700
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    },
+    {
+      "path": "SU05-grey-bolero/socks_shoes-review.png",
+      "bytes": 176666,
+      "sha256": "6650a0627550a4c88e63ef6272fe0c0d77603385a314ce8788186879fcd2e049",
+      "width": 390,
+      "height": 440,
+      "subject": "socks_shoes",
+      "crop_xywh": [
+        345,
+        1090,
+        390,
+        440
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    }
+  ],
+  "auxiliary_crops": [
+    {
+      "path": "SU05-grey-bolero/clothing_hands-initial-review.png",
+      "bytes": 555030,
+      "sha256": "7562bb05768ee997b1428e187fc08f897ad52d6dff96a6b3db297ab210ed172f",
+      "width": 510,
+      "height": 700
+    },
+    {
+      "path": "SU05-grey-bolero/face-initial-review.png",
+      "bytes": 158164,
+      "sha256": "110359565f63b2ad31314c6f744c24e6c48bc1ca25c843299158dd6d4c071799",
+      "width": 355,
+      "height": 325
+    },
+    {
+      "path": "SU05-grey-bolero/socks_shoes-initial-review.png",
+      "bytes": 182266,
+      "sha256": "6bfcc65389f33c27251dc6a2a44a4c6376f72c5ed0ddab95b3f191f131902b30",
+      "width": 390,
+      "height": 440
+    }
+  ]
+}

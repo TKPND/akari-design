@@ -1,0 +1,91 @@
+{
+  "id": "AF02",
+  "title": "静かに、隣で",
+  "created_at": "2026-09-10T05:22:50.146205+00:00",
+  "tool": "built-in image_gen",
+  "model_identity": "not exposed",
+  "generation_id": "exec-326c881c-530c-46f3-a0fb-d3a2ae8b06aa",
+  "generation_calls": 1,
+  "status": "candidate_pending_user_selection",
+  "image": "AF02-quiet-beside-you.png",
+  "prompt": "prompt.txt",
+  "prompt_sha256": "4aa90331f02c8551d80a7104cc4ea6dbb1b1d619951f114e9368ee7b26b21743",
+  "feedback_snapshot": "../feedback-snapshot.json",
+  "feedback_snapshot_sha256": "11ec41a845008d06c2f4e7ff0b84a3a5a37460b72a0606c2924eae8d482a65f8",
+  "input_path_base": "workspace_root",
+  "inputs": [
+    {
+      "order": 1,
+      "id": "AF01",
+      "path": "tmp/akari-v3.1/2026-09-10-album-feedback/AF01-beside-you/AF01-beside-you.png",
+      "role": "scene outfit camera and pose starting point only",
+      "sha256": "50517641d84d0155a0be0964c135b739e35863c12e4bf8b69a9fa37db3455ee9",
+      "opened_with_view_image": true
+    },
+    {
+      "order": 2,
+      "id": "P1",
+      "path": "akari-v3.0/references/P1-user-pro-portrait.png",
+      "role": "original face eyes hair drawing authority",
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "opened_with_view_image": true
+    },
+    {
+      "order": 3,
+      "id": "P2",
+      "path": "akari-v3.0/references/P2-quiet-smile.png",
+      "role": "original everyday closed-mouth smile authority",
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "opened_with_view_image": true
+    },
+    {
+      "order": 4,
+      "id": "U1",
+      "path": "akari-v3.1/references/U1-upper-reference.png",
+      "role": "native upper-body detail eyes hair and silver pin, not outfit",
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "opened_with_view_image": true
+    },
+    {
+      "order": 5,
+      "id": "A13",
+      "path": "akari-v3.1/situations/abc-exploration/images/A13.png",
+      "role": "languid mood only",
+      "sha256": "e090b707738c50c482dc6c3234060c4d24eb16b619a504c705797bf490aa4d73",
+      "opened_with_view_image": true
+    }
+  ],
+  "provenance": {
+    "parent_candidate": "AF01",
+    "parent_generation_record": "../AF01-beside-you/generation.json",
+    "native_tool_output": "/home/abe/.codex/generated_images/01a089c1-cccd-7cc2-a6ca-49a051ee5b50/exec-326c881c-530c-46f3-a0fb-d3a2ae8b06aa.png",
+    "authority_docs_read": [
+      "akari-v3.1/README.md",
+      "akari-v3.1/design-state.json",
+      "akari-v3.1/reference-set.json"
+    ],
+    "feedback_applied": {
+      "A13_keep": "アンニュイな表情",
+      "A13_change": "隣に座る",
+      "followup": "Relax eyelids and shoulders, reduce smile, retain close sofa scene"
+    }
+  },
+  "output": {
+    "sha256": "f5e22e307587a0c1be5ad92578815c49bfc85582284de7e3f589a39da5b034ab",
+    "bytes": 2349291,
+    "width": 1536,
+    "height": 1024,
+    "native_output_unmodified": true
+  },
+  "validation_record": "validation.json",
+  "visual_reservation": "Hair crown remains slightly clipped at top edge; mild languor only. No retries as instructed.",
+  "face_authority_promoted": false,
+  "committed": false,
+  "site_imported": true,
+  "album_inclusion": {
+    "version_number": 3,
+    "series": "アルバムからのつづき",
+    "url": "https://akari-album-takahiro.tkpnd.chatgpt.site",
+    "user_authorized_batch": true
+  }
+}

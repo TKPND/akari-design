@@ -1,0 +1,32 @@
+{
+  "id": "AF07",
+  "validated_at": "2026-09-11T02:17:10.701189+00:00",
+  "status": "candidate_visual_reviewed",
+  "png_signature_crc_zlib": "pass",
+  "scanline_length_and_filter_bytes": "pass",
+  "native_copy_sha256_match": true,
+  "reference_files": "pass",
+  "visual_whole_image": "reviewed",
+  "visual_assessment": {
+    "identity": "Original black bob, grey eyes and single silver pin retained.",
+    "expression": "Awake gentle eye contact with softly lowered eyelids and small closed-mouth smile; mild tiredness.",
+    "pose": "Hands released from cheek and naturally resting around cushion, coherent fingers and wrists. Side-sitting legs retained. Upper torso leans slightly forward rather than requested settling back.",
+    "outfit": "Selected navy long sleeves, rounded collar, ribbon and modest plaid skirt retained. Mug safe on table.",
+    "framing": "Full crown and both feet inside frame; headroom modest.",
+    "socks": "Enlarged review confirms broad continuous smooth opaque toe envelopes, no toe separation or scalloped bumps. Soft rib knit and modest ankle folds; subtle forefoot cloth creasing matches selected AF05-r3."
+  },
+  "browser_layout_test": "not_run; parent owns album integration",
+  "retry_performed": false,
+  "user_selection": "pending",
+  "sock_material_must": "pass_visual",
+  "sock_detail_review": {
+    "image": "sock-review.png",
+    "crop_xywh": [
+      1100,
+      735,
+      350,
+      250
+    ],
+    "transformation": "unmodified pixel crop for QA; native output unchanged"
+  }
+}

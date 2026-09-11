@@ -1,0 +1,24 @@
+{
+  "id": "AF05",
+  "validated_at": "2026-09-10T05:33:03.769056+00:00",
+  "status": "candidate_with_sock_material_failure",
+  "png_signature_crc_zlib": "pass",
+  "scanline_length_and_filter_bytes": "pass",
+  "native_copy_sha256_match": true,
+  "reference_files": "pass",
+  "visual_whole_image": "reviewed",
+  "visual_assessment": {
+    "identity": "Black bob grey eyes single silver pin and original face lineage retained.",
+    "expression": "Gentle awake smile with cheek resting on hand. Tiredness is mild, relaxed gesture clear.",
+    "pose": "Side sitting on sofa with supported elbow and coherent cheek-resting hand; other hand rests naturally on lap cushion. Mug safely upright on nearby table.",
+    "outfit": "Navy long sleeves, white rounded collar, ribbon and plaid skirt retained. Upper thighs covered, no underwear visible.",
+    "framing": "Whole hair crown and both feet inside frame. Headroom is narrow rather than generous.",
+    "socks": "Grey rib knit and soft ankle compression retained, but both forefeet visibly sculpt separate toe-like bumps/scalloped contours; this fails the rounded opaque toe envelope MUST. Do not promote material."
+  },
+  "browser_layout_test": "not_run; parent owns album integration",
+  "retry_performed": false,
+  "user_selection": "pending",
+  "sock_material_must": "fail; individual toe-like forms visible in shading and contour",
+  "sock_detail_review": "sock-review.png",
+  "sock_detail_review_transformation": "Unmodified pixel crop at x1120 y745 width330 height240 for inspection only; native output unchanged."
+}

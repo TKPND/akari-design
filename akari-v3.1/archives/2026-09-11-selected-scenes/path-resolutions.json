@@ -1,0 +1,3185 @@
+{
+  "path_base": "archive root",
+  "entries": [
+    {
+      "record": "scenes/N24/call-initial.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/N24/call-initial.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/N24/call-initial.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/N24/call-initial.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/N24/call-initial.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "../2026-09-09-a2-next-eight/N16-ribbon-gift/image.png",
+      "path": "scenes/N16/image.png"
+    },
+    {
+      "record": "scenes/N24/call-initial.json",
+      "json_pointer": "/prompt/path",
+      "original_value": "N24-ribbon-bookmark/prompt.txt",
+      "path": "scenes/N24/prompt.txt"
+    },
+    {
+      "record": "scenes/N24/call-initial.json",
+      "json_pointer": "/output/path",
+      "original_value": "N24-ribbon-bookmark/initial.png",
+      "path": "scenes/N24/initial.png"
+    },
+    {
+      "record": "scenes/N24/generation.json",
+      "json_pointer": "/calls/0/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/N24/generation.json",
+      "json_pointer": "/calls/0/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/N24/generation.json",
+      "json_pointer": "/calls/0/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/N24/generation.json",
+      "json_pointer": "/calls/0/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/N24/generation.json",
+      "json_pointer": "/calls/0/inputs/4/path",
+      "original_value": "../2026-09-09-a2-next-eight/N16-ribbon-gift/image.png",
+      "path": "scenes/N16/image.png"
+    },
+    {
+      "record": "scenes/N24/generation.json",
+      "json_pointer": "/calls/0/prompt/path",
+      "original_value": "N24-ribbon-bookmark/prompt.txt",
+      "path": "scenes/N24/prompt.txt"
+    },
+    {
+      "record": "scenes/N24/generation.json",
+      "json_pointer": "/calls/0/output/path",
+      "original_value": "N24-ribbon-bookmark/initial.png",
+      "path": "scenes/N24/initial.png"
+    },
+    {
+      "record": "scenes/N24/generation.json",
+      "json_pointer": "/final_image/path",
+      "original_value": "N24-ribbon-bookmark/image.png",
+      "path": "scenes/N24/image.png"
+    },
+    {
+      "record": "scenes/N24/generation.json",
+      "json_pointer": "/review_crops/0/path",
+      "original_value": "N24-ribbon-bookmark/face-review.png",
+      "path": "scenes/N24/face-review.png"
+    },
+    {
+      "record": "scenes/N24/generation.json",
+      "json_pointer": "/review_crops/1/path",
+      "original_value": "N24-ribbon-bookmark/clothing-review.png",
+      "path": "scenes/N24/clothing-review.png"
+    },
+    {
+      "record": "scenes/N24/generation.json",
+      "json_pointer": "/auxiliary_crops/0/path",
+      "original_value": "N24-ribbon-bookmark/clothing-initial-review.png",
+      "path": "scenes/N24/clothing-initial-review.png"
+    },
+    {
+      "record": "scenes/N24/generation.json",
+      "json_pointer": "/auxiliary_crops/1/path",
+      "original_value": "N24-ribbon-bookmark/face-initial-review.png",
+      "path": "scenes/N24/face-initial-review.png"
+    },
+    {
+      "record": "scenes/N27/call-initial.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/N27/call-initial.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/N27/call-initial.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/N27/call-initial.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/N27/call-initial.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "../2026-09-09-a2-next-eight/N20-tea-laugh/image.png",
+      "path": "scenes/N20/image.png"
+    },
+    {
+      "record": "scenes/N27/call-initial.json",
+      "json_pointer": "/prompt/path",
+      "original_value": "N27-trying-not-to-laugh/prompt.txt",
+      "path": "scenes/N27/prompt.txt"
+    },
+    {
+      "record": "scenes/N27/call-initial.json",
+      "json_pointer": "/output/path",
+      "original_value": "N27-trying-not-to-laugh/initial.png",
+      "path": "scenes/N27/initial.png"
+    },
+    {
+      "record": "scenes/N27/generation.json",
+      "json_pointer": "/calls/0/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/N27/generation.json",
+      "json_pointer": "/calls/0/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/N27/generation.json",
+      "json_pointer": "/calls/0/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/N27/generation.json",
+      "json_pointer": "/calls/0/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/N27/generation.json",
+      "json_pointer": "/calls/0/inputs/4/path",
+      "original_value": "../2026-09-09-a2-next-eight/N20-tea-laugh/image.png",
+      "path": "scenes/N20/image.png"
+    },
+    {
+      "record": "scenes/N27/generation.json",
+      "json_pointer": "/calls/0/prompt/path",
+      "original_value": "N27-trying-not-to-laugh/prompt.txt",
+      "path": "scenes/N27/prompt.txt"
+    },
+    {
+      "record": "scenes/N27/generation.json",
+      "json_pointer": "/calls/0/output/path",
+      "original_value": "N27-trying-not-to-laugh/initial.png",
+      "path": "scenes/N27/initial.png"
+    },
+    {
+      "record": "scenes/N27/generation.json",
+      "json_pointer": "/final_image/path",
+      "original_value": "N27-trying-not-to-laugh/image.png",
+      "path": "scenes/N27/image.png"
+    },
+    {
+      "record": "scenes/N27/generation.json",
+      "json_pointer": "/review_crops/0/path",
+      "original_value": "N27-trying-not-to-laugh/face-review.png",
+      "path": "scenes/N27/face-review.png"
+    },
+    {
+      "record": "scenes/N27/generation.json",
+      "json_pointer": "/review_crops/1/path",
+      "original_value": "N27-trying-not-to-laugh/clothing-review.png",
+      "path": "scenes/N27/clothing-review.png"
+    },
+    {
+      "record": "scenes/N27/generation.json",
+      "json_pointer": "/review_crops/2/path",
+      "original_value": "N27-trying-not-to-laugh/hand-review.png",
+      "path": "scenes/N27/hand-review.png"
+    },
+    {
+      "record": "scenes/N27/generation.json",
+      "json_pointer": "/review_crops/3/path",
+      "original_value": "N27-trying-not-to-laugh/mouth_hand-review.png",
+      "path": "scenes/N27/mouth_hand-review.png"
+    },
+    {
+      "record": "scenes/N27/generation.json",
+      "json_pointer": "/auxiliary_crops/0/path",
+      "original_value": "N27-trying-not-to-laugh/clothing-initial-review.png",
+      "path": "scenes/N27/clothing-initial-review.png"
+    },
+    {
+      "record": "scenes/N27/generation.json",
+      "json_pointer": "/auxiliary_crops/1/path",
+      "original_value": "N27-trying-not-to-laugh/face-initial-review.png",
+      "path": "scenes/N27/face-initial-review.png"
+    },
+    {
+      "record": "scenes/N27/generation.json",
+      "json_pointer": "/auxiliary_crops/2/path",
+      "original_value": "N27-trying-not-to-laugh/hand-initial-review.png",
+      "path": "scenes/N27/hand-initial-review.png"
+    },
+    {
+      "record": "scenes/N28/call-initial.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/N28/call-initial.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/N28/call-initial.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/N28/call-initial.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/N28/call-initial.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "../2026-09-09-a2-next-eight/N21-cushion-listen/image.png",
+      "path": "scenes/N21/image.png"
+    },
+    {
+      "record": "scenes/N28/call-initial.json",
+      "json_pointer": "/prompt/path",
+      "original_value": "N28-sofa-arm-listen/prompt.txt",
+      "path": "scenes/N28/prompt.txt"
+    },
+    {
+      "record": "scenes/N28/call-initial.json",
+      "json_pointer": "/output/path",
+      "original_value": "N28-sofa-arm-listen/initial.png",
+      "path": "scenes/N28/initial.png"
+    },
+    {
+      "record": "scenes/N28/call-r1.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "N28-sofa-arm-listen/initial.png",
+      "path": "scenes/N28/initial.png"
+    },
+    {
+      "record": "scenes/N28/call-r1.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "../../../akari-v3.1/situations/a2-home/images/A-2.png",
+      "path": "dependencies/281da5ca10992c7b/A-2.png"
+    },
+    {
+      "record": "scenes/N28/call-r1.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/N28/call-r1.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/N28/call-r1.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/N28/call-r1.json",
+      "json_pointer": "/prompt/path",
+      "original_value": "N28-sofa-arm-listen/prompt-r1.txt",
+      "path": "scenes/N28/prompt-r1.txt"
+    },
+    {
+      "record": "scenes/N28/call-r1.json",
+      "json_pointer": "/output/path",
+      "original_value": "N28-sofa-arm-listen/r1.png",
+      "path": "scenes/N28/r1.png"
+    },
+    {
+      "record": "scenes/N28/generation.json",
+      "json_pointer": "/calls/0/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/N28/generation.json",
+      "json_pointer": "/calls/0/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/N28/generation.json",
+      "json_pointer": "/calls/0/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/N28/generation.json",
+      "json_pointer": "/calls/0/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/N28/generation.json",
+      "json_pointer": "/calls/0/inputs/4/path",
+      "original_value": "../2026-09-09-a2-next-eight/N21-cushion-listen/image.png",
+      "path": "scenes/N21/image.png"
+    },
+    {
+      "record": "scenes/N28/generation.json",
+      "json_pointer": "/calls/0/prompt/path",
+      "original_value": "N28-sofa-arm-listen/prompt.txt",
+      "path": "scenes/N28/prompt.txt"
+    },
+    {
+      "record": "scenes/N28/generation.json",
+      "json_pointer": "/calls/0/output/path",
+      "original_value": "N28-sofa-arm-listen/initial.png",
+      "path": "scenes/N28/initial.png"
+    },
+    {
+      "record": "scenes/N28/generation.json",
+      "json_pointer": "/calls/1/inputs/0/path",
+      "original_value": "N28-sofa-arm-listen/initial.png",
+      "path": "scenes/N28/initial.png"
+    },
+    {
+      "record": "scenes/N28/generation.json",
+      "json_pointer": "/calls/1/inputs/1/path",
+      "original_value": "../../../akari-v3.1/situations/a2-home/images/A-2.png",
+      "path": "dependencies/281da5ca10992c7b/A-2.png"
+    },
+    {
+      "record": "scenes/N28/generation.json",
+      "json_pointer": "/calls/1/inputs/2/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/N28/generation.json",
+      "json_pointer": "/calls/1/inputs/3/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/N28/generation.json",
+      "json_pointer": "/calls/1/inputs/4/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/N28/generation.json",
+      "json_pointer": "/calls/1/prompt/path",
+      "original_value": "N28-sofa-arm-listen/prompt-r1.txt",
+      "path": "scenes/N28/prompt-r1.txt"
+    },
+    {
+      "record": "scenes/N28/generation.json",
+      "json_pointer": "/calls/1/output/path",
+      "original_value": "N28-sofa-arm-listen/r1.png",
+      "path": "scenes/N28/r1.png"
+    },
+    {
+      "record": "scenes/N28/generation.json",
+      "json_pointer": "/final_image/path",
+      "original_value": "N28-sofa-arm-listen/image.png",
+      "path": "scenes/N28/image.png"
+    },
+    {
+      "record": "scenes/N28/generation.json",
+      "json_pointer": "/review_crops/0/path",
+      "original_value": "N28-sofa-arm-listen/face-review.png",
+      "path": "scenes/N28/face-review.png"
+    },
+    {
+      "record": "scenes/N28/generation.json",
+      "json_pointer": "/review_crops/1/path",
+      "original_value": "N28-sofa-arm-listen/clothing-review.png",
+      "path": "scenes/N28/clothing-review.png"
+    },
+    {
+      "record": "scenes/N28/generation.json",
+      "json_pointer": "/auxiliary_crops/0/path",
+      "original_value": "N28-sofa-arm-listen/clothing-initial-review.png",
+      "path": "scenes/N28/clothing-initial-review.png"
+    },
+    {
+      "record": "scenes/N28/generation.json",
+      "json_pointer": "/auxiliary_crops/1/path",
+      "original_value": "N28-sofa-arm-listen/clothing-r1-review.png",
+      "path": "scenes/N28/clothing-r1-review.png"
+    },
+    {
+      "record": "scenes/N28/generation.json",
+      "json_pointer": "/auxiliary_crops/2/path",
+      "original_value": "N28-sofa-arm-listen/face-initial-review.png",
+      "path": "scenes/N28/face-initial-review.png"
+    },
+    {
+      "record": "scenes/N28/generation.json",
+      "json_pointer": "/auxiliary_crops/3/path",
+      "original_value": "N28-sofa-arm-listen/face-r1-review.png",
+      "path": "scenes/N28/face-r1-review.png"
+    },
+    {
+      "record": "scenes/N30/call-initial.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/N30/call-initial.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/N30/call-initial.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/N30/call-initial.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/N30/call-initial.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "../2026-09-09-a2-next-eight/N22-blanket-wrap/image.png",
+      "path": "scenes/N22/image.png"
+    },
+    {
+      "record": "scenes/N30/call-initial.json",
+      "json_pointer": "/prompt/path",
+      "original_value": "N30-blanket-cheek/prompt.txt",
+      "path": "scenes/N30/prompt.txt"
+    },
+    {
+      "record": "scenes/N30/call-initial.json",
+      "json_pointer": "/output/path",
+      "original_value": "N30-blanket-cheek/initial.png",
+      "path": "scenes/N30/initial.png"
+    },
+    {
+      "record": "scenes/N30/generation.json",
+      "json_pointer": "/calls/0/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/N30/generation.json",
+      "json_pointer": "/calls/0/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/N30/generation.json",
+      "json_pointer": "/calls/0/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/N30/generation.json",
+      "json_pointer": "/calls/0/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/N30/generation.json",
+      "json_pointer": "/calls/0/inputs/4/path",
+      "original_value": "../2026-09-09-a2-next-eight/N22-blanket-wrap/image.png",
+      "path": "scenes/N22/image.png"
+    },
+    {
+      "record": "scenes/N30/generation.json",
+      "json_pointer": "/calls/0/prompt/path",
+      "original_value": "N30-blanket-cheek/prompt.txt",
+      "path": "scenes/N30/prompt.txt"
+    },
+    {
+      "record": "scenes/N30/generation.json",
+      "json_pointer": "/calls/0/output/path",
+      "original_value": "N30-blanket-cheek/initial.png",
+      "path": "scenes/N30/initial.png"
+    },
+    {
+      "record": "scenes/N30/generation.json",
+      "json_pointer": "/final_image/path",
+      "original_value": "N30-blanket-cheek/image.png",
+      "path": "scenes/N30/image.png"
+    },
+    {
+      "record": "scenes/N30/generation.json",
+      "json_pointer": "/review_crops/0/path",
+      "original_value": "N30-blanket-cheek/face-review.png",
+      "path": "scenes/N30/face-review.png"
+    },
+    {
+      "record": "scenes/N30/generation.json",
+      "json_pointer": "/review_crops/1/path",
+      "original_value": "N30-blanket-cheek/clothing-review.png",
+      "path": "scenes/N30/clothing-review.png"
+    },
+    {
+      "record": "scenes/N30/generation.json",
+      "json_pointer": "/auxiliary_crops/0/path",
+      "original_value": "N30-blanket-cheek/clothing-initial-review.png",
+      "path": "scenes/N30/clothing-initial-review.png"
+    },
+    {
+      "record": "scenes/N30/generation.json",
+      "json_pointer": "/auxiliary_crops/1/path",
+      "original_value": "N30-blanket-cheek/face-initial-review.png",
+      "path": "scenes/N30/face-initial-review.png"
+    },
+    {
+      "record": "scenes/N16/call-initial.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/N16/call-initial.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/N16/call-initial.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/N16/call-initial.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/N16/call-initial.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "../../../akari-v3.1/situations/a2-home/images/N08.png",
+      "path": "dependencies/4be5272b81bbcf95/N08.png"
+    },
+    {
+      "record": "scenes/N16/call-initial.json",
+      "json_pointer": "/prompt/path",
+      "original_value": "N16-ribbon-gift/prompt.txt",
+      "path": "scenes/N16/prompt.txt"
+    },
+    {
+      "record": "scenes/N16/call-initial.json",
+      "json_pointer": "/output/path",
+      "original_value": "N16-ribbon-gift/initial.png",
+      "path": "scenes/N16/initial.png"
+    },
+    {
+      "record": "scenes/N16/generation.json",
+      "json_pointer": "/calls/0/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/N16/generation.json",
+      "json_pointer": "/calls/0/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/N16/generation.json",
+      "json_pointer": "/calls/0/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/N16/generation.json",
+      "json_pointer": "/calls/0/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/N16/generation.json",
+      "json_pointer": "/calls/0/inputs/4/path",
+      "original_value": "../../../akari-v3.1/situations/a2-home/images/N08.png",
+      "path": "dependencies/4be5272b81bbcf95/N08.png"
+    },
+    {
+      "record": "scenes/N16/generation.json",
+      "json_pointer": "/calls/0/prompt/path",
+      "original_value": "N16-ribbon-gift/prompt.txt",
+      "path": "scenes/N16/prompt.txt"
+    },
+    {
+      "record": "scenes/N16/generation.json",
+      "json_pointer": "/calls/0/output/path",
+      "original_value": "N16-ribbon-gift/initial.png",
+      "path": "scenes/N16/initial.png"
+    },
+    {
+      "record": "scenes/N16/generation.json",
+      "json_pointer": "/final_image/path",
+      "original_value": "N16-ribbon-gift/image.png",
+      "path": "scenes/N16/image.png"
+    },
+    {
+      "record": "scenes/N16/generation.json",
+      "json_pointer": "/review_crops/0/path",
+      "original_value": "N16-ribbon-gift/face-review.png",
+      "path": "scenes/N16/face-review.png"
+    },
+    {
+      "record": "scenes/N16/generation.json",
+      "json_pointer": "/review_crops/1/path",
+      "original_value": "N16-ribbon-gift/clothing-review.png",
+      "path": "scenes/N16/clothing-review.png"
+    },
+    {
+      "record": "scenes/N16/generation.json",
+      "json_pointer": "/auxiliary_crops/0/path",
+      "original_value": "N16-ribbon-gift/clothing-initial-review.png",
+      "path": "scenes/N16/clothing-initial-review.png"
+    },
+    {
+      "record": "scenes/N16/generation.json",
+      "json_pointer": "/auxiliary_crops/1/path",
+      "original_value": "N16-ribbon-gift/face-initial-review.png",
+      "path": "scenes/N16/face-initial-review.png"
+    },
+    {
+      "record": "scenes/N20/call-initial.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/N20/call-initial.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/N20/call-initial.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/N20/call-initial.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/N20/call-initial.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "../../../akari-v3.1/situations/a2-home/images/N12.png",
+      "path": "dependencies/df8471a070982d88/N12.png"
+    },
+    {
+      "record": "scenes/N20/call-initial.json",
+      "json_pointer": "/prompt/path",
+      "original_value": "N20-tea-laugh/prompt.txt",
+      "path": "scenes/N20/prompt.txt"
+    },
+    {
+      "record": "scenes/N20/call-initial.json",
+      "json_pointer": "/output/path",
+      "original_value": "N20-tea-laugh/initial.png",
+      "path": "scenes/N20/initial.png"
+    },
+    {
+      "record": "scenes/N20/call-r1.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "N20-tea-laugh/initial.png",
+      "path": "scenes/N20/initial.png"
+    },
+    {
+      "record": "scenes/N20/call-r1.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "../../../akari-v3.1/situations/a2-home/images/A-2.png",
+      "path": "dependencies/281da5ca10992c7b/A-2.png"
+    },
+    {
+      "record": "scenes/N20/call-r1.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/N20/call-r1.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/N20/call-r1.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/N20/call-r1.json",
+      "json_pointer": "/prompt/path",
+      "original_value": "N20-tea-laugh/prompt-r1.txt",
+      "path": "scenes/N20/prompt-r1.txt"
+    },
+    {
+      "record": "scenes/N20/call-r1.json",
+      "json_pointer": "/output/path",
+      "original_value": "N20-tea-laugh/r1.png",
+      "path": "scenes/N20/r1.png"
+    },
+    {
+      "record": "scenes/N20/call-r2.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "N20-tea-laugh/r1.png",
+      "path": "scenes/N20/r1.png"
+    },
+    {
+      "record": "scenes/N20/call-r2.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "../../../akari-v3.1/situations/a2-home/images/A-2.png",
+      "path": "dependencies/281da5ca10992c7b/A-2.png"
+    },
+    {
+      "record": "scenes/N20/call-r2.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/N20/call-r2.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/N20/call-r2.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "N20-tea-laugh/buttons-r1-review.png",
+      "path": "scenes/N20/buttons-r1-review.png"
+    },
+    {
+      "record": "scenes/N20/call-r2.json",
+      "json_pointer": "/prompt/path",
+      "original_value": "N20-tea-laugh/prompt-r2.txt",
+      "path": "scenes/N20/prompt-r2.txt"
+    },
+    {
+      "record": "scenes/N20/call-r2.json",
+      "json_pointer": "/output/path",
+      "original_value": "N20-tea-laugh/r2.png",
+      "path": "scenes/N20/r2.png"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/calls/0/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/calls/0/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/calls/0/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/calls/0/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/calls/0/inputs/4/path",
+      "original_value": "../../../akari-v3.1/situations/a2-home/images/N12.png",
+      "path": "dependencies/df8471a070982d88/N12.png"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/calls/0/prompt/path",
+      "original_value": "N20-tea-laugh/prompt.txt",
+      "path": "scenes/N20/prompt.txt"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/calls/0/output/path",
+      "original_value": "N20-tea-laugh/initial.png",
+      "path": "scenes/N20/initial.png"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/calls/1/inputs/0/path",
+      "original_value": "N20-tea-laugh/initial.png",
+      "path": "scenes/N20/initial.png"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/calls/1/inputs/1/path",
+      "original_value": "../../../akari-v3.1/situations/a2-home/images/A-2.png",
+      "path": "dependencies/281da5ca10992c7b/A-2.png"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/calls/1/inputs/2/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/calls/1/inputs/3/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/calls/1/inputs/4/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/calls/1/prompt/path",
+      "original_value": "N20-tea-laugh/prompt-r1.txt",
+      "path": "scenes/N20/prompt-r1.txt"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/calls/1/output/path",
+      "original_value": "N20-tea-laugh/r1.png",
+      "path": "scenes/N20/r1.png"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/calls/2/inputs/0/path",
+      "original_value": "N20-tea-laugh/r1.png",
+      "path": "scenes/N20/r1.png"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/calls/2/inputs/1/path",
+      "original_value": "../../../akari-v3.1/situations/a2-home/images/A-2.png",
+      "path": "dependencies/281da5ca10992c7b/A-2.png"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/calls/2/inputs/2/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/calls/2/inputs/3/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/calls/2/inputs/4/path",
+      "original_value": "N20-tea-laugh/buttons-r1-review.png",
+      "path": "scenes/N20/buttons-r1-review.png"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/calls/2/prompt/path",
+      "original_value": "N20-tea-laugh/prompt-r2.txt",
+      "path": "scenes/N20/prompt-r2.txt"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/calls/2/output/path",
+      "original_value": "N20-tea-laugh/r2.png",
+      "path": "scenes/N20/r2.png"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/final_image/path",
+      "original_value": "N20-tea-laugh/image.png",
+      "path": "scenes/N20/image.png"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/review_crops/0/path",
+      "original_value": "N20-tea-laugh/face-review.png",
+      "path": "scenes/N20/face-review.png"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/review_crops/1/path",
+      "original_value": "N20-tea-laugh/clothing-review.png",
+      "path": "scenes/N20/clothing-review.png"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/auxiliary_crops/0/path",
+      "original_value": "N20-tea-laugh/buttons-r1-review.png",
+      "path": "scenes/N20/buttons-r1-review.png"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/auxiliary_crops/1/path",
+      "original_value": "N20-tea-laugh/clothing-initial-review.png",
+      "path": "scenes/N20/clothing-initial-review.png"
+    },
+    {
+      "record": "scenes/N20/generation.json",
+      "json_pointer": "/auxiliary_crops/2/path",
+      "original_value": "N20-tea-laugh/face-initial-review.png",
+      "path": "scenes/N20/face-initial-review.png"
+    },
+    {
+      "record": "scenes/N21/call-initial.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/N21/call-initial.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/N21/call-initial.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/N21/call-initial.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/N21/call-initial.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "../../../akari-v3.1/situations/a2-home/images/N12.png",
+      "path": "dependencies/df8471a070982d88/N12.png"
+    },
+    {
+      "record": "scenes/N21/call-initial.json",
+      "json_pointer": "/prompt/path",
+      "original_value": "N21-cushion-listen/prompt.txt",
+      "path": "scenes/N21/prompt.txt"
+    },
+    {
+      "record": "scenes/N21/call-initial.json",
+      "json_pointer": "/output/path",
+      "original_value": "N21-cushion-listen/initial.png",
+      "path": "scenes/N21/initial.png"
+    },
+    {
+      "record": "scenes/N21/generation.json",
+      "json_pointer": "/calls/0/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/N21/generation.json",
+      "json_pointer": "/calls/0/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/N21/generation.json",
+      "json_pointer": "/calls/0/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/N21/generation.json",
+      "json_pointer": "/calls/0/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/N21/generation.json",
+      "json_pointer": "/calls/0/inputs/4/path",
+      "original_value": "../../../akari-v3.1/situations/a2-home/images/N12.png",
+      "path": "dependencies/df8471a070982d88/N12.png"
+    },
+    {
+      "record": "scenes/N21/generation.json",
+      "json_pointer": "/calls/0/prompt/path",
+      "original_value": "N21-cushion-listen/prompt.txt",
+      "path": "scenes/N21/prompt.txt"
+    },
+    {
+      "record": "scenes/N21/generation.json",
+      "json_pointer": "/calls/0/output/path",
+      "original_value": "N21-cushion-listen/initial.png",
+      "path": "scenes/N21/initial.png"
+    },
+    {
+      "record": "scenes/N21/generation.json",
+      "json_pointer": "/final_image/path",
+      "original_value": "N21-cushion-listen/image.png",
+      "path": "scenes/N21/image.png"
+    },
+    {
+      "record": "scenes/N21/generation.json",
+      "json_pointer": "/review_crops/0/path",
+      "original_value": "N21-cushion-listen/face-review.png",
+      "path": "scenes/N21/face-review.png"
+    },
+    {
+      "record": "scenes/N21/generation.json",
+      "json_pointer": "/review_crops/1/path",
+      "original_value": "N21-cushion-listen/clothing-review.png",
+      "path": "scenes/N21/clothing-review.png"
+    },
+    {
+      "record": "scenes/N21/generation.json",
+      "json_pointer": "/auxiliary_crops/0/path",
+      "original_value": "N21-cushion-listen/clothing-initial-review.png",
+      "path": "scenes/N21/clothing-initial-review.png"
+    },
+    {
+      "record": "scenes/N21/generation.json",
+      "json_pointer": "/auxiliary_crops/1/path",
+      "original_value": "N21-cushion-listen/face-initial-review.png",
+      "path": "scenes/N21/face-initial-review.png"
+    },
+    {
+      "record": "scenes/N22/call-initial.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/N22/call-initial.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/N22/call-initial.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/N22/call-initial.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/N22/call-initial.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "../../../akari-v3.1/situations/a2-home/images/N15.png",
+      "path": "dependencies/ec27b53e5a9a0585/N15.png"
+    },
+    {
+      "record": "scenes/N22/call-initial.json",
+      "json_pointer": "/prompt/path",
+      "original_value": "N22-blanket-wrap/prompt.txt",
+      "path": "scenes/N22/prompt.txt"
+    },
+    {
+      "record": "scenes/N22/call-initial.json",
+      "json_pointer": "/output/path",
+      "original_value": "N22-blanket-wrap/initial.png",
+      "path": "scenes/N22/initial.png"
+    },
+    {
+      "record": "scenes/N22/call-r1.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "N22-blanket-wrap/initial.png",
+      "path": "scenes/N22/initial.png"
+    },
+    {
+      "record": "scenes/N22/call-r1.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/N22/call-r1.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/N22/call-r1.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/N22/call-r1.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "../../../akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png"
+    },
+    {
+      "record": "scenes/N22/call-r1.json",
+      "json_pointer": "/prompt/path",
+      "original_value": "N22-blanket-wrap/prompt-r1.txt",
+      "path": "scenes/N22/prompt-r1.txt"
+    },
+    {
+      "record": "scenes/N22/call-r1.json",
+      "json_pointer": "/output/path",
+      "original_value": "N22-blanket-wrap/r1.png",
+      "path": "scenes/N22/r1.png"
+    },
+    {
+      "record": "scenes/N22/generation.json",
+      "json_pointer": "/calls/0/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/N22/generation.json",
+      "json_pointer": "/calls/0/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/N22/generation.json",
+      "json_pointer": "/calls/0/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/N22/generation.json",
+      "json_pointer": "/calls/0/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/N22/generation.json",
+      "json_pointer": "/calls/0/inputs/4/path",
+      "original_value": "../../../akari-v3.1/situations/a2-home/images/N15.png",
+      "path": "dependencies/ec27b53e5a9a0585/N15.png"
+    },
+    {
+      "record": "scenes/N22/generation.json",
+      "json_pointer": "/calls/0/prompt/path",
+      "original_value": "N22-blanket-wrap/prompt.txt",
+      "path": "scenes/N22/prompt.txt"
+    },
+    {
+      "record": "scenes/N22/generation.json",
+      "json_pointer": "/calls/0/output/path",
+      "original_value": "N22-blanket-wrap/initial.png",
+      "path": "scenes/N22/initial.png"
+    },
+    {
+      "record": "scenes/N22/generation.json",
+      "json_pointer": "/calls/1/inputs/0/path",
+      "original_value": "N22-blanket-wrap/initial.png",
+      "path": "scenes/N22/initial.png"
+    },
+    {
+      "record": "scenes/N22/generation.json",
+      "json_pointer": "/calls/1/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/N22/generation.json",
+      "json_pointer": "/calls/1/inputs/2/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/N22/generation.json",
+      "json_pointer": "/calls/1/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/N22/generation.json",
+      "json_pointer": "/calls/1/inputs/4/path",
+      "original_value": "../../../akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png"
+    },
+    {
+      "record": "scenes/N22/generation.json",
+      "json_pointer": "/calls/1/prompt/path",
+      "original_value": "N22-blanket-wrap/prompt-r1.txt",
+      "path": "scenes/N22/prompt-r1.txt"
+    },
+    {
+      "record": "scenes/N22/generation.json",
+      "json_pointer": "/calls/1/output/path",
+      "original_value": "N22-blanket-wrap/r1.png",
+      "path": "scenes/N22/r1.png"
+    },
+    {
+      "record": "scenes/N22/generation.json",
+      "json_pointer": "/final_image/path",
+      "original_value": "N22-blanket-wrap/image.png",
+      "path": "scenes/N22/image.png"
+    },
+    {
+      "record": "scenes/N22/generation.json",
+      "json_pointer": "/review_crops/0/path",
+      "original_value": "N22-blanket-wrap/face-review.png",
+      "path": "scenes/N22/face-review.png"
+    },
+    {
+      "record": "scenes/N22/generation.json",
+      "json_pointer": "/review_crops/1/path",
+      "original_value": "N22-blanket-wrap/clothing-review.png",
+      "path": "scenes/N22/clothing-review.png"
+    },
+    {
+      "record": "scenes/N22/generation.json",
+      "json_pointer": "/review_crops/2/path",
+      "original_value": "N22-blanket-wrap/sock-review.png",
+      "path": "scenes/N22/sock-review.png"
+    },
+    {
+      "record": "scenes/N22/generation.json",
+      "json_pointer": "/auxiliary_crops/0/path",
+      "original_value": "N22-blanket-wrap/clothing-initial-review.png",
+      "path": "scenes/N22/clothing-initial-review.png"
+    },
+    {
+      "record": "scenes/N22/generation.json",
+      "json_pointer": "/auxiliary_crops/1/path",
+      "original_value": "N22-blanket-wrap/face-initial-review.png",
+      "path": "scenes/N22/face-initial-review.png"
+    },
+    {
+      "record": "scenes/N22/generation.json",
+      "json_pointer": "/auxiliary_crops/2/path",
+      "original_value": "N22-blanket-wrap/sock-initial-review.png",
+      "path": "scenes/N22/sock-initial-review.png"
+    },
+    {
+      "record": "scenes/SU08/call-initial.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/SU08/call-initial.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/SU08/call-initial.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/SU08/call-initial.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/SU08/call-initial.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "../2026-09-09-school-uniform-six/SU03-forest-vest/image.png",
+      "path": "scenes/SU03/image.png"
+    },
+    {
+      "record": "scenes/SU08/call-initial.json",
+      "json_pointer": "/prompt/path",
+      "original_value": "SU08-ivory-vest/prompt.txt",
+      "path": "scenes/SU08/prompt.txt"
+    },
+    {
+      "record": "scenes/SU08/call-initial.json",
+      "json_pointer": "/output/path",
+      "original_value": "SU08-ivory-vest/initial.png",
+      "path": "scenes/SU08/initial.png"
+    },
+    {
+      "record": "scenes/SU08/generation.json",
+      "json_pointer": "/calls/0/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/SU08/generation.json",
+      "json_pointer": "/calls/0/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/SU08/generation.json",
+      "json_pointer": "/calls/0/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/SU08/generation.json",
+      "json_pointer": "/calls/0/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/SU08/generation.json",
+      "json_pointer": "/calls/0/inputs/4/path",
+      "original_value": "../2026-09-09-school-uniform-six/SU03-forest-vest/image.png",
+      "path": "scenes/SU03/image.png"
+    },
+    {
+      "record": "scenes/SU08/generation.json",
+      "json_pointer": "/calls/0/prompt/path",
+      "original_value": "SU08-ivory-vest/prompt.txt",
+      "path": "scenes/SU08/prompt.txt"
+    },
+    {
+      "record": "scenes/SU08/generation.json",
+      "json_pointer": "/calls/0/output/path",
+      "original_value": "SU08-ivory-vest/initial.png",
+      "path": "scenes/SU08/initial.png"
+    },
+    {
+      "record": "scenes/SU08/generation.json",
+      "json_pointer": "/final_image/path",
+      "original_value": "SU08-ivory-vest/image.png",
+      "path": "scenes/SU08/image.png"
+    },
+    {
+      "record": "scenes/SU08/generation.json",
+      "json_pointer": "/review_crops/0/path",
+      "original_value": "SU08-ivory-vest/face-review.png",
+      "path": "scenes/SU08/face-review.png"
+    },
+    {
+      "record": "scenes/SU08/generation.json",
+      "json_pointer": "/review_crops/1/path",
+      "original_value": "SU08-ivory-vest/clothing_hands-review.png",
+      "path": "scenes/SU08/clothing_hands-review.png"
+    },
+    {
+      "record": "scenes/SU08/generation.json",
+      "json_pointer": "/review_crops/2/path",
+      "original_value": "SU08-ivory-vest/socks_shoes-review.png",
+      "path": "scenes/SU08/socks_shoes-review.png"
+    },
+    {
+      "record": "scenes/SU11/call-initial.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/SU11/call-initial.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/SU11/call-initial.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/SU11/call-initial.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/SU11/call-initial.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "../2026-09-09-school-uniform-six/SU05-grey-bolero/image.png",
+      "path": "scenes/SU05/image.png"
+    },
+    {
+      "record": "scenes/SU11/call-initial.json",
+      "json_pointer": "/prompt/path",
+      "original_value": "SU11-greige-bolero/prompt.txt",
+      "path": "scenes/SU11/prompt.txt"
+    },
+    {
+      "record": "scenes/SU11/call-initial.json",
+      "json_pointer": "/output/path",
+      "original_value": "SU11-greige-bolero/initial.png",
+      "path": "scenes/SU11/initial.png"
+    },
+    {
+      "record": "scenes/SU11/generation.json",
+      "json_pointer": "/calls/0/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/SU11/generation.json",
+      "json_pointer": "/calls/0/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/SU11/generation.json",
+      "json_pointer": "/calls/0/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/SU11/generation.json",
+      "json_pointer": "/calls/0/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/SU11/generation.json",
+      "json_pointer": "/calls/0/inputs/4/path",
+      "original_value": "../2026-09-09-school-uniform-six/SU05-grey-bolero/image.png",
+      "path": "scenes/SU05/image.png"
+    },
+    {
+      "record": "scenes/SU11/generation.json",
+      "json_pointer": "/calls/0/prompt/path",
+      "original_value": "SU11-greige-bolero/prompt.txt",
+      "path": "scenes/SU11/prompt.txt"
+    },
+    {
+      "record": "scenes/SU11/generation.json",
+      "json_pointer": "/calls/0/output/path",
+      "original_value": "SU11-greige-bolero/initial.png",
+      "path": "scenes/SU11/initial.png"
+    },
+    {
+      "record": "scenes/SU11/generation.json",
+      "json_pointer": "/final_image/path",
+      "original_value": "SU11-greige-bolero/image.png",
+      "path": "scenes/SU11/image.png"
+    },
+    {
+      "record": "scenes/SU11/generation.json",
+      "json_pointer": "/review_crops/0/path",
+      "original_value": "SU11-greige-bolero/face-review.png",
+      "path": "scenes/SU11/face-review.png"
+    },
+    {
+      "record": "scenes/SU11/generation.json",
+      "json_pointer": "/review_crops/1/path",
+      "original_value": "SU11-greige-bolero/clothing_hands-review.png",
+      "path": "scenes/SU11/clothing_hands-review.png"
+    },
+    {
+      "record": "scenes/SU11/generation.json",
+      "json_pointer": "/review_crops/2/path",
+      "original_value": "SU11-greige-bolero/socks_shoes-review.png",
+      "path": "scenes/SU11/socks_shoes-review.png"
+    },
+    {
+      "record": "scenes/SU14/call-initial.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/SU14/call-initial.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/SU14/call-initial.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/SU14/call-initial.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/SU14/call-initial.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "../2026-09-09-school-uniform-six/SU06-blue-summer/image.png",
+      "path": "scenes/SU06/image.png"
+    },
+    {
+      "record": "scenes/SU14/call-initial.json",
+      "json_pointer": "/prompt/path",
+      "original_value": "SU14-white-sailor-blue-check/prompt.txt",
+      "path": "scenes/SU14/prompt.txt"
+    },
+    {
+      "record": "scenes/SU14/call-initial.json",
+      "json_pointer": "/output/path",
+      "original_value": "SU14-white-sailor-blue-check/initial.png",
+      "path": "scenes/SU14/initial.png"
+    },
+    {
+      "record": "scenes/SU14/generation.json",
+      "json_pointer": "/calls/0/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/SU14/generation.json",
+      "json_pointer": "/calls/0/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/SU14/generation.json",
+      "json_pointer": "/calls/0/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/SU14/generation.json",
+      "json_pointer": "/calls/0/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/SU14/generation.json",
+      "json_pointer": "/calls/0/inputs/4/path",
+      "original_value": "../2026-09-09-school-uniform-six/SU06-blue-summer/image.png",
+      "path": "scenes/SU06/image.png"
+    },
+    {
+      "record": "scenes/SU14/generation.json",
+      "json_pointer": "/calls/0/prompt/path",
+      "original_value": "SU14-white-sailor-blue-check/prompt.txt",
+      "path": "scenes/SU14/prompt.txt"
+    },
+    {
+      "record": "scenes/SU14/generation.json",
+      "json_pointer": "/calls/0/output/path",
+      "original_value": "SU14-white-sailor-blue-check/initial.png",
+      "path": "scenes/SU14/initial.png"
+    },
+    {
+      "record": "scenes/SU14/generation.json",
+      "json_pointer": "/final_image/path",
+      "original_value": "SU14-white-sailor-blue-check/image.png",
+      "path": "scenes/SU14/image.png"
+    },
+    {
+      "record": "scenes/SU14/generation.json",
+      "json_pointer": "/review_crops/0/path",
+      "original_value": "SU14-white-sailor-blue-check/face-review.png",
+      "path": "scenes/SU14/face-review.png"
+    },
+    {
+      "record": "scenes/SU14/generation.json",
+      "json_pointer": "/review_crops/1/path",
+      "original_value": "SU14-white-sailor-blue-check/clothing_hands-review.png",
+      "path": "scenes/SU14/clothing_hands-review.png"
+    },
+    {
+      "record": "scenes/SU14/generation.json",
+      "json_pointer": "/review_crops/2/path",
+      "original_value": "SU14-white-sailor-blue-check/socks_shoes-review.png",
+      "path": "scenes/SU14/socks_shoes-review.png"
+    },
+    {
+      "record": "scenes/SU03/call-initial.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/SU03/call-initial.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/SU03/call-initial.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/SU03/call-initial.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/SU03/call-initial.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "../../../akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png"
+    },
+    {
+      "record": "scenes/SU03/call-initial.json",
+      "json_pointer": "/prompt/path",
+      "original_value": "SU03-forest-vest/prompt.txt",
+      "path": "scenes/SU03/prompt.txt"
+    },
+    {
+      "record": "scenes/SU03/call-initial.json",
+      "json_pointer": "/output/path",
+      "original_value": "SU03-forest-vest/initial.png",
+      "path": "scenes/SU03/initial.png"
+    },
+    {
+      "record": "scenes/SU03/generation.json",
+      "json_pointer": "/calls/0/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/SU03/generation.json",
+      "json_pointer": "/calls/0/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/SU03/generation.json",
+      "json_pointer": "/calls/0/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/SU03/generation.json",
+      "json_pointer": "/calls/0/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/SU03/generation.json",
+      "json_pointer": "/calls/0/inputs/4/path",
+      "original_value": "../../../akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png"
+    },
+    {
+      "record": "scenes/SU03/generation.json",
+      "json_pointer": "/calls/0/prompt/path",
+      "original_value": "SU03-forest-vest/prompt.txt",
+      "path": "scenes/SU03/prompt.txt"
+    },
+    {
+      "record": "scenes/SU03/generation.json",
+      "json_pointer": "/calls/0/output/path",
+      "original_value": "SU03-forest-vest/initial.png",
+      "path": "scenes/SU03/initial.png"
+    },
+    {
+      "record": "scenes/SU03/generation.json",
+      "json_pointer": "/final_image/path",
+      "original_value": "SU03-forest-vest/image.png",
+      "path": "scenes/SU03/image.png"
+    },
+    {
+      "record": "scenes/SU03/generation.json",
+      "json_pointer": "/review_crops/0/path",
+      "original_value": "SU03-forest-vest/face-review.png",
+      "path": "scenes/SU03/face-review.png"
+    },
+    {
+      "record": "scenes/SU03/generation.json",
+      "json_pointer": "/review_crops/1/path",
+      "original_value": "SU03-forest-vest/clothing_hands-review.png",
+      "path": "scenes/SU03/clothing_hands-review.png"
+    },
+    {
+      "record": "scenes/SU03/generation.json",
+      "json_pointer": "/review_crops/2/path",
+      "original_value": "SU03-forest-vest/socks_shoes-review.png",
+      "path": "scenes/SU03/socks_shoes-review.png"
+    },
+    {
+      "record": "scenes/SU05/call-initial.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/SU05/call-initial.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/SU05/call-initial.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/SU05/call-initial.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/SU05/call-initial.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "../../../akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png"
+    },
+    {
+      "record": "scenes/SU05/call-initial.json",
+      "json_pointer": "/prompt/path",
+      "original_value": "SU05-grey-bolero/prompt.txt",
+      "path": "scenes/SU05/prompt.txt"
+    },
+    {
+      "record": "scenes/SU05/call-initial.json",
+      "json_pointer": "/output/path",
+      "original_value": "SU05-grey-bolero/initial.png",
+      "path": "scenes/SU05/initial.png"
+    },
+    {
+      "record": "scenes/SU05/call-r1.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "SU05-grey-bolero/initial.png",
+      "path": "scenes/SU05/initial.png"
+    },
+    {
+      "record": "scenes/SU05/call-r1.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/SU05/call-r1.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/SU05/call-r1.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/SU05/call-r1.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "../../../akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png"
+    },
+    {
+      "record": "scenes/SU05/call-r1.json",
+      "json_pointer": "/prompt/path",
+      "original_value": "SU05-grey-bolero/prompt-r1.txt",
+      "path": "scenes/SU05/prompt-r1.txt"
+    },
+    {
+      "record": "scenes/SU05/call-r1.json",
+      "json_pointer": "/output/path",
+      "original_value": "SU05-grey-bolero/r1.png",
+      "path": "scenes/SU05/r1.png"
+    },
+    {
+      "record": "scenes/SU05/generation.json",
+      "json_pointer": "/calls/0/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/SU05/generation.json",
+      "json_pointer": "/calls/0/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/SU05/generation.json",
+      "json_pointer": "/calls/0/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/SU05/generation.json",
+      "json_pointer": "/calls/0/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/SU05/generation.json",
+      "json_pointer": "/calls/0/inputs/4/path",
+      "original_value": "../../../akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png"
+    },
+    {
+      "record": "scenes/SU05/generation.json",
+      "json_pointer": "/calls/0/prompt/path",
+      "original_value": "SU05-grey-bolero/prompt.txt",
+      "path": "scenes/SU05/prompt.txt"
+    },
+    {
+      "record": "scenes/SU05/generation.json",
+      "json_pointer": "/calls/0/output/path",
+      "original_value": "SU05-grey-bolero/initial.png",
+      "path": "scenes/SU05/initial.png"
+    },
+    {
+      "record": "scenes/SU05/generation.json",
+      "json_pointer": "/calls/1/inputs/0/path",
+      "original_value": "SU05-grey-bolero/initial.png",
+      "path": "scenes/SU05/initial.png"
+    },
+    {
+      "record": "scenes/SU05/generation.json",
+      "json_pointer": "/calls/1/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/SU05/generation.json",
+      "json_pointer": "/calls/1/inputs/2/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/SU05/generation.json",
+      "json_pointer": "/calls/1/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/SU05/generation.json",
+      "json_pointer": "/calls/1/inputs/4/path",
+      "original_value": "../../../akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png"
+    },
+    {
+      "record": "scenes/SU05/generation.json",
+      "json_pointer": "/calls/1/prompt/path",
+      "original_value": "SU05-grey-bolero/prompt-r1.txt",
+      "path": "scenes/SU05/prompt-r1.txt"
+    },
+    {
+      "record": "scenes/SU05/generation.json",
+      "json_pointer": "/calls/1/output/path",
+      "original_value": "SU05-grey-bolero/r1.png",
+      "path": "scenes/SU05/r1.png"
+    },
+    {
+      "record": "scenes/SU05/generation.json",
+      "json_pointer": "/final_image/path",
+      "original_value": "SU05-grey-bolero/image.png",
+      "path": "scenes/SU05/image.png"
+    },
+    {
+      "record": "scenes/SU05/generation.json",
+      "json_pointer": "/review_crops/0/path",
+      "original_value": "SU05-grey-bolero/face-review.png",
+      "path": "scenes/SU05/face-review.png"
+    },
+    {
+      "record": "scenes/SU05/generation.json",
+      "json_pointer": "/review_crops/1/path",
+      "original_value": "SU05-grey-bolero/clothing_hands-review.png",
+      "path": "scenes/SU05/clothing_hands-review.png"
+    },
+    {
+      "record": "scenes/SU05/generation.json",
+      "json_pointer": "/review_crops/2/path",
+      "original_value": "SU05-grey-bolero/socks_shoes-review.png",
+      "path": "scenes/SU05/socks_shoes-review.png"
+    },
+    {
+      "record": "scenes/SU05/generation.json",
+      "json_pointer": "/auxiliary_crops/0/path",
+      "original_value": "SU05-grey-bolero/clothing_hands-initial-review.png",
+      "path": "scenes/SU05/clothing_hands-initial-review.png"
+    },
+    {
+      "record": "scenes/SU05/generation.json",
+      "json_pointer": "/auxiliary_crops/1/path",
+      "original_value": "SU05-grey-bolero/face-initial-review.png",
+      "path": "scenes/SU05/face-initial-review.png"
+    },
+    {
+      "record": "scenes/SU05/generation.json",
+      "json_pointer": "/auxiliary_crops/2/path",
+      "original_value": "SU05-grey-bolero/socks_shoes-initial-review.png",
+      "path": "scenes/SU05/socks_shoes-initial-review.png"
+    },
+    {
+      "record": "scenes/SU06/call-initial.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/SU06/call-initial.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/SU06/call-initial.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/SU06/call-initial.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/SU06/call-initial.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "../../../akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png"
+    },
+    {
+      "record": "scenes/SU06/call-initial.json",
+      "json_pointer": "/prompt/path",
+      "original_value": "SU06-blue-summer/prompt.txt",
+      "path": "scenes/SU06/prompt.txt"
+    },
+    {
+      "record": "scenes/SU06/call-initial.json",
+      "json_pointer": "/output/path",
+      "original_value": "SU06-blue-summer/initial.png",
+      "path": "scenes/SU06/initial.png"
+    },
+    {
+      "record": "scenes/SU06/generation.json",
+      "json_pointer": "/calls/0/inputs/0/path",
+      "original_value": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/SU06/generation.json",
+      "json_pointer": "/calls/0/inputs/1/path",
+      "original_value": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/SU06/generation.json",
+      "json_pointer": "/calls/0/inputs/2/path",
+      "original_value": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/SU06/generation.json",
+      "json_pointer": "/calls/0/inputs/3/path",
+      "original_value": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/SU06/generation.json",
+      "json_pointer": "/calls/0/inputs/4/path",
+      "original_value": "../../../akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png"
+    },
+    {
+      "record": "scenes/SU06/generation.json",
+      "json_pointer": "/calls/0/prompt/path",
+      "original_value": "SU06-blue-summer/prompt.txt",
+      "path": "scenes/SU06/prompt.txt"
+    },
+    {
+      "record": "scenes/SU06/generation.json",
+      "json_pointer": "/calls/0/output/path",
+      "original_value": "SU06-blue-summer/initial.png",
+      "path": "scenes/SU06/initial.png"
+    },
+    {
+      "record": "scenes/SU06/generation.json",
+      "json_pointer": "/final_image/path",
+      "original_value": "SU06-blue-summer/image.png",
+      "path": "scenes/SU06/image.png"
+    },
+    {
+      "record": "scenes/SU06/generation.json",
+      "json_pointer": "/review_crops/0/path",
+      "original_value": "SU06-blue-summer/face-review.png",
+      "path": "scenes/SU06/face-review.png"
+    },
+    {
+      "record": "scenes/SU06/generation.json",
+      "json_pointer": "/review_crops/1/path",
+      "original_value": "SU06-blue-summer/clothing_hands-review.png",
+      "path": "scenes/SU06/clothing_hands-review.png"
+    },
+    {
+      "record": "scenes/SU06/generation.json",
+      "json_pointer": "/review_crops/2/path",
+      "original_value": "SU06-blue-summer/socks_shoes-review.png",
+      "path": "scenes/SU06/socks_shoes-review.png"
+    },
+    {
+      "record": "scenes/AF01/generation.json",
+      "json_pointer": "/image",
+      "original_value": "AF01-beside-you.png",
+      "path": "scenes/AF01/AF01-beside-you.png"
+    },
+    {
+      "record": "scenes/AF01/generation.json",
+      "json_pointer": "/prompt",
+      "original_value": "prompt.txt",
+      "path": "scenes/AF01/prompt.txt"
+    },
+    {
+      "record": "scenes/AF01/generation.json",
+      "json_pointer": "/feedback_snapshot",
+      "original_value": "../feedback-snapshot.json",
+      "path": "history/2026-09-10-album-feedback/feedback-snapshot.json"
+    },
+    {
+      "record": "scenes/AF01/generation.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N29-seat-beside-me/r2.png",
+      "path": "dependencies/b50d03be676bab28/r2.png"
+    },
+    {
+      "record": "scenes/AF01/generation.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "akari-v3.1/situations/abc-exploration/images/A13.png",
+      "path": "dependencies/e090b707738c50c4/A13.png"
+    },
+    {
+      "record": "scenes/AF01/generation.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/AF01/generation.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/AF01/generation.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/AF02/generation.json",
+      "json_pointer": "/image",
+      "original_value": "AF02-quiet-beside-you.png",
+      "path": "scenes/AF02/AF02-quiet-beside-you.png"
+    },
+    {
+      "record": "scenes/AF02/generation.json",
+      "json_pointer": "/prompt",
+      "original_value": "prompt.txt",
+      "path": "scenes/AF02/prompt.txt"
+    },
+    {
+      "record": "scenes/AF02/generation.json",
+      "json_pointer": "/feedback_snapshot",
+      "original_value": "../feedback-snapshot.json",
+      "path": "history/2026-09-10-album-feedback/feedback-snapshot.json"
+    },
+    {
+      "record": "scenes/AF02/generation.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "tmp/akari-v3.1/2026-09-10-album-feedback/AF01-beside-you/AF01-beside-you.png",
+      "path": "scenes/AF01/AF01-beside-you.png"
+    },
+    {
+      "record": "scenes/AF02/generation.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/AF02/generation.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/AF02/generation.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/AF02/generation.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "akari-v3.1/situations/abc-exploration/images/A13.png",
+      "path": "dependencies/e090b707738c50c4/A13.png"
+    },
+    {
+      "record": "scenes/AF02/generation.json",
+      "json_pointer": "/provenance/parent_generation_record",
+      "original_value": "../AF01-beside-you/generation.json",
+      "path": "scenes/AF01/generation.json"
+    },
+    {
+      "record": "scenes/AF02/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/0",
+      "original_value": "akari-v3.1/README.md",
+      "path": "dependencies/55c3ea0a4e2df0a4/README.md"
+    },
+    {
+      "record": "scenes/AF02/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/1",
+      "original_value": "akari-v3.1/design-state.json",
+      "path": "dependencies/131cb2ac57be9592/design-state.json"
+    },
+    {
+      "record": "scenes/AF02/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/2",
+      "original_value": "akari-v3.1/reference-set.json",
+      "path": "dependencies/a2b31b7247e2ab45/reference-set.json"
+    },
+    {
+      "record": "scenes/AF02/generation.json",
+      "json_pointer": "/validation_record",
+      "original_value": "validation.json",
+      "path": "scenes/AF02/validation.json"
+    },
+    {
+      "record": "scenes/AF03/generation.json",
+      "json_pointer": "/image",
+      "original_value": "AF03-relaxed-beside-you.png",
+      "path": "scenes/AF03/AF03-relaxed-beside-you.png"
+    },
+    {
+      "record": "scenes/AF03/generation.json",
+      "json_pointer": "/prompt",
+      "original_value": "prompt.txt",
+      "path": "scenes/AF03/prompt.txt"
+    },
+    {
+      "record": "scenes/AF03/generation.json",
+      "json_pointer": "/feedback_snapshot",
+      "original_value": "../feedback-snapshot.json",
+      "path": "history/2026-09-10-album-feedback/feedback-snapshot.json"
+    },
+    {
+      "record": "scenes/AF03/generation.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N29-seat-beside-me/r2.png",
+      "path": "dependencies/b50d03be676bab28/r2.png"
+    },
+    {
+      "record": "scenes/AF03/generation.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "akari-v3.1/situations/abc-exploration/images/A13.png",
+      "path": "dependencies/e090b707738c50c4/A13.png"
+    },
+    {
+      "record": "scenes/AF03/generation.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/AF03/generation.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/AF03/generation.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/AF03/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/0",
+      "original_value": "akari-v3.1/README.md",
+      "path": "dependencies/55c3ea0a4e2df0a4/README.md"
+    },
+    {
+      "record": "scenes/AF03/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/1",
+      "original_value": "akari-v3.1/design-state.json",
+      "path": "dependencies/131cb2ac57be9592/design-state.json"
+    },
+    {
+      "record": "scenes/AF03/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/2",
+      "original_value": "akari-v3.1/reference-set.json",
+      "path": "dependencies/a2b31b7247e2ab45/reference-set.json"
+    },
+    {
+      "record": "scenes/AF03/generation.json",
+      "json_pointer": "/validation_record",
+      "original_value": "validation.json",
+      "path": "scenes/AF03/validation.json"
+    },
+    {
+      "record": "scenes/AF04/generation-initial.json",
+      "json_pointer": "/image",
+      "original_value": "AF04-dozing-mid-conversation.png",
+      "path": "scenes/AF04/AF04-dozing-mid-conversation.png"
+    },
+    {
+      "record": "scenes/AF04/generation-initial.json",
+      "json_pointer": "/prompt",
+      "original_value": "prompt.txt",
+      "path": "scenes/AF04/prompt.txt"
+    },
+    {
+      "record": "scenes/AF04/generation-initial.json",
+      "json_pointer": "/feedback_snapshot",
+      "original_value": "../feedback-snapshot.json",
+      "path": "history/2026-09-10-album-feedback/feedback-snapshot.json"
+    },
+    {
+      "record": "scenes/AF04/generation-initial.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/AF04/generation-initial.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/AF04/generation-initial.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/AF04/generation-initial.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/AF04/generation-initial.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png"
+    },
+    {
+      "record": "scenes/AF04/generation-initial.json",
+      "json_pointer": "/inspected_context_not_attached/0/path",
+      "original_value": "akari-v3.1/situations/favorites-continuation/images/F01-cushion-listening.png",
+      "path": "dependencies/6a07e44c0025d7b6/F01-cushion-listening.png"
+    },
+    {
+      "record": "scenes/AF04/generation-initial.json",
+      "json_pointer": "/provenance/authority_docs_read/0",
+      "original_value": "akari-v3.1/README.md",
+      "path": "dependencies/55c3ea0a4e2df0a4/README.md"
+    },
+    {
+      "record": "scenes/AF04/generation-initial.json",
+      "json_pointer": "/provenance/authority_docs_read/1",
+      "original_value": "akari-v3.1/design-state.json",
+      "path": "dependencies/131cb2ac57be9592/design-state.json"
+    },
+    {
+      "record": "scenes/AF04/generation-initial.json",
+      "json_pointer": "/provenance/authority_docs_read/2",
+      "original_value": "akari-v3.1/reference-set.json",
+      "path": "dependencies/a2b31b7247e2ab45/reference-set.json"
+    },
+    {
+      "record": "scenes/AF04/generation-initial.json",
+      "json_pointer": "/validation_record",
+      "original_value": "validation.json",
+      "path": "scenes/AF04/validation.json"
+    },
+    {
+      "record": "scenes/AF04/generation.json",
+      "json_pointer": "/image",
+      "original_value": "AF04-dozing-mid-conversation-r2.png",
+      "path": "scenes/AF04/AF04-dozing-mid-conversation-r2.png"
+    },
+    {
+      "record": "scenes/AF04/generation.json",
+      "json_pointer": "/prompt",
+      "original_value": "prompt-r2.txt",
+      "path": "scenes/AF04/prompt-r2.txt"
+    },
+    {
+      "record": "scenes/AF04/generation.json",
+      "json_pointer": "/feedback_snapshot",
+      "original_value": "../feedback-snapshot.json",
+      "path": "history/2026-09-10-album-feedback/feedback-snapshot.json"
+    },
+    {
+      "record": "scenes/AF04/generation.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "tmp/akari-v3.1/2026-09-10-album-feedback/AF04-dozing-mid-conversation/AF04-dozing-mid-conversation.png",
+      "path": "scenes/AF04/AF04-dozing-mid-conversation.png"
+    },
+    {
+      "record": "scenes/AF04/generation.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/AF04/generation.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png"
+    },
+    {
+      "record": "scenes/AF04/generation.json",
+      "json_pointer": "/inspected_context_not_attached/0/path",
+      "original_value": "akari-v3.1/situations/favorites-continuation/images/F01-cushion-listening.png",
+      "path": "dependencies/6a07e44c0025d7b6/F01-cushion-listening.png"
+    },
+    {
+      "record": "scenes/AF04/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/0",
+      "original_value": "akari-v3.1/README.md",
+      "path": "dependencies/55c3ea0a4e2df0a4/README.md"
+    },
+    {
+      "record": "scenes/AF04/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/1",
+      "original_value": "akari-v3.1/design-state.json",
+      "path": "dependencies/131cb2ac57be9592/design-state.json"
+    },
+    {
+      "record": "scenes/AF04/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/2",
+      "original_value": "akari-v3.1/reference-set.json",
+      "path": "dependencies/a2b31b7247e2ab45/reference-set.json"
+    },
+    {
+      "record": "scenes/AF04/generation.json",
+      "json_pointer": "/validation_record",
+      "original_value": "validation-r2.json",
+      "path": "scenes/AF04/validation-r2.json"
+    },
+    {
+      "record": "scenes/AF04/generation.json",
+      "json_pointer": "/initial_generation_record",
+      "original_value": "generation-initial.json",
+      "path": "scenes/AF04/generation-initial.json"
+    },
+    {
+      "record": "scenes/AF04/generation.json",
+      "json_pointer": "/correction/target",
+      "original_value": "AF04-dozing-mid-conversation.png",
+      "path": "scenes/AF04/AF04-dozing-mid-conversation.png"
+    },
+    {
+      "record": "scenes/AF04/generation.json",
+      "json_pointer": "/correction/support/0",
+      "original_value": "akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/AF04/generation.json",
+      "json_pointer": "/correction/support/1",
+      "original_value": "akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png"
+    },
+    {
+      "record": "scenes/AF04/validation-initial.json",
+      "json_pointer": "/sock_detail_review",
+      "original_value": "sock-review.png",
+      "path": "scenes/AF04/sock-review.png"
+    },
+    {
+      "record": "scenes/AF04/validation.json",
+      "json_pointer": "/sock_detail_review",
+      "original_value": "sock-review.png",
+      "path": "scenes/AF04/sock-review.png"
+    },
+    {
+      "record": "scenes/AF05/generation-initial.json",
+      "json_pointer": "/image",
+      "original_value": "AF05-a-little-tired.png",
+      "path": "scenes/AF05/AF05-a-little-tired.png"
+    },
+    {
+      "record": "scenes/AF05/generation-initial.json",
+      "json_pointer": "/prompt",
+      "original_value": "prompt.txt",
+      "path": "scenes/AF05/prompt.txt"
+    },
+    {
+      "record": "scenes/AF05/generation-initial.json",
+      "json_pointer": "/feedback_snapshot",
+      "original_value": "../feedback-snapshot.json",
+      "path": "history/2026-09-10-album-feedback/feedback-snapshot.json"
+    },
+    {
+      "record": "scenes/AF05/generation-initial.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/AF05/generation-initial.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/AF05/generation-initial.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/AF05/generation-initial.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/AF05/generation-initial.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png"
+    },
+    {
+      "record": "scenes/AF05/generation-initial.json",
+      "json_pointer": "/inspected_context_not_attached/0/path",
+      "original_value": "akari-v3.1/situations/favorites-continuation/images/F04-sofa-side-sit-mug.png",
+      "path": "dependencies/b04a1cdc711006c8/F04-sofa-side-sit-mug.png"
+    },
+    {
+      "record": "scenes/AF05/generation-initial.json",
+      "json_pointer": "/provenance/authority_docs_read/0",
+      "original_value": "akari-v3.1/README.md",
+      "path": "dependencies/55c3ea0a4e2df0a4/README.md"
+    },
+    {
+      "record": "scenes/AF05/generation-initial.json",
+      "json_pointer": "/provenance/authority_docs_read/1",
+      "original_value": "akari-v3.1/design-state.json",
+      "path": "dependencies/131cb2ac57be9592/design-state.json"
+    },
+    {
+      "record": "scenes/AF05/generation-initial.json",
+      "json_pointer": "/provenance/authority_docs_read/2",
+      "original_value": "akari-v3.1/reference-set.json",
+      "path": "dependencies/a2b31b7247e2ab45/reference-set.json"
+    },
+    {
+      "record": "scenes/AF05/generation-initial.json",
+      "json_pointer": "/validation_record",
+      "original_value": "validation.json",
+      "path": "scenes/AF05/validation.json"
+    },
+    {
+      "record": "scenes/AF05/generation.json",
+      "json_pointer": "/image",
+      "original_value": "AF05-a-little-tired-r3.png",
+      "path": "scenes/AF05/AF05-a-little-tired-r3.png"
+    },
+    {
+      "record": "scenes/AF05/generation.json",
+      "json_pointer": "/prompt",
+      "original_value": "prompt-r3.txt",
+      "path": "scenes/AF05/prompt-r3.txt"
+    },
+    {
+      "record": "scenes/AF05/generation.json",
+      "json_pointer": "/feedback_snapshot",
+      "original_value": "../feedback-snapshot.json",
+      "path": "history/2026-09-10-album-feedback/feedback-snapshot.json"
+    },
+    {
+      "record": "scenes/AF05/generation.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "tmp/akari-v3.1/2026-09-10-album-feedback/AF05-a-little-tired/AF05-a-little-tired-r2.png",
+      "path": "scenes/AF05/AF05-a-little-tired-r2.png"
+    },
+    {
+      "record": "scenes/AF05/generation.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "tmp/akari-v3.1/2026-09-10-album-feedback/AF05-a-little-tired/inputs/AF04-r2-sock-material.png",
+      "path": "scenes/AF05/inputs/AF04-r2-sock-material.png"
+    },
+    {
+      "record": "scenes/AF05/generation.json",
+      "json_pointer": "/inspected_context_not_attached/0/path",
+      "original_value": "akari-v3.1/situations/favorites-continuation/images/F04-sofa-side-sit-mug.png",
+      "path": "dependencies/b04a1cdc711006c8/F04-sofa-side-sit-mug.png"
+    },
+    {
+      "record": "scenes/AF05/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/0",
+      "original_value": "akari-v3.1/README.md",
+      "path": "dependencies/55c3ea0a4e2df0a4/README.md"
+    },
+    {
+      "record": "scenes/AF05/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/1",
+      "original_value": "akari-v3.1/design-state.json",
+      "path": "dependencies/131cb2ac57be9592/design-state.json"
+    },
+    {
+      "record": "scenes/AF05/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/2",
+      "original_value": "akari-v3.1/reference-set.json",
+      "path": "dependencies/a2b31b7247e2ab45/reference-set.json"
+    },
+    {
+      "record": "scenes/AF05/generation.json",
+      "json_pointer": "/validation_record",
+      "original_value": "validation-r3.json",
+      "path": "scenes/AF05/validation-r3.json"
+    },
+    {
+      "record": "scenes/AF05/generation.json",
+      "json_pointer": "/initial_generation_record",
+      "original_value": "generation-initial.json",
+      "path": "scenes/AF05/generation-initial.json"
+    },
+    {
+      "record": "scenes/AF05/generation.json",
+      "json_pointer": "/correction_history/0/prompt",
+      "original_value": "prompt-r2.txt",
+      "path": "scenes/AF05/prompt-r2.txt"
+    },
+    {
+      "record": "scenes/AF05/generation.json",
+      "json_pointer": "/correction_history/0/image",
+      "original_value": "AF05-a-little-tired-r2.png",
+      "path": "scenes/AF05/AF05-a-little-tired-r2.png"
+    },
+    {
+      "record": "scenes/AF05/validation-initial.json",
+      "json_pointer": "/sock_detail_review",
+      "original_value": "sock-review.png",
+      "path": "scenes/AF05/sock-review.png"
+    },
+    {
+      "record": "scenes/AF05/validation.json",
+      "json_pointer": "/sock_detail_review",
+      "original_value": "sock-review.png",
+      "path": "scenes/AF05/sock-review.png"
+    },
+    {
+      "record": "scenes/AF06/generation.json",
+      "json_pointer": "/image",
+      "original_value": "AF06-cheek-on-cushion.png",
+      "path": "scenes/AF06/AF06-cheek-on-cushion.png"
+    },
+    {
+      "record": "scenes/AF06/generation.json",
+      "json_pointer": "/prompt",
+      "original_value": "prompt.txt",
+      "path": "scenes/AF06/prompt.txt"
+    },
+    {
+      "record": "scenes/AF06/generation.json",
+      "json_pointer": "/feedback_snapshot",
+      "original_value": "../feedback-snapshot.json",
+      "path": "history/2026-09-11-album-feedback/feedback-snapshot.json"
+    },
+    {
+      "record": "scenes/AF06/generation.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "tmp/akari-v3.1/2026-09-10-album-feedback/AF04-dozing-mid-conversation/AF04-dozing-mid-conversation-r2.png",
+      "path": "scenes/AF04/AF04-dozing-mid-conversation-r2.png"
+    },
+    {
+      "record": "scenes/AF06/generation.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/AF06/generation.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/AF06/generation.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/AF06/generation.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/AF06/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/0",
+      "original_value": "akari-v3.1/README.md",
+      "path": "dependencies/55c3ea0a4e2df0a4/README.md"
+    },
+    {
+      "record": "scenes/AF06/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/1",
+      "original_value": "akari-v3.1/design-state.json",
+      "path": "dependencies/131cb2ac57be9592/design-state.json"
+    },
+    {
+      "record": "scenes/AF06/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/2",
+      "original_value": "akari-v3.1/reference-set.json",
+      "path": "dependencies/a2b31b7247e2ab45/reference-set.json"
+    },
+    {
+      "record": "scenes/AF06/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/3",
+      "original_value": "akari-v3.1/prompts/sock-material-must.txt",
+      "path": "dependencies/ce47a311cf394964/sock-material-must.txt"
+    },
+    {
+      "record": "scenes/AF06/generation.json",
+      "json_pointer": "/validation_record",
+      "original_value": "validation.json",
+      "path": "scenes/AF06/validation.json"
+    },
+    {
+      "record": "scenes/AF06/validation.json",
+      "json_pointer": "/sock_detail_review/image",
+      "original_value": "sock-review.png",
+      "path": "scenes/AF06/sock-review.png"
+    },
+    {
+      "record": "scenes/AF07/generation.json",
+      "json_pointer": "/image",
+      "original_value": "AF07-eye-contact-after-rest.png",
+      "path": "scenes/AF07/AF07-eye-contact-after-rest.png"
+    },
+    {
+      "record": "scenes/AF07/generation.json",
+      "json_pointer": "/prompt",
+      "original_value": "prompt.txt",
+      "path": "scenes/AF07/prompt.txt"
+    },
+    {
+      "record": "scenes/AF07/generation.json",
+      "json_pointer": "/feedback_snapshot",
+      "original_value": "../feedback-snapshot.json",
+      "path": "history/2026-09-11-album-feedback/feedback-snapshot.json"
+    },
+    {
+      "record": "scenes/AF07/generation.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "tmp/akari-v3.1/2026-09-10-album-feedback/AF05-a-little-tired/AF05-a-little-tired-r3.png",
+      "path": "scenes/AF05/AF05-a-little-tired-r3.png"
+    },
+    {
+      "record": "scenes/AF07/generation.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/AF07/generation.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/AF07/generation.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/AF07/generation.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/AF07/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/0",
+      "original_value": "akari-v3.1/README.md",
+      "path": "dependencies/55c3ea0a4e2df0a4/README.md"
+    },
+    {
+      "record": "scenes/AF07/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/1",
+      "original_value": "akari-v3.1/design-state.json",
+      "path": "dependencies/131cb2ac57be9592/design-state.json"
+    },
+    {
+      "record": "scenes/AF07/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/2",
+      "original_value": "akari-v3.1/reference-set.json",
+      "path": "dependencies/a2b31b7247e2ab45/reference-set.json"
+    },
+    {
+      "record": "scenes/AF07/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/3",
+      "original_value": "akari-v3.1/prompts/sock-material-must.txt",
+      "path": "dependencies/ce47a311cf394964/sock-material-must.txt"
+    },
+    {
+      "record": "scenes/AF07/generation.json",
+      "json_pointer": "/validation_record",
+      "original_value": "validation.json",
+      "path": "scenes/AF07/validation.json"
+    },
+    {
+      "record": "scenes/AF07/validation.json",
+      "json_pointer": "/sock_detail_review/image",
+      "original_value": "sock-review.png",
+      "path": "scenes/AF07/sock-review.png"
+    },
+    {
+      "record": "scenes/AF08/generation.json",
+      "json_pointer": "/image",
+      "original_value": "AF08-peaceful-bed-nap.png",
+      "path": "scenes/AF08/AF08-peaceful-bed-nap.png"
+    },
+    {
+      "record": "scenes/AF08/generation.json",
+      "json_pointer": "/prompt",
+      "original_value": "prompt.txt",
+      "path": "scenes/AF08/prompt.txt"
+    },
+    {
+      "record": "scenes/AF08/generation.json",
+      "json_pointer": "/feedback_snapshot",
+      "original_value": "../feedback-snapshot.json",
+      "path": "history/2026-09-11-album-feedback/feedback-snapshot.json"
+    },
+    {
+      "record": "scenes/AF08/generation.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/AF08/generation.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/AF08/generation.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/AF08/generation.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/AF08/generation.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png"
+    },
+    {
+      "record": "scenes/AF08/generation.json",
+      "json_pointer": "/inspected_context_not_attached/0/path",
+      "original_value": "tmp/akari-v3.1/2026-09-10-album-feedback/AF04-dozing-mid-conversation/AF04-dozing-mid-conversation-r2.png",
+      "path": "scenes/AF04/AF04-dozing-mid-conversation-r2.png"
+    },
+    {
+      "record": "scenes/AF08/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/0",
+      "original_value": "akari-v3.1/README.md",
+      "path": "dependencies/55c3ea0a4e2df0a4/README.md"
+    },
+    {
+      "record": "scenes/AF08/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/1",
+      "original_value": "akari-v3.1/design-state.json",
+      "path": "dependencies/131cb2ac57be9592/design-state.json"
+    },
+    {
+      "record": "scenes/AF08/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/2",
+      "original_value": "akari-v3.1/reference-set.json",
+      "path": "dependencies/a2b31b7247e2ab45/reference-set.json"
+    },
+    {
+      "record": "scenes/AF08/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/3",
+      "original_value": "akari-v3.1/prompts/sock-material-must.txt",
+      "path": "dependencies/ce47a311cf394964/sock-material-must.txt"
+    },
+    {
+      "record": "scenes/AF08/generation.json",
+      "json_pointer": "/validation_record",
+      "original_value": "validation.json",
+      "path": "scenes/AF08/validation.json"
+    },
+    {
+      "record": "scenes/AF09/generation.json",
+      "json_pointer": "/image",
+      "original_value": "AF09-natural-side-sit-feet.png",
+      "path": "scenes/AF09/AF09-natural-side-sit-feet.png"
+    },
+    {
+      "record": "scenes/AF09/generation.json",
+      "json_pointer": "/prompt",
+      "original_value": "prompt.txt",
+      "path": "scenes/AF09/prompt.txt"
+    },
+    {
+      "record": "scenes/AF09/generation.json",
+      "json_pointer": "/feedback_snapshot",
+      "original_value": "../feedback-snapshot.json",
+      "path": "history/2026-09-11-natural-sock-fit/feedback-snapshot.json"
+    },
+    {
+      "record": "scenes/AF09/generation.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "tmp/akari-v3.1/2026-09-11-album-feedback/AF07-eye-contact-after-rest/AF07-eye-contact-after-rest.png",
+      "path": "scenes/AF07/AF07-eye-contact-after-rest.png"
+    },
+    {
+      "record": "scenes/AF09/generation.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/AF09/generation.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png"
+    },
+    {
+      "record": "scenes/AF09/generation.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/AF09/generation.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/AF09/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/0",
+      "original_value": "akari-v3.1/README.md",
+      "path": "dependencies/55c3ea0a4e2df0a4/README.md"
+    },
+    {
+      "record": "scenes/AF09/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/1",
+      "original_value": "akari-v3.1/design-state.json",
+      "path": "dependencies/131cb2ac57be9592/design-state.json"
+    },
+    {
+      "record": "scenes/AF09/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/2",
+      "original_value": "akari-v3.1/reference-set.json",
+      "path": "dependencies/a2b31b7247e2ab45/reference-set.json"
+    },
+    {
+      "record": "scenes/AF09/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/3",
+      "original_value": "akari-v3.1/prompts/sock-material-must.txt",
+      "path": "dependencies/ce47a311cf394964/sock-material-must.txt"
+    },
+    {
+      "record": "scenes/AF09/generation.json",
+      "json_pointer": "/validation_record",
+      "original_value": "validation.json",
+      "path": "scenes/AF09/validation.json"
+    },
+    {
+      "record": "scenes/AF09/validation.json",
+      "json_pointer": "/sock_detail_review/image",
+      "original_value": "sock-review.png",
+      "path": "scenes/AF09/sock-review.png"
+    },
+    {
+      "record": "scenes/AF10/generation-initial.json",
+      "json_pointer": "/image",
+      "original_value": "AF10-feet-down-rest.png",
+      "path": "scenes/AF10/AF10-feet-down-rest.png"
+    },
+    {
+      "record": "scenes/AF10/generation-initial.json",
+      "json_pointer": "/prompt",
+      "original_value": "prompt.txt",
+      "path": "scenes/AF10/prompt.txt"
+    },
+    {
+      "record": "scenes/AF10/generation-initial.json",
+      "json_pointer": "/feedback_snapshot",
+      "original_value": "../feedback-snapshot.json",
+      "path": "history/2026-09-11-natural-sock-fit/feedback-snapshot.json"
+    },
+    {
+      "record": "scenes/AF10/generation-initial.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/AF10/generation-initial.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/AF10/generation-initial.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/AF10/generation-initial.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/AF10/generation-initial.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png"
+    },
+    {
+      "record": "scenes/AF10/generation-initial.json",
+      "json_pointer": "/inspected_context_not_attached/0/path",
+      "original_value": "tmp/akari-v3.1/2026-09-11-album-feedback/AF07-eye-contact-after-rest/AF07-eye-contact-after-rest.png",
+      "path": "scenes/AF07/AF07-eye-contact-after-rest.png"
+    },
+    {
+      "record": "scenes/AF10/generation-initial.json",
+      "json_pointer": "/provenance/authority_docs_read/0",
+      "original_value": "akari-v3.1/README.md",
+      "path": "dependencies/55c3ea0a4e2df0a4/README.md"
+    },
+    {
+      "record": "scenes/AF10/generation-initial.json",
+      "json_pointer": "/provenance/authority_docs_read/1",
+      "original_value": "akari-v3.1/design-state.json",
+      "path": "dependencies/131cb2ac57be9592/design-state.json"
+    },
+    {
+      "record": "scenes/AF10/generation-initial.json",
+      "json_pointer": "/provenance/authority_docs_read/2",
+      "original_value": "akari-v3.1/reference-set.json",
+      "path": "dependencies/a2b31b7247e2ab45/reference-set.json"
+    },
+    {
+      "record": "scenes/AF10/generation-initial.json",
+      "json_pointer": "/provenance/authority_docs_read/3",
+      "original_value": "akari-v3.1/prompts/sock-material-must.txt",
+      "path": "dependencies/ce47a311cf394964/sock-material-must.txt"
+    },
+    {
+      "record": "scenes/AF10/generation-initial.json",
+      "json_pointer": "/validation_record",
+      "original_value": "validation.json",
+      "path": "scenes/AF10/validation.json"
+    },
+    {
+      "record": "scenes/AF10/generation.json",
+      "json_pointer": "/image",
+      "original_value": "AF10-feet-down-rest-r2.png",
+      "path": "scenes/AF10/AF10-feet-down-rest-r2.png"
+    },
+    {
+      "record": "scenes/AF10/generation.json",
+      "json_pointer": "/prompt",
+      "original_value": "prompt-r2.txt",
+      "path": "scenes/AF10/prompt-r2.txt"
+    },
+    {
+      "record": "scenes/AF10/generation.json",
+      "json_pointer": "/feedback_snapshot",
+      "original_value": "../feedback-snapshot.json",
+      "path": "history/2026-09-11-natural-sock-fit/feedback-snapshot.json"
+    },
+    {
+      "record": "scenes/AF10/generation.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/AF10-feet-down-rest/AF10-feet-down-rest.png",
+      "path": "scenes/AF10/AF10-feet-down-rest.png"
+    },
+    {
+      "record": "scenes/AF10/generation.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png"
+    },
+    {
+      "record": "scenes/AF10/generation.json",
+      "json_pointer": "/inspected_context_not_attached/0/path",
+      "original_value": "tmp/akari-v3.1/2026-09-11-album-feedback/AF07-eye-contact-after-rest/AF07-eye-contact-after-rest.png",
+      "path": "scenes/AF07/AF07-eye-contact-after-rest.png"
+    },
+    {
+      "record": "scenes/AF10/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/0",
+      "original_value": "akari-v3.1/README.md",
+      "path": "dependencies/55c3ea0a4e2df0a4/README.md"
+    },
+    {
+      "record": "scenes/AF10/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/1",
+      "original_value": "akari-v3.1/design-state.json",
+      "path": "dependencies/131cb2ac57be9592/design-state.json"
+    },
+    {
+      "record": "scenes/AF10/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/2",
+      "original_value": "akari-v3.1/reference-set.json",
+      "path": "dependencies/a2b31b7247e2ab45/reference-set.json"
+    },
+    {
+      "record": "scenes/AF10/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/3",
+      "original_value": "akari-v3.1/prompts/sock-material-must.txt",
+      "path": "dependencies/ce47a311cf394964/sock-material-must.txt"
+    },
+    {
+      "record": "scenes/AF10/generation.json",
+      "json_pointer": "/validation_record",
+      "original_value": "validation-r2.json",
+      "path": "scenes/AF10/validation-r2.json"
+    },
+    {
+      "record": "scenes/AF10/generation.json",
+      "json_pointer": "/initial_generation_record",
+      "original_value": "generation-initial.json",
+      "path": "scenes/AF10/generation-initial.json"
+    },
+    {
+      "record": "scenes/AF10/validation.json",
+      "json_pointer": "/sock_detail_review/image",
+      "original_value": "sock-review.png",
+      "path": "scenes/AF10/sock-review.png"
+    },
+    {
+      "record": "scenes/AF11/generation.json",
+      "json_pointer": "/image",
+      "original_value": "AF11-cozy-conversation.png",
+      "path": "scenes/AF11/AF11-cozy-conversation.png"
+    },
+    {
+      "record": "scenes/AF11/generation.json",
+      "json_pointer": "/prompt",
+      "original_value": "prompt.txt",
+      "path": "scenes/AF11/prompt.txt"
+    },
+    {
+      "record": "scenes/AF11/generation.json",
+      "json_pointer": "/feedback_snapshot",
+      "original_value": "../feedback-snapshot.json",
+      "path": "history/2026-09-11-natural-sock-fit/feedback-snapshot.json"
+    },
+    {
+      "record": "scenes/AF11/generation.json",
+      "json_pointer": "/inputs/0/path",
+      "original_value": "akari-v3.0/references/P1-user-pro-portrait.png",
+      "path": "dependencies/be42eac567e5d65b/P1-user-pro-portrait.png"
+    },
+    {
+      "record": "scenes/AF11/generation.json",
+      "json_pointer": "/inputs/1/path",
+      "original_value": "akari-v3.0/references/P2-quiet-smile.png",
+      "path": "dependencies/c911152bf5975e08/P2-quiet-smile.png"
+    },
+    {
+      "record": "scenes/AF11/generation.json",
+      "json_pointer": "/inputs/2/path",
+      "original_value": "akari-v3.1/references/U1-upper-reference.png",
+      "path": "dependencies/9e1aba2daae7901e/U1-upper-reference.png"
+    },
+    {
+      "record": "scenes/AF11/generation.json",
+      "json_pointer": "/inputs/3/path",
+      "original_value": "akari-v3.1/references/L1-lower-reference.png",
+      "path": "dependencies/14eb83339c5a96f0/L1-lower-reference.png"
+    },
+    {
+      "record": "scenes/AF11/generation.json",
+      "json_pointer": "/inputs/4/path",
+      "original_value": "akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "path": "dependencies/972ae49e32c0d7e7/F09-rounded-wrinkled-sock-detail.png"
+    },
+    {
+      "record": "scenes/AF11/generation.json",
+      "json_pointer": "/inspected_context_not_attached/0/path",
+      "original_value": "tmp/akari-v3.1/2026-09-11-album-feedback/AF07-eye-contact-after-rest/AF07-eye-contact-after-rest.png",
+      "path": "scenes/AF07/AF07-eye-contact-after-rest.png"
+    },
+    {
+      "record": "scenes/AF11/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/0",
+      "original_value": "akari-v3.1/README.md",
+      "path": "dependencies/55c3ea0a4e2df0a4/README.md"
+    },
+    {
+      "record": "scenes/AF11/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/1",
+      "original_value": "akari-v3.1/design-state.json",
+      "path": "dependencies/131cb2ac57be9592/design-state.json"
+    },
+    {
+      "record": "scenes/AF11/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/2",
+      "original_value": "akari-v3.1/reference-set.json",
+      "path": "dependencies/a2b31b7247e2ab45/reference-set.json"
+    },
+    {
+      "record": "scenes/AF11/generation.json",
+      "json_pointer": "/provenance/authority_docs_read/3",
+      "original_value": "akari-v3.1/prompts/sock-material-must.txt",
+      "path": "dependencies/ce47a311cf394964/sock-material-must.txt"
+    },
+    {
+      "record": "scenes/AF11/generation.json",
+      "json_pointer": "/validation_record",
+      "original_value": "validation.json",
+      "path": "scenes/AF11/validation.json"
+    },
+    {
+      "record": "scenes/AF11/validation.json",
+      "json_pointer": "/sock_detail_review/image",
+      "original_value": "sock-review.png",
+      "path": "scenes/AF11/sock-review.png"
+    }
+  ]
+}

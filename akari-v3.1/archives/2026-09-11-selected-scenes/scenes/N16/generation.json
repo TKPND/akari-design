@@ -1,0 +1,140 @@
+{
+  "id": "N16",
+  "title_ja": "リボン、結べたよ",
+  "path_base": "This batch root",
+  "source_favorite_id": "N08",
+  "user_selected": false,
+  "face_authority_promoted": false,
+  "calls": [
+    {
+      "id": "N16",
+      "stage": "initial",
+      "tool": "image_gen",
+      "model": null,
+      "started_at": "2026-09-09T02:28:52.384Z",
+      "elapsed_ms": 36191,
+      "inputs": [
+        {
+          "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original face, eyes, bob and drawing"
+        },
+        {
+          "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original ordinary closed smile"
+        },
+        {
+          "path": "../../../akari-v3.1/references/U1-upper-reference.png",
+          "bytes": 1852161,
+          "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native upper details and single silver pin; uniform superseded"
+        },
+        {
+          "path": "../../../akari-v3.1/references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native leg and below-knee sock fit; wardrobe superseded"
+        },
+        {
+          "path": "../../../akari-v3.1/situations/a2-home/images/N08.png",
+          "bytes": 2428776,
+          "sha256": "4be5272b81bbcf95fb0287dbb64f24225bee9677733c3cebe2939e59bb3fd8a6",
+          "width": 1536,
+          "height": 1024,
+          "role": "N08 selected wardrobe, home direction and material only; no face or pose authority"
+        }
+      ],
+      "prompt": {
+        "path": "N16-ribbon-gift/prompt.txt",
+        "bytes": 3208,
+        "sha256": "f566b6669556cc8b3830c43d58d171645b3151d213e1b24d3914c04c6e416e17"
+      },
+      "output": {
+        "path": "N16-ribbon-gift/initial.png",
+        "bytes": 2174338,
+        "sha256": "ed396eb7322ad2ef5c53db4ea46dca3b28abf9939ff1743f94cd77336c5bb425",
+        "width": 1024,
+        "height": 1536
+      },
+      "native_filename": "exec-2bacdaf0-c04d-4239-9dd7-f45e1dcecddb.png",
+      "native_sha256": "ed396eb7322ad2ef5c53db4ea46dca3b28abf9939ff1743f94cd77336c5bb425",
+      "exact_native_copy": true,
+      "exact_prompt_payload": true
+    }
+  ],
+  "status": "assistant_reviewed_candidate_awaiting_user_selection",
+  "selected_stage": "initial",
+  "final_image": {
+    "path": "N16-ribbon-gift/image.png",
+    "bytes": 2174338,
+    "sha256": "ed396eb7322ad2ef5c53db4ea46dca3b28abf9939ff1743f94cd77336c5bb425",
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review": {
+    "stage": "initial",
+    "summary_ja": "小さな贈り物を差し出す、少し得意そうな笑顔。",
+    "notes": "Original eye/pupil detail and pin retained. Box held coherently by both hands, bow continuous, main sleeve folds clear. Upper/lower bib buttons visible with middle naturally hidden by box. Socks outside framing.",
+    "limits": "Foreground craft items include scissors and paper; no change required."
+  },
+  "final_transformation": "Exact native image_gen output copy; no artwork retouch or compositing outside image_gen",
+  "review_crops": [
+    {
+      "path": "N16-ribbon-gift/face-review.png",
+      "bytes": 541860,
+      "sha256": "c028befc65f4b7819a381cb3672cef42e991df8dbd0cc1a01dbb0e01ee8b7143",
+      "width": 640,
+      "height": 620,
+      "subject": "face",
+      "crop_xywh": [
+        170,
+        30,
+        640,
+        620
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    },
+    {
+      "path": "N16-ribbon-gift/clothing-review.png",
+      "bytes": 663483,
+      "sha256": "04942cb393f7dae98ad3b935340c72c60cdcf60591ea8b706896eb7ef930f068",
+      "width": 800,
+      "height": 590,
+      "subject": "clothing",
+      "crop_xywh": [
+        140,
+        650,
+        800,
+        590
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    }
+  ],
+  "auxiliary_crops": [
+    {
+      "path": "N16-ribbon-gift/clothing-initial-review.png",
+      "bytes": 663483,
+      "sha256": "6e45615fc1a20f41172627bbda240e54a7211b94054e2f9c188c424cd7e55b48",
+      "width": 800,
+      "height": 590
+    },
+    {
+      "path": "N16-ribbon-gift/face-initial-review.png",
+      "bytes": 541860,
+      "sha256": "e9bcb5a6cc225f5cc7961989361cb156d5910ed758378971aa7aece922afd1ce",
+      "width": 640,
+      "height": 620
+    }
+  ]
+}

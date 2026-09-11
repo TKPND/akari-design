@@ -1,0 +1,140 @@
+{
+  "id": "SU14",
+  "title_ja": "白セーラー × 水色チェック",
+  "path_base": "This batch root",
+  "source_favorite_id": "SU06",
+  "user_selected": false,
+  "face_authority_promoted": false,
+  "calls": [
+    {
+      "id": "SU14",
+      "stage": "initial",
+      "tool": "image_gen",
+      "model": null,
+      "started_at": "2026-09-09T07:44:39.095Z",
+      "elapsed_ms": 44251,
+      "inputs": [
+        {
+          "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original face, grey eyes, black bob, drawing and established adult character identity authority."
+        },
+        {
+          "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original familiar gentle closed-mouth smile authority."
+        },
+        {
+          "path": "../../../akari-v3.1/references/U1-upper-reference.png",
+          "bytes": 1852161,
+          "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native upper-body detail and single straight silver hairpin; existing blouse design is superseded by this proposed uniform."
+        },
+        {
+          "path": "../../../akari-v3.1/references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native adult leg construction and medium-grey opaque ribbed below-knee sock fit; existing skirt and white sneakers are superseded by this proposed uniform."
+        },
+        {
+          "path": "../2026-09-09-school-uniform-six/SU06-blue-summer/image.png",
+          "bytes": 1721326,
+          "sha256": "2e319b17b6e5d5b8cace795c6fd6c065aae1ac1d0c89127dfd1ef0741d6525ce",
+          "width": 1024,
+          "height": 1536,
+          "role": "User-selected school-uniform wardrobe family and catalog presentation only; face authority remains original P1/P2, and new outfit differences are explicitly specified."
+        }
+      ],
+      "prompt": {
+        "path": "SU14-white-sailor-blue-check/prompt.txt",
+        "bytes": 3034,
+        "sha256": "aa3dd2dc096b0ac1ceaf0897e2abeec841c737c773ffe1f378760368d6042974"
+      },
+      "output": {
+        "path": "SU14-white-sailor-blue-check/initial.png",
+        "bytes": 1710526,
+        "sha256": "770686d300151d88f5b6e4c92ec1194bea4eed5dc055f314d863e63346e348a3",
+        "width": 1024,
+        "height": 1536
+      },
+      "native_filename": "exec-996ecd6f-ed3f-4bfc-ade7-59c3859d1be3.png",
+      "native_sha256": "770686d300151d88f5b6e4c92ec1194bea4eed5dc055f314d863e63346e348a3",
+      "exact_native_copy": true,
+      "exact_prompt_payload": true
+    }
+  ],
+  "status": "assistant_reviewed_candidate_awaiting_user_selection",
+  "selected_stage": "initial",
+  "final_image": {
+    "path": "SU14-white-sailor-blue-check/image.png",
+    "bytes": 1710526,
+    "sha256": "770686d300151d88f5b6e4c92ec1194bea4eed5dc055f314d863e63346e348a3",
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review": {
+    "stage": "initial",
+    "summary_ja": "白いセーラーブラウスと水色チェックの夏制服。",
+    "notes": "青い襟の白2本線、白い胸当て、淡緑のリボン、前開きブラウスをスカートに入れる腰構造、両手を確認。薄青チェックのプリーツと、足首の浅い布じわ、黒ローファー。",
+    "limits": "ブラウスに前ボタンが追加された。細かなチェックとプリーツの折り込みは生成された概念図で、縫製用型紙の精度は保証しない。"
+  },
+  "final_transformation": "Exact native image_gen output copy; no artwork retouch outside image_gen.",
+  "review_crops": [
+    {
+      "path": "SU14-white-sailor-blue-check/face-review.png",
+      "bytes": 155633,
+      "sha256": "aecee00c9bbfccd3b2cfb2569bff74fec7c65018290b45f9e770bddf6fcadc8f",
+      "width": 355,
+      "height": 325,
+      "subject": "face",
+      "crop_xywh": [
+        330,
+        10,
+        355,
+        325
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    },
+    {
+      "path": "SU14-white-sailor-blue-check/clothing_hands-review.png",
+      "bytes": 420002,
+      "sha256": "f3d7fac239fd7d381010de0a111a9f64a9c29716288ca181f553bf3c3c463064",
+      "width": 510,
+      "height": 700,
+      "subject": "clothing_hands",
+      "crop_xywh": [
+        250,
+        280,
+        510,
+        700
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    },
+    {
+      "path": "SU14-white-sailor-blue-check/socks_shoes-review.png",
+      "bytes": 180741,
+      "sha256": "4a792c4c3beee8ced2d0912c06a0075070777175ae8836d98ceb4ad4e8382f90",
+      "width": 390,
+      "height": 440,
+      "subject": "socks_shoes",
+      "crop_xywh": [
+        345,
+        1090,
+        390,
+        440
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    }
+  ],
+  "auxiliary_crops": []
+}

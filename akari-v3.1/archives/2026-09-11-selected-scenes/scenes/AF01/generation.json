@@ -1,0 +1,76 @@
+{
+  "id": "AF01",
+  "title": "隣に座った、そのあと",
+  "created_at": "2026-09-10T05:15:46.910108+00:00",
+  "tool": "built-in image_gen",
+  "model_identity": "not exposed",
+  "generation_id": "exec-8bd985c7-ba1e-4bc9-9e91-862bc61c11f3",
+  "status": "user_selected_for_album",
+  "image": "AF01-beside-you.png",
+  "prompt": "prompt.txt",
+  "feedback_snapshot": "../feedback-snapshot.json",
+  "input_path_base": "workspace_root",
+  "inputs": [
+    {
+      "order": 1,
+      "id": "N29-r2",
+      "path": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N29-seat-beside-me/r2.png",
+      "role": "casual outfit, living room and gentle atmosphere only",
+      "sha256": "b50d03be676bab28e6e211d9898185a2d6436b617db86fc39e9d2449e1b9a9d3"
+    },
+    {
+      "order": 2,
+      "id": "A13",
+      "path": "akari-v3.1/situations/abc-exploration/images/A13.png",
+      "role": "relaxed expression and mood only",
+      "sha256": "e090b707738c50c482dc6c3234060c4d24eb16b619a504c705797bf490aa4d73"
+    },
+    {
+      "order": 3,
+      "id": "P1",
+      "path": "akari-v3.0/references/P1-user-pro-portrait.png",
+      "role": "original face eyes hair drawing authority",
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc"
+    },
+    {
+      "order": 4,
+      "id": "P2",
+      "path": "akari-v3.0/references/P2-quiet-smile.png",
+      "role": "original closed-mouth smile authority",
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f"
+    },
+    {
+      "order": 5,
+      "id": "U1",
+      "path": "akari-v3.1/references/U1-upper-reference.png",
+      "role": "native upper detail and silver pin, not outfit",
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f"
+    }
+  ],
+  "output": {
+    "sha256": "50517641d84d0155a0be0964c135b739e35863c12e4bf8b69a9fa37db3455ee9",
+    "bytes": 2269615,
+    "width": 1536,
+    "height": 1024,
+    "native_output_unmodified": true
+  },
+  "validation": {
+    "png_signature_crc_zlib": "pass",
+    "reference_files": "pass",
+    "visual_whole_image": "reviewed",
+    "visual_notes": "Gentle closed-mouth smile, silver pin and casual outfit retained. Nearby oblique sofa perspective achieved. Languid mood is subtle; head top and lower hand meet frame edges. No obvious disconnected limbs in the visible area.",
+    "socks": "not visible; upper-body composition",
+    "browser_layout_test": "not applicable"
+  },
+  "face_authority_promoted": false,
+  "committed": false,
+  "site_imported": true,
+  "album_inclusion": {
+    "user_requested": true,
+    "project_id": "appgprj_6aa219efb29c8191bdfc12dc49efa01e",
+    "version_number": 2,
+    "url": "https://akari-album-takahiro.tkpnd.chatgpt.site",
+    "series": "アルバムからのつづき"
+  },
+  "title_ja": "隣に座った、そのあと"
+}

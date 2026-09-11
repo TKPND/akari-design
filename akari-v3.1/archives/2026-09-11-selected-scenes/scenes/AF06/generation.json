@@ -1,0 +1,86 @@
+{
+  "id": "AF06",
+  "title_ja": "クッションに頬を預けて",
+  "created_at": "2026-09-11T02:15:10.803425+00:00",
+  "tool": "built-in image_gen",
+  "model_identity": "not exposed",
+  "generation_id": "exec-635156e9-31c8-44fc-bbcc-54d01309a2ce",
+  "generation_calls": 1,
+  "status": "candidate_pending_user_selection",
+  "image": "AF06-cheek-on-cushion.png",
+  "prompt": "prompt.txt",
+  "prompt_sha256": "aaec6746c615ac42d55869c5c6b46fc86a4e02f9042c17389d4181a5d9b4d59b",
+  "feedback_snapshot": "../feedback-snapshot.json",
+  "feedback_snapshot_sha256": "62cb268a81931502ea1a353b642d161686a3fc27fcaac5a88a278cb095278b64",
+  "input_path_base": "workspace_root",
+  "inputs": [
+    {
+      "order": 1,
+      "id": "AF04-r2",
+      "path": "tmp/akari-v3.1/2026-09-10-album-feedback/AF04-dozing-mid-conversation/AF04-dozing-mid-conversation-r2.png",
+      "role": "selected scene, modest outfit, cozy dozing mood and corrected continuous rounded opaque sock material",
+      "sha256": "36e2099b459e45b8e6fc95439edcc822d7ab9593b35010e4acf69a36788e620d",
+      "opened_with_view_image": true
+    },
+    {
+      "order": 2,
+      "id": "P1",
+      "path": "akari-v3.0/references/P1-user-pro-portrait.png",
+      "role": "original face, grey-eye design, black bob and delicate anime drawing authority",
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "opened_with_view_image": true
+    },
+    {
+      "order": 3,
+      "id": "P2",
+      "path": "akari-v3.0/references/P2-quiet-smile.png",
+      "role": "original everyday closed-mouth smile authority; expression may be closed-eye sleep as specified",
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "opened_with_view_image": true
+    },
+    {
+      "order": 4,
+      "id": "U1",
+      "path": "akari-v3.1/references/U1-upper-reference.png",
+      "role": "native upper-body construction, detailed hair and single silver pin, not its short-sleeve outfit",
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "opened_with_view_image": true
+    },
+    {
+      "order": 5,
+      "id": "L1",
+      "path": "akari-v3.1/references/L1-lower-reference.png",
+      "role": "native healthy ordinary leg construction, medium-grey below-knee sock length and fit, not its standing pose or sneakers",
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "opened_with_view_image": true
+    }
+  ],
+  "feedback_rationale": "Latest live AF04-r2 favorite+next_reference selection with no new note. Continue its cozy dozing while varying supported cheek-on-cushion gesture and relaxed shoulders.",
+  "inspected_context_not_attached": [],
+  "provenance": {
+    "native_tool_output": "/home/abe/.codex/generated_images/01a089c1-cccd-7cc2-a6ca-49a051ee5b50/exec-635156e9-31c8-44fc-bbcc-54d01309a2ce.png",
+    "authority_docs_read": [
+      "akari-v3.1/README.md",
+      "akari-v3.1/design-state.json",
+      "akari-v3.1/reference-set.json",
+      "akari-v3.1/prompts/sock-material-must.txt"
+    ]
+  },
+  "output": {
+    "sha256": "c9499157fd4e138ecee8a46eb53284136516629cd5704b072359d0a6c222cbab",
+    "bytes": 2270752,
+    "width": 1024,
+    "height": 1536,
+    "native_output_unmodified": true
+  },
+  "validation_record": "validation.json",
+  "face_authority_promoted": false,
+  "committed": false,
+  "site_imported": true,
+  "album_inclusion": {
+    "version_number": 4,
+    "series": "アルバムからのつづき",
+    "url": "https://akari-album-takahiro.tkpnd.chatgpt.site",
+    "user_authorized_batch": true
+  }
+}

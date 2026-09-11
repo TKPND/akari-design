@@ -1,0 +1,33 @@
+{
+  "id": "AF11",
+  "validated_at": "2026-09-11T02:37:54.077569+00:00",
+  "status": "candidate_natural_fit_reviewed",
+  "png_signature_crc_zlib": "pass",
+  "scanline_length_and_filter_bytes": "pass",
+  "native_copy_sha256_match": true,
+  "reference_files": "pass",
+  "visual_whole_image": "reviewed",
+  "visual_assessment": {
+    "identity_pose_scene": "Original face lineage, silver pin, same cardigan/blouse/plaid skirt and relaxed cushion hug retained. New opposite-facing sideways pose with knees comfortably drawn closer.",
+    "natural_fit": "Foot envelopes have mild taper, smaller forefoot volume and contact flattening rather than AF07 circular caps. Some forefoot cloth creases remain to assess enlarged.",
+    "opaque_material": "Grey opaque supple rib knit, shallow ankle folds and same-tone unobtrusive seam; no obvious distinct toe pockets at whole-image scale.",
+    "framing": "Full head and both feet within frame; headroom narrow. Modest skirt/cushion coverage with coherent arms and hands."
+  },
+  "browser_layout_test": "not_run; parent owns album integration",
+  "retry_performed": false,
+  "user_selection": "pending",
+  "sock_detail_review": {
+    "image": "sock-review.png",
+    "crop_xywh": [
+      290,
+      690,
+      300,
+      210
+    ],
+    "transformation": "Unmodified pixel crop for inspection; native generated PNG unchanged."
+  },
+  "natural_fit_user_steering": "closest of three to requested direction; mild taper, asymmetry and cushion-contact flattening",
+  "individual_toe_concealment": "reservation; forefoot crease and small contour inflection may read as toe division, though no repeated five-toe pattern",
+  "enlarged_assessment": "Natural overall foot silhouette is improved. Keep nuanced contour instead of rounding back to a cap; review local forefoot crease before material adoption.",
+  "authority_update_performed": false
+}

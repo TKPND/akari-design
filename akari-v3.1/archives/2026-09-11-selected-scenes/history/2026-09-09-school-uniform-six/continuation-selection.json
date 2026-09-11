@@ -1,0 +1,32 @@
+{
+  "recorded_at": "2026-09-09T07:33:38.145889+00:00",
+  "user_quote": "SU03,05,06で広げていこう",
+  "favorite_ids": [
+    "SU03",
+    "SU05",
+    "SU06"
+  ],
+  "purpose": "Wardrobe source favorites for the next nine uniform concept variants",
+  "next_batch": "../2026-09-09-school-uniform-expansion",
+  "commit_requested": false,
+  "selected_images": [
+    {
+      "id": "SU03",
+      "path": "SU03-forest-vest/image.png",
+      "stage": "initial",
+      "sha256": "8876298ceae7df8bbc4d08705abb7e4e52ad6aed4a7cf3476c9dd27a76abdad6"
+    },
+    {
+      "id": "SU05",
+      "path": "SU05-grey-bolero/image.png",
+      "stage": "r1",
+      "sha256": "4aa5ddd0de916db32004b48617388a63c8077ca8550e6550dd54b5e4ae244d88"
+    },
+    {
+      "id": "SU06",
+      "path": "SU06-blue-summer/image.png",
+      "stage": "initial",
+      "sha256": "2e319b17b6e5d5b8cace795c6fd6c065aae1ac1d0c89127dfd1ef0741d6525ce"
+    }
+  ]
+}

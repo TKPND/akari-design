@@ -1,0 +1,66 @@
+{
+  "id": "N24",
+  "stage": "initial",
+  "tool": "image_gen",
+  "model": null,
+  "started_at": "2026-09-09T03:38:00.062Z",
+  "elapsed_ms": 54808,
+  "inputs": [
+    {
+      "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "bytes": 1869375,
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "width": 1254,
+      "height": 1254,
+      "role": "Original face, eyes, black bob, drawing and adult character identity authority."
+    },
+    {
+      "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "bytes": 1836424,
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "width": 1254,
+      "height": 1254,
+      "role": "Original everyday closed-mouth smile authority; only the explicitly requested new emotion may change the mouth/eyelids."
+    },
+    {
+      "path": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "bytes": 1852161,
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "width": 1024,
+      "height": 1536,
+      "role": "Native upper-body detail and one silver straight hairpin; canonical uniform is replaced by A-2 home outfit."
+    },
+    {
+      "path": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "bytes": 1815855,
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "width": 1024,
+      "height": 1536,
+      "role": "Native healthy adult leg construction and below-knee ribbed sock fit; blue skirt, grey sock color and shoes are superseded by the selected A-2 taupe dress and ivory indoor socks."
+    },
+    {
+      "path": "../2026-09-09-a2-next-eight/N16-ribbon-gift/image.png",
+      "bytes": 2174338,
+      "sha256": "ed396eb7322ad2ef5c53db4ea46dca3b28abf9939ff1743f94cd77336c5bb425",
+      "width": 1024,
+      "height": 1536,
+      "role": "User-selected A-2 home outfit, atmosphere and fabric finish only; no face, camera or pose authority."
+    }
+  ],
+  "prompt": {
+    "path": "N24-ribbon-bookmark/prompt.txt",
+    "bytes": 3680,
+    "sha256": "c64c617d9192387ec47e5ae6501e13bf51074c71d8b2cc9a75ac7f577856a1dc"
+  },
+  "output": {
+    "path": "N24-ribbon-bookmark/initial.png",
+    "bytes": 2240234,
+    "sha256": "85084c857aa51fbbb28882b394100f114e6e9ae0ff3e8a7b1eba77ec166b540a",
+    "width": 1024,
+    "height": 1536
+  },
+  "native_filename": "exec-35e5e35c-1251-4444-ac42-d77c3eb7c409.png",
+  "native_sha256": "85084c857aa51fbbb28882b394100f114e6e9ae0ff3e8a7b1eba77ec166b540a",
+  "exact_native_copy": true,
+  "exact_prompt_payload": true
+}

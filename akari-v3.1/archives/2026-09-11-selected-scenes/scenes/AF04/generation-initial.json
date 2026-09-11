@@ -1,0 +1,88 @@
+{
+  "id": "AF04",
+  "title_ja": "話の途中で、うとうと",
+  "created_at": "2026-09-10T05:30:51.140243+00:00",
+  "tool": "built-in image_gen",
+  "model_identity": "not exposed",
+  "generation_id": "exec-dca03430-28cb-443d-8ca6-e0193fdf3643",
+  "generation_calls": 1,
+  "status": "candidate_pending_user_selection",
+  "image": "AF04-dozing-mid-conversation.png",
+  "prompt": "prompt.txt",
+  "prompt_sha256": "da05e00d2f74e98d804a0ce8c967ed30207e663a74c3ead39faa94f55960f04d",
+  "feedback_snapshot": "../feedback-snapshot.json",
+  "feedback_snapshot_sha256": "11ec41a845008d06c2f4e7ff0b84a3a5a37460b72a0606c2924eae8d482a65f8",
+  "input_path_base": "workspace_root",
+  "inputs": [
+    {
+      "order": 1,
+      "id": "P1",
+      "path": "akari-v3.0/references/P1-user-pro-portrait.png",
+      "role": "original face eyes hair drawing authority",
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "opened_with_view_image": true
+    },
+    {
+      "order": 2,
+      "id": "P2",
+      "path": "akari-v3.0/references/P2-quiet-smile.png",
+      "role": "original everyday closed-mouth smile authority",
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "opened_with_view_image": true
+    },
+    {
+      "order": 3,
+      "id": "U1",
+      "path": "akari-v3.1/references/U1-upper-reference.png",
+      "role": "native upper construction eyes hair and silver pin only",
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "opened_with_view_image": true
+    },
+    {
+      "order": 4,
+      "id": "L1",
+      "path": "akari-v3.1/references/L1-lower-reference.png",
+      "role": "native healthy leg construction and grey below-knee sock fit only",
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "opened_with_view_image": true
+    },
+    {
+      "order": 5,
+      "id": "F09-detail",
+      "path": "akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "role": "opaque rounded sock material and restrained shallow cloth wrinkles only",
+      "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+      "opened_with_view_image": true
+    }
+  ],
+  "feedback_rationale": "F01 selected soft healthy calf-to-toe contour; user change note asks for her to fall asleep naturally. Preserve cushion-listening warmth and show safe supported dozing.",
+  "preflight_validation_failure": "Initial invocation rejected before generation because six input paths exceeded maximum five. No image generated; one subsequent valid generation authorized.",
+  "inspected_context_not_attached": [
+    {
+      "id": "F01",
+      "path": "akari-v3.1/situations/favorites-continuation/images/F01-cushion-listening.png",
+      "role": "scene navy long-sleeve bolero round-collar blouse ribbon plaid skirt and cushion only",
+      "sha256": "6a07e44c0025d7b63820a008f7a1d1c59ece6ceb3a998d3a057b0b2c38c7e0c1",
+      "opened_with_view_image": true
+    }
+  ],
+  "provenance": {
+    "native_tool_output": "/home/abe/.codex/generated_images/01a089c1-cccd-7cc2-a6ca-49a051ee5b50/exec-dca03430-28cb-443d-8ca6-e0193fdf3643.png",
+    "authority_docs_read": [
+      "akari-v3.1/README.md",
+      "akari-v3.1/design-state.json",
+      "akari-v3.1/reference-set.json"
+    ]
+  },
+  "output": {
+    "sha256": "df7729e1d15425056503939ed0b7f785a50a8f8b734c70186afd0bf92bb36893",
+    "bytes": 2575170,
+    "width": 1024,
+    "height": 1536,
+    "native_output_unmodified": true
+  },
+  "validation_record": "validation.json",
+  "face_authority_promoted": false,
+  "committed": false,
+  "site_imported": false
+}

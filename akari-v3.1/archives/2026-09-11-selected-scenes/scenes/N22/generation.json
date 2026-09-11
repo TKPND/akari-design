@@ -1,0 +1,228 @@
+{
+  "id": "N22",
+  "title_ja": "まだ起きてるよ",
+  "path_base": "This batch root",
+  "source_favorite_id": "N15",
+  "user_selected": false,
+  "face_authority_promoted": false,
+  "calls": [
+    {
+      "id": "N22",
+      "stage": "initial",
+      "tool": "image_gen",
+      "model": null,
+      "started_at": "2026-09-09T02:36:17.504Z",
+      "elapsed_ms": 58276,
+      "inputs": [
+        {
+          "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original face, eyes, bob and drawing"
+        },
+        {
+          "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original ordinary closed smile"
+        },
+        {
+          "path": "../../../akari-v3.1/references/U1-upper-reference.png",
+          "bytes": 1852161,
+          "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native upper details and single silver pin; uniform superseded"
+        },
+        {
+          "path": "../../../akari-v3.1/references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native leg and below-knee sock fit; wardrobe superseded"
+        },
+        {
+          "path": "../../../akari-v3.1/situations/a2-home/images/N15.png",
+          "bytes": 2678454,
+          "sha256": "ec27b53e5a9a0585af40784383b44de8c9e81ace9f7dc01c17edc65625608cbf",
+          "width": 1536,
+          "height": 1024,
+          "role": "N15 selected wardrobe, home direction and material only; no face or pose authority"
+        }
+      ],
+      "prompt": {
+        "path": "N22-blanket-wrap/prompt.txt",
+        "bytes": 3420,
+        "sha256": "da88f2c4f9f6de718b9edfe6d3566ef0167cd75e183402d0d2343aefb3f439c7"
+      },
+      "output": {
+        "path": "N22-blanket-wrap/initial.png",
+        "bytes": 2555886,
+        "sha256": "bb32bf2eeeb741a100a43a77cd258fea77c9478fe07a09c24d95e5154365859c",
+        "width": 1024,
+        "height": 1536
+      },
+      "native_filename": "exec-4968828a-5fec-42c2-b14e-b50fff912561.png",
+      "native_sha256": "bb32bf2eeeb741a100a43a77cd258fea77c9478fe07a09c24d95e5154365859c",
+      "exact_native_copy": true,
+      "exact_prompt_payload": true
+    },
+    {
+      "id": "N22",
+      "stage": "r1",
+      "tool": "image_gen",
+      "model": null,
+      "started_at": "2026-09-09T02:44:52.432Z",
+      "elapsed_ms": 39275,
+      "inputs": [
+        {
+          "path": "N22-blanket-wrap/initial.png",
+          "bytes": 2555886,
+          "sha256": "bb32bf2eeeb741a100a43a77cd258fea77c9478fe07a09c24d95e5154365859c",
+          "width": 1024,
+          "height": 1536,
+          "role": "Edit target, sole scene, camera, pose, face expression, clothing and foot-placement source"
+        },
+        {
+          "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original facial identity preservation only"
+        },
+        {
+          "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original expression support; preserve target expression"
+        },
+        {
+          "path": "../../../akari-v3.1/references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native lower-leg and sock fit detail; target determines ivory color and pose"
+        },
+        {
+          "path": "../../../akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+          "bytes": 71786,
+          "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+          "width": 280,
+          "height": 210,
+          "role": "F09 material only: opaque rounded toe cap and sparse shallow cloth wrinkles"
+        }
+      ],
+      "prompt": {
+        "path": "N22-blanket-wrap/prompt-r1.txt",
+        "bytes": 1320,
+        "sha256": "f2489a116784dd7fb4b359d4043f6adc8bec02f97014b71fea8ad0b4e01e4792"
+      },
+      "output": {
+        "path": "N22-blanket-wrap/r1.png",
+        "bytes": 2526985,
+        "sha256": "74d944dab19b8f67245d789e001c78e7e7930da6ea001089d1f853b92eee21c6",
+        "width": 1024,
+        "height": 1536
+      },
+      "native_filename": "exec-5308c0b5-1911-4f60-b9d3-bec1382cda64.png",
+      "native_sha256": "74d944dab19b8f67245d789e001c78e7e7930da6ea001089d1f853b92eee21c6",
+      "exact_native_copy": true,
+      "exact_prompt_payload": true
+    }
+  ],
+  "status": "assistant_reviewed_candidate_awaiting_user_selection",
+  "selected_stage": "r1",
+  "final_image": {
+    "path": "N22-blanket-wrap/image.png",
+    "bytes": 2526985,
+    "sha256": "74d944dab19b8f67245d789e001c78e7e7930da6ea001089d1f853b92eee21c6",
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review": {
+    "stage": "r1",
+    "summary_ja": "毛布にくるまって、まだ起きてるよ。",
+    "notes": "r1 preserves rounded caps and adds shallow asymmetrical cloth compression folds over forefoot. Soft ankle knit and blanket texture distinct. Three bib buttons, two hands, original face and pin reviewed.",
+    "limits": "Expression reads gently relaxed, only mildly sleepy."
+  },
+  "final_transformation": "Exact native image_gen output copy; no artwork retouch or compositing outside image_gen",
+  "review_crops": [
+    {
+      "path": "N22-blanket-wrap/face-review.png",
+      "bytes": 185152,
+      "sha256": "23bdbc38515b0552e6befe9aaf322739ed702e337594aceb34edaf71e6de5ce3",
+      "width": 350,
+      "height": 355,
+      "subject": "face",
+      "crop_xywh": [
+        295,
+        5,
+        350,
+        355
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    },
+    {
+      "path": "N22-blanket-wrap/clothing-review.png",
+      "bytes": 229604,
+      "sha256": "4b6b9a5e9b0f504c454e1196b2657266d132847f9b9df742da00d025ab35aeec",
+      "width": 390,
+      "height": 340,
+      "subject": "clothing",
+      "crop_xywh": [
+        340,
+        370,
+        390,
+        340
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    },
+    {
+      "path": "N22-blanket-wrap/sock-review.png",
+      "bytes": 111358,
+      "sha256": "520c1495907368e1fcef3cb34bba9d9090e326023397a661cd446c66e2ba0755",
+      "width": 285,
+      "height": 275,
+      "subject": "sock",
+      "crop_xywh": [
+        395,
+        1220,
+        285,
+        275
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    }
+  ],
+  "auxiliary_crops": [
+    {
+      "path": "N22-blanket-wrap/clothing-initial-review.png",
+      "bytes": 232762,
+      "sha256": "eaaae17a430287f80547f16db68a2a198806b468c5f434ec2988517331c0c2b1",
+      "width": 390,
+      "height": 340
+    },
+    {
+      "path": "N22-blanket-wrap/face-initial-review.png",
+      "bytes": 188845,
+      "sha256": "1f9481dd7756bf86a5a189ccf427c71c7bb0868d8eef0bc37a8dd2341573e42c",
+      "width": 350,
+      "height": 355
+    },
+    {
+      "path": "N22-blanket-wrap/sock-initial-review.png",
+      "bytes": 111484,
+      "sha256": "bc5cd84764dd4b295ca0b7b5ce23955136e0605177accfc7a2ec3202c4ae513b",
+      "width": 285,
+      "height": 275
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "AF02",
+  "validated_at": "2026-09-10T05:22:50.146205+00:00",
+  "status": "candidate_with_framing_reservation",
+  "png_signature_crc_zlib": "pass",
+  "scanline_length_and_filter_bytes": "pass",
+  "reference_files": "pass",
+  "native_copy_sha256_match": true,
+  "visual_whole_image": "reviewed",
+  "visual_assessment": {
+    "identity": "Black bob, grey eyes, single silver pin and P1/P2 lineage retained.",
+    "expression": "Smaller closed-mouth smile and slightly lower lids than AF01. Languid mood remains mild; she is awake and attentive.",
+    "pose": "Forearms relax on the green cushion; both hands now fully inside the frame with coherent wrist connections and no obvious duplicated digits.",
+    "scene_outfit": "Brown plaid pinafore, ivory long-sleeve rounded-collar blouse, brown ribbon, beige sofa and green cushion retained. Close oblique seatmate view retained.",
+    "framing": "Hair crown still touches and is slightly clipped by the top edge. Requested full crown with background margin was not achieved. Both hands fit within frame.",
+    "anatomy": "No obvious disconnected limbs or gross hand artifacts at native whole-image inspection.",
+    "socks": "Not visible; material check not applicable."
+  },
+  "requirements": {
+    "full_hair_crown_with_margin": "not_met",
+    "complete_visible_hands_or_anatomical_occlusion": "pass",
+    "same_casual_outfit_and_green_cushion": "pass",
+    "subtler_smile": "pass",
+    "more_languid_mood": "partial",
+    "adult_nonsexual_home_scene": "pass"
+  },
+  "browser_layout_test": "not_run; parent owns album integration",
+  "retry_performed": false,
+  "user_selection": "pending"
+}

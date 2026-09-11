@@ -1,0 +1,21 @@
+{
+  "id": "AF03",
+  "validated_at": "2026-09-10T05:28:16.967251+00:00",
+  "status": "candidate_with_minor_framing_reservation",
+  "png_signature_crc_zlib": "pass",
+  "scanline_length_and_filter_bytes": "pass",
+  "native_copy_sha256_match": true,
+  "reference_files": "pass",
+  "visual_whole_image": "reviewed",
+  "visual_assessment": {
+    "identity": "P1/P2 lineage, black bob, grey eyes and silver pin retained.",
+    "expression": "Clearly lowered relaxed eyelids, subtle smile, awake and attentive.",
+    "pose": "Distinct leaning-back sofa rest with relaxed arm on sofa armrest; complete visible hands.",
+    "outfit": "Brown plaid pinafore, ivory long sleeves and green cushion retained.",
+    "framing": "Entire crown appears inside frame with a narrow margin, much less than requested generous 10 percent headroom. Upper body and hands intact.",
+    "socks": "Not visible; material check not applicable."
+  },
+  "browser_layout_test": "not_run; parent owns album integration",
+  "retry_performed": false,
+  "user_selection": "pending"
+}

@@ -1,0 +1,84 @@
+{
+  "id": "AF03",
+  "title_ja": "隣で、肩の力を抜いて",
+  "created_at": "2026-09-10T05:28:16.967251+00:00",
+  "tool": "built-in image_gen",
+  "model_identity": "not exposed",
+  "generation_id": "exec-dc2e7350-6501-4e55-aca1-a3d41067a9f4",
+  "generation_calls": 1,
+  "status": "candidate_pending_user_selection",
+  "image": "AF03-relaxed-beside-you.png",
+  "prompt": "prompt.txt",
+  "prompt_sha256": "7a36858cbf284102fbad043ad7301f008f08493ef93c71471b596dbd1d50760b",
+  "feedback_snapshot": "../feedback-snapshot.json",
+  "feedback_snapshot_sha256": "11ec41a845008d06c2f4e7ff0b84a3a5a37460b72a0606c2924eae8d482a65f8",
+  "input_path_base": "workspace_root",
+  "inputs": [
+    {
+      "order": 1,
+      "id": "N29-r2",
+      "path": "tmp/akari-v3.1/2026-09-09-a2-close-moments/N29-seat-beside-me/r2.png",
+      "role": "brown plaid pinafore ivory long-sleeve outfit beige sofa green cushion and room only",
+      "sha256": "b50d03be676bab28e6e211d9898185a2d6436b617db86fc39e9d2449e1b9a9d3",
+      "opened_with_view_image": true
+    },
+    {
+      "order": 2,
+      "id": "A13",
+      "path": "akari-v3.1/situations/abc-exploration/images/A13.png",
+      "role": "languid mood only, not face outfit pose or camera",
+      "sha256": "e090b707738c50c482dc6c3234060c4d24eb16b619a504c705797bf490aa4d73",
+      "opened_with_view_image": true
+    },
+    {
+      "order": 3,
+      "id": "P1",
+      "path": "akari-v3.0/references/P1-user-pro-portrait.png",
+      "role": "original face eyes hair drawing authority",
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "opened_with_view_image": true
+    },
+    {
+      "order": 4,
+      "id": "P2",
+      "path": "akari-v3.0/references/P2-quiet-smile.png",
+      "role": "original everyday closed-mouth smile authority",
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "opened_with_view_image": true
+    },
+    {
+      "order": 5,
+      "id": "U1",
+      "path": "akari-v3.1/references/U1-upper-reference.png",
+      "role": "native upper construction eyes hair and silver pin only",
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "opened_with_view_image": true
+    }
+  ],
+  "feedback_rationale": "N29 gentle close seatmate request plus A13 languid mood and seated-adjacent feedback; distinct leaning-back pose and more headroom.",
+  "provenance": {
+    "native_tool_output": "/home/abe/.codex/generated_images/01a089c1-cccd-7cc2-a6ca-49a051ee5b50/exec-dc2e7350-6501-4e55-aca1-a3d41067a9f4.png",
+    "authority_docs_read": [
+      "akari-v3.1/README.md",
+      "akari-v3.1/design-state.json",
+      "akari-v3.1/reference-set.json"
+    ]
+  },
+  "output": {
+    "sha256": "5daf5021aaa03bd5c2a95619af4cebb5310d4815a64654599b72a8ac4dcd4c75",
+    "bytes": 2366761,
+    "width": 1536,
+    "height": 1024,
+    "native_output_unmodified": true
+  },
+  "validation_record": "validation.json",
+  "face_authority_promoted": false,
+  "committed": false,
+  "site_imported": true,
+  "album_inclusion": {
+    "version_number": 3,
+    "series": "アルバムからのつづき",
+    "url": "https://akari-album-takahiro.tkpnd.chatgpt.site",
+    "user_authorized_batch": true
+  }
+}

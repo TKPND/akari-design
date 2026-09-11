@@ -1,0 +1,33 @@
+{
+  "id": "AF10",
+  "validated_at": "2026-09-11T02:35:32.759748+00:00",
+  "status": "candidate_natural_fit_with_toe_artifact",
+  "png_signature_crc_zlib": "pass",
+  "scanline_length_and_filter_bytes": "pass",
+  "native_copy_sha256_match": true,
+  "reference_files": "pass",
+  "visual_whole_image": "reviewed",
+  "visual_assessment": {
+    "identity_pose_scene": "P1/P2 face lineage, silver pin, same wardrobe, relaxed upright sofa-edge pose, complete hands and safely placed mug retained.",
+    "natural_fit": "Both feet rest on rug with modest different directions; thinner flatter ordinary foot proportions look less bulbous than AF07. Front surfaces and outlines develop small toe-like bumps, requiring closer QA.",
+    "opaque_material": "Grey ribbed opaque fabric and soft ankle folds present, but individual-toe concealment is not an unqualified pass.",
+    "framing": "Whole head and feet in frame, headroom narrow."
+  },
+  "browser_layout_test": "not_run; parent owns album integration",
+  "retry_performed": false,
+  "user_selection": "pending",
+  "sock_detail_review": {
+    "image": "sock-review.png",
+    "crop_xywh": [
+      390,
+      1200,
+      340,
+      270
+    ],
+    "transformation": "Unmodified pixel crop for inspection; native generated PNG unchanged."
+  },
+  "natural_fit_user_steering": "improved flat contact and normal foot proportion, less bulbous",
+  "individual_toe_concealment": "needs_correction; small toe-like bumps and scalloped toe edge in enlarged view",
+  "enlarged_assessment": "Both rug-supported feet have natural asymmetric direction, but toe-outline detail exceeds opaque fabric concealment.",
+  "authority_update_performed": false
+}

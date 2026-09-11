@@ -1,0 +1,66 @@
+{
+  "id": "SU06",
+  "stage": "initial",
+  "tool": "image_gen",
+  "model": null,
+  "started_at": "2026-09-09T07:21:36.046Z",
+  "elapsed_ms": 52571,
+  "inputs": [
+    {
+      "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "bytes": 1869375,
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "width": 1254,
+      "height": 1254,
+      "role": "Original face, grey eyes, black bob, drawing and established adult character identity authority."
+    },
+    {
+      "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "bytes": 1836424,
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "width": 1254,
+      "height": 1254,
+      "role": "Original familiar gentle closed-mouth smile authority."
+    },
+    {
+      "path": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "bytes": 1852161,
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "width": 1024,
+      "height": 1536,
+      "role": "Native upper-body detail and single straight silver hairpin; existing blouse design is superseded by this proposed uniform."
+    },
+    {
+      "path": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "bytes": 1815855,
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "width": 1024,
+      "height": 1536,
+      "role": "Native adult leg construction and medium-grey opaque ribbed below-knee sock fit; existing skirt and white sneakers are superseded by this proposed uniform."
+    },
+    {
+      "path": "../../../akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "bytes": 71786,
+      "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+      "width": 280,
+      "height": 210,
+      "role": "Soft opaque sock material with sparse shallow natural wrinkles only; not face, pose, camera or wardrobe authority. Footwear hides the toes in this batch."
+    }
+  ],
+  "prompt": {
+    "path": "SU06-blue-summer/prompt.txt",
+    "bytes": 3081,
+    "sha256": "139553636d46280fbffae9c7525ab03ef3d015696b1657d4f897157dd1148b8d"
+  },
+  "output": {
+    "path": "SU06-blue-summer/initial.png",
+    "bytes": 1721326,
+    "sha256": "2e319b17b6e5d5b8cace795c6fd6c065aae1ac1d0c89127dfd1ef0741d6525ce",
+    "width": 1024,
+    "height": 1536
+  },
+  "native_filename": "exec-de20a073-0cb5-4485-9fbe-252541f041f4.png",
+  "native_sha256": "2e319b17b6e5d5b8cace795c6fd6c065aae1ac1d0c89127dfd1ef0741d6525ce",
+  "exact_native_copy": true,
+  "exact_prompt_payload": true
+}

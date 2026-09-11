@@ -1,0 +1,25 @@
+{
+  "status": "published",
+  "ids": [
+    "AF09",
+    "AF10",
+    "AF11"
+  ],
+  "selected_source": "AF07",
+  "feedback_snapshot": "feedback-snapshot.json",
+  "steering": "Less bulbous natural sock toes; mild taper, asymmetry and contact compression with opaque fabric",
+  "recommended_for_natural_fit": "AF11",
+  "reservations": {
+    "AF09": "Change subtle; round cap persists",
+    "AF11": "Toe-region fold should be judged by user as natural fabric, not definitive new material authority"
+  },
+  "version_number": 5,
+  "album_count": 183,
+  "validation": {
+    "existing_180_entries_unchanged": true,
+    "six_new_webps_decoded": true,
+    "production_build": "pass",
+    "deployment": "succeeded"
+  },
+  "authoritative_rules_changed": false
+}

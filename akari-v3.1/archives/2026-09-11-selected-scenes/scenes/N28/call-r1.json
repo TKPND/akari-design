@@ -1,0 +1,66 @@
+{
+  "id": "N28",
+  "stage": "r1",
+  "tool": "image_gen",
+  "model": null,
+  "started_at": "2026-09-09T03:51:43.509Z",
+  "elapsed_ms": 50154,
+  "inputs": [
+    {
+      "path": "N28-sofa-arm-listen/initial.png",
+      "bytes": 2155333,
+      "sha256": "708d8985749c3953b63df52dc1e65d17df6205836dfb5abc85165ccf370059cb",
+      "width": 1536,
+      "height": 1024,
+      "role": "Sole edit target; complete scene, camera, pose, expression and all unchanged areas."
+    },
+    {
+      "path": "../../../akari-v3.1/situations/a2-home/images/A-2.png",
+      "bytes": 2046655,
+      "sha256": "281da5ca10992c7ba38bb62c9a5b2884ddfe90fe0cdb2a1a2ebedb766b8682fa",
+      "width": 1024,
+      "height": 1536,
+      "role": "Selected A-2 outfit construction and ivory indoor sock color only."
+    },
+    {
+      "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "bytes": 1869375,
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "width": 1254,
+      "height": 1254,
+      "role": "Original face, eyes, black bob and drawing identity authority."
+    },
+    {
+      "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "bytes": 1836424,
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "width": 1254,
+      "height": 1254,
+      "role": "Original everyday expression authority; preserve target emotion."
+    },
+    {
+      "path": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "bytes": 1852161,
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "width": 1024,
+      "height": 1536,
+      "role": "Native upper detail and single silver pin only; uniform superseded."
+    }
+  ],
+  "prompt": {
+    "path": "N28-sofa-arm-listen/prompt-r1.txt",
+    "bytes": 1216,
+    "sha256": "72b6d8297044fd9257cb23d16dfa22582050bc20b01db4d13165e45649087d24"
+  },
+  "output": {
+    "path": "N28-sofa-arm-listen/r1.png",
+    "bytes": 2085120,
+    "sha256": "c77430291ca30e75ff44954d63ea534d7317bf8dd3745a97a6ef2115f604ebf3",
+    "width": 1536,
+    "height": 1024
+  },
+  "native_filename": "exec-9490da67-f90e-4435-b2f2-ce073639b3e4.png",
+  "native_sha256": "c77430291ca30e75ff44954d63ea534d7317bf8dd3745a97a6ef2115f604ebf3",
+  "exact_native_copy": true,
+  "exact_prompt_payload": true
+}

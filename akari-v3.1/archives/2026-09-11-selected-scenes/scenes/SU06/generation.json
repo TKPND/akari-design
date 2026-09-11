@@ -1,0 +1,140 @@
+{
+  "id": "SU06",
+  "title_ja": "淡ブルーの夏ワンピース制服",
+  "path_base": "This batch root",
+  "source_favorite_id": null,
+  "user_selected": false,
+  "face_authority_promoted": false,
+  "calls": [
+    {
+      "id": "SU06",
+      "stage": "initial",
+      "tool": "image_gen",
+      "model": null,
+      "started_at": "2026-09-09T07:21:36.046Z",
+      "elapsed_ms": 52571,
+      "inputs": [
+        {
+          "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original face, grey eyes, black bob, drawing and established adult character identity authority."
+        },
+        {
+          "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original familiar gentle closed-mouth smile authority."
+        },
+        {
+          "path": "../../../akari-v3.1/references/U1-upper-reference.png",
+          "bytes": 1852161,
+          "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native upper-body detail and single straight silver hairpin; existing blouse design is superseded by this proposed uniform."
+        },
+        {
+          "path": "../../../akari-v3.1/references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native adult leg construction and medium-grey opaque ribbed below-knee sock fit; existing skirt and white sneakers are superseded by this proposed uniform."
+        },
+        {
+          "path": "../../../akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+          "bytes": 71786,
+          "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+          "width": 280,
+          "height": 210,
+          "role": "Soft opaque sock material with sparse shallow natural wrinkles only; not face, pose, camera or wardrobe authority. Footwear hides the toes in this batch."
+        }
+      ],
+      "prompt": {
+        "path": "SU06-blue-summer/prompt.txt",
+        "bytes": 3081,
+        "sha256": "139553636d46280fbffae9c7525ab03ef3d015696b1657d4f897157dd1148b8d"
+      },
+      "output": {
+        "path": "SU06-blue-summer/initial.png",
+        "bytes": 1721326,
+        "sha256": "2e319b17b6e5d5b8cace795c6fd6c065aae1ac1d0c89127dfd1ef0741d6525ce",
+        "width": 1024,
+        "height": 1536
+      },
+      "native_filename": "exec-de20a073-0cb5-4485-9fbe-252541f041f4.png",
+      "native_sha256": "2e319b17b6e5d5b8cace795c6fd6c065aae1ac1d0c89127dfd1ef0741d6525ce",
+      "exact_native_copy": true,
+      "exact_prompt_payload": true
+    }
+  ],
+  "status": "assistant_reviewed_candidate_awaiting_user_selection",
+  "selected_stage": "initial",
+  "final_image": {
+    "path": "SU06-blue-summer/image.png",
+    "bytes": 1721326,
+    "sha256": "2e319b17b6e5d5b8cace795c6fd6c065aae1ac1d0c89127dfd1ef0741d6525ce",
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review": {
+    "stage": "initial",
+    "summary_ja": "淡いブルーの半袖セーラーワンピース。",
+    "notes": "白襟と袖口の線、紺リボン、共布の腰とスカート、左右の腕と手を確認。灰色の目と小さな瞳孔、銀ピン1本。足首の自然な布じわと黒ローファー。",
+    "limits": "腰に共布の帯状切替が出ている。別体のベルトや金具はない。裾は膝直上より高め。"
+  },
+  "final_transformation": "Exact native image_gen output copy; no artwork retouch outside image_gen.",
+  "review_crops": [
+    {
+      "path": "SU06-blue-summer/face-review.png",
+      "bytes": 158351,
+      "sha256": "ebcc752590ba0835e23c063255e11f1b0059c39ea15d5377a6c43f9e12237a93",
+      "width": 355,
+      "height": 325,
+      "subject": "face",
+      "crop_xywh": [
+        330,
+        10,
+        355,
+        325
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    },
+    {
+      "path": "SU06-blue-summer/clothing_hands-review.png",
+      "bytes": 392219,
+      "sha256": "2d4ac9040256c1050e04a87e08e0ed2ba83cc435c4bb790910749d4312c54e0a",
+      "width": 510,
+      "height": 700,
+      "subject": "clothing_hands",
+      "crop_xywh": [
+        250,
+        280,
+        510,
+        700
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    },
+    {
+      "path": "SU06-blue-summer/socks_shoes-review.png",
+      "bytes": 187503,
+      "sha256": "6cf6d31e1ec4f1824af9717a0315755fb472fb9beac7258a0a2d82362863c559",
+      "width": 390,
+      "height": 440,
+      "subject": "socks_shoes",
+      "crop_xywh": [
+        345,
+        1090,
+        390,
+        440
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    }
+  ],
+  "auxiliary_crops": []
+}

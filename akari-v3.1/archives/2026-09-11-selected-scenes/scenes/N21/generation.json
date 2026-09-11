@@ -1,0 +1,140 @@
+{
+  "id": "N21",
+  "title_ja": "うん、聞いてる",
+  "path_base": "This batch root",
+  "source_favorite_id": "N12",
+  "user_selected": false,
+  "face_authority_promoted": false,
+  "calls": [
+    {
+      "id": "N21",
+      "stage": "initial",
+      "tool": "image_gen",
+      "model": null,
+      "started_at": "2026-09-09T02:35:19.875Z",
+      "elapsed_ms": 35794,
+      "inputs": [
+        {
+          "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original face, eyes, bob and drawing"
+        },
+        {
+          "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original ordinary closed smile"
+        },
+        {
+          "path": "../../../akari-v3.1/references/U1-upper-reference.png",
+          "bytes": 1852161,
+          "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native upper details and single silver pin; uniform superseded"
+        },
+        {
+          "path": "../../../akari-v3.1/references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native leg and below-knee sock fit; wardrobe superseded"
+        },
+        {
+          "path": "../../../akari-v3.1/situations/a2-home/images/N12.png",
+          "bytes": 2114677,
+          "sha256": "df8471a070982d88ce8d36e416ced08aa925a9314ef03e4e7fece24fd1d391ee",
+          "width": 1536,
+          "height": 1024,
+          "role": "N12 selected wardrobe, home direction and material only; no face or pose authority"
+        }
+      ],
+      "prompt": {
+        "path": "N21-cushion-listen/prompt.txt",
+        "bytes": 3373,
+        "sha256": "27f141a2fbbc1c95ef3d6324491e602cb6471e12b05821809a897efa8c8b8b44"
+      },
+      "output": {
+        "path": "N21-cushion-listen/initial.png",
+        "bytes": 2451223,
+        "sha256": "22d421647534e42f966c35167cbe8858032df4dcb942af9e0a8ce4ad883d9862",
+        "width": 1024,
+        "height": 1536
+      },
+      "native_filename": "exec-1911e47d-c600-4bf9-9fc4-2c152ba0e2c3.png",
+      "native_sha256": "22d421647534e42f966c35167cbe8858032df4dcb942af9e0a8ce4ad883d9862",
+      "exact_native_copy": true,
+      "exact_prompt_payload": true
+    }
+  ],
+  "status": "assistant_reviewed_candidate_awaiting_user_selection",
+  "selected_stage": "initial",
+  "final_image": {
+    "path": "N21-cushion-listen/image.png",
+    "bytes": 2451223,
+    "sha256": "22d421647534e42f966c35167cbe8858032df4dcb942af9e0a8ce4ad883d9862",
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review": {
+    "stage": "initial",
+    "summary_ja": "クッション越しに、ゆっくり話を聞いて。",
+    "notes": "Detailed original neutral grey pupils/iris, soft smile and silver pin. Two hands overlap naturally above cushion; sleeves and elbows continuous. Bib buttons naturally hidden by cushion. Socks outside frame.",
+    "limits": "No lower-leg material assessment because it is outside framing."
+  },
+  "final_transformation": "Exact native image_gen output copy; no artwork retouch or compositing outside image_gen",
+  "review_crops": [
+    {
+      "path": "N21-cushion-listen/face-review.png",
+      "bytes": 582353,
+      "sha256": "cd1802e9e9ea70c19db4f7e105fb0768bda589037878218790134bef6ee7d655",
+      "width": 650,
+      "height": 660,
+      "subject": "face",
+      "crop_xywh": [
+        155,
+        0,
+        650,
+        660
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    },
+    {
+      "path": "N21-cushion-listen/clothing-review.png",
+      "bytes": 829385,
+      "sha256": "82c0a23e5fdce8feaa32c1f70dca25dff56dbac251a266cc3f567f05b7ea538f",
+      "width": 820,
+      "height": 640,
+      "subject": "clothing",
+      "crop_xywh": [
+        130,
+        490,
+        820,
+        640
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    }
+  ],
+  "auxiliary_crops": [
+    {
+      "path": "N21-cushion-listen/clothing-initial-review.png",
+      "bytes": 829385,
+      "sha256": "baaa484973a2c48acb95f027867b92d9d138fd72d06c0bb44de4cbfd526b89c8",
+      "width": 820,
+      "height": 640
+    },
+    {
+      "path": "N21-cushion-listen/face-initial-review.png",
+      "bytes": 582353,
+      "sha256": "10f73834aac733d6ec47340dbe3c6fdfb13fd7f5a4d3585b0b8b54cbfce9341a",
+      "width": 650,
+      "height": 660
+    }
+  ]
+}

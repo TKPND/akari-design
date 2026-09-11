@@ -30,11 +30,6 @@ F09の控えめな布じわを優先基準とし、F07はつま先の質感用�
 [A-2の私服と家で過ごすシーン10枚](situations/a2-home/README.md)も採用済み。
 N08・N10・N12・N15と、先に選んだ衣装・生活シーンを保存している。
 
-その後に選んだ家でのシーン8枚・制服案6枚と、アルバム掲載作品AF01〜AF11は
-[2026-09-11の保存パッケージ](archives/2026-09-11-selected-scenes/README.md)に保存した。
-原寸画像、プロンプト、修正履歴、選択・評価記録を含む25枚のアーカイブで、
-顔・衣装・靴下の正式な基準への昇格は行っていない。
-
 まず [design-state.json](design-state.json) と
 [reference-set.json](reference-set.json) を読む。
 同じリポジトリ内の `akari-v3.0/` と一緒に使う。

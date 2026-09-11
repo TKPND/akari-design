@@ -1,0 +1,66 @@
+{
+  "id": "N20",
+  "stage": "r1",
+  "tool": "image_gen",
+  "model": null,
+  "started_at": "2026-09-09T02:47:19.045Z",
+  "elapsed_ms": 54582,
+  "inputs": [
+    {
+      "path": "N20-tea-laugh/initial.png",
+      "bytes": 2161963,
+      "sha256": "c16c78db634fade1f17774221afa7294eb70cb3b1543ef92f8a17c6f7e158f08",
+      "width": 1536,
+      "height": 1024,
+      "role": "Edit target; sole scene, framing, expression and pose source"
+    },
+    {
+      "path": "../../../akari-v3.1/situations/a2-home/images/A-2.png",
+      "bytes": 2046655,
+      "sha256": "281da5ca10992c7ba38bb62c9a5b2884ddfe90fe0cdb2a1a2ebedb766b8682fa",
+      "width": 1024,
+      "height": 1536,
+      "role": "Original selected A-2 outfit: exactly three front bib buttons only"
+    },
+    {
+      "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "bytes": 1869375,
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "width": 1254,
+      "height": 1254,
+      "role": "Original face and open smile preservation"
+    },
+    {
+      "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "bytes": 1836424,
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "width": 1254,
+      "height": 1254,
+      "role": "Original identity support; preserve target laugh"
+    },
+    {
+      "path": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "bytes": 1852161,
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "width": 1024,
+      "height": 1536,
+      "role": "Native hair and silver pin detail only"
+    }
+  ],
+  "prompt": {
+    "path": "N20-tea-laugh/prompt-r1.txt",
+    "bytes": 1018,
+    "sha256": "054b29f6937767740aa667ca627d24887cfb5efaf249661c93f52915dfaf12ba"
+  },
+  "output": {
+    "path": "N20-tea-laugh/r1.png",
+    "bytes": 2138156,
+    "sha256": "99522823c1d76c8139b4df4bb8f4ebe1e86b5b8f0263297a588c1e1b64acc0fe",
+    "width": 1536,
+    "height": 1024
+  },
+  "native_filename": "exec-9dabf475-2752-4c23-af70-538d6b760ca8.png",
+  "native_sha256": "99522823c1d76c8139b4df4bb8f4ebe1e86b5b8f0263297a588c1e1b64acc0fe",
+  "exact_native_copy": true,
+  "exact_prompt_payload": true
+}

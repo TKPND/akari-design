@@ -1,0 +1,122 @@
+{
+  "user_request": "追加して進めよう(識別できればいいのでまとめてやっていいよ)",
+  "scope": {
+    "existing_candidate_to_add": "AF02",
+    "new_candidates": [
+      "AF03",
+      "AF04",
+      "AF05"
+    ],
+    "album_series": "アルバムからのつづき",
+    "all_candidates_authorized_for_album": true
+  },
+  "feedback_retrieved_at": "2026-09-10T05:26:45.025Z",
+  "feedback_rows": [
+    {
+      "image_id": "398cbd0ffebf5dfc8da0b86e33cd47e4db976ec1e8ae8e6be4a69653d51f62d4",
+      "favorite": 1,
+      "next_reference": 0,
+      "keep_note": "",
+      "change_note": "",
+      "updated_at": "2026-09-10T04:52:10.979Z"
+    },
+    {
+      "image_id": "6a07e44c0025d7b63820a008f7a1d1c59ece6ceb3a998d3a057b0b2c38c7e0c1",
+      "favorite": 1,
+      "next_reference": 1,
+      "keep_note": "脚のライン、ふくらはぎからつま先までの柔らかさ",
+      "change_note": "そのまま寝てしまう様子にしてみるとか。",
+      "updated_at": "2026-09-10T04:54:56.048Z"
+    },
+    {
+      "image_id": "6d81908e89ccddb73fdbc58ac8dc16bbd5c142843245126a831571abd105e0d6",
+      "favorite": 1,
+      "next_reference": 1,
+      "keep_note": "",
+      "change_note": "",
+      "updated_at": "2026-09-10T04:53:00.700Z"
+    },
+    {
+      "image_id": "708d8985749c3953b63df52dc1e65d17df6205836dfb5abc85165ccf370059cb",
+      "favorite": 1,
+      "next_reference": 0,
+      "keep_note": "距離感",
+      "change_note": "",
+      "updated_at": "2026-09-10T04:58:33.446Z"
+    },
+    {
+      "image_id": "8b804796635d0489b1e1bb3e27a91e7baa38a9a965516fbf9be78809981fe137",
+      "favorite": 1,
+      "next_reference": 1,
+      "keep_note": "女の子らしい脚のライン",
+      "change_note": "",
+      "updated_at": "2026-09-10T04:55:43.344Z"
+    },
+    {
+      "image_id": "9f687158c3c708b66738d2798f7ac1e40a099aadefef4ac8d96b7394a33cd773",
+      "favorite": 1,
+      "next_reference": 1,
+      "keep_note": "脚の柔らかさ",
+      "change_note": "もっと力を抜いた感じの仕草",
+      "updated_at": "2026-09-10T04:53:41.629Z"
+    },
+    {
+      "image_id": "b04a1cdc711006c8a3175c565084eaabc4a341ed258576e9f62c484703b09d6a",
+      "favorite": 1,
+      "next_reference": 1,
+      "keep_note": "女の子らしい脚のライン",
+      "change_note": "疲れた感じ",
+      "updated_at": "2026-09-10T04:55:32.177Z"
+    },
+    {
+      "image_id": "b50d03be676bab28e6e211d9898185a2d6436b617db86fc39e9d2449e1b9a9d3",
+      "favorite": 1,
+      "next_reference": 1,
+      "keep_note": "優しい感じ",
+      "change_note": "隣に座って自分を見る感じ（ガチ恋距離）（ちょっと恥ずかしがってる感じとか)",
+      "updated_at": "2026-09-10T04:59:41.724Z"
+    },
+    {
+      "image_id": "d12a4295b7d3247bd06f1de12d6622ae3d786523d9ac5e18a8ce371da83edacf",
+      "favorite": 1,
+      "next_reference": 0,
+      "keep_note": "自然な笑顔",
+      "change_note": "",
+      "updated_at": "2026-09-10T04:58:20.094Z"
+    },
+    {
+      "image_id": "d880eb1cddbd73250d814e75b619f61e796a706581f672b364af23d47982b7a2",
+      "favorite": 1,
+      "next_reference": 1,
+      "keep_note": "体のラインの柔らかさ",
+      "change_note": "ベッドで寝る様子",
+      "updated_at": "2026-09-10T04:56:41.730Z"
+    },
+    {
+      "image_id": "e090b707738c50c482dc6c3234060c4d24eb16b619a504c705797bf490aa4d73",
+      "favorite": 1,
+      "next_reference": 1,
+      "keep_note": "アンニュイな表情",
+      "change_note": "隣に座る",
+      "updated_at": "2026-09-10T05:01:15.695Z"
+    },
+    {
+      "image_id": "e2f705453c63d5f114a8d25c47ab05359b926b260384a25a92673829a85c5e30",
+      "favorite": 1,
+      "next_reference": 0,
+      "keep_note": "自然な笑顔",
+      "change_note": "",
+      "updated_at": "2026-09-10T04:58:18.874Z"
+    }
+  ],
+  "site_project_id": "appgprj_6aa219efb29c8191bdfc12dc49efa01e",
+  "status": "published",
+  "album_count": 177,
+  "version_number": 3,
+  "validation": {
+    "existing_173_catalog_entries_unchanged": true,
+    "eight_new_webps_decoded": true,
+    "production_build": "pass",
+    "deployment": "succeeded"
+  }
+}

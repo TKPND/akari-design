@@ -1,0 +1,24 @@
+{
+  "id": "AF04",
+  "validated_at": "2026-09-10T05:30:51.140243+00:00",
+  "status": "candidate_with_sock_detail_reservation",
+  "png_signature_crc_zlib": "pass",
+  "scanline_length_and_filter_bytes": "pass",
+  "native_copy_sha256_match": true,
+  "reference_files": "pass",
+  "visual_whole_image": "reviewed",
+  "visual_assessment": {
+    "identity": "Black bob and silver pin retained; eyes gently closed so pupil details not assessable.",
+    "expression": "Peaceful closed eyes and small resting smile clearly convey dozing.",
+    "pose": "Safely seated against sofa with cushion embraced, shoulders relaxed, coherent arms and hands partly naturally occluded by sleeves/cushion.",
+    "outfit": "Navy long sleeves, rounded white collar, ribbon and plaid skirt retained. Upper thighs covered and knees together, no underwear visible.",
+    "framing": "Full crown and complete feet inside frame with margins.",
+    "socks": "Enlarged review shows fully opaque grey rib knit and soft ankle folds, but toe fronts have central V-shaped depressions and slight scalloped outline, especially image-left. This can read as hidden toe segmentation and does not earn a strict F09 material pass."
+  },
+  "browser_layout_test": "not_run; parent owns album integration",
+  "retry_performed": false,
+  "user_selection": "pending",
+  "sock_material_must": "needs_correction_before_material_adoption",
+  "sock_detail_review": "sock-review.png",
+  "sock_detail_review_transformation": "Unmodified pixel crop at x420 y1230 width300 height260 for inspection only; native output unchanged."
+}

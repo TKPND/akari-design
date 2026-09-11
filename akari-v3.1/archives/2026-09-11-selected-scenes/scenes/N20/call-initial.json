@@ -1,0 +1,66 @@
+{
+  "id": "N20",
+  "stage": "initial",
+  "tool": "image_gen",
+  "model": null,
+  "started_at": "2026-09-09T02:33:55.026Z",
+  "elapsed_ms": 54891,
+  "inputs": [
+    {
+      "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "bytes": 1869375,
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "width": 1254,
+      "height": 1254,
+      "role": "Original face, eyes, bob and drawing"
+    },
+    {
+      "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "bytes": 1836424,
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "width": 1254,
+      "height": 1254,
+      "role": "Original ordinary closed smile"
+    },
+    {
+      "path": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "bytes": 1852161,
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "width": 1024,
+      "height": 1536,
+      "role": "Native upper details and single silver pin; uniform superseded"
+    },
+    {
+      "path": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "bytes": 1815855,
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "width": 1024,
+      "height": 1536,
+      "role": "Native leg and below-knee sock fit; wardrobe superseded"
+    },
+    {
+      "path": "../../../akari-v3.1/situations/a2-home/images/N12.png",
+      "bytes": 2114677,
+      "sha256": "df8471a070982d88ce8d36e416ced08aa925a9314ef03e4e7fece24fd1d391ee",
+      "width": 1536,
+      "height": 1024,
+      "role": "N12 selected wardrobe, home direction and material only; no face or pose authority"
+    }
+  ],
+  "prompt": {
+    "path": "N20-tea-laugh/prompt.txt",
+    "bytes": 3360,
+    "sha256": "1c44783cefd37b279ce9865e20295b72018519830009a29dfba173fea1f0aa9e"
+  },
+  "output": {
+    "path": "N20-tea-laugh/initial.png",
+    "bytes": 2161963,
+    "sha256": "c16c78db634fade1f17774221afa7294eb70cb3b1543ef92f8a17c6f7e158f08",
+    "width": 1536,
+    "height": 1024
+  },
+  "native_filename": "exec-1ff1ff7b-ca06-4c8f-8aa3-311459fe518f.png",
+  "native_sha256": "c16c78db634fade1f17774221afa7294eb70cb3b1543ef92f8a17c6f7e158f08",
+  "exact_native_copy": true,
+  "exact_prompt_payload": true
+}

@@ -1,0 +1,66 @@
+{
+  "id": "N20",
+  "stage": "r2",
+  "tool": "image_gen",
+  "model": null,
+  "started_at": "2026-09-09T02:52:48.338Z",
+  "elapsed_ms": 52190,
+  "inputs": [
+    {
+      "path": "N20-tea-laugh/r1.png",
+      "bytes": 2138156,
+      "sha256": "99522823c1d76c8139b4df4bb8f4ebe1e86b5b8f0263297a588c1e1b64acc0fe",
+      "width": 1536,
+      "height": 1024,
+      "role": "Edit target; sole scene, framing, expression and pose source"
+    },
+    {
+      "path": "../../../akari-v3.1/situations/a2-home/images/A-2.png",
+      "bytes": 2046655,
+      "sha256": "281da5ca10992c7ba38bb62c9a5b2884ddfe90fe0cdb2a1a2ebedb766b8682fa",
+      "width": 1024,
+      "height": 1536,
+      "role": "Original selected A-2 outfit: exactly three front bib buttons only"
+    },
+    {
+      "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "bytes": 1869375,
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "width": 1254,
+      "height": 1254,
+      "role": "Original face and open smile preservation"
+    },
+    {
+      "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "bytes": 1836424,
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "width": 1254,
+      "height": 1254,
+      "role": "Original identity support; preserve target laugh"
+    },
+    {
+      "path": "N20-tea-laugh/buttons-r1-review.png",
+      "bytes": 45885,
+      "sha256": "ff16b679ac0d77df46f3ea18e0863246c382d389d6e2367963ae237cb65200d0",
+      "width": 135,
+      "height": 210,
+      "role": "Unmodified zoom of the target's four-button defect; location guide only, not separate composition"
+    }
+  ],
+  "prompt": {
+    "path": "N20-tea-laugh/prompt-r2.txt",
+    "bytes": 1146,
+    "sha256": "ed714ebb7ac92955dc22dc37210ab02694c4296f50d57740822736d7b29cb557"
+  },
+  "output": {
+    "path": "N20-tea-laugh/r2.png",
+    "bytes": 2136915,
+    "sha256": "0395fb9fcc1711a904dbe0b40b057e42a88054e4d0981e12cf8211a73721f6bb",
+    "width": 1536,
+    "height": 1024
+  },
+  "native_filename": "exec-31932941-0693-491e-b50c-84ab3070d739.png",
+  "native_sha256": "0395fb9fcc1711a904dbe0b40b057e42a88054e4d0981e12cf8211a73721f6bb",
+  "exact_native_copy": true,
+  "exact_prompt_payload": true
+}

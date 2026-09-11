@@ -1,0 +1,32 @@
+{
+  "id": "AF06",
+  "validated_at": "2026-09-11T02:15:10.803425+00:00",
+  "status": "candidate_visual_reviewed",
+  "png_signature_crc_zlib": "pass",
+  "scanline_length_and_filter_bytes": "pass",
+  "native_copy_sha256_match": true,
+  "reference_files": "pass",
+  "visual_whole_image": "reviewed",
+  "visual_assessment": {
+    "identity": "Black bob, closed eyes and single silver pin retained; open-eye pupil detail not assessable during sleep.",
+    "expression": "Peaceful closed-eye nap and tiny closed-mouth smile.",
+    "pose": "Cheek supported by tall cushion; relaxed asymmetrical shoulders and coherent complete visible hands. Distinct from selected AF04-r2.",
+    "outfit": "Navy long-sleeve cardigan, round collar, ribbon and plaid skirt retained with modest seated coverage.",
+    "framing": "Whole crown and both feet comfortably inside image.",
+    "socks": "Enlarged review confirms continuous broad rounded opaque toe contours, no separate toe bumps or scalloped front. Sparse central cloth dimples and shallow seam folds match selected AF04-r2, with soft ankle folds. No hidden toe segmentation apparent."
+  },
+  "browser_layout_test": "not_run; parent owns album integration",
+  "retry_performed": false,
+  "user_selection": "pending",
+  "sock_material_must": "pass_visual",
+  "sock_detail_review": {
+    "image": "sock-review.png",
+    "crop_xywh": [
+      420,
+      1230,
+      310,
+      260
+    ],
+    "transformation": "unmodified pixel crop for QA; native output unchanged"
+  }
+}

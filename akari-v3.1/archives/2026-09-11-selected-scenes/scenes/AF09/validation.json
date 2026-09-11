@@ -1,0 +1,33 @@
+{
+  "id": "AF09",
+  "validated_at": "2026-09-11T02:33:17.092637+00:00",
+  "status": "candidate_natural_fit_partial",
+  "png_signature_crc_zlib": "pass",
+  "scanline_length_and_filter_bytes": "pass",
+  "native_copy_sha256_match": true,
+  "reference_files": "pass",
+  "visual_whole_image": "reviewed",
+  "visual_assessment": {
+    "identity_pose_scene": "Selected AF07 composition, face, hands, outfit and pose visually preserved; no pixel-exact invariance claimed.",
+    "natural_fit": "Forefeet are slightly slimmer and less bulbous than AF07, especially nearer foot. However front ends remain cap-like and seam boundary remains visible; user-requested natural taper achieved only partially.",
+    "opaque_material": "Grey rib knit remains opaque, no individual toe separation apparent; ankle folds maintained.",
+    "framing": "Entire head and both feet retained."
+  },
+  "browser_layout_test": "not_run; parent owns album integration",
+  "retry_performed": false,
+  "user_selection": "pending",
+  "sock_detail_review": {
+    "image": "sock-review.png",
+    "crop_xywh": [
+      1100,
+      735,
+      350,
+      250
+    ],
+    "transformation": "Unmodified pixel crop for inspection; native generated PNG unchanged."
+  },
+  "natural_fit_user_steering": "partial; slimmer than AF07 but rounded cap profile and seam boundary remain",
+  "individual_toe_concealment": "pass_visual; no individual toes apparent",
+  "enlarged_assessment": "Controlled comparison retains scene and pose visually; natural taper improvement is small.",
+  "authority_update_performed": false
+}

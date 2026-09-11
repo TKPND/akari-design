@@ -1,0 +1,177 @@
+{
+  "id": "N27",
+  "title_ja": "も、笑わせないで",
+  "path_base": "This batch root",
+  "source_favorite_id": "N20",
+  "user_selected": false,
+  "face_authority_promoted": false,
+  "calls": [
+    {
+      "id": "N27",
+      "stage": "initial",
+      "tool": "image_gen",
+      "model": null,
+      "started_at": "2026-09-09T03:41:45.250Z",
+      "elapsed_ms": 55682,
+      "inputs": [
+        {
+          "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original face, eyes, black bob, drawing and adult character identity authority."
+        },
+        {
+          "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original everyday closed-mouth smile authority; only the explicitly requested new emotion may change the mouth/eyelids."
+        },
+        {
+          "path": "../../../akari-v3.1/references/U1-upper-reference.png",
+          "bytes": 1852161,
+          "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native upper-body detail and one silver straight hairpin; canonical uniform is replaced by A-2 home outfit."
+        },
+        {
+          "path": "../../../akari-v3.1/references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native healthy adult leg construction and below-knee ribbed sock fit; blue skirt, grey sock color and shoes are superseded by the selected A-2 taupe dress and ivory indoor socks."
+        },
+        {
+          "path": "../2026-09-09-a2-next-eight/N20-tea-laugh/image.png",
+          "bytes": 2136915,
+          "sha256": "0395fb9fcc1711a904dbe0b40b057e42a88054e4d0981e12cf8211a73721f6bb",
+          "width": 1536,
+          "height": 1024,
+          "role": "User-selected A-2 home outfit, atmosphere and fabric finish only; no face, camera or pose authority."
+        }
+      ],
+      "prompt": {
+        "path": "N27-trying-not-to-laugh/prompt.txt",
+        "bytes": 3674,
+        "sha256": "0e2adee3843cc25e69caec91efa5f67b6d61e09d2c583e982fb87372c463e4ba"
+      },
+      "output": {
+        "path": "N27-trying-not-to-laugh/initial.png",
+        "bytes": 2210876,
+        "sha256": "e2f705453c63d5f114a8d25c47ab05359b926b260384a25a92673829a85c5e30",
+        "width": 1024,
+        "height": 1536
+      },
+      "native_filename": "exec-b04b0e70-492f-4b25-8052-429e42e3c085.png",
+      "native_sha256": "e2f705453c63d5f114a8d25c47ab05359b926b260384a25a92673829a85c5e30",
+      "exact_native_copy": true,
+      "exact_prompt_payload": true
+    }
+  ],
+  "status": "assistant_reviewed_candidate_awaiting_user_selection",
+  "selected_stage": "initial",
+  "final_image": {
+    "path": "N27-trying-not-to-laugh/image.png",
+    "bytes": 2210876,
+    "sha256": "e2f705453c63d5f114a8d25c47ab05359b926b260384a25a92673829a85c5e30",
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review": {
+    "stage": "initial",
+    "summary_ja": "目を閉じて、口元に手を添えたくすくす笑い。",
+    "notes": "閉じた目の弧、少し見える笑った口、口元の手とカップのそばの手を拡大確認。両腕と袖のつながり、襟・リボン・中央3ボタン・銀ピン1本を確認。頭頂に余白あり。",
+    "limits": "閉眼表情なので虹彩・瞳孔の描き込みは評価対象外。靴下は画面外。"
+  },
+  "final_transformation": "Exact native image_gen output copy; no artwork retouch or compositing outside image_gen",
+  "review_crops": [
+    {
+      "path": "N27-trying-not-to-laugh/face-review.png",
+      "bytes": 552714,
+      "sha256": "163d8408fd27147e8638848266f5ede659500fcdd0ffc31079adc1716265ad2b",
+      "width": 630,
+      "height": 615,
+      "subject": "face",
+      "crop_xywh": [
+        170,
+        25,
+        630,
+        615
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    },
+    {
+      "path": "N27-trying-not-to-laugh/clothing-review.png",
+      "bytes": 678713,
+      "sha256": "4e3c053c15d6f4a4c4ad4cadbd9075aabd88492d374e64ad882ab979facbfcbf",
+      "width": 740,
+      "height": 650,
+      "subject": "clothing",
+      "crop_xywh": [
+        210,
+        720,
+        740,
+        650
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    },
+    {
+      "path": "N27-trying-not-to-laugh/hand-review.png",
+      "bytes": 70359,
+      "sha256": "cb813254425f7a13ff6d7d7330bc3f8d5682e39bfd3e222588492c818eb57161",
+      "width": 245,
+      "height": 200,
+      "subject": "hand",
+      "crop_xywh": [
+        660,
+        1160,
+        245,
+        200
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    },
+    {
+      "path": "N27-trying-not-to-laugh/mouth_hand-review.png",
+      "bytes": 118363,
+      "sha256": "a0ad3673f9085fe0a9656766c6486fb32db139a163b04016854605f3b1a3117a",
+      "width": 240,
+      "height": 345,
+      "subject": "mouth_hand",
+      "crop_xywh": [
+        335,
+        495,
+        240,
+        345
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    }
+  ],
+  "auxiliary_crops": [
+    {
+      "path": "N27-trying-not-to-laugh/clothing-initial-review.png",
+      "bytes": 118363,
+      "sha256": "de3229003090a09b410bca62c0fda5a6d12de43b0cc6fb43a76db522f2c21fa2",
+      "width": 240,
+      "height": 345
+    },
+    {
+      "path": "N27-trying-not-to-laugh/face-initial-review.png",
+      "bytes": 552714,
+      "sha256": "163d8408fd27147e8638848266f5ede659500fcdd0ffc31079adc1716265ad2b",
+      "width": 630,
+      "height": 615
+    },
+    {
+      "path": "N27-trying-not-to-laugh/hand-initial-review.png",
+      "bytes": 70359,
+      "sha256": "cb813254425f7a13ff6d7d7330bc3f8d5682e39bfd3e222588492c818eb57161",
+      "width": 245,
+      "height": 200
+    }
+  ]
+}

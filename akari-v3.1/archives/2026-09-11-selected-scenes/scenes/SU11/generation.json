@@ -1,0 +1,140 @@
+{
+  "id": "SU11",
+  "title_ja": "グレージュ × ココアチェック",
+  "path_base": "This batch root",
+  "source_favorite_id": "SU05",
+  "user_selected": false,
+  "face_authority_promoted": false,
+  "calls": [
+    {
+      "id": "SU11",
+      "stage": "initial",
+      "tool": "image_gen",
+      "model": null,
+      "started_at": "2026-09-09T07:39:57.225Z",
+      "elapsed_ms": 56095,
+      "inputs": [
+        {
+          "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original face, grey eyes, black bob, drawing and established adult character identity authority."
+        },
+        {
+          "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original familiar gentle closed-mouth smile authority."
+        },
+        {
+          "path": "../../../akari-v3.1/references/U1-upper-reference.png",
+          "bytes": 1852161,
+          "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native upper-body detail and single straight silver hairpin; existing blouse design is superseded by this proposed uniform."
+        },
+        {
+          "path": "../../../akari-v3.1/references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native adult leg construction and medium-grey opaque ribbed below-knee sock fit; existing skirt and white sneakers are superseded by this proposed uniform."
+        },
+        {
+          "path": "../2026-09-09-school-uniform-six/SU05-grey-bolero/image.png",
+          "bytes": 1848990,
+          "sha256": "4aa5ddd0de916db32004b48617388a63c8077ca8550e6550dd54b5e4ae244d88",
+          "width": 1024,
+          "height": 1536,
+          "role": "User-selected school-uniform wardrobe family and catalog presentation only; face authority remains original P1/P2, and new outfit differences are explicitly specified."
+        }
+      ],
+      "prompt": {
+        "path": "SU11-greige-bolero/prompt.txt",
+        "bytes": 3118,
+        "sha256": "00f76761e77feac8e8a99871873281b50ccd1f57694a6c572d7483cdb3a811eb"
+      },
+      "output": {
+        "path": "SU11-greige-bolero/initial.png",
+        "bytes": 1806694,
+        "sha256": "02de80ef6ad2254e34219c2ad2dfe156d8a678524242ed3f1f3cc6f0820fe2d2",
+        "width": 1024,
+        "height": 1536
+      },
+      "native_filename": "exec-57202525-643f-4c2b-b573-74626bdbf1cf.png",
+      "native_sha256": "02de80ef6ad2254e34219c2ad2dfe156d8a678524242ed3f1f3cc6f0820fe2d2",
+      "exact_native_copy": true,
+      "exact_prompt_payload": true
+    }
+  ],
+  "status": "assistant_reviewed_candidate_awaiting_user_selection",
+  "selected_stage": "initial",
+  "final_image": {
+    "path": "SU11-greige-bolero/image.png",
+    "bytes": 1806694,
+    "sha256": "02de80ef6ad2254e34219c2ad2dfe156d8a678524242ed3f1f3cc6f0820fe2d2",
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review": {
+    "stage": "initial",
+    "summary_ja": "グレージュとココアチェックにボルドーの差し色。",
+    "notes": "白丸襟、短い開きボレロ、プリーツのあるジャンパースカート、両手を確認。袖口の白ブラウスと上着は連続。茶メリージェーン各1ストラップ、両足首に控えめな布じわ。",
+    "limits": "チェックは窓枠状だけでなく細い複数線を含む柄になった。裾は指定の膝上数cmより高め。"
+  },
+  "final_transformation": "Exact native image_gen output copy; no artwork retouch outside image_gen.",
+  "review_crops": [
+    {
+      "path": "SU11-greige-bolero/face-review.png",
+      "bytes": 154541,
+      "sha256": "09290e67e6fc180c8a559f6d917bd604716f096b9039d504773ccdb363ba4e0c",
+      "width": 355,
+      "height": 325,
+      "subject": "face",
+      "crop_xywh": [
+        330,
+        10,
+        355,
+        325
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    },
+    {
+      "path": "SU11-greige-bolero/clothing_hands-review.png",
+      "bytes": 510098,
+      "sha256": "ade2f967c00b4c3d0264a56a7503e4594132f64fa5432fd475d9324504ddc345",
+      "width": 510,
+      "height": 700,
+      "subject": "clothing_hands",
+      "crop_xywh": [
+        250,
+        280,
+        510,
+        700
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    },
+    {
+      "path": "SU11-greige-bolero/socks_shoes-review.png",
+      "bytes": 181696,
+      "sha256": "c100ba702c2f55d8f0daad02b05af03cdc698b8e5cd319053f0e4a07743bf62b",
+      "width": 390,
+      "height": 440,
+      "subject": "socks_shoes",
+      "crop_xywh": [
+        345,
+        1090,
+        390,
+        440
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    }
+  ],
+  "auxiliary_crops": []
+}

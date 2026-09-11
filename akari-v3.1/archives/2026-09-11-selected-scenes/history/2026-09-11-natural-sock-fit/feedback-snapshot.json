@@ -1,0 +1,153 @@
+{
+  "retrieved_at": "2026-09-11T02:29:50.979Z",
+  "project_id": "appgprj_6aa219efb29c8191bdfc12dc49efa01e",
+  "user_steering": "靴下のつま先はちょっと丸すぎる。もう少し自然な感じにしたい",
+  "interpretation": "Preserve opaque knit without individual toe segmentation; explore natural tapered asymmetric foot envelope and load-dependent cloth compression rather than bulbous uniformly round toe caps.",
+  "authoritative_reference_rules_changed": false,
+  "rows": [
+    {
+      "image_id": "36e2099b459e45b8e6fc95439edcc822d7ab9593b35010e4acf69a36788e620d",
+      "favorite": 1,
+      "next_reference": 1,
+      "keep_note": "",
+      "change_note": "",
+      "updated_at": "2026-09-11T02:07:08.092Z"
+    },
+    {
+      "image_id": "398cbd0ffebf5dfc8da0b86e33cd47e4db976ec1e8ae8e6be4a69653d51f62d4",
+      "favorite": 1,
+      "next_reference": 0,
+      "keep_note": "",
+      "change_note": "",
+      "updated_at": "2026-09-10T04:52:10.979Z"
+    },
+    {
+      "image_id": "484c8ed6972386d9e15a166326e58eedba03addd0ac5000cd8eb92bd29bdc911",
+      "favorite": 1,
+      "next_reference": 1,
+      "keep_note": "",
+      "change_note": "",
+      "updated_at": "2026-09-11T02:27:56.146Z"
+    },
+    {
+      "image_id": "6a07e44c0025d7b63820a008f7a1d1c59ece6ceb3a998d3a057b0b2c38c7e0c1",
+      "favorite": 1,
+      "next_reference": 1,
+      "keep_note": "脚のライン、ふくらはぎからつま先までの柔らかさ",
+      "change_note": "そのまま寝てしまう様子にしてみるとか。",
+      "updated_at": "2026-09-10T04:54:56.048Z"
+    },
+    {
+      "image_id": "6d81908e89ccddb73fdbc58ac8dc16bbd5c142843245126a831571abd105e0d6",
+      "favorite": 1,
+      "next_reference": 1,
+      "keep_note": "",
+      "change_note": "",
+      "updated_at": "2026-09-10T04:53:00.700Z"
+    },
+    {
+      "image_id": "708d8985749c3953b63df52dc1e65d17df6205836dfb5abc85165ccf370059cb",
+      "favorite": 1,
+      "next_reference": 0,
+      "keep_note": "距離感",
+      "change_note": "",
+      "updated_at": "2026-09-10T04:58:33.446Z"
+    },
+    {
+      "image_id": "8b804796635d0489b1e1bb3e27a91e7baa38a9a965516fbf9be78809981fe137",
+      "favorite": 1,
+      "next_reference": 1,
+      "keep_note": "女の子らしい脚のライン",
+      "change_note": "",
+      "updated_at": "2026-09-10T04:55:43.344Z"
+    },
+    {
+      "image_id": "9cc7b9b87474d6ae342abf88533b068ed5aa87e936df6d845282e7e340dde097",
+      "favorite": 1,
+      "next_reference": 1,
+      "keep_note": "",
+      "change_note": "",
+      "updated_at": "2026-09-11T02:07:11.444Z"
+    },
+    {
+      "image_id": "9f687158c3c708b66738d2798f7ac1e40a099aadefef4ac8d96b7394a33cd773",
+      "favorite": 1,
+      "next_reference": 1,
+      "keep_note": "脚の柔らかさ",
+      "change_note": "もっと力を抜いた感じの仕草",
+      "updated_at": "2026-09-10T04:53:41.629Z"
+    },
+    {
+      "image_id": "b04a1cdc711006c8a3175c565084eaabc4a341ed258576e9f62c484703b09d6a",
+      "favorite": 1,
+      "next_reference": 1,
+      "keep_note": "女の子らしい脚のライン",
+      "change_note": "疲れた感じ",
+      "updated_at": "2026-09-10T04:55:32.177Z"
+    },
+    {
+      "image_id": "b50d03be676bab28e6e211d9898185a2d6436b617db86fc39e9d2449e1b9a9d3",
+      "favorite": 1,
+      "next_reference": 1,
+      "keep_note": "優しい感じ",
+      "change_note": "隣に座って自分を見る感じ（ガチ恋距離）（ちょっと恥ずかしがってる感じとか)",
+      "updated_at": "2026-09-10T04:59:41.724Z"
+    },
+    {
+      "image_id": "c9499157fd4e138ecee8a46eb53284136516629cd5704b072359d0a6c222cbab",
+      "favorite": 1,
+      "next_reference": 0,
+      "keep_note": "",
+      "change_note": "",
+      "updated_at": "2026-09-11T02:26:00.530Z"
+    },
+    {
+      "image_id": "d12a4295b7d3247bd06f1de12d6622ae3d786523d9ac5e18a8ce371da83edacf",
+      "favorite": 1,
+      "next_reference": 0,
+      "keep_note": "自然な笑顔",
+      "change_note": "",
+      "updated_at": "2026-09-10T04:58:20.094Z"
+    },
+    {
+      "image_id": "d880eb1cddbd73250d814e75b619f61e796a706581f672b364af23d47982b7a2",
+      "favorite": 1,
+      "next_reference": 1,
+      "keep_note": "体のラインの柔らかさ",
+      "change_note": "ベッドで寝る様子",
+      "updated_at": "2026-09-10T04:56:41.730Z"
+    },
+    {
+      "image_id": "e090b707738c50c482dc6c3234060c4d24eb16b619a504c705797bf490aa4d73",
+      "favorite": 1,
+      "next_reference": 1,
+      "keep_note": "アンニュイな表情",
+      "change_note": "隣に座る",
+      "updated_at": "2026-09-10T05:01:15.695Z"
+    },
+    {
+      "image_id": "e2f705453c63d5f114a8d25c47ab05359b926b260384a25a92673829a85c5e30",
+      "favorite": 1,
+      "next_reference": 0,
+      "keep_note": "自然な笑顔",
+      "change_note": "",
+      "updated_at": "2026-09-10T04:58:18.874Z"
+    },
+    {
+      "image_id": "ec553e9b54406ab421685f882ce7f9f565012d5f51fb61228d7a201708cc72cc",
+      "favorite": 1,
+      "next_reference": 0,
+      "keep_note": "",
+      "change_note": "",
+      "updated_at": "2026-09-11T02:26:13.763Z"
+    },
+    {
+      "image_id": "f5e22e307587a0c1be5ad92578815c49bfc85582284de7e3f589a39da5b034ab",
+      "favorite": 1,
+      "next_reference": 0,
+      "keep_note": "",
+      "change_note": "",
+      "updated_at": "2026-09-11T02:07:03.849Z"
+    }
+  ]
+}

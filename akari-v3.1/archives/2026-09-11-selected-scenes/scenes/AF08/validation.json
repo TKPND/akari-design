@@ -1,0 +1,22 @@
+{
+  "id": "AF08",
+  "validated_at": "2026-09-11T02:18:44.136285+00:00",
+  "status": "candidate_visual_reviewed",
+  "png_signature_crc_zlib": "pass",
+  "scanline_length_and_filter_bytes": "pass",
+  "native_copy_sha256_match": true,
+  "reference_files": "pass",
+  "visual_whole_image": "reviewed",
+  "visual_assessment": {
+    "identity": "Black bob, silver pin and P1/P2 facial lineage retained; closed eyes make pupil details not applicable.",
+    "expression": "Peaceful closed-eye side nap and tiny closed-mouth smile.",
+    "pose": "Head supported by ivory pillow, arms anatomically connected with relaxed hands at cushion and pillow. Natural side-lying torso. Lower limbs covered by blanket and not directly assessable.",
+    "outfit": "Navy long-sleeve cardigan, rounded white collar, ribbon and blue-grey plaid skirt visible. Fully clothed modest sleeping composition.",
+    "framing": "Full head has comfortable margin. Distinct calm bedroom scene, no low-angle or isolated body-part emphasis.",
+    "socks": "Fully hidden under pale sage blanket; sock material and hidden lower-limb anatomy not visually assessable and no exposed toe requirement applies."
+  },
+  "browser_layout_test": "not_run; parent owns album integration",
+  "retry_performed": false,
+  "user_selection": "pending",
+  "sock_material_must": "not_applicable; socks fully covered by blanket"
+}

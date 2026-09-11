@@ -1,0 +1,220 @@
+{
+  "id": "N28",
+  "title_ja": "それで、どうなったの？",
+  "path_base": "This batch root",
+  "source_favorite_id": "N21",
+  "user_selected": false,
+  "face_authority_promoted": false,
+  "calls": [
+    {
+      "id": "N28",
+      "stage": "initial",
+      "tool": "image_gen",
+      "model": null,
+      "started_at": "2026-09-09T03:43:05.818Z",
+      "elapsed_ms": 37502,
+      "inputs": [
+        {
+          "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original face, eyes, black bob, drawing and adult character identity authority."
+        },
+        {
+          "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original everyday closed-mouth smile authority; only the explicitly requested new emotion may change the mouth/eyelids."
+        },
+        {
+          "path": "../../../akari-v3.1/references/U1-upper-reference.png",
+          "bytes": 1852161,
+          "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native upper-body detail and one silver straight hairpin; canonical uniform is replaced by A-2 home outfit."
+        },
+        {
+          "path": "../../../akari-v3.1/references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native healthy adult leg construction and below-knee ribbed sock fit; blue skirt, grey sock color and shoes are superseded by the selected A-2 taupe dress and ivory indoor socks."
+        },
+        {
+          "path": "../2026-09-09-a2-next-eight/N21-cushion-listen/image.png",
+          "bytes": 2451223,
+          "sha256": "22d421647534e42f966c35167cbe8858032df4dcb942af9e0a8ce4ad883d9862",
+          "width": 1024,
+          "height": 1536,
+          "role": "User-selected A-2 home outfit, atmosphere and fabric finish only; no face, camera or pose authority."
+        }
+      ],
+      "prompt": {
+        "path": "N28-sofa-arm-listen/prompt.txt",
+        "bytes": 3780,
+        "sha256": "22cb3f5025cf89dfd1773f416f9510e0c350f4e1e23eecd96e2b452d8f57d36c"
+      },
+      "output": {
+        "path": "N28-sofa-arm-listen/initial.png",
+        "bytes": 2155333,
+        "sha256": "708d8985749c3953b63df52dc1e65d17df6205836dfb5abc85165ccf370059cb",
+        "width": 1536,
+        "height": 1024
+      },
+      "native_filename": "exec-133b9c7d-b89b-4100-9c3e-c1d49d13e9c1.png",
+      "native_sha256": "708d8985749c3953b63df52dc1e65d17df6205836dfb5abc85165ccf370059cb",
+      "exact_native_copy": true,
+      "exact_prompt_payload": true
+    },
+    {
+      "id": "N28",
+      "stage": "r1",
+      "tool": "image_gen",
+      "model": null,
+      "started_at": "2026-09-09T03:51:43.509Z",
+      "elapsed_ms": 50154,
+      "inputs": [
+        {
+          "path": "N28-sofa-arm-listen/initial.png",
+          "bytes": 2155333,
+          "sha256": "708d8985749c3953b63df52dc1e65d17df6205836dfb5abc85165ccf370059cb",
+          "width": 1536,
+          "height": 1024,
+          "role": "Sole edit target; complete scene, camera, pose, expression and all unchanged areas."
+        },
+        {
+          "path": "../../../akari-v3.1/situations/a2-home/images/A-2.png",
+          "bytes": 2046655,
+          "sha256": "281da5ca10992c7ba38bb62c9a5b2884ddfe90fe0cdb2a1a2ebedb766b8682fa",
+          "width": 1024,
+          "height": 1536,
+          "role": "Selected A-2 outfit construction and ivory indoor sock color only."
+        },
+        {
+          "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original face, eyes, black bob and drawing identity authority."
+        },
+        {
+          "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original everyday expression authority; preserve target emotion."
+        },
+        {
+          "path": "../../../akari-v3.1/references/U1-upper-reference.png",
+          "bytes": 1852161,
+          "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native upper detail and single silver pin only; uniform superseded."
+        }
+      ],
+      "prompt": {
+        "path": "N28-sofa-arm-listen/prompt-r1.txt",
+        "bytes": 1216,
+        "sha256": "72b6d8297044fd9257cb23d16dfa22582050bc20b01db4d13165e45649087d24"
+      },
+      "output": {
+        "path": "N28-sofa-arm-listen/r1.png",
+        "bytes": 2085120,
+        "sha256": "c77430291ca30e75ff44954d63ea534d7317bf8dd3745a97a6ef2115f604ebf3",
+        "width": 1536,
+        "height": 1024
+      },
+      "native_filename": "exec-9490da67-f90e-4435-b2f2-ce073639b3e4.png",
+      "native_sha256": "c77430291ca30e75ff44954d63ea534d7317bf8dd3745a97a6ef2115f604ebf3",
+      "exact_native_copy": true,
+      "exact_prompt_payload": true
+    }
+  ],
+  "status": "assistant_reviewed_candidate_awaiting_user_selection",
+  "selected_stage": "r1",
+  "final_image": {
+    "path": "N28-sofa-arm-listen/image.png",
+    "bytes": 2085120,
+    "sha256": "c77430291ca30e75ff44954d63ea534d7317bf8dd3745a97a6ef2115f604ebf3",
+    "width": 1536,
+    "height": 1024
+  },
+  "visual_review": {
+    "stage": "r1",
+    "summary_ja": "ソファの肘掛けへ身を寄せて、会話の続きを聞く。",
+    "notes": "initialで右肩紐とビブ接合部に生成された余分なボタンと薄い円を、採用A-2の服を参照してr1で除去。中央の見えるボタンは保持し、下の2個は前腕に隠れる。原寸で修正部のチェック柄、重なる手と前腕、目・口・銀ピンを確認。",
+    "limits": "頭頂が上端にわずかにかかる。指定の前腕を並べる形から、片手をもう片方の手首に重ねる姿へ変化。口は軽く開く指定より明るい会話表情になった。靴下は画面外。"
+  },
+  "final_transformation": "Exact native image_gen output copy; no artwork retouch or compositing outside image_gen",
+  "review_crops": [
+    {
+      "path": "N28-sofa-arm-listen/face-review.png",
+      "bytes": 536360,
+      "sha256": "927925f168be2973f4401148083867a9ce26b2e9b6fca4c281da36c76ffbabc1",
+      "width": 650,
+      "height": 640,
+      "subject": "face",
+      "crop_xywh": [
+        375,
+        0,
+        650,
+        640
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    },
+    {
+      "path": "N28-sofa-arm-listen/clothing-review.png",
+      "bytes": 539579,
+      "sha256": "a36af12ada498dc5c1b17bfc910f343e3055eff552cb9ab446ff6a1e596eef37",
+      "width": 1080,
+      "height": 355,
+      "subject": "clothing",
+      "crop_xywh": [
+        295,
+        660,
+        1080,
+        355
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    }
+  ],
+  "auxiliary_crops": [
+    {
+      "path": "N28-sofa-arm-listen/clothing-initial-review.png",
+      "bytes": 557949,
+      "sha256": "e9564822fe66fec93e3a91cfcd12819a6539508ea81c723af9e96f58c2a18093",
+      "width": 1080,
+      "height": 355
+    },
+    {
+      "path": "N28-sofa-arm-listen/clothing-r1-review.png",
+      "bytes": 539579,
+      "sha256": "a36af12ada498dc5c1b17bfc910f343e3055eff552cb9ab446ff6a1e596eef37",
+      "width": 1080,
+      "height": 355
+    },
+    {
+      "path": "N28-sofa-arm-listen/face-initial-review.png",
+      "bytes": 556141,
+      "sha256": "2d787b8548d5db1db294b8123ad31dcf8cbafafd0cc1f9513c657c60a41ed5c1",
+      "width": 650,
+      "height": 640
+    },
+    {
+      "path": "N28-sofa-arm-listen/face-r1-review.png",
+      "bytes": 536360,
+      "sha256": "927925f168be2973f4401148083867a9ce26b2e9b6fca4c281da36c76ffbabc1",
+      "width": 650,
+      "height": 640
+    }
+  ]
+}

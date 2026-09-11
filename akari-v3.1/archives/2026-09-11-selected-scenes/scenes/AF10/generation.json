@@ -1,0 +1,68 @@
+{
+  "id": "AF10",
+  "title_ja": "足を下ろして、ひと息",
+  "created_at": "2026-09-11T02:35:32.759748+00:00",
+  "tool": "built-in image_gen",
+  "model_identity": "not exposed",
+  "generation_id": "exec-2f3fa3f6-7693-4b6b-bc41-d81793c3dc17",
+  "generation_calls": 1,
+  "status": "candidate_pending_user_selection",
+  "image": "AF10-feet-down-rest-r2.png",
+  "prompt": "prompt-r2.txt",
+  "prompt_sha256": "39819e316e8fcf7694d65d6f50c324e58a8fe51e16a28d47bd13329881c722eb",
+  "feedback_snapshot": "../feedback-snapshot.json",
+  "feedback_snapshot_sha256": "b5d615baff8d50718b2642127c3f20e45f877a91b950a0dfb67b97054cf32964",
+  "input_path_base": "workspace_root",
+  "inputs": [
+    {
+      "order": 1,
+      "path": "tmp/akari-v3.1/2026-09-11-natural-sock-fit/AF10-feet-down-rest/AF10-feet-down-rest.png",
+      "role": "edit target: scene pose camera identity and natural foot proportions",
+      "sha256": "0d1d7b77e91cb0d73ca65e5e28ffffbd667f8cebbf2e50d11f1a1f36e836fa9e"
+    },
+    {
+      "order": 2,
+      "path": "akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "role": "soft opaque cloth and sparse wrinkle material only, not roundness",
+      "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385"
+    }
+  ],
+  "feedback_rationale": "Extend selected AF07 into feet-down rest while testing user-requested natural sock taper and contact flattening on a rug rather than rounded caps.",
+  "inspected_context_not_attached": [
+    {
+      "id": "AF07",
+      "path": "tmp/akari-v3.1/2026-09-11-album-feedback/AF07-eye-contact-after-rest/AF07-eye-contact-after-rest.png",
+      "role": "selected scene, pose, outfit and camera; its overly rounded bulbous sock cap is specifically to be corrected",
+      "sha256": "484c8ed6972386d9e15a166326e58eedba03addd0ac5000cd8eb92bd29bdc911",
+      "opened_with_view_image": true
+    }
+  ],
+  "provenance": {
+    "native_tool_output": "/home/abe/.codex/generated_images/01a089c1-cccd-7cc2-a6ca-49a051ee5b50/exec-c02ef5d6-3455-48a2-91bd-86e120499f70.png",
+    "authority_docs_read": [
+      "akari-v3.1/README.md",
+      "akari-v3.1/design-state.json",
+      "akari-v3.1/reference-set.json",
+      "akari-v3.1/prompts/sock-material-must.txt"
+    ]
+  },
+  "output": {
+    "sha256": "54acaa40655093f69403f61bfc3821907ff3f22b29a780a79e75e3e98fdb663d",
+    "bytes": 2086995,
+    "width": 1024,
+    "height": 1536,
+    "native_output_unmodified": true
+  },
+  "validation_record": "validation-r2.json",
+  "face_authority_promoted": false,
+  "committed": false,
+  "site_imported": true,
+  "initial_generation_record": "generation-initial.json",
+  "correction_note": "Small toe-like scallops removed while preserving tapered flat-contact proportions. Not a promoted material authority.",
+  "album_inclusion": {
+    "version_number": 5,
+    "series": "アルバムからのつづき",
+    "url": "https://akari-album-takahiro.tkpnd.chatgpt.site",
+    "user_authorized_batch": true
+  }
+}

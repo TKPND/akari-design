@@ -1,0 +1,66 @@
+{
+  "id": "N28",
+  "stage": "initial",
+  "tool": "image_gen",
+  "model": null,
+  "started_at": "2026-09-09T03:43:05.818Z",
+  "elapsed_ms": 37502,
+  "inputs": [
+    {
+      "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "bytes": 1869375,
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "width": 1254,
+      "height": 1254,
+      "role": "Original face, eyes, black bob, drawing and adult character identity authority."
+    },
+    {
+      "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "bytes": 1836424,
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "width": 1254,
+      "height": 1254,
+      "role": "Original everyday closed-mouth smile authority; only the explicitly requested new emotion may change the mouth/eyelids."
+    },
+    {
+      "path": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "bytes": 1852161,
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "width": 1024,
+      "height": 1536,
+      "role": "Native upper-body detail and one silver straight hairpin; canonical uniform is replaced by A-2 home outfit."
+    },
+    {
+      "path": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "bytes": 1815855,
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "width": 1024,
+      "height": 1536,
+      "role": "Native healthy adult leg construction and below-knee ribbed sock fit; blue skirt, grey sock color and shoes are superseded by the selected A-2 taupe dress and ivory indoor socks."
+    },
+    {
+      "path": "../2026-09-09-a2-next-eight/N21-cushion-listen/image.png",
+      "bytes": 2451223,
+      "sha256": "22d421647534e42f966c35167cbe8858032df4dcb942af9e0a8ce4ad883d9862",
+      "width": 1024,
+      "height": 1536,
+      "role": "User-selected A-2 home outfit, atmosphere and fabric finish only; no face, camera or pose authority."
+    }
+  ],
+  "prompt": {
+    "path": "N28-sofa-arm-listen/prompt.txt",
+    "bytes": 3780,
+    "sha256": "22cb3f5025cf89dfd1773f416f9510e0c350f4e1e23eecd96e2b452d8f57d36c"
+  },
+  "output": {
+    "path": "N28-sofa-arm-listen/initial.png",
+    "bytes": 2155333,
+    "sha256": "708d8985749c3953b63df52dc1e65d17df6205836dfb5abc85165ccf370059cb",
+    "width": 1536,
+    "height": 1024
+  },
+  "native_filename": "exec-133b9c7d-b89b-4100-9c3e-c1d49d13e9c1.png",
+  "native_sha256": "708d8985749c3953b63df52dc1e65d17df6205836dfb5abc85165ccf370059cb",
+  "exact_native_copy": true,
+  "exact_prompt_payload": true
+}

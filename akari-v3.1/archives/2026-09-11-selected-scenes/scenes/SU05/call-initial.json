@@ -1,0 +1,66 @@
+{
+  "id": "SU05",
+  "stage": "initial",
+  "tool": "image_gen",
+  "model": null,
+  "started_at": "2026-09-09T07:20:16.528Z",
+  "elapsed_ms": 53086,
+  "inputs": [
+    {
+      "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "bytes": 1869375,
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "width": 1254,
+      "height": 1254,
+      "role": "Original face, grey eyes, black bob, drawing and established adult character identity authority."
+    },
+    {
+      "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "bytes": 1836424,
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "width": 1254,
+      "height": 1254,
+      "role": "Original familiar gentle closed-mouth smile authority."
+    },
+    {
+      "path": "../../../akari-v3.1/references/U1-upper-reference.png",
+      "bytes": 1852161,
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "width": 1024,
+      "height": 1536,
+      "role": "Native upper-body detail and single straight silver hairpin; existing blouse design is superseded by this proposed uniform."
+    },
+    {
+      "path": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "bytes": 1815855,
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "width": 1024,
+      "height": 1536,
+      "role": "Native adult leg construction and medium-grey opaque ribbed below-knee sock fit; existing skirt and white sneakers are superseded by this proposed uniform."
+    },
+    {
+      "path": "../../../akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "bytes": 71786,
+      "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+      "width": 280,
+      "height": 210,
+      "role": "Soft opaque sock material with sparse shallow natural wrinkles only; not face, pose, camera or wardrobe authority. Footwear hides the toes in this batch."
+    }
+  ],
+  "prompt": {
+    "path": "SU05-grey-bolero/prompt.txt",
+    "bytes": 3112,
+    "sha256": "07d77b42792d58c2a09093bda577d7e7c07edf315c40bdc810a700add239c7c0"
+  },
+  "output": {
+    "path": "SU05-grey-bolero/initial.png",
+    "bytes": 1890168,
+    "sha256": "7ef000bc77e333b8070ae692f2eb3ea8709db1672c65209b84e47c54d4289930",
+    "width": 1024,
+    "height": 1536
+  },
+  "native_filename": "exec-9eaad72e-ac13-413d-aa40-a1736a7125fe.png",
+  "native_sha256": "7ef000bc77e333b8070ae692f2eb3ea8709db1672c65209b84e47c54d4289930",
+  "exact_native_copy": true,
+  "exact_prompt_payload": true
+}

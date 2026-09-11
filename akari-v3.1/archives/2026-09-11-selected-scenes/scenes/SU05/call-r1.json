@@ -1,0 +1,66 @@
+{
+  "id": "SU05",
+  "stage": "r1",
+  "tool": "image_gen",
+  "model": null,
+  "started_at": "2026-09-09T07:24:30.844Z",
+  "elapsed_ms": 36270,
+  "inputs": [
+    {
+      "path": "SU05-grey-bolero/initial.png",
+      "bytes": 1890168,
+      "sha256": "7ef000bc77e333b8070ae692f2eb3ea8709db1672c65209b84e47c54d4289930",
+      "width": 1024,
+      "height": 1536,
+      "role": "Edit target; sole scene, pose, camera, expression and wardrobe source."
+    },
+    {
+      "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+      "bytes": 1869375,
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "width": 1254,
+      "height": 1254,
+      "role": "Original face, grey eyes, black bob, drawing and established adult character identity authority."
+    },
+    {
+      "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+      "bytes": 1836424,
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "width": 1254,
+      "height": 1254,
+      "role": "Original familiar gentle closed-mouth smile authority."
+    },
+    {
+      "path": "../../../akari-v3.1/references/L1-lower-reference.png",
+      "bytes": 1815855,
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "width": 1024,
+      "height": 1536,
+      "role": "Native leg and grey sock fit only, outfit and sneakers superseded by target."
+    },
+    {
+      "path": "../../../akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "bytes": 71786,
+      "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+      "width": 280,
+      "height": 210,
+      "role": "Soft opaque sock material with sparse shallow natural wrinkles only; not face, pose, camera or wardrobe authority. Footwear hides the toes in this batch."
+    }
+  ],
+  "prompt": {
+    "path": "SU05-grey-bolero/prompt-r1.txt",
+    "bytes": 1750,
+    "sha256": "535fd5a6978ec1b30037d68f7309ad25073f86119c82cbda62044367f4cef318"
+  },
+  "output": {
+    "path": "SU05-grey-bolero/r1.png",
+    "bytes": 1848990,
+    "sha256": "4aa5ddd0de916db32004b48617388a63c8077ca8550e6550dd54b5e4ae244d88",
+    "width": 1024,
+    "height": 1536
+  },
+  "native_filename": "exec-1f0248c1-8ab5-44dc-bdf2-c55017404a09.png",
+  "native_sha256": "4aa5ddd0de916db32004b48617388a63c8077ca8550e6550dd54b5e4ae244d88",
+  "exact_native_copy": true,
+  "exact_prompt_payload": true
+}

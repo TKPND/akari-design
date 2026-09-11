@@ -1,0 +1,279 @@
+{
+  "id": "N20",
+  "title_ja": "それ、ちょっとずるい",
+  "path_base": "This batch root",
+  "source_favorite_id": "N12",
+  "user_selected": false,
+  "face_authority_promoted": false,
+  "calls": [
+    {
+      "id": "N20",
+      "stage": "initial",
+      "tool": "image_gen",
+      "model": null,
+      "started_at": "2026-09-09T02:33:55.026Z",
+      "elapsed_ms": 54891,
+      "inputs": [
+        {
+          "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original face, eyes, bob and drawing"
+        },
+        {
+          "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original ordinary closed smile"
+        },
+        {
+          "path": "../../../akari-v3.1/references/U1-upper-reference.png",
+          "bytes": 1852161,
+          "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native upper details and single silver pin; uniform superseded"
+        },
+        {
+          "path": "../../../akari-v3.1/references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native leg and below-knee sock fit; wardrobe superseded"
+        },
+        {
+          "path": "../../../akari-v3.1/situations/a2-home/images/N12.png",
+          "bytes": 2114677,
+          "sha256": "df8471a070982d88ce8d36e416ced08aa925a9314ef03e4e7fece24fd1d391ee",
+          "width": 1536,
+          "height": 1024,
+          "role": "N12 selected wardrobe, home direction and material only; no face or pose authority"
+        }
+      ],
+      "prompt": {
+        "path": "N20-tea-laugh/prompt.txt",
+        "bytes": 3360,
+        "sha256": "1c44783cefd37b279ce9865e20295b72018519830009a29dfba173fea1f0aa9e"
+      },
+      "output": {
+        "path": "N20-tea-laugh/initial.png",
+        "bytes": 2161963,
+        "sha256": "c16c78db634fade1f17774221afa7294eb70cb3b1543ef92f8a17c6f7e158f08",
+        "width": 1536,
+        "height": 1024
+      },
+      "native_filename": "exec-1ff1ff7b-ca06-4c8f-8aa3-311459fe518f.png",
+      "native_sha256": "c16c78db634fade1f17774221afa7294eb70cb3b1543ef92f8a17c6f7e158f08",
+      "exact_native_copy": true,
+      "exact_prompt_payload": true
+    },
+    {
+      "id": "N20",
+      "stage": "r1",
+      "tool": "image_gen",
+      "model": null,
+      "started_at": "2026-09-09T02:47:19.045Z",
+      "elapsed_ms": 54582,
+      "inputs": [
+        {
+          "path": "N20-tea-laugh/initial.png",
+          "bytes": 2161963,
+          "sha256": "c16c78db634fade1f17774221afa7294eb70cb3b1543ef92f8a17c6f7e158f08",
+          "width": 1536,
+          "height": 1024,
+          "role": "Edit target; sole scene, framing, expression and pose source"
+        },
+        {
+          "path": "../../../akari-v3.1/situations/a2-home/images/A-2.png",
+          "bytes": 2046655,
+          "sha256": "281da5ca10992c7ba38bb62c9a5b2884ddfe90fe0cdb2a1a2ebedb766b8682fa",
+          "width": 1024,
+          "height": 1536,
+          "role": "Original selected A-2 outfit: exactly three front bib buttons only"
+        },
+        {
+          "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original face and open smile preservation"
+        },
+        {
+          "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original identity support; preserve target laugh"
+        },
+        {
+          "path": "../../../akari-v3.1/references/U1-upper-reference.png",
+          "bytes": 1852161,
+          "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native hair and silver pin detail only"
+        }
+      ],
+      "prompt": {
+        "path": "N20-tea-laugh/prompt-r1.txt",
+        "bytes": 1018,
+        "sha256": "054b29f6937767740aa667ca627d24887cfb5efaf249661c93f52915dfaf12ba"
+      },
+      "output": {
+        "path": "N20-tea-laugh/r1.png",
+        "bytes": 2138156,
+        "sha256": "99522823c1d76c8139b4df4bb8f4ebe1e86b5b8f0263297a588c1e1b64acc0fe",
+        "width": 1536,
+        "height": 1024
+      },
+      "native_filename": "exec-9dabf475-2752-4c23-af70-538d6b760ca8.png",
+      "native_sha256": "99522823c1d76c8139b4df4bb8f4ebe1e86b5b8f0263297a588c1e1b64acc0fe",
+      "exact_native_copy": true,
+      "exact_prompt_payload": true
+    },
+    {
+      "id": "N20",
+      "stage": "r2",
+      "tool": "image_gen",
+      "model": null,
+      "started_at": "2026-09-09T02:52:48.338Z",
+      "elapsed_ms": 52190,
+      "inputs": [
+        {
+          "path": "N20-tea-laugh/r1.png",
+          "bytes": 2138156,
+          "sha256": "99522823c1d76c8139b4df4bb8f4ebe1e86b5b8f0263297a588c1e1b64acc0fe",
+          "width": 1536,
+          "height": 1024,
+          "role": "Edit target; sole scene, framing, expression and pose source"
+        },
+        {
+          "path": "../../../akari-v3.1/situations/a2-home/images/A-2.png",
+          "bytes": 2046655,
+          "sha256": "281da5ca10992c7ba38bb62c9a5b2884ddfe90fe0cdb2a1a2ebedb766b8682fa",
+          "width": 1024,
+          "height": 1536,
+          "role": "Original selected A-2 outfit: exactly three front bib buttons only"
+        },
+        {
+          "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original face and open smile preservation"
+        },
+        {
+          "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original identity support; preserve target laugh"
+        },
+        {
+          "path": "N20-tea-laugh/buttons-r1-review.png",
+          "bytes": 45885,
+          "sha256": "ff16b679ac0d77df46f3ea18e0863246c382d389d6e2367963ae237cb65200d0",
+          "width": 135,
+          "height": 210,
+          "role": "Unmodified zoom of the target's four-button defect; location guide only, not separate composition"
+        }
+      ],
+      "prompt": {
+        "path": "N20-tea-laugh/prompt-r2.txt",
+        "bytes": 1146,
+        "sha256": "ed714ebb7ac92955dc22dc37210ab02694c4296f50d57740822736d7b29cb557"
+      },
+      "output": {
+        "path": "N20-tea-laugh/r2.png",
+        "bytes": 2136915,
+        "sha256": "0395fb9fcc1711a904dbe0b40b057e42a88054e4d0981e12cf8211a73721f6bb",
+        "width": 1536,
+        "height": 1024
+      },
+      "native_filename": "exec-31932941-0693-491e-b50c-84ab3070d739.png",
+      "native_sha256": "0395fb9fcc1711a904dbe0b40b057e42a88054e4d0981e12cf8211a73721f6bb",
+      "exact_native_copy": true,
+      "exact_prompt_payload": true
+    }
+  ],
+  "status": "assistant_reviewed_candidate_awaiting_user_selection",
+  "selected_stage": "r2",
+  "final_image": {
+    "path": "N20-tea-laugh/image.png",
+    "bytes": 2136915,
+    "sha256": "0395fb9fcc1711a904dbe0b40b057e42a88054e4d0981e12cf8211a73721f6bb",
+    "width": 1536,
+    "height": 1024
+  },
+  "visual_review": {
+    "stage": "r2",
+    "summary_ja": "お茶を飲みながら、思わず笑った瞬間。",
+    "notes": "Initial and r1 had an extra partial fourth button left of mug. r2 with exact target crop removes only fourth; final native clothing crop confirms three. Laughing grey eyes, curled near-chin hand, mug handle grip and pin coherent. Socks outside frame.",
+    "limits": "Crown reaches and slightly crosses the upper frame; retained as a conversational close portrait rather than the requested headroom."
+  },
+  "final_transformation": "Exact native image_gen output copy; no artwork retouch or compositing outside image_gen",
+  "review_crops": [
+    {
+      "path": "N20-tea-laugh/face-review.png",
+      "bytes": 563734,
+      "sha256": "b1b5941d53d163a0f826b7c72bd878ff65c4055c517a2df08c0d0a1f9d68cbc2",
+      "width": 660,
+      "height": 620,
+      "subject": "face",
+      "crop_xywh": [
+        355,
+        0,
+        660,
+        620
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    },
+    {
+      "path": "N20-tea-laugh/clothing-review.png",
+      "bytes": 315553,
+      "sha256": "661c751f7e8f6cbfbcd45bd74098c485a3fe5e51640f4db541a8cb8f6693c96f",
+      "width": 650,
+      "height": 350,
+      "subject": "clothing",
+      "crop_xywh": [
+        550,
+        655,
+        650,
+        350
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    }
+  ],
+  "auxiliary_crops": [
+    {
+      "path": "N20-tea-laugh/buttons-r1-review.png",
+      "bytes": 45885,
+      "sha256": "ff16b679ac0d77df46f3ea18e0863246c382d389d6e2367963ae237cb65200d0",
+      "width": 135,
+      "height": 210
+    },
+    {
+      "path": "N20-tea-laugh/clothing-initial-review.png",
+      "bytes": 322489,
+      "sha256": "f92c1897fcbdaec8ba9aa1c615eb8a3b71f2816eb5f8a4433b26d7ba7784555a",
+      "width": 650,
+      "height": 350
+    },
+    {
+      "path": "N20-tea-laugh/face-initial-review.png",
+      "bytes": 577939,
+      "sha256": "ecb6ae4d4f4b549ddb452730ad53f5da65661003ed3310f1bbf7572df203f6db",
+      "width": 660,
+      "height": 620
+    }
+  ]
+}

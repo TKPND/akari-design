@@ -1,0 +1,140 @@
+{
+  "id": "N30",
+  "title_ja": "もう少し、ここにいて",
+  "path_base": "This batch root",
+  "source_favorite_id": "N22",
+  "user_selected": false,
+  "face_authority_promoted": false,
+  "calls": [
+    {
+      "id": "N30",
+      "stage": "initial",
+      "tool": "image_gen",
+      "model": null,
+      "started_at": "2026-09-09T03:45:10.514Z",
+      "elapsed_ms": 51897,
+      "inputs": [
+        {
+          "path": "../../../akari-v3.0/references/P1-user-pro-portrait.png",
+          "bytes": 1869375,
+          "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original face, eyes, black bob, drawing and adult character identity authority."
+        },
+        {
+          "path": "../../../akari-v3.0/references/P2-quiet-smile.png",
+          "bytes": 1836424,
+          "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+          "width": 1254,
+          "height": 1254,
+          "role": "Original everyday closed-mouth smile authority; only the explicitly requested new emotion may change the mouth/eyelids."
+        },
+        {
+          "path": "../../../akari-v3.1/references/U1-upper-reference.png",
+          "bytes": 1852161,
+          "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native upper-body detail and one silver straight hairpin; canonical uniform is replaced by A-2 home outfit."
+        },
+        {
+          "path": "../../../akari-v3.1/references/L1-lower-reference.png",
+          "bytes": 1815855,
+          "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+          "width": 1024,
+          "height": 1536,
+          "role": "Native healthy adult leg construction and below-knee ribbed sock fit; blue skirt, grey sock color and shoes are superseded by the selected A-2 taupe dress and ivory indoor socks."
+        },
+        {
+          "path": "../2026-09-09-a2-next-eight/N22-blanket-wrap/image.png",
+          "bytes": 2526985,
+          "sha256": "74d944dab19b8f67245d789e001c78e7e7930da6ea001089d1f853b92eee21c6",
+          "width": 1024,
+          "height": 1536,
+          "role": "User-selected A-2 home outfit, atmosphere and fabric finish only; no face, camera or pose authority."
+        }
+      ],
+      "prompt": {
+        "path": "N30-blanket-cheek/prompt.txt",
+        "bytes": 3806,
+        "sha256": "e59d79abe0d2303e03b80f996dd27c888632239f55faf708ef8f7f15ee26abfa"
+      },
+      "output": {
+        "path": "N30-blanket-cheek/initial.png",
+        "bytes": 2402351,
+        "sha256": "9efb7e1d1a6cca20ff715db7110c040249c4a612bc0aee17302652600ced0cd8",
+        "width": 1024,
+        "height": 1536
+      },
+      "native_filename": "exec-f85ebe0e-df98-417f-bc82-9ef8c12faf02.png",
+      "native_sha256": "9efb7e1d1a6cca20ff715db7110c040249c4a612bc0aee17302652600ced0cd8",
+      "exact_native_copy": true,
+      "exact_prompt_payload": true
+    }
+  ],
+  "status": "assistant_reviewed_candidate_awaiting_user_selection",
+  "selected_stage": "initial",
+  "final_image": {
+    "path": "N30-blanket-cheek/image.png",
+    "bytes": 2402351,
+    "sha256": "9efb7e1d1a6cca20ff715db7110c040249c4a612bc0aee17302652600ced0cd8",
+    "width": 1024,
+    "height": 1536
+  },
+  "visual_review": {
+    "stage": "initial",
+    "summary_ja": "毛布を頬に寄せる、夜の柔らかな微笑み。",
+    "notes": "顔・灰色の目と瞳孔・銀ピン1本、毛布をつまむ上の手と膝上の手、襟・リボン・中央3ボタンを原寸確認。毛布の太い編み目とブラウス・チェック布の質感は区別できる。頭頂余白あり。",
+    "limits": "眠気は弱めで、落ち着いた照れのある表情。靴下は画面外。"
+  },
+  "final_transformation": "Exact native image_gen output copy; no artwork retouch or compositing outside image_gen",
+  "review_crops": [
+    {
+      "path": "N30-blanket-cheek/face-review.png",
+      "bytes": 474621,
+      "sha256": "bf953db1f2277b71f00fcedd0a84378990c85a94a48e3880f5c6d333e0664f62",
+      "width": 570,
+      "height": 590,
+      "subject": "face",
+      "crop_xywh": [
+        205,
+        65,
+        570,
+        590
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    },
+    {
+      "path": "N30-blanket-cheek/clothing-review.png",
+      "bytes": 738128,
+      "sha256": "e51c9ea2843b3871c1159411f809285f808fe9b35becb6ee52b8685ae8d05dea",
+      "width": 585,
+      "height": 830,
+      "subject": "clothing",
+      "crop_xywh": [
+        230,
+        495,
+        585,
+        830
+      ],
+      "transformation": "Unmodified native-resolution rectangular crop"
+    }
+  ],
+  "auxiliary_crops": [
+    {
+      "path": "N30-blanket-cheek/clothing-initial-review.png",
+      "bytes": 738128,
+      "sha256": "e51c9ea2843b3871c1159411f809285f808fe9b35becb6ee52b8685ae8d05dea",
+      "width": 585,
+      "height": 830
+    },
+    {
+      "path": "N30-blanket-cheek/face-initial-review.png",
+      "bytes": 474621,
+      "sha256": "bf953db1f2277b71f00fcedd0a84378990c85a94a48e3880f5c6d333e0664f62",
+      "width": 570,
+      "height": 590
+    }
+  ]
+}

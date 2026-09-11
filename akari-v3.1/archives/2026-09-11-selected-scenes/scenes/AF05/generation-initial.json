@@ -1,0 +1,88 @@
+{
+  "id": "AF05",
+  "title_ja": "今日は、ちょっと疲れた",
+  "created_at": "2026-09-10T05:33:03.769056+00:00",
+  "tool": "built-in image_gen",
+  "model_identity": "not exposed",
+  "generation_id": "exec-10a342c3-bfe9-41c8-b90c-8c127f2e27a9",
+  "generation_calls": 1,
+  "status": "candidate_pending_user_selection",
+  "image": "AF05-a-little-tired.png",
+  "prompt": "prompt.txt",
+  "prompt_sha256": "a6bb196eb923684e7b5fd5166ce8f805a44b35c7ffa0779fb9c6fe3ebda07128",
+  "feedback_snapshot": "../feedback-snapshot.json",
+  "feedback_snapshot_sha256": "11ec41a845008d06c2f4e7ff0b84a3a5a37460b72a0606c2924eae8d482a65f8",
+  "input_path_base": "workspace_root",
+  "inputs": [
+    {
+      "order": 1,
+      "id": "P1",
+      "path": "akari-v3.0/references/P1-user-pro-portrait.png",
+      "role": "original face eyes hair drawing authority",
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "opened_with_view_image": true
+    },
+    {
+      "order": 2,
+      "id": "P2",
+      "path": "akari-v3.0/references/P2-quiet-smile.png",
+      "role": "original everyday closed-mouth smile authority",
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "opened_with_view_image": true
+    },
+    {
+      "order": 3,
+      "id": "U1",
+      "path": "akari-v3.1/references/U1-upper-reference.png",
+      "role": "native upper construction eyes hair and silver pin only",
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "opened_with_view_image": true
+    },
+    {
+      "order": 4,
+      "id": "L1",
+      "path": "akari-v3.1/references/L1-lower-reference.png",
+      "role": "native healthy leg construction and grey below-knee sock fit only",
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "opened_with_view_image": true
+    },
+    {
+      "order": 5,
+      "id": "F09-detail",
+      "path": "akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "role": "opaque rounded sock material and restrained shallow cloth wrinkles only",
+      "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+      "opened_with_view_image": true
+    }
+  ],
+  "feedback_rationale": "F04 continuation incorporates requests for relaxed gestures, mild tiredness and soft natural leg contours, while placing the mug safely on table.",
+  "preflight_validation_failure": null,
+  "inspected_context_not_attached": [
+    {
+      "id": "F04",
+      "path": "akari-v3.1/situations/favorites-continuation/images/F04-sofa-side-sit-mug.png",
+      "role": "sofa side-sit scene navy bolero round-collar blouse ribbon plaid skirt and mug design only",
+      "sha256": "b04a1cdc711006c8a3175c565084eaabc4a341ed258576e9f62c484703b09d6a",
+      "opened_with_view_image": true
+    }
+  ],
+  "provenance": {
+    "native_tool_output": "/home/abe/.codex/generated_images/01a089c1-cccd-7cc2-a6ca-49a051ee5b50/exec-10a342c3-bfe9-41c8-b90c-8c127f2e27a9.png",
+    "authority_docs_read": [
+      "akari-v3.1/README.md",
+      "akari-v3.1/design-state.json",
+      "akari-v3.1/reference-set.json"
+    ]
+  },
+  "output": {
+    "sha256": "31c7b0965cb030bff4fe02fa61713a50996b86f8083296c87923576a3439990f",
+    "bytes": 2232076,
+    "width": 1536,
+    "height": 1024,
+    "native_output_unmodified": true
+  },
+  "validation_record": "validation.json",
+  "face_authority_promoted": false,
+  "committed": false,
+  "site_imported": false
+}
