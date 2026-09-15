@@ -26,6 +26,9 @@ The public repository is maintained as `TKPND/akari-design`.
   Its [selected A/B/C scenes](akari-v3.1/situations/abc-exploration/README.md)
   preserve 18 everyday illustrations in the user-selected long-sleeve uniform.
   A16 uses the selected E1-1 finish, which subtly groups small clothing shadows.
+- [Akari v3.2](akari-v3.2/README.md) is the current light pop direction: the
+  selected B2 face, G1 soda-blue gingham outfit, and accepted cream-soda cafe
+  scene. Use its native face and body images with separate reference roles.
 - `tools/pdf/` contains the Node/Playwright PDF rendering code.
 - `scripts/` contains Python build and audit scripts.
 - `dist/` contains prebuilt PDF deliverables and public contact sheets.
@@ -33,7 +36,7 @@ The public repository is maintained as `TKPND/akari-design`.
 
 The older settings-release raster assets are WebP derivatives encoded with
 high-quality lossy `cwebp` settings. Their private working originals are not
-included. Selected v3.0/v3.1 working references are preserved as native PNGs.
+included. Selected v3.0/v3.1/v3.2 working references are preserved as native PNGs.
 
 ## Common Commands
 

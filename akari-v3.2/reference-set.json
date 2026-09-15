@@ -1,0 +1,81 @@
+{
+  "project": "akari-v3.2",
+  "status": "user_accepted",
+  "updated": "2026-09-15T04:17:53.144806+00:00",
+  "path_base": "All asset and prompt paths are relative to akari-v3.2/.",
+  "selection_record": "selection.json",
+  "references": [
+    {
+      "path": "references/B2-pop-face.png",
+      "sha256": "2b5ad9630ca99dd1ef2c4ba2639f77c849b852bf665ae1aca34ede247c75f56a",
+      "bytes": 1439284,
+      "width": 1254,
+      "height": 1254,
+      "id": "B2",
+      "role": "primary_face_eyes_hair_expression_linework_and_pop_rendering"
+    },
+    {
+      "path": "references/G1-soda-pop-full-body.png",
+      "sha256": "4da0d2c6b106d81277bde1d2ffb1a4bed325dcfa61996f620ff2a656f3e86627",
+      "bytes": 1535105,
+      "width": 1024,
+      "height": 1536,
+      "id": "G1",
+      "role": "selected_body_proportions_and_soda_pop_wardrobe"
+    },
+    {
+      "path": "../akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+      "bytes": 71786,
+      "width": 280,
+      "height": 210,
+      "id": "F09",
+      "role": "soft_opaque_sock_material_and_restrained_wrinkles_only"
+    },
+    {
+      "path": "../akari-v3.1/references/S1-silver-slim-pin.png",
+      "sha256": "6e35a9f51a68d203d8252dc71d7182fe313d8b66a2c2cb0bf099c83b773cb85f",
+      "bytes": 1925688,
+      "width": 1254,
+      "height": 1254,
+      "id": "S1",
+      "role": "single_plain_slim_silver_pin_only"
+    }
+  ],
+  "input_profiles": {
+    "new_soda_pop_scene": {
+      "default_ids": [
+        "B2",
+        "G1"
+      ],
+      "conditional_ids": {
+        "F09": "when sock fabric is visible"
+      },
+      "optional_ids": [
+        "S1"
+      ]
+    },
+    "existing_image_edit": {
+      "first_input": "current scene edit target",
+      "support_ids": [
+        "B2",
+        "G1"
+      ],
+      "conditional_ids": {
+        "F09": "when sock material needs support"
+      },
+      "note": "The edit target owns composition, camera and pose. Supporting images supply only assigned details."
+    }
+  },
+  "usage_rules": [
+    "Open relevant native images with view_image before generation and explicitly assign each role.",
+    "Use B2 as the face and pop rendering authority. Never replace it with the small face from G1 or a scene.",
+    "Use G1 for body balance and the soda-blue gingham outfit; new expressions, poses and cameras may vary.",
+    "Generate new scenes independently from the same B2/G1. Scene selection does not promote a new face authority.",
+    "The user-approved v3.2 B face redesign supersedes the v3.1 exact eye-rendering lock for v3.2 work.",
+    "Historical P1/P2/U1/L1 document lineage, not an instruction to restore the older face or uniform.",
+    "F09 supplies only soft opaque cloth and shallow sparse wrinkles. White short socks and sneakers follow G1. Do not expose hidden toes or draw individual toe shapes through cloth.",
+    "The silver pin stays one plain thin straight bar at character-left temple, without beads."
+  ],
+  "prompt_fragment": "prompts/scene-base.txt"
+}

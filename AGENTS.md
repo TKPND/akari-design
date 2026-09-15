@@ -14,9 +14,28 @@ This repository builds and audits Akari visual-reference materials.
 - The preserved v1.1 settings PDF is `dist/akari-v1.1-settings.pdf`; use it for
   inheritance, history, recovery, or an explicitly requested v1.1 audit.
 
+## Akari v3.2
+
+- For the current light pop design, start with [the v3.2 usage guide](akari-v3.2/README.md),
+  `akari-v3.2/design-state.json`, and `akari-v3.2/reference-set.json`.
+- B2 is the user-selected B face with the silver pin corrected. Use its native
+  portrait for the face, grey eyes, black bob, expression baseline, linework and
+  pop rendering. The v3.2 face redesign supersedes the v3.1 exact rendering lock
+  for v3.2 work.
+- G1 supplies the selected body balance and soda-blue gingham outfit, white
+  blouse, lemon ribbon, short white frilled socks and white/blue sneakers.
+  Keep B2 and G1 as separate native inputs; G1's small face is not the authority.
+- Use F09 for visible soft opaque sock fabric and restrained shallow wrinkles
+  only. G1 supplies the white color and short length. Shoes may hide the toes.
+  S1 can support the single plain slim silver pin at character-left temple.
+- New scenes use the same B2/G1 independently. Poses, cameras and expressions
+  may vary. Accepted C01 is a scene example, not a replacement face authority.
+  P1/P2/U1/L1 document lineage; do not use them to revert v3.2 to the older face
+  or uniform. For edits, the target retains its scene, pose and camera.
+
 ## Akari v3.1
 
-- For the current black-bob v3.1 design, start with
+- For an explicitly requested black-bob v3.1 design, start with
   [the usage guide](akari-v3.1/README.md), `akari-v3.1/design-state.json`, and
   `akari-v3.1/reference-set.json`.
 - Use the native U1 upper-body and L1 lower-body images as separate detail

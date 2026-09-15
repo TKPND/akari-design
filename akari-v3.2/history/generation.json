@@ -1,0 +1,211 @@
+{
+  "project": "akari-v3.2",
+  "recorded_at": "2026-09-15T04:17:53.144806+00:00",
+  "path_base": "akari-v3.2/",
+  "base_repository": "https://github.com/TKPND/akari-design",
+  "base_commit": "e65f1d374669ccb508ae83f25126e6a30e3aa445",
+  "assets": [
+    {
+      "id": "B1",
+      "path": "history/B1-pop-face-before-pinfix.png",
+      "sha256": "00fd2377f94e8deaf2118eef9d2fd8c275603b48bdaf350d8b1568f92d977bc8",
+      "bytes": 1289838,
+      "width": 1254,
+      "height": 1254,
+      "prompt": "prompts/B1.txt",
+      "prompt_sha256": "1775811ab8d708da8f70992565b623cd41087f30ea69cf45dd45058f92de554a",
+      "generation_mode": "built-in image_gen",
+      "source_generation_filename": "exec-ce13426a-12ca-4141-a746-a73ff8bece83.png",
+      "source_thread_id": "01a0a311-6bbb-77d3-b2cb-1dae4da6c0b7",
+      "visual_review": "More simplified grey iris and grouped shadow shapes; black bob and closed smile retained. Silver pin has unintended spherical end caps and needs correction if selected.",
+      "copy_byte_identical": true,
+      "input_ids_in_order": [
+        "P1",
+        "P2",
+        "U1",
+        "S1",
+        "soda-pop"
+      ],
+      "status": "historical_selected_direction"
+    },
+    {
+      "id": "B2",
+      "path": "references/B2-pop-face.png",
+      "sha256": "2b5ad9630ca99dd1ef2c4ba2639f77c849b852bf665ae1aca34ede247c75f56a",
+      "bytes": 1439284,
+      "width": 1254,
+      "height": 1254,
+      "prompt": "prompts/B2.txt",
+      "prompt_sha256": "90f1c3bb8c8d74c365671aa4b51f39d7e4e61a60f5829163056451f1e6759740",
+      "generation_mode": "built-in image_gen",
+      "source_generation_filename": "exec-62736aa6-ab2b-45be-ac3f-fdeea28de680.png",
+      "source_thread_id": "01a0a311-6bbb-77d3-b2cb-1dae4da6c0b7",
+      "visual_review": "Both decorative bead ends removed; one plain slim silver bar retained at the same location. B face, grey eyes, mouth, head pose and pop finish remain visually consistent. Generated edit is not claimed pixel-identical outside the pin.",
+      "copy_byte_identical": true,
+      "input_ids_in_order": [
+        "B1",
+        "S1"
+      ],
+      "status": "user_accepted",
+      "edit_scope": "Remove pin end beads; visually consistent face, not pixel-identical outside the pin."
+    },
+    {
+      "id": "G1",
+      "path": "references/G1-soda-pop-full-body.png",
+      "sha256": "4da0d2c6b106d81277bde1d2ffb1a4bed325dcfa61996f620ff2a656f3e86627",
+      "bytes": 1535105,
+      "width": 1024,
+      "height": 1536,
+      "prompt": "prompts/G1.txt",
+      "prompt_sha256": "8b79b3bf15eccecd13c7033265788c18b432e1c6f9c21b50266937d2eaf68cf2",
+      "generation_mode": "built-in image_gen",
+      "source_generation_filename": "exec-db1718d4-5f01-40e8-a45f-f8f82774bc25.png",
+      "source_thread_id": "01a0a311-6bbb-77d3-b2cb-1dae4da6c0b7",
+      "visual_review": "Single complete figure; both sneaker soles and whole bob in frame. B-like grey eye construction and closed smile, black bob and one plain slim silver pin retained. Outfit is coherent soda-blue gingham, white rounded-collar puff blouse, yellow ribbon, short white frilled socks and white/blue sneakers. Soft sock cuffs and clear sneaker construction visible. Hands hold skirt edges rather than resting freely, without hiding bodice or creating obvious anatomy discontinuity. User subsequently selected this head/body balance for scene generation.",
+      "copy_byte_identical": true,
+      "input_ids_in_order": [
+        "B2",
+        "soda-pop",
+        "U1",
+        "L1",
+        "F09"
+      ],
+      "status": "user_accepted"
+    },
+    {
+      "id": "C01",
+      "path": "situations/soda-pop-cafe/images/C01-cream-soda.png",
+      "sha256": "4e3e6f90957547a7e5b2888dd4a95bd7fe367240226fdf871a4cab31160b7535",
+      "bytes": 1806990,
+      "width": 1024,
+      "height": 1536,
+      "prompt": "situations/soda-pop-cafe/prompts/C01.txt",
+      "prompt_sha256": "a25f2ccd5062a62bbc84739c0279f2c4bc999e6d783181ba8765deddbf42a633",
+      "generation_mode": "built-in image_gen",
+      "source_generation_filename": "exec-788056da-5226-4ce2-8301-8c155a56ea9c.png",
+      "source_thread_id": "01a0a311-6bbb-77d3-b2cb-1dae4da6c0b7",
+      "visual_review": "B-like grey eye construction, small closed smile, black bob and one plain slim silver pin remain consistent in a seated cafe scene. Gingham, blouse, lemon ribbon, white frilled short socks and matching blue/white sneakers are retained. Both shoes are fully inside the frame. Character rests cheek on hand instead of placing that hand beside the drink; seated pose and hand/arm contact are plausible. Cafe remains illustrated and colorful. This one scene is a transfer sample, not proof of broad reproducibility.",
+      "copy_byte_identical": true,
+      "input_ids_in_order": [
+        "B2",
+        "G1",
+        "F09"
+      ],
+      "status": "user_accepted"
+    }
+  ],
+  "input_registry": [
+    {
+      "path": "history/B1-pop-face-before-pinfix.png",
+      "sha256": "00fd2377f94e8deaf2118eef9d2fd8c275603b48bdaf350d8b1568f92d977bc8",
+      "bytes": 1289838,
+      "width": 1254,
+      "height": 1254,
+      "id": "B1",
+      "role": "user_selected_face_before_local_pin_correction"
+    },
+    {
+      "path": "references/B2-pop-face.png",
+      "sha256": "2b5ad9630ca99dd1ef2c4ba2639f77c849b852bf665ae1aca34ede247c75f56a",
+      "bytes": 1439284,
+      "width": 1254,
+      "height": 1254,
+      "id": "B2",
+      "role": "primary_face_eyes_hair_expression_linework_and_pop_rendering"
+    },
+    {
+      "path": "references/G1-soda-pop-full-body.png",
+      "sha256": "4da0d2c6b106d81277bde1d2ffb1a4bed325dcfa61996f620ff2a656f3e86627",
+      "bytes": 1535105,
+      "width": 1024,
+      "height": 1536,
+      "id": "G1",
+      "role": "selected_body_proportions_and_soda_pop_wardrobe"
+    },
+    {
+      "path": "situations/soda-pop-cafe/images/C01-cream-soda.png",
+      "sha256": "4e3e6f90957547a7e5b2888dd4a95bd7fe367240226fdf871a4cab31160b7535",
+      "bytes": 1806990,
+      "width": 1024,
+      "height": 1536,
+      "id": "C01",
+      "role": "user_accepted_scene_not_face_authority"
+    },
+    {
+      "path": "history/soda-pop-outfit-origin.png",
+      "sha256": "e73fc1cfc3f56cb79051918c386b28b52abb98d3fc1386273e234bd8a59cb87a",
+      "bytes": 1408451,
+      "width": 1030,
+      "height": 1527,
+      "id": "soda-pop",
+      "role": "external_character_outfit_and_pop_style_only"
+    },
+    {
+      "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
+      "bytes": 1869375,
+      "width": 1254,
+      "height": 1254,
+      "id": "P1",
+      "role": "historical_v3_1_face_lineage"
+    },
+    {
+      "path": "../akari-v3.0/references/P2-quiet-smile.png",
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
+      "bytes": 1836424,
+      "width": 1254,
+      "height": 1254,
+      "id": "P2",
+      "role": "historical_v3_1_everyday_smile_lineage"
+    },
+    {
+      "path": "../akari-v3.1/references/U1-upper-reference.png",
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
+      "bytes": 1852161,
+      "width": 1024,
+      "height": 1536,
+      "id": "U1",
+      "role": "historical_upper_body_construction_for_G1"
+    },
+    {
+      "path": "../akari-v3.1/references/L1-lower-reference.png",
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
+      "bytes": 1815855,
+      "width": 1024,
+      "height": 1536,
+      "id": "L1",
+      "role": "historical_lower_body_construction_for_G1"
+    },
+    {
+      "path": "../akari-v3.1/references/S1-silver-slim-pin.png",
+      "sha256": "6e35a9f51a68d203d8252dc71d7182fe313d8b66a2c2cb0bf099c83b773cb85f",
+      "bytes": 1925688,
+      "width": 1254,
+      "height": 1254,
+      "id": "S1",
+      "role": "single_plain_slim_silver_pin_only"
+    },
+    {
+      "path": "../akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+      "bytes": 71786,
+      "width": 280,
+      "height": 210,
+      "id": "F09",
+      "role": "soft_opaque_sock_material_and_restrained_wrinkles_only"
+    }
+  ],
+  "comparison_history": {
+    "user_selection": "Bだな",
+    "alternatives": [
+      "A",
+      "C"
+    ],
+    "alternatives_committed": false,
+    "original_native_comparison_sha256": "d9c145e28f643271ceeb8ed0d5f847543637294548e64f7474b73d69ec24e217"
+  },
+  "limits": [
+    "C01 is one accepted scene; broad expression/camera reproducibility remains to be reviewed per new generation.",
+    "B2 is a generated pin correction, not an exact pixel-preserving patch."
+  ]
+}

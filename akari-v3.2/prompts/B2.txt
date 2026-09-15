@@ -1,0 +1,12 @@
+Use case: precise-object-edit
+Asset type: selected Akari v3.2 B portrait, hairpin-only correction.
+Primary request: Edit IMAGE 1 ONLY to correct its silver hairpin. Preserve the selected face and all other image content as closely as possible.
+
+Input roles:
+Image 1 is the exact edit target and sole authority for the face, grey eyes, pupil and iris simplification, expression, facial proportions, black bob and bangs, linework, pop cel shading, skin, white/blue blouse, pose, crop, background, colors and canvas.
+Image 2 S1 supplies ONLY the shape of one plain slim straight silver hairpin with softly rounded tips. Do not transfer its older face, eyes, detailed hair rendering, skin shading, blouse folds, photographic background or composition.
+
+Required local change:
+The hairpin on the viewer's RIGHT side in image 1 currently has a small spherical bead at each end. Remove both beads and replace the whole pin with a single PLAIN, VERY THIN, straight silver bar, matching the simple pin in image 2. Keep the current pin location above the character's left ear, diagonal angle and approximate length. The ends are gently rounded parts of the thin bar itself, not separate spheres. No beads, knobs, pearls, gems, thick rectangle, doubled pin, bow or decoration.
+
+Everything else stays the same: especially the precise B face, gently drooping neutral-grey eyes with simple two-tone iris and small oval pupil, small closed-mouth smile, cheek color, chin, head angle, bob silhouette and hair highlights. Keep original 1254-by-1254 square framing. Do not redraw or simplify the character further. Do not import the C candidate's flatter eyelids. Do not change any background shapes or shirt folds. Return one complete corrected portrait, no collage, text, labels or watermark.

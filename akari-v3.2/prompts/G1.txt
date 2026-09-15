@@ -1,0 +1,31 @@
+Use case: stylized-concept
+Asset type: Akari v3.2 first complete full-body outfit base.
+Primary request: Exactly ONE full-body illustration of the user-selected Akari v3.2 B face and drawing style, wearing the soda-blue gingham girly outfit with sneakers. This is the first full-body pilot for the new version.
+
+Input roles, in priority order:
+Image 1: SELECTED V3.2 FACE AND STYLE AUTHORITY, B with corrected plain silver pin. Use THIS face, grey eye geometry, clear two-tone iris with small oval pupil and round pale reflection, gentle closed-mouth smile, head shape, black bob, bangs, matte skin, linework and light grouped cel shading. Preserve its level of simplification. Do not revert to older v3.1 eyes or simplify toward a flatter new face.
+Image 2: OUTFIT DESIGN ONLY. The soda-blue gingham pinafore, milky-white blouse, small pale-yellow ribbon, short white frilled socks and white/soda-blue sneakers. Transfer those clothes to Akari. Do not transfer this other character's face, brown eyes, twin tails, hair ties, age or body proportions.
+Image 3: Native v3.1 U1, BODY CONSTRUCTION ONLY: Akari's existing shoulder, torso and arm proportions. Its old face, eye rendering, glossy shading and uniform are NOT authorities for this new image.
+Image 4: Native v3.1 L1, LOWER-BODY CONSTRUCTION ONLY: continuity of Akari's leg proportions, natural knees, calves, ankles and foot/shoe construction. Do not copy its uniform skirt, grey knee socks, old color scheme or shiny skin finish.
+Image 5: F09 sock detail, MATERIAL ONLY: soft opaque knit, sparse shallow natural cloth wrinkles. Adapt this material feeling to the new SHORT WHITE frilled socks. Do not copy the grey sock color, length, pose, floor or visible sock toes. Shoes cover the toes in this image.
+
+Character:
+Akari with the exact selected B friendly face and current age impression; black chin-length bob with full separated bangs, neutral-grey gently drooping eyes, small calm CLOSED-MOUTH smile, restrained rosy cheeks. Exactly one plain very slim silver straight bar pin with softly rounded tips just above her LEFT ear, seen on the viewer's right. No bead ends, no knobs, no other hair accessory. Preserve familiar body proportions from native U1/L1 and the same age impression; do not use the other character's smaller body or a chibi silhouette.
+
+Complete outfit:
+Milky-white short puff-sleeve blouse with a Peter Pan rounded collar and modest delicate ruffle edging.
+Soda-blue and white gingham pinafore dress: broad shoulder straps with restrained ruffle borders; a neat softly shaped bodice; a matching fitted waistband; gently full A-line skirt ending just above the knees with one restrained gingham ruffled hem. Keep the overall design light and wearable.
+One small pale lemon-yellow ribbon centered just beneath the collar.
+Matching short white socks with delicate frilled cuffs. Soft opaque fabric with subtle shallow ankle folds, expressed with simple light cel shading; they are neither long grey stockings nor rigid plastic cylinders.
+Matching white low-top lace-up sneakers with soda-blue toe and heel panels, white laces and comfortable moderately thick white soles. Both shoes clearly visible, consistently constructed and without branding.
+No bag, jewelry or prop obscuring the outfit.
+
+Composition:
+Portrait about 2:3, a complete head-to-sole view with comfortable clear margins and enough detail in the face to read B's grey eyes. Almost front-facing relaxed standing pose, a slight natural head tilt, shoulders relaxed, arms lowered a little away from the dress so the bodice and skirt are visible, naturally relaxed fingers. One foot angled gently outward, both feet resting on the floor. A light lively stance without forced foreshortening. The character fills most of the height while every hair tip and both soles remain inside the image. One character only, no multi-panel sheet or extra face inset.
+
+Drawing:
+Match image 1's clean friendly POP ANIME rendering across the whole body. Matte peach skin with restrained simple cel shadows, no polished knee or shin highlights. Dark-charcoal linework, controlled iris detail, broad hair forms with image 1's restrained highlights, bright flat pastel color areas and shallow organized garment shadows. Simplify folds but retain readable cloth construction and natural contact. No photorealism, glossy 3D, skin pores, detailed fabric texture, cinematic depth of field, or heavy painterly gradients.
+
+Background:
+Spacious warm white with a pale-aqua rounded panel, a few small pale-yellow stars or dots away from the figure, and a simple soft aqua ground ellipse beneath the sneakers. Keep the costume and B identity central.
+Constraints: preserve the selected B face and plain silver pin, coherent full-body proportions, complete sneakers, exactly one complete outfit, no old uniform or grey stockings mixed into the new design, no twin tails, brown eyes, text, labels, logos or watermark.

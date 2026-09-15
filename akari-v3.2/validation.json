@@ -1,0 +1,94 @@
+{
+  "project": "akari-v3.2",
+  "verified_at": "2026-09-15T04:18:55.704409+00:00",
+  "scope": "selected native PNGs, generation inputs, exact prompts, reference roles and package links",
+  "mechanical_pass": true,
+  "images": [
+    {
+      "id": "B1",
+      "path": "history/B1-pop-face-before-pinfix.png",
+      "passed": true
+    },
+    {
+      "id": "B2",
+      "path": "references/B2-pop-face.png",
+      "passed": true
+    },
+    {
+      "id": "G1",
+      "path": "references/G1-soda-pop-full-body.png",
+      "passed": true
+    },
+    {
+      "id": "C01",
+      "path": "situations/soda-pop-cafe/images/C01-cream-soda.png",
+      "passed": true
+    },
+    {
+      "id": "soda-pop",
+      "path": "history/soda-pop-outfit-origin.png",
+      "passed": true
+    },
+    {
+      "id": "P1",
+      "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+      "passed": true
+    },
+    {
+      "id": "P2",
+      "path": "../akari-v3.0/references/P2-quiet-smile.png",
+      "passed": true
+    },
+    {
+      "id": "U1",
+      "path": "../akari-v3.1/references/U1-upper-reference.png",
+      "passed": true
+    },
+    {
+      "id": "L1",
+      "path": "../akari-v3.1/references/L1-lower-reference.png",
+      "passed": true
+    },
+    {
+      "id": "S1",
+      "path": "../akari-v3.1/references/S1-silver-slim-pin.png",
+      "passed": true
+    },
+    {
+      "id": "F09",
+      "path": "../akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "passed": true
+    }
+  ],
+  "prompts": [
+    {
+      "id": "B1",
+      "passed": true
+    },
+    {
+      "id": "B2",
+      "passed": true
+    },
+    {
+      "id": "G1",
+      "passed": true
+    },
+    {
+      "id": "C01",
+      "passed": true
+    }
+  ],
+  "package_markdown_links_checked": 15,
+  "selection_and_reference_roles_consistent": true,
+  "visual_review": {
+    "reviewer": "assistant",
+    "selected_ids": [
+      "B2",
+      "G1",
+      "C01"
+    ],
+    "result": "Face, bob, plain silver pin, outfit, anatomy and scene contact visually reviewed; user accepted the set.",
+    "limit": "One accepted scene is not a broad expression or camera reproducibility test."
+  },
+  "errors": []
+}

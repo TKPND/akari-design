@@ -1,0 +1,56 @@
+{
+  "project": "akari-v3.2",
+  "version": "3.2",
+  "status": "user_accepted_reference_set",
+  "updated": "2026-09-15T04:17:53.144806+00:00",
+  "previous_version": "akari-v3.1",
+  "base_commit": "e65f1d374669ccb508ae83f25126e6a30e3aa445",
+  "selection_record": "selection.json",
+  "reference_set": "reference-set.json",
+  "usage_guide": "README.md",
+  "face_reference": {
+    "path": "references/B2-pop-face.png",
+    "sha256": "2b5ad9630ca99dd1ef2c4ba2639f77c849b852bf665ae1aca34ede247c75f56a",
+    "bytes": 1439284,
+    "width": 1254,
+    "height": 1254,
+    "id": "B2",
+    "role": "primary_face_eyes_hair_expression_linework_and_pop_rendering"
+  },
+  "body_and_outfit_reference": {
+    "path": "references/G1-soda-pop-full-body.png",
+    "sha256": "4da0d2c6b106d81277bde1d2ffb1a4bed325dcfa61996f620ff2a656f3e86627",
+    "bytes": 1535105,
+    "width": 1024,
+    "height": 1536,
+    "id": "G1",
+    "role": "selected_body_proportions_and_soda_pop_wardrobe"
+  },
+  "accepted_situations": [
+    {
+      "path": "situations/soda-pop-cafe/images/C01-cream-soda.png",
+      "sha256": "4e3e6f90957547a7e5b2888dd4a95bd7fe367240226fdf871a4cab31160b7535",
+      "bytes": 1806990,
+      "width": 1024,
+      "height": 1536,
+      "id": "C01",
+      "role": "user_accepted_scene_not_face_authority"
+    }
+  ],
+  "identity_invariants": [
+    "black chin-length bob",
+    "neutral-grey gently drooping eyes",
+    "one plain silver slim pin at character-left temple",
+    "current age impression"
+  ],
+  "style_direction": "soft approachable graphic pop anime with grouped shallow cel shadows",
+  "wardrobe_id": "soda-blue-gingham",
+  "sock_material": {
+    "reference_id": "F09",
+    "strength": "MUST",
+    "scope": "visible sock fabric only",
+    "color_and_length": "G1 short white frilled socks"
+  },
+  "generation_record": "history/generation.json",
+  "validation": "validation.json"
+}

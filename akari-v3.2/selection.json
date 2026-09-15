@@ -1,0 +1,41 @@
+{
+  "project": "akari-v3.2",
+  "recorded_at": "2026-09-15T04:17:53.144806+00:00",
+  "status": "user_accepted",
+  "decisions": [
+    {
+      "scope": "facial_redesign",
+      "quote": "顔や目の表現も含めて、もう少しポップに再設計する"
+    },
+    {
+      "scope": "face_direction",
+      "quote": "Bだな",
+      "selected_id": "B1",
+      "current_refined_id": "B2"
+    },
+    {
+      "scope": "wardrobe",
+      "quote": "今回の水色ギンガム＋白ブラウス＋スニーカーを、あかりに合わせる（おすすめ）",
+      "selected_id": "G1"
+    },
+    {
+      "scope": "full_body_balance_for_scenes",
+      "quote": "このバランスで場面絵へ",
+      "selected_id": "G1"
+    },
+    {
+      "scope": "accept_reference_set_and_first_cafe_scene_for_commit",
+      "quote": "ええやん。可愛いじゃん。commitしていいよ。\ncommitしたらどんどん作っていこう",
+      "selected_ids": [
+        "B2",
+        "G1",
+        "C01"
+      ]
+    }
+  ],
+  "face_authority": "B2",
+  "body_and_outfit_authority": "G1",
+  "accepted_scene_ids": [
+    "C01"
+  ]
+}

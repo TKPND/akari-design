@@ -1,0 +1,31 @@
+Use case: illustration-story
+Asset type: Akari v3.2 first situation image, soda-blue cream-soda cafe.
+Primary request: Create exactly ONE cheerful, soft, approachable POP-ANIME cafe illustration of the user-selected Akari v3.2 B character wearing the selected soda-blue gingham outfit. This is a new seated scene using the fixed face and full-body design.
+
+Reference roles:
+Image 1, B corrected portrait: primary V3.2 FACE, grey eye construction, black chin-length bob, straight separated bangs, one plain slim silver pin, gentle smile, linework and pop cel-shading authority. Preserve this specific character face and level of simplification. Do not use a generic girl or revert to an older detailed drawing style.
+Image 2, selected G1 full body: OUTFIT, body proportions, exact gingham design, blouse, lemon ribbon, short white frilled socks and white/blue sneakers. Its small face does not replace image 1. Its standing pose and graphic background are not fixed.
+Image 3, F09 sock detail: SOFT OPAQUE CLOTH MATERIAL ONLY. Use the restrained shallow natural folds and fabric softness on the white socks wherever visible. Do not transfer grey color, sock length, source pose, floor or exposed sock toes. Sneakers cover toes.
+
+Scene:
+A small friendly cream-soda cafe with a round white pedestal table, pale-aqua chair cushion, warm-white walls, a hint of lemon-yellow decor and one simple rounded window. Sunlight is represented by a few flat pale color shapes, not photorealistic rays. On the table, one clear tall footed glass of bright BLUE cream soda with vanilla ice cream, a tiny cherry, a lemon slice and one straw. Simplify the glass and bubbles into clean anime shapes.
+
+Action and expression:
+Akari sits naturally on a cafe chair in a gentle three-quarter view and looks toward the viewer with B's warm, small closed-mouth smile, as if quietly pleased to share a cafe break. Her head is tilted slightly, shoulders relaxed. One forearm rests naturally at the table with the hand beside the drink; the other hand rests on her lap. Hands have clear ordinary shapes and contact. Keep the two-tone neutral-grey iris, small dark pupil, rounded pale reflection, approachable upper-lid shape and delicate B expression.
+Black chin-length bob only, not twin tails. One very thin PLAIN silver hairpin at her left temple, viewer-right, no beads or extra accessories.
+
+Outfit continuity:
+White rounded Peter Pan collar blouse with short puff sleeves and delicate ruffle trims.
+Soda-blue/white gingham pinafore with broad subtly ruffled straps, shaped bodice, matching waistband, gently full above-knee A-line skirt and one gingham ruffled hem.
+Small pale lemon-yellow bow centered just below the collar.
+Short opaque WHITE socks with frilled cuffs, soft ankle fabric and restrained shallow folds.
+Matching white low-top lace-up sneakers with soda-blue toe and heel panels, white laces and modestly thick white soles.
+Preserve these exact colors, constructions and the existing body proportions; do not add long grey socks, change the skirt pattern or alter the costume.
+
+Composition:
+Portrait 2:3, three-quarter seated full-body view. Whole head, full skirt, legs and BOTH complete sneakers visible with clear margins. Arrange the small round table beside her so it does not hide the face or most of the costume. Both feet rest naturally on the floor. Show anatomically plausible seated knees, draped skirt, connected arms and chair contact. The skirt naturally covers the seated lap. Keep the scene spacious and the character large enough for her face to read.
+
+Style:
+Carry B's light clean POP ANIME finish across the face, clothing and entire cafe. Confident charcoal lines, bright pastel flat base colors, a few organized shallow cel-shadow shapes, gentle peach blush and matte skin. Broad simple bob color areas with B's restrained highlights. Cafe details should be colorful graphic illustration shapes, not realistically painted scenery. No glossy skin, realistic fabric grain, detailed skin texture, 3D, cinematic lighting, photographic blur or heavy painterly gradients.
+Palette: warm white, soda blue and a small lemon-yellow accent.
+Constraints: one character and one cream soda only. Preserve B identity, plain silver pin, selected G1 outfit and body proportions. Entire sneakers inside the image. Natural anatomy and object contact. No text, signs, logos, labels, collage or watermark.
