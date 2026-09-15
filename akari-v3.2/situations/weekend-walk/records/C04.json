@@ -1,0 +1,50 @@
+{
+  "id": "C04",
+  "title": "夕方の帰り道、もう少しだけ",
+  "status": "user_accepted",
+  "file": "images/C04-sunset-homeward.png",
+  "sha256": "c69f1529d91b735cb8890219b79a1210c2f3fe9b71613d1947043973224c043d",
+  "bytes": 2149296,
+  "width": 1024,
+  "height": 1536,
+  "source_thread_id": "01a0a311-6bbb-77d3-b2cb-1dae4da6c0b7",
+  "generation_mode": "built-in image_gen",
+  "base_commit": "f0d13ba04e314b199ac84e631463889a6599efe6",
+  "prompt_file": "prompts/C04-sunset-homeward.txt",
+  "prompt_sha256": "3f243b10dfef531f65e274554a4497c204d6484293827a783fcd4a0618ea6626",
+  "reference_ids": [
+    "B2",
+    "G1",
+    "F09"
+  ],
+  "independent_from_other_scenes": true,
+  "visual_review": {
+    "identity": "Warm closed smile, grey eyes, bob and plain silver pin retained in a look-back pose.",
+    "outfit": "Gingham skirt and bodice, pale yellow bow, white puff sleeves and frilled sock visible. Back collar and straps are plausibly inferred from G1.",
+    "action": "Shoulders rotate with the head, one hand beckons while the other carries the bag. No obvious disconnected arm or impossible neck twist.",
+    "story": "Peach/lavender evening sky and the same bag finish the afternoon sequence.",
+    "limitations": [
+      "The generated framing extends lower than the planned shin crop and includes part of one sneaker at the lower edge.",
+      "Evening scenery is more detailed than the base portrait; it remains anime illustration."
+    ]
+  },
+  "mechanical_review": {
+    "png_decodes": true,
+    "source_copy_byte_identical": true,
+    "prompt_hash_matches": true
+  },
+  "user_acceptance_pending": false,
+  "acceptance": {
+    "recorded_at": "2026-09-15T04:40:15.605076+00:00",
+    "quote": "commitしていいよ",
+    "scope": "Accept the presented C02, C03 and C04 weekend-walk scenes for repository preservation.",
+    "selected_ids": [
+      "C02",
+      "C03",
+      "C04"
+    ]
+  },
+  "manifest": "../manifest.json",
+  "path_base": "Image and prompt paths are relative to the parent weekend-walk directory.",
+  "original_generation_file": "exec-c530d1f4-dc34-4a71-9d7c-535d92aff589.png"
+}

@@ -27,8 +27,10 @@ The public repository is maintained as `TKPND/akari-design`.
   preserve 18 everyday illustrations in the user-selected long-sleeve uniform.
   A16 uses the selected E1-1 finish, which subtly groups small clothing shadows.
 - [Akari v3.2](akari-v3.2/README.md) is the current light pop direction: the
-  selected B2 face, G1 soda-blue gingham outfit, and accepted cream-soda cafe
-  scene. Use its native face and body images with separate reference roles.
+  selected B2 face, G1 soda-blue gingham outfit, and four accepted scenes.
+  The [weekend walk](akari-v3.2/situations/weekend-walk/README.md) follows a
+  small shop, a breezy tree-lined path, and the evening walk home.
+  Use its native face and body images with separate reference roles.
 - `tools/pdf/` contains the Node/Playwright PDF rendering code.
 - `scripts/` contains Python build and audit scripts.
 - `dist/` contains prebuilt PDF deliverables and public contact sheets.

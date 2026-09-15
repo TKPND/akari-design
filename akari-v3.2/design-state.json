@@ -2,7 +2,7 @@
   "project": "akari-v3.2",
   "version": "3.2",
   "status": "user_accepted_reference_set",
-  "updated": "2026-09-15T04:17:53.144806+00:00",
+  "updated": "2026-09-15T04:40:15.605076+00:00",
   "previous_version": "akari-v3.1",
   "base_commit": "e65f1d374669ccb508ae83f25126e6a30e3aa445",
   "selection_record": "selection.json",
@@ -35,6 +35,33 @@
       "height": 1536,
       "id": "C01",
       "role": "user_accepted_scene_not_face_authority"
+    },
+    {
+      "path": "situations/weekend-walk/images/C02-little-star-shop.png",
+      "sha256": "9bf8438687858a2f6e7e9cb8c4eb72fe8cf037e80acd2e7c2b979a7d074144de",
+      "bytes": 1852191,
+      "width": 1024,
+      "height": 1536,
+      "id": "C02",
+      "role": "user_accepted_scene_not_face_authority"
+    },
+    {
+      "path": "situations/weekend-walk/images/C03-breezy-tree-walk.png",
+      "sha256": "e8ca1c450ac42b10a3e680f94a06bd218cf85c17863b22948e8259c784e21405",
+      "bytes": 2063224,
+      "width": 1024,
+      "height": 1536,
+      "id": "C03",
+      "role": "user_accepted_scene_not_face_authority"
+    },
+    {
+      "path": "situations/weekend-walk/images/C04-sunset-homeward.png",
+      "sha256": "c69f1529d91b735cb8890219b79a1210c2f3fe9b71613d1947043973224c043d",
+      "bytes": 2149296,
+      "width": 1024,
+      "height": 1536,
+      "id": "C04",
+      "role": "user_accepted_scene_not_face_authority"
     }
   ],
   "identity_invariants": [
@@ -52,5 +79,19 @@
     "color_and_length": "G1 short white frilled socks"
   },
   "generation_record": "history/generation.json",
-  "validation": "validation.json"
+  "validation": "validation.json",
+  "situation_collections": [
+    {
+      "id": "weekend-walk",
+      "status": "user_accepted",
+      "scene_ids": [
+        "C02",
+        "C03",
+        "C04"
+      ],
+      "manifest": "situations/weekend-walk/manifest.json",
+      "usage_guide": "situations/weekend-walk/README.md",
+      "verification": "situations/weekend-walk/verification.json"
+    }
+  ]
 }

@@ -1,0 +1,114 @@
+{
+  "project": "akari-v3.2",
+  "series": "weekend-walk",
+  "status": "user_accepted",
+  "generation_mode": "built-in image_gen",
+  "exact_image_count": 3,
+  "base_commit": "f0d13ba04e314b199ac84e631463889a6599efe6",
+  "user_choice": "休日の街歩き：雑貨店 → 風のある並木道 → 夕方の帰り道（おすすめ）",
+  "independent_scene_generation": true,
+  "reference_inputs": [
+    {
+      "id": "B2",
+      "file": "../../references/B2-pop-face.png",
+      "sha256": "2b5ad9630ca99dd1ef2c4ba2639f77c849b852bf665ae1aca34ede247c75f56a",
+      "repository_path": "akari-v3.2/references/B2-pop-face.png",
+      "role": "primary_face_eyes_hair_expression_linework_and_pop_rendering",
+      "bytes": 1439284,
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "id": "G1",
+      "file": "../../references/G1-soda-pop-full-body.png",
+      "sha256": "4da0d2c6b106d81277bde1d2ffb1a4bed325dcfa61996f620ff2a656f3e86627",
+      "repository_path": "akari-v3.2/references/G1-soda-pop-full-body.png",
+      "role": "selected_body_proportions_and_soda_pop_wardrobe",
+      "bytes": 1535105,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "F09",
+      "file": "../../../akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+      "repository_path": "akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "role": "soft_opaque_sock_material_and_restrained_wrinkles_only",
+      "bytes": 71786,
+      "width": 280,
+      "height": 210
+    }
+  ],
+  "scenes": [
+    {
+      "id": "C02",
+      "slug": "little-star-shop",
+      "title": "雑貨店で、小さな星を見つけた",
+      "prompt_file": "prompts/C02-little-star-shop.txt",
+      "prompt_sha256": "3859f775065e8030f059b7baf75e81471c7d0494c321a27b89021c567d6a4099",
+      "reference_ids": [
+        "B2",
+        "G1",
+        "F09"
+      ],
+      "status": "user_accepted",
+      "file": "images/C02-little-star-shop.png",
+      "sha256": "9bf8438687858a2f6e7e9cb8c4eb72fe8cf037e80acd2e7c2b979a7d074144de",
+      "width": 1024,
+      "height": 1536,
+      "record_file": "records/C02.json"
+    },
+    {
+      "id": "C03",
+      "slug": "breezy-tree-walk",
+      "title": "並木道、風がふわっと",
+      "prompt_file": "prompts/C03-breezy-tree-walk.txt",
+      "prompt_sha256": "2eb6099b2c7fc476ebc58a19798e201e6f5c6025ae2e09be644946dd4a242b58",
+      "reference_ids": [
+        "B2",
+        "G1",
+        "F09"
+      ],
+      "status": "user_accepted",
+      "file": "images/C03-breezy-tree-walk.png",
+      "sha256": "e8ca1c450ac42b10a3e680f94a06bd218cf85c17863b22948e8259c784e21405",
+      "width": 1024,
+      "height": 1536,
+      "record_file": "records/C03.json"
+    },
+    {
+      "id": "C04",
+      "slug": "sunset-homeward",
+      "title": "夕方の帰り道、もう少しだけ",
+      "prompt_file": "prompts/C04-sunset-homeward.txt",
+      "prompt_sha256": "3f243b10dfef531f65e274554a4497c204d6484293827a783fcd4a0618ea6626",
+      "reference_ids": [
+        "B2",
+        "G1",
+        "F09"
+      ],
+      "status": "user_accepted",
+      "file": "images/C04-sunset-homeward.png",
+      "sha256": "c69f1529d91b735cb8890219b79a1210c2f3fe9b71613d1947043973224c043d",
+      "width": 1024,
+      "height": 1536,
+      "record_file": "records/C04.json"
+    }
+  ],
+  "saved_at": "2026-09-15T04:25:19.361617+00:00",
+  "actual_image_count": 3,
+  "user_acceptance_pending": false,
+  "path_base": "Asset, prompt, record and reference file paths are relative to this directory.",
+  "acceptance": {
+    "recorded_at": "2026-09-15T04:40:15.605076+00:00",
+    "quote": "commitしていいよ",
+    "scope": "Accept the presented C02, C03 and C04 weekend-walk scenes for repository preservation.",
+    "selected_ids": [
+      "C02",
+      "C03",
+      "C04"
+    ]
+  },
+  "selection_record": "../../selection.json",
+  "verification_record": "verification.json"
+}

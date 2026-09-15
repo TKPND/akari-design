@@ -29,7 +29,7 @@ This repository builds and audits Akari visual-reference materials.
   only. G1 supplies the white color and short length. Shoes may hide the toes.
   S1 can support the single plain slim silver pin at character-left temple.
 - New scenes use the same B2/G1 independently. Poses, cameras and expressions
-  may vary. Accepted C01 is a scene example, not a replacement face authority.
+  may vary. Accepted scenes are examples, not replacement face authorities.
   P1/P2/U1/L1 document lineage; do not use them to revert v3.2 to the older face
   or uniform. For edits, the target retains its scene, pose and camera.
 

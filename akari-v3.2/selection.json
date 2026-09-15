@@ -31,11 +31,34 @@
         "G1",
         "C01"
       ]
+    },
+    {
+      "scope": "weekend_walk_story",
+      "quote": "休日の街歩き：雑貨店 → 風のある並木道 → 夕方の帰り道（おすすめ）",
+      "scene_ids": [
+        "C02",
+        "C03",
+        "C04"
+      ]
+    },
+    {
+      "scope": "accept_weekend_walk_scenes_for_commit",
+      "quote": "commitしていいよ",
+      "selected_ids": [
+        "C02",
+        "C03",
+        "C04"
+      ],
+      "recorded_at": "2026-09-15T04:40:15.605076+00:00"
     }
   ],
   "face_authority": "B2",
   "body_and_outfit_authority": "G1",
   "accepted_scene_ids": [
-    "C01"
-  ]
+    "C01",
+    "C02",
+    "C03",
+    "C04"
+  ],
+  "updated_at": "2026-09-15T04:40:15.605076+00:00"
 }

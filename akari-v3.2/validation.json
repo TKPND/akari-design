@@ -1,62 +1,77 @@
 {
   "project": "akari-v3.2",
-  "verified_at": "2026-09-15T04:18:55.704409+00:00",
-  "scope": "selected native PNGs, generation inputs, exact prompts, reference roles and package links",
+  "verified_at": "2026-09-15T04:41:06.115922+00:00",
+  "scope": "Native references, accepted C01-C04 scenes, original PNG copies, exact prompts, selection state and package links",
   "mechanical_pass": true,
   "images": [
     {
       "id": "B1",
-      "path": "history/B1-pop-face-before-pinfix.png",
+      "sha256": "00fd2377f94e8deaf2118eef9d2fd8c275603b48bdaf350d8b1568f92d977bc8",
       "passed": true
     },
     {
       "id": "B2",
-      "path": "references/B2-pop-face.png",
+      "sha256": "2b5ad9630ca99dd1ef2c4ba2639f77c849b852bf665ae1aca34ede247c75f56a",
       "passed": true
     },
     {
       "id": "G1",
-      "path": "references/G1-soda-pop-full-body.png",
+      "sha256": "4da0d2c6b106d81277bde1d2ffb1a4bed325dcfa61996f620ff2a656f3e86627",
       "passed": true
     },
     {
       "id": "C01",
-      "path": "situations/soda-pop-cafe/images/C01-cream-soda.png",
+      "sha256": "4e3e6f90957547a7e5b2888dd4a95bd7fe367240226fdf871a4cab31160b7535",
       "passed": true
     },
     {
       "id": "soda-pop",
-      "path": "history/soda-pop-outfit-origin.png",
+      "sha256": "e73fc1cfc3f56cb79051918c386b28b52abb98d3fc1386273e234bd8a59cb87a",
       "passed": true
     },
     {
       "id": "P1",
-      "path": "../akari-v3.0/references/P1-user-pro-portrait.png",
+      "sha256": "be42eac567e5d65b72459709beaf15091ff1fb89cee0c5dc1b1dee5cabda2afc",
       "passed": true
     },
     {
       "id": "P2",
-      "path": "../akari-v3.0/references/P2-quiet-smile.png",
+      "sha256": "c911152bf5975e0859e15bd6c6b161e1da3754d28e52b57b505655461575871f",
       "passed": true
     },
     {
       "id": "U1",
-      "path": "../akari-v3.1/references/U1-upper-reference.png",
+      "sha256": "9e1aba2daae7901e0cba9664e83211ca3cee067ce0cd83544229769d951adc0f",
       "passed": true
     },
     {
       "id": "L1",
-      "path": "../akari-v3.1/references/L1-lower-reference.png",
+      "sha256": "14eb83339c5a96f06b2a5fadd4290c5211a143cdb33575c80fdfeb8f995abd40",
       "passed": true
     },
     {
       "id": "S1",
-      "path": "../akari-v3.1/references/S1-silver-slim-pin.png",
+      "sha256": "6e35a9f51a68d203d8252dc71d7182fe313d8b66a2c2cb0bf099c83b773cb85f",
       "passed": true
     },
     {
       "id": "F09",
-      "path": "../akari-v3.1/references/materials/F09-rounded-wrinkled-sock-detail.png",
+      "sha256": "972ae49e32c0d7e755d0c963203d5531e5fd4eeb1c573de01edd6f9817908385",
+      "passed": true
+    },
+    {
+      "id": "C02",
+      "sha256": "9bf8438687858a2f6e7e9cb8c4eb72fe8cf037e80acd2e7c2b979a7d074144de",
+      "passed": true
+    },
+    {
+      "id": "C03",
+      "sha256": "e8ca1c450ac42b10a3e680f94a06bd218cf85c17863b22948e8259c784e21405",
+      "passed": true
+    },
+    {
+      "id": "C04",
+      "sha256": "c69f1529d91b735cb8890219b79a1210c2f3fe9b71613d1947043973224c043d",
       "passed": true
     }
   ],
@@ -76,19 +91,31 @@
     {
       "id": "C01",
       "passed": true
+    },
+    {
+      "id": "C02",
+      "passed": true
+    },
+    {
+      "id": "C03",
+      "passed": true
+    },
+    {
+      "id": "C04",
+      "passed": true
     }
   ],
-  "package_markdown_links_checked": 15,
+  "package_markdown_links_checked": 31,
   "selection_and_reference_roles_consistent": true,
+  "accepted_scene_ids": [
+    "C01",
+    "C02",
+    "C03",
+    "C04"
+  ],
   "visual_review": {
-    "reviewer": "assistant",
-    "selected_ids": [
-      "B2",
-      "G1",
-      "C01"
-    ],
-    "result": "Face, bob, plain silver pin, outfit, anatomy and scene contact visually reviewed; user accepted the set.",
-    "limit": "One accepted scene is not a broad expression or camera reproducibility test."
+    "source": "Previously recorded generation reviews; accepted image bytes are unchanged.",
+    "limit": "Scene examples do not establish reproducibility for all expressions or camera angles."
   },
   "errors": []
 }

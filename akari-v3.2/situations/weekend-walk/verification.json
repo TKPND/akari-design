@@ -1,0 +1,47 @@
+{
+  "verified_at": "2026-09-15T04:41:06.115922+00:00",
+  "mechanical_pass": true,
+  "exact_scene_count": 3,
+  "images": [
+    {
+      "id": "C02",
+      "png_decodes": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "hash_matches": true,
+      "source_copy_byte_identical": true,
+      "prompt_hash_matches": true,
+      "reference_roles_recorded": true
+    },
+    {
+      "id": "C03",
+      "png_decodes": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "hash_matches": true,
+      "source_copy_byte_identical": true,
+      "prompt_hash_matches": true,
+      "reference_roles_recorded": true
+    },
+    {
+      "id": "C04",
+      "png_decodes": true,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "hash_matches": true,
+      "source_copy_byte_identical": true,
+      "prompt_hash_matches": true,
+      "reference_roles_recorded": true
+    }
+  ],
+  "reference_paths_and_hashes_match": true,
+  "acceptance_matches_global_selection": true,
+  "visual_review": "Original generation reviews preserved in records/C02.json, C03.json and C04.json; image bytes unchanged.",
+  "user_accepted": true
+}

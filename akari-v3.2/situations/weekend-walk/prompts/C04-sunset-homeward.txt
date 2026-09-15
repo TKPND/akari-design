@@ -1,0 +1,26 @@
+Use case: illustration-story
+Create one finished, light, friendly POP-ANIME illustration of Akari v3.2.
+
+Input roles:
+Image 1 B2 is the primary face, neutral-grey eye construction, black chin-length bob, single plain slim silver pin, and linework/pop shading authority. Keep the selected B face and age impression. A scene-specific expression may vary naturally.
+Image 2 G1 supplies body proportions and the exact soda-blue gingham outfit. Its small face does not replace image 1. Its standing pose is not fixed.
+Image 3 F09 supplies soft opaque cloth and restrained shallow natural wrinkles only. Adapt to short WHITE frilled socks. Do not copy its grey color, length or pose. Sneakers cover the toes.
+
+Identity and style:
+Neutral-grey gently drooping eyes, small separate dark oval pupils, broad two-tone irises and rounded pale lower reflections. Black bob and naturally separated full bangs. Exactly one very slim plain straight silver pin above her own LEFT ear, viewer-right in a frontal view; no end beads. Soft approachable face, matte skin, light blush, clean charcoal lines, bright pastel color areas and shallow organized cel shading. Preserve the selected body balance. Keep scenery illustrated in the same style.
+
+Outfit:
+White rounded Peter Pan collar and short puff sleeves with delicate frill trims. Soda-blue/white gingham pinafore with broad subtly ruffled straps, shaped bodice, matching waistband, full above-knee A-line skirt and one gingham ruffled hem. Small lemon-yellow bow beneath the collar. Short opaque white frilled socks and white low-top lace-up sneakers with soda-blue toe and heel panels, white laces and modest white soles.
+
+Compose a new scene using its specified action, expression, camera and setting. Show natural anatomy, hand contact, fabric drape, weight and ground contact. Use B2 and G1 directly each time; do not replace either with a previous scene. No photorealism, 3D, glossy skin, realistic fabric grain, heavy cinematic rendering, text, logo, watermark or collage.
+
+
+
+Series continuity: These are three moments in the same cheerful afternoon after a cream-soda cafe visit. Keep identical character, clothes and body balance. The recurring purchase bag is a SMALL plain warm-white rectangular paper bag with exactly two pale-aqua loop handles, no lettering, no pattern. Use only that one bag when described. No other characters. This is a fresh scene directly referenced to B2/G1, not a copy of an earlier scene.
+
+Scene C04 — TURNING BACK ON THE WAY HOME
+A quiet neighborhood path beside a low pale-aqua railing, pastel block-shaped houses, and an open peach-and-lavender early-evening sky. Keep enough daylight that her black hair, NEUTRAL GREY eyes and soda-blue outfit colors remain distinct. Use a few long simple shadow shapes; this is still light pop anime, not a dramatic cinematic sunset.
+Akari has walked a few steps ahead and pauses to look back toward the viewer, as if inviting them to catch up. Her torso is turned about 45 degrees away, but her shoulders rotate with her head so the head turn is natural and both eyes remain legible in a gentle three-quarter view. The face should not become a strict profile. Her right hand holds the same small plain warm-white rectangular purchase bag with exactly two pale-aqua loop handles beside her hip. Her left hand makes a small relaxed beckoning gesture at waist height, palm slightly up, fingers naturally curved; no pointing or sprawling fingers. The star charm remains put away. Her bob softly settles around her jaw, with the single silver pin on her own left temple visible at the three-quarter angle.
+Expression: quiet warm closed-mouth smile with a little fondness, soft relaxed grey eyes, faint blush. Retain B2's approachable face, proportions and subtle detailed simplicity, without heavy makeup or a different age impression.
+Composition: portrait 2:3, medium-long three-quarter figure including whole head, complete skirt and knees, naturally cropping the shins well below the knees. Camera at ordinary eye level; look-back pose and open sky distinguish this from the other two images. Her body is relaxed with plausible balanced stance, connected neck, shoulders and arms; no impossible neck twist. Do not pull the skirt up. Keep purchase bag visible and the collar and lemon bow partly visible around the turned torso.
+Finish: clear charcoal linework, organized shallow cel shadow areas, bright clothing, clean illustrated scenery. Warm pastel evening colors without amber eye recoloring, glossy rim lighting, realistic hair strands or photographic blur.

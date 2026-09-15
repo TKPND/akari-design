@@ -1,0 +1,49 @@
+{
+  "id": "C03",
+  "title": "並木道、風がふわっと",
+  "status": "user_accepted",
+  "file": "images/C03-breezy-tree-walk.png",
+  "sha256": "e8ca1c450ac42b10a3e680f94a06bd218cf85c17863b22948e8259c784e21405",
+  "bytes": 2063224,
+  "width": 1024,
+  "height": 1536,
+  "source_thread_id": "01a0a311-6bbb-77d3-b2cb-1dae4da6c0b7",
+  "generation_mode": "built-in image_gen",
+  "base_commit": "f0d13ba04e314b199ac84e631463889a6599efe6",
+  "prompt_file": "prompts/C03-breezy-tree-walk.txt",
+  "prompt_sha256": "2eb6099b2c7fc476ebc58a19798e201e6f5c6025ae2e09be644946dd4a242b58",
+  "reference_ids": [
+    "B2",
+    "G1",
+    "F09"
+  ],
+  "independent_from_other_scenes": true,
+  "visual_review": {
+    "identity": "Neutral-grey eyes and bob stay consistent with B; a small open smile adds expression variation.",
+    "outfit": "Gingham pinafore, white puff blouse, lemon ribbon, short white frilled socks and blue/white sneakers retained. Both complete shoes are visible.",
+    "action": "Forward step, bag held by right hand, left fingers beside the temple, mild wind in hair and skirt. Connected arms and plausible walking support.",
+    "story": "Same simple bag color scheme and handle design; star charm is put away.",
+    "limitations": [
+      "Tree and paving backgrounds are more detailed than the graphic base portrait while remaining illustrated."
+    ]
+  },
+  "mechanical_review": {
+    "png_decodes": true,
+    "source_copy_byte_identical": true,
+    "prompt_hash_matches": true
+  },
+  "user_acceptance_pending": false,
+  "acceptance": {
+    "recorded_at": "2026-09-15T04:40:15.605076+00:00",
+    "quote": "commitしていいよ",
+    "scope": "Accept the presented C02, C03 and C04 weekend-walk scenes for repository preservation.",
+    "selected_ids": [
+      "C02",
+      "C03",
+      "C04"
+    ]
+  },
+  "manifest": "../manifest.json",
+  "path_base": "Image and prompt paths are relative to the parent weekend-walk directory.",
+  "original_generation_file": "exec-db2878dd-4045-4fd2-8f72-c7d718eff327.png"
+}

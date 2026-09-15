@@ -1,0 +1,49 @@
+{
+  "id": "C02",
+  "title": "雑貨店で、小さな星を見つけた",
+  "status": "user_accepted",
+  "file": "images/C02-little-star-shop.png",
+  "sha256": "9bf8438687858a2f6e7e9cb8c4eb72fe8cf037e80acd2e7c2b979a7d074144de",
+  "bytes": 1852191,
+  "width": 1024,
+  "height": 1536,
+  "source_thread_id": "01a0a311-6bbb-77d3-b2cb-1dae4da6c0b7",
+  "generation_mode": "built-in image_gen",
+  "base_commit": "f0d13ba04e314b199ac84e631463889a6599efe6",
+  "prompt_file": "prompts/C02-little-star-shop.txt",
+  "prompt_sha256": "3859f775065e8030f059b7baf75e81471c7d0494c321a27b89021c567d6a4099",
+  "reference_ids": [
+    "B2",
+    "G1",
+    "F09"
+  ],
+  "independent_from_other_scenes": true,
+  "visual_review": {
+    "identity": "B-like grey eye zones, soft smile, bob and one plain silver pin retained; face is large enough to read clearly.",
+    "outfit": "White rounded collar and puff blouse, lemon bow, ruffled blue/white gingham bodice and skirt retained. Socks and shoes are outside the intended crop.",
+    "action": "Star keychain and attached ring rest in the open palm. Other hand rests on the counter; no obvious extra limb or prop fusion.",
+    "story": "One white paper bag with aqua loop handles stands at the counter. Star purchase starts the series.",
+    "limitations": [
+      "Shelf stock and gingham scale are illustrative variations; not exact product-design reproduction."
+    ]
+  },
+  "mechanical_review": {
+    "png_decodes": true,
+    "source_copy_byte_identical": true,
+    "prompt_hash_matches": true
+  },
+  "user_acceptance_pending": false,
+  "acceptance": {
+    "recorded_at": "2026-09-15T04:40:15.605076+00:00",
+    "quote": "commitしていいよ",
+    "scope": "Accept the presented C02, C03 and C04 weekend-walk scenes for repository preservation.",
+    "selected_ids": [
+      "C02",
+      "C03",
+      "C04"
+    ]
+  },
+  "manifest": "../manifest.json",
+  "path_base": "Image and prompt paths are relative to the parent weekend-walk directory.",
+  "original_generation_file": "exec-62a86eda-04fb-4f48-879d-02ec25070f9e.png"
+}
