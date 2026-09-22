@@ -1,0 +1,89 @@
+{
+  "project": "akari-v4.0",
+  "version": "4.0",
+  "status": "user_accepted_reference_set",
+  "updated": "2026-09-22T07:30:26.303794+00:00",
+  "previous_version": "akari-v3.2",
+  "base_commit": "59e8543fd7b75b5ba2899fc7cf0a016b125a64aa",
+  "selection_record": "selection.json",
+  "reference_set": "reference-set.json",
+  "usage_guide": "README.md",
+  "face_reference": {
+    "id": "V11",
+    "path": "references/V11-novelai-v5-curated.png",
+    "role": "primary_face_eyes_hair_pin_linework_and_rendering",
+    "sha256": "ac695b4f30c7c25750b7e6a6aad76fb85f17123d682b5e79107608a7097c5204",
+    "bytes": 1138135,
+    "width": 832,
+    "height": 1216
+  },
+  "body_reference": {
+    "id": "B06",
+    "path": "references/B06-full-body.png",
+    "role": "selected_body_balance_and_soft_limb_volume",
+    "sha256": "fb3855793a34e47e34e16a809869c86d93cd2532ac1699b28f4002fc72a90657",
+    "bytes": 1361857,
+    "width": 1024,
+    "height": 1536
+  },
+  "body_description": "B06の見た目を基準に、すらっとした四肢と上腕・腿・ふくらはぎの柔らかい丸みを保つ。",
+  "style_direction": "V11の軽い線、淡い色面、浅いセル影、控えめな頬色。",
+  "fixed_wardrobe": null,
+  "preserved_situations": [
+    {
+      "id": "C01",
+      "path": "situations/outfits-scenes/images/C01-cafe.png",
+      "role": "preserved_outfit_and_scene_example_not_body_authority",
+      "sha256": "7195e4405b19b33ac3768c0538c9d05aab5bcd4e61a101094494d77bdf21765d",
+      "bytes": 1583683,
+      "width": 1037,
+      "height": 1516,
+      "label": "青いカーディガン・カフェ",
+      "scene": "cafe",
+      "prompt": "situations/outfits-scenes/prompts/C01.txt",
+      "generation_record": "situations/outfits-scenes/records/C01.json"
+    },
+    {
+      "id": "C02",
+      "path": "situations/outfits-scenes/images/C02-bookshop.png",
+      "role": "preserved_outfit_and_scene_example_not_body_authority",
+      "sha256": "5e718124079b39ab02fb5950eb2f609b259e0e1bd6cfa8f69dc152c608a71dd3",
+      "bytes": 1517878,
+      "width": 1086,
+      "height": 1448,
+      "label": "くすみピンクニット・本屋",
+      "scene": "bookshop",
+      "prompt": "situations/outfits-scenes/prompts/C02.txt",
+      "generation_record": "situations/outfits-scenes/records/C02.json"
+    },
+    {
+      "id": "C03",
+      "path": "situations/outfits-scenes/images/C03-park.png",
+      "role": "preserved_outfit_and_scene_example_not_body_authority",
+      "sha256": "6f1e55dad8f874988dadf98911e8f8322069c658d6557067294b7a0eb3e5ed23",
+      "bytes": 1623436,
+      "width": 1086,
+      "height": 1448,
+      "label": "ギンガム・公園",
+      "scene": "park",
+      "prompt": "situations/outfits-scenes/prompts/C03.txt",
+      "generation_record": "situations/outfits-scenes/records/C03.json"
+    },
+    {
+      "id": "C04",
+      "path": "situations/outfits-scenes/images/C04-seaside.png",
+      "role": "preserved_outfit_and_scene_example_not_body_authority",
+      "sha256": "535f202ca2b6c6ac0e77c1cac30954c1ae9f7453c9fb0a2f81c47d06f9845d22",
+      "bytes": 1538996,
+      "width": 1037,
+      "height": 1516,
+      "label": "ネイビーボーダー・海辺",
+      "scene": "seaside",
+      "prompt": "situations/outfits-scenes/prompts/C04.txt",
+      "generation_record": "situations/outfits-scenes/records/C04.json"
+    }
+  ],
+  "generation_record": "history/generation.json",
+  "validation": "validation.json",
+  "default_settings_pdf": "../akari-v1.2/release/akari-v1.2-core-settings.pdf"
+}

@@ -14,9 +14,30 @@ This repository builds and audits Akari visual-reference materials.
 - The preserved v1.1 settings PDF is `dist/akari-v1.1-settings.pdf`; use it for
   inheritance, history, recovery, or an explicitly requested v1.1 audit.
 
+## Akari V4.0
+
+- For the current visual design, start with [the V4.0 usage guide](akari-v4.0/README.md),
+  `akari-v4.0/design-state.json`, and `akari-v4.0/reference-set.json`.
+- V11 is the selected NovelAI V5 Curated face, grey eyes, black bob, single
+  slim silver pin, light linework and pastel cel-rendering authority.
+- B06 is the selected full-body balance, with elongated limbs and soft arm/leg
+  volume. Follow the actual image, not the unmeasured head-count target in its
+  historical prompt. Its small face does not replace native V11.
+- B06 clothing was shared comparison clothing, not a permanent uniform.
+  Specify clothing, scene, pose, camera and expression for each new request.
+  Do not append numeric-age or adult-woman tags; the user excluded them.
+- Generate new scenes independently from the same native V11/B06 with explicit
+  roles. Existing-image edits keep the target's composition, pose and camera
+  unless the requested edit changes them. Preserve soft opaque sock fabric
+  with restrained shallow wrinkles wherever it is visible.
+- C01-C04 are preserved outfit/scene examples generated before B06 selection.
+  They do not replace the face/body references or validate B06 across scenes.
+- Earlier versions document lineage. Use their references only when requested
+  or for an explicitly assigned supporting detail; do not override V11/B06.
+
 ## Akari v3.2
 
-- For the current light pop design, start with [the v3.2 usage guide](akari-v3.2/README.md),
+- For an explicitly requested v3.2 light pop design, start with [the v3.2 usage guide](akari-v3.2/README.md),
   `akari-v3.2/design-state.json`, and `akari-v3.2/reference-set.json`.
 - B2 is the user-selected B face with the silver pin corrected. Use its native
   portrait for the face, grey eyes, black bob, expression baseline, linework and

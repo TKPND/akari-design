@@ -1,0 +1,45 @@
+{
+  "project": "akari-v4.0",
+  "recorded_at": "2026-09-22T07:30:26.303794+00:00",
+  "status": "user_accepted_reference_set",
+  "decisions": [
+    {
+      "scope": "face_and_rendering_direction",
+      "selected_id": "V11",
+      "quote": "CuratedのV11がやっぱり好み\nここから広げたい"
+    },
+    {
+      "scope": "expansion_goal",
+      "quote": "顔と塗りを保って、衣装・場面を広げる"
+    },
+    {
+      "scope": "prompt_preference",
+      "quote": "25yearsとかadult womanとかいらんな"
+    },
+    {
+      "scope": "preserve_as_v4_0",
+      "quote": "V4.0としてcommitしといて"
+    },
+    {
+      "scope": "defer_commit_until_full_body_selection",
+      "quote": "全身絵作ってからにしよう。\nどんな感じの体格がいいかもまだわからんしね。\nいろいろ作ってみてから選んでからにしたい"
+    },
+    {
+      "scope": "full_body_selection",
+      "selected_id": "B06",
+      "quote": "B06にしよう",
+      "recorded_at": "2026-09-22T07:30:26.303794+00:00"
+    }
+  ],
+  "face_authority": "V11",
+  "body_authority": "B06",
+  "fixed_wardrobe": null,
+  "preserved_scene_ids": [
+    "C01",
+    "C02",
+    "C03",
+    "C04"
+  ],
+  "commit_basis": "Earlier explicit V4.0 commit instruction, deferred until body selection; B06 now selected.",
+  "scene_preservation_scope": "Existing C01-C04 outfit/scene examples; no individual body-reference approval inferred."
+}

@@ -1,0 +1,35 @@
+{
+  "id": "B06",
+  "path": "references/B06-full-body.png",
+  "role": "selected_body_balance_and_soft_limb_volume",
+  "sha256": "fb3855793a34e47e34e16a809869c86d93cd2532ac1699b28f4002fc72a90657",
+  "bytes": 1361857,
+  "width": 1024,
+  "height": 1536,
+  "status": "user_selected_reference",
+  "label": "すらっと × 丸み",
+  "prompt": "prompts/B06.txt",
+  "workflow": "ChatGPT browser",
+  "ui_model": "6 Pro",
+  "generation_backend": "not_exposed_by_ui",
+  "image_ui_id": "eb8cd214-304d-4c96-a387-9c856ca26c67",
+  "source_filename": "ChatGPT Image 2026年9月22日 16_15_50.png",
+  "collected_at": "2026-09-22T07:16:04.831867+00:00",
+  "requested_reference_ids": [
+    "V11"
+  ],
+  "actual_internal_reference_selection": "not_observable",
+  "body_direction_requested": "頭頂から足底まで約7.25頭身のすらっとしたバランス。肩幅は普通で、胴・骨盤まわりは自然な厚み。中間案より手足が長めで、上腕・腿・ふくらはぎにやわらかな丸みもある。長身寄りでも細すぎない、安定した体つき。腰を極端に細くしない。頭部と顔の形はV11のまま。",
+  "numeric_head_ratio_is_not_measured": true,
+  "assistant_visual_review": {
+    "full_body_in_frame": true,
+    "face_style": "V11に近い顔・目・ボブ・銀ピンと淡い塗りを維持。",
+    "body": "B05と近い頭の大きさ・長さで、上腕と腿・ふくらはぎは厚め。B04との長さの差は控えめ。",
+    "deviations": [
+      "長身方向の変化より、四肢の厚みの変化が見えやすい。",
+      "指定頭身の厳密な実測はしていない。"
+    ]
+  },
+  "selection_quote": "B06にしよう",
+  "selection_recorded_at": "2026-09-22T07:30:26.303794+00:00"
+}

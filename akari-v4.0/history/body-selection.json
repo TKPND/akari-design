@@ -1,0 +1,138 @@
+{
+  "project": "akari-v4.0",
+  "selected_id": "B06",
+  "quote": "B06にしよう",
+  "recorded_at": "2026-09-22T07:30:26.303794+00:00",
+  "candidate_count": 8,
+  "candidates": [
+    {
+      "id": "B01",
+      "label": "コンパクト × 細め",
+      "sha256": "7b0180deffaf634de3f550668bf57077dd71ecf541f8267bf025c21e6733a3a3",
+      "selected": false,
+      "assistant_visual_review": {
+        "full_body_in_frame": true,
+        "face_style": "V11に近い顔・目・ボブ・銀ピンを維持。全身化により顔の画面内サイズは小さくなった。",
+        "body": "頭が比較的大きいコンパクトな体つき。四肢は細め。",
+        "deviations": [
+          "背景に弱いグラデーションがある。",
+          "指定頭身の厳密な実測はしていない。"
+        ]
+      }
+    },
+    {
+      "id": "B02",
+      "label": "コンパクト × 丸み",
+      "sha256": "f9f82c015765a3af0c59a16061af1abbe31d94341f72d32fb775a1c1bfee9079",
+      "selected": false,
+      "assistant_visual_review": {
+        "full_body_in_frame": true,
+        "face_style": "V11の丸いグレーの目、ボブ、銀ピン、閉じた口の笑みを維持。",
+        "body": "B01より腿・ふくらはぎ・腕に丸みがあり、全体に厚みがある。",
+        "deviations": [
+          "Tシャツが少しゆったりし、胴の厚みは衣服越しの比較になる。",
+          "背景の弱いグラデーションと靴の細部はB01と完全一致ではない。",
+          "指定頭身の厳密な実測はしていない。"
+        ]
+      }
+    },
+    {
+      "id": "B03",
+      "label": "中間 × 細め",
+      "sha256": "03b67543c9bdf83b6f3015c529f9b0f0f888e3fe471b9c9026bc21478b54e9fd",
+      "selected": false,
+      "assistant_visual_review": {
+        "full_body_in_frame": true,
+        "face_style": "V11の顔と目、髪、銀ピンの印象は近い。薄い色面とセル影を維持。",
+        "body": "B01・B02より頭が相対的に小さく、腕と脚に長さが出た。細め方向だが、腿やふくらはぎの丸みは残っている。",
+        "deviations": [
+          "顔と頭部は引き続き比較的大きめ。",
+          "裾丈・靴の形・布のしわには生成差がある。",
+          "指定頭身の厳密な実測はしていない。"
+        ]
+      }
+    },
+    {
+      "id": "B04",
+      "label": "中間 × 丸み",
+      "sha256": "7914e96ceb9715d853788150aefc029ae1367e1df3cf5900c6c42c2395ec210e",
+      "selected": false,
+      "assistant_visual_review": {
+        "full_body_in_frame": true,
+        "face_style": "V11に近い目・表情・髪・銀ピンと淡いセル塗りを維持。",
+        "body": "B03より上腕・腿・ふくらはぎに厚みがある。B02と方向は近いが、頭に対して身体が少し長い。",
+        "deviations": [
+          "B02との違いは細め案同士の差ほど大きくない。",
+          "胴の厚みはTシャツ越しで、服のゆとりも差に影響する。",
+          "指定頭身の厳密な実測はしていない。"
+        ]
+      }
+    },
+    {
+      "id": "B05",
+      "label": "すらっと × 細め",
+      "sha256": "1c558d908ba7602f6c1a25abd1f666d52a8561453a0ba0894cf630d76f064cf8",
+      "selected": false,
+      "assistant_visual_review": {
+        "full_body_in_frame": true,
+        "face_style": "V11に近い顔・目・ボブ・銀ピンを維持。",
+        "body": "B03より頭がわずかに小さく、腰位置も少し高め。ただし中間案との違いは控えめ。",
+        "deviations": [
+          "指定したすらっとした方向は出ているが、劇的な体格差ではない。",
+          "白T・パンツのしわと脚の丸みは他候補と少し異なる。",
+          "指定頭身の厳密な実測はしていない。"
+        ]
+      }
+    },
+    {
+      "id": "B06",
+      "label": "すらっと × 丸み",
+      "sha256": "fb3855793a34e47e34e16a809869c86d93cd2532ac1699b28f4002fc72a90657",
+      "selected": true,
+      "assistant_visual_review": {
+        "full_body_in_frame": true,
+        "face_style": "V11に近い顔・目・ボブ・銀ピンと淡い塗りを維持。",
+        "body": "B05と近い頭の大きさ・長さで、上腕と腿・ふくらはぎは厚め。B04との長さの差は控えめ。",
+        "deviations": [
+          "長身方向の変化より、四肢の厚みの変化が見えやすい。",
+          "指定頭身の厳密な実測はしていない。"
+        ]
+      }
+    },
+    {
+      "id": "B07",
+      "label": "コンパクト × 厚み",
+      "sha256": "51c25b2c81a8a8d27cf4a234fe9c0677bcb78561e75556fdc1fb27e150791ea7",
+      "selected": false,
+      "assistant_visual_review": {
+        "full_body_in_frame": true,
+        "face_style": "顔の輪郭を大きく変えず、V11に近い目・髪・銀ピンと塗りを維持。",
+        "body": "基本6案より二の腕・腰まわり・腿・ふくらはぎの量感が増えた。特に脚の輪郭の違いが分かりやすい。",
+        "deviations": [
+          "コンパクトさよりも身体の厚みの差が強く出ている。",
+          "Tシャツのゆとりがあり、ウエストの形は服越しの比較になる。"
+        ]
+      }
+    },
+    {
+      "id": "B08",
+      "label": "長身 × 骨格しっかり",
+      "sha256": "60970d6b5244cb504ece3e67213ab769af70f298d2bacdc505bc1f83baa19489",
+      "selected": false,
+      "assistant_visual_review": {
+        "full_body_in_frame": true,
+        "face_style": "V11の顔・目・ボブ・銀ピンと淡い塗りを保つ方向で揃っている。",
+        "body": "基本6案より肩・上腕・腰まわり・腿に幅があり、頭が相対的に小さい。B07と比べると上半身の骨格がしっかりした方向。",
+        "deviations": [
+          "長身化よりも、肩幅と四肢の厚みの差が強く出ている。",
+          "数値で指定した比率の厳密な実測はしていない。"
+        ]
+      }
+    }
+  ],
+  "unselected_native_images_committed": false,
+  "limits": [
+    "Requested head-count ratios were directions, not measured output proportions.",
+    "Small shirt, shoe and background differences remain between comparison candidates."
+  ]
+}

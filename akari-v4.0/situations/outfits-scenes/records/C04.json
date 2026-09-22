@@ -1,0 +1,26 @@
+{
+  "id": "C04",
+  "path": "situations/outfits-scenes/images/C04-seaside.png",
+  "role": "preserved_outfit_and_scene_example_not_body_authority",
+  "sha256": "535f202ca2b6c6ac0e77c1cac30954c1ae9f7453c9fb0a2f81c47d06f9845d22",
+  "bytes": 1538996,
+  "width": 1037,
+  "height": 1516,
+  "label": "ネイビーボーダー・海辺",
+  "scene": "seaside",
+  "prompt": "situations/outfits-scenes/prompts/C04.txt",
+  "generation_record": "situations/outfits-scenes/records/C04.json",
+  "status": "preserved_scene_example",
+  "workflow": "ChatGPT browser",
+  "ui_model": "6 Pro",
+  "generation_backend": "not_exposed_by_ui",
+  "actual_internal_reference_selection": "not_observable",
+  "requested_reference_ids": [
+    "V11"
+  ],
+  "body_reference_used": null,
+  "generated_before_body_selection": true,
+  "source_filename": "ChatGPT Image 2026年9月18日 21_07_43.png",
+  "assistant_visual_review": "目視でV11の顔・灰色の目・口元・銀ピン・軽い人物の塗りを確認。衣装と背景を変更した候補。",
+  "preservation_basis": "User requested the existing V11 scene package be committed as V4.0, then deferred the commit until full-body selection."
+}

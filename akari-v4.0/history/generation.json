@@ -1,0 +1,28 @@
+{
+  "project": "akari-v4.0",
+  "recorded_at": "2026-09-22T07:30:26.303794+00:00",
+  "path_base": "All paths are relative to akari-v4.0/.",
+  "records": [
+    "history/records/V11.json",
+    "history/records/B06.json",
+    "situations/outfits-scenes/records/C01.json",
+    "situations/outfits-scenes/records/C02.json",
+    "situations/outfits-scenes/records/C03.json",
+    "situations/outfits-scenes/records/C04.json"
+  ],
+  "sequence": [
+    "NovelAI V5 Curated text-only exploration; user selected V11.",
+    "Four ChatGPT 6 Pro outfit/scene portraits, each prompted to use original V11.",
+    "Eight ChatGPT 6 Pro full-body candidates, each prompted to use original V11.",
+    "User selected B06 and the deferred V4.0 commit resumed."
+  ],
+  "native_pngs_preserved_without_reencoding": true,
+  "chatgpt_ui_model": "6 Pro",
+  "chatgpt_image_backend": "not_exposed_by_ui",
+  "actual_internal_reference_selection": "not_observable",
+  "body_exploration": "history/body-selection.json",
+  "limits": [
+    "UI model labels do not identify the internal image-generation backend.",
+    "C01-C04 predate B06 and do not establish full-body continuity across outfits or poses."
+  ]
+}

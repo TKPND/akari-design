@@ -1,0 +1,98 @@
+{
+  "project": "akari-v4.0",
+  "verified_at": "2026-09-22T07:36:06.606219+00:00",
+  "scope": "Six immutable native PNGs, exact source prompts, selection roles, JSON and Markdown references.",
+  "mechanical_pass": true,
+  "images": [
+    {
+      "id": "V11",
+      "path": "references/V11-novelai-v5-curated.png",
+      "sha256": "ac695b4f30c7c25750b7e6a6aad76fb85f17123d682b5e79107608a7097c5204",
+      "passed": true
+    },
+    {
+      "id": "B06",
+      "path": "references/B06-full-body.png",
+      "sha256": "fb3855793a34e47e34e16a809869c86d93cd2532ac1699b28f4002fc72a90657",
+      "passed": true
+    },
+    {
+      "id": "C01",
+      "path": "situations/outfits-scenes/images/C01-cafe.png",
+      "sha256": "7195e4405b19b33ac3768c0538c9d05aab5bcd4e61a101094494d77bdf21765d",
+      "passed": true
+    },
+    {
+      "id": "C02",
+      "path": "situations/outfits-scenes/images/C02-bookshop.png",
+      "sha256": "5e718124079b39ab02fb5950eb2f609b259e0e1bd6cfa8f69dc152c608a71dd3",
+      "passed": true
+    },
+    {
+      "id": "C03",
+      "path": "situations/outfits-scenes/images/C03-park.png",
+      "sha256": "6f1e55dad8f874988dadf98911e8f8322069c658d6557067294b7a0eb3e5ed23",
+      "passed": true
+    },
+    {
+      "id": "C04",
+      "path": "situations/outfits-scenes/images/C04-seaside.png",
+      "sha256": "535f202ca2b6c6ac0e77c1cac30954c1ae9f7453c9fb0a2f81c47d06f9845d22",
+      "passed": true
+    }
+  ],
+  "source_transcript_copies": [
+    {
+      "path": "prompts/B06.txt",
+      "sha256": "61310e24a07d3c22057f0930ed38b0c979ea3277bc09f0adde0afb12907ccf52",
+      "passed": true
+    },
+    {
+      "path": "situations/outfits-scenes/prompts/C01.txt",
+      "sha256": "8ee647c95d7271150a747a032cd3a08fa1bf365db103ce230db8eedc2f174fc6",
+      "passed": true
+    },
+    {
+      "path": "situations/outfits-scenes/prompts/C02.txt",
+      "sha256": "5fb66b003427b1e7c05473592ccc904d1245b7ed2068f02299fdb57ba6734bbd",
+      "passed": true
+    },
+    {
+      "path": "situations/outfits-scenes/prompts/C03.txt",
+      "sha256": "a4bf5156b6bd27feecf5d65761f5bc5d3923131f84cfef15dda39582cec09e4e",
+      "passed": true
+    },
+    {
+      "path": "situations/outfits-scenes/prompts/C04.txt",
+      "sha256": "82d4a73b2628b8a61810d3f4e6597656e1b91e62f0d821d41404d9f4371514e6",
+      "passed": true
+    }
+  ],
+  "novelai_ui_prompts_match_source_record": true,
+  "reference_and_document_links_checked": 94,
+  "selection_contract": "V11 face/rendering plus B06 body; comparison clothing is not fixed.",
+  "visual_review": {
+    "V11_and_B06": "Native images inspected; B06 full body in frame, with V11-like face, bob, grey eyes, silver pin and light rendering.",
+    "C01_C04": "Reviewed outfit/scene comparison; originals retain the V11 face direction. Background detail is greater than V11.",
+    "limits": [
+      "No measured head-count ratio.",
+      "No new B06 outfit/pose consistency generation in this commit."
+    ]
+  },
+  "repository_gate": {
+    "command": "npm run gate:integration:all",
+    "status": "passed",
+    "exit_code": 0,
+    "completed_at": "2026-09-22T07:36:05.362110+00:00",
+    "log_sha256": "6f10f2f39d2fe7be79fc2c43c3777cc713d09a01bdbdeb1f954065f38a28fb8b",
+    "python_root_tests": 610,
+    "node_tests": 142,
+    "python_legacy_tests": 137,
+    "markdown_files": 216,
+    "markdown_issues": 0,
+    "natural_form_validation": "passed",
+    "assets_palette_alpha": "passed",
+    "v1_2_pdf_structure_and_release_pins": "passed",
+    "v1_1_pdf_structure": "passed"
+  }
+}

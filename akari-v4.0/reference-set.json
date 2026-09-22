@@ -1,0 +1,65 @@
+{
+  "project": "akari-v4.0",
+  "status": "user_accepted",
+  "updated": "2026-09-22T07:30:26.303794+00:00",
+  "path_base": "All asset and prompt paths are relative to akari-v4.0/.",
+  "selection_record": "selection.json",
+  "references": [
+    {
+      "id": "V11",
+      "path": "references/V11-novelai-v5-curated.png",
+      "role": "primary_face_eyes_hair_pin_linework_and_rendering",
+      "sha256": "ac695b4f30c7c25750b7e6a6aad76fb85f17123d682b5e79107608a7097c5204",
+      "bytes": 1138135,
+      "width": 832,
+      "height": 1216
+    },
+    {
+      "id": "B06",
+      "path": "references/B06-full-body.png",
+      "role": "selected_body_balance_and_soft_limb_volume",
+      "sha256": "fb3855793a34e47e34e16a809869c86d93cd2532ac1699b28f4002fc72a90657",
+      "bytes": 1361857,
+      "width": 1024,
+      "height": 1536
+    }
+  ],
+  "input_profiles": {
+    "new_scene": {
+      "default_ids": [
+        "V11",
+        "B06"
+      ],
+      "wardrobe": "Specify separately for each scene; B06 clothing is a comparison outfit."
+    },
+    "face_closeup": {
+      "default_ids": [
+        "V11"
+      ],
+      "optional_ids": [
+        "B06"
+      ]
+    },
+    "existing_image_edit": {
+      "first_input": "current scene edit target",
+      "support_ids": [
+        "V11",
+        "B06"
+      ],
+      "note": "The edit target owns composition, camera and pose unless the user requests changing them."
+    }
+  },
+  "usage_rules": [
+    "Open the relevant native images before generation and explicitly assign each reference role.",
+    "V11 supplies face, grey eyes, black bob, single silver pin, light lines and shallow pastel cel rendering.",
+    "B06 supplies the selected body balance and soft arm/leg volume. Its small face does not replace V11.",
+    "Follow the visible B06 proportions, not the approximate 7.25-head target in its generation transcript.",
+    "B06 white T-shirt, navy shorts, white socks and sneakers are comparison clothing, not a permanent uniform.",
+    "Keep outfit, scene, pose, camera and expression free according to each request.",
+    "Generate each new scene independently from V11/B06; previous scenes are examples, not replacement authorities.",
+    "Do not append numeric-age or adult-woman tags; the user explicitly excluded them from prompts.",
+    "Previous-version face/body/clothing references are historical and do not override V11/B06 for v4.0.",
+    "Where socks are visible, use soft opaque cloth and sparse shallow wrinkles; shoes may cover the toes."
+  ],
+  "prompt_fragment": "prompts/scene-base.txt"
+}

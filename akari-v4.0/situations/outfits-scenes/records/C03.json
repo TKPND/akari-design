@@ -1,0 +1,26 @@
+{
+  "id": "C03",
+  "path": "situations/outfits-scenes/images/C03-park.png",
+  "role": "preserved_outfit_and_scene_example_not_body_authority",
+  "sha256": "6f1e55dad8f874988dadf98911e8f8322069c658d6557067294b7a0eb3e5ed23",
+  "bytes": 1623436,
+  "width": 1086,
+  "height": 1448,
+  "label": "ギンガム・公園",
+  "scene": "park",
+  "prompt": "situations/outfits-scenes/prompts/C03.txt",
+  "generation_record": "situations/outfits-scenes/records/C03.json",
+  "status": "preserved_scene_example",
+  "workflow": "ChatGPT browser",
+  "ui_model": "6 Pro",
+  "generation_backend": "not_exposed_by_ui",
+  "actual_internal_reference_selection": "not_observable",
+  "requested_reference_ids": [
+    "V11"
+  ],
+  "body_reference_used": null,
+  "generated_before_body_selection": true,
+  "source_filename": "ChatGPT Image 2026年9月18日 21_04_41.png",
+  "assistant_visual_review": "目視でV11の顔・灰色の目・口元・銀ピン・軽い人物の塗りを確認。衣装と背景を変更した候補。",
+  "preservation_basis": "User requested the existing V11 scene package be committed as V4.0, then deferred the commit until full-body selection."
+}
