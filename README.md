@@ -37,6 +37,8 @@ The public repository is maintained as `TKPND/akari-design`.
   clothing and scenes can vary.
 - `tools/pdf/` contains the Node/Playwright PDF rendering code.
 - `scripts/` contains Python build and audit scripts.
+- `skills/` preserves reusable Codex skills, including their instructions,
+  helper scripts, and tests.
 - `dist/` contains prebuilt PDF deliverables and public contact sheets.
 - `evidence/` contains review evidence used during the finishing pass.
 
@@ -63,6 +65,25 @@ npm run audit:tonari:pdf
 The named gates run serially for the repository's 3-core, 2 GiB VPS workflow.
 Daily work uses the edit or integration gate; full raster/OCR remains a formal
 release responsibility.
+
+## Reusable Skills
+
+[akari-hires-composite](skills/akari-hires-composite/SKILL.md) provides regional
+generation and compositing guidance for high-resolution Akari wallpapers and
+portraits, with explicit reference roles and same-coordinate comparisons.
+Its helper requires Python 3 and ImageMagick 7.
+
+To install or restore the versioned copy, run from the repository root:
+
+```bash
+mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
+cp -R skills/akari-hires-composite "${CODEX_HOME:-$HOME/.codex}/skills/"
+python3 skills/akari-hires-composite/scripts/test_compose.py -q
+```
+
+This replaces matching files in the installed skill with the repository copy.
+Invoke it with `$akari-hires-composite`. Future changes should be preserved in
+this repository as well as the installed copy.
 
 ## Deliverables
 
